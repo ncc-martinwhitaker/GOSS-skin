@@ -1,0 +1,58 @@
+body {
+    background: royalblue;
+}
+
+
+
+.header {
+    background: aliceblue;
+}
+
+
+
+.utilitymenu--top .utilitymenu__link {
+
+    color: lightblue;
+
+    text-decoration: none;
+    
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+        content: ""; 
+        height: 2px; 
+        display: block; width: 100%;
+        background: lime;
+    }
+
+}
+
+.utilitymenu--bottom .utilitymenu__link {
+
+    color: red;
+
+    text-decoration: none;
+
+}
+
+
+.body--martin .header {
+    background: #006666;
+}
+
+
+a-panel--martin {
+    background: yellow;
+    
+}
+
+
+.highlight--norfolk {
+    
+    border-left: 5px solid #075747;
+    background: #16A085;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
