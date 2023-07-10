@@ -91,6 +91,6 @@ h6 {font-size: 1.25rem;}
 
 // Can we use (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) Level 4 media queries, 
 // Looks like IE won't like it tho (https://caniuse.com/?search=%40media) But I think we dropped support?
-@media (width <= $sm) {
-    * {background: red;}
-  }
+// @media (width <= $sm) {
+//     * {background: red;}
+//   }
