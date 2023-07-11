@@ -1,0 +1,32 @@
+.a-heading__title {
+  font-weight: 700;
+  color: #050505;
+}
+
+// 618 - page margin width
+// 705 - typography
+
+.container {
+  max-width: 1170px; // presumably nothing on a page should ever be wider than this?
+}
+
+.maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
+  max-width: 750px;
+}
+
+// h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+//   max-width: 750px;
+// }
+
+.a-heading__title {
+  border-bottom: none;
+}
+
+h5 {
+  margin-bottom: 20px;
+}
+
+.a-intro__content {
+  line-height: 1.3;
+  font-weight: 500;
+}

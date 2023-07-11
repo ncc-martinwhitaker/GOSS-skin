@@ -1,0 +1,17 @@
+.gi-disclosure--body .gi-disclosure__toggle:hover, .gi-disclosure--body .gi-disclosure__toggle:focus {
+  background-color: #eee;
+}
+
+// .gi-disclosure--body .gi-disclosure__toggle:focus {
+
+// }
+
+.gi-disclosure--body .gi-disclosure__toggle::after {
+  content: "Show \e807";
+  top: 30px;
+  color: $link-color;
+}
+
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded]::after {
+  content: "Hide \e808";
+}

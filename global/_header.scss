@@ -5,6 +5,8 @@
 
 .header  {
 
+  background-color: #036EB2;
+
   .gi-sitelogo.gi-sitelogo--header {
     a.gi-sitelogo__link{
       img {}
@@ -22,4 +24,15 @@
 
 
 
+}
+
+// Dropdown menu
+
+.gi-sitenav__list.gi-sitenav__list--lvl2 {
+  background-color: #fff;
+  color: #050505;
+
+  .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+    color: #050505;
+  }
 }

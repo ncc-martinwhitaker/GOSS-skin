@@ -1,0 +1,128 @@
+// Panel headers
+
+.a-panel.a-panel--carousel .a-panel__title {
+  color: #fff;
+}
+.a-panel.a-panel--hasbackground .a-panel__title {
+  color: #fff;
+}
+
+.imagebanner__title {
+  color: #fff;
+}
+
+.imagebanner__searchholder .searchform__inputtxt {
+  width: 100%;
+}
+
+// Grid items
+
+// .a-panel--pt.a-panel--list .grid__cellwrap>.item {
+//   border: solid #eee 1px;
+//   border-radius: 0px;
+//   -webkit-border-radius: 0px;
+// }
+
+.grid.grid--list.grid--4col {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.grid.grid--feature.grid--4col {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.grid__cell.grid__cell--feature.grid__cell--cols1 {
+  padding: 0px;
+}
+
+.a-panel--feature {
+
+  .grid__cell--feature .grid__cellwrap {
+    height: 100%;
+    padding: 10px;
+  }
+
+  .item.item--article {
+    background-color: #fff;
+    height: 100%;
+    border: solid #B0B0B0 1px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .item__content {
+      padding: 10px;
+    }
+
+    .gi-responsiveimage__fallback, .gi-responsiveimage__image {
+      object-fit: cover;
+      max-height: 125px;
+     
+    }
+    .gi-responsiveimage.gi-responsiveimage--item.gi-responsiveimage--loaded {
+      margin: 0px;
+    }
+  }
+}
+
+.a-panel--hasbackground .item__link {
+  color: #066;
+}
+
+@media only screen and (max-width: 600px) {
+  .a-panel__content {
+    padding: 30px 10px;
+  }
+}
+
+.a-panel.a-panel--related .a-panel__content .grid--related {
+  display: flex;
+  align-items: stretch;
+}
+.a-panel.a-panel--related .grid__cellwrap {
+  height: 100%;
+}
+
+.a-panel__link {
+  background-color: #036eb2;
+}
+
+.ra-block {
+  height: 100%;
+}
+
+.ra-block .ra-block__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// 643 - first related image
+
+.a-relimage {
+  display: none;
+}
+
+// 644 - list templates
+
+.item.item--article {
+  border: 1px solid #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
+  padding: 0 20px;
+  margin: 0;
+  text-align: left;
+}
+.item.item--article .item__title {
+  font-weight: 700;
+  margin: 15px 0px 10px 0px;
+}
+.item.item--article .item__title a {
+  font-size: 1.25rem;
+}
+.item.item--article .item__body {
+  margin-block-end: 16px;
+}
