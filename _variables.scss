@@ -4,7 +4,56 @@
 /// 
 /// 
 
-html {margin:0; padding: 0; font-size: 16px;}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {
+  font-size: 16px;
+  font-family: 'Assistant', 'Open Sans', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+html * {
+  font-family: 'Assistant', 'Open Sans', sans-serif;
+}
+
+// chevron up:    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%232D5AB4'/%3E%3C/svg%3E");
+
+// chevron down:  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%232D5AB4'/%3E%3C/svg%3E");
+
+// chevron right: background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
+
+$breadcrumb-chevron-gray: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='gray'/%3E%3C/svg%3E");
+
+$breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
+
+
+// COLOR SYSTEM
+
+// norfolk.gov.uk
+$primary: #FFFFFF;
+$teal: #006666;
+$link-color: #36c;
+$link-color-darken: #2952a3; // 20% darken
+$lgrey: #ccc;
+
+// archives.norfolk.gov.uk/
+$archives-blue: #036eb2;
+
+$focus-color: #FFDD00;
+
+// component variables
+$header-color: $primary !default;
+$header-text-color: #050505 !default;
+
+$list-panel-link-color: #050505 !default;
+$list-panel-link-color-hover: $link-color-darken !default;
+
+$breadcrumb-color: #ddd;
+$breadcrumb-text-color: #050505;
+$breadcrumb-border-color: #ccc;
+$breadcrumb-chevron: $breadcrumb-chevron-gray;
+
+// FONT SIZES
 
 $font-size-base: 1rem;
 
@@ -30,8 +79,11 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-$link-color: #2D5AB4;
+$h6-font-size: 1.125rem;
 
+.container {
+  max-width: 1170px; // presumably nothing on a page should ever be wider than this?
+}
 
 // BREAKPOINTS
 
@@ -67,73 +119,6 @@ $breakpoints: (
     }
 }
 */
-
-
-// COLOR SYSTEM
-
-// norfolk.gov.uk
-$primary: #FFFFFF;
-$teal: #006666;
-$link-blue: #36c;
-$lgrey: #ccc;
-
-
-// archives.norfolk.gov.uk/
-
-$archives-blue: #036eb2;
-
-
-
-
-// FONTS
-/*! = $rembase: 16px
---------------------------------------------------------------
-* hmtl { font-size: 100%; }
-* body { font-size: 16px; font-size: 1rem; line-height: 1; }
-* 4px    	0.25rem
-* 8px		0.5rem
-* 12px		0.75rem
-* 14px		0.875rem
-* 16px		1rem
-* 18px		1.125rem
-* 20px		1.25rem
-* 22px		1.375rem
-* 24px		1.5rem
-* 32px		2rem
-* 36px		2.25rem
-* 48px		3rem
-* 64px		4rem
-* 72px		4.5rem */
-p {font-size: 1.125rem;}
-a {font-weight: 500;}
-
-h1 {font-size: 4rem;}
-h2 {font-size: 3rem;}
-h3 {font-size: 2.25rem;}
-h4 {font-size: 1.75rem;}
-h5 {font-size: 1.5rem;}
-h6 {font-size: 1.25rem;}
-
-
-.h1 {
-  @extend h1;
-}
-.h2 {
-  @extend h2;
-}
-.h3 {
-  @extend h3;
-}
-.h4 {
-  @extend h4;
-}
-.h5 {
-  @extend h5;
-}
-.h6 {
-  @extend h6;
-}
-
 
 // Can we use (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) Level 4 media queries, 
 // Looks like IE won't like it tho (https://caniuse.com/?search=%40media) But I think we dropped support?

@@ -1,3 +1,69 @@
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+h6 {
+  font-size: $h6-font-size;
+  font-weight: $font-weight-bold;
+  color: #050505;
+}
+
+.h1 {
+  @extend h1;
+}
+.h2 {
+  @extend h2;
+}
+.h3 {
+  @extend h3;
+}
+.h4 {
+  @extend h4;
+}
+.h5 {
+  @extend h5;
+}
+.h6 {
+  @extend h6;
+}
+
+p, ul, ol, li, a, div, span {
+  font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+}
+.a-body__link, .a-body__inner a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-darken;
+    border-bottom: 2px solid $link-color-darken;
+  }
+}
+
 .a-heading__title {
   font-weight: 700;
   color: #050505;
@@ -6,22 +72,17 @@
 // 618 - page margin width
 // 705 - typography
 
-.container {
-  max-width: 1170px; // presumably nothing on a page should ever be wider than this?
-}
-
 .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
   max-width: 750px;
 }
 
-// h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-//   max-width: 750px;
-// }
-
 .a-heading__title {
+  font-weight: 700;
+  font-size: $h1-font-size;
+  color: #050505;
   border-bottom: none;
+  padding-bottom: 0px;
 }
-
 h5 {
   margin-bottom: 20px;
 }

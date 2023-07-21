@@ -1,7 +1,19 @@
+// Breadcrumb styling
+
+// Header
+
+/*
+Variables to change:
+  - $breadcrumb-color (background colour)
+  - $breadcrumb-text-color
+  - $breadcrumb-border-color
+  - $breadcrumb-chevron
+*/
+
 .breadcrumb__nav {
   padding: 0px;
-  border: none;
-  background-color: #004B7B;
+  border: solid $breadcrumb-border-color 1px;
+  background-color: $breadcrumb-color;
 }
 
 .breadcrumb {
@@ -9,15 +21,33 @@
   border: none;
   background-color: transparent;
 
+  .breadcrumb__crumb {
+    padding: 0px;
+  }
+
   .breadcrumb__crumb a {
-    color: #fff;
+    color: $breadcrumb-text-color;
     text-decoration: none;
     font-weight: 600;
 
     &:hover {
-      color: #050505;
+      color: $breadcrumb-text-color;
       text-decoration: none;
-      border-bottom: solid #fff 2px;
+      border-bottom: solid $breadcrumb-text-color 2px;
     }
+  }
+  .breadcrumb__crumb:after {
+    content: "";
+    background-color: transparent;
+    background-image: $breadcrumb-chevron;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin: 0px;
+    top: -1px;
   }
 }

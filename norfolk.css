@@ -44,7 +44,7 @@ Variables to change:
   - $header-text-color
 */
 .header {
-  background-color: #036eb2;
+  background-color: #fff;
   padding: 20px 0px;
 }
 
@@ -53,10 +53,10 @@ Variables to change:
 }
 
 .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text, .utilitymenu--mobile .utilitymenu__link, .utilitymenu--mobile .utilitymenu__text {
-  color: #fff;
+  color: #050505;
 }
 .utilitymenu--top .utilitymenu__link:hover, .utilitymenu--top .utilitymenu__text:hover, .utilitymenu--mobile .utilitymenu__link:hover, .utilitymenu--mobile .utilitymenu__text:hover {
-  color: #fff;
+  color: #050505;
 }
 .utilitymenu--top .utilitymenu__link:focus, .utilitymenu--top .utilitymenu__text:focus, .utilitymenu--mobile .utilitymenu__link:focus, .utilitymenu--mobile .utilitymenu__text:focus {
   color: #050505;
@@ -64,10 +64,10 @@ Variables to change:
 }
 
 .gi-sitenav__link {
-  color: #fff;
+  color: #050505;
 }
 .gi-sitenav__link:hover {
-  color: #fff;
+  color: #050505;
 }
 .gi-sitenav__link:focus {
   color: #050505;
@@ -75,7 +75,7 @@ Variables to change:
 }
 
 .btn--search::after {
-  color: #fff;
+  color: #050505;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -106,8 +106,8 @@ Variables to change:
 */
 .breadcrumb__nav {
   padding: 0px;
-  border: solid #036eb2 1px;
-  background-color: #036eb2;
+  border: solid #ccc 1px;
+  background-color: #ddd;
 }
 
 .breadcrumb {
@@ -119,19 +119,19 @@ Variables to change:
   padding: 0px;
 }
 .breadcrumb .breadcrumb__crumb a {
-  color: #fff;
+  color: #050505;
   text-decoration: none;
   font-weight: 600;
 }
 .breadcrumb .breadcrumb__crumb a:hover {
-  color: #fff;
+  color: #050505;
   text-decoration: none;
-  border-bottom: solid #fff 2px;
+  border-bottom: solid #050505 2px;
 }
 .breadcrumb .breadcrumb__crumb:after {
   content: "";
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='gray'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 24px 24px;
@@ -281,13 +281,13 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 
 .item.item--article .item__title a {
-  color: #050505;
+  color: #006666;
   border-bottom: solid 2px transparent;
   text-decoration: none;
 }
 .item.item--article .item__title a:hover {
-  color: #2952a3;
-  border-bottom: solid 2px #2952a3;
+  color: #006666;
+  border-bottom: solid 2px #006666;
   text-decoration: none;
 }
 .item.item--article .item__title a:focus {
@@ -482,4 +482,4 @@ h5, .h5 {
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;
-}/*# sourceMappingURL=archives.css.map */
+}/*# sourceMappingURL=norfolk.css.map */

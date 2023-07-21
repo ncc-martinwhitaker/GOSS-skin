@@ -1,29 +1,49 @@
+// Header
+
+/*
+Variables to change:
+  - $header-color (background colour)
+  - $header-text-color
+*/
 
 
-//header--nosticky
+.header {
+  background-color: $header-color;
+  padding: 20px 0px;
+}
 
+.gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch {
+  margin: 0px 44px 0px 0px;
+}
 
-.header  {
+.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text, .utilitymenu--mobile .utilitymenu__link, .utilitymenu--mobile .utilitymenu__text {
+  color: $header-text-color;
 
-  background-color: #036EB2;
-
-  .gi-sitelogo.gi-sitelogo--header {
-    a.gi-sitelogo__link{
-      img {}
-
-    }
+  &:hover {
+    color: $header-text-color;
   }
 
+  &:focus {
+    color: #050505;
+    background-color: $focus-color;
+  }
+}
 
-  .header__menu { 
+.gi-sitenav__link {
+  color: $header-text-color;
 
-
-      
+  &:hover {
+    color: $header-text-color;
   }
 
+  &:focus {
+    color: #050505;
+    background-color: $focus-color;
+  }
+}
 
-
-
+.btn--search::after {
+  color: $header-text-color;
 }
 
 // Dropdown menu
@@ -35,4 +55,16 @@
   .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
     color: #050505;
   }
+}
+
+.gi-sitenav__link.gi-sitenav__link--lvl1 {
+  font-size: 1.125rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.utilitymenu--mobile .utilitymenu__link {
+  font-size: 1.125rem;
 }
