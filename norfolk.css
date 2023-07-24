@@ -364,8 +364,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 
 .item.item--article .item__body {
-  -webkit-margin-after: 16px;
-          margin-block-end: 16px;
+  margin-block-end: 16px;
 }
 
 .a-panel--pt.a-panel--parallax .a-panel__content {
