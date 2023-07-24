@@ -60,7 +60,7 @@ Variables to change:
 }
 .utilitymenu--top .utilitymenu__link:focus, .utilitymenu--top .utilitymenu__text:focus, .utilitymenu--mobile .utilitymenu__link:focus, .utilitymenu--mobile .utilitymenu__text:focus {
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
 }
 
 .gi-sitenav__link {
@@ -71,7 +71,7 @@ Variables to change:
 }
 .gi-sitenav__link:focus {
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
 }
 
 .btn--search::after {
@@ -153,7 +153,7 @@ Variables to change:
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:focus {
-  border: solid #FFDD00 4px;
+  border: solid #ff5e00 4px;
   outline: 4px solid #050505;
   outline-offset: 0px;
   position: relative;
@@ -162,14 +162,14 @@ Variables to change:
 .gi-disclosure--body .gi-disclosure__toggle:focus::after {
   border-bottom: solid #050505 3px;
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
 }
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded]:focus::after {
   border-bottom: solid #050505 3px;
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
 }
 
@@ -292,7 +292,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .item.item--article .item__title a:focus {
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
   border-bottom: solid 2px #050505;
   text-decoration: none;
 }
@@ -308,7 +308,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .a-panel--hasbackground .item__sublink:focus {
   color: #050505;
-  background-color: #FFDD00;
+  background-color: #ff5e00;
   border-bottom: solid 1px #050505;
   text-decoration: none;
 }
@@ -364,8 +364,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 
 .item.item--article .item__body {
-  -webkit-margin-after: 16px;
-          margin-block-end: 16px;
+  margin-block-end: 16px;
 }
 
 .a-panel--pt.a-panel--parallax .a-panel__content {
