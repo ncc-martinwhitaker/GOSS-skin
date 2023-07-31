@@ -1,0 +1,163 @@
+// [data-collapsible="true"] = always stays the same
+// [data-collapsed="false"] = search box OPEN
+// [data-collapsed="true"] = search box CLOSED
+
+.gi-sitesearch--dynamic {
+  position: relative;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  float: right;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+  width: 300px;
+}
+
+
+.gi-sitesearch__closetoggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.searchform__inputtxt.searchform__inputtxt--sitesearch {
+  &:focus {
+    outline: solid $focus-color 2px;
+  }
+}
+
+.gi-sitesearch[data-collapsible="true"][data-collapsed="false"]
+  .gi-sitesearch__closetoggle {
+    //display: block;
+    display: none;
+}
+
+.gi-sitesearch[data-collapsible="true"][data-collapsed="false"][data-suppress-closebtn="true"]
+  .gi-sitesearch__closetoggle {
+    display: none;
+}
+
+
+.gi-sitesearch__searchfield,
+.gi-sitesearch[data-collapsible="true"][data-suppress-closebtn="true"]
+  .gi-sitesearch__searchfield {
+    // position: relative;
+    // width: calc(100% - 50px);
+    // height: 50px;
+    width: 300px;
+}
+.gi-sitesearch[data-collapsible="true"] .gi-sitesearch__searchfield {
+    //width: calc(100% - 100px);
+    width: 300px;
+}
+
+.gi-sitesearch[data-collapsible="true"] .gi-sitesearch__searchfield {
+  display: none;
+}
+
+.gi-sitesearch[data-collapsible="true"][data-collapsed="false"]
+  .gi-sitesearch__searchfield {
+    display: block;
+}
+.gi-sitesearch[data-collapsible="true"][data-collapsed="true"]
+  .gi-sitesearch__searchfield {
+    display: block;
+}
+
+
+.gi-sitesearch[data-collapsible="true"][data-collapsed="true"][data-focus-open="true"]
+  .gi-sitesearch__searchfield {
+    // display: block;
+    // visibility: visible;
+    // border: 0;
+    // clip: rect(0 0 0 0);
+    // clip: rect(0, 0, 0, 0);
+    // height: 1px;
+    // margin: -1px;
+    // overflow: hidden;
+    // padding: 0;
+    // position: absolute;
+    // width: 1px;
+    display: block;
+    visibility: visible;
+    border: 0;
+    clip: auto;
+    clip: auto;
+    height: 50px;
+    margin: auto;
+    overflow: auto;
+    padding: auto;
+    position: relative;
+    width: calc(100% - 50px);
+}
+
+.gi-sitesearch--searchtemplate .gi-sitesearch__searchfield,
+.gi-sitesearch--searchtemplate[data-collapsible="true"][data-suppress-closebtn="true"]
+  .gi-sitesearch__searchfield {
+    position: relative;
+    width: calc(100% - 60px);
+    height: 50px;
+}
+
+.gi-sitesearch--searchtemplate[data-collapsible="true"]
+  .gi-sitesearch__searchfield {
+    width: calc(100% - 110px);
+}
+
+
+.gi-sitesearch--dynamic[data-collapsed="false"] {
+  width: 60%;
+  background-color: #fff;
+}
+
+.gi-sitesearch--top .gi-sitesearch__searchfield,
+.gi-sitesearch--top[data-collapsible="true"][data-suppress-closebtn="true"]
+  .gi-sitesearch__searchfield {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 35px;
+}
+
+.gi-sitesearch--top[data-collapsible="true"] .gi-sitesearch__searchfield {
+    // width: calc(100% - 80px);
+    width: calc(100% - 40px);
+}
+
+.gi-sitesearch[data-collapsible="true"][data-collapsed="true"]
+  .gi-sitesearch__button--search {
+    border-left: 0;
+}
+
+.gi-sitesearch--dynamic[data-collapsed="false"] .btn--search {
+  background-color: #515151;
+}
+.gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
+  background-color: #515151;
+}
+
+.gi-sitesearch--dynamic[data-collapsed="false"]
+  .btn--search:hover
+  .gi-sitesearch--dynamic[data-collapsed="false"]
+  .btn--search:focus {
+    opacity: 1;
+}
+
+.gi-sitesearch--mobile .gi-sitesearch__searchfield,
+.gi-sitesearch--mobile[data-collapsible="true"][data-suppress-closebtn="true"]
+  .gi-sitesearch__searchfield {
+    width: calc(100% - 60px);
+}
+
+.imagebanner--search .gi-sitesearch--dynamic .gi-sitesearch__searchfield,
+.imagebanner--search
+  .gi-sitesearch--dynamic[data-collapsible="true"][data-suppress-closebtn="true"]
+  .gi-sitesearch__searchfield {
+    width: calc(100% - 60px);
+}
+
+.imagebanner--search
+  .gi-sitesearch--dynamic[data-collapsible="true"]
+  .gi-sitesearch__searchfield {
+    width: calc(100% - 110px);
+}
