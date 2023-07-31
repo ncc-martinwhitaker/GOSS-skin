@@ -1,5 +1,11 @@
 // Panel headers
 
+/*
+Variables to change:
+  - $list-panel-link-color
+  - $list-panel-link-color-hover
+*/
+
 .a-panel.a-panel--carousel .a-panel__title {
   color: #fff;
 }
@@ -14,14 +20,6 @@
 .imagebanner__searchholder .searchform__inputtxt {
   width: 100%;
 }
-
-// Grid items
-
-// .a-panel--pt.a-panel--list .grid__cellwrap>.item {
-//   border: solid #eee 1px;
-//   border-radius: 0px;
-//   -webkit-border-radius: 0px;
-// }
 
 .grid.grid--list.grid--4col {
   display: flex;
@@ -68,8 +66,52 @@
   }
 }
 
-.a-panel--hasbackground .item__link {
-  color: #066;
+.a-panel.a-panel--hasbackground .a-panel__title {
+  color: #050505;
+  font-weight: 700;
+}
+
+h2.a-panel__title {
+  color: #050505;
+  font-weight: 700;
+  font-size: $h2-font-size;
+}
+
+.item.item--article .item__title a {
+  color: $list-panel-link-color;
+  border-bottom: solid 2px transparent;
+  text-decoration: none;
+
+  &:hover {
+    color: $list-panel-link-color-hover;
+    border-bottom: solid 2px $list-panel-link-color-hover;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #050505;
+    background-color: $focus-color;
+    border-bottom: solid 2px #050505;
+    text-decoration: none;
+  }
+}
+
+.a-panel--hasbackground .item__sublink {
+  color: $link-color;
+  border-bottom: solid 1px transparent;
+
+  &:hover {
+    color: $link-color-darken;
+    border-bottom: solid 1px #066;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #050505;
+    background-color: $focus-color;
+    border-bottom: solid 1px #050505;
+    text-decoration: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -121,8 +163,47 @@
   margin: 15px 0px 10px 0px;
 }
 .item.item--article .item__title a {
-  font-size: 1.25rem;
+  font-size: $h5-font-size;
 }
 .item.item--article .item__body {
   margin-block-end: 16px;
 }
+
+// Parallax panels
+
+.a-panel--pt.a-panel--parallax .a-panel__content {
+  background-color: transparent;
+  color: #050505;
+  text-shadow: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .a-panel--pt.a-panel--parallax .fa-block {
+    margin: 10px;
+  }
+}
+
+.a-panel--pt.a-panel--parallax .fa-block {
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
+
+  .fa-block__imagecontainer+.fa-block__details {
+    width: 100%;
+    padding: 0;
+  }
+
+  .fa-block__content * {
+    background-color: #fff;
+    color: #050505;
+  }
+}
+
+.grid--2col>.grid__cell {
+  width: 33.3%;
+}
+
+.grid--2col>.grid__cell:nth-child(2n+1) {
+  clear: none;
+}
+

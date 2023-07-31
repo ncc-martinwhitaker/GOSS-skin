@@ -1,0 +1,8 @@
+@import "variables";
+
+$header-color: #fff;
+$header-text-color: #050505;
+$list-panel-link-color: $teal;
+$list-panel-link-color-hover: $teal;
+
+@import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc";
