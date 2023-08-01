@@ -199,8 +199,21 @@ h2.a-panel__title {
   }
 }
 
-.grid--2col>.grid__cell {
+.a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
   width: 33.3%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
+    width: 100%;
+    padding: 10px 0px;
+  }
 }
 
 .grid--2col>.grid__cell:nth-child(2n+1) {
