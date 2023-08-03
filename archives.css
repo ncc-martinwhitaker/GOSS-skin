@@ -226,6 +226,22 @@ Variables to change:
   color: #fff;
 }
 
+.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
+  display: flex;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
+  display: block;
+  min-width: 250px;
+  max-width: 250px;
+  width: 250px;
+  height: 100%;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item {
+  margin: 0px;
+}
+
 .imagebanner__title {
   color: #fff;
 }
@@ -386,6 +402,10 @@ h2.a-panel__title, .a-panel__title.h2 {
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  display: none;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
   width: 100%;
@@ -408,7 +428,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 @media only screen and (max-width: 850px) {
   .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
     width: 100%;
-    padding: 10px 0px;
+    padding: 0px;
   }
 }
 .grid--2col > .grid__cell:nth-child(2n+1) {
