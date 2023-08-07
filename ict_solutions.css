@@ -516,4 +516,8 @@ h5, .h5 {
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;
+}
+
+.a-panel--pt.a-panel--list .item__content, .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
+  min-height: 10px !important;
 }/*# sourceMappingURL=ict_solutions.css.map */
