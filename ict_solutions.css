@@ -450,6 +450,10 @@ h2.a-panel__title, .a-panel__title.h2 {
     width: 100%;
     padding: 0px;
   }
+  .a-panel--pt.a-panel--hasbackground .a-panel__content .grid--1col > .grid__cell {
+    width: 100%;
+    clear: both;
+  }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
     min-width: 150px;
     max-width: 150px;
