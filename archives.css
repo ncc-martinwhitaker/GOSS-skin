@@ -415,9 +415,6 @@ h2.a-panel__title, .a-panel__title.h2 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
   padding: 10px;
 }
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
-  display: none;
-}
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
   width: 100%;
   padding: 0;
@@ -466,6 +463,18 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .grid--2col > .grid__cell:nth-child(2n+1) {
   clear: none;
+}
+
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  display: none;
+}
+
+.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
+  display: none;
+}
+
+.grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+  display: none;
 }
 
 h1, .h1 {

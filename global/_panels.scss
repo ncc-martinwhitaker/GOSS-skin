@@ -20,10 +20,6 @@ Variables to change:
     display: flex;
     padding: 0px;
 
-    // .item__imagecontainer {
-    //   display: none;
-    // }
-
     .item__imagecontainer {
       display: block;
       min-width: 250px;
@@ -228,9 +224,6 @@ h2.a-panel__title {
   padding: 10px;
 
   // Parallax panels image hidden by default
-  .fa-block__imagecontainer {
-    display: none;
-  }
 
   .fa-block__imagecontainer+.fa-block__details {
     width: 100%;
@@ -289,5 +282,23 @@ h2.a-panel__title {
 
 .grid--2col>.grid__cell:nth-child(2n+1) {
   clear: none;
+}
+
+// Hiding images by default - 729, 631, 722, 716, 616
+
+// parallax panels
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  display: none;
+}
+
+// list panels
+.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
+  display: none;
+}
+
+
+// list articles
+.grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+  display: none;
 }
 
