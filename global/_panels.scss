@@ -301,4 +301,7 @@ h2.a-panel__title {
 .grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
   display: none;
 }
+.body--display-list-images .grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+  display: block;
+}
 

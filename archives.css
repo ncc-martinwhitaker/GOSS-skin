@@ -477,6 +477,10 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
+.body--display-list-images .grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+  display: block;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
   font-weight: 700;
