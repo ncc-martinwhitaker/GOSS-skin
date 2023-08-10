@@ -290,10 +290,16 @@ h2.a-panel__title {
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: none;
 }
+.body--display-parallax-images .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  display: block;
+}
 
 // list panels
 .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
   display: none;
+}
+.body--display-panel-images .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
+  display: block;
 }
 
 
