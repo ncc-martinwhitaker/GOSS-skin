@@ -9,7 +9,3 @@ $breadcrumb-border-color: #004B7B;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
 
 @import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc", "global/searchbox";
-
-.a-heading__title {
-  display: none;
-}
