@@ -312,6 +312,9 @@ h2.a-panel__title {
   .a-panel--pt.a-panel--parallax .a-panel__content {
     padding: 0px 20px 0px 0px;
   }
+  .a-panel--pt.a-panel--parallax .a-panel__content .grid--feature .grid__cellwrap {
+    padding: 0px;
+  }
 }
 
 
