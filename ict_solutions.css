@@ -425,6 +425,9 @@ h2.a-panel__title, .a-panel__title.h2 {
   color: #050505;
   text-shadow: none;
 }
+.a-panel--pt.a-panel--parallax .a-panel__content .grid--feature .grid__cellwrap {
+  padding: 14px;
+}
 
 @media only screen and (max-width: 1200px) {
   .a-panel--pt.a-panel--parallax .fa-block {
@@ -435,7 +438,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   background-color: #fff;
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 10px;
+  padding: 16px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
   width: 100%;
@@ -482,6 +485,14 @@ h2.a-panel__title, .a-panel__title.h2 {
   }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item {
     height: 150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .a-panel--pt.a-panel--parallax > .container {
+    padding: 0px;
+  }
+  .a-panel--pt.a-panel--parallax .a-panel__content {
+    padding: 0px 20px 0px 0px;
   }
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
