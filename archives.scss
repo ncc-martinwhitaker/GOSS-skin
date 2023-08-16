@@ -3,9 +3,12 @@
 $header-color: $archives-blue;
 $header-text-color: #fff;
 
+$burger-menu-color: #fff;
+
 $breadcrumb-color: #004B7B;
 $breadcrumb-text-color: #fff;
 $breadcrumb-border-color: #004B7B;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
+
 
 @import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc", "global/searchbox";

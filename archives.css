@@ -42,6 +42,7 @@ footer.footer-bottom {
 Variables to change:
   - $header-color (background colour)
   - $header-text-color
+  - $burger-menu-color
 */
 .header {
   background-color: #036eb2;
@@ -99,6 +100,10 @@ Variables to change:
 
 .utilitymenu--mobile .utilitymenu__link {
   font-size: 1.125rem;
+}
+
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu {
+  background-color: #fff;
 }
 
 /*

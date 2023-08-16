@@ -4,6 +4,7 @@
 Variables to change:
   - $header-color (background colour)
   - $header-text-color
+  - $burger-menu-color
 */
 
 
@@ -71,4 +72,10 @@ Variables to change:
 
 .utilitymenu--mobile .utilitymenu__link {
   font-size: 1.125rem;
+}
+
+// burger menu
+
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu {
+  background-color: $burger-menu-color;
 }
