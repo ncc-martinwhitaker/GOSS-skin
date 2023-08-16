@@ -106,6 +106,10 @@ Variables to change:
   background-color: #fff;
 }
 
+.gi-mobilenavtoggle__btn[aria-expanded=true] .gi-mobilenavtoggle__mtrotate * {
+  background-color: #fff;
+}
+
 /*
 Variables to change:
   - $breadcrumb-color (background colour)
