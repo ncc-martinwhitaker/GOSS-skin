@@ -444,6 +444,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
   background-color: #fff;
   color: #050505;
+  text-align: left;
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
