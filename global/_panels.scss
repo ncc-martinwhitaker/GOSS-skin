@@ -13,6 +13,10 @@ Variables to change:
   color: #fff;
 }
 
+.a-panel--pt.a-panel--hasbackground {
+  padding: 0px;
+}
+
 .a-panel--pt.a-panel--hasbackground .a-panel__content {
   //background-color: transparent;
 
@@ -310,7 +314,7 @@ h2.a-panel__title {
     padding: 0px;
   }
   .a-panel--pt.a-panel--parallax .a-panel__content {
-    padding: 0px 20px 0px 0px;
+    padding: 40px 40px 40px 20px;
   }
   .a-panel--pt.a-panel--parallax .a-panel__content .grid--feature .grid__cellwrap {
     padding: 0px;

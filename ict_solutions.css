@@ -235,6 +235,10 @@ Variables to change:
   color: #fff;
 }
 
+.a-panel--pt.a-panel--hasbackground {
+  padding: 0px;
+}
+
 .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
   display: flex;
   padding: 0px;
@@ -492,7 +496,7 @@ h2.a-panel__title, .a-panel__title.h2 {
     padding: 0px;
   }
   .a-panel--pt.a-panel--parallax .a-panel__content {
-    padding: 0px 20px 0px 0px;
+    padding: 40px 40px 40px 20px;
   }
   .a-panel--pt.a-panel--parallax .a-panel__content .grid--feature .grid__cellwrap {
     padding: 0px;
@@ -607,6 +611,19 @@ h5, .h5 {
 
 .a-panel--pt.a-panel--list .item__content, .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
   min-height: 10px !important;
+}
+
+.body--hide-title .a-heading__title {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .gi-sitesearch--dynamic {
@@ -739,17 +756,4 @@ h5, .h5 {
 
 .imagebanner--search .gi-sitesearch--dynamic[data-collapsible=true] .gi-sitesearch__searchfield {
   width: calc(100% - 110px);
-}
-
-.a-heading__title {
-  position: absolute;
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
 }/*# sourceMappingURL=ict_solutions.css.map */
