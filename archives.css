@@ -102,7 +102,7 @@ Variables to change:
   font-size: 1.125rem;
 }
 
-.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu {
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu * {
   background-color: #fff;
 }
 

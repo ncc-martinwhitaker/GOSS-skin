@@ -76,6 +76,6 @@ Variables to change:
 
 // burger menu
 
-.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu {
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu * {
   background-color: $burger-menu-color;
 }
