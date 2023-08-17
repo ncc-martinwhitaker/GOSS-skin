@@ -52,7 +52,7 @@ Variables to change:
     overflow: hidden;
 
     .item__content {
-      padding: 10px;
+      padding: 20px !important;
     }
 
     .gi-responsiveimage__fallback, .gi-responsiveimage__image {
@@ -154,13 +154,14 @@ h2.a-panel__title {
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 0 20px;
+  padding: 0px; 
   margin: 0;
   text-align: left;
 }
 .item.item--article .item__title {
   font-weight: 700;
   margin: 15px 0px 10px 0px;
+  margin-top: 0 !important;
 }
 .item.item--article .item__title a {
   font-size: $h5-font-size;
@@ -207,3 +208,39 @@ h2.a-panel__title {
   clear: none;
 }
 
+.item.item--article {
+  padding: 0 0px !important;
+}
+
+
+
+// IMAGE RATIO 
+
+.item__imagecontainer { 
+aspect-ratio: 4 / 3;
+ }
+figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimage__image {
+   width: 100%;
+   height: 100%; 
+}
+
+
+.gi-responsiveimage__image {
+     object-fit: cover;
+}
+
+// END OF IMAGE RATIO
+
+
+.a-panel--feature .item.item--article .gi-responsiveimage__fallback, .a-panel--feature .item.item--article .gi-responsiveimage__image {
+ max-height: 2000px !important; 
+ /*//to overrule the 125px*/
+}
+
+.a-panel--pt.a-panel--list .item__imagecontainer {
+  border-radius: 5px 5px 0px 0px;
+ /* Four values */
+/* top-left top-right bottom-right bottom-left */
+}
+
+.grid__cellwrap {border-radius: 8px; }
