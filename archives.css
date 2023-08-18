@@ -662,6 +662,8 @@ h5, .h5 {
   top: 0;
   left: 0;
   z-index: 99;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .block--cookie-consents-updated-confirmation {
