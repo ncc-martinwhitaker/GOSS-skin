@@ -946,6 +946,12 @@ h5, .h5 {
   font-size: 1.125rem !important;
 }
 
+@media only screen and (max-width: 991px) {
+  iframe {
+    width: 100%;
+  }
+}
+
 .block--cookie-consent-prompt {
   margin-bottom: 0;
   border: 0px;
