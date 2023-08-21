@@ -110,6 +110,14 @@ Variables to change:
   background-color: #fff;
 }
 
+header .imagebanner {
+  display: none;
+}
+
+.body--showbanner .imagebanner {
+  display: block;
+}
+
 /*
 Variables to change:
   - $breadcrumb-color (background colour)

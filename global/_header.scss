@@ -82,3 +82,14 @@ Variables to change:
 .gi-mobilenavtoggle__btn[aria-expanded="true"] .gi-mobilenavtoggle__mtrotate * {
   background-color: $burger-menu-color;
 }
+
+// Stage / banner
+
+header .imagebanner {
+  display: none;
+}
+
+.body--showbanner .imagebanner {
+  display: block;
+}
+
