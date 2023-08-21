@@ -621,7 +621,7 @@ h5, .h5 {
   min-height: 10px !important;
 }
 
-.body--hide-title .a-heading__title {
+.body--hide-title main .a-heading.a-heading--panel .a-heading__title {
   position: absolute;
   position: absolute !important;
   width: 1px !important;
