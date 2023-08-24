@@ -807,6 +807,7 @@ h5, .h5 {
 
 .imagebanner--search .gi-sitesearch--dynamic[data-collapsible=true] .gi-sitesearch__searchfield {
   width: calc(100% - 110px);
+}
 
 .block--cookie-consent-prompt {
   margin-bottom: 0;

@@ -660,7 +660,6 @@ h5, .h5 {
   font-weight: 500;
 }
 
-
 .a-panel--pt.a-panel--list .item__content, .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
   min-height: 10px !important;
 }
@@ -676,6 +675,7 @@ h5, .h5 {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
 
 .block--cookie-consent-prompt {
   margin-bottom: 0;
@@ -711,5 +711,4 @@ h5, .h5 {
   max-width: 100% !important;
   bottom: 0;
   position: fixed !important;
-
 }/*# sourceMappingURL=norfolk.css.map */
