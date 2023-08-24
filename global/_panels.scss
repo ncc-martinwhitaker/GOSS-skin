@@ -258,10 +258,25 @@ h2.a-panel__title {
     padding: 0;
   }
 
-  .fa-block__content * {
-    background-color: #fff;
-    color: #050505;
-    text-align: left; 
+  .fa-block__content {
+    * {
+      background-color: #fff;
+      color: #050505;
+      text-align: left; 
+    }
+
+    .fa-block__links {
+      .item.item--article {
+        padding: 0px;
+        box-shadow: none;
+
+        .item__content .item__title .item__link {
+          font-size: 1.125rem;
+          font-weight: 500;
+          color: $link-color;
+        }
+      }
+    }
   }
 }
 
@@ -341,12 +356,16 @@ h2.a-panel__title {
   display: block;
 }
 
+// feature groups (affected by display-nav-images - list panels)
+
+
+
 
 // list articles
-.grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+.grid.grid--list .item.item--article .item__imagecontainer {
   display: none;
 }
-.body--display-list-images .grid.grid--list.grid--3col .item.item--article .item__imagecontainer {
+.body--display-list-images .grid.grid--list .item.item--article .item__imagecontainer {
   display: block;
 }
 
