@@ -536,7 +536,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
-.body--display-parallax-images .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+.a-panel--display-nav-images.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: block;
 }
 
