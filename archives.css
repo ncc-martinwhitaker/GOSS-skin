@@ -809,6 +809,10 @@ h5, .h5 {
   width: calc(100% - 110px);
 }
 
+.searchresults__itemsummary, .searchresults__itemsummary > .icmhighlight {
+  font-size: 1.125rem !important;
+}
+
 .block--cookie-consent-prompt {
   margin-bottom: 0;
   border: 0px;
