@@ -271,10 +271,15 @@ h2.a-panel__title {
         padding: 0px;
         box-shadow: none;
 
-        .item__content .item__title .item__link {
-          font-size: 1.125rem;
-          font-weight: 500;
-          color: $link-color;
+        .item__content {
+          min-height: 1px !important;
+
+          .item__title .item__link {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: $link-color;
+            margin-bottom: 12px;
+          }
         }
       }
     }
@@ -356,6 +361,12 @@ h2.a-panel__title {
 .body--display-nav-images .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
   display: block;
 }
+.a-panel--display-nav-images.a-panel.a-panel--pt.a-panel--list.a-panel--render {
+  .a-panel__content .item.item--article .item__imagecontainer {
+    display: block;
+  }
+}
+
 
 // feature groups (affected by display-nav-images - list panels)
 
