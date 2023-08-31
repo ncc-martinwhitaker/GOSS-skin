@@ -473,7 +473,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   font-size: 1.125rem;
   font-weight: 500;
   color: #36c;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
