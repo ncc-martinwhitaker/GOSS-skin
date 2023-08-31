@@ -27,3 +27,19 @@
     border: 0 !important;
   }  
 }
+
+// Site alert
+
+.sitealert {
+  height: 60px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .sitealert__heading {
+      margin: 0px;
+    }
+  }
+}

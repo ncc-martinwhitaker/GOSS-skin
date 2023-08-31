@@ -693,6 +693,18 @@ h5, .h5 {
   border: 0 !important;
 }
 
+.sitealert {
+  height: 60px;
+}
+.sitealert .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sitealert .container .sitealert__heading {
+  margin: 0px;
+}
+
 .block--cookie-consent-prompt {
   margin-bottom: 0;
   border: 0px;
