@@ -475,6 +475,10 @@ h2.a-panel__title, .a-panel__title.h2 {
   color: #36c;
   margin-bottom: 6px;
 }
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link:hover {
+  border-color: transparent;
+  text-decoration: underline;
+}
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
   width: 33.3%;
