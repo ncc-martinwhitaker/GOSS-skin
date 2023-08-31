@@ -433,6 +433,10 @@ h2.a-panel__title, .a-panel__title.h2 {
     width: 100%;
   }
 }
+.a-panel--pt.a-panel--parallax {
+  background-color: #fff;
+}
+
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
