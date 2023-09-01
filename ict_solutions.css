@@ -634,6 +634,10 @@ a {
   color: #050505;
 }
 
+a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
+  outline: 3px solid #ffdd00;
+}
+
 .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
   max-width: 750px;
 }
