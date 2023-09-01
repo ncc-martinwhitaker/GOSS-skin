@@ -27,5 +27,13 @@ $card-border-radius: 0px;
       }
     }
   }
+
+  .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+    color: $teal;
+
+    &:hover {
+      color: $link-color-darken;
+    }
+  }
 }
 

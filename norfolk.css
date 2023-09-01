@@ -770,4 +770,10 @@ h5, .h5 {
   color: #2952a3;
   border-color: #2952a3;
   text-decoration: none;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+  color: #006666;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:hover {
+  color: #2952a3;
 }/*# sourceMappingURL=norfolk.css.map */
