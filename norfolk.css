@@ -234,6 +234,7 @@ Variables to change:
 Variables to change:
   - $list-panel-link-color
   - $list-panel-link-color-hover
+  - $card-border-radius
 */
 .a-panel.a-panel--carousel .a-panel__title {
   color: #fff;
@@ -398,6 +399,10 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
+.item__content {
+  padding: 16px;
+}
+
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
@@ -433,6 +438,10 @@ h2.a-panel__title, .a-panel__title.h2 {
     width: 100%;
   }
 }
+.a-panel--pt.a-panel--parallax {
+  background-color: #fff;
+}
+
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
@@ -449,13 +458,24 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 0px solid #fff;
+  border-radius: 0px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 16px;
+  padding: 0px;
 }
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  width: inherit;
+  height: inherit;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
   width: 100%;
-  padding: 0;
+  padding: 16px;
+  border-radius: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+  font-weight: 700;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
   background-color: #fff;
@@ -466,10 +486,24 @@ h2.a-panel__title, .a-panel__title.h2 {
   padding: 0px;
   box-shadow: none;
 }
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content {
+  min-height: 1px !important;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link {
   font-size: 1.125rem;
   font-weight: 500;
   color: #36c;
+  margin-bottom: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link:hover {
+  border-color: transparent;
+  text-decoration: underline;
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
@@ -524,7 +558,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
-.body--display-parallax-images .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+.a-panel--display-nav-images.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: block;
 }
 
@@ -536,16 +570,16 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: block;
 }
 
+.a-panel--display-nav-images.a-panel.a-panel--pt.a-panel--list.a-panel--render .a-panel__content .item.item--article .item__imagecontainer {
+  display: block;
+}
+
 .grid.grid--list .item.item--article .item__imagecontainer {
   display: none;
 }
 
 .body--display-list-images .grid.grid--list .item.item--article .item__imagecontainer {
   display: block;
-}
-
-.item.item--article {
-  padding: 0 0px !important;
 }
 
 .item__imagecontainer {
@@ -680,6 +714,17 @@ h5, .h5 {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.sitealert {
+  height: 60px;
+}
+.sitealert .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sitealert .container .sitealert__heading {
+  margin: 0px 0px 5px 0px;
 
 .gi-sitesearch--dynamic {
   position: relative;
@@ -851,4 +896,23 @@ h5, .h5 {
   max-width: 100% !important;
   bottom: 0;
   position: fixed !important;
+}
+
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #006666;
+  border-bottom: solid 2px #006666;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:hover {
+  color: #2952a3;
+  border-color: #2952a3;
+  text-decoration: none;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+  color: #006666;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:hover {
+  color: #2952a3;
 }/*# sourceMappingURL=norfolk.css.map */

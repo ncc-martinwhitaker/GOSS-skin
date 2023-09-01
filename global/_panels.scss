@@ -4,6 +4,7 @@
 Variables to change:
   - $list-panel-link-color
   - $list-panel-link-color-hover
+  - $card-border-radius
 */
 
 .a-panel.a-panel--carousel .a-panel__title {
@@ -189,6 +190,10 @@ h2.a-panel__title {
 
 // 644 - list templates
 
+.item__content {
+  padding: 16px;
+}
+
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
@@ -230,6 +235,10 @@ h2.a-panel__title {
 
 // Parallax panels
 
+.a-panel--pt.a-panel--parallax {
+  background-color: #fff;
+}
+
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
@@ -248,16 +257,29 @@ h2.a-panel__title {
 
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 0px solid #fff;
+  border-radius: $card-border-radius;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 16px;
+  padding: 0px;
 
   // Parallax panels image hidden by default
-
-  .fa-block__imagecontainer+.fa-block__details {
-    width: 100%;
-    padding: 0;
+  .fa-block__imagecontainer {
+    width: inherit;
+    height: inherit;
+    border-radius: $card-border-radius $card-border-radius 0px 0px;
+    overflow: hidden;
   }
+
+  .fa-block__imagecontainer+.fa-block__details, .fa-block__details {
+    width: 100%;
+    padding: 16px;
+    border-radius: $card-border-radius;
+
+    .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+      font-weight: 700;
+    }
+  }
+
 
   .fa-block__content {
     * {
@@ -271,10 +293,27 @@ h2.a-panel__title {
         padding: 0px;
         box-shadow: none;
 
-        .item__content .item__title .item__link {
-          font-size: 1.125rem;
-          font-weight: 500;
-          color: $link-color;
+        .item__content {
+          min-height: 1px !important;
+          padding: 0px;
+
+          .item__title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+          }
+
+          .item__title .item__link {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: $link-color;
+            margin-bottom: 0px;
+            
+            &:hover {
+              border-color: transparent;
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
@@ -345,7 +384,7 @@ h2.a-panel__title {
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: none;
 }
-.body--display-parallax-images .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+.a-panel--display-nav-images.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: block;
 }
 
@@ -356,6 +395,12 @@ h2.a-panel__title {
 .body--display-nav-images .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
   display: block;
 }
+.a-panel--display-nav-images.a-panel.a-panel--pt.a-panel--list.a-panel--render {
+  .a-panel__content .item.item--article .item__imagecontainer {
+    display: block;
+  }
+}
+
 
 // feature groups (affected by display-nav-images - list panels)
 
@@ -368,10 +413,6 @@ h2.a-panel__title {
 }
 .body--display-list-images .grid.grid--list .item.item--article .item__imagecontainer {
   display: block;
-}
-
-.item.item--article {
-  padding: 0 0px !important;
 }
 
 
