@@ -5,9 +5,21 @@ $header-text-color: #050505;
 $list-panel-link-color: $teal;
 $list-panel-link-color-hover: $teal;
 
+
 $card-border-radius: 0px;
 
-@import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc", "global/cookies";
+@import 
+"mixins/mixins", 
+"global/footer", 
+"global/header", 
+"global/breadcrumb", 
+"global/disclosures", 
+"global/panels", 
+"global/typography", 
+"global/misc", 
+"global/searchbox", 
+"global/searchresults", 
+"global/cookies"; 
 
 // Norfolk specific changes to parallax panels
 
@@ -36,4 +48,5 @@ $card-border-radius: 0px;
     }
   }
 }
+
 

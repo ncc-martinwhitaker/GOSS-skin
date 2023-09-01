@@ -668,6 +668,10 @@ a {
   color: #050505;
 }
 
+a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
+  outline: 3px solid #ffdd00;
+}
+
 .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
   max-width: 750px;
 }
@@ -853,6 +857,10 @@ h5, .h5 {
 
 .imagebanner--search .gi-sitesearch--dynamic[data-collapsible=true] .gi-sitesearch__searchfield {
   width: calc(100% - 110px);
+}
+
+.searchresults__itemsummary, .searchresults__itemsummary > .icmhighlight {
+  font-size: 1.125rem !important;
 }
 
 .block--cookie-consent-prompt {

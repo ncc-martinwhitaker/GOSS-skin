@@ -3,4 +3,15 @@
 $header-color: #fff;
 $header-text-color: #050505;
 
-@import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc", "global/searchbox", "global/cookies";
+@import 
+"mixins/mixins", 
+"global/footer", 
+"global/header", 
+"global/breadcrumb", 
+"global/disclosures", 
+"global/panels", 
+"global/typography", 
+"global/misc", 
+"global/searchbox", 
+"global/searchresults", 
+"global/cookies"; 
