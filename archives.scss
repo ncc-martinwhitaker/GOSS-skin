@@ -10,7 +10,9 @@ $breadcrumb-text-color: #fff;
 $breadcrumb-border-color: #004B7B;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
 
-@import "global/footer", 
+@import 
+"mixins/mixins", 
+"global/footer", 
 "global/header", 
 "global/breadcrumb", 
 "global/disclosures", 

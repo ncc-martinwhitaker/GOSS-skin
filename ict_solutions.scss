@@ -3,7 +3,9 @@
 $header-color: #fff;
 $header-text-color: #050505;
 
-@import "global/footer", 
+@import 
+"mixins/mixins", 
+"global/footer", 
 "global/header", 
 "global/breadcrumb", 
 "global/disclosures", 
@@ -12,5 +14,4 @@ $header-text-color: #050505;
 "global/misc", 
 "global/searchbox", 
 "global/searchresults", 
-"global/cookies";
- 
+"global/cookies"; 

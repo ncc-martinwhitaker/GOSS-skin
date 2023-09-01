@@ -5,7 +5,9 @@ $header-text-color: #050505;
 $list-panel-link-color: $teal;
 $list-panel-link-color-hover: $teal;
 
-@import "global/footer", 
+@import 
+"mixins/mixins", 
+"global/footer", 
 "global/header", 
 "global/breadcrumb", 
 "global/disclosures", 
@@ -14,5 +16,5 @@ $list-panel-link-color-hover: $teal;
 "global/misc", 
 "global/searchbox", 
 "global/searchresults", 
-"global/cookies";
+"global/cookies"; 
  
