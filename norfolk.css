@@ -459,20 +459,20 @@ h2.a-panel__title, .a-panel__title.h2 {
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
   border: 0px solid #fff;
-  border-radius: 6px;
+  border-radius: 0px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
   padding: 0px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   width: inherit;
   height: inherit;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
   overflow: hidden;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
   width: 100%;
   padding: 16px;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
   font-weight: 700;
@@ -757,4 +757,17 @@ h5, .h5 {
   max-width: 100% !important;
   bottom: 0;
   position: fixed !important;
+}
+
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #006666;
+  border-bottom: solid 2px #006666;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:hover {
+  color: #2952a3;
+  border-color: #2952a3;
+  text-decoration: none;
 }/*# sourceMappingURL=norfolk.css.map */

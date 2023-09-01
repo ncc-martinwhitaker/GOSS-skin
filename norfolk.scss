@@ -5,4 +5,27 @@ $header-text-color: #050505;
 $list-panel-link-color: $teal;
 $list-panel-link-color-hover: $teal;
 
+$card-border-radius: 0px;
+
 @import "global/footer", "global/header", "global/breadcrumb", "global/disclosures", "global/panels", "global/typography", "global/misc", "global/cookies";
+
+// Norfolk specific changes to parallax panels
+
+.a-panel--pt.a-panel--parallax .fa-block {
+  .fa-block__content {
+    .fa-block__title a {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: $teal;
+      border-bottom: solid 2px $teal;
+
+      &:hover {
+        color: $link-color-darken;
+        border-color: $link-color-darken;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
