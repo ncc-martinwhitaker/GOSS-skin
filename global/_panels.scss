@@ -192,7 +192,7 @@ h2.a-panel__title {
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 0px; 
+  padding: 12px; 
   margin: 0;
   text-align: left;
 }
@@ -388,10 +388,6 @@ h2.a-panel__title {
 }
 .body--display-list-images .grid.grid--list .item.item--article .item__imagecontainer {
   display: block;
-}
-
-.item.item--article {
-  padding: 0 0px !important;
 }
 
 
