@@ -399,10 +399,14 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
+.item__content {
+  padding: 16px;
+}
+
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 12px;
+  padding: 0px;
   margin: 0;
   text-align: left;
 }
@@ -462,13 +466,16 @@ h2.a-panel__title, .a-panel__title.h2 {
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   width: inherit;
   height: inherit;
-  border-radius: 6px;
+  border-radius: 6px 6px 0px 0px;
   overflow: hidden;
 }
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
   width: 100%;
   padding: 16px;
   border-radius: 6px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+  font-weight: 700;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
   background-color: #fff;
@@ -481,12 +488,18 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content {
   min-height: 1px !important;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link {
   font-size: 1.125rem;
   font-weight: 500;
   color: #36c;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link:hover {
   border-color: transparent;

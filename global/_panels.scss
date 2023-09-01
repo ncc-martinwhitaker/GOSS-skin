@@ -190,10 +190,14 @@ h2.a-panel__title {
 
 // 644 - list templates
 
+.item__content {
+  padding: 16px;
+}
+
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 12px; 
+  padding: 0px; 
   margin: 0;
   text-align: left;
 }
@@ -262,14 +266,18 @@ h2.a-panel__title {
   .fa-block__imagecontainer {
     width: inherit;
     height: inherit;
-    border-radius: $card-border-radius;
+    border-radius: $card-border-radius $card-border-radius 0px 0px;
     overflow: hidden;
   }
 
-  .fa-block__imagecontainer+.fa-block__details {
+  .fa-block__imagecontainer+.fa-block__details, .fa-block__details {
     width: 100%;
     padding: 16px;
     border-radius: $card-border-radius;
+
+    .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+      font-weight: 700;
+    }
   }
 
 
@@ -287,12 +295,19 @@ h2.a-panel__title {
 
         .item__content {
           min-height: 1px !important;
+          padding: 0px;
+
+          .item__title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+          }
 
           .item__title .item__link {
             font-size: 1.125rem;
             font-weight: 500;
             color: $link-color;
-            margin-bottom: 6px;
+            margin-bottom: 0px;
             
             &:hover {
               border-color: transparent;
