@@ -234,6 +234,7 @@ Variables to change:
 Variables to change:
   - $list-panel-link-color
   - $list-panel-link-color-hover
+  - $card-border-radius
 */
 .a-panel.a-panel--carousel .a-panel__title {
   color: #fff;
@@ -453,13 +454,21 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 0px solid #fff;
+  border-radius: 6px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 16px;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  width: inherit;
+  height: inherit;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
   width: 100%;
-  padding: 0;
+  padding: 16px;
+  border-radius: 6px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
   background-color: #fff;
