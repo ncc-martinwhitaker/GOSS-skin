@@ -118,7 +118,7 @@ h2.a-panel__title {
 
 .item.item--article .item__title a {
   color: $list-panel-link-color;
-  border-bottom: solid 2px transparent;
+  border-bottom: solid 2px $list-panel-link-color;
   text-decoration: none;
 
   &:hover {
@@ -275,6 +275,10 @@ h2.a-panel__title {
     height: inherit;
     border-radius: $card-border-radius $card-border-radius 0px 0px;
     overflow: hidden;
+
+    &:focus-within {
+      outline: solid $focus-color 3px;
+    }
   }
 
   .fa-block__imagecontainer+.fa-block__details, .fa-block__details {
@@ -336,16 +340,20 @@ h2.a-panel__title {
             font-weight: 500;
             color: $link-color;
             margin-bottom: 0px;
+            border: none;
             
             &:hover {
               border-color: transparent;
               text-decoration: underline;
+              border: none;
+              color: $link-color-darken;
             }
             &:focus {
               background-color: $focus-color;
               color: #050505;
               border-color: transparent;
               text-decoration: underline;
+              border: none;
             }
           }
         }

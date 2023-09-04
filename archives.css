@@ -335,7 +335,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 
 .item.item--article .item__title a {
   color: #050505;
-  border-bottom: solid 2px transparent;
+  border-bottom: solid 2px #050505;
   text-decoration: none;
 }
 .item.item--article .item__title a:hover {
@@ -462,20 +462,23 @@ h2.a-panel__title, .a-panel__title.h2 {
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
   border: 0px solid #fff;
-  border-radius: 6px;
+  border-radius: 0px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
   padding: 0px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   width: inherit;
   height: inherit;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
   overflow: hidden;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer:focus-within {
+  outline: solid #ffdd00 3px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
   width: 100%;
-  padding: 16px;
-  border-radius: 6px;
+  padding: 20px;
+  border-radius: 0px;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
   font-weight: 700;
@@ -484,6 +487,24 @@ h2.a-panel__title, .a-panel__title.h2 {
   background-color: #fff;
   color: #050505;
   text-align: left;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #050505;
+  border-bottom: solid 2px #050505;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:hover {
+  color: #2952a3;
+  border-color: #2952a3;
+  text-decoration: none;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:focus {
+  background-color: #ffdd00;
+  color: #050505;
+  border-color: #050505;
+  text-decoration: none;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article {
   padding: 0px;
@@ -503,10 +524,28 @@ h2.a-panel__title, .a-panel__title.h2 {
   font-weight: 500;
   color: #36c;
   margin-bottom: 0px;
+  border: none;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link:hover {
   border-color: transparent;
   text-decoration: underline;
+  border: none;
+  color: #2952a3;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link:focus {
+  background-color: #ffdd00;
+  color: #050505;
+  border-color: transparent;
+  text-decoration: underline;
+  border: none;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:hover {
+  color: #2952a3;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:focus {
+  outline: none;
+  color: #050505;
+  background-color: #ffdd00;
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
@@ -611,7 +650,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 .grid__cellwrap {
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 h1, .h1 {

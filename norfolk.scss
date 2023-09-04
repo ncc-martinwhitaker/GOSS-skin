@@ -3,7 +3,6 @@
 $header-color: #fff;
 $header-text-color: #050505;
 $list-panel-link-color: $teal;
-$list-panel-link-color-hover: $teal;
 
 
 $card-border-radius: 0px;
@@ -31,12 +30,6 @@ $card-border-radius: 0px;
       margin-bottom: 12px;
       color: $teal;
       border-bottom: solid 2px $teal;
-
-      &:hover {
-        color: $link-color-darken;
-        border-color: $link-color-darken;
-        text-decoration: none;
-      }
     }
   }
 
@@ -45,6 +38,10 @@ $card-border-radius: 0px;
 
     &:hover {
       color: $link-color-darken;
+    }
+    &:focus {
+      color: #050505;
+      background-color: $focus-color;
     }
   }
 }
