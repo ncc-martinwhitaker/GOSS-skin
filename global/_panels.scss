@@ -135,21 +135,24 @@ h2.a-panel__title {
   }
 }
 
-.a-panel--hasbackground .item__sublink {
+.item__content .item__sublink {
   color: $link-color;
-  border-bottom: solid 1px transparent;
+  // border-bottom: solid 1px transparent;
+  border-bottom: none;
 
   &:hover {
     color: $link-color-darken;
-    border-bottom: solid 1px #066;
-    text-decoration: none;
+    // border-bottom: solid 1px $link-color-darken;
+    border-bottom: none;
+    text-decoration: underline;
   }
 
   &:focus {
     color: #050505;
     background-color: $focus-color;
-    border-bottom: solid 1px #050505;
-    text-decoration: none;
+    // border-bottom: solid 1px #050505;
+    border-bottom: none;
+    text-decoration: underline;
   }
 }
 
@@ -191,7 +194,7 @@ h2.a-panel__title {
 // 644 - list templates
 
 .item__content {
-  padding: 16px;
+  padding: 20px;
 }
 
 .item.item--article {
@@ -208,6 +211,10 @@ h2.a-panel__title {
 }
 .item.item--article .item__title a {
   font-size: $h5-font-size;
+
+  &:focus {
+    outline: none;
+  }
 }
 .item.item--article .item__body {
   margin-block-end: 16px;
