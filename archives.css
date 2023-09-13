@@ -209,7 +209,7 @@ Variables to change:
   transform: translateY(-50%);
   padding-right: 28px;
   border-bottom: solid 3px transparent;
-  color: #36c;
+  color: #4840e3;
 }
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded]::after {
@@ -227,7 +227,7 @@ Variables to change:
   transform: translateY(-50%);
   padding-right: 28px;
   border-bottom: solid 3px transparent;
-  color: #36c;
+  color: #4840e3;
 }
 
 /*
@@ -338,8 +338,8 @@ h2.a-panel__title, .a-panel__title.h2 {
   text-decoration: none;
 }
 .item.item--article .item__title a:hover {
-  color: #2952a3;
-  border-bottom: solid 2px #2952a3;
+  color: #1f18a5;
+  border-bottom: solid 2px #1f18a5;
   text-decoration: none;
 }
 .item.item--article .item__title a:focus {
@@ -350,11 +350,11 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 
 .a-panel--hasbackground .item__sublink {
-  color: #36c;
+  color: #4840e3;
   border-bottom: solid 1px transparent;
 }
 .a-panel--hasbackground .item__sublink:hover {
-  color: #2952a3;
+  color: #1f18a5;
   border-bottom: solid 1px #066;
   text-decoration: none;
 }
@@ -469,7 +469,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #36c;
+  color: #4840e3;
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
@@ -619,16 +619,16 @@ p, ul, ol, li, a, div, span {
 
 a {
   text-decoration: none;
-  color: #36c;
+  color: #4840e3;
   font-weight: 600;
 }
 
 .a-body__link, .a-body__inner a {
-  color: #36c;
+  color: #4840e3;
 }
 .a-body__link:hover, .a-body__inner a:hover {
-  color: #2952a3;
-  border-bottom: 2px solid #2952a3;
+  color: #1f18a5;
+  border-bottom: 2px solid #1f18a5;
 }
 
 .a-heading__title {
