@@ -35,7 +35,7 @@
   }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle::after {
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=false]::after {
   content: "Show";
   font-family: 'Assistant', 'Open Sans', sans-serif;
   font-size: 1.25rem;
@@ -53,7 +53,7 @@
   color: $link-color;
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded]::after {
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]::after {
   content: "Hide";
   font-family: 'Assistant', 'Open Sans', sans-serif;
   font-size: 1.25rem;
