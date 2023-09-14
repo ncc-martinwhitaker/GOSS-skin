@@ -4,8 +4,20 @@ $header-color: #fff;
 $header-text-color: #050505;
 $list-panel-link-color: $teal;
 
-
 $card-border-radius: 0px;
+
+/* Buttons */
+
+$button-primary-text-color: #fff;
+
+$button-primary-color: #00823b;
+$button-primary-color-hov: #005220;
+$button-primary-teal-color: #006666;
+$button-primary-teal-color-hov: #003d3d;
+$button-secondary-color: #fff;
+$button-secondary-color-hov: #424242;
+$button-inverted-secondary-color: #424242;
+$button-inverted-secondary-color-hov: #fff;
 
 @import 
 "mixins/mixins", 
@@ -19,32 +31,33 @@ $card-border-radius: 0px;
 "global/misc", 
 "global/searchbox", 
 "global/searchresults", 
-"global/cookies"; 
+"global/cookies",
+"global/buttons";
 
 // Norfolk specific changes to parallax panels
-
 .a-panel--pt.a-panel--parallax .fa-block {
-  .fa-block__content {
-    .fa-block__title a {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: $teal;
-      border-bottom: solid 2px $teal;
+    .fa-block__content {
+        .fa-block__title a {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: $teal;
+            border-bottom: solid 2px $teal;
+        }
     }
-  }
 
-  .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
-    color: $teal;
+    .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+        color: $teal;
 
-    &:hover {
-      color: $link-color-darken;
+        &:hover {
+            color: $link-color-darken;
+        }
+
+        &:focus {
+            color: #050505;
+            background-color: $focus-color;
+        }
     }
-    &:focus {
-      color: #050505;
-      background-color: $focus-color;
-    }
-  }
 }
 
 

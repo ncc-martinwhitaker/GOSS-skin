@@ -382,10 +382,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   height: 100%;
 }
 
-.a-panel__link {
-  background-color: #036eb2;
-}
-
+/* .a-panel__link Link button used in Panels now set in _buttons.scss  */
 .ra-block {
   height: 100%;
 }
