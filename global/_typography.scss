@@ -54,6 +54,8 @@ p, ul, ol, li, a, div, span {
 
 a {
   text-decoration: none;
+  color: $link-color; 
+  font-weight: 600;
 }
 .a-body__link, .a-body__inner a {
   color: $link-color;

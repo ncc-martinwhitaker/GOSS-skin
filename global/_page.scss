@@ -1,0 +1,37 @@
+
+
+
+.template--documentsection {
+
+    .contents__listitem::before {
+        content: "-";
+        font-family: inherit;
+    }
+
+
+
+    .contents__list{
+
+        columns: 1;
+        @include mq('sm') {
+            columns: 2;
+        }
+       // li.contents__listitem { }
+
+
+    }
+
+
+
+    .document-pagination {
+        
+        .document-pagination__link{width: 50%;}
+        .document-pagination__link--next { float: right;}
+        .document-pagination__link--prev {float: left;}
+
+
+    }
+
+
+
+}
