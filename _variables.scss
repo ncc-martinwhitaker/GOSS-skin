@@ -32,8 +32,8 @@ $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3
 // norfolk.gov.uk
 $primary: #FFFFFF;
 $teal: #006666;
-$link-color: #36c;
-$link-color-darken: #2952a3; // 20% darken
+$link-color: #4840e3;
+$link-color-darken: darken( $link-color, 20% ); // 20% darken
 $lgrey: #ccc;
 
 // archives.norfolk.gov.uk/

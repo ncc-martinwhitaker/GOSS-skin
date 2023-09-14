@@ -13,6 +13,11 @@ Variables to change:
   padding: 20px 0px;
 }
 
+.gi-sitelogo--header .gi-sitelogo__image {
+  object-fit: contain;
+}
+
+
 .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch {
   margin: 0px 44px 0px 0px;
 }
