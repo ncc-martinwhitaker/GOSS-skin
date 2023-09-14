@@ -3,7 +3,9 @@
 $header-color: #fff;
 $header-text-color: #050505;
 $list-panel-link-color: $teal;
-$list-panel-link-color-hover: $teal;
+
+
+$card-border-radius: 0px;
 
 @import 
 "mixins/mixins", 
@@ -18,4 +20,31 @@ $list-panel-link-color-hover: $teal;
 "global/searchbox", 
 "global/searchresults", 
 "global/cookies"; 
- 
+
+// Norfolk specific changes to parallax panels
+
+.a-panel--pt.a-panel--parallax .fa-block {
+  .fa-block__content {
+    .fa-block__title a {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: $teal;
+      border-bottom: solid 2px $teal;
+    }
+  }
+
+  .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+    color: $teal;
+
+    &:hover {
+      color: $link-color-darken;
+    }
+    &:focus {
+      color: #050505;
+      background-color: $focus-color;
+    }
+  }
+}
+
+

@@ -174,6 +174,10 @@ Variables to change:
   padding: 20px 90px 20px 10px;
 }
 
+.gi-disclosure__toggle-text {
+  font-size: 1.75rem;
+}
+
 .gi-disclosure--body .gi-disclosure__toggle:hover {
   background-color: #eee;
 }
@@ -239,6 +243,7 @@ Variables to change:
 Variables to change:
   - $list-panel-link-color
   - $list-panel-link-color-hover
+  - $card-border-radius
 */
 .a-panel.a-panel--carousel .a-panel__title {
   color: #fff;
@@ -339,7 +344,7 @@ h2.a-panel__title, .a-panel__title.h2 {
 
 .item.item--article .item__title a {
   color: #050505;
-  border-bottom: solid 2px transparent;
+  border-bottom: solid 2px #050505;
   text-decoration: none;
 }
 .item.item--article .item__title a:hover {
@@ -354,20 +359,13 @@ h2.a-panel__title, .a-panel__title.h2 {
   text-decoration: none;
 }
 
-.a-panel--hasbackground .item__sublink {
-  color: #4840e3;
-  border-bottom: solid 1px transparent;
+
 }
-.a-panel--hasbackground .item__sublink:hover {
-  color: #1f18a5;
-  border-bottom: solid 1px #066;
-  text-decoration: none;
-}
-.a-panel--hasbackground .item__sublink:focus {
+.item__content .item__sublink:focus {
   color: #050505;
   background-color: #ffdd00;
-  border-bottom: solid 1px #050505;
-  text-decoration: none;
+  border-bottom: none;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
@@ -403,6 +401,10 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
+.item__content {
+  padding: 20px;
+}
+
 .item.item--article {
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
@@ -419,6 +421,9 @@ h2.a-panel__title, .a-panel__title.h2 {
 
 .item.item--article .item__title a {
   font-size: 1.25rem;
+}
+.item.item--article .item__title a:focus {
+  outline: none;
 }
 
 .item.item--article .item__body {
@@ -438,6 +443,10 @@ h2.a-panel__title, .a-panel__title.h2 {
     width: 100%;
   }
 }
+.a-panel--pt.a-panel--parallax {
+  background-color: #fff;
+}
+
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
@@ -454,27 +463,68 @@ h2.a-panel__title, .a-panel__title.h2 {
 }
 .a-panel--pt.a-panel--parallax .fa-block {
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 0px solid #fff;
+  border-radius: 0px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
-  padding: 16px;
+  padding: 0px;
 }
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details {
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+  width: inherit;
+  height: inherit;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer:focus-within {
+  outline: solid #ffdd00 3px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
   width: 100%;
-  padding: 0;
+  padding: 20px;
+  border-radius: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer + .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action, .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
+  font-weight: 700;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
   background-color: #fff;
   color: #050505;
   text-align: left;
 }
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #050505;
+  border-bottom: solid 2px #050505;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:hover {
+  color: #2952a3;
+  border-color: #2952a3;
+  text-decoration: none;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a:focus {
+  background-color: #ffdd00;
+  color: #050505;
+  border-color: #050505;
+  text-decoration: none;
+}
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article {
   padding: 0px;
   box-shadow: none;
 }
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content {
+  min-height: 1px !important;
+  padding: 0px;
+}
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__links .item.item--article .item__content .item__title .item__link {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #4840e3;
+
 }
 
 .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
@@ -529,7 +579,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: none;
 }
 
-.body--display-parallax-images .a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+.a-panel--display-nav-images.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: block;
 }
 
@@ -541,16 +591,16 @@ h2.a-panel__title, .a-panel__title.h2 {
   display: block;
 }
 
+.a-panel--display-nav-images.a-panel.a-panel--pt.a-panel--list.a-panel--render .a-panel__content .item.item--article .item__imagecontainer {
+  display: block;
+}
+
 .grid.grid--list .item.item--article .item__imagecontainer {
   display: none;
 }
 
 .body--display-list-images .grid.grid--list .item.item--article .item__imagecontainer {
   display: block;
-}
-
-.item.item--article {
-  padding: 0 0px !important;
 }
 
 .item__imagecontainer {
@@ -579,7 +629,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 .grid__cellwrap {
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 h1, .h1 {
@@ -710,6 +760,18 @@ h5, .h5 {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.sitealert {
+  height: 60px;
+}
+.sitealert .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sitealert .container .sitealert__heading {
+  margin: 0px 0px 5px 0px;
 }
 
 .gi-sitesearch--dynamic {
