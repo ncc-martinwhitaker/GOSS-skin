@@ -3,7 +3,10 @@
   padding: 20px 90px 20px 10px;
 }
 
-.gi-disclosure__toggle-text {
+h2.gi-disclosure__heading .gi-disclosure__toggle-text {
+  font-size: 2rem;
+}
+h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   font-size: 1.75rem;
 }
 
