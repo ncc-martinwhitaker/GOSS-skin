@@ -1,0 +1,30 @@
+
+
+
+
+.imagegalleryinline{
+
+
+    .grid__cell {
+       
+        padding: 5px;
+    
+        
+
+        .grid__cellwrap {
+
+            @include aspect-ratio;
+
+            figure.gi-responsiveimage {
+               
+                @include aspect-ratio;
+            }
+
+
+        }
+    
+    
+    }
+
+
+}
