@@ -66,6 +66,12 @@ Variables to change:
   flex-wrap: wrap;
 }
 
+// feature groups
+
+.a-panel--feature:nth-child(even), .a-panel--feature:nth-child(odd) {
+  background-color: #fff;
+}
+
 .grid.grid--feature.grid--4col {
   display: flex;
   align-items: stretch;
