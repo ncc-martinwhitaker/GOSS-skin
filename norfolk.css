@@ -735,6 +735,10 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:fo
   max-width: 750px;
 }
 
+.maincontent .a-panel--fullwidth .a-heading, .maincontent .a-panel--fullwidth .a-intro, .maincontent .a-panel--fullwidth .a-body {
+  max-width: none;
+}
+
 .a-heading__title {
   font-weight: 700;
   font-size: 2.5rem;
