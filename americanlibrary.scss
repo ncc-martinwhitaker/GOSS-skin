@@ -1,0 +1,125 @@
+﻿@import "variables";
+
+$header-color: $americanlibrary-blue;
+$header-text-color: fff;
+
+$burger-menu-color: #fff;
+
+$breadcrumb-color: #004B7B;
+$breadcrumb-text-color: #fff;
+$breadcrumb-border-color: #004B7B;
+$breadcrumb-chevron: $breadcrumb-chevron-white;
+
+//=============================================================================
+// ABOVE - VARIABLES FOR IMPORTED GENERAL SCRIPTS (BELOW)
+//=============================================================================
+
+@import 
+"mixins/mixins", 
+"global/footer", 
+"global/header", 
+"global/breadcrumb", 
+"global/disclosures", 
+"global/panels", 
+"global/typography", 
+"global/misc", 
+"global/searchbox", 
+"global/searchresults", 
+"global/cookies";
+
+//=============================================================================
+// CUSTOM OVERWRITE
+//=============================================================================
+
+
+/* FOOTER */
+
+footer.footer {
+    background-color: #cbd9e1;
+    border-top: 10px solid #041b40;
+}
+ 
+footer.footer * {
+    color: #0b0b0c;
+}
+
+
+.utilitymenu--bottom .utilitymenu__link {
+    color: #000
+}
+
+/* TOP MENU */
+
+.utilitymenu--mobile .utilitymenu__link {
+    background-color: $americanlibrary-red;
+}
+
+.a-panel--feature .item.item--article {
+    border-radius: 0px;
+    border: 0px;
+//    background-color: #fff;
+//    height: 100%;
+
+//    overflow: hidden;
+}
+
+.item.item--article .item__title a {
+    color: #050505;
+    text-decoration: none;
+}
+
+.item.item--article .item__title a:hover {
+    color: #050505;
+    text-decoration: underline;
+}
+
+.item.item--article .item__title a:focus {
+    color: #050505;
+    background-color: #ffbf47;
+    text-decoration: underline;
+}
+
+.item__content .item__sublink {
+    color: #4169e1;
+    border-bottom: none;
+}
+
+.item__content .item__sublink:hover {
+    color: #4169e1;
+    border-bottom: none;
+    text-decoration: underline;
+}
+
+.utilitymenu--top .utilitymenu__link {
+    background-color: $americanlibrary-red;
+    border-radius: 15px;
+    border: 0px;
+}
+
+.item__content .item__title {
+    color: #fff;
+}
+
+.gi-sitesearch--top .btn--search, .gi-sitesearch--dynamic .btn--search {
+    background-color: $americanlibrary-red !important;
+}
+
+.gi-sitenav__link--lvl1:hover {
+    background-color: $americanlibrary-red;
+}
+
+ 
+/* Mobile Menu */
+
+.gi-mobilenav--mobilemenu {
+    background-color: #033351;
+}
+
+.sitemenu--mobile .sitemenu__item {
+    text-align: center;
+}
+
+.sitemenu--mobile .sitemenu__item:hover {
+    text-align: center;
+    text-decoration : underline;
+}
