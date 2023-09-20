@@ -244,6 +244,16 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
   color: #4840e3;
 }
 
+.imagegalleryinline .grid__cell {
+  padding: 5px;
+}
+.imagegalleryinline .grid__cell .grid__cellwrap {
+  aspect-ratio: 3/2;
+}
+.imagegalleryinline .grid__cell .grid__cellwrap figure.gi-responsiveimage {
+  aspect-ratio: 3/2;
+}
+
 /*
 Variables to change:
   - $list-panel-link-color
