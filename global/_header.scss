@@ -35,6 +35,10 @@ Variables to change:
   }
 }
 
+.utilitymenu--top .utilitymenu__link {
+  background-color: $header-utilitymenu-color;
+}
+
 .gi-sitenav__link {
   color: $header-text-color;
 
@@ -98,3 +102,7 @@ header .imagebanner {
   display: block;
 }
 
+//Mobile Menu
+.sitemenu--mobile .sitemenu__item {
+  text-align: $header-mobilemenu-text-alignment;
+}

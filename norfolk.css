@@ -39,6 +39,10 @@ footer.footer-bottom {
   background-color: #050505;
 }
 
+.utilitymenu--bottom .utilitymenu__link {
+  color: #fff;
+}
+
 /*
 Variables to change:
   - $header-color (background colour)
@@ -68,6 +72,10 @@ Variables to change:
 .utilitymenu--top .utilitymenu__link:focus, .utilitymenu--top .utilitymenu__text:focus, .utilitymenu--mobile .utilitymenu__link:focus, .utilitymenu--mobile .utilitymenu__text:focus {
   color: #050505;
   background-color: #ffdd00;
+}
+
+.utilitymenu--top .utilitymenu__link {
+  background-color: #FFFFFF;
 }
 
 .gi-sitenav__link {
@@ -122,6 +130,10 @@ header .imagebanner {
 
 .body--showbanner .imagebanner {
   display: block;
+}
+
+.sitemenu--mobile .sitemenu__item {
+  text-align: left;
 }
 
 /*
@@ -824,6 +836,12 @@ h5, .h5 {
   margin: 0px 0px 5px 0px;
 }
 
+@media only screen and (max-width: 991px) {
+  iframe {
+    width: 100%;
+  }
+}
+
 .gi-sitesearch--dynamic {
   position: relative;
   top: 0;
@@ -958,12 +976,6 @@ h5, .h5 {
 
 .searchresults__itemsummary, .searchresults__itemsummary > .icmhighlight {
   font-size: 1.125rem !important;
-}
-
-@media only screen and (max-width: 991px) {
-  iframe {
-    width: 100%;
-  }
 }
 
 .block--cookie-consent-prompt {

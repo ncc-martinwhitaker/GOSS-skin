@@ -48,6 +48,8 @@ $focus-color: #ffdd00;
 // component variables
 $header-color: $primary !default;
 $header-text-color: #050505 !default;
+$header-utilitymenu-color: $primary !default;
+$header-mobilemenu-text-alignment: left !default;
 
 $list-panel-link-color: #050505 !default;
 $list-panel-link-color-hover: $link-color-darken !default;
@@ -60,6 +62,11 @@ $breadcrumb-color: #ddd;
 $breadcrumb-text-color: #050505;
 $breadcrumb-border-color: #ccc;
 $breadcrumb-chevron: $breadcrumb-chevron-gray;
+
+// FOOTER VARIABLES
+
+$footer-background-color: #1d1d1d;
+$footer-color: #fff !default;
 
 // FONT SIZES
 

@@ -1,12 +1,16 @@
 footer.footer {
   font-weight: 600;
-  background-color: #1d1d1d;
+  background-color: $footer-background-color;
 }
 
 footer.footer * {
-  color: #fff;
+  color: $footer-color;
 }
 
 footer.footer-bottom {
   background-color: #050505;
+}
+
+.utilitymenu--bottom .utilitymenu__link {
+color: $footer-color;
 }
