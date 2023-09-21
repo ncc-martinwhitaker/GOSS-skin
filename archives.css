@@ -10,6 +10,7 @@ html * {
   font-family: "Assistant", "Open Sans", sans-serif;
 }
 
+/* Buttons */
 .container {
   max-width: 1170px;
 }
@@ -74,7 +75,7 @@ Variables to change:
 }
 
 .utilitymenu--top .utilitymenu__link {
-  background-color: #FFFFFF;
+  background-color: #036eb2;
 }
 
 .gi-sitenav__link {
@@ -253,6 +254,16 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
   padding-right: 28px;
   border-bottom: solid 3px transparent;
   color: #4840e3;
+}
+
+.imagegalleryinline .grid__cell {
+  padding: 5px;
+}
+.imagegalleryinline .grid__cell .grid__cellwrap {
+  aspect-ratio: 3/2;
+}
+.imagegalleryinline .grid__cell .grid__cellwrap figure.gi-responsiveimage {
+  aspect-ratio: 3/2;
 }
 
 /*
@@ -1001,4 +1012,97 @@ h5, .h5 {
   max-width: 100% !important;
   bottom: 0;
   position: fixed !important;
+}
+
+/*
+//-------------------------------------------
+// buttons
+//
+// btn-primary-std
+//-------------------------------------------
+*/
+.a-panel__link, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn,
+.a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-std, .a-body__link--btn-primary-teal-lge, .a-body__link--btn-secondary, .a-body__link--btn-inverted-secondary {
+  padding: 5px 35px 5px 12px;
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  font-family: inherit;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.a-panel__link, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn, .a-body__link--btn-primary-lge {
+  background-color: #00823b;
+  color: #fff !important;
+  border-bottom: 0px;
+}
+
+.a-body__link--btn-primary-teal-std, .a-body__link--btn-primary-teal-lge {
+  background-color: #006666;
+  color: #fff !important;
+}
+
+.a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-lge {
+  font-size: 1.25rem;
+}
+
+.a-body__link--btn-primary-std:hover, .a-body__link--btn-primary-std-dwn:hover, .a-body__link--btn-primary-lge:hover, .a-body__link--btn-primary-teal-std:hover, .a-body__link--btn-primary-teal-lge:hover {
+  cursor: pointer;
+  color: #fff !important;
+  box-shadow: inset 0 0 20em rgba(0, 0, 0, 0.2);
+  text-decoration: underline;
+  border-bottom: 0px !important;
+}
+
+/* secondary / inverted buttons */
+.a-body__link--btn-secondary {
+  color: #424242 !important;
+  background-color: #fff;
+  border: 2px solid #424242;
+}
+
+.a-body__link--btn-secondary:hover {
+  cursor: pointer;
+  color: #fff !important;
+  background-color: #424242;
+  border: 2px solid #fff !important;
+  text-decoration: underline;
+}
+
+.a-body__link--btn-inverted-secondary {
+  color: #fff !important;
+  background-color: #424242;
+  border: 2px solid #fff;
+}
+
+.a-body__link--btn-inverted-secondary:hover {
+  cursor: pointer;
+  color: #424242 !important;
+  background-color: #fff;
+  border: 2px solid #424242 !important;
+  text-decoration: underline;
+}
+
+/* adding button icons */
+.a-body__link--btn-primary-std::after, .a-body__link--btn-primary-lge::after, .a-body__link--btn-primary-teal-std::after, .a-body__link--btn-primary-teal-lge::after, .a-body__link--btn-secondary::after, .a-body__link--btn-inverted-secondary::after {
+  content: "\e827";
+  top: calc(50% - 8px);
+}
+
+.a-body__link--btn-primary-std-dwn::after {
+  content: "\e812";
+  top: calc(50% - 8px);
+}
+
+.a-body__link--btn-primary-std::after, .a-body__link--btn-primary-std-dwn::after, .a-body__link--btn-primary-lge::after, .a-body__link--btn-primary-teal-std::after, .a-body__link--btn-primary-teal-lge::after, .a-body__link--btn-secondary::after, .a-body__link--btn-inverted-secondary::after {
+  position: absolute;
+}
+
+.a-body__link--btn-primary-std::after, .a-body__link--btn-primary-std-dwn::after, .a-body__link--btn-primary-lge::after, .a-body__link--btn-primary-teal-std::after, .a-body__link--btn-primary-teal-lge::after, .a-body__link--btn-secondary::after, .a-body__link--btn-inverted-secondary::after {
+  right: 13px;
 }/*# sourceMappingURL=archives.css.map */
