@@ -1017,13 +1017,13 @@ footer.footer {
   background-color: #af142e;
 }
 
-.utilitymenu--top .utilitymenu__link {
+.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover {
   background-color: #af142e;
   border-radius: 15px;
   border: 0;
 }
 
-/*  Replace this button when the general search box sizes and colours is fixed */
-.gi-sitesearch--top .btn--search, .gi-sitesearch--dynamic .btn--search {
+.utilitymenu--top .utilitymenu__link:hover .gi-sitesearch--top .btn--search,
+.gi-sitesearch--dynamic .btn--search {
   background-color: #af142e !important;
 }/*# sourceMappingURL=americanlibrary.css.map */

@@ -49,14 +49,16 @@ footer.footer {
     background-color: $americanlibrary-red;
 }
 
-.utilitymenu--top .utilitymenu__link {
-    background-color: #af142e;
+.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover  {
+    background-color: $americanlibrary-red;
     border-radius: 15px;
     border: 0;
 }
 
+.utilitymenu--top .utilitymenu__link:hover
+
 /*  Replace this button when the general search box sizes and colours is fixed */
 
 .gi-sitesearch--top .btn--search, .gi-sitesearch--dynamic .btn--search {
-    background-color: #af142e!important;
+    background-color: $americanlibrary-red !important;
 }
