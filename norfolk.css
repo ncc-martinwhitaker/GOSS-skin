@@ -262,33 +262,6 @@ Variables to change:
   padding: 0px;
 }
 
-.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
-  display: flex;
-  padding: 0px;
-}
-.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
-  display: block;
-  min-width: 250px;
-  max-width: 250px;
-  width: 250px;
-  height: 250px;
-  padding: 0px;
-}
-.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item {
-  margin: 0px;
-  height: 250px;
-}
-.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item .gi-responsiveimage__imagewrapper {
-  height: 100%;
-  width: 100%;
-}
-.a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item .gi-responsiveimage__imagewrapper img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .imagebanner__title {
   color: #fff;
 }

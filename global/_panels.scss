@@ -18,39 +18,39 @@ Variables to change:
   padding: 0px;
 }
 
-.a-panel--pt.a-panel--hasbackground .a-panel__content {
-  //background-color: transparent;
+// .a-panel--pt.a-panel--hasbackground .a-panel__content {
+//   //background-color: transparent;
 
-  .item.item--article {
-    display: flex;
-    padding: 0px;
+//   .item.item--article {
+//     display: flex;
+//     padding: 0px;
 
-    .item__imagecontainer {
-      display: block;
-      min-width: 250px;
-      max-width: 250px;
-      width: 250px;
-      height: 250px;
-      padding: 0px;
+//     .item__imagecontainer {
+//       display: block;
+//       min-width: 250px;
+//       max-width: 250px;
+//       width: 250px;
+//       height: 250px;
+//       padding: 0px;
 
-      .gi-responsiveimage--item {
-        margin: 0px;
-        height: 250px;
+//       .gi-responsiveimage--item {
+//         margin: 0px;
+//         height: 250px;
 
-        .gi-responsiveimage__imagewrapper {
-          height: 100%;
-          width: 100%;
+//         .gi-responsiveimage__imagewrapper {
+//           height: 100%;
+//           width: 100%;
 
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-  }
-}
+//           img {
+//             height: 100%;
+//             width: 100%;
+//             object-fit: cover;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .imagebanner__title {
   color: #fff;
