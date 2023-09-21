@@ -1003,11 +1003,27 @@ h5, .h5 {
   position: fixed !important;
 }
 
-/* FOOTER */
+/* Footer */
 footer.footer {
   border-top: 10px solid #041b40;
 }
 
+/* Header / Menu */
 .gi-sitenav__link {
   padding: 8px 16px 8px 16px;
+}
+
+.gi-sitenav__link--lvl1:hover {
+  background-color: #af142e;
+}
+
+.utilitymenu--top .utilitymenu__link {
+  background-color: #af142e;
+  border-radius: 15px;
+  border: 0;
+}
+
+/*  Replace this button when the general search box sizes and colours is fixed */
+.gi-sitesearch--top .btn--search, .gi-sitesearch--dynamic .btn--search {
+  background-color: #af142e !important;
 }/*# sourceMappingURL=americanlibrary.css.map */
