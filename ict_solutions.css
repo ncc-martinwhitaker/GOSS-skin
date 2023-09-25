@@ -554,6 +554,12 @@ h2.a-panel__title, .a-panel__title.h2 {
   }
 }
 @media only screen and (max-width: 850px) {
+  .a-panel--pt.a-panel--render.a-panel--hasbackground {
+    padding: 60px 0px;
+  }
+  .a-panel--pt.a-panel--render.a-panel--hasbackground .container .a-panel__content .a-panel__list {
+    margin: 0px;
+  }
   .a-panel--pt.a-panel--parallax .grid--2col > .grid__cell {
     width: 100%;
     padding: 0px;
@@ -638,6 +644,10 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 .grid__cellwrap {
   border-radius: 0px;
+}
+
+.grid--list.grid[data-grid-mincolwidth="250"] > .grid__cell.grid__cell--list {
+  min-width: none;
 }
 
 h1, .h1 {
