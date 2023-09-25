@@ -758,10 +758,6 @@ h5, .h5 {
   font-weight: 500;
 }
 
-.a-panel--pt.a-panel--list .item__content, .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article {
-  min-height: 10px !important;
-}
-
 .body--hide-title main .a-heading.a-heading--panel .a-heading__title {
   position: absolute;
   position: absolute !important;
