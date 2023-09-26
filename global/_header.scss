@@ -52,10 +52,6 @@ Variables to change:
   }
 }
 
-.btn--search::after {
-  color: $header-text-color;
-}
-
 // Dropdown menu
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -76,7 +72,7 @@ Variables to change:
 }
 
 .utilitymenu.utilitymenu--mobile {
-  margin-top: 80px;
+  margin-top: 0px;//80px;
 }
 
 .utilitymenu--mobile .utilitymenu__link {

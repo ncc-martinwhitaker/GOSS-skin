@@ -45,6 +45,19 @@ $archives-blue: #036eb2;
 
 $focus-color: #ffdd00;
 
+// buttons 
+$button-primary-text-color: #fff;
+$button-primary-color: #00823b;
+$button-primary-color-hov: #005220;
+$button-primary-teal-color: #006666;
+$button-primary-teal-color-hov: #003d3d;
+$button-secondary-color: #fff;
+$button-secondary-color-hov: #424242;
+$button-inverted-secondary-color: #424242;
+$button-inverted-secondary-color-hov: #fff;
+
+$button-search-background-color: $teal;
+
 // component variables
 $header-color: $primary !default;
 $header-text-color: #050505 !default;

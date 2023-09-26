@@ -61,4 +61,9 @@ $button-inverted-secondary-color-hov: #fff;
     }
 }
 
-
+@media (max-width: 1050px)
+{
+  .gi-mobilenav--mobilemenu {
+      top: 200px; //moves mobile menu down
+  }
+}
