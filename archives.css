@@ -89,10 +89,6 @@ Variables to change:
   background-color: #ffdd00;
 }
 
-.btn--search::after {
-  color: #fff;
-}
-
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
   background-color: #fff;
   color: #050505;
@@ -109,7 +105,7 @@ Variables to change:
 }
 
 .utilitymenu.utilitymenu--mobile {
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 .utilitymenu--mobile .utilitymenu__link {
@@ -848,10 +844,13 @@ h5, .h5 {
   right: 0;
   margin-top: 20px;
   float: right;
+  display: none;
 }
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-  width: 300px;
+  width: 350px;
+  display: block;
+  border-radius: 5px;
 }
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top > .gi-sitesearch__container > .gi-sitesearch__closetoggle {
@@ -863,6 +862,7 @@ h5, .h5 {
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
   border: solid 1px #767676;
+  border-radius: 4px 0 0 4px;
 }
 .searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
   outline: solid #ffdd00 2px;
@@ -935,24 +935,24 @@ h5, .h5 {
 }
 
 .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
-  width: calc(100% - 40px);
+  width: calc(100% - 100px);
 }
 
 .gi-sitesearch[data-collapsible=true][data-collapsed=true] .gi-sitesearch__button--search {
   border-left: 0;
 }
 
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search {
-  background-color: #515151;
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
+  background-color: #be4600;
 }
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
   color: #fff;
+  content: "\e800  Search";
+  font-size: 16px;
+  margin: 8px;
 }
 
-.gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
-  background-color: #515151;
-}
-.gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+.btn--search::after {
   color: #fff;
 }
 
@@ -974,6 +974,30 @@ h5, .h5 {
   width: calc(100% - 110px);
 }
 
+.gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+  width: 100px;
+  border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 1050px) {
+  .header__menu {
+    display: block;
+    width: 100%;
+  }
+  .header__menu .utilitymenu--top {
+    display: none;
+  }
+  .header__menu .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch {
+    display: none;
+  }
+  .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
+  }
+  .gi-mobilenav--mobilemenu {
+    top: 150px;
+    z-index: 5;
+  }
+}
 .searchresults__itemsummary, .searchresults__itemsummary > .icmhighlight {
   font-size: 1.125rem !important;
 }

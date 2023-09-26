@@ -12,6 +12,8 @@ $breadcrumb-text-color: #fff;
 $breadcrumb-border-color: #004B7B;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
 
+$button-search-background-color: $americanlibrary-red;
+
 $footer-background-color: #cbd9e1;
 $footer-color: #0b0b0c;
 
@@ -55,10 +57,9 @@ footer.footer {
     border: 0;
 }
 
-.utilitymenu--top .utilitymenu__link:hover
-
-/*  Replace this button when the general search box sizes and colours is fixed */
-
-.gi-sitesearch--top .btn--search, .gi-sitesearch--dynamic .btn--search {
-    background-color: $americanlibrary-red !important;
+@media (max-width: 1050px)
+{
+  .gi-mobilenav--mobilemenu {
+      top: 172px; //moves mobile menu down
+  }
 }

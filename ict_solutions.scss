@@ -3,6 +3,8 @@
 $header-color: #fff;
 $header-text-color: #050505;
 
+$button-search-background-color: #e74d2f;
+
 @import 
 "mixins/mixins", 
 "global/footer", 
@@ -18,3 +20,10 @@ $header-text-color: #050505;
 "global/searchresults", 
 "global/cookies",
 "global/buttons";
+
+@media (max-width: 1050px)
+{
+  .gi-mobilenav--mobilemenu {
+      top: 203px; //moves mobile menu down
+  }
+}
