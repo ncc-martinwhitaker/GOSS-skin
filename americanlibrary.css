@@ -36,7 +36,8 @@ footer.footer * {
 }
 
 footer.footer-bottom {
-  background-color: #050505;
+  background-color: #dee0e2;
+  border-top: 10px solid #727a82;
 }
 
 .utilitymenu--bottom .utilitymenu__link {
