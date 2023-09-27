@@ -25,11 +25,15 @@
 
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
-  border: solid 1px #767676;
   border-radius: 4px 0 0 4px;
+  border: none;
 
   &:focus {
     outline: solid $focus-color 2px;
+  }
+
+  &::placeholder {
+    color: #000000;
   }
 }
 
@@ -48,13 +52,9 @@
 .gi-sitesearch__searchfield,
 .gi-sitesearch[data-collapsible="true"][data-suppress-closebtn="true"]
   .gi-sitesearch__searchfield {
-    // position: relative;
-    // width: calc(100% - 50px);
-    // height: 50px;
     width: 300px;
 }
 .gi-sitesearch[data-collapsible="true"] .gi-sitesearch__searchfield {
-    //width: calc(100% - 100px);
     width: 300px;
 }
 
@@ -101,9 +101,7 @@
 .gi-sitesearch--searchtemplate .gi-sitesearch__searchfield,
 .gi-sitesearch--searchtemplate[data-collapsible="true"][data-suppress-closebtn="true"]
   .gi-sitesearch__searchfield {
-    position: relative;
-    width: calc(100% - 60px);
-    height: 50px;
+    width: calc(100% - 110px);
 }
 
 .gi-sitesearch--searchtemplate[data-collapsible="true"]
@@ -136,8 +134,6 @@
 
 .gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
   &::after {
-    color: #fff;
-    content: "\e800  Search";
     font-size: 16px;
     margin: 8px;
   }
@@ -145,7 +141,8 @@
 }
 
 .btn--search::after {
-  color: $header-text-color;
+  color: $button-search-color;
+  content: "\e800  Search";
 }
 
 .gi-sitesearch--dynamic[data-collapsed="false"]
@@ -178,6 +175,38 @@
   width: 100px;
   border-radius: 0 4px 4px 0;
 }
+
+#keywords_input {
+  height: 50px;
+  border-top: solid 2px #A9A9A9;
+  border-bottom: solid 2px #A9A9A9;
+  border-left: solid 2px #A9A9A9;
+  border-radius: 4px 0 0 4px;
+}
+
+.gi-sitesearch--searchtemplate {
+
+  .gi-sitesearch__searchtoggle {
+    height: 35px;
+    border: none;
+    width: auto;
+  }
+
+  .gi-sitesearch__button {
+    border: none;
+    width: auto;
+    height: 50px;
+    min-height: auto;
+    width: 110px;
+    background-color: $button-search-background-color;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.btn--search::after {
+    color: #ffffff;
+}
+
 
 @media (max-width: 1050px)
 {
