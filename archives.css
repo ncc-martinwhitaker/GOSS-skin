@@ -870,8 +870,7 @@ h5, .h5 {
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
   border-radius: 4px 0 0 4px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+  border: solid 1px #FFFFFF;
 }
 .searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
   outline: solid #ffdd00 2px;

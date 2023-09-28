@@ -30,8 +30,7 @@
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
   border-radius: 4px 0 0 4px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+  border: solid 1px $search-border-color;
 
   &:focus {
     outline: solid $focus-color 2px;
