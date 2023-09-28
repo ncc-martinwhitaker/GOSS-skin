@@ -257,6 +257,9 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
   color: #4840e3;
 }
 
+.imagegalleryinline .grid--5col > .grid__cell:nth-child(5n+1) {
+  clear: none;
+}
 .imagegalleryinline .grid__cell {
   width: 25%;
   padding: 5px;

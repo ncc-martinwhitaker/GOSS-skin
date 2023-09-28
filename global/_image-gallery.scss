@@ -4,6 +4,11 @@
 
 .imagegalleryinline{
 
+    .grid--5col>.grid__cell:nth-child(5n+1) {
+        clear: none;
+    }
+
+
 
     .grid__cell {
         width: 25%;
