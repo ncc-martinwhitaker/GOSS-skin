@@ -10,7 +10,6 @@ html * {
   font-family: "Assistant", "Open Sans", sans-serif;
 }
 
-/* Buttons */
 .container {
   max-width: 1170px;
 }
@@ -868,10 +867,15 @@ h5, .h5 {
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
   border: solid 1px #767676;
-  border-radius: 4px 0 0 4px;
 }
 .searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
   outline: solid #ffdd00 2px;
+}
+.searchform__inputtxt.searchform__inputtxt--sitesearch::-moz-placeholder {
+  color: #000000;
+}
+.searchform__inputtxt.searchform__inputtxt--sitesearch::placeholder {
+  color: #000000;
 }
 
 .gi-sitesearch[data-collapsible=true][data-collapsed=false] .gi-sitesearch__closetoggle {
@@ -919,9 +923,7 @@ h5, .h5 {
 
 .gi-sitesearch--searchtemplate .gi-sitesearch__searchfield,
 .gi-sitesearch--searchtemplate[data-collapsible=true][data-suppress-closebtn=true] .gi-sitesearch__searchfield {
-  position: relative;
-  width: calc(100% - 60px);
-  height: 50px;
+  width: calc(100% - 110px);
 }
 
 .gi-sitesearch--searchtemplate[data-collapsible=true] .gi-sitesearch__searchfield {
@@ -951,15 +953,15 @@ h5, .h5 {
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
   background-color: #006666;
 }
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
   color: #fff;
-  content: "\e800  Search";
-  font-size: 16px;
-  margin: 8px;
 }
 
-.btn--search::after {
-  color: #050505;
+.gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
+  background-color: #515151;
+}
+.gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+  color: #fff;
 }
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search:hover .gi-sitesearch--dynamic[data-collapsed=false] .btn--search:focus {
@@ -980,30 +982,6 @@ h5, .h5 {
   width: calc(100% - 110px);
 }
 
-.gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
-  width: 100px;
-  border-radius: 0 4px 4px 0;
-}
-
-@media (max-width: 1050px) {
-  .header__menu {
-    display: block;
-    width: 100%;
-  }
-  .header__menu .utilitymenu--top {
-    display: none;
-  }
-  .header__menu .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch {
-    display: none;
-  }
-  .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    width: 100%;
-  }
-  .gi-mobilenav--mobilemenu {
-    top: 150px;
-    z-index: 5;
-  }
-}
 .searchresults__itemsummary, .searchresults__itemsummary > .icmhighlight {
   font-size: 1.125rem !important;
 }
