@@ -18,12 +18,13 @@ $search-border-color: #FFFFFF;
 $footer-background-color: #cbd9e1;
 $footer-color: #0b0b0c;
 
-@import 
+@import
 "mixins/mixins", 
 "global/footer", 
 "global/header", 
 "global/breadcrumb", 
-"global/disclosures", 
+"global/disclosures",
+"global/image-gallery", 
 "global/panels", 
 "global/typography", 
 "global/page", 
