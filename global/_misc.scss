@@ -43,3 +43,10 @@
     }
   }
 }
+
+
+iframe {
+  @include mq('lg', 'max') {
+    width: 100%;
+  }
+}

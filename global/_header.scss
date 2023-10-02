@@ -35,6 +35,10 @@ Variables to change:
   }
 }
 
+.utilitymenu--top .utilitymenu__link {
+  background-color: $header-utilitymenu-color;
+}
+
 .gi-sitenav__link {
   color: $header-text-color;
 
@@ -46,10 +50,6 @@ Variables to change:
     color: #050505;
     background-color: $focus-color;
   }
-}
-
-.btn--search::after {
-  color: $header-text-color;
 }
 
 // Dropdown menu
@@ -72,7 +72,7 @@ Variables to change:
 }
 
 .utilitymenu.utilitymenu--mobile {
-  margin-top: 80px;
+  margin-top: 0px;//80px;
 }
 
 .utilitymenu--mobile .utilitymenu__link {
@@ -98,3 +98,7 @@ header .imagebanner {
   display: block;
 }
 
+//Mobile Menu
+.sitemenu--mobile .sitemenu__item {
+  text-align: $header-mobilemenu-text-alignment;
+}

@@ -29,6 +29,10 @@ $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3
 
 // COLOR SYSTEM
 
+// americanlibrary.uk/
+$americanlibrary-red: #af142e;
+$americanlibrary-blue: #25317a;
+
 // norfolk.gov.uk
 $primary: #FFFFFF;
 $teal: #006666;
@@ -41,9 +45,27 @@ $archives-blue: #036eb2;
 
 $focus-color: #ffdd00;
 
+// buttons
+$button-primary-text-color: #fff;
+$button-primary-color: #00823b;
+$button-primary-color-hov: #005220;
+$button-primary-teal-color: #006666;
+$button-primary-teal-color-hov: #003d3d;
+$button-secondary-color: #fff;
+$button-secondary-color-hov: #424242;
+$button-inverted-secondary-color: #424242;
+$button-inverted-secondary-color-hov: #fff;
+
+// search
+$button-search-color: #fff;
+$button-search-background-color: $teal;
+$search-border-color: #767676;
+
 // component variables
 $header-color: $primary !default;
 $header-text-color: #050505 !default;
+$header-utilitymenu-color: $link-color !default;
+$header-mobilemenu-text-alignment: left !default;
 
 $list-panel-link-color: #050505 !default;
 $list-panel-link-color-hover: $link-color-darken !default;
@@ -56,6 +78,13 @@ $breadcrumb-color: #ddd;
 $breadcrumb-text-color: #050505;
 $breadcrumb-border-color: #ccc;
 $breadcrumb-chevron: $breadcrumb-chevron-gray;
+
+// FOOTER VARIABLES
+
+$footer-background-color: #dee0e2;
+$footer-color: #000 !default;
+$footer-first-column-count: 1;
+$footer-first-column-width: 25%;
 
 // FONT SIZES
 

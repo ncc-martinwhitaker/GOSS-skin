@@ -2,6 +2,7 @@
 
 $header-color: $archives-blue;
 $header-text-color: #fff;
+$header-utilitymenu-color: $archives-blue;
 
 $burger-menu-color: #fff;
 
@@ -10,16 +11,21 @@ $breadcrumb-text-color: #fff;
 $breadcrumb-border-color: #004B7B;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
 
+$button-search-background-color: #be4600;
+$search-border-color: #FFFFFF;
+ 
 @import 
 "mixins/mixins", 
 "global/footer", 
 "global/header", 
 "global/breadcrumb", 
 "global/disclosures", 
+"global/image-gallery", 
 "global/panels", 
 "global/typography", 
 "global/page", 
 "global/misc", 
-"global/searchbox", 
+"global/searchbox",
 "global/searchresults", 
-"global/cookies"; 
+"global/cookies",
+"global/buttons";

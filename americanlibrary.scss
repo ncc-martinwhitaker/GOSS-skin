@@ -1,0 +1,66 @@
+﻿@import "variables";
+
+$header-color: $americanlibrary-blue;
+$header-text-color: #fff;
+$header-utilitymenu-color: $americanlibrary-red;
+$header-mobilemenu-text-alignment: center;
+
+$burger-menu-color: #fff;
+
+$breadcrumb-color: #004B7B;
+$breadcrumb-text-color: #fff;
+$breadcrumb-border-color: #004B7B;
+$breadcrumb-chevron: $breadcrumb-chevron-white;
+
+$button-search-background-color: $americanlibrary-red;
+$search-border-color: #FFFFFF;
+
+$footer-background-color: #cbd9e1;
+$footer-color: #0b0b0c;
+
+@import 
+"mixins/mixins", 
+"global/footer", 
+"global/header", 
+"global/breadcrumb", 
+"global/disclosures", 
+"global/panels", 
+"global/typography", 
+"global/page", 
+"global/misc", 
+"global/searchbox", 
+"global/searchresults", 
+"global/cookies"; 
+
+//=============================================================================
+// CUSTOM OVERWRITE
+//=============================================================================
+
+/* Footer */
+
+footer.footer {
+    border-top: 10px solid #041b40;
+}
+
+/* Header / Menu */
+
+.gi-sitenav__link {
+    padding: 8px 16px 8px 16px;
+}
+
+.gi-sitenav__link--lvl1:hover {
+    background-color: $americanlibrary-red;
+}
+
+.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover  {
+    background-color: $americanlibrary-red;
+    border-radius: 15px;
+    border: 0;
+}
+
+@media (max-width: 1050px)
+{
+  .gi-mobilenav--mobilemenu {
+      top: 172px; //moves mobile menu down
+  }
+}
