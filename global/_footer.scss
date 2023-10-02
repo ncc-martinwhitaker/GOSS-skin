@@ -16,3 +16,28 @@ footer.footer-bottom {
 .utilitymenu--bottom .utilitymenu__link {
 color: $footer-color;
 }
+
+.grid--footer>.grid__cell:first-child {
+  width: $footer-first-column-width;
+}
+
+.grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+  column-count: $footer-first-column-count;
+}
+
+.utilitymenu--bottom .utilitymenu__item {
+  break-inside: avoid-column;
+}
+
+.bygoss {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .grid--footer>.grid__cell:first-child {
+    width: 100%;
+  }
+  .grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+    column-count: 1;
+  }
+}
