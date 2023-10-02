@@ -262,6 +262,13 @@ Variables to change:
   padding: 0px;
 }
 
+.a-panel.a-panel--pt .a-panel__content .a-panel__list {
+  margin: 20px 20px 0px 20px;
+}
+.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+  padding: 0px;
+}
+
 .imagebanner__title {
   color: #fff;
 }
@@ -648,7 +655,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 .grid--list.grid[data-grid-mincolwidth="250"] > .grid__cell.grid__cell--list {
-  min-width: none;
+  min-width: 100px;
 }
 
 h1, .h1 {
