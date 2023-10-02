@@ -5,6 +5,11 @@ $header-text-color: #050505;
 
 $button-search-background-color: #e74d2f;
 
+$footer-background-color: #242424;
+$footer-color: #fff !default;
+$footer-first-column-count: 2;
+$footer-first-column-width: 50%;
+
 @import 
 "mixins/mixins", 
 "global/footer", 

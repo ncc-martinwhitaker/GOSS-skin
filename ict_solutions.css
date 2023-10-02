@@ -27,7 +27,7 @@ html * {
 */
 footer.footer {
   font-weight: 600;
-  background-color: #dee0e2;
+  background-color: #242424;
 }
 
 footer.footer * {
@@ -43,6 +43,33 @@ footer.footer-bottom {
   color: #000;
 }
 
+.grid--footer > .grid__cell:first-child {
+  width: 50%;
+}
+
+.grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+  -moz-column-count: 2;
+       column-count: 2;
+}
+
+.utilitymenu--bottom .utilitymenu__item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+
+.bygoss {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .grid--footer > .grid__cell:first-child {
+    width: 100%;
+  }
+  .grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
 /*
 Variables to change:
   - $header-color (background colour)
