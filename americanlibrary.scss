@@ -8,6 +8,9 @@ $header-mobilemenu-text-alignment: center;
 $burger-menu-color: #fff;
 
 $button-panel-color: $americanlibrary-red;
+ 
+$button-primary-color: $americanlibrary-red;
+$button-primary-color-hov: darken($button-primary-color, 20%) !default;
 
 $breadcrumb-color: #004B7B;
 $breadcrumb-text-color: #fff;
@@ -18,8 +21,9 @@ $button-search-background-color: $americanlibrary-red;
 $search-border-color: #FFFFFF;
 
 $footer-background-color: #cbd9e1;
+$footer-border-color: #041b40;
 $footer-color: #0b0b0c;
-
+ 
 @import
 "mixins/mixins", 
 "global/footer", 
@@ -33,17 +37,13 @@ $footer-color: #0b0b0c;
 "global/misc", 
 "global/searchbox", 
 "global/searchresults", 
-"global/cookies"; 
+"global/cookies", 
+"global/buttons";
+
 
 //=============================================================================
 // CUSTOM OVERWRITE
 //=============================================================================
-
-/* Footer */
-
-footer.footer {
-    border-top: 10px solid #041b40;
-}
 
 /* Header / Menu */
 

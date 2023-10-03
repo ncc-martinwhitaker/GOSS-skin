@@ -28,7 +28,7 @@ html * {
 footer.footer {
   font-weight: 600;
   background-color: #cbd9e1;
-  border-top: 10px solid #343434;
+  border-top: 10px solid #041b40;
 }
 
 footer.footer * {
@@ -1127,7 +1127,7 @@ h5, .h5 {
   cursor: pointer;
   font-weight: 600;
   text-decoration: none;
-  /*transition: all .5s cubic-bezier(.25,.8,.25,1);*/
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .a-panel__link, .a-body__link--cta, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn, .a-body__link--btn-primary-lge {
@@ -1213,11 +1213,6 @@ h5, .h5 {
 .a-panel__link {
   padding-right: 20px;
   background-color: #af142e;
-}
-
-/* Footer */
-footer.footer {
-  border-top: 10px solid #041b40;
 }
 
 /* Header / Menu */

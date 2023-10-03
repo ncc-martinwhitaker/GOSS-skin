@@ -93,13 +93,11 @@
 .a-body__link--cta::after, .a-body__link--btn-primary-std::after, .a-body__link--btn-primary-std-dwn::after, .a-body__link--btn-primary-lge::after, .a-body__link--btn-primary-teal-std::after, .a-body__link--btn-primary-teal-lge::after, .a-body__link--btn-secondary::after, .a-body__link--btn-inverted-secondary::after {
     right: 13px;
 }
-
+  
 /* panel buttons */
-
 .apanel__link:before, .a-panel__link:hover:before, .a-panel__link.a-panel__link--pt:before, .a-panel__link:after, .a-panel__link:hover:after, .a-panel__link:hover:before {
     all: unset;
 }
-
 
 .a-panel__link.a-panel__link--pt:hover {
     text-decoration: underline; 
