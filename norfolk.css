@@ -1143,7 +1143,7 @@ h5, .h5 {
 }
 
 .a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-lge {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .a-body__link--cta:hover, .a-body__link--btn-primary-std:hover, .a-body__link--btn-primary-std-dwn:hover, .a-body__link--btn-primary-lge:hover, .a-body__link--btn-primary-teal-std:hover, .a-body__link--btn-primary-teal-lge:hover {
@@ -1189,7 +1189,7 @@ h5, .h5 {
   top: calc(50% - 8px);
 }
 
-.a-body__link--cta::after, .a-body__link--btn-primary-std-dwn::after {
+.a-body__link--btn-primary-std-dwn::after {
   content: "\e812";
   top: calc(50% - 8px);
 }
@@ -1207,20 +1207,13 @@ h5, .h5 {
   all: unset;
 }
 
-.a-panel__link:after, .a-panel__link:hover:after {
-  all: unset;
-  padding-left: 10px;
-  font-family: "icons", sans-serif;
-  content: "\e827";
-  color: #fff;
-}
-
-.a-panel__link.a-panel__link--pt {
-  padding-right: 20px;
-}
-
 .a-panel__link.a-panel__link--pt:hover {
   text-decoration: underline;
+}
+
+.a-panel__link {
+  padding-right: 20px;
+  background-color: #066;
 }
 
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
