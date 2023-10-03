@@ -1,0 +1,31 @@
+@import "variables";
+
+$header-color: #FFFFFF;
+$header-text-color: #050505;
+$header-utilitymenu-color: #FFFFFF;
+
+$burger-menu-color: #0A96B5;
+
+$breadcrumb-color: #F0F5F3;
+$breadcrumb-text-color: #006666;
+$breadcrumb-border-color: #F0F5F3;
+$breadcrumb-chevron: $breadcrumb-chevron-gray;
+
+$button-search-background-color: #1C995D;
+$search-border-color: #767676;
+ 
+@import 
+"mixins/mixins", 
+"global/footer", 
+"global/header", 
+"global/breadcrumb", 
+"global/disclosures", 
+"global/image-gallery", 
+"global/panels", 
+"global/typography", 
+"global/page", 
+"global/misc", 
+"global/searchbox",
+"global/searchresults", 
+"global/cookies",
+"global/buttons";
