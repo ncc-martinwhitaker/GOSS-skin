@@ -27,12 +27,12 @@ html * {
 */
 footer.footer {
   font-weight: 600;
-  background-color: #dee0e2;
-  border-top: 10px solid #343434;
+  background-color: #00235d;
+  border-top: 10px solid #00235d;
 }
 
 footer.footer * {
-  color: #000;
+  color: #fff;
 }
 
 footer.footer-bottom {
@@ -41,16 +41,16 @@ footer.footer-bottom {
 }
 
 .utilitymenu--bottom .utilitymenu__link {
-  color: #000;
+  color: #fff;
 }
 
 .grid--footer > .grid__cell:first-child {
-  width: 25%;
+  width: 50%;
 }
 
 .grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
-  -moz-column-count: 1;
-       column-count: 1;
+  -moz-column-count: 2;
+       column-count: 2;
 }
 
 .utilitymenu--bottom .utilitymenu__item {
@@ -78,7 +78,7 @@ Variables to change:
   - $burger-menu-color
 */
 .header {
-  background-color: #036eb2;
+  background-color: #00235d;
   padding: 20px 0px;
 }
 
@@ -103,7 +103,7 @@ Variables to change:
 }
 
 .utilitymenu--top .utilitymenu__link {
-  background-color: #036eb2;
+  background-color: #00235d;
 }
 
 .gi-sitenav__link {
@@ -169,8 +169,8 @@ Variables to change:
 */
 .breadcrumb__nav {
   padding: 0px;
-  border: solid #004B7B 1px;
-  background-color: #004B7B;
+  border: solid #f6f6f6 1px;
+  background-color: #f6f6f6;
 }
 
 .breadcrumb {
@@ -182,19 +182,19 @@ Variables to change:
   padding: 0px;
 }
 .breadcrumb .breadcrumb__crumb a {
-  color: #fff;
+  color: #215bbb;
   text-decoration: none;
   font-weight: 600;
 }
 .breadcrumb .breadcrumb__crumb a:hover {
-  color: #fff;
+  color: #215bbb;
   text-decoration: none;
-  border-bottom: solid #fff 2px;
+  border-bottom: solid #215bbb 2px;
 }
 .breadcrumb .breadcrumb__crumb:after {
   content: "";
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='#006CF4'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 24px 24px;
@@ -984,8 +984,8 @@ h5, .h5 {
 }
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
-  background-color: #be4600;
-  background-color: #be4600;
+  background-color: #334f7d;
+  background-color: #334f7d;
 }
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
   color: #fff;
@@ -1041,7 +1041,7 @@ h5, .h5 {
   height: 50px;
   min-height: auto;
   width: 110px;
-  background-color: #be4600;
+  background-color: #334f7d;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1199,4 +1199,4 @@ h5, .h5 {
 
 .a-body__link--btn-primary-std::after, .a-body__link--btn-primary-std-dwn::after, .a-body__link--btn-primary-lge::after, .a-body__link--btn-primary-teal-std::after, .a-body__link--btn-primary-teal-lge::after, .a-body__link--btn-secondary::after, .a-body__link--btn-inverted-secondary::after {
   right: 13px;
-}/*# sourceMappingURL=archives.css.map */
+}/*# sourceMappingURL=museums.css.map */

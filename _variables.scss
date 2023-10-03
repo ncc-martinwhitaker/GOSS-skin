@@ -26,6 +26,7 @@ $breadcrumb-chevron-gray: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.
 
 $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
 
+$breadcrumb-chevron-blue: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='#006CF4'/%3E%3C/svg%3E");
 
 // COLOR SYSTEM
 
@@ -85,6 +86,7 @@ $footer-background-color: #dee0e2;
 $footer-color: #000 !default;
 $footer-first-column-count: 1;
 $footer-first-column-width: 25%;
+$footer-border-color: #343434;
 
 // FONT SIZES
 

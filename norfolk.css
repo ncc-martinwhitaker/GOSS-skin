@@ -29,6 +29,7 @@ html * {
 footer.footer {
   font-weight: 600;
   background-color: #dee0e2;
+  border-top: 10px solid #343434;
 }
 
 footer.footer * {

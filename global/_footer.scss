@@ -1,6 +1,7 @@
 footer.footer {
   font-weight: 600;
   background-color: $footer-background-color;
+  border-top: 10px solid $footer-border-color;
 }
 
 footer.footer * {
