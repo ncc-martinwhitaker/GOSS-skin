@@ -19,7 +19,7 @@ Variables to change:
 
 
 .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch {
-  margin: 0px 44px 0px 0px;
+  margin: 0px;
 }
 
 .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text, .utilitymenu--mobile .utilitymenu__link, .utilitymenu--mobile .utilitymenu__text {
@@ -52,6 +52,11 @@ Variables to change:
   }
 }
 
+.gi-sitenav__item--lvl1 {
+  float: unset;
+  display: inline-block;
+}
+
 // Dropdown menu
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -69,6 +74,11 @@ Variables to change:
   &:hover {
     text-decoration: underline;
   }
+}
+
+.gi-sitenav__link--lvl1 {
+  margin: 0 0 0 30px;
+  padding: 0;
 }
 
 .utilitymenu.utilitymenu--mobile {
