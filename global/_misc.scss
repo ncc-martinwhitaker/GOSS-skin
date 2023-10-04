@@ -50,3 +50,37 @@ iframe {
     width: 100%;
   }
 }
+
+//Highlight boxes
+.alert--none, .alert--contrast.alert--warn {
+  h2, h3, h4, h5, h6 {
+    color: #000;
+  }
+}
+.alert--contrast.alert--none, .alert--contrast.alert--error, .alert--contrast.alert--info {
+  h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+}
+.alert--info {
+  h2, h3, h4, h5, h6 {
+    color: #31708f;
+  }
+}
+.alert--warn {
+  h2, h3, h4, h5, h6 {
+    color: #8a6d3b;
+  }
+}
+.alert--error {
+  h2, h3, h4, h5, h6 {
+    color: #a94442;
+  }
+}
+p.gi-info {
+  color: #000000;
+}
+p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
+  color: #FFFFFF;
+}
+
