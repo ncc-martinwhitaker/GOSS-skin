@@ -867,6 +867,34 @@ h5, .h5 {
   }
 }
 
+.alert--none h2, .alert--none .h2, .alert--none h3, .alert--none .h3, .alert--none h4, .alert--none .h4, .alert--none h5, .alert--none .h5, .alert--none h6, .alert--none .h6, .alert--contrast.alert--warn h2, .alert--contrast.alert--warn .h2, .alert--contrast.alert--warn h3, .alert--contrast.alert--warn .h3, .alert--contrast.alert--warn h4, .alert--contrast.alert--warn .h4, .alert--contrast.alert--warn h5, .alert--contrast.alert--warn .h5, .alert--contrast.alert--warn h6, .alert--contrast.alert--warn .h6 {
+  color: #000;
+}
+
+.alert--contrast.alert--none h2, .alert--contrast.alert--none .h2, .alert--contrast.alert--none h3, .alert--contrast.alert--none .h3, .alert--contrast.alert--none h4, .alert--contrast.alert--none .h4, .alert--contrast.alert--none h5, .alert--contrast.alert--none .h5, .alert--contrast.alert--none h6, .alert--contrast.alert--none .h6, .alert--contrast.alert--error h2, .alert--contrast.alert--error .h2, .alert--contrast.alert--error h3, .alert--contrast.alert--error .h3, .alert--contrast.alert--error h4, .alert--contrast.alert--error .h4, .alert--contrast.alert--error h5, .alert--contrast.alert--error .h5, .alert--contrast.alert--error h6, .alert--contrast.alert--error .h6, .alert--contrast.alert--info h2, .alert--contrast.alert--info .h2, .alert--contrast.alert--info h3, .alert--contrast.alert--info .h3, .alert--contrast.alert--info h4, .alert--contrast.alert--info .h4, .alert--contrast.alert--info h5, .alert--contrast.alert--info .h5, .alert--contrast.alert--info h6, .alert--contrast.alert--info .h6 {
+  color: #fff;
+}
+
+.alert--info h2, .alert--info .h2, .alert--info h3, .alert--info .h3, .alert--info h4, .alert--info .h4, .alert--info h5, .alert--info .h5, .alert--info h6, .alert--info .h6 {
+  color: #31708f;
+}
+
+.alert--warn h2, .alert--warn .h2, .alert--warn h3, .alert--warn .h3, .alert--warn h4, .alert--warn .h4, .alert--warn h5, .alert--warn .h5, .alert--warn h6, .alert--warn .h6 {
+  color: #8a6d3b;
+}
+
+.alert--error h2, .alert--error .h2, .alert--error h3, .alert--error .h3, .alert--error h4, .alert--error .h4, .alert--error h5, .alert--error .h5, .alert--error h6, .alert--error .h6 {
+  color: #a94442;
+}
+
+p.gi-info {
+  color: #000000;
+}
+
+p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
+  color: #FFFFFF;
+}
+
 .gi-sitesearch--dynamic {
   position: relative;
   top: 0;
