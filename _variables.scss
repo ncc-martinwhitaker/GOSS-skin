@@ -47,11 +47,12 @@ $archives-blue: #036eb2;
 $focus-color: #ffdd00;
 
 // buttons
+$button-panel-color: #066;
 $button-primary-text-color: #fff;
 $button-primary-color: #00823b;
-$button-primary-color-hov: #005220;
+$button-primary-color-hov: darken( $button-primary-color, 20% );
 $button-primary-teal-color: #006666;
-$button-primary-teal-color-hov: #003d3d;
+$button-primary-teal-color-hov: darken( $button-primary-teal-color, 20% );
 $button-secondary-color: #fff;
 $button-secondary-color-hov: #424242;
 $button-inverted-secondary-color: #424242;
