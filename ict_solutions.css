@@ -32,7 +32,7 @@ footer.footer {
 }
 
 footer.footer * {
-  color: #000;
+  color: #fff;
 }
 
 footer.footer-bottom {
@@ -41,7 +41,7 @@ footer.footer-bottom {
 }
 
 .utilitymenu--bottom .utilitymenu__link {
-  color: #000;
+  color: #fff;
 }
 
 .grid--footer > .grid__cell:first-child {
