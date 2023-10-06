@@ -536,3 +536,15 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 .grid.grid--list.grid--3col[data-grid-maxcols="3"]>.grid__cell {
   width: 50%;
 }
+
+.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  width: 50%;
+}
+
+@media only screen and (max-width: 850px) {
+
+  .a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+    width: 100%;
+  }
+
+}

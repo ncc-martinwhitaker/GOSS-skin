@@ -722,6 +722,15 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   width: 50%;
 }
 
+.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col > .grid__cell {
+  width: 50%;
+}
+
+@media only screen and (max-width: 850px) {
+  .a-panel.a-panel--parallax .grid.grid--parallax.grid--2col > .grid__cell {
+    width: 100%;
+  }
+}
 h1, .h1 {
   font-size: 2.5rem;
   font-weight: 700;
