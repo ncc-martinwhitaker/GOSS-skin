@@ -531,6 +531,8 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   min-width: 100px;
 }
 
+// metadata modifiers to control column size + left/right images
+
 .grid.grid--list.grid--3col[data-grid-maxcols="3"]>.grid__cell {
   width: 50%;
 }
