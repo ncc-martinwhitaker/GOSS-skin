@@ -530,3 +530,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 .grid--list.grid[data-grid-mincolwidth="250"]>.grid__cell.grid__cell--list {
   min-width: 100px;
 }
+
+.grid.grid--list.grid--3col[data-grid-maxcols="3"]>.grid__cell {
+  width: 50%;
+}

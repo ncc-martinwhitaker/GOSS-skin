@@ -719,6 +719,10 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   min-width: 100px;
 }
 
+.grid.grid--list.grid--3col[data-grid-maxcols="3"] > .grid__cell {
+  width: 50%;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
   font-weight: 700;
