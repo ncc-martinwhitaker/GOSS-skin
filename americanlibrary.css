@@ -138,7 +138,7 @@ Variables to change:
 }
 
 .gi-sitenav__link--lvl1 {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 15px;
   padding: 0;
 }
 
@@ -1248,14 +1248,13 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 }
 
 /* Header / Menu */
-.gi-sitenav__link {
-  padding: 8px 16px 8px 16px;
+/*.gi-sitenav__link {
+    padding: 8px 16px 8px 16px;
 }
 
 .gi-sitenav__link--lvl1:hover {
-  background-color: #af142e;
-}
-
+    background-color: $americanlibrary-red;
+}*/
 .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover {
   background-color: #af142e;
   border-radius: 15px;
