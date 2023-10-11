@@ -20,20 +20,7 @@ $button-inverted-secondary-color: #424242;
 $button-inverted-secondary-color-hov: #fff;
 
 @import 
-"mixins/mixins", 
-"global/footer",  
-"global/header", 
-"global/breadcrumb", 
-"global/disclosures", 
-"global/image-gallery", 
-"global/panels", 
-"global/typography", 
-"global/page", 
-"global/misc", 
-"global/searchbox",
-"global/searchresults", 
-"global/cookies",
-"global/buttons";
+"global-import";
 
 // Norfolk specific changes to parallax panels
 .a-panel--pt.a-panel--parallax .fa-block {

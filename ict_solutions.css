@@ -1247,6 +1247,53 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #be4600;
 }
 
+.icmform {
+  max-width: 750px;
+}
+.icmform .icmcheckcontainer label::before, .icmform input, .icmform textarea, .icmform select, .icmform .icmradiocontainer label::before, .icmform .icmsinglecheckbox label::before {
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+.icmform .field_upload input {
+  border: none;
+  font-size: 1.1875rem;
+  padding-left: 0px;
+  /*&::file-selector-button, &::-webkit-file-upload-button { 
+      background-color: #FFFFFF;
+      padding: 5px;
+  }*/
+}
+.icmform .icmformleft label, .icmform .icmformright label {
+  font-size: 1.1875rem;
+  font-weight: 400;
+}
+.icmform .btn {
+  background-color: #00823b;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 6px;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.icmform .btn:hover {
+  box-shadow: inset 0 0 20em rgba(0, 0, 0, 0.2);
+}
+.icmform .icmradiocontainer label::before {
+  border-radius: 18px;
+}
+.icmform input[type=button] {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.icmform input[type=button]:hover {
+  background-color: #dbdad9;
+}
+.icmform input[type=button].icminput--contrast:hover {
+  background-color: #000000;
+}
+
 @media (max-width: 1050px) {
   .gi-mobilenav--mobilemenu {
     top: 203px;

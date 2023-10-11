@@ -16,20 +16,7 @@ $footer-first-column-count: 2;
 $footer-first-column-width: 50%;
 
 @import 
-"mixins/mixins", 
-"global/footer", 
-"global/header", 
-"global/breadcrumb", 
-"global/disclosures", 
-"global/image-gallery", 
-"global/panels", 
-"global/typography", 
-"global/page", 
-"global/misc", 
-"global/searchbox",
-"global/searchresults", 
-"global/cookies",
-"global/buttons";
+"global-import";
 
 @media (max-width: 1050px)
 {

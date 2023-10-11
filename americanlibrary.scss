@@ -25,20 +25,7 @@ $footer-border-color: #041b40;
 $footer-color: #0b0b0c;
  
 @import
-"mixins/mixins", 
-"global/footer", 
-"global/header", 
-"global/breadcrumb", 
-"global/disclosures",
-"global/image-gallery", 
-"global/panels", 
-"global/typography", 
-"global/page", 
-"global/misc", 
-"global/searchbox", 
-"global/searchresults", 
-"global/cookies", 
-"global/buttons";
+"global-import";
 
 
 //=============================================================================
