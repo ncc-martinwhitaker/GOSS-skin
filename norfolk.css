@@ -14,7 +14,7 @@ html * {
   max-width: 1170px;
 }
 
-.container.container-fullwidth {
+.container.container--fullwidth {
   max-width: none;
 }
 
