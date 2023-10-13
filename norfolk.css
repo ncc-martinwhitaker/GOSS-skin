@@ -293,7 +293,7 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
 
 .dialog__close, .dialog__closefallbackinner {
   color: #fff;
-  background-color: #333;
+  background-color: transparent;
 }
 
 .gi-carousel__linkswrapper {

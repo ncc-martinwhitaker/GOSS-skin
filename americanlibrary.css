@@ -290,6 +290,156 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
   color: #4840e3;
 }
 
+.dialog__close, .dialog__closefallbackinner {
+  color: #fff;
+  background-color: transparent;
+}
+
+.gi-carousel__linkswrapper {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__controls {
+  margin: 0 0 20px 0;
+  width: 100%;
+  position: absolute;
+}
+
+.dialog--imagegalleryinline .dialog__content {
+  min-height: calc(100vh - 36px);
+  background: #222;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.dialog__header, .h2.dialog__header {
+  color: #fff;
+}
+
+.dialog--imagegalleryinline .dialog__body {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dialog--imagegalleryinline .dialog__body p {
+  color: #fff;
+}
+
+.gi-carousel--imagegalleryinline {
+  padding: 0;
+  flex-grow: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gi-carousel__play {
+  display: none;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__links {
+  padding: 0px;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  bottom: 10px;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__itemlinkbtn {
+  border-radius: 0;
+  border: 0px;
+  background-color: transparent;
+  margin: 0;
+  color: #fff;
+}
+
+.gi-carousel--imagegalleryinline .gi-responsiveimage__imagewrapper {
+  width: auto;
+  height: auto;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__previous, .gi-carousel--imagegalleryinline .gi-carousel__next {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translateY(-50%);
+  border: 1px solid #ccc;
+  border-radius: 32px;
+  background-color: #fff;
+}
+.gi-carousel--imagegalleryinline .gi-carousel__previous:hover, .gi-carousel--imagegalleryinline .gi-carousel__next:hover {
+  color: #000;
+  background-color: #000;
+}
+.gi-carousel--imagegalleryinline .gi-carousel__previous:focus, .gi-carousel--imagegalleryinline .gi-carousel__next:focus {
+  color: #000;
+  background-color: #ffdd00;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__next {
+  right: 0;
+}
+
+.gi-carousel--imagegalleryinline .gi-carousel__prev {
+  left: 0;
+}
+
+.gi-carousel__play:hover, .gi-carousel__play:focus, .gi-carousel__previous:hover, .gi-carousel__previous:focus, .gi-carousel__next:hover, .gi-carousel__next:focus {
+  color: #fff !important;
+  background: #000 !important;
+  outline: 2px solid #ffdd00;
+}
+
+.gi-carousel__previous::after {
+  font-size: 18px;
+  position: absolute;
+  top: calc(50% + 2px);
+  left: calc(50% - 1px);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.gi-carousel__next::after {
+  font-size: 18px;
+  position: absolute;
+  top: calc(50% + 2px);
+  left: calc(50% + 1px);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.gi-carousel__links .gi-carousel__itemlink {
+  border-radius: 0;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+.gi-carousel__links .gi-carousel__itemlinkbtn--selected {
+  background-color: #006666;
+}
+
+.gi-carousel__itemlinkbtn:focus::before {
+  content: "";
+  box-shadow: 0 0 0 0px #0064ff;
+  outline: 2px solid #ffdd00;
+  border-radius: 0;
+}
+
+.gi-carousel__itemlinkbtn:hover, .gi-carousel__itemlinkbtn:focus {
+  color: #000;
+  background-color: #ffdd00 !important;
+}
+
+li.gi-carousel__slide .gi-responsiveimage--imagegallery {
+  display: flex;
+  justify-content: center;
+}
+
 .imagegalleryinline .grid--5col > .grid__cell:nth-child(5n+1) {
   clear: none;
 }
