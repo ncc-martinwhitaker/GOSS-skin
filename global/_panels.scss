@@ -533,6 +533,39 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 // metadata modifiers to control column size + left/right images
 
-.grid.grid--list.grid--3col[data-grid-maxcols="3"]>.grid__cell {
+// 2-col-panel
+
+.a-panel--2-col-panel .grid.grid--list.grid--3col>.grid__cell {
   width: 50%;
+}
+
+.a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  width: 50%;
+}
+
+// 1-col-panel
+
+.a-panel--1-col-panel .grid.grid--list.grid--3col>.grid__cell {
+  width: 100%;
+}
+.a-panel--1-col-panel .grid.grid--list.grid--2col>.grid__cell {
+  width: 100%;
+}
+
+.a-panel--1-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+  .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+    width: 100%;
+  }
+
+}
+
+.a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content {
+  display: flex;
+  align-items: stretch;
 }
