@@ -121,6 +121,10 @@ $h6-font-size: 1.125rem;
   max-width: 1170px; // presumably nothing on a page should ever be wider than this?
 }
 
+.container.container-fullwidth {
+  max-width: none;
+}
+
 // BREAKPOINTS
 
 $breakpoints: (
