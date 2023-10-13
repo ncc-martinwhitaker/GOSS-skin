@@ -1,0 +1,54 @@
+.icmform {
+    max-width: 750px;
+
+    .icmcheckcontainer label::before, input, textarea, select, .icmradiocontainer label::before, .icmsinglecheckbox label::before {
+        border: 2px solid #000000;
+        border-radius: 6px;
+    }
+
+    .field_upload input {
+        border: none;
+        font-size: 1.1875rem;
+        padding-left: 0px;
+    
+        /*&::file-selector-button, &::-webkit-file-upload-button { 
+            background-color: #FFFFFF;
+            padding: 5px;
+        }*/
+    }
+
+    .icmformleft label, .icmformright label {
+        font-size: 1.1875rem;
+        font-weight: 400;
+    }
+    
+    .btn {
+        background-color: #00823b;
+        color: #FFFFFF;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1;
+        border-radius: 6px;
+        transition: all .5s cubic-bezier(0.25,0.8,0.25,1);
+        &:hover {
+            box-shadow: inset 0 0 20em rgba(0,0,0,0.2);
+        }
+    }
+
+    .icmradiocontainer label::before {
+        border-radius: 18px;
+    }
+
+    input[type=button] {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1;
+        &:hover {
+            background-color: #dbdad9;
+        }
+    }
+
+    input[type=button].icminput--contrast:hover {
+        background-color: #000000;
+    }
+}

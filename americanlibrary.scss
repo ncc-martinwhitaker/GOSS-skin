@@ -25,20 +25,7 @@ $footer-border-color: #041b40;
 $footer-color: #0b0b0c;
  
 @import
-"mixins/mixins", 
-"global/footer", 
-"global/header", 
-"global/breadcrumb", 
-"global/disclosures",
-"global/image-gallery", 
-"global/panels", 
-"global/typography", 
-"global/page", 
-"global/misc", 
-"global/searchbox", 
-"global/searchresults", 
-"global/cookies", 
-"global/buttons";
+"global-import";
 
 
 //=============================================================================
@@ -47,13 +34,13 @@ $footer-color: #0b0b0c;
 
 /* Header / Menu */
 
-.gi-sitenav__link {
+/*.gi-sitenav__link {
     padding: 8px 16px 8px 16px;
 }
 
 .gi-sitenav__link--lvl1:hover {
     background-color: $americanlibrary-red;
-}
+}*/
 
 .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover  {
     background-color: $americanlibrary-red;
