@@ -903,6 +903,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   align-items: stretch;
 }
 
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--white-backdrop::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--black-backdrop::before {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
 h1, .h1 {
   font-size: 2.5rem;
   font-weight: 700;
