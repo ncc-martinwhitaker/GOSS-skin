@@ -569,3 +569,17 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   display: flex;
   align-items: stretch;
 }
+
+// 1507 - parallax panel bg opacity | white-backdrop
+// contrast between text and background image is accessible
+
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--white-backdrop {
+  &::before {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--black-backdrop {
+  &::before {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+}
