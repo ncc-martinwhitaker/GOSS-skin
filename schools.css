@@ -501,10 +501,11 @@ Variables to change:
   background-color: #fff;
 }
 
-.grid.grid--feature.grid--4col {
+.grid.grid--feature.grid--4col, .grid.grid--feature.grid--2col {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .grid__cell.grid__cell--feature.grid__cell--cols1 {
@@ -525,6 +526,9 @@ Variables to change:
 .a-panel--feature .item.item--article .item__content {
   padding: 20px !important;
 }
+.a-panel--feature .item.item--article .item__imagecontainer {
+  display: none;
+}
 .a-panel--feature .item.item--article .gi-responsiveimage__fallback, .a-panel--feature .item.item--article .gi-responsiveimage__image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -533,7 +537,25 @@ Variables to change:
 .a-panel--feature .item.item--article .gi-responsiveimage.gi-responsiveimage--item.gi-responsiveimage--loaded {
   margin: 0px;
 }
+.a-panel--feature .grid--2col > .grid__cell:nth-child(2n+1) {
+  clear: both;
+}
 
+.body--display-feature-images .a-panel--feature .item.item--article .item__imagecontainer {
+  display: block;
+}
+.body--display-feature-images .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
+  padding-top: 64%;
+}
+
+/*.a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
+  padding-top: 64%;//170px;
+}*/
+@media only screen and (max-width: 1079px) {
+  .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
+    padding-top: 0;
+  }
+}
 .a-panel.a-panel--hasbackground .a-panel__title {
   color: #050505;
   font-weight: 700;
