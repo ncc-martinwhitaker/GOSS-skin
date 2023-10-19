@@ -473,10 +473,6 @@ Variables to change:
   color: #fff;
 }
 
-.a-panel--pt.a-panel--hasbackground {
-  padding: 0px;
-}
-
 .a-panel.a-panel--pt .a-panel__content .a-panel__list {
   margin: 20px 20px 0px 20px;
 }
@@ -903,12 +899,70 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   align-items: stretch;
 }
 
-.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--white-backdrop::before {
-  background-color: rgba(255, 255, 255, 0.5);
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content .a-panel__title, .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__summary {
+  color: #fff;
 }
 
-.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground.a-panel--black-backdrop::before {
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block {
   background-color: rgba(0, 0, 0, 0.55);
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__content, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details * {
+  background-color: transparent;
+  color: #fff;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__title a {
+  color: #fff;
+  border-color: #fff;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__title a:hover {
+  color: #00a7cc;
+  border-color: #00a7cc;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__title a:focus {
+  background-color: #ffdd00;
+  color: #050505;
+  border-color: #050505;
+  outline: none;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__links .item.item--article {
+  border: none;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__links .item.item--article .item__content .item__title a {
+  color: #00D1FF;
+  border-color: transparent;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__links .item.item--article .item__content .item__title a:hover {
+  color: #00a7cc;
+  border-color: transparent;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__links .item.item--article .item__content .item__title a:focus {
+  color: #050505;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action {
+  color: #fff;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action:hover {
+  color: #00a7cc;
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action:focus {
+  color: #050505;
+}
+
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-light .a-panel__content .fa-block {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-light .a-panel__content .fa-block .fa-block__content, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-light .a-panel__content .fa-block .fa-block__details, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-light .a-panel__content .fa-block .fa-block__details * {
+  background-color: transparent;
+}
+
+.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark .a-panel__content {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark .a-panel__title, .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark .a-panel__summary {
+  color: #fff;
 }
 
 h1, .h1 {

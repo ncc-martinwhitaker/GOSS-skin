@@ -41,6 +41,9 @@ $link-color: #4840e3;
 $link-color-darken: darken( $link-color, 20% ); // 20% darken
 $lgrey: #ccc;
 
+$dark-theme-link-color: #00D1FF; // is this electric blue?
+$dark-theme-link-color-darken: darken( $dark-theme-link-color, 10% );
+
 // archives.norfolk.gov.uk/
 $archives-blue: #036eb2;
 
