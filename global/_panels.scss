@@ -474,6 +474,11 @@ h2.a-panel__title {
   }
 }
 
+.a-panel.a-panel--pt.a-panel--list .a-panel__content {
+  padding: 20px;
+  border-radius: 5px;
+}
+
 
 // feature groups (affected by display-nav-images - list panels)
 
@@ -578,6 +583,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// parallax panel dark cards
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark {
   .a-panel__content .fa-block {
     background-color: rgba(0, 0, 0, 0.55);
@@ -640,11 +646,40 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
-.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark {
+.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black {
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.55);
   }
   .a-panel__title, .a-panel__summary {
     color: #fff;
+  }
+}
+
+
+// list panel dark cards
+.a-panel.a-panel--pt.a-panel--opaque-cards-dark {
+  .a-panel__content .a-panel__list .grid__cellwrap .item.item--article {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-color: transparent;
+
+    .item__content {
+      .item__title a {
+        color: #fff;
+        border-color: #fff;
+        &:hover {
+          color: $dark-theme-link-color-darken;
+          border-color: $dark-theme-link-color-darken;
+        }
+        &:focus {
+          background-color: $focus-color;
+          color: #050505;
+          border-color: #050505;
+          outline: none;
+        }
+      }
+      .item__body {
+        color: #fff;
+      }
+    }
   }
 }
