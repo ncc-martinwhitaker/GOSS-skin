@@ -964,6 +964,34 @@ h5, .h5 {
   font-weight: 500;
 }
 
+p.gi-info {
+  color: #055160;
+  border-left: 4px solid #9eeaf9;
+  background: #cff4fc;
+}
+
+p.gi-info--alert {
+  color: #58151c;
+  border-left: 4px solid #f1aeb5;
+  background: #f8d7da;
+}
+
+p.gi-info--primary {
+  color: #056023;
+  border-left: 4px solid #9ef9b5;
+  background: #cffcdc;
+}
+
+p.gi-info--secondary {
+  color: #603c05;
+  border-left: 4px solid #f9dc9e;
+  background: #fcf0cf;
+}
+
+p.gi-info, p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
 .template--documentsection .contents__listitem::before {
   content: "-";
   font-family: inherit;
