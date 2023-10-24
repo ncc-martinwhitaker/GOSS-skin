@@ -14,10 +14,6 @@ Variables to change:
   color: #fff;
 }
 
-.a-panel--pt.a-panel--hasbackground {
-  padding: 0px;
-}
-
 .a-panel.a-panel--pt .a-panel__content .a-panel__list {
   margin: 20px 20px 0px 20px;
 
@@ -507,6 +503,11 @@ h2.a-panel__title {
   }
 }
 
+.a-panel.a-panel--pt.a-panel--list .a-panel__content {
+  padding: 20px;
+  border-radius: 5px;
+}
+
 
 // feature groups (affected by display-nav-images - list panels)
 
@@ -597,4 +598,117 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 .a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content {
   display: flex;
   align-items: stretch;
+}
+
+// 1507 - parallax panel bg opacity | black-backdrop
+// contrast between text and background image is accessible
+
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black {
+  .a-panel__content {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+  .a-panel__content .a-panel__title,.a-panel__summary {
+    color: #fff;
+  }
+}
+
+// parallax panel dark cards
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark {
+  .a-panel__content .fa-block {
+    background-color: rgba(0, 0, 0, 0.55);
+
+    .fa-block__content, .fa-block__details, .fa-block__details  * {
+      background-color: transparent;
+      color: #fff;
+    }
+    .fa-block__details {
+      .fa-block__title a {
+        color: #fff;
+        border-color: #fff;
+        &:hover {
+          color: $dark-theme-link-color-darken;
+          border-color: $dark-theme-link-color-darken;
+        }
+        &:focus {
+          background-color: $focus-color;
+          color: #050505;
+          border-color: #050505;
+          outline: none;
+        }
+      }
+      .fa-block__links {
+        .item.item--article {
+          border: none;
+        }
+        .item.item--article .item__content .item__title a {
+          color: $dark-theme-link-color;
+          border-color: transparent;
+          &:hover {
+            color: $dark-theme-link-color-darken;
+            border-color: transparent;
+          }
+          &:focus {
+            color: #050505
+          }
+        }
+      }
+      .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action {
+        color: #fff;
+        &:hover {
+          color: $dark-theme-link-color-darken;
+        }
+        &:focus {
+          color: #050505
+        }
+      }
+    }
+  }
+}
+
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-light {
+  .a-panel__content .fa-block {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .fa-block__content, .fa-block__details, .fa-block__details  * {
+      background-color: transparent;
+    }
+  }
+}
+
+.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black {
+  .a-panel__content {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+  .a-panel__title, .a-panel__summary {
+    color: #fff;
+  }
+}
+
+
+// list panel dark cards
+.a-panel.a-panel--pt.a-panel--opaque-cards-dark {
+  .a-panel__content .a-panel__list .grid__cellwrap .item.item--article {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-color: transparent;
+
+    .item__content {
+      .item__title a {
+        color: #fff;
+        border-color: #fff;
+        &:hover {
+          color: $dark-theme-link-color-darken;
+          border-color: $dark-theme-link-color-darken;
+        }
+        &:focus {
+          background-color: $focus-color;
+          color: #050505;
+          border-color: #050505;
+          outline: none;
+        }
+      }
+      .item__body {
+        color: #fff;
+      }
+    }
+  }
 }
