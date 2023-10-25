@@ -1126,28 +1126,28 @@ h5, .h5 {
 }
 
 .a-share__link:nth-child(2) .a-share__image {
-  content: url("/image/266/Facebook-icon/original.png");
+  content: url("/image/677/Facebook-icon/original.png");
   background-size: contain;
   width: 32px;
   height: 32px;
 }
 
 .a-share__link:nth-child(3) .a-share__image {
-  content: url("/image/267/Twitter-icon/original.png");
+  content: url("/image/679/Twitter-icon/original.png");
   background-size: contain;
   width: 32px;
   height: 32px;
 }
 
 .a-share__link:nth-child(4) .a-share__image {
-  content: url("/image/268/Email-icon/original.png");
+  content: url("/image/676/Email-icon/original.png");
   background-size: contain;
   width: 32px;
   height: 32px;
 }
 
 .a-share__link:nth-child(6) .a-share__image {
-  content: url("/image/269/Print-icon/original.png");
+  content: url("/image/678/Print-icon/original.png");
   background-size: contain;
   width: 32px;
   height: 32px;
@@ -1630,6 +1630,31 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #dbdad9;
   box-shadow: inset 0 0 0 3px;
   outline: 3px solid #fd0;
+}
+.icmform .zebra tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.icmform td {
+  width: auto;
+  word-break: normal;
+}
+.icmform .icmformdatavalue--inquest {
+  background-color: #FD0000;
+}
+.icmform .icmformdatavalue--opening {
+  background-color: #56A91D;
+}
+.icmform .icmformdatavalue--juryinquest {
+  background-color: #42145F;
+}
+.icmform .icmformdatavalue--review {
+  background-color: #4B85D8;
+}
+.icmform .icmformdatavalue--pre-inquest, .icmform .icmformdatavalue--preinquest {
+  background-color: orange;
+}
+.icmform .icmformdatavalue--inquestinwriting {
+  background-color: #8b8680;
 }
 
 footer.footer {
