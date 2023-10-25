@@ -1,0 +1,29 @@
+/*
+    DEV environment CSS alterations
+*/
+
+//Share this page icons
+.a-share__link:nth-child(2) .a-share__image {
+    content: url("/image/19015/Facebook-icon/original.png");
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+.a-share__link:nth-child(3) .a-share__image {
+    content: url("/image/19017/Twitter-icon/original.png");
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+.a-share__link:nth-child(4) .a-share__image {
+    content: url("/image/19014/Email-icon/original.png");
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+.a-share__link:nth-child(6) .a-share__image {
+    content: url("/image/19016/Print-icon/original.png");
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}

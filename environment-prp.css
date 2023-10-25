@@ -1,0 +1,30 @@
+/*
+    PRP environment CSS alterations
+*/
+.a-share__link:nth-child(2) .a-share__image {
+  content: url("/image/266/Facebook-icon/original.png");
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.a-share__link:nth-child(3) .a-share__image {
+  content: url("/image/267/Twitter-icon/original.png");
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.a-share__link:nth-child(4) .a-share__image {
+  content: url("/image/268/Email-icon/original.png");
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.a-share__link:nth-child(6) .a-share__image {
+  content: url("/image/269/Print-icon/original.png");
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}/*# sourceMappingURL=environment-prp.css.map */
