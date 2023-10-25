@@ -1333,8 +1333,8 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 }
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search {
-  background-color: #e74d2f;
-  background-color: #e74d2f;
+  background-color: #be4600;
+  background-color: #be4600;
 }
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
   color: #fff;
@@ -1392,7 +1392,7 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   height: 50px;
   min-height: auto;
   width: 110px;
-  background-color: #e74d2f;
+  background-color: #be4600;
   border-radius: 0 4px 4px 0;
 }
 
