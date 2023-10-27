@@ -300,6 +300,7 @@ h2.a-panel__title {
 }
 
 .a-panel--pt.a-panel--parallax .fa-block {
+  display: flex;
   background-color: #fff;
   border: 0px solid #fff;
   border-radius: $card-border-radius;
@@ -586,19 +587,69 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   width: 100%;
 }
 
+.a-panel--pt .fa-block__imagecontainer {
+  padding: 0px;
+  max-height: 200px;
+}
+
+.gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block .gi-responsiveimage__imagewrapper {
+  max-width: none !important; 
+}
+
+.gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block img.gi-responsiveimage__fallback {
+  object-fit: cover;
+  height: 100%;
+}
 
 @media only screen and (max-width: 850px) {
-
   .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 100%;
   }
-
 }
 
 .a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content {
   display: flex;
+  flex-direction: column;
   align-items: stretch;
 }
+
+.a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {
+  .grid.grid--parallax .fa-block .fa-block__content {
+    flex-direction: row;
+  }
+  .fa-block__imagecontainer {
+    max-height: 100%;
+  }
+}
+
+.a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt {
+  .grid.grid--parallax .fa-block .fa-block__content {
+    flex-direction: row-reverse;
+  }
+  .fa-block__imagecontainer {
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {
+    .grid.grid--parallax .fa-block .fa-block__content {
+      flex-direction: column;
+    }
+    .fa-block__imagecontainer {
+      max-height: 200px;
+    }
+  }
+  .a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt {
+    .grid.grid--parallax .fa-block .fa-block__content {
+      flex-direction: column;
+    }
+    .fa-block__imagecontainer {
+      max-height: 200px;
+    }
+  }
+}
+
 
 // 1507 - parallax panel bg opacity | black-backdrop
 // contrast between text and background image is accessible

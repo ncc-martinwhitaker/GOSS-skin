@@ -687,6 +687,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   }
 }
 .a-panel--pt.a-panel--parallax .fa-block {
+  display: flex;
   background-color: #fff;
   border: 0px solid #fff;
   border-radius: 0px;
@@ -915,6 +916,21 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   width: 100%;
 }
 
+.a-panel--pt .fa-block__imagecontainer {
+  padding: 0px;
+  max-height: 200px;
+}
+
+.gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block .gi-responsiveimage__imagewrapper {
+  max-width: none !important;
+}
+
+.gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block img.gi-responsiveimage__fallback {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 @media only screen and (max-width: 850px) {
   .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col > .grid__cell {
     width: 100%;
@@ -922,9 +938,38 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 .a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content {
   display: flex;
+  flex-direction: column;
   align-items: stretch;
 }
 
+.a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
+  flex-direction: row;
+}
+.a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .fa-block__imagecontainer {
+  max-height: 100%;
+}
+
+.a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
+  flex-direction: row-reverse;
+}
+.a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt .fa-block__imagecontainer {
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
+    flex-direction: column;
+  }
+  .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .fa-block__imagecontainer {
+    max-height: 200px;
+  }
+  .a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
+    flex-direction: column;
+  }
+  .a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt .fa-block__imagecontainer {
+    max-height: 200px;
+  }
+}
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content {
   background-color: rgba(0, 0, 0, 0.55);
 }
