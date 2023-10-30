@@ -1655,4 +1655,8 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 }
 .icmform .icmformdatavalue--inquestinwriting {
   background-color: #8b8680;
+}
+
+.container--fullwidth .icmform {
+  max-width: none;
 }/*# sourceMappingURL=museums.css.map */

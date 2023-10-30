@@ -1658,6 +1658,10 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #8b8680;
 }
 
+.container--fullwidth .icmform {
+  max-width: none;
+}
+
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
   font-size: 1.25rem;
   font-weight: 700;
