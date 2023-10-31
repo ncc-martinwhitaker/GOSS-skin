@@ -116,8 +116,11 @@
     }
 }
 
-//metadata modifier for fullwidth column for .icmforms
-.container--fullwidth .icmform {
+//metadata modifiers for fullwidth column for .icmforms
+.body--full-width .icmform {
 max-width: none;
 }
 
+.body--full-width .maincontent .a-heading,.body--full-width .maincontent .a-intro, .body--full-width .maincontent .a-body {
+    max-width: none;
+}
