@@ -611,6 +611,10 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  .fa-block__imagecontainer:not(:has(figure)) {
+    display: none;
+  }
 }
 
 .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {
@@ -630,6 +634,8 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     max-height: 100%;
   }
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {

@@ -941,6 +941,9 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   flex-direction: column;
   align-items: stretch;
 }
+.a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content .fa-block__imagecontainer:not(:has(figure)) {
+  display: none;
+}
 
 .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
   flex-direction: row;
