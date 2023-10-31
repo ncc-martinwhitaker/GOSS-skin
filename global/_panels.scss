@@ -423,9 +423,7 @@ h2.a-panel__title {
   }
 
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
-    min-width: 200px;
-    max-width: 200px;
-    width: 200px;
+    width: 100%;
     height: 200px;
 
     .gi-responsiveimage--item {
@@ -456,9 +454,7 @@ h2.a-panel__title {
   }
 
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
-    min-width: 150px;
-    max-width: 150px;
-    width: 150px;
+    width: 100%;
     height: 150px;
 
     .gi-responsiveimage--item {
@@ -563,6 +559,12 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 // metadata modifiers to control column size + left/right images
+
+@media only screen and (min-width: 520px) {
+  .grid--list.grid--1col .item {
+    display: block;
+  }
+}
 
 // 2-col-panel
 

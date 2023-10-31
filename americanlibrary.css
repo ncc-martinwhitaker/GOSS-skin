@@ -785,9 +785,7 @@ h2.a-panel__title, .a-panel__title.h2 {
     width: 50%;
   }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
-    min-width: 200px;
-    max-width: 200px;
-    width: 200px;
+    width: 100%;
     height: 200px;
   }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item {
@@ -810,9 +808,7 @@ h2.a-panel__title, .a-panel__title.h2 {
     clear: both;
   }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
-    min-width: 150px;
-    max-width: 150px;
-    width: 150px;
+    width: 100%;
     height: 150px;
   }
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer .gi-responsiveimage--item {
@@ -896,6 +892,11 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   min-width: 100px;
 }
 
+@media only screen and (min-width: 520px) {
+  .grid--list.grid--1col .item {
+    display: block;
+  }
+}
 .a-panel--2-col-panel .grid.grid--list.grid--3col > .grid__cell {
   width: 50%;
 }
