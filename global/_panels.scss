@@ -566,6 +566,12 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+@media only screen and (min-width: 470px) {
+  .a-panel--pt .grid--list.grid--1col .item__imagecontainer {
+    padding: 0px;
+  }
+}
+
 // 2-col-panel
 
 .a-panel--2-col-panel .grid.grid--list.grid--3col>.grid__cell {
@@ -609,6 +615,8 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// parallax default (image top)
+
 .a-panel.a-panel--parallax .grid.grid--parallax .fa-block .fa-block__content {
   display: flex;
   flex-direction: column;
@@ -619,6 +627,8 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// parallax image left
+
 .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {
   .grid.grid--parallax .fa-block .fa-block__content {
     flex-direction: row;
@@ -627,6 +637,8 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     max-height: 100%;
   }
 }
+
+// parallax image right
 
 .a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt {
   .grid.grid--parallax .fa-block .fa-block__content {
@@ -658,6 +670,56 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// list panel left 
+
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt {
+  .grid.grid--list .grid__cell .grid__cellwrap {
+    display: flex;
+    flex-direction: row;
+
+    .item.item--article {
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+    .item.item--article .item__imagecontainer {
+      max-height: none;
+      height: auto;
+      padding: 0px;
+    }
+    .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+      margin: 0;
+      max-height: none;
+      height: 100%;
+    }
+  }
+}
+
+// list panel left 
+
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt {
+  .grid.grid--list .grid__cell .grid__cellwrap {
+    display: flex;
+    flex-direction: row;
+
+    .item.item--article {
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+      flex-direction: row-reverse;
+    }
+    .item.item--article .item__imagecontainer {
+      max-height: none;
+      height: auto;
+      padding: 0px;
+    }
+    .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+      margin: 0;
+      max-height: none;
+      height: 100%;
+    }
+  }
+}
 
 // 1507 - parallax panel bg opacity | black-backdrop
 // contrast between text and background image is accessible

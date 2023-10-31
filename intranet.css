@@ -897,6 +897,11 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     display: block;
   }
 }
+@media only screen and (min-width: 470px) {
+  .a-panel--pt .grid--list.grid--1col .item__imagecontainer {
+    padding: 0px;
+  }
+}
 .a-panel--2-col-panel .grid.grid--list.grid--3col > .grid__cell {
   width: 50%;
 }
@@ -974,6 +979,47 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     max-height: 200px;
   }
 }
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap {
+  display: flex;
+  flex-direction: row;
+}
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__imagecontainer {
+  max-height: none;
+  height: auto;
+  padding: 0px;
+}
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+  margin: 0;
+  max-height: none;
+  height: 100%;
+}
+
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap {
+  display: flex;
+  flex-direction: row;
+}
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__imagecontainer {
+  max-height: none;
+  height: auto;
+  padding: 0px;
+}
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+  margin: 0;
+  max-height: none;
+  height: 100%;
+}
+
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content {
   background-color: rgba(0, 0, 0, 0.55);
 }
