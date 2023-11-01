@@ -674,8 +674,6 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 .a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt {
   .grid.grid--list .grid__cell .grid__cellwrap {
-    display: flex;
-    flex-direction: row;
 
     .item.item--article {
       height: 100%;
@@ -704,8 +702,6 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 .a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt {
   .grid.grid--list .grid__cell .grid__cellwrap {
-    display: flex;
-    flex-direction: row;
 
     .item.item--article {
       height: 100%;
