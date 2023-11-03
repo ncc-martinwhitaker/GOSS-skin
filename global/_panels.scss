@@ -828,6 +828,20 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 
+
+.a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--blog {
+
+  .a-panel__content {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+  }
+
+  .a-panel__title {
+    color: #fff;
+  }
+}
+
+
 // list panel dark cards
 .a-panel.a-panel--pt.a-panel--opaque-cards-dark {
   .a-panel__content .a-panel__list .grid__cellwrap .item.item--article {
