@@ -124,7 +124,6 @@ Variables to change:
 
 .gi-sitenav__item--lvl1 {
   float: unset;
-  display: inline-block;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -1828,14 +1827,157 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:hover {
   color: #1f18a5;
+  background-color: #ffdd00;
 }
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action:focus {
   color: #050505;
   background-color: #ffdd00;
 }
 
+.header {
+  padding: 0px 0;
+}
+
+a.gi-sitelogo__link {
+  width: 155px;
+}
+
+.gi-sitelogo--header {
+  width: 155px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 155px);
+}
+
+.gi-sitesearch--dynamic {
+  margin-left: auto;
+  margin-top: 0px;
+}
+
+.utilitymenu--top {
+  padding: 0;
+}
+
+.utilitymenu--top .utilitymenu__link, .gi-sitenav__link.gi-sitenav__link--lvl1 {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.125rem;
+  padding: 20px 10px;
+  outline: 0 !important;
+}
+
+.gi-sitenav__link.gi-sitenav__link--lvl1:hover, .gi-sitenav__link.gi-sitenav__link--lvl1:focus {
+  color: #000;
+  background: #ffdd00;
+}
+
+.gi-sitenav__link[aria-expanded=true] {
+  background: #ffdd00;
+}
+
+.utilitymenu__item a[href$=Sign-in]:before {
+  content: "";
+  background-image: url("https://norfolk.ncc1-prp.gosshosted.com/image/271/login-icon/original.png");
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+}
+
+div.gi-sitenav--mainnav-lvl2 {
+  position: absolute;
+  width: 1170px;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 3;
+  top: 65px;
+}
+
+ul.gi-sitenav__list.gi-sitenav__list--lvl2 {
+  background-color: #fff;
+  color: #050505;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+li.gi-sitenav__item.gi-sitenav__item--lvl2 {
+  width: 33.33333333%;
+}
+
+.gi-sitenav__item--lvl2 {
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 0;
+}
+
+.gi-sitenav__item--lvl2 {
+  padding: 0px 0;
+}
+
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+  color: #050505;
+  padding: 15px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2:hover, .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2:focus {
+  background: #ffdd00;
+}
+
+.gi-sitenav__item--lvl1, .gi-sitenav__list--lvl1, .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch, .header__menu {
+  position: static;
+}
+
+.gi-mobilenav--mobilemenu {
+  background: #f2f2f2;
+}
+
+.sitemenu__btn--haschildren {
+  display: none;
+}
+
+.sitemenu__link {
+  color: #000;
+  text-decoration: none;
+  display: none;
+}
+
+.sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
+  display: none;
+}
+
+.sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sitemenu--mobile .submenu {
+  display: block !important;
+}
+
+.submenu__link {
+  color: #000;
+}
+.submenu__link:hover {
+  color: #000;
+  background: #ffdd00;
+}
+
 @media (max-width: 1050px) {
   .gi-mobilenav--mobilemenu {
-    top: 200px;
+    top: 110px;
+  }
+  .header__menu {
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  .submenu__item {
+    padding: 0;
+  }
+  .submenu__item a {
+    padding: 10px 5px;
   }
 }/*# sourceMappingURL=norfolk.css.map */

@@ -123,7 +123,6 @@ Variables to change:
 
 .gi-sitenav__item--lvl1 {
   float: unset;
-  display: inline-block;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
