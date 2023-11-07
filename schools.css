@@ -1295,6 +1295,19 @@ h5, .h5 {
   border: 0 !important;
 }
 
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .sitealert {
   height: 60px;
 }
@@ -1781,6 +1794,10 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #8b8680;
 }
 
-.container--fullwidth .icmform {
+.body--full-width .icmform {
+  max-width: none;
+}
+
+.body--full-width .maincontent .a-heading, .body--full-width .maincontent .a-intro, .body--full-width .maincontent .a-body {
   max-width: none;
 }/*# sourceMappingURL=schools.css.map */
