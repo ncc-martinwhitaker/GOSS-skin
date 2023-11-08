@@ -1958,10 +1958,13 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
   display: block !important;
 }
 
-.submenu__link {
+.submenu__link, .submenu__text {
   color: #000;
+  padding: 10px 5px;
+  display: block;
+  font-weight: 600;
 }
-.submenu__link:hover {
+.submenu__link:hover, .submenu__text:hover {
   color: #000;
   background: #ffdd00;
 }

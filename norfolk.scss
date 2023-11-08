@@ -187,8 +187,11 @@ a.gi-sitelogo__link {width: $logo-width;}
             display: block !important;
         } 
 
-        .submenu__link {
+        .submenu__link, .submenu__text {  
             color: #000;
+            padding: 10px 5px;
+            display: block;
+            font-weight: 600;
             &:hover {color: #000; background: $focus-color;}
         }
 

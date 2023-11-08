@@ -73,6 +73,19 @@ justify-content: space-around;
 }
 
 
+.gi-sitenav--lvl2 {
+   
+    background: #fff;
+    columns: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+
 @media (max-width: 1300px)
 {
     .gi-sitenav__link[aria-haspopup=true]::after {
