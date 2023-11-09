@@ -1715,6 +1715,31 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #066;
 }
 
+@media (min-width: 840px) {
+  .body--aside .container.container--fullwidth {
+    max-width: 1170px;
+  }
+  .body--aside .container.container--fullwidth .maincontent .a-heading, .body--aside .container.container--fullwidth .maincontent .a-intro, .body--aside .container.container--fullwidth .maincontent .a-body {
+    max-width: none;
+  }
+  .body--aside .container.container--fullwidth main.maincontent {
+    width: 70%;
+    float: left;
+    clear: none;
+  }
+  .body--aside .container.container--fullwidth aside.aside {
+    width: 30%;
+    float: left;
+    clear: right;
+  }
+  .body--aside .container.container--fullwidth aside.aside .a-panel .a-panel__content {
+    padding: 0px;
+  }
+  .body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relarticles li.panel__item {
+    width: 100%;
+  }
+}
+
 .icmform {
   max-width: 750px;
 }
