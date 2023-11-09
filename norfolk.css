@@ -1317,6 +1317,9 @@ h5, .h5 {
   justify-content: center;
   align-items: center;
 }
+.feedback h2.feedback_heading, .feedback .feedback_heading.h2 {
+  text-align: center;
+}
 .feedback a.feedback_option {
   margin: 0px 5px;
 }
