@@ -1843,6 +1843,45 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   max-width: none;
 }
 
+body {
+  counter-reset: css-counter 0;
+}
+
+.numbered-step {
+  counter-increment: css-counter 1;
+  /*width: 500px;*/
+  margin: 0px;
+  padding: 10px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.numbered-step:before {
+  content: counter(css-counter);
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  border: solid 3px #bfc1c3;
+  position: absolute;
+  border-radius: 16px;
+  z-index: 2;
+  padding: 4px 0px 0px 0px;
+  left: 0px;
+  background: #fff;
+  color: #212529;
+}
+
+.numbered-step:after {
+  content: "";
+  display: block;
+  width: 2px;
+  background: #bfc1c3;
+  position: absolute;
+  left: 16px;
+  height: 100%;
+  top: 0;
+}
+
 .a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
   font-size: 1.25rem;
   font-weight: 700;
