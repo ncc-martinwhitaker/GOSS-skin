@@ -51,9 +51,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0px;
 
   h2.feedback_heading {
     text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 10px;
   }
 
   a.feedback_option {
