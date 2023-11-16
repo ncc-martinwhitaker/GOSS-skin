@@ -1041,14 +1041,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__content .a-panel__title, .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black .a-panel__summary {
   color: #fff;
 }
 
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__content, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details, .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details * {
   background-color: transparent;
