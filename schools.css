@@ -122,7 +122,8 @@ Variables to change:
 }
 
 .gi-sitenav__item--lvl1 {
-  float: unset;
+  float: inline-start;
+  display: inline-block;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
