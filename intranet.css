@@ -1722,6 +1722,27 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   background-color: #066;
 }
 
+.container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+  width: 100%;
+  background: none;
+  color: #4840e3;
+  padding: 0px;
+}
+@media (max-width: 600px) {
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+    width: 100%;
+  }
+}
+.container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover {
+  background: none;
+}
+.container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a {
+  color: #4840e3;
+}
+.container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover {
+  color: #1f18a5;
+}
+
 @media (min-width: 840px) {
   .container.container--fullwidth {
     max-width: 1170px;
@@ -1742,8 +1763,27 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   .container.container--fullwidth aside.aside .a-panel .a-panel__content {
     padding: 0px;
   }
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relarticles li.panel__item {
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
     width: 100%;
+    background: none;
+    color: #4840e3;
+    padding: 0px;
+  }
+}
+@media (min-width: 840px) and (max-width: 600px) {
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+    width: 100%;
+  }
+}
+@media (min-width: 840px) {
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover {
+    background: none;
+  }
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a {
+    color: #4840e3;
+  }
+  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover {
+    color: #1f18a5;
   }
 }
 .body--no-aside .container.container--fullwidth .maincontent .a-heading, .body--no-aside .container.container--fullwidth .maincontent .a-intro, .body--no-aside .container.container--fullwidth .maincontent .a-body {
@@ -1758,8 +1798,25 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 .body--no-aside .container.container--fullwidth aside.aside .a-panel .a-panel__content {
   padding: 0px;
 }
-.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relarticles li.panel__item {
+.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
   width: 50%;
+  background: none;
+  color: #4840e3;
+  padding: 0px;
+}
+@media (max-width: 600px) {
+  .body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+    width: 100%;
+  }
+}
+.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover {
+  background: none;
+}
+.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a {
+  color: #4840e3;
+}
+.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover {
+  color: #1f18a5;
 }
 
 .icmform {
@@ -1859,6 +1916,45 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 
 .body--full-width .maincontent .a-heading, .body--full-width .maincontent .a-intro, .body--full-width .maincontent .a-body {
   max-width: none;
+}
+
+body {
+  counter-reset: css-counter 0;
+}
+
+.numbered-step {
+  counter-increment: css-counter 1;
+  /*width: 500px;*/
+  margin: 0px;
+  padding: 10px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.numbered-step:before {
+  content: counter(css-counter);
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  border: solid 3px #bfc1c3;
+  position: absolute;
+  border-radius: 16px;
+  z-index: 2;
+  padding: 4px 0px 0px 0px;
+  left: 0px;
+  background: #fff;
+  color: #212529;
+}
+
+.numbered-step:after {
+  content: "";
+  display: block;
+  width: 2px;
+  background: #bfc1c3;
+  position: absolute;
+  left: 16px;
+  height: 100%;
+  top: 0;
 }
 
 .container.container--fullwidth {
