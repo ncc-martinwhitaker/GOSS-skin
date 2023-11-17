@@ -10,6 +10,11 @@ console.log('test');
 
 $("form.gi-sitesearch--top").insertAfter("a.gi-sitelogo__link");
 $("ol.utilitymenu.utilitymenu--top").appendTo(".gi-sitelogo--header");
+
+
+$("<div id='headermainmenu'><div class='container'></div></div>").appendTo(".header.header--nosticky"); 
+$("nav.gi-sitenav--desktop").appendTo("#headermainmenu .container");
+
 });
 
 

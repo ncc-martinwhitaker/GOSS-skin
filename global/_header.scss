@@ -53,8 +53,8 @@ Variables to change:
 }
 
 .gi-sitenav__item--lvl1 {
-  float: unset;
- // display: inline-block;
+  float: inline-start;
+  display: inline-block;
 }
 
 // Dropdown menu
