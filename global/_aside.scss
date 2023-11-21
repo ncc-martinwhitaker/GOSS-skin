@@ -29,8 +29,8 @@
   }
 }
 
-
 @media (min-width: 840px) {
+.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
   .container.container--fullwidth {
     max-width: 1170px; 
 
@@ -80,6 +80,8 @@
     }
   }
 }
+}
+
 
 
 .body--no-aside {
