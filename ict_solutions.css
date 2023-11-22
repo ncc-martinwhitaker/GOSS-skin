@@ -1137,6 +1137,13 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   color: #fff;
 }
 
+.relateditem .panel__heading {
+  margin-bottom: 0;
+}
+.relateditem .panel__headingtext {
+  padding-bottom: 0;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1744,26 +1751,26 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 }
 
 @media (min-width: 840px) {
-  .container.container--fullwidth {
+  .template--panel.body--aside .container.container--fullwidth, .template--list.body--aside .container.container--fullwidth, .template--blog .container.container--fullwidth, .template--default .container.container--fullwidth, .template--documentsection .container.container--fullwidth, .template--formsservice .container.container--fullwidth {
     max-width: 1170px;
   }
-  .container.container--fullwidth .maincontent .a-heading, .container.container--fullwidth .maincontent .a-intro, .container.container--fullwidth .maincontent .a-body {
+  .template--panel.body--aside .container.container--fullwidth .maincontent .a-heading, .template--panel.body--aside .container.container--fullwidth .maincontent .a-intro, .template--panel.body--aside .container.container--fullwidth .maincontent .a-body, .template--list.body--aside .container.container--fullwidth .maincontent .a-heading, .template--list.body--aside .container.container--fullwidth .maincontent .a-intro, .template--list.body--aside .container.container--fullwidth .maincontent .a-body, .template--blog .container.container--fullwidth .maincontent .a-heading, .template--blog .container.container--fullwidth .maincontent .a-intro, .template--blog .container.container--fullwidth .maincontent .a-body, .template--default .container.container--fullwidth .maincontent .a-heading, .template--default .container.container--fullwidth .maincontent .a-intro, .template--default .container.container--fullwidth .maincontent .a-body, .template--documentsection .container.container--fullwidth .maincontent .a-heading, .template--documentsection .container.container--fullwidth .maincontent .a-intro, .template--documentsection .container.container--fullwidth .maincontent .a-body, .template--formsservice .container.container--fullwidth .maincontent .a-heading, .template--formsservice .container.container--fullwidth .maincontent .a-intro, .template--formsservice .container.container--fullwidth .maincontent .a-body {
     max-width: none;
   }
-  .container.container--fullwidth main.maincontent {
+  .template--panel.body--aside .container.container--fullwidth main.maincontent, .template--list.body--aside .container.container--fullwidth main.maincontent, .template--blog .container.container--fullwidth main.maincontent, .template--default .container.container--fullwidth main.maincontent, .template--documentsection .container.container--fullwidth main.maincontent, .template--formsservice .container.container--fullwidth main.maincontent {
     width: 70%;
     float: left;
     clear: none;
   }
-  .container.container--fullwidth aside.aside {
+  .template--panel.body--aside .container.container--fullwidth aside.aside, .template--list.body--aside .container.container--fullwidth aside.aside, .template--blog .container.container--fullwidth aside.aside, .template--default .container.container--fullwidth aside.aside, .template--documentsection .container.container--fullwidth aside.aside, .template--formsservice .container.container--fullwidth aside.aside {
     width: 30%;
     float: left;
     clear: right;
   }
-  .container.container--fullwidth aside.aside .a-panel .a-panel__content {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .a-panel .a-panel__content, .template--list.body--aside .container.container--fullwidth aside.aside .a-panel .a-panel__content, .template--blog .container.container--fullwidth aside.aside .a-panel .a-panel__content, .template--default .container.container--fullwidth aside.aside .a-panel .a-panel__content, .template--documentsection .container.container--fullwidth aside.aside .a-panel .a-panel__content, .template--formsservice .container.container--fullwidth aside.aside .a-panel .a-panel__content {
     padding: 0px;
   }
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--list.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--blog .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--default .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--documentsection .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--formsservice .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
     width: 100%;
     background: none;
     color: #4840e3;
@@ -1771,18 +1778,18 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   }
 }
 @media (min-width: 840px) and (max-width: 600px) {
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--list.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--blog .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--default .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--documentsection .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item, .template--formsservice .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item {
     width: 100%;
   }
 }
 @media (min-width: 840px) {
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover, .template--list.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover, .template--blog .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover, .template--default .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover, .template--documentsection .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover, .template--formsservice .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item:hover {
     background: none;
   }
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a, .template--list.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a, .template--blog .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a, .template--default .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a, .template--documentsection .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a, .template--formsservice .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a {
     color: #4840e3;
   }
-  .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover {
+  .template--panel.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover, .template--list.body--aside .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover, .template--blog .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover, .template--default .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover, .template--documentsection .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover, .template--formsservice .container.container--fullwidth aside.aside .relateditem ul.panel__list li.panel__item a:hover {
     color: #1f18a5;
   }
 }

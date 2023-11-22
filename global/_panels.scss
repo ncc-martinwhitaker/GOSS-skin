@@ -877,3 +877,12 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     }
   }
 }
+
+.relateditem {
+  .panel__heading {
+    margin-bottom: 0;
+  }
+  .panel__headingtext {
+    padding-bottom: 0;
+  }
+}
