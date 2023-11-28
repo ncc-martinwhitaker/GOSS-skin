@@ -63,3 +63,17 @@
     height: 32px;
 }
 
+.body--sticky-jumplinks .gi-jumplist {
+    width: 30%!important;
+    position: sticky;
+} 
+
+.gi-jumplist__listitem::before {
+    content: "-";
+    font-family: inherit;
+}
+
+#anchor-contents {
+    width: 70%; 
+}
+
