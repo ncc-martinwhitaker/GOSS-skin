@@ -13,4 +13,7 @@ $(document).ready(function() {
 		var $numberedStep = $(this).nextUntil('.stepend').add(this);
 		$numberedStep.add($numberedStep.next()).wrapAll('<div class="numbered-step">');
 	});
+	// BEGIN #1829
+	$(".breadcrumb__nav").insertAfter(".header--nosticky");
+	// END #1829
 });
