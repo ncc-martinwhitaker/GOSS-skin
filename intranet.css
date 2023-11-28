@@ -1284,6 +1284,50 @@ h5, .h5 {
   height: 32px;
 }
 
+.body--sticky-jumplinks .container {
+  width: 1170px;
+  max-width: 100%;
+}
+
+.body--sticky-jumplinks .a-body__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#anchor-contents {
+  width: 70%;
+}
+
+.gi-jumplist {
+  display: block;
+  width: 100% !important;
+  top: 0;
+  height: 100%;
+  float: left;
+}
+
+.body--sticky-jumplinks .gi-jumplist {
+  width: 30% !important;
+  position: sticky;
+}
+
+.body--no-aside .container.container--fullwidth .maincontent .a-heading, .body--no-aside .container.container--fullwidth .maincontent .a-intro, .body--no-aside .container.container--fullwidth .maincontent .a-body:has(.gi-jumplist) {
+  max-width: 1170px;
+}
+
+.gi-jumplist__listitem::before {
+  content: "-";
+  font-family: inherit;
+}
+
+@media (max-width: 1050px) {
+  .gi-jumplist, #anchor-contents {
+    width: 100% !important;
+  }
+  .gi-jumplist {
+    position: relative;
+  }
+}
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;
@@ -2067,8 +2111,8 @@ footer.footer {
 
 .breadcrumb__nav {
   padding: 0;
-  border: solid #9b9b9b 1px;
-  background-color: #474747;
+  border: solid #fff 1px;
+  background-color: #fff;
 }
 
 .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text {
@@ -2077,17 +2121,29 @@ footer.footer {
   padding: 5px 10px;
 }
 
+.breadcrumb .breadcrumb__crumb a {
+  color: #066;
+}
+.breadcrumb .breadcrumb__crumb a:hover {
+  color: #4840E3;
+  text-decoration: underline;
+}
+
 .gi-sitenav--lvl2 {
   padding: 15px 5px;
 }
 
 .gi-sitenav__item--lvl2 {
   border-bottom: 0;
-  padding: 10px 0;
+  padding: 10px 10px;
+  margin: 0 0px;
+  display: inline-block;
+  width: 100%;
 }
 .gi-sitenav__item--lvl2 a {
   font-weight: 600;
   color: #006666 !important;
+  text-align: left;
 }
 
 .gi-mobilenav--mobilemenu {
@@ -2139,7 +2195,7 @@ footer.footer {
     width: 100px;
   }
   .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    width: calc(100% - 190px);
+    width: calc(100% - 168px);
     float: left;
   }
 }/*# sourceMappingURL=intranet.css.map */
