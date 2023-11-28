@@ -1287,8 +1287,12 @@ h5, .h5 {
   flex-wrap: wrap;
 }
 
-#anchor-contents {
+.body--sticky-jumplinks #anchor-contents {
   width: 70%;
+}
+
+#anchor-contents {
+  width: 100%;
 }
 
 .gi-jumplist {
@@ -1314,8 +1318,9 @@ h5, .h5 {
 }
 
 @media (max-width: 1050px) {
-  .gi-jumplist, #anchor-contents {
+  .body--sticky-jumplinks .gi-jumplist, #anchor-contents {
     width: 100% !important;
+    position: relative;
   }
   .gi-jumplist {
     position: relative;
