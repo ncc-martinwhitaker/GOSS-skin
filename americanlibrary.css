@@ -1284,6 +1284,10 @@ h5, .h5 {
   height: 32px;
 }
 
+.a-share {
+  display: none;
+}
+
 .body--sticky-jumplinks .container {
   width: 1170px;
   max-width: 100%;
