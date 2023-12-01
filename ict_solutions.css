@@ -174,6 +174,10 @@ header .imagebanner {
   text-align: left;
 }
 
+.imagebanner__image {
+  width: 100%;
+}
+
 /*
 Variables to change:
   - $breadcrumb-color (background colour)
@@ -1230,6 +1234,30 @@ h5, .h5 {
 .a-intro__content {
   line-height: 1.3;
   font-weight: 500;
+}
+
+.a-body ol li {
+  list-style-type: decimal;
+}
+
+.a-body ol ol li {
+  list-style-type: lower-alpha;
+}
+
+.a-body ol ol ol li {
+  list-style-type: lower-roman;
+}
+
+.a-body ul li {
+  list-style-type: disc;
+}
+
+.a-body ul ul li {
+  list-style-type: circle;
+}
+
+.a-body ul ul ul li {
+  list-style-type: square;
 }
 
 .template--documentsection .contents__listitem::before {
