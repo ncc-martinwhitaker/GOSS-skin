@@ -1368,6 +1368,7 @@ h5, .h5 {
     position: relative;
   }
 }
+<<<<<<< HEAD
 .a-share {
   display: none;
 }
@@ -1420,6 +1421,8 @@ h5, .h5 {
   display: none;
 }
 
+=======
+>>>>>>> 13b1e4c7eee0d4a6ce3633145b7b84df7fff0469
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;
