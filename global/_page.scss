@@ -98,7 +98,9 @@
     max-width: 1170px; // TEMP 
 }
 
-
+.a-body ul li.gi-jumplist__listitem {
+    list-style-type: none; 
+}
 .gi-jumplist__listitem::before {
     content: "-";
     font-family: inherit;
