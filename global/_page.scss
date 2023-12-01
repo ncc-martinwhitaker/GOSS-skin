@@ -101,9 +101,16 @@
 }
 
 
+
+.a-body ul li.gi-jumplist__listitem {
+    list-style-type: none;
+}
+
 .gi-jumplist__listitem::before {
         content: "-"; 
         font-family: inherit;
+        position: relative;
+    bottom: 2px;
     }
  
 @media (max-width: 1050px)
