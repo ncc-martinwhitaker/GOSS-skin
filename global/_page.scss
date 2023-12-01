@@ -64,6 +64,11 @@
 }
 
 
+.a-share {
+    display: none;
+}
+
+
 
 
 // ANCHOR PAGE SPECIFIC
@@ -117,5 +122,9 @@
         position: relative;
     } 
 
+}
 
+//Hide share this page and print
+.a-share {
+    display: none;
 }
