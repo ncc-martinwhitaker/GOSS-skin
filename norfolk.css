@@ -175,6 +175,10 @@ header .imagebanner {
   text-align: left;
 }
 
+.imagebanner__image {
+  width: 100%;
+}
+
 /*
 Variables to change:
   - $breadcrumb-color (background colour)
@@ -1233,6 +1237,30 @@ h5, .h5 {
   font-weight: 500;
 }
 
+.a-body ol li {
+  list-style-type: decimal;
+}
+
+.a-body ol ol li {
+  list-style-type: lower-alpha;
+}
+
+.a-body ol ol ol li {
+  list-style-type: lower-roman;
+}
+
+.a-body ul li {
+  list-style-type: disc;
+}
+
+.a-body ul ul li {
+  list-style-type: circle;
+}
+
+.a-body ul ul ul li {
+  list-style-type: square;
+}
+
 .template--documentsection .contents__listitem::before {
   content: "-";
   font-family: inherit;
@@ -1285,10 +1313,6 @@ h5, .h5 {
   height: 32px;
 }
 
-.a-share {
-  display: none;
-}
-
 .body--sticky-jumplinks .container {
   width: 1170px;
   max-width: 100%;
@@ -1320,9 +1344,15 @@ h5, .h5 {
   max-width: 1170px;
 }
 
+.a-body ul li.gi-jumplist__listitem {
+  list-style-type: none;
+}
+
 .gi-jumplist__listitem::before {
   content: "-";
   font-family: inherit;
+  position: relative;
+  bottom: 2px;
 }
 
 @media (max-width: 1050px) {
@@ -1333,6 +1363,10 @@ h5, .h5 {
     position: relative;
   }
 }
+.a-share {
+  display: none;
+}
+
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;

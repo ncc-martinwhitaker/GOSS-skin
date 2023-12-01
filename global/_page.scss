@@ -2,7 +2,7 @@
 
 
 .template--documentsection {
-
+ 
     .contents__listitem::before {
         content: "-";
         font-family: inherit;
@@ -63,14 +63,6 @@
     height: 32px;
 }
 
-
-.a-share {
-    display: none;
-}
-
-
-
-
 // ANCHOR PAGE SPECIFIC
 
 .body--sticky-jumplinks .container {
@@ -106,11 +98,16 @@
     max-width: 1170px; // TEMP 
 }
 
-
+.a-body ul li.gi-jumplist__listitem {
+    list-style-type: none; 
+}
 .gi-jumplist__listitem::before {
-        content: "-"; 
-        font-family: inherit;
-    }
+    content: "-";
+    font-family: inherit;
+    position: relative;
+    bottom: 2px;
+}
+
  
 @media (max-width: 1050px)
 {
@@ -122,9 +119,9 @@
         position: relative;
     } 
 
+
 }
 
-//Hide share this page and print
 .a-share {
     display: none;
 }
