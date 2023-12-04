@@ -152,11 +152,32 @@ Variables to change:
   color: #050505;
   font-weight: 700;
 }
-
 h2.a-panel__title {
+  display: block;
+  visibility: visible;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  color: #000;
+  background: #fff;
+}
+
+.body--display-feature-title h2.a-panel__title {
   color: #050505;
   font-weight: 700;
   font-size: $h2-font-size;
+  width: auto;
+  overflow: visible;
+  margin: revert;
+  height: auto;
+  
+  position: relative;
 }
 
 .item.item--article .item__title a {
