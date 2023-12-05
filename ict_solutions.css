@@ -123,7 +123,10 @@ Variables to change:
 
 .gi-sitenav__item--lvl1 {
   float: inline-start;
-  display: inline-block;
+}
+
+div.gi-sitenav--mainnav-lvl2 {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -172,6 +175,10 @@ header .imagebanner {
 
 .sitemenu--mobile .sitemenu__item {
   text-align: left;
+}
+
+.imagebanner__image {
+  width: 100%;
 }
 
 /*
@@ -1232,6 +1239,30 @@ h5, .h5 {
   font-weight: 500;
 }
 
+.a-body ol li {
+  list-style-type: decimal;
+}
+
+.a-body ol ol li {
+  list-style-type: lower-alpha;
+}
+
+.a-body ol ol ol li {
+  list-style-type: lower-roman;
+}
+
+.a-body ul li {
+  list-style-type: disc;
+}
+
+.a-body ul ul li {
+  list-style-type: circle;
+}
+
+.a-body ul ul ul li {
+  list-style-type: square;
+}
+
 .template--documentsection .contents__listitem::before {
   content: "-";
   font-family: inherit;
@@ -1332,6 +1363,10 @@ h5, .h5 {
     position: relative;
   }
 }
+.a-share {
+  display: none;
+}
+
 .gi-responsiveimage__caption {
   font-size: 1rem;
   font-weight: 500;

@@ -54,10 +54,15 @@ Variables to change:
 
 .gi-sitenav__item--lvl1 {
   float: inline-start;
-  display: inline-block;
+ // display: inline-block;
 }
 
 // Dropdown menu
+
+div.gi-sitenav--mainnav-lvl2 {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.12);
+}
+
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
   background-color: #fff;
