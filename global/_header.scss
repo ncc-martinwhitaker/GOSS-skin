@@ -58,14 +58,17 @@ Variables to change:
 //   display: inline-block;
 // }
 
-.gi-sitenav__item--lvl1 {
-    float: none;
-    display: inline-block;
-  }
-
-// ----------------------------------------------------------------------------
+.gi-sitenav__item--lvl1 { 
+  float: inline-start;
+ // display: inline-block;
+}
 
 // Dropdown menu
+
+div.gi-sitenav--mainnav-lvl2 {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.12);
+}
+
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
   background-color: #fff;
@@ -77,7 +80,7 @@ Variables to change:
 }
 
 .gi-sitenav__link.gi-sitenav__link--lvl1 {
-  font-size: 1.125rem;
+  font-size: 1.125rem; 
 
   &:hover {
     text-decoration: underline;
