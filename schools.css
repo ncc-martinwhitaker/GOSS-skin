@@ -2051,6 +2051,7 @@ footer.footer {
 #headermainmenu {
   background: #fff;
   border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
   min-height: 70px;
 }
 
@@ -2223,7 +2224,7 @@ footer.footer {
     display: none;
   }
   .gi-mobilenav--mobilemenu {
-    top: 108px !important;
+    top: 112px !important;
   }
   .gi-sitelogo, .gi-sitelogo__link {
     width: 280px;
