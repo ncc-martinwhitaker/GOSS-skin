@@ -62,7 +62,11 @@ a {
 
   &:hover {
     color: $link-color-darken;
-    border-bottom: 2px solid $link-color-darken;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: #000;
+    
   }
 }
 
@@ -73,8 +77,14 @@ a {
 
 a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
   outline: 3px solid $focus-color;
+  background: $focus-color;
+  color: #000;
+  text-decoration: underline;;
 }
 
+a.gi-sitelogo__link:focus {
+box-shadow: 0px 0px 0px 6px #000; 
+}
 
 // 618 - page margin width
 // 705 - typography
