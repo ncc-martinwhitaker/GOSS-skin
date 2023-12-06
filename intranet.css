@@ -1376,7 +1376,7 @@ h5, .h5 {
 }
 
 @media (max-width: 1050px) {
-  .gi-jumplist, #anchor-contents {
+  .body--sticky-jumplinks .gi-jumplist, .body--sticky-jumplinks #anchor-contents, #anchor-contents {
     width: 100% !important;
   }
   .body--sticky-jumplinks .gi-jumplist, .gi-jumplist {
