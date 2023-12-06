@@ -67,7 +67,7 @@
 
 .body--sticky-jumplinks .container {
     width: 1170px;
-        max-width: 100%;
+        max-width: 100% !important;
 }
 
 .body--sticky-jumplinks .a-body__inner{
@@ -98,7 +98,7 @@
     max-width: 1170px; // TEMP 
 }
 
-.a-body ul li.gi-jumplist__listitem {
+.a-body ul li.gi-jumplist__listitem { 
     list-style-type: none; 
 }
 .gi-jumplist__listitem::before {
@@ -108,6 +108,13 @@
     bottom: 2px;
 }
 
+@media (max-width: 1170px)
+{
+.container.container--fullwidth {
+    max-width: 100% !important;
+}
+
+}
  
 @media (max-width: 1050px)
 {
@@ -118,9 +125,7 @@
     .body--sticky-jumplinks .gi-jumplist, .gi-jumplist {
         position: relative;
     } 
-    .container.container--fullwidth {
-        max-width: 100% !important;
-    }
+    
 
 
 } 
