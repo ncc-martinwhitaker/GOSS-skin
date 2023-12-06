@@ -43,6 +43,7 @@
   border: 0 !important;
 }
 
+//GovMetric smileys
 .feedback {
   position: static;
   float: inherit;
@@ -59,8 +60,21 @@
     margin-bottom: 10px;
   }
 
+  .smileys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+  }
+
   a.feedback_option {
     margin: 0px 5px;
+
+    &:hover, &:focus {
+      transform: scale(1.1);
+      outline: 5px solid $focus-color;
+      background: $focus-color;
+    }
   }
 }
 
