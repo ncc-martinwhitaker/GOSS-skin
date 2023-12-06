@@ -1383,6 +1383,9 @@ h5, .h5 {
   .body--sticky-jumplinks .gi-jumplist, .gi-jumplist {
     position: relative;
   }
+  .container.container--fullwidth {
+    max-width: 100% !important;
+  }
 }
 .a-share {
   display: none;
