@@ -156,7 +156,7 @@ Variables to change:
   color: #050505;
   font-weight: 700;
 }
-h2.a-panel__title {
+.a-panel--feature h2.a-panel__title {
   display: block;
   visibility: visible;
   border: 0;
@@ -172,7 +172,7 @@ h2.a-panel__title {
   background: #fff;
 }
 
-.body--display-feature-title h2.a-panel__title {
+.body--display-feature-title .a-panel--feature h2.a-panel__title {
   color: #050505;
   font-weight: 700;
   font-size: $h2-font-size;
