@@ -531,7 +531,7 @@ Variables to change:
   padding: 20px !important;
 }
 .a-panel--feature .item.item--article .item__imagecontainer {
-  display: none;
+  display: block;
 }
 .a-panel--feature .item.item--article .gi-responsiveimage__fallback, .a-panel--feature .item.item--article .gi-responsiveimage__image {
   -o-object-fit: cover;
@@ -545,16 +545,18 @@ Variables to change:
   clear: both;
 }
 
-.body--display-feature-images .a-panel--feature .item.item--article .item__imagecontainer {
-  display: block;
-}
-.body--display-feature-images .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
+.body--no-aside .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
   padding-top: 64%;
 }
 
-/*.a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
-  padding-top: 64%;//170px;
-}*/
+.body--no-aside.body--hide-feature-images .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
+  padding-top: 0px;
+}
+
+.body--hide-feature-images .a-panel--feature .item.item--article .item__imagecontainer {
+  display: none;
+}
+
 @media only screen and (max-width: 1079px) {
   .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
     padding-top: 0;
