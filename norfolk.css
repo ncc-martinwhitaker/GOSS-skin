@@ -1441,8 +1441,19 @@ h5, .h5 {
   font-size: 1.125rem;
   margin-bottom: 10px;
 }
+.feedback .smileys {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
 .feedback a.feedback_option {
   margin: 0px 5px;
+}
+.feedback a.feedback_option:hover, .feedback a.feedback_option:focus {
+  transform: scale(1.1);
+  outline: 5px solid #ffdd00;
+  background: #ffdd00;
 }
 
 .sitealert {
