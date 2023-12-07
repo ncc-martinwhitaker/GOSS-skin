@@ -16,4 +16,14 @@ $(document).ready(function() {
 	// BEGIN #1829
 	$(".breadcrumb__nav").insertAfter(".header--nosticky");
 	// END #1829
+
+
+	// ANCHOR PAGE 
+	if( $('.gi-jumplist').length )         // Check if jumplist exists on page, if so assume this is an anchor page
+	{
+	$("<div id='anchor-contents'></div>").appendTo(".a-body__inner"); 
+	  $(".a-body__inner").children().not("#anchor-contents").appendTo("#anchor-contents");
+	  $(".gi-jumplist").prependTo(".a-body__inner");
+	}
+
 });
