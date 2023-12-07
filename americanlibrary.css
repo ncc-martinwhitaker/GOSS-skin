@@ -567,7 +567,7 @@ Variables to change:
   font-weight: 700;
 }
 
-h2.a-panel__title, .a-panel__title.h2 {
+.a-panel--feature h2.a-panel__title, .a-panel--feature .a-panel__title.h2 {
   display: block;
   visibility: visible;
   border: 0;
@@ -583,7 +583,7 @@ h2.a-panel__title, .a-panel__title.h2 {
   background: #fff;
 }
 
-.body--display-feature-title h2.a-panel__title, .body--display-feature-title .a-panel__title.h2 {
+.body--display-feature-title .a-panel--feature h2.a-panel__title, .body--display-feature-title .a-panel--feature .a-panel__title.h2 {
   color: #050505;
   font-weight: 700;
   font-size: 2rem;
