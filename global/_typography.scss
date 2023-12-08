@@ -56,6 +56,10 @@ a {
   text-decoration: none;
   color: $link-color; 
   font-weight: 600;
+  &:focus {
+    color: #000!important;
+    background: #fd0!important;
+  }
 }
 .a-body__link, .a-body__inner a {
   color: $link-color;
@@ -69,6 +73,15 @@ a {
     
   }
 }
+
+.cta-link:focus, .a-body__link--cta:focus {
+  box-shadow: inset 0 0 20em rgba(0,0,0,0); 
+  background: #fd0;
+  color: #000 !important;
+  box-shadow: 0 2px 0 #000;
+  outline: 0px;
+}
+
 
 .a-heading__title {
   font-weight: 700;
