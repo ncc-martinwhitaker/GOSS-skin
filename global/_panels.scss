@@ -612,6 +612,12 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// 4-col-panel
+
+.a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  width: 25%;
+}
+
 // 2-col-panel
 
 .a-panel--2-col-panel .grid.grid--list.grid--3col>.grid__cell {
@@ -649,8 +655,17 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   height: 100%;
 }
 
+@media only screen and (max-width: 970px) {
+  .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+    width: 100%;
+  }
+  .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 100%;
   }
 }
