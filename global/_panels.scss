@@ -22,43 +22,88 @@ Variables to change:
   }
 }
 
-.a-panel--pt.a-panel--render {
-  padding: 40px 0px;
+// PANEL PADDING
+
+// default
+.a-panel.a-panel--pt.a-panel--render, .a-panel.a-panel--pt.a-panel--render.a-panel--default {
+  padding: 16px 0px;
+}
+// default with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground {
+  padding: 16px 0px;
 }
 
-// .a-panel--pt.a-panel--hasbackground .a-panel__content {
-//   //background-color: transparent;
+// default + body
+.a-panel.a-panel--pt.a-panel--render.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--body {
+  padding: 16px 0px;
+}
+// default + body with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--body {
+  padding: 80px 0px;
+}
 
-//   .item.item--article {
-//     display: flex;
-//     padding: 0px;
+// blog
+.a-panel.a-panel--pt.a-panel--render.a-panel--blog {
+  padding: 16px 0px;
+}
+// blog with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--blog.a-panel--hasbackground {
+  padding: 80px 0px;
+}
 
-//     .item__imagecontainer {
-//       display: block;
-//       min-width: 250px;
-//       max-width: 250px;
-//       width: 250px;
-//       height: 250px;
-//       padding: 0px;
+// doc and doc
+.a-panel.a-panel--pt.a-panel--render.a-panel--document {
+  padding: 16px 0px;
+}
+// doc and doc with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--document.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
 
-//       .gi-responsiveimage--item {
-//         margin: 0px;
-//         height: 250px;
+// redirect
+.a-panel.a-panel--pt.a-panel--render.a-panel--redirect {
+  padding: 16px 0px;
+}
+// redirect with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--redirect.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
 
-//         .gi-responsiveimage__imagewrapper {
-//           height: 100%;
-//           width: 100%;
+// forms service
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
+  padding: 16px 0px;
+}
+// forms service with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
 
-//           img {
-//             height: 100%;
-//             width: 100%;
-//             object-fit: cover;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+// forms service
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
+  padding: 16px 0px;
+}
+// forms service with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
+
+// "panel"
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel {
+  padding: 16px 0px;
+}
+// "panel" with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
+
+// "panel"
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel {
+  padding: 16px 0px;
+}
+// "panel" with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
+  padding: 80px 0px;
+}
 
 .imagebanner__title {
   color: #fff;
