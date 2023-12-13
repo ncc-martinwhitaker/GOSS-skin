@@ -42,6 +42,15 @@ Variables to change:
   padding: 80px 0px;
 }
 
+// default + parallax
+.a-panel.a-panel--pt.a-panel--render.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--parallax {
+  padding: 16px 0px;
+}
+// default + parallax with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--parallax {
+  padding: 40px 0px;
+}
+
 // blog
 .a-panel.a-panel--pt.a-panel--render.a-panel--blog {
   padding: 16px 0px;
@@ -96,13 +105,23 @@ Variables to change:
   padding: 80px 0px;
 }
 
-// "panel"
-.a-panel.a-panel--pt.a-panel--render.a-panel--panel {
+// list
+.a-panel.a-panel--pt.a-panel--render.a-panel--list {
   padding: 16px 0px;
 }
-// "panel" with bg
-.a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
+// list with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
   padding: 80px 0px;
+}
+
+// feature
+.a-panel.a-panel--feature {
+  padding: 8px 0px;
+}
+
+// related assets (not a panel?)
+.relateditem  {
+  padding: 8px 0px;
 }
 
 .imagebanner__title {
