@@ -383,10 +383,6 @@ h2.a-panel__title {
   background-color: #fff;
 }
 
-.a-panel--pt.a-panel--hasbackground.a-panel--parallax {
-  padding: 40px 20px;
-}
-
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
@@ -539,7 +535,6 @@ h2.a-panel__title {
 @media only screen and (max-width: 850px) {
 
   .a-panel--pt.a-panel--render.a-panel--hasbackground,  .a-panel--pt.a-panel--hasbackground {
-    padding: 40px 0px;
 
     .container .a-panel__content .a-panel__list {
       margin: 0px;
