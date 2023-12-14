@@ -22,43 +22,107 @@ Variables to change:
   }
 }
 
-.a-panel--pt.a-panel--render {
-  padding: 40px 0px;
+// PANEL PADDING
+
+// default
+.a-panel.a-panel--pt.a-panel--render, .a-panel.a-panel--pt.a-panel--render.a-panel--default {
+  padding: 16px 20px;
+}
+// default with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground {
+  padding: 16px 20px;
 }
 
-// .a-panel--pt.a-panel--hasbackground .a-panel__content {
-//   //background-color: transparent;
+// default + body
+.a-panel.a-panel--pt.a-panel--render.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--body {
+  padding: 16px 20px;
+}
+// default + body with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--body {
+  padding: 80px 20px;
+}
 
-//   .item.item--article {
-//     display: flex;
-//     padding: 0px;
+// default + parallax
+.a-panel.a-panel--pt.a-panel--render.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--parallax {
+  padding: 16px 20px;
+}
+// default + parallax with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--parallax {
+  padding: 40px 20px;
+}
 
-//     .item__imagecontainer {
-//       display: block;
-//       min-width: 250px;
-//       max-width: 250px;
-//       width: 250px;
-//       height: 250px;
-//       padding: 0px;
+// blog
+.a-panel.a-panel--pt.a-panel--render.a-panel--blog {
+  padding: 16px 20px;
+}
+// blog with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--blog.a-panel--hasbackground {
+  padding: 80px 20px;
+}
 
-//       .gi-responsiveimage--item {
-//         margin: 0px;
-//         height: 250px;
+// doc and doc
+.a-panel.a-panel--pt.a-panel--render.a-panel--document {
+  padding: 16px 20px;
+}
+// doc and doc with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--document.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
 
-//         .gi-responsiveimage__imagewrapper {
-//           height: 100%;
-//           width: 100%;
+// redirect
+.a-panel.a-panel--pt.a-panel--render.a-panel--redirect {
+  padding: 16px 20px;
+}
+// redirect with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--redirect.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
 
-//           img {
-//             height: 100%;
-//             width: 100%;
-//             object-fit: cover;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+// forms service
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
+  padding: 16px 20px;
+}
+// forms service with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
+// forms service
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
+  padding: 16px 20px;
+}
+// forms service with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
+// "panel"
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel {
+  padding: 16px 20px;
+}
+// "panel" with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
+// list
+.a-panel.a-panel--pt.a-panel--render.a-panel--list {
+  padding: 16px 20px;
+}
+// list with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
+// feature
+.a-panel.a-panel--feature {
+  padding: 8px 20px;
+}
+
+// related assets (not a panel?)
+.relateditem  {
+  padding: 8px 20px;
+}
 
 .imagebanner__title {
   color: #fff;
@@ -319,10 +383,6 @@ h2.a-panel__title {
   background-color: #fff;
 }
 
-.a-panel--pt.a-panel--hasbackground.a-panel--parallax {
-  padding: 40px 20px;
-}
-
 .a-panel--pt.a-panel--parallax .a-panel__content {
   background-color: transparent;
   color: #050505;
@@ -475,7 +535,6 @@ h2.a-panel__title {
 @media only screen and (max-width: 850px) {
 
   .a-panel--pt.a-panel--render.a-panel--hasbackground,  .a-panel--pt.a-panel--hasbackground {
-    padding: 40px 0px;
 
     .container .a-panel__content .a-panel__list {
       margin: 0px;
