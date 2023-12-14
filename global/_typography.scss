@@ -52,19 +52,56 @@ p, ul, ol, li, a, div, span {
   font-size: 1.125rem;
 }
 
-a {
+a { 
   text-decoration: none;
   color: $link-color; 
   font-weight: 600;
+  &:focus {
+    color: #000!important;
+    background: #fd0!important;
+  }
 }
 .a-body__link, .a-body__inner a {
   color: $link-color;
 
   &:hover {
     color: $link-color-darken;
-    border-bottom: 2px solid $link-color-darken;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: #000;
+    
   }
 }
+
+.cta-link:focus, .a-body__link--cta:focus, .a-panel__linkwrap:focus .a-panel__link  {
+  box-shadow: inset 0 0 20em rgba(0,0,0,0); 
+  background: #fd0; 
+  color: #000 !important;
+  box-shadow: 0 2px 0 #000;
+  outline: 0px;
+}
+.a-panel__linkwrap:focus {
+  outline: 0;
+}
+
+.gi-sitesearch[data-collapsible=true][data-collapsed=true] .gi-sitesearch__button--search:focus, .gi-sitesearch--searchtemplate .gi-sitesearch__button:focus {
+  background: #fd0;
+    color: #000!important;
+    box-shadow: 0 3px 0 #000;
+    outline: 0;
+}
+
+
+.btn--search:focus::after {
+  color: #000;
+}
+
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search:focus::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus::after {
+  color: #000 !important;
+}
+
+
 
 .a-heading__title {
   font-weight: 700;
@@ -73,8 +110,14 @@ a {
 
 a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
   outline: 3px solid $focus-color;
+  background: $focus-color;
+  color: #000;
+  text-decoration: underline;;
 }
 
+a.gi-sitelogo__link:focus {
+box-shadow: 0px 0px 0px 6px #000; 
+}
 
 // 618 - page margin width
 // 705 - typography
