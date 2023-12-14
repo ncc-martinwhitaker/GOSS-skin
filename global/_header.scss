@@ -52,10 +52,18 @@ Variables to change:
   }
 }
 
+// -------------- Problematic code causing nav alignment issues: --------------
+// .gi-sitenav__item--lvl1 {
+//   float: inline-start;
+//   display: inline-block;
+// }
+
 .gi-sitenav__item--lvl1 {
-  float: inline-start;
-  display: inline-block;
-}
+    float: none;
+    display: inline-block;
+  }
+
+// ----------------------------------------------------------------------------
 
 // Dropdown menu
 
