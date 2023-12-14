@@ -124,3 +124,8 @@ max-width: none;
 .body--full-width .maincontent .a-heading,.body--full-width .maincontent .a-intro, .body--full-width .maincontent .a-body {
     max-width: none;
 }
+
+//2078 Mobile view fix for forms (put div round table with class and scroll within div)
+.icmform .table-responsive {
+    overflow-x: auto;
+}
