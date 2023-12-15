@@ -122,8 +122,11 @@ Variables to change:
 }
 
 .gi-sitenav__item--lvl1 {
-  float: none;
-  display: inline-block;
+  float: inline-start;
+}
+
+div.gi-sitenav--mainnav-lvl2 {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -1257,6 +1260,17 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 .a-panel.a-panel--pt.a-panel--opaque-cards-dark .a-panel__content .a-panel__list .grid__cellwrap .item.item--article .item__content .item__body {
   color: #fff;
+}
+.a-panel.a-panel--pt.a-panel--opaque-cards-dark .a-panel__content .a-panel__list .grid__cellwrap .item.item--article .item__content .item__sublinks a {
+  color: #00D1FF;
+  border-color: transparent;
+}
+.a-panel.a-panel--pt.a-panel--opaque-cards-dark .a-panel__content .a-panel__list .grid__cellwrap .item.item--article .item__content .item__sublinks a:hover {
+  color: #00a7cc;
+  border-color: transparent;
+}
+.a-panel.a-panel--pt.a-panel--opaque-cards-dark .a-panel__content .a-panel__list .grid__cellwrap .item.item--article .item__content .item__sublinks a:focus {
+  color: #050505;
 }
 
 .relateditem .panel__heading {
