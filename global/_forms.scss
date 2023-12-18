@@ -9,12 +9,14 @@
     .field_upload input {
         border: none;
         font-size: 1.1875rem;
-        padding-left: 0px;
     
         /*&::file-selector-button, &::-webkit-file-upload-button { 
             background-color: #FFFFFF;
             padding: 5px;
         }*/
+    }
+    .field_upload input.icmlfile.icmlfile--clear {
+        padding-left: 0px;
     }
 
     .icmformleft label, .icmformright label {

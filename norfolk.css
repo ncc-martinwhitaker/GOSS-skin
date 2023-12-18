@@ -122,8 +122,11 @@ Variables to change:
 }
 
 .gi-sitenav__item--lvl1 {
-  float: none;
-  display: inline-block;
+  float: inline-start;
+}
+
+div.gi-sitenav--mainnav-lvl2 {
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
@@ -2093,11 +2096,13 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 .icmform .field_upload input {
   border: none;
   font-size: 1.1875rem;
-  padding-left: 0px;
   /*&::file-selector-button, &::-webkit-file-upload-button { 
       background-color: #FFFFFF;
       padding: 5px;
   }*/
+}
+.icmform .field_upload input.icmlfile.icmlfile--clear {
+  padding-left: 0px;
 }
 .icmform .icmformleft label, .icmform .icmformright label {
   font-size: 1.1875rem;
