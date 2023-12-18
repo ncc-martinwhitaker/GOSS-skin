@@ -86,6 +86,12 @@
         outline: 3px solid #fd0;
     }
 
+    input[type=text].icmstext:focus {
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+
     // zebra - alternate table gray row background
     .zebra tbody tr:nth-child(odd) {
         background-color: #f9f9f9;
