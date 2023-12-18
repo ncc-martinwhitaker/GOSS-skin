@@ -2102,7 +2102,7 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   }*/
 }
 .icmform .field_upload input.icmlfile.icmlfile--clear {
-  padding-left: 0px;
+  padding-left: 2px;
 }
 .icmform .icmformleft label, .icmform .icmformright label {
   font-size: 1.1875rem;

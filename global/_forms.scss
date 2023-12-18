@@ -16,7 +16,7 @@
         }*/
     }
     .field_upload input.icmlfile.icmlfile--clear {
-        padding-left: 0px;
+        padding-left: 2px; // ugly solution but it fixes the focus overlap issue
     }
 
     .icmformleft label, .icmformright label {
