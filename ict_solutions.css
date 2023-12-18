@@ -1212,6 +1212,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action:hover {
   color: #00a7cc;
+  background-color: transparent;
 }
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark .a-panel__content .fa-block .fa-block__details .fa-block__actions a.fa-block__link.fa-block__link--default.fa-block__link--action:focus {
   color: #050505;

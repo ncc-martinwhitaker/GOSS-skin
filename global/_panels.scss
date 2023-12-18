@@ -913,6 +913,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
         color: #fff;
         &:hover {
           color: $dark-theme-link-color-darken;
+          background-color: transparent;
         }
         &:focus {
           color: #050505
