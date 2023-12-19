@@ -620,6 +620,9 @@ h2.a-panel__title {
   border-radius: $panel-border-radius;
 }
 
+.a-panel--hide-summary .a-panel__summary {
+  display: none;
+}
 
 // feature groups (affected by display-nav-images - list panels)
 
