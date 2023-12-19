@@ -91,9 +91,18 @@
     /* Table Primary Colour */
     { "name" : "Primary", "element" : "table", "attributes" : { "class" : "tableprimary" } },    
      /* Table secondary Colour */
-    { "name" : "Secondary", "element" : "table", "attributes" : { "class" : "tablesecondary" } }
+    { "name" : "Secondary", "element" : "table", "attributes" : { "class" : "tablesecondary" } },
     
-    ,/* GOSS Demo (these rules require setting a custom editor skin in subsite configuration) */
+    /*anchor links*/
+    { "name" : "CTA", "element" : "a", "attributes" : { "class" : "a-body__link--cta" } },
+    { "name" : "btn-primary-std", "element" : "a", "attributes" : { "class" : "a-body__link--btn-primary-std" } },
+    { "name" : "btn-primary-lge", "element" : "a", "attributes" : { "class" : "a-body__link--btn-primary-lge" } },
+    { "name" : "btn-primary-teal-std", "element" : "a", "attributes" : { "class" : "a-body__link--btn-primary-teal-std" } },
+    { "name" : "btn-primary-teal-lge", "element" : "a", "attributes" : { "class" : "a-body__link--btn-primary-teal-lge" } },
+    { "name" : "btn-secondary", "element" : "a", "attributes" : { "class" : "a-body__link--btn-secondary" } },
+    { "name" : "btn-inverted-secondary", "element" : "a", "attributes" : { "class" : "a-body__link--btn-inverted-secondary" } },
+
+    /* GOSS Demo (these rules require setting a custom editor skin in subsite configuration) */
     { "name" : "A to Z bar", "element" : "ol", "attributes" : { "class" : "gi-atozbar" } },
     
     /* Info block styling */
