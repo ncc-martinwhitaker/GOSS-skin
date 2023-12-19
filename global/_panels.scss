@@ -34,11 +34,11 @@ Variables to change:
 }
 
 // default + body
-.a-panel.a-panel--pt.a-panel--render.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--body {
+.a-panel.a-panel--pt.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--body {
   padding: 16px 20px;
 }
 // default + body with bg
-.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--body {
+.a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--hasbackground.a-panel--body {
   padding: 80px 20px;
 }
 
