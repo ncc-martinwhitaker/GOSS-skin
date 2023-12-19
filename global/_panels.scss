@@ -114,6 +114,15 @@ Variables to change:
   padding: 80px 20px;
 }
 
+// stage
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage {
+  padding: 16px 20px;
+}
+// stage with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
 // feature
 .a-panel.a-panel--feature {
   padding: 8px 20px;
@@ -990,5 +999,13 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
   .panel__headingtext {
     padding-bottom: 0;
+  }
+}
+
+// stage panels
+
+.a-panel.a-panel--pt.a-panel--stage, .a-panel.a-panel--pt.a-panel--stage.a-panel--hasbackground {
+  .a-panel__content {
+    padding: 20px;
   }
 }
