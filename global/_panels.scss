@@ -14,6 +14,13 @@ Variables to change:
   color: #fff;
 }
 
+.a-panel--pt .a-panel__content, 
+.a-panel--pt.a-panel--hasbackground .a-panel__content, 
+.a-panel--pt.a-panel--parallax .a-panel__content
+{
+  border-radius: $panel-border-radius;
+}
+
 .a-panel.a-panel--pt .a-panel__content .a-panel__list {
   margin: 20px 20px 0px 20px;
 
@@ -34,11 +41,11 @@ Variables to change:
 }
 
 // default + body
-.a-panel.a-panel--pt.a-panel--render.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--body {
+.a-panel.a-panel--pt.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--body {
   padding: 16px 20px;
 }
 // default + body with bg
-.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--body {
+.a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--hasbackground.a-panel--body {
   padding: 80px 20px;
 }
 
@@ -111,6 +118,15 @@ Variables to change:
 }
 // list with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
+  padding: 80px 20px;
+}
+
+// stage
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage {
+  padding: 16px 20px;
+}
+// stage with bg
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground  {
   padding: 80px 20px;
 }
 
@@ -601,9 +617,12 @@ h2.a-panel__title {
 
 .a-panel.a-panel--pt.a-panel--list .a-panel__content {
   padding: 20px;
-  border-radius: 5px;
+  border-radius: $panel-border-radius;
 }
 
+.a-panel--hide-summary .a-panel__summary {
+  display: none;
+}
 
 // feature groups (affected by display-nav-images - list panels)
 
@@ -618,7 +637,13 @@ h2.a-panel__title {
   display: block;
 }
 
+.grid--list .item.item--article {
+  border-radius: $list-border-radius;
+}
 
+.a-panel--pt.a-panel--list .grid__cellwrap > .item {
+  border-radius: $list-border-radius;
+}
 
 // IMAGE RATIO 
 
@@ -992,3 +1017,42 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     padding-bottom: 0;
   }
 }
+
+// stage panels
+
+.a-panel.a-panel--pt.a-panel--stage, .a-panel.a-panel--pt.a-panel--stage.a-panel--hasbackground {
+  .a-panel__content {
+    padding: 20px;
+  }
+}
+
+
+/* rounded/squared corners */
+
+.body--rounded-list-cards .grid--list .item.item--article,
+.body--rounded-cards .item.item--article,
+.body--rounded-cards .a-panel.a-panel--pt.a-panel--list .a-panel__content,
+.body--rounded-feature-cards .a-panel--pt.a-panel--parallax .fa-block,
+.body--rounded-feature-cards .a-panel--feature .item.item--article,
+.a-panel--rounded-backdrop.a-panel--pt .a-panel__content,
+.a-panel--rounded-backdrop.a-panel.a-panel--pt.a-panel--list .a-panel__content,
+.a-panel--rounded-cards .a-panel--pt .a-panel__content,
+.a-panel--rounded-cards.a-panel--list .item.item--article,
+.body--squared-list-cards .a-panel--rounded-cards.a-panel--list .item.item--article {
+  border-radius: $rounded-corner-border-radius;
+}
+
+.body--squared-list-cards .grid--list .item.item--article,
+.body--squared-cards .item.item--article,
+.body--squared-cards .a-panel.a-panel--pt.a-panel--list .a-panel__content,
+.body--squared-feature-cards .a-panel--pt.a-panel--parallax .fa-block,
+.body--squared-feature-cards .a-panel--feature .item.item--article,
+.a-panel--squared-backdrop.a-panel--pt .a-panel__content,
+.a-panel--squared-backdrop.a-panel.a-panel--pt.a-panel--list .a-panel__content,
+.a-panel--squared-cards .a-panel--pt .a-panel__content, 
+.a-panel--squared-cards.a-panel--list .item.item--article,
+.a-panel--squared-cards.a-panel--pt.a-panel--parallax .fa-block
+{
+  border-radius: 0px;
+}
+

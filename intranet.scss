@@ -18,7 +18,12 @@ $footer-background-color: #272727;
 $footer-color: #fff;
 $footer-border-color: #272727;
 
-$feature-panel-border-radius: 15px;
+$panel-backdrop-border-radius: 12px;
+$panel-border-radius: 12px;
+$feature-panel-border-radius: 12px;
+$list-border-radius: 12px;
+$card-border-radius: 12px;
+//$feature-card-border-radius: 12px;
 
 @import 
 "global-import";
