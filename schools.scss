@@ -14,7 +14,12 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray;
 $button-search-background-color: #1C995D;
 $search-border-color: #767676;
 
-$feature-panel-border-radius: 15px;
+$panel-backdrop-border-radius: 12px;
+$panel-border-radius: 12px;
+$feature-panel-border-radius: 12px;
+$list-border-radius: 12px;
+$card-border-radius: 12px;
+//$feature-card-border-radius: 12px;
  
 @import 
 "global-import";
