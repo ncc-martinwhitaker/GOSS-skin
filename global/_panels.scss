@@ -1081,6 +1081,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// stage square cards
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--squared-cards, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--squared-cards {
+
+  .card.card--stage {
+    border-radius: 0px;
+  }
+}
 
 // list panel dark cards
 .a-panel.a-panel--pt.a-panel--opaque-cards-dark {
