@@ -1090,6 +1090,26 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// stage squared backdrop
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--squared-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--squared-backdrop {
+
+  .a-panel__content {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+// stage rounded backdrop
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--rounded-backdrop {
+
+  .a-panel__content {
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
 // list panel dark cards
 .a-panel.a-panel--pt.a-panel--opaque-cards-dark {
   .a-panel__content .a-panel__list .grid__cellwrap .item.item--article {
