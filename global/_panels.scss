@@ -1047,7 +1047,6 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 // stage dark cards
 
-// stage
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--opaque-cards-dark {
 
   .a-panel__content {
@@ -1060,6 +1059,24 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
     .card__heading, .item__body  {
       color: #fff;
+    }
+  }
+}
+
+// stage light cards
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--opaque-cards-light, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--opaque-cards-light {
+
+  .a-panel__content {
+    background-color: transparent;
+  }
+
+  .card.card--stage {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: transparent;
+
+    .card__heading, .item__body  {
+      color: #050505;
     }
   }
 }
