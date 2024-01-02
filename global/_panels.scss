@@ -1118,6 +1118,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   .card__innercontent {
     display: flex;
   }
+
+  .card__imagecontainer {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .item__body {
+    width: 50%;
+  }
 }
 
 // stage display image right
@@ -1127,6 +1135,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   .card__innercontent {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .card__imagecontainer {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .item__body {
+    width: 50%;
   }
 }
 
