@@ -442,6 +442,7 @@ h2.a-panel__title {
 
   .card__actions .cta-link--stage {
     background-color: $button-primary-color;
+    text-align: right;
   }
   .card__actions .cta-link::after {
     content: none;
@@ -1107,6 +1108,25 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   .a-panel__content {
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+// stage display image left
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
+
+  .card__innercontent {
+    display: flex;
+  }
+}
+
+// stage display image right
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
+
+  .card__innercontent {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
