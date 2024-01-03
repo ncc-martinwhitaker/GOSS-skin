@@ -458,7 +458,7 @@ h2.a-panel__title {
     }
 
     .card__imagecontainer {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimage__image {
         max-height: 280px;
@@ -466,6 +466,7 @@ h2.a-panel__title {
     }
   }
 }
+
 
 
 // Parallax panels
@@ -1113,7 +1114,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 // stage display image left
 
-.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
 
   .card__innercontent {
     display: flex;
@@ -1125,12 +1126,13 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
   .item__body {
     width: 50%;
+    padding-left: 15px;
   }
 }
 
 // stage display image right
 
-.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
 
   .card__innercontent {
     display: flex;
@@ -1143,6 +1145,30 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
   .item__body {
     width: 50%;
+    padding-right: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  // set cards to always display image top below 600px
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right,  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left  {
+
+    .card__innercontent {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card__imagecontainer {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .item__body {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
   }
 }
 
