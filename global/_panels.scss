@@ -393,6 +393,89 @@ h2.a-panel__title {
   }
 }
 
+// stage
+
+.a-panel.a-panel--pt.a-panel--stage {
+
+  .n-stage .n-stage-alert {
+    background-color: $button-primary-color;
+    color: #fff;
+
+    .n-stage-alert__title {
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+      .n-stage-alert__title {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+    &:focus {
+      color: #050505;
+      .n-stage-alert__title {
+        text-decoration: underline;
+        color: #050505;
+      }
+    }
+  }
+
+  .a-panel__summary, p {
+    color: #fff;
+  }
+
+  .gi-sitenav--stage .gi-sitenav__link--lvl2 {
+    background-color: #fff;
+  }
+
+  .gi-sitenav--stage .gi-sitenav__link--lvl1 {
+    &:hover {
+      box-shadow: none;
+      color: #fff;
+    }
+  }
+
+  // menu button
+  .gi-sitenav--stage .gi-sitenav__item--lvl1:last-child {
+    margin-left: 15px;
+
+    .gi-sitenav__link--lvl1 {
+      background-color: $button-primary-color;
+      margin: 0px;
+      padding-left: 55px; // (40 + 15)
+    } 
+  }
+
+  .card__actions .cta-link--stage {
+    background-color: $button-primary-color;
+    text-align: right;
+  }
+  .card__actions .cta-link::after {
+    content: none;
+  }
+
+  .card--stage .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card__innercontent {
+      margin-bottom: 20px;
+    }
+
+    .card__imagecontainer {
+      margin-bottom: 10px;
+
+      figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimage__image {
+        max-height: 280px;
+      }
+    }
+  }
+}
+
+
+
 // Parallax panels
 
 .a-panel--pt.a-panel--parallax {
@@ -980,6 +1063,130 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// stage dark cards
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--opaque-cards-dark {
+
+  .a-panel__content {
+    background-color: transparent;
+  }
+
+  .card.card--stage {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: transparent;
+
+    .card__heading, .item__body  {
+      color: #fff;
+    }
+  }
+}
+
+// stage light cards
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--opaque-cards-light, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--opaque-cards-light {
+
+  .a-panel__content {
+    background-color: transparent;
+  }
+
+  .card.card--stage {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: transparent;
+
+    .card__heading, .item__body  {
+      color: #050505;
+    }
+  }
+}
+
+// stage square cards
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--squared-cards, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--squared-cards {
+
+  .card.card--stage {
+    border-radius: 0px;
+  }
+}
+
+// stage squared backdrop
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--squared-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--squared-backdrop {
+
+  .a-panel__content {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+// stage rounded backdrop
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--rounded-backdrop, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--rounded-backdrop {
+
+  .a-panel__content {
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+// stage display image left
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
+
+  .card__innercontent {
+    display: flex;
+  }
+
+  .card__imagecontainer {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .item__body {
+    width: 50%;
+    padding-left: 15px;
+  }
+}
+
+// stage display image right
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
+
+  .card__innercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .card__imagecontainer {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .item__body {
+    width: 50%;
+    padding-right: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  // set cards to always display image top below 600px
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right,  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left  {
+
+    .card__innercontent {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card__imagecontainer {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .item__body {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  }
+}
 
 // list panel dark cards
 .a-panel.a-panel--pt.a-panel--opaque-cards-dark {
