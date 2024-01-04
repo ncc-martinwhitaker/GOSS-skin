@@ -1,3 +1,4 @@
+@import "global/functions";
 @import "variables";
 
 $header-color: #fff;
@@ -27,11 +28,11 @@ $button-inverted-secondary-color-hov: #fff;
     .fa-block__content {
         .fa-block__title a {
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 700; 
             margin-bottom: 12px;
             color: $teal;
             border-bottom: solid 2px $teal;
-        }
+        } 
     }
 
     .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
@@ -101,18 +102,9 @@ a.gi-sitelogo__link {width: $logo-width;}
     }
 
 
-    @function str-replace($string, $search, $replace: '') {
-        $index: str-index($string, $search);
-        
-        @if $index {
-          @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-        }
-        
-        @return $string;
-      }
+ 
 
-
-    .utilitymenu__item a[href$='Sign-in']:before{
+    .utilitymenu__item a[href$="Sign-in"]:before, .utilitymenu__item a[href$='login']:before{
         content: "";
        // background-image: url("https://norfolk.ncc1-prp.gosshosted.com/image/27131/login/original.png");
       // background-image: url("/image/27270/login/original.png");

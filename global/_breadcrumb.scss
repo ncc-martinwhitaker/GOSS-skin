@@ -36,7 +36,7 @@ Variables to change:
       border-bottom: solid $breadcrumb-text-color 2px;
     }
   }
-  .breadcrumb__crumb:after {
+  .breadcrumb__crumb:after { //in use
     content: "";
     background-color: transparent;
     background-image: $breadcrumb-chevron;
