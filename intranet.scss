@@ -29,9 +29,55 @@ $card-border-radius: 12px;
 @import 
 "global-import";
 
-.container.container--fullwidth {
-    max-width: 100% !important;
+.container {
+    max-width: 1480px;
 }
+
+.maincontent > .container {
+    max-width: 900px;
+    margin: 0 0 0 0;
+}
+
+.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+    .container.container--fullwidth {
+        max-width: 1480px;
+
+        .maincontent > .container {
+            max-width: 900px;
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+@media (min-width: 840px) {
+    .maincontent > .container {
+        max-width: 900px;
+        margin: 0 0 0 20%;
+    }
+
+    .template--list .container {
+        .a-heading, .a-intro, .a-body {
+            margin: 0 0 0 10%;
+        }
+    }
+
+    .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+        .container.container--fullwidth aside.aside {
+          width: 24%;
+          margin-left: 6%;
+        }
+    }
+}
+
+.template--list .container {
+    max-width: 1480px;
+    margin: 0 auto;
+
+    .a-heading, .a-intro {
+        //max-width: 900px;
+    }
+}
+
 
 .header {
     padding: 0; 
@@ -80,13 +126,6 @@ width: 100%;
 justify-content: space-around;
 
 }
-
-
-.container {
-    width: 1480px;
-    max-width: 100%;
-}
-
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
   margin-top: -2px;
