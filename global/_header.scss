@@ -58,9 +58,15 @@ Variables to change:
 //   display: inline-block;
 // }
 
+.gi-sitenav__list--lvl1 { 
+  float: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end; 
+}
+
 .gi-sitenav__item--lvl1 { 
-  float: inline-start;
- // display: inline-block; 
+  float: none;
 }
 
 // Dropdown menu
