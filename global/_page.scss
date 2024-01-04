@@ -1,14 +1,32 @@
-
-
-
 .template--documentsection {
  
-    .contents__listitem::before {
-        content: "-";
-        font-family: inherit;
+    .contents__title, .document-print {
+        display: none;
     }
 
+    .contents__listitem::before {
+        content: "";
+        margin-left: unset;
+        padding-right: unset;
+    }
 
+    &.body--doc-nonumbering {
+        
+        .contents__listitem {
+            list-style-type: none;
+
+            &::before {
+                content: "-";
+                font-family: inherit;
+                margin-left: -25px;
+                padding-right: 10px;
+            }
+        }        
+    }
+
+    .contents__listitem {
+        list-style-type: decimal;
+    }
 
     .contents__list{
 
@@ -25,8 +43,30 @@
 
     .document-pagination { 
         
-        .document-pagination__link{width: 50%;}
-        .document-pagination__link--next { float: right;}
+        .document-pagination__link{width: auto;}
+
+        .document-pagination__link--next { 
+            float: right;
+
+            span {
+                padding-right: 30px;
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+
+            .document-pagination__direction {
+                padding-right: 0px;
+
+                &::before {
+                    content: ""; 
+                }
+                &::after {
+                    content: "\e827";
+                    float: right;
+                }
+            }
+        }
+
         .document-pagination__link--prev {float: left;}
 
 
@@ -35,6 +75,7 @@
 
 
 }
+
 
 
 //Share this page icons
