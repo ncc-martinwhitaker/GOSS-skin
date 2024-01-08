@@ -33,6 +33,12 @@
         columns: 1;
         @include mq('sm') {
             columns: 2;
+
+            .contents__listitem {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
         }
        // li.contents__listitem { }
 
