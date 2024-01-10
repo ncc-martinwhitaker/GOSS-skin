@@ -447,9 +447,14 @@ h2.a-panel__title {
     } 
   }
 
+  .card__actions {
+    align-self: flex-end;
+  }
+
   .card__actions .cta-link--stage {
     background-color: $button-primary-color;
     text-align: right;
+    padding: 10px;
   }
   .card__actions .cta-link::after {
     content: none;
