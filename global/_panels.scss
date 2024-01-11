@@ -631,16 +631,32 @@ h2.a-panel__title {
   }
 }
 
-@media only screen and (max-width: 850px) {
 
-  .a-panel--pt.a-panel--render.a-panel--hasbackground,  .a-panel--pt.a-panel--hasbackground {
+@media only screen and (max-width: 600px) {
+  
+  .a-panel.a-panel--pt.a-panel--list:not(.a-panel--hasbackground, .a-panel--backdrop-black) .container {
+    padding: 0px;
 
-    .container .a-panel__content .a-panel__list {
-      margin: 0px;
+    .a-panel__content {
+      padding: 0px;
+
+      .a-panel__list {
+        margin: 0px;
+      }
     }
   }
 
+  .a-panel.a-panel--pt.a-panel--panel .container, .a-panel.a-panel--pt.a-panel--default .container {
+    padding: 0px;
+  }
 
+  .a-panel.a-panel--pt.a-panel--list.a-panel--backdrop-black .a-panel__list {
+    margin: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 850px) {
   .a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
     width: 100%;
     padding: 0px;
@@ -649,6 +665,8 @@ h2.a-panel__title {
   .a-panel--pt.a-panel--hasbackground .a-panel__content .grid--1col>.grid__cell {
     width: 100%;
     clear: both;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
