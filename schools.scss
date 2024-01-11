@@ -250,7 +250,10 @@ justify-content: space-around;
         border-bottom: 1px solid #000;
     }
 
-
+.a-panel--feature .a-panel__content {
+    max-width: unset;
+    padding: 0px;
+}
 
 @media (max-width: 1300px)
 {
