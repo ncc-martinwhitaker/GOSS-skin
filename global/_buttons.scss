@@ -99,6 +99,10 @@
     all: unset;
 }
 
+.a-panel__link.a-panel__link--pt {
+    color: $button-primary-color; 
+}
+
 .a-panel__link.a-panel__link--pt:hover {
     text-decoration: underline; 
 }
