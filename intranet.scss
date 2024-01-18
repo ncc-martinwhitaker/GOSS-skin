@@ -73,9 +73,7 @@ $card-border-radius: 12px;
     max-width: 1480px;
     margin: 0 auto;
 
-    .a-heading, .a-intro {
-        //max-width: 900px;
-    }
+    
 }
 
 
@@ -212,15 +210,15 @@ justify-content: space-around;
 }
 
 
-.gi-mobilenav--mobilemenu {
+.gi-mobilenav--mobilemenu { 
     background: #f2f2f2;}
     .sitemenu__link {
         color: #000;
         text-decoration: none;
         display: none; 
     }
-    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
-        color: #000 !important;
+    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover, .sitemenu__text {
+        color: #000 !important; 
     }
     .utilitymenu--mobile .utilitymenu__link, .utilitymenu--mobile .utilitymenu__link:hover{color: #000 !important;}
     .sitemenu__btnimage {
@@ -278,6 +276,25 @@ justify-content: space-around;
     width: calc(100% - 168px);
     float: left;
 }
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+   content: "\e800";
+}
+.gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+    width: 40px;
+}
+.gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
+    width: calc(100% - 40px);
+}
+ 
 
+}
+
+
+
+@media (min-width: 820px) {
+
+.gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+    display: block;
+}
 
 }

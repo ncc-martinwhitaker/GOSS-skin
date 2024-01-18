@@ -138,3 +138,13 @@ header .imagebanner {
   transform: none;
 }
 //END header image #1829
+
+
+
+@media (min-width: 820px) {
+
+  .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+      display: block;
+  }
+  
+  } 
