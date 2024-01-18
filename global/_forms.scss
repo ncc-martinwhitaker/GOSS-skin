@@ -139,3 +139,108 @@ max-width: none;
 .icmform .table-responsive {
     overflow-x: auto;
 }
+
+/* ------------------------------------------------- */
+//start | modifiers for in-page quicksearch
+/* ------------------------------------------------- */
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.searchicon::after {
+    content: "\e800";
+    padding-right: 10px;
+    font-size: 2 rem;
+}
+
+#quicksearch {
+        width: calc(100% - 50px);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ------------------------------------------------- */
+/* Lookup table row TD colours */
+/* ------------------------------------------------- */
+
+.tblrow_green { background-color: #dfffe8; padding: 10px 20px; border: 0px;}
+.tblrow_yellow {background-color: #fdffe8; padding: 10px 20px; border: 0px;}
+.tblrow_orange {background-color: #fff7e8; padding: 10px 20px; border: 0px;}
+.tblrow_red { background-color: #ffdfdf; padding: 10px 20px; border: 0px;}
+.tblrow_white { background-color: #ffffff; padding: 10px 20px; border: 0px;}
+
+div.LookupTable table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0px;
+}
+
+div.LookupTable tr {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.noresults #noresults {
+    display: block;
+    opacity: 1;
+}
+
+.noresults table {
+    opacity: 0;
+}
+
+#noresults {
+    display: none;
+    opacity: 0;
+}
+
+.LookupTable td {
+    word-break: normal;
+}
+
+@media(max-width: 1200px) {
+    div.LookupTable table {
+        display:block;
+        width: 100%;
+    }
+
+    div.LookupTable table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    div.LookupTable table tr {
+        border-bottom: 0;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    div.LookupTable thead tr:first-child th {
+        display: none;
+    }
+
+    div.LookupTable tbody th,div.LookupTable tbody td {
+        width: 100%;
+        display: inline-block;
+    }
+
+    div.LookupTable tbody tr td:before,div.LookupTable tbody tr th:before {
+        content: attr(data-title);
+        display: block;
+        font-weight: 600;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    div.LookupTable tbody td:empty {
+        empty-cells: hide;
+        display: none;
+    }
+    
+}
+
+/* end | modifiers for in-page quicksearch */
