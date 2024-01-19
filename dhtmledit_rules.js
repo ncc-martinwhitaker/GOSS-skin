@@ -92,6 +92,21 @@
     { "name" : "Primary", "element" : "table", "attributes" : { "class" : "tableprimary" } },    
      /* Table secondary Colour */
     { "name" : "Secondary", "element" : "table", "attributes" : { "class" : "tablesecondary" } },
+
+
+        /* Lookup table heading #113 */
+        { "name" : "th-green", "element" : "th", "attributes" : { "class" : "tblrow_green" } },
+        { "name" : "th-yellow", "element" : "th", "attributes" : { "class" : "tblrow_yellow" } },
+        { "name" : "th-orange", "element" : "th", "attributes" : { "class" : "tblrow_orange" } },
+        { "name" : "th-red", "element" : "th", "attributes" : { "class" : "tblrow_red" } },
+        { "name" : "th-white", "element" : "th", "attributes" : { "class" : "tblrow_white" } },
+        
+        /* Lookup table cell #113 */
+        { "name" : "td-green", "element" : "td", "attributes" : { "class" : "tblrow_green" } },
+        { "name" : "td-yellow", "element" : "td", "attributes" : { "class" : "tblrow_yellow" } },
+        { "name" : "td-orange", "element" : "td", "attributes" : { "class" : "tblrow_orange" } },
+        { "name" : "td-red", "element" : "td", "attributes" : { "class" : "tblrow_red" } },
+        { "name" : "td-white", "element" : "td", "attributes" : { "class" : "tblrow_white" } },  
     
     /*anchor links*/
     { "name" : "CTA", "element" : "a", "attributes" : { "class" : "a-body__link--cta" } },
