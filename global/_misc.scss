@@ -134,3 +134,70 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   color: #FFFFFF;
 }
 
+
+//Quick exit
+/*$WarningSVG: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='28' xml:space='preserve' version='1.1' viewBox='0 0 30 28' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cimage width='30' height='28' xlink:href=='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAAAXNSR0IArs4c6QAAAbxJREFUSEvFllFSwjAURe9jGEarH2QHsAPZAexAvqVKd+AO1BW4hDKWf9kBuAN2ADtIP6Q6yhCnpYDQJnlxOmP+2rzcM6/JvQ3hD0O+XAxBKsyX9oWfTFxlyHWBDJtN1L8WAJr52hjrRlsEceyi5Q6OvEcADyeQJ+En6Xv2cALL8KyFei3ttjjWm7YIPpdcsht47IVQGGrEJ8JP+pWDZXTZBTZTs3CtJ/z3GQfO7lhG51OAumZRNRP+R68ysIy8awCvHEEoCsTtamSrZXUsx94CCq2DmJoB9JY9E+6O5ghLfDc6NntZwXJ8fg9Fzzr7aLbAai8juCQsdvy9sAYcY73pmOxlBpeHRQq3gdMtGIlBEuj2Wgs2hgUHnBH19tKDzWFh7zgD6+1VCmaEBROcssvtpQFbw4IP1tirAGaGBR+8PV0FexXBhbAoPZeu4MI/+wisCYsysiu4YK892BAWttjlz9eoI25W823S5kPqw4IvbK082CsDW8KiRM7wk7DCkV0Ot2BzWFSzxzsVwlIMkjYxwqJacG4v4t0sTthpKCiVX+zo6tdV1/6htxUxychT3Ooq6/4R7H6wqmh8/gOAL+tl1ggv9gAAAABJRU5ErkJggg=='/%3E%3C/g%3E%3C/svg%3E";
+$WarningSVG2: str-replace($WarningSVG, ' ', '%20');*/
+
+#qe {
+  z-index: 10000;
+  right: 0;
+  left: auto;
+  background: #002649;
+  .desktop {
+    display: none;
+  }
+}
+
+@include mq('sm', 'min') {
+  #qe {
+    cursor: pointer;
+    background: #002649;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    padding: 1em;
+    border-radius: 0.5em 0 0 0.5em;
+    //padding-right: 50px;
+    bottom: auto;
+    left: auto;
+    border: 3px solid white;
+    
+    .desktop {
+      display: block;
+    }
+
+    /*:nth-child(2):after {
+      padding-bottom: 10px;
+    }*/
+
+    span {
+      display: block;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 400;
+
+      strong {
+        color: #FFFFFF;
+      }
+    }
+
+  }
+
+  .cta-link--qe::after {
+    content: none;
+  }
+}
+
+
+
+/*
+$string: "data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.1273 17.9047L20.8042 14.3423H16.8636V13.0826C16.8636 11.2 17.6282 10.4758 19.6063 10.4758C20.2207 10.4758 20.7151 10.4904 21 10.5193V7.28995C20.4605 7.14521 19.1418 7 18.3772 7C14.346 7 12.4877 8.83958 12.4877 12.8073V14.3423H10V17.9047H12.4877V25.6569C13.4211 25.8804 14.3972 26 15.4021 26C15.897 26 16.3843 25.9707 16.8636 25.9148V17.9047H20.1273Z' fill='black'/%3E%3Ccircle cx='16' cy='16' r='14.5' stroke='black'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+.a-share__link:nth-child(2) .a-share__image {
+    content: '';
+    background-image: url($string2);
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}*/
