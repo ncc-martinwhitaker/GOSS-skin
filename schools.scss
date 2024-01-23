@@ -52,7 +52,7 @@ $card-border-radius: 12px;
         margin: 0 auto;
     }
 
-    .template--list .maincontent > .container, .template--panel .maincontent > .container {
+    .template--list .maincontent > .container, .template--panel .maincontent > .container, .template--search .maincontent > .container, .template--stage .maincontent > .container {
         max-width: 1480px;
         margin: 0 auto; 
     } 
@@ -64,7 +64,7 @@ $card-border-radius: 12px;
     padding-left: 0px;
     }
 
-    .template--list .container {
+    .template--list .container { 
         .a-heading, .a-intro, .a-body {
             margin: 0 0 0 0%;
         }
