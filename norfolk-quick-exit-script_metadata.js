@@ -13,7 +13,7 @@
 		qeHTML.href = "#";
 		qeHTML.setAttribute("class", "cta-link cta-link--contrast cta-link--cancel cta-link--qe");
 		qeHTML.title = "Immediately exit this page and cover your track";
-		qeHTML.innerHTML = "<span class='desktop'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30' height='28' xml:space='preserve' version='1.1' viewBox='0 0 30 28'><image width='30' height='28' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAAAXNSR0IArs4c6QAAAbxJREFUSEvFllFSwjAURe9jGEarH2QHsAPZAexAvqVKd+AO1BW4hDKWf9kBuAN2ADtIP6Q6yhCnpYDQJnlxOmP+2rzcM6/JvQ3hD0O+XAxBKsyX9oWfTFxlyHWBDJtN1L8WAJr52hjrRlsEceyi5Q6OvEcADyeQJ+En6Xv2cALL8KyFei3ttjjWm7YIPpdcsht47IVQGGrEJ8JP+pWDZXTZBTZTs3CtJ/z3GQfO7lhG51OAumZRNRP+R68ysIy8awCvHEEoCsTtamSrZXUsx94CCq2DmJoB9JY9E+6O5ghLfDc6NntZwXJ8fg9Fzzr7aLbAai8juCQsdvy9sAYcY73pmOxlBpeHRQq3gdMtGIlBEuj2Wgs2hgUHnBH19tKDzWFh7zgD6+1VCmaEBROcssvtpQFbw4IP1tirAGaGBR+8PV0FexXBhbAoPZeu4MI/+wisCYsysiu4YK892BAWttjlz9eoI25W823S5kPqw4IvbK082CsDW8KiRM7wk7DCkV0Ot2BzWFSzxzsVwlIMkjYxwqJacG4v4t0sTthpKCiVX+zo6tdV1/6htxUxychT3Ooq6/4R7H6wqmh8/gOAL+tl1ggv9gAAAABJRU5ErkJggg=='/></svg></span><span class='desktop'><strong>Click</strong></span><span class='desktop'><strong>HERE</strong></span><span>To leave </span><span>this site </span><span>QUICKLY</span>";
+		qeHTML.innerHTML = "<span>Leave this site </span><span>quickly</span>";
 		qeHTML.addEventListener("click", qeOnClick);
 		return qeHTML;
 	}
