@@ -611,6 +611,7 @@ h2.a-panel__title {
         left: 50%;
         transform: translateX(-50%);
         bottom: 10px;
+        z-index: 99;
       }
 
       .a-panel__summary {
@@ -874,7 +875,7 @@ h2.a-panel__title {
   border-radius: $panel-border-radius;
 }
 
-.a-panel--hide-summary .a-panel__summary {
+.a-panel--hide-summary .a-panel__summary { 
   display: none;
 }
 
@@ -1449,3 +1450,29 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 .panel__link {
   hyphens: none;
 }
+
+
+// MW ADDED PEEKY
+
+.a-panel--peeky-swiper .gi-carousel__slide .a-panel--list .container .a-panel__content .a-panel__list {
+  display: block; margin: 0;
+
+  .grid.grid--list .item.item--article .item__imagecontainer {display: block;}
+  .item__content {display: none !important;}
+  .grid__cellwrap .item.item--article {position: absolute; top: 0; left: 0; height: 100%; width: 100%;}
+  .grid.grid--list .item.item--article .item__imagecontainer figure {position: absolute; top: 50%; left:50%; height: 100%; width: 100%; transform: translateX(-50%) translateY(-50%);}
+  .a-panel__title {z-index: 99;}
+
+.grid__cellwrap .item.item--article {background-color: #fff;}
+
+}
+
+.a-panel--peeky-swiper .gi-carousel__slide .a-panel--list .container .a-panel__content .a-panel__list .grid__cell {display: none;}
+.a-panel--peeky-swiper .gi-carousel__slide .a-panel--list .container .a-panel__content .a-panel__list .grid__cell:first-child {display: block;
+
+
+ > .item__imagecontainer {display: block;}
+
+
+}
+
