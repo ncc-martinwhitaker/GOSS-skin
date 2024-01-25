@@ -89,10 +89,6 @@ Variables to change:
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
   padding: 16px 20px;
 }
-// forms service with bg
-.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
-  padding: 80px 20px;
-}
 
 // forms service
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
@@ -116,18 +112,18 @@ Variables to change:
 .a-panel.a-panel--pt.a-panel--render.a-panel--list {
   padding: 16px 20px;
 }
-// list with bg
+// list with bg - update 25/01/2024 #2351
 .a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // stage
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
   padding: 16px 20px;
 }
-// stage with bg
+// stage with bg - update 25/01/2024 #2351
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // feature
