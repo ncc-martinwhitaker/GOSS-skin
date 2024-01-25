@@ -31,6 +31,10 @@
   border: solid 1px $search-border-color;
 }
 
+.header .searchform__inputtxt.searchform__inputtxt--sitesearch {
+  height: 35px;
+}
+
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   border-radius: 4px 0 0 4px;
 
