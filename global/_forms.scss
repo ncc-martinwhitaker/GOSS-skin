@@ -73,6 +73,10 @@
         outline: 3px solid #fd0;
         //outline-offset: 0;
         box-shadow: inset 0 0 0 2px;
+        text-decoration: none !important; 
+    }
+    textarea:focus, select:focus, input.icmpassword:focus {
+background: #fff; 
     }
 
     input[type=button].icminput--contrast:hover {
@@ -247,4 +251,9 @@ div.LookupTable tr {
 
 .template--formsservice .a-body {
     padding-bottom: 16px;
+}
+
+.searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
+    text-decoration: none !important;
+    background: #fff;
 }
