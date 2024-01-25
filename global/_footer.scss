@@ -34,6 +34,13 @@ footer.footer-bottom {
   display: none;
 }
 
+//Move Copyright below the rest of the footer
+.grid--footer>.grid__cell:last-child {
+  clear: both;
+  text-align: center;
+  width: 100%;
+}
+
 @media (max-width: 560px) {
   .grid--footer>.grid__cell:first-child {
     width: 100%;
