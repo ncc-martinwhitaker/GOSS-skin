@@ -1,0 +1,70 @@
+.card--promo {
+    border-radius: $promo-border-radius; //default rounded/squared corners depending on the site
+    margin-top: 20px;
+
+    .card__imagecontainer img {  
+        border-radius: $promo-border-radius $promo-border-radius 0px 0px; //default rounded/squared corners depending on the site
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    &.card--noborder {
+        border: none;
+    }
+
+    &.card--rounded-promo-card {
+        border-radius: $rounded-corner-border-radius;
+
+        .card__imagecontainer img {  
+            border-radius: 12px 12px 0px 0px;
+        }
+    }
+
+    &.card--squared-promo-card {
+        border-radius: 0px;
+
+        .card__imagecontainer img {  
+            border-radius: 0px;
+        }
+    }
+
+
+   /* .card__actions:has(.cta-link) {
+        padding: 10px 0 20px 0;
+    }*/
+
+    .card__actions {
+        text-align: right;
+       // padding-bottom: 20px;
+
+        &:has(.cta-link) {
+            padding: 10px 0 20px 0;
+        }
+
+        .cta-link {
+            display: inline;
+            background-color: #FFFFFF;
+            color: #066; //TODO what variable should this be?
+            text-align: right;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 0px;
+            margin-right: 35px;
+
+            &:hover {
+                background-color: #FFFFFF;
+                //text-decoration: underline;
+                color: #004037;
+                border-bottom: 2px solid #004037;
+                box-shadow: none;
+            }
+            &:after {
+                right: auto;
+                padding-left: 5px;
+            }
+        }
+    }
+
+}

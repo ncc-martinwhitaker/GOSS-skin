@@ -49,6 +49,11 @@
       float: left;
       clear: right;
 
+      //test removing padding from feature cards - move this to correct css file if this is signed off with promo card work
+      .a-panel--feature .grid__cell--feature .grid__cellwrap {
+          padding: 10px 0;
+      }
+
       .a-panel .a-panel__content {
         padding: 0px;
       }
