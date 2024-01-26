@@ -130,6 +130,15 @@ Variables to change:
   padding: 80px 20px;
 }
 
+// #2349 - stage - background (bug with GOSS I believe missing something like a-panel--hasbackground) quick fix is below 
+.a-panel--stage {
+  position: relative;
+  background-attachment: unset;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // feature
 .a-panel.a-panel--feature {
   padding: 8px 20px;
