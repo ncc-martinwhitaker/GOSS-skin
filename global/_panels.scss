@@ -130,6 +130,11 @@ Variables to change:
   padding: 80px 20px;
 }
 
+// #2296 - H1 headings after stage border not being honoureed - put in this fix at this lower level to see if it will resolve this
+.a-panel--stage {
+  float: none;
+}
+
 // feature
 .a-panel.a-panel--feature {
   padding: 8px 20px;
