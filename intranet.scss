@@ -39,7 +39,7 @@ $card-border-radius: 12px;
     margin: 0 0 0 0;
 }
 
-.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--formsservice {
     .container.container--fullwidth {
         max-width: 1480px;
 
@@ -50,9 +50,22 @@ $card-border-radius: 12px;
     }
 }
 
+.template--blog, .template--documentsection {
+    .container.container--fullwidth {
+        max-width: 1170px;
+
+        .maincontent > .container {
+            max-width: 1900px; // was 900px - just needed a big number not 1900px specifically
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+
+//.template--blog .maincontent > .container, .template--documentsection .maincontent > .container - can be deletd
 @media (min-width: 840px) {
 
-    .template--default .maincontent > .container{
+    .template--default .maincontent > .container {
         max-width: 1170px !important;
         margin: 0 auto;
     }
