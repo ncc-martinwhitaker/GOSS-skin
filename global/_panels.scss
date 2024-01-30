@@ -46,7 +46,7 @@ Variables to change:
 }
 // default + body with bg
 .a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--hasbackground.a-panel--body {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // default + parallax
@@ -58,13 +58,20 @@ Variables to change:
   padding: 40px 20px;
 }
 
+// parallax panel with background image #2351
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground
+{
+  padding: 32px 20px;
+}
+
+
 // blog
 .a-panel.a-panel--pt.a-panel--render.a-panel--blog {
   padding: 16px 20px;
 }
 // blog with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--blog.a-panel--hasbackground {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // doc and doc
@@ -73,7 +80,7 @@ Variables to change:
 }
 // doc and doc with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--document.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // redirect
@@ -82,7 +89,7 @@ Variables to change:
 }
 // redirect with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--redirect.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // forms service
@@ -96,7 +103,7 @@ Variables to change:
 }
 // forms service with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // "panel"
@@ -105,8 +112,14 @@ Variables to change:
 }
 // "panel" with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
+
+// Search panel with background image #2351
+.a-panel.a-panel--pt.a-panel--search.a-panel--hasbackground  {
+  padding: 32px 20px;
+}
+
 
 // list
 .a-panel.a-panel--pt.a-panel--render.a-panel--list {
