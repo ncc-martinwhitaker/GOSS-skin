@@ -69,6 +69,43 @@ Variables to change:
   float: none;
 }
 
+// START #2281/2338 Greedy menu
+.n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
+  padding: 10px 10px;
+  white-space: nowrap;
+}
+
+.n-stage .gi-sitenav__list.gi-sitenav__list--lvl2{
+display: list-item;
+white-space: nowrap;
+}
+
+
+.n-stage .gi-sitenav__list.gi-sitenav__list--lvl2 {
+padding: 0px;
+}
+
+.n-stage .gi-sitenav--stage .gi-sitenav__link--lvl2:hover {
+  box-shadow: none;
+  }
+
+.n-stage .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2
+{
+  width: 100%;
+  
+}
+
+.n-stage .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+padding: 10px 10px 10px 10px;
+width:100%;
+text-align: center;
+font-weight: 600;
+font-size: 1.125rem
+}
+// END #2281 Greedy menu
+
+
+
 // Dropdown menu
 
 div.gi-sitenav--mainnav-lvl2 {

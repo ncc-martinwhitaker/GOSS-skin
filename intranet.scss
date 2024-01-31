@@ -23,6 +23,7 @@ $panel-backdrop-border-radius: 12px;
 $panel-border-radius: 12px;
 $feature-panel-border-radius: 12px;
 $list-border-radius: 12px;
+$promo-border-radius: 12px;
 $card-border-radius: 12px;
 //$feature-card-border-radius: 12px;
 
@@ -38,33 +39,59 @@ $card-border-radius: 12px;
     margin: 0 0 0 0;
 }
 
-.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--formsservice {
     .container.container--fullwidth {
         max-width: 1480px;
 
         .maincontent > .container {
-            max-width: 900px;
+            max-width: 1900px; // was 900px - just needed a big number not 1900px specifically
             margin: 0 0 0 auto;
         }
     }
 }
 
-@media (min-width: 840px) {
-    .maincontent > .container {
-        max-width: 900px;
-        margin: 0 0 0 20%;
-    }
+.template--blog, .template--documentsection, .template--formsservice {
+    .container.container--fullwidth {
+        max-width: 1170px;
 
-    .template--list .container {
-        .a-heading, .a-intro, .a-body {
-            margin: 0 0 0 10%;
+        .maincontent > .container {
+            max-width: 1900px; // was 900px - just needed a big number not 1900px specifically
+            margin: 0 0 0 auto;
         }
     }
+}
+
+
+//.template--blog .maincontent > .container, .template--documentsection .maincontent > .container - can be deletd
+@media (min-width: 840px) {
+
+    .template--default .maincontent > .container {
+        max-width: 1170px !important;
+        margin: 0 auto;
+    }
+
+    .template--list .maincontent > .container, .template--panel .maincontent > .container, .template--search .maincontent > .container, .template--stage .maincontent > .container {
+        max-width: 1480px;
+        margin: 0 auto; 
+    } 
+
+    .template--list aside, .template--panel aside{
+    display: block;
+    float: right;
+    width: 100%;
+    padding-left: 0px;
+    }
+
+    .template--list .container { 
+        .a-heading, .a-intro, .a-body {
+            margin: 0 0 0 0%;
+        }
+    } 
 
     .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
         .container.container--fullwidth aside.aside {
-          width: 24%;
-          margin-left: 6%;
+              width: 30%;
+            padding-left: 10px;
         }
     }
 }
