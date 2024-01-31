@@ -114,8 +114,8 @@ div.gi-sitenav--mainnav-lvl2 {
 
 // 2405 - z-index fix
 
-.gi-sitenav--mainnav-lvl2 {
-  z-index: 99;
+div.gi-sitenav--mainnav-lvl2 {
+  z-index: 99 !important; 
 }
 
 
