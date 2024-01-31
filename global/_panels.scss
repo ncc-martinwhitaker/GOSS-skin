@@ -37,7 +37,7 @@ Variables to change:
 }
 // default with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground {
-  padding: 16px 20px;
+  padding: 32px 20px;
 }
 
 // default + body
@@ -55,7 +55,7 @@ Variables to change:
 }
 // default + parallax with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--parallax {
-  padding: 40px 20px;
+  padding: 32px 20px;
 }
 
 // parallax panel with background image #2351
@@ -63,7 +63,6 @@ Variables to change:
 {
   padding: 32px 20px;
 }
-
 
 // blog
 .a-panel.a-panel--pt.a-panel--render.a-panel--blog {
@@ -97,10 +96,6 @@ Variables to change:
   padding: 16px 20px;
 }
 
-// forms service
-.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
-  padding: 16px 20px;
-}
 // forms service with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
   padding: 32px 20px;
