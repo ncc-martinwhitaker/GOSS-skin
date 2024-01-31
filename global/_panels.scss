@@ -432,7 +432,7 @@ h2.a-panel__title {
   .gi-sitenav--stage .gi-sitenav__link--lvl1 {
     &:hover {
       box-shadow: none;
-      color: #fff;
+      color: #000;
     }
   }
 
@@ -441,9 +441,13 @@ h2.a-panel__title {
     margin-left: 15px;
 
     .gi-sitenav__link--lvl1 {
-      background-color: $button-primary-color;
+      background-color: #006666;
       margin: 0px;
       padding-left: 55px; // (40 + 15)
+      &:hover, &:focus {
+
+        background: #fd0;
+      }
     } 
   }
 

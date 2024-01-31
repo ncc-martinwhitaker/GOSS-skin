@@ -61,7 +61,7 @@ Variables to change:
 .gi-sitenav__list--lvl1 { 
   float: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: end; 
 }
 
@@ -69,7 +69,7 @@ Variables to change:
   float: none;
 }
 
-// START #2281/2338 Greedy menu
+// START #2281/2338 Greedy menu 
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
   padding: 10px 10px;
   white-space: nowrap;
@@ -101,7 +101,7 @@ width:100%;
 text-align: center;
 font-weight: 600;
 font-size: 1.125rem
-}
+} 
 // END #2281 Greedy menu
 
 
@@ -180,8 +180,16 @@ header .imagebanner {
 
 @media (min-width: 820px) {
 
+  header {
   .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
       display: block;
   }
-  
-  } 
+}
+
+// for the greedy menu fix
+
+.a-panel:has(.gi-sitenav){
+  z-index: 99;
+}
+
+}
