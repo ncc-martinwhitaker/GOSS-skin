@@ -134,3 +134,39 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
   color: #FFFFFF;
 }
 
+
+//Quick exit
+#qe {
+  z-index: 10000;
+  right: 0;
+  left: auto;
+  background: #002649;
+  padding-right: 20px;
+  text-align: center;
+
+  &.cta-link--qe::after {
+    content: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@include mq('sm', 'min') {
+  #qe {
+    top: 200px;
+    padding: 1em;
+    border-radius: 0.5em 0 0 0.5em;
+    bottom: auto;
+    
+    span {
+      display: block;
+      font-size: 1.4em;
+    }
+
+    .desktop {
+      display: block;
+    }
+  }
+}
