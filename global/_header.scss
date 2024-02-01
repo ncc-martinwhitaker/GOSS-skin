@@ -58,6 +58,15 @@ Variables to change:
 //   display: inline-block;
 // }
 
+.gi-sitenav--stage .gi-sitenav__list--lvl1 {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.gi-sitenav--stage .gi-sitenav__item--lvl1{
+  display: inline-flex;
+  align-items: stretch;
+}
 .gi-sitenav__list--lvl1 { 
   float: none;
   display: flex;
@@ -72,7 +81,8 @@ Variables to change:
 // START #2281/2338 Greedy menu 
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
   padding: 10px 10px;
-  white-space: nowrap;
+ display: flex;
+ align-items: center;
 }
 
 .n-stage .gi-sitenav__list.gi-sitenav__list--lvl2{
@@ -102,6 +112,25 @@ text-align: center;
 font-weight: 600;
 font-size: 1.125rem
 } 
+
+
+.a-panel.a-panel--pt.a-panel--stage .gi-sitenav--stage .gi-sitenav__item--lvl1:last-child .gi-sitenav__link--lvl1 {
+  display: inline-flex;
+   align-items: center;
+}
+.gi-sitenav--stage .gi-sitenav__link[aria-haspopup="true"]::before {
+ 
+  top: 50%;
+}
+
+
+.gi-sitenav--stage .gi-sitenav--lvl2 {
+  top:100%;
+}
+
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground:has(.gi-sitenav--stage){z-index: 9999999;}
+
 // END #2281 Greedy menu
 
 
