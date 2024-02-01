@@ -58,10 +58,19 @@ Variables to change:
 //   display: inline-block;
 // }
 
+.gi-sitenav--stage .gi-sitenav__list--lvl1 {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.gi-sitenav--stage .gi-sitenav__item--lvl1{
+  display: inline-flex;
+  align-items: stretch;
+}
 .gi-sitenav__list--lvl1 { 
   float: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: end; 
 }
 
@@ -69,10 +78,11 @@ Variables to change:
   float: none;
 }
 
-// START #2281/2338 Greedy menu
+// START #2281/2338 Greedy menu 
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
   padding: 10px 10px;
-  white-space: nowrap;
+ display: flex;
+ align-items: center;
 }
 
 .n-stage .gi-sitenav__list.gi-sitenav__list--lvl2{
@@ -101,7 +111,26 @@ width:100%;
 text-align: center;
 font-weight: 600;
 font-size: 1.125rem
+} 
+
+
+.a-panel.a-panel--pt.a-panel--stage .gi-sitenav--stage .gi-sitenav__item--lvl1:last-child .gi-sitenav__link--lvl1 {
+  display: inline-flex;
+   align-items: center;
 }
+.gi-sitenav--stage .gi-sitenav__link[aria-haspopup="true"]::before {
+ 
+  top: 50%;
+}
+
+
+.gi-sitenav--stage .gi-sitenav--lvl2 {
+  top:100%;
+}
+
+
+.a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground:has(.gi-sitenav--stage){z-index: 9999999;}
+
 // END #2281 Greedy menu
 
 
@@ -180,8 +209,16 @@ header .imagebanner {
 
 @media (min-width: 820px) {
 
+  header {
   .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
       display: block;
   }
-  
-  } 
+}
+
+// for the greedy menu fix
+
+.a-panel:has(.gi-sitenav){
+  z-index: 99;
+}
+
+}
