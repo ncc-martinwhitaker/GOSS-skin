@@ -172,6 +172,12 @@ div.gi-sitenav--mainnav-lvl2 {
   font-size: 1.125rem;
 }
 
+// hide-sign-in
+
+.body--hide-sign-in .utilitymenu.utilitymenu--top, .body--hide-sign-in .utilitymenu.utilitymenu--mobile {
+  display: none;
+}
+
 // burger menu
 
 .gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu * {
