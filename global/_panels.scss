@@ -37,7 +37,7 @@ Variables to change:
 }
 // default with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground {
-  padding: 16px 20px;
+  padding: 32px 20px;
 }
 
 // default + body
@@ -46,7 +46,7 @@ Variables to change:
 }
 // default + body with bg
 .a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--hasbackground.a-panel--body {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // default + parallax
@@ -55,7 +55,13 @@ Variables to change:
 }
 // default + parallax with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--parallax, .a-panel.a-panel--pt.a-panel--render.a-panel--default.a-panel--hasbackground.a-panel--parallax {
-  padding: 40px 20px;
+  padding: 32px 20px;
+}
+
+// parallax panel with background image #2351
+.a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground
+{
+  padding: 32px 20px;
 }
 
 // blog
@@ -64,7 +70,7 @@ Variables to change:
 }
 // blog with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--blog.a-panel--hasbackground {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // doc and doc
@@ -73,7 +79,7 @@ Variables to change:
 }
 // doc and doc with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--document.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // redirect
@@ -82,25 +88,17 @@ Variables to change:
 }
 // redirect with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--redirect.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // forms service
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
   padding: 16px 20px;
 }
-// forms service with bg
-.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
-  padding: 80px 20px;
-}
 
-// forms service
-.a-panel.a-panel--pt.a-panel--render.a-panel--formsservice {
-  padding: 16px 20px;
-}
 // forms service with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // "panel"
@@ -109,25 +107,31 @@ Variables to change:
 }
 // "panel" with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
+
+// Search panel with background image #2351
+.a-panel.a-panel--pt.a-panel--search.a-panel--hasbackground  {
+  padding: 32px 20px;
+}
+
 
 // list
 .a-panel.a-panel--pt.a-panel--render.a-panel--list {
   padding: 16px 20px;
 }
-// list with bg
+// list with bg - update 25/01/2024 #2351
 .a-panel.a-panel--pt.a-panel--render.a-panel--list.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // stage
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
   padding: 16px 20px;
 }
-// stage with bg
+// stage with bg - update 25/01/2024 #2351
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground  {
-  padding: 80px 20px;
+  padding: 32px 20px;
 }
 
 // feature
