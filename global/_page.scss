@@ -114,7 +114,7 @@
 
 /*.body--sticky-jumplinks .container {
     width: 1170px;
-        max-width: 100% !important;
+        max-width: 100% !important; rebased
 }*/
 
 .body--sticky-jumplinks .a-body__inner{
@@ -139,6 +139,7 @@
 .body--sticky-jumplinks .gi-jumplist {
    width: 30% !important;
     position: sticky; 
+    padding-right: 25px; //fix for sticky   
 }
 
 .body--no-aside .container.container--fullwidth .maincontent .a-heading, .body--no-aside .container.container--fullwidth .maincontent .a-intro, .body--no-aside .container.container--fullwidth .maincontent .a-body:has(.gi-jumplist){
@@ -171,6 +172,7 @@
 
     .body--sticky-jumplinks .gi-jumplist, .gi-jumplist {
         position: relative;
+        padding-right: 0px; // remove padding on mobile
     } 
     
 
