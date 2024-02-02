@@ -1150,7 +1150,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
       height: auto;
       padding: 0px;
       width: 50%;
-      border-radius: 5px 0 0 5px;
+      border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cadrs image radius for square cards
     }
     .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
       margin: 0;
