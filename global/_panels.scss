@@ -460,8 +460,9 @@ h2.a-panel__title {
     } 
   }
 
-  .card__actions {
+  .card__actions { 
     align-self: flex-end;
+    margin-top: auto;
   }
 
   .card__actions .cta-link--stage {
@@ -473,13 +474,38 @@ h2.a-panel__title {
     content: none;
   }
 
+  .grid__cell--cols2 .card--stage .card__content {
+    display: block;
+
+    .card__actions {
+      text-align: right;
+    }
+
+    .cta-link--fullwidth {
+      width: auto;
+    }
+  }
+
+
   .card--stage .card__content {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
 
     .card__innercontent {
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      /*eject below line #2340
+      margin-left: 10px;*/
+      flex-grow: 2;
+    }
+
+    .card__innercontent:not(:has(.item__body)) {
+      justify-content: end;
     }
 
     .card__imagecontainer {
@@ -490,6 +516,22 @@ h2.a-panel__title {
       }
     }
   }
+
+  &.a-panel--display-image-left {
+    .card--stage .card__content {
+      flex-direction: row;
+    }
+  }
+
+  &.a-panel--display-image-right {
+    .card--stage .card__content {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.card--stage.card--default .cta-link--stage:before {
+  content: none;  
 }
 
 // Peeky swiper
@@ -1331,18 +1373,21 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
 
-  .card__innercontent {
+  /*.card__innercontent {
     display: flex;
-  }
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+  }*/
 
   .card__imagecontainer {
     width: 50%;
     margin-bottom: 0px;
   }
-  .item__body {
+  /*.item__body {
     width: 50%;
     padding-left: 15px;
-  }
+  }*/
 }
 
 
@@ -1356,35 +1401,58 @@ h4.stage-link__title  {
 
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
 
+/*  .card--stage .card__content {
+    flex-direction: column;
+  }*/
+  
   .card__innercontent {
-    display: flex;
-    flex-direction: row-reverse;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+    margin-right: 10px;
+    margin-left: 0px;
+    //flex-direction: row-reverse;  //TODO - does removing this change something else that needs it?
   }
 
   .card__imagecontainer {
     width: 50%;
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
   }
-  .item__body {
+  /*.item__body {
     width: 50%;
     padding-right: 15px;
-  }
+  }*/
 }
 
 
 @media only screen and (max-width: 600px) {
 
-  // set cards to always display image top below 600px
-  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right,  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left  {
+  /* #2340 fix data-grid on mobile */
+  .n-stage__relarticles .grid {
+    margin-left: 0px;
+    width: auto;
+  }
 
-    .card__innercontent {
-      display: flex;
+
+  // set cards to always display image top below 600px
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage,
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, 
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left,
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-right, 
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-right {
+
+    .card--stage .card__content {
       flex-direction: column;
     }
+
+    /*.card__innercontent {
+      display: flex;
+      flex-direction: column;
+    }*/
   
     .card__imagecontainer {
       width: 100%;
-      margin-bottom: 10px;
+      //margin-bottom: 10px;
     }
     .item__body {
       width: 100%;
@@ -1392,6 +1460,11 @@ h4.stage-link__title  {
       padding-left: 0px;
     }
   }
+
+  /*.a-panel.a-panel--pt.a-panel--render.a-panel--stage.card__imagecontainer {
+    width: 100%;
+  }*/
+
 }
 
 // list panel dark cards
