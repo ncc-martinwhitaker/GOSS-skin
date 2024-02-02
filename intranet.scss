@@ -179,6 +179,7 @@ justify-content: space-around;
     width: 400px;
     border-radius: 6px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    z-index: 100;
 }
 
 .gi-sitenav__item--lvl1:first-child {
