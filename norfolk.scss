@@ -126,8 +126,8 @@ a.gi-sitelogo__link {width: $logo-width;}
         width: 1170px;
         transform: translateX(-50%);
     left: 50%;
-    z-index: 3;
-    top: 65px;
+    z-index: 100; 
+    top: 65px; 
     }
 
     ul.gi-sitenav__list.gi-sitenav__list--lvl2 {
