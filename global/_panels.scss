@@ -1373,12 +1373,14 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--display-image-left, .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground.a-panel--display-image-left {
 
-  /*.card__innercontent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .card__innercontent {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+
+    margin-right: 0px;
     margin-left: 10px;
-  }*/
+  }
 
   .card__imagecontainer {
     width: 50%;
