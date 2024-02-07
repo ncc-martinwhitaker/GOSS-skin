@@ -139,6 +139,13 @@ max-width: none;
     max-width: none;
 }
 
+// 2303 - fullwidth column for default template
+.body--full-width .container.container--fullwidth main.maincontent
+    {
+        width: auto;
+    }
+// end 2303
+
 //2078 Mobile view fix for forms (put div round table with class and scroll within div)
 .icmform .table-responsive {
     overflow-x: auto;
