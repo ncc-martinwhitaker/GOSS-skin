@@ -147,6 +147,9 @@ div.gi-sitenav--mainnav-lvl2 {
   z-index: 99 !important; 
 }  
 
+.gi-sitenav--stage .gi-sitenav__item--lvl1:last-child {
+  background-color: #006666; 
+}
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
   background-color: #fff;
