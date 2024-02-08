@@ -43,6 +43,35 @@ Variables to change:
 // default + body
 .a-panel.a-panel--pt.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--body {
   padding: 16px 20px;
+
+  &.a-panel--right {  
+    .a-panel__imagecontainer {
+      width: 25%;
+    }
+
+    @media (max-width: 1000px) {
+      .a-panel__imagecontainer {
+        width: auto;
+      }
+    }
+
+  }
+
+  &.a-panel--left {
+    .a-panel__body {
+      float: left;
+    }
+
+    .a-panel__imagecontainer {
+      width: 25%;
+    }
+
+    @media (max-width: 1000px) {
+      .a-panel__imagecontainer {
+        width: auto;
+      }
+    }
+  }
 }
 // default + body with bg
 .a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, .a-panel.a-panel--pt.a-panel--default.a-panel--hasbackground.a-panel--body {
