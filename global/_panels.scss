@@ -534,11 +534,11 @@ h2.a-panel__title {
   content: none;  
 }
 
-
 // stage card stacking
 
 @media only screen and (max-width: 1200px) {
   .n-stage .grid.grid--3col {
+
     .grid__cell.grid__cell--cols2 {
       width: 100%;
     }
