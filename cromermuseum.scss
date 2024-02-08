@@ -1,0 +1,23 @@
+@import "global/functions";
+@import "variables";
+
+$header-color: #0070A5;
+$header-text-color: #fff;
+$header-utilitymenu-color: #0070A5;
+
+$burger-menu-color: #fff;
+
+$breadcrumb-color: #f6f6f6;
+$breadcrumb-text-color: #215bbb;
+$breadcrumb-border-color: #f6f6f6;
+$breadcrumb-chevron: $breadcrumb-chevron-blue;
+
+$button-search-background-color: #334f7d;
+$search-border-color: #FFFFFF;
+
+$footer-background-color: #0070A5;
+$footer-color: #fff;
+$footer-border-color: #0070A5;
+ 
+@import 
+"global-import";
