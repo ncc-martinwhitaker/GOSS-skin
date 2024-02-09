@@ -34,6 +34,14 @@ $card-border-radius: 12px;
     max-width: 1480px;
 }
 
+.template--list .aside .a-panel__content, .template--search .aside .a-panel__content, .template--panel .aside .a-panel__content {
+    max-width: 100%;
+    padding: 0px;
+}
+.template--list .aside .a-panel.a-panel--feature, .template--search .aside .a-panel.a-panel--feature, .template--panel .aside .a-panel.a-panel--feature {
+    padding: 0px;
+  }
+
 .maincontent > .container {
     max-width: 900px;
     margin: 0 0 0 0;
@@ -74,6 +82,17 @@ $card-border-radius: 12px;
         max-width: 1480px;
         margin: 0 auto; 
     } 
+
+    .template--list .aside .a-panel__content, .template--search .aside .a-panel__content, .template--panel .aside .a-panel__content {
+        max-width: 100%;
+        padding: 0px;
+
+    }
+    .template--list .aside .a-panel.a-panel--feature, .template--search .aside .a-panel.a-panel--feature, .template--panel .aside .a-panel.a-panel--feature {
+      padding: 0px;
+    }
+
+
 
     .template--list aside, .template--panel aside{
     display: block;
