@@ -1586,4 +1586,12 @@ h4.stage-link__title  {
 
 
 }
-
+@media only screen and (max-width: 600px) {
+.n-stage__link--logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin: 0 auto;
+}
+} 
