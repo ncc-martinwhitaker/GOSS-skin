@@ -146,7 +146,7 @@
 .gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
   &::after {
     color: #fff;
-    content: "\e800  Search";
+    content: "\e800  Find";
     font-size: 16px;
     margin: 8px;
   }
@@ -155,8 +155,8 @@
 }
 
 .btn--search::after {
-  color: $button-search-color;
-  content: "\e800  Search";
+  color: $button-search-color; 
+  content: "\e800  Find";
 }
 
 .gi-sitesearch--dynamic[data-collapsed="false"]
