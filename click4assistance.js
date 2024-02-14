@@ -5,57 +5,57 @@ function InitialiseC4A() {
 
     var ChatImgId = 'customLiveChatButton';
 
-    // ###########################
-    // ScriptID=1 (Only used for Testing on the C4A/UAT page)
+    // Norfolk test
+    /*if (
+        location.href.toLowerCase().indexOf("norfolk.ncc1-tst.gosshosted.com/24771") != -1
+    ) {
+        var myChatTool = new C4A.Tools(1, ChatImgId);
+        C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
+    }*/
 
-    //Testing - DEV site
-    if (location.href.toLowerCase().indexOf("article/173177") != -1) {
+    // NCC ScriptID=1 (Norfolk CC-Chat Experience)
+    if (
+        location.href.toLowerCase().indexOf("/42566") != -1 ||
+        location.href.toLowerCase().indexOf("/42578") != -1 ||
+        location.href.toLowerCase().indexOf("/42570") != -1 ||
+        location.href.toLowerCase().indexOf("/42580") != -1 ||
+        location.href.toLowerCase().indexOf("/42583") != -1 ||
+        location.href.toLowerCase().indexOf("/41984") != -1 ||
+        location.href.toLowerCase().indexOf("/38796") != -1
+    ) {
         var myChatTool = new C4A.Tools(1, ChatImgId);
         C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
     }
 
-    if (location.href.toLowerCase().indexOf("www.click4assistance.co.uk/uat/norfolkcc") != -1 ||
-        location.href.toLowerCase().indexOf("stuff/norfolkcc.html") != -1) {
-        var myChatTool = new C4A.Tools(1, ChatImgId);
-    }
-    // ###########################
+    // NCC ScriptID=2 (TRAINING Experience)
 
-    ///TODO - all of the following are TBD and updated with new links for the GOSS site.
-
-    // ScriptID=1
-    if (location.href.toLowerCase().indexOf("www.norfolk.gov.uk/what-we-do-and-how-we-work/have-your-say/contact-norfolk-county-council") != -1) {
-        var myChatTool = new C4A.Tools(1, ChatImgId);
-        C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
-    }
-    // ScriptID=2
-    if (location.href.toLowerCase().indexOf("test.norfolk.gov.uk/what-we-do-and-how-we-work/have-your-say/contact-norfolk-county-council") != -1) {
-        var myChatTool = new C4A.Tools(2, ChatImgId);
-        C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
-    }
-    // ScriptID=3
-    if (location.href.toLowerCase().indexOf("care-support-and-health/disabilities/blue-badges") != -1 ||
-        location.href.toLowerCase().indexOf("care-support-and-health/support-for-living-independently/travel-and-transport/blue-badges") != -1 ||
-        location.href.toLowerCase().indexOf("roads-and-transport/public-transport/buses/concessionary-travel-pass/age-related-travel-pass") != -1 ||
-        location.href.toLowerCase().indexOf("roads-and-transport/public-transport/buses/concessionary-travel-pass/disabled-travel-pass") != -1) {
+    // NCC ScriptID=3 (Blue Badge Experience)
+    if (
+        location.href.toLowerCase().indexOf("/39800") != -1 ||
+        location.href.toLowerCase().indexOf("/41932") != -1 ||
+        location.href.toLowerCase().indexOf("/39802") != -1
+    ) {
         var myChatTool = new C4A.Tools(3, ChatImgId);
         C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
     }
-    // ScriptID=4
-    if (location.href.toLowerCase().indexOf("education-and-learning/school-and-college-transport/home-to-school-transport") != -1 ||
-        location.href.toLowerCase().indexOf("education-and-learning/schools/school-admissions") != -1 ||
-        location.href.toLowerCase().indexOf("education-and-learning/adult-learning/courses") != -1 ||
-        location.href.toLowerCase().indexOf("education-and-learning/adult-learning/apprenticeships") != -1) {
+
+    // NCC Script=4 (General Enquiries)
+    if (
+        location.href.toLowerCase().indexOf("/38292") != -1 ||
+        location.href.toLowerCase().indexOf("/38294") != -1 
+    ) {
         var myChatTool = new C4A.Tools(4, ChatImgId);
         C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
     }
-    // ScriptID=5
-    if (location.href.toLowerCase().indexOf("births-ceremonies-and-deaths/marriages-and-civil-partnerships") != -1 ||
-        location.href.toLowerCase().indexOf("libraries-local-history-and-archives/libraries/library-services/information-service") != -1) {
+
+    // NCC Script=5 (Chatbot test)
+
+    // Finance ScriptID=1
+    if (
+        location.href.toLowerCase().indexOf("/41982") != -1 ||
+        location.href.toLowerCase().indexOf("/41983") != -1
+    ) {
         var myChatTool = new C4A.Tools(1, ChatImgId);
-        C4A.Run('EE7B45EB-6AE4-4647-9D78-C180455DFAFE');
-    }
-    if (location.href.toLowerCase().indexOf("care-support-and-health/support-for-living-independently/money-and-benefits/direct-payment-support-service") != -1) {
-        var Tool1 = new C4A.Tools(1, ChatImgId);
         C4A.Run('4ff484de-0b0d-4c01-8a74-278d96d4182f');
     }
 }
