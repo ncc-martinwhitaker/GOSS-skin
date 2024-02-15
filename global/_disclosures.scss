@@ -38,7 +38,7 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=false]::after {
+.gi-disclosure--body .gi-disclosure__toggle::after {
   content: "Show";
   font-family: 'Assistant', 'Open Sans', sans-serif;
   font-size: 1.25rem;
