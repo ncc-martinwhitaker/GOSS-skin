@@ -479,7 +479,7 @@ h2.a-panel__title {
     margin-left: 15px;
 
     .gi-sitenav__link--lvl1 {
-      background-color: #006666;
+      background: $button-search-background-color;
       margin: 0px;
       padding-left: 55px; // (40 + 15)
       width: 100%;
