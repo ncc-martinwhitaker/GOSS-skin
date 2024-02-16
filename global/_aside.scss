@@ -138,3 +138,9 @@
     }
   }
 }
+
+.body--no-aside.template--stage {
+  .container.container--fullwidth {
+    max-width: none;
+  }
+}
