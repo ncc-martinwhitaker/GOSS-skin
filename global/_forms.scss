@@ -139,8 +139,8 @@ max-width: none;
     max-width: none;
 }
 
-// 2303 - fullwidth column for default template
-.body--full-width .container.container--fullwidth main.maincontent
+// 2303 - fullwidth column for default template - updated to specify default template only
+.body--full-width.template--default .container.container--fullwidth main.maincontent
     {
         width: auto;
     }
