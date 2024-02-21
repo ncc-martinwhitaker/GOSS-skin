@@ -16,10 +16,17 @@ $("<div id='headermainmenu'><div class='container'></div></div>").appendTo(".hea
 $("nav.gi-sitenav--desktop").appendTo("#headermainmenu .container");
 
 
-
-
-
-
+$('#urlcopy').on('click', function () {
+  var dummy = document.createElement('input'), text = window.location.href; 
+  document.body.appendChild(dummy); 
+  dummy.value = text; dummy.select(); 
+  document.execCommand('copy'); 
+  document.body.removeChild(dummy);
+  $(this).find('span').text("Link copied to clipboard"); 
+  setTimeout(function () { 
+    $('#urlcopy span').text("Copy link to this page"); 
+  }, 2000); 
+});
 
 
 }); // end of doc ready
