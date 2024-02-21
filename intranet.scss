@@ -610,3 +610,38 @@ footer.footer {
 }
 
 }
+
+// 2341 stage card padding
+
+.a-panel.a-panel--pt.a-panel--stage .n-stage .n-stage__relarticles .grid--stage-relarticles .grid__cell {
+    padding: 5px;
+}
+
+.a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__innercontent {
+    padding: 10px 20px 20px 20px;
+}
+
+// card__actions INSIDE innercontent
+.a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__innercontent > .card__actions {
+    padding: 0px 0px 0px 10px;
+}
+
+// card__actions OUTSIDE innercontent
+.a-panel.a-panel--pt.a-panel--stage .card--stage .card__content > .card__actions {
+    padding: 0px 20px 20px 20px;
+}
+
+@media (max-width: 576px) {
+    
+    .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content {
+        padding: 0px 10px 10px 10px;
+    }
+    .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__innercontent {
+        padding: 5px 10px 10px 10px;
+    }
+
+    // card__actions OUTSIDE innercontent
+    .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content > .card__actions {
+        padding: 0px 10px 10px 10px;
+    }
+}

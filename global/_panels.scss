@@ -564,6 +564,20 @@ h2.a-panel__title {
   content: none;  
 }
 
+// stage card stacking
+
+@media only screen and (max-width: 1200px) {
+  .n-stage .grid.grid--3col {
+
+    .grid__cell.grid__cell--cols2 {
+      width: 100%;
+    }
+    .grid__cell.grid__cell--cols1 {
+      width: 50%;
+    }
+  }
+}
+
 // Peeky swiper
 
 .a-panel--pt.a-panel--carousel-pt.a-panel--peeky-swiper {
