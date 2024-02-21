@@ -93,16 +93,6 @@ a.gi-sitelogo__link {width: $logo-width;}
         outline: 0 !important;
     }
 
-    .gi-sitenav__link.gi-sitenav__link--lvl1 {
-
-        &:hover, &:focus {color: #000; background: $focus-color;}
-    }
-    .gi-sitenav__link[aria-expanded="true"]{
-        background: $focus-color; 
-    }
-
-
- 
 
     .utilitymenu__item a[href$="Sign-in"]:before, .utilitymenu__item a[href$='login']:before{
         content: "";

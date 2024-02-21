@@ -133,7 +133,14 @@ font-size: 1.125rem
 
 // END #2281 Greedy menu
 
+/* 2538 fix greedy menu colours  */
+.n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
 
+  &:hover, &:focus {color: #000; background: $focus-color;}
+}
+.gi-sitenav__link[aria-expanded="true"]{
+  background: $focus-color; 
+}
 
 // Dropdown menu  sdad
 
@@ -147,8 +154,9 @@ div.gi-sitenav--mainnav-lvl2 {
   z-index: 99 !important; 
 }  
 
+/* set last child colour */
 .gi-sitenav--stage .gi-sitenav__item--lvl1:last-child {
-  background-color: #006666; 
+  background-color: $button-primary-color; 
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
