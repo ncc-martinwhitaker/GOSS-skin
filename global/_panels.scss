@@ -433,6 +433,12 @@ h2.a-panel__title {
 
 // stage
 
+
+.a-panel--no-cta .card__actions, .a-panel--no-cta .card__actions a {
+  display: none; 
+}
+
+
 .a-panel.a-panel--pt.a-panel--stage {
 
   .n-stage .n-stage-alert {
@@ -443,7 +449,7 @@ h2.a-panel__title {
       color: #fff;
     }
 
-    &:hover {
+    &:hover { 
       color: #fff;
       .n-stage-alert__title {
         text-decoration: underline;
@@ -500,6 +506,10 @@ h2.a-panel__title {
     text-align: right;
     padding: 10px;
   }
+
+
+  
+
   .card__actions .cta-link::after {
     content: none;
   }
