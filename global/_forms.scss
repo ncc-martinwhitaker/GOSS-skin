@@ -140,7 +140,7 @@ max-width: none;
 }
 
 // 2303 - fullwidth column for default template
-.body--full-width .container.container--fullwidth main.maincontent
+.body--full-width.template--default .container.container--fullwidth main.maincontent
     {
         width: auto;
     }
