@@ -284,3 +284,8 @@ div.LookupTable tr {
         display: table-row;
     }
 }
+
+#CASEMANAGEMENTCASESUMMARYV1EN_DETAILS_READONLYTEMPLATE[tabindex]:focus {
+    outline: none;
+    background: #FFFFFF;
+}
