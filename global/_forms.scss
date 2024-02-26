@@ -264,3 +264,23 @@ div.LookupTable tr {
     text-decoration: none !important;
     background: #fff;
 }
+
+//** Case management **//
+
+#CASEMANAGEMENTCASESUMMARYV1EN_DETAILS_READONLYTEMPLATE,
+#CASEMANAGEMENTCASESTATUSV1EN_VIEWFORM_HTMLREADONLYTEMPLATE {
+
+    .icmformdatapagetable tr {
+        display: table-row;
+    }
+    .icmformdatapagetable td {
+        padding-left: 10px;
+        width: 50%;
+    }
+}
+
+#CASEMANAGEMENTCASESTATUSV1EN_VIEWFORM_HTMLCASEHISTORY {
+    .icmformdatapagetable tr {
+        display: table-row;
+    }
+}
