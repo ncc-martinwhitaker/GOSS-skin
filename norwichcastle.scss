@@ -28,7 +28,7 @@ $footer-border-color: #42145F;
 }
 
 .header {
-    padding: 20px 0px 0px 0px;
+    padding: 0px;
 }
 
 nav.gi-sitenav.gi-sitenav--desktop {
@@ -37,6 +37,7 @@ nav.gi-sitenav.gi-sitenav--desktop {
 
 .gi-sitelogo--header {
     display: flex;
+    align-items: center;
     padding: 15px 0px;
 }
   
@@ -85,7 +86,8 @@ nav.gi-sitenav.gi-sitenav--desktop {
 }
 
 .utilitymenu--top { 
-    margin-left: auto;padding-top: 15px; padding-bottom: 0px;
+    margin-left: auto;
+    padding-bottom: 0px;
 }
 
 
