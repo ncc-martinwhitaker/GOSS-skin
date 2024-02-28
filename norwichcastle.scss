@@ -47,7 +47,7 @@ nav.gi-sitenav.gi-sitenav--desktop {
     padding: 24px 12px;
     padding-right: 20px; 
     margin: 0px;
-    color: #000;
+    color: $header-color;
 }
 .gi-sitenav__link[aria-haspopup="true"]::after {
     padding-top: 3px;
@@ -200,37 +200,51 @@ nav.gi-sitenav.gi-sitenav--desktop {
     }
 }
 
+.gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+    display: none;
+}
+
+// overwriting default
+@media (max-width: 1050px) {
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: none;
+    }
+}
+
 
 @media (max-width: 900px) {
   
-  #headermainmenu, .utilitymenu--top {
-      display: none;
-  }
-  
-  .gi-mobilenav--mobilemenu { 
-      top: 65px !important;
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: block;
+    }
+
+    #headermainmenu, .utilitymenu--top {
+        display: none;
+    }
     
-  }
-  
-  .gi-sitelogo, .gi-sitelogo__link {
-     
-      width: 100px;
-  }
-  
-  .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-      width: calc(100% - 168px);
-      float: left;
-  }
-  .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
-     content: "\e800";
-  }
-  .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
-      width: 40px;
-  }
-  .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
-      width: calc(100% - 40px);
-  }
-   
+    .gi-mobilenav--mobilemenu { 
+        top: 65px !important;
+        
+    }
+    
+    .gi-sitelogo, .gi-sitelogo__link {
+        
+        width: 100px;
+    }
+    
+    .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+        width: calc(100% - 168px);
+        float: left;
+    }
+    .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+        content: "\e800";
+    }
+    .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+        width: 40px;
+    }
+    .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
+        width: calc(100% - 40px);
+    }
 }
   
   
