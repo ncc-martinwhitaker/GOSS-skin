@@ -20,7 +20,7 @@ nav.gi-sitenav.gi-sitenav--desktop {
 .gi-sitenav__link.gi-sitenav__link--lvl1 {
     text-align: center;
     font-size: 1rem;
-    padding: 24px 12px;
+    padding: 12px 12px;
     padding-right: 20px; 
     margin: 0px;
     color: $header-color;
@@ -53,12 +53,31 @@ nav.gi-sitenav.gi-sitenav--desktop {
     margin-left: 20px;
 }
 
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
+    opacity: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: none;
+
+    &:after {
+        text-decoration: underline;
+    }
+}
+
+
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
-    background: $focus-color;
+    opacity: 100%;
+    box-shadow: none;
+    background-color: $focus-color !important;
     color: #000 !important;
 }
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus:after {
     color: #000;
+    text-decoration: underline;
 }
 
 .utilitymenu--top { 
