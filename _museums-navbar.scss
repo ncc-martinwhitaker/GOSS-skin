@@ -15,12 +15,13 @@ nav.gi-sitenav.gi-sitenav--desktop {
     display: flex;
     align-items: center;
     padding: 15px 0px;
+    justify-content: space-between;
 }
   
 .gi-sitenav__link.gi-sitenav__link--lvl1 {
     text-align: center;
     font-size: 1rem;
-    padding: 12px 12px;
+    padding: 12px 18px;
     padding-right: 20px; 
     margin: 0px;
     color: $header-color;
@@ -39,7 +40,7 @@ nav.gi-sitenav.gi-sitenav--desktop {
 .gi-sitenav__list.gi-sitenav__list--lvl1 {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .gi-sitenav__item.gi-sitenav__item--lvl1:first-child {
@@ -186,12 +187,12 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     }
 
     .gi-sitenav__link.gi-sitenav__link--lvl1 {
-        padding: 12px 12px;
+        padding: 12px 18px;
     }
 
 
     .gi-sitenav__list.gi-sitenav__list--lvl1 {
-        justify-content: space-around;
+        justify-content: center;
     }
 }
 
@@ -208,6 +209,10 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 
 
 @media (max-width: 900px) {
+
+    .gi-sitelogo--header {
+        justify-content: flex-start;
+    }
   
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
