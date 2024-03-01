@@ -322,6 +322,10 @@ footer.footer {
 
 }
 
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+    color: #000;
+}
+
 
 @media (min-width: 820px) {
 

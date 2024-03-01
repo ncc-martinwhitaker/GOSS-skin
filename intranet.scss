@@ -563,6 +563,11 @@ footer.footer {
 
 }
 
+
+
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+    color: #000;
+}
  
 @media (max-width: 1050px)
 {
@@ -588,9 +593,15 @@ footer.footer {
     width: calc(100% - 168px);
     float: left;
 }
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
    content: "\e800";
+   color: #000;
 }
+.gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+    content: "\e800";
+    color: #fff;
+ }
+
 .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
     width: 40px;
 }
