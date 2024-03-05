@@ -1,0 +1,74 @@
+.template--eventsearch {
+  .maincolumn > .container.container--fullwidth {
+    max-width: none;
+  }
+  .maincolumn #maincontent {
+    width: 100%;
+  }
+  .maincolumn #maincontent > .container {
+    max-width: none;
+    padding: 0px;
+  }
+
+  .a-heading.a-heading--eventsearch {
+    max-width: 1170px;
+    margin: auto;
+  }
+}
+
+.event-search {
+
+  .event-search__label {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .event-search__options {
+    border: none;
+    padding: 40px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    float: none;
+    background: linear-gradient(to right, rgba(0, 35, 93, 0.8), rgba(0, 35, 93, 0.8)), url('https://www.museums.norfolk.gov.uk/-/media/museums/images/events/stage-img-1.jpg');
+    // background: ('https://www.museums.norfolk.gov.uk/-/media/museums/images/events/stage-img-1.jpgblue');
+
+    form#eventsearch {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .event-search__selections .event-search__option {
+      background-color: transparent;
+      border: none;
+
+      .event-search__dropdown {
+        border-radius: 10px;
+      }
+    }
+
+    .event-search__option--keywords {
+      background: transparent;
+
+      .event-search__submitwrap {
+        padding: 0px;
+      }
+
+      .event-search__submit--keywords {
+        background-color: $teal;
+        border-radius: 5px;
+      }
+
+      .event-search__field--text, .searchform__inputtxt--event-search {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.event-search .grid__cell--searchresults {
+  max-width: 1170px;
+  margin: auto;
+  float: none;
+}
