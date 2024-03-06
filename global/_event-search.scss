@@ -71,4 +71,47 @@
   max-width: 1170px;
   margin: auto;
   float: none;
+
+  .grid__cellwrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.event-search__details {
+  margin-left: 20px;
+}
+
+.event-results {
+  display: flex;
+  justify-content: stretch;
+
+  .event-results__item {
+    width: 100%;
+    float: none;
+
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    .event-results__imagecontainer {
+      order: 0;
+
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      overflow: hidden;
+      padding: 0px;
+      width: 100%;
+
+      img.event-related__image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .event-results__info {
+      order: 1;
+    }
+  }
 }
