@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: column;
     margin: 20px;
+    padding: 0px 0px 20px 0px;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     position: relative;
@@ -115,11 +116,41 @@
 
     .event-results__info {
       order: 1;
-      padding: 20px;
+      padding: 0px 20px 20px 20px;
       width: 100%;
     }
     .event-instances {
       padding: 20px;
+      margin: 0px;
+
+      .event-instances__heading {
+        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions {
+          display: none;
+        }
+      }
+
+      .event-instances__item {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .event-instances__value.event-instances__value--date {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 10px;
+        
+        a {
+          color: #767676;
+        }
+      }
+      .event-instances__value.event-instances__value--location {
+        width: 100%;
+        padding: 0px;
+      }
+      .event-instances__value.event-instances__value--actions {
+        display: none;
+      }
     }
 
     .event-results__link--title {
@@ -160,6 +191,10 @@
 
     .event-results__item {
       margin: 0px;
+
+      .event-instances__value.event-instances__value--date a {
+        color: #767676;
+      }
     }
   }
 }
