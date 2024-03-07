@@ -125,7 +125,9 @@ box-shadow: 0px 0px 0px 6px #000;
 .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
   max-width: 750px;
 }
-.maincontent .a-panel--fullwidth .a-heading, .maincontent .a-panel--fullwidth .a-intro, .maincontent .a-panel--fullwidth .a-body {
+
+// 2303 - removed this code to fix the issue on panel template | , .maincontent .a-panel--fullwidth .a-body 
+.maincontent .a-panel--fullwidth .a-heading, .maincontent .a-panel--fullwidth .a-intro {
   max-width: none;
 }
 
