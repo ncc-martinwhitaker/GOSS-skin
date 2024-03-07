@@ -52,6 +52,16 @@
     max-width: 120px;
 }
 
+.card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
+    max-width: 120px;
+}
+
+.card--searchresult .gi-responsiveimage {
+    width: fit-content;
+    background-color: transparent;
+    height: auto;
+}
+
 /* category pill styling */
 .blog-details .nvp--blog-categories .nvp__value {
     background: #f2f2f2;
