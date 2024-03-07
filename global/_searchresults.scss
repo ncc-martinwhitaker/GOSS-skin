@@ -5,3 +5,57 @@
 .searchoptions {
     margin-bottom: 16px;
 }
+
+/* 2656 - Blog or News page results formatting */
+
+.blog-details .a-details .nvp--blog-author .nvp__label, .blog-details .a-details .nvp--blog-categories .nvp__label  {
+    display: none;
+}
+    
+.blog-details .a-details .nvp--blog-date .nvp__label {
+    width: auto;
+}
+    
+.blog-details  .a-details .nvp--blog-date .nvp__value {
+    padding-right: 5px;
+}
+
+.blog-details .a-details .nvp--blog-categories .nvp__value {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 3px;
+}
+.blog-details .a-details .nvp--blog-date .nvp__value  {
+    padding-left: 5px;
+}
+
+.blog-details .card__imagecontainer {
+    width: fit-content;
+    background-color: transparent;
+    height: auto;
+}
+
+.blog-details .nvp--blog-categories .nvp__value+.nvp__value:before {
+    all: unset;
+}
+
+/* metadata modifier - remove first category - currently unused
+.body--search-date-hide .blog-details .nvp--blog-categories > a:first-of-type {
+  display: none; 
+}*/
+
+.body--search-date-hide .blog-details .nvp--blog-categories {
+    display: none;
+}
+
+.blog-details .card__imagecontainer .card__image {
+    max-width: 120px;
+}
+
+/* category pill styling */
+.blog-details .nvp--blog-categories .nvp__value {
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: inline-block;
+} 
