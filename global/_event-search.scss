@@ -109,12 +109,14 @@
       img.event-related__image {
         width: 100%;
         height: auto;
+        @include ani;
       }
     }
 
     .event-results__info {
       order: 1;
       padding: 20px;
+      width: 100%;
     }
     .event-instances {
       padding: 20px;
@@ -140,6 +142,12 @@
       &:hover {
         color: #050505;
         text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      .event-results__imagecontainer img.event-related__image {
+        transform: scale(1.1);
       }
     }
   }
