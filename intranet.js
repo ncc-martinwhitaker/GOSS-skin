@@ -1,20 +1,4 @@
-
-
-
-
 $(document).ready(function() {
-
-console.log('test');
-
-//$(".breadcrumb__nav").insertAfter(".header--nosticky");
-
-$("form.gi-sitesearch--top").insertAfter("a.gi-sitelogo__link");
-$("ol.utilitymenu.utilitymenu--top").appendTo(".gi-sitelogo--header");
-
-
-$("<div id='headermainmenu'><div class='container'></div></div>").appendTo(".header.header--nosticky"); 
-$("nav.gi-sitenav--desktop").appendTo("#headermainmenu .container");
-
 
 $('#urlcopy').on('click', function () {
   var dummy = document.createElement('input'), text = window.location.href; 
@@ -28,28 +12,16 @@ $('#urlcopy').on('click', function () {
   }, 2000); 
 });
 
+//*** News page - add older than three months text ***//
+var ThreeMonths = new Date();
+ThreeMonths.setMonth(ThreeMonths.getMonth() - 3);
+
+if (new Date($('.nvp--blog-created .nvp__date').text()) < ThreeMonths) {
+  //console.log("Older than three months");
+  $(".nvp--blog-created .nvp__time").after("<span class='over-three-months'>This news story is over 3 months old</span>");
+}
+/*else {
+  console.log("Not older than three months");
+}*/
 
 }); // end of doc ready
-
-
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Hello World!");
-
-    var elementToMove = document.querySelector('ol.utilitymenu ');
-    var elementToMove2 = document.querySelector('form.gi-sitesearch--top');
-    
-    var newParentElement = document.querySelector('.gi-sitelogo--header');
-    
-    console.log(newParentElement);
-    console.log(elementToMove);
-    console.log(elementToMove2);
-
-    newParentElement.appendChild(elementToMove);
-    newParentElement.appendChild(elementToMove2);
-
-
-
-  });
-  */
