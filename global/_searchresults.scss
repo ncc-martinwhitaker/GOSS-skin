@@ -32,15 +32,24 @@
 .blog-details .card__imagecontainer {
     width: fit-content;
     background-color: transparent;
+    height: auto;
 }
 
 .blog-details .nvp--blog-categories .nvp__value+.nvp__value:before {
     all: unset;
 }
 
-/* metadata modifier */
+/* metadata modifier - remove first category - currently unused
 .body--search-date-hide .blog-details .nvp--blog-categories > a:first-of-type {
   display: none; 
+}*/
+
+.body--search-date-hide .blog-details .nvp--blog-categories {
+    display: none;
+}
+
+.blog-details .card__imagecontainer .card__image {
+    max-width: 120px;
 }
 
 /* category pill styling */
