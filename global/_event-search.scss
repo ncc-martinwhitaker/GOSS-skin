@@ -51,17 +51,40 @@
     .event-search__option--keywords {
       background: transparent;
 
+      .event-search__keywords {
+        display: flex;
+      }
+
+      .event-search__input--keywords {
+        height: 100%;
+        width: 80%
+      }
+
       .event-search__submitwrap {
         padding: 0px;
+        width: 20%;
+        height: auto;
       }
 
-      .event-search__submit--keywords {
+      input.event-search__submit--keywords {
         background-color: $teal;
-        border-radius: 5px;
+        border-radius: 0px 8px 8px 0px;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          box-shadow: none;
+          background-color: $focus-color;
+          outline-color: #050505;
+          outline-offset: -3px;
+        }
       }
 
-      .event-search__field--text, .searchform__inputtxt--event-search {
-        border-radius: 5px;
+      input.searchform__inputtxt--event-search {
+        border-radius: 8px 0px 0px 5px;
       }
     }
   }
