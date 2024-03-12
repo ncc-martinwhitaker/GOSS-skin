@@ -46,14 +46,6 @@ a.gi-sitelogo__link {width: $logo-width;}
 }
 
 
-@media (max-width: 1050px) {
-
-    .header__menu {
-        width: 100%;
-    }
-}
-
-
 div.gi-sitenav--mainnav-lvl2 {
     position: absolute;
     width: 1170px;
@@ -91,4 +83,53 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     font-weight: 600;
 
     &:hover, &:focus {background: $focus-color;}
+}
+
+.gi-sitenav__item--lvl1, .gi-sitenav__list--lvl1, .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch, .header__menu {
+    position: static;
+}
+
+.gi-mobilenav--mobilemenu {
+    background: #f2f2f2;
+}
+
+.sitemenu__btn--haschildren {display: none;}
+
+.sitemenu__link {
+    color: #000;
+    text-decoration: none;
+    display: none;
+}
+
+.sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {display: none;}
+
+
+.sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+
+.sitemenu--mobile .submenu {
+    display: block !important;
+} 
+
+.submenu__link, .submenu__text {  
+    color: #000;
+    padding: 10px 5px;
+    display: block;
+    font-weight: 600;
+    &:hover {color: #000; background: $focus-color;}
+}
+
+@media (max-width: 1170px) {
+
+    div.gi-sitenav--mainnav-lvl2 {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .header__menu {
+        width: 100%;
+    }
 }
