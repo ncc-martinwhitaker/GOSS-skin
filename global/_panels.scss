@@ -1648,3 +1648,9 @@ h4.stage-link__title  {
   margin: 0 auto;
 }
 } 
+
+.a-panel--pt.a-panel--centred-content, .a-panel--pt.a-panel--centred-content.a-panel--hasbackground {
+  .a-panel__content {
+    text-align: center;
+  }
+}
