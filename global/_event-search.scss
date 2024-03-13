@@ -1,0 +1,245 @@
+.template--eventsearch {
+  .maincolumn > .container.container--fullwidth {
+    max-width: none;
+  }
+  .maincolumn #maincontent {
+    width: 100%;
+  }
+  .maincolumn #maincontent > .container {
+    max-width: none;
+    padding: 0px;
+  }
+
+  .a-heading.a-heading--eventsearch {
+    position: absolute;
+    width: 100%;  
+    max-width: none;
+    margin: auto;
+
+    h1.a-heading__title {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+.event-search {
+
+  .event-search__label {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .event-search__options {
+    border: none;
+    padding: 40px 0px;
+    padding-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: none;
+    float: none;
+    background: linear-gradient(to right, rgba(0, 35, 93, 0.8), rgba(0, 35, 93, 0.8)), url('https://www.museums.norfolk.gov.uk/-/media/museums/images/events/stage-img-1.jpg');
+    // background: ('https://www.museums.norfolk.gov.uk/-/media/museums/images/events/stage-img-1.jpgblue');
+
+    form#eventsearch {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .event-search__selections .event-search__option {
+      background-color: transparent;
+      border: none;
+
+      .event-search__dropdown {
+        border-radius: 10px;
+      }
+    }
+
+    .event-search__option--keywords {
+      background: transparent;
+
+      .event-search__keywords {
+        display: flex;
+      }
+
+      .event-search__input--keywords {
+        height: 100%;
+        width: 80%
+      }
+
+      .event-search__submitwrap {
+        padding: 0px;
+        width: 20%;
+        height: auto;
+      }
+
+      input.event-search__submit--keywords {
+        background-color: $teal;
+        border-radius: 0px 8px 8px 0px;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          box-shadow: none;
+          background-color: $focus-color;
+          outline-color: #050505;
+          outline-offset: -3px;
+        }
+      }
+
+      input.searchform__inputtxt--event-search {
+        border-radius: 8px 0px 0px 5px;
+      }
+    }
+  }
+}
+
+.event-search .grid__cell--searchresults {
+  max-width: 1170px;
+  margin: auto;
+  float: none;
+
+  .grid__cellwrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.event-search__details {
+  margin-left: 20px;
+}
+
+.event-results {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+
+  .event-results__item {
+    width: calc(25% - 40px);
+    float: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 0px 0px 20px 0px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+
+    .event-results__imagecontainer {
+      order: 0;
+
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      overflow: hidden;
+      padding: 0px;
+      width: 100%;
+      border-radius: 8px 8px 0px 0px;
+
+      img.event-related__image {
+        width: 100%;
+        height: auto;
+        @include ani;
+      }
+    }
+
+    .event-results__info {
+      order: 1;
+      padding: 0px 20px 20px 20px;
+      width: 100%;
+    }
+    .event-instances {
+      padding: 20px;
+      margin: 0px;
+
+      .event-instances__heading {
+        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions {
+          display: none;
+        }
+      }
+
+      .event-instances__item {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .event-instances__value.event-instances__value--date {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 10px;
+        
+        a {
+          color: #767676;
+        }
+      }
+      .event-instances__value.event-instances__value--location {
+        width: 100%;
+        padding: 0px;
+      }
+      .event-instances__value.event-instances__value--actions {
+        display: none;
+      }
+    }
+
+    .event-results__link--title {
+      font-size: 1.75rem;
+      font-weight: 700;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        content: "";
+      }
+    }
+
+    .event-results__link, .event-instances__link {
+      color: #050505;
+      &:hover {
+        color: #050505;
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      .event-results__imagecontainer img.event-related__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .event-results .event-results__item {
+    width: calc(33.33% - 40px);
+  }
+
+  .event-results__imagecontainer {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .event-results {
+    flex-direction: column;
+    padding: 20px;
+
+    .event-results__item {
+      margin: 0px 0px 20px 0px;
+      width: 100%;
+
+      .event-instances__value.event-instances__value--date a {
+        color: #767676;
+      }
+    }
+  }
+}
