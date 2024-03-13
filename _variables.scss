@@ -67,6 +67,9 @@ $focus-color: #ffdd00;
 
 // buttons
 $button-panel-color: #066;
+$button-dark-panel-color: $button-panel-color;
+$button-dark-panel-text-color: #FFFFFF;
+
 $button-primary-text-color: #fff;
 $button-primary-color: #00823b;
 $button-primary-color-hov: darken( $button-primary-color, 20% );
