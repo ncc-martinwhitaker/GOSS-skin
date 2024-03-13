@@ -56,8 +56,8 @@ div.gi-sitenav--mainnav-lvl2 {
 }
 
 ul.gi-sitenav__list.gi-sitenav__list--lvl2 {
-    background-color: #fff;
-    color: #050505;
+    background-color: #033351;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
@@ -77,12 +77,21 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     padding: 0px 0;
 }
 .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
-    color: #050505;
+    color: #fff;
     padding: 15px 15px;
     text-align: left;
     font-weight: 600;
 
-    &:hover, &:focus {background: $focus-color;}
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+    
+    &:focus {
+        color: #050505;
+        text-decoration: underline;
+        background: $focus-color;
+    }
 }
 
 .gi-sitenav__item--lvl1, .gi-sitenav__list--lvl1, .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch, .header__menu {
@@ -90,7 +99,7 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
 }
 
 .gi-mobilenav--mobilemenu {
-    background: #f2f2f2;
+    background: #033351;
 }
 
 .sitemenu__btn--haschildren {display: none;}
@@ -110,14 +119,15 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
 
 .sitemenu--mobile .submenu {
     display: block !important;
+    background: #033351;
 } 
 
 .submenu__link, .submenu__text {  
-    color: #000;
+    color: #fff;
     padding: 10px 5px;
     display: block;
     font-weight: 600;
-    &:hover {color: #000; background: $focus-color;}
+    &:hover {color: #fff;}
 }
 
 @media (max-width: 1170px) {
