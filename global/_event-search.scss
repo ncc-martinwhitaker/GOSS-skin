@@ -108,9 +108,10 @@
 .event-results {
   display: flex;
   justify-content: stretch;
+  flex-wrap: wrap;
 
   .event-results__item {
-    width: 100%;
+    width: calc(25% - 40px);
     float: none;
     display: flex;
     flex-direction: column;
@@ -208,6 +209,11 @@
 }
 
 @media only screen and (max-width: 1000px) {
+
+  .event-results .event-results__item {
+    width: calc(33.33% - 40px);
+  }
+
   .event-results__imagecontainer {
     margin: 0px;
   }
@@ -220,6 +226,7 @@
 
     .event-results__item {
       margin: 0px 0px 20px 0px;
+      width: 100%;
 
       .event-instances__value.event-instances__value--date a {
         color: #767676;
