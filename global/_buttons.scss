@@ -124,3 +124,10 @@
     background-color: $button-panel-color;
 }
 
+.a-panel--opaque-cards-dark, .a-panel--backdrop-black {
+    .a-panel__link {
+        background-color: $button-dark-panel-color;
+        color: $button-dark-panel-text-color !important;
+    }
+}
+

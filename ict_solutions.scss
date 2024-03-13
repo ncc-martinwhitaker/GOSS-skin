@@ -5,6 +5,7 @@ $header-color: #fff;
 $header-text-color: #050505;
 
 $button-panel-color:#be4600;
+$button-dark-panel-color: $button-panel-color;
 
 $button-primary-color: #be4600;
 $button-primary-color-hov: darken($button-primary-color, 20%) !default;
