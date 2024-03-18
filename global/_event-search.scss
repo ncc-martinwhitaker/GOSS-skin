@@ -157,12 +157,16 @@
       margin: 0px;
 
       .event-instances__heading {
-        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions {
+        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions, .event-instances__title.event-instances__title--price {
           display: none;
         }
       }
 
       .event-instances__item {
+        background-color: transparent;
+        display: none;
+      }
+      .event-instances__item:first-of-type {
         background-color: transparent;
         display: flex;
         flex-direction: column;
@@ -171,8 +175,7 @@
       .event-instances__value.event-instances__value--date {
         width: 100%;
         padding: 0px;
-        margin-bottom: 10px;
-        
+               
         a {
           color: #767676;
         }
@@ -182,6 +185,13 @@
         padding: 0px;
       }
       .event-instances__value.event-instances__value--actions {
+        display: none;
+      }
+      .event-instances__value.event-instances__value--price {
+        padding: 0px;
+        color: #767676;
+      }
+      .event-instances__viewall {
         display: none;
       }
     }
