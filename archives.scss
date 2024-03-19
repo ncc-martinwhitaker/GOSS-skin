@@ -18,15 +18,14 @@ $search-border-color: #FFFFFF;
 @import 
 "global-import";
 
-$logo-width: 155px;
-
-a.gi-sitelogo__link {width: $logo-width;}
-.gi-sitelogo--header {width: $logo-width;}
+// a.gi-sitelogo__link {width: $logo-width;}
+// .gi-sitelogo--header {width: $logo-width;}
 
 .header__menu {
     display: flex;
     align-items: center;    
-    width: calc(100% - $logo-width);
+    width: calc(100% - 250px);
+    height: 74px;
 }
 
 
