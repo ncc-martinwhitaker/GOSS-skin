@@ -220,6 +220,14 @@
       }
     }
 
+    .event-results__intro {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
     &:hover {
       .event-results__imagecontainer img.event-related__image {
         transform: scale(1.1);
