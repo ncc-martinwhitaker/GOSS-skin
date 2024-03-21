@@ -1078,6 +1078,11 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   }
 }
 
+// 5-col-panel
+.a-panel--5-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  width: 20%;
+}
+
 // 4-col-panel
 
 .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
@@ -1125,6 +1130,9 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
   .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 50%;
   }
+  .a-panel--5-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+       width: 50%; 
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -1132,6 +1140,9 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
     width: 100%;
   }
   .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+    width: 100%;
+  }
+  .a-panel--5-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 100%;
   }
 }
@@ -1727,3 +1738,350 @@ h4.stage-link__title  {
     flex-direction: row-reverse;
   } 
 }
+
+
+//New CSS 
+
+.a-panel--our-museums {
+  &.a-panel--pt.a-panel--parallax {
+  
+    .fa-block__details {
+      &:has(a[href$="Norwich-Castle-Museum--Art-Gallery"]) {
+        background-color: #42145F;
+      }
+      &:has(a[href$="Gressenhall-Farm-and-Workhouse"]) {
+        background-color: #597730;
+      }
+      &:has(a[href$="Time-and-Tide-Great-Yarmouth"]) {
+        background-color: #161E69;
+      }
+      &:has(a[href$="Museum-of-Norwich"]) {
+        background-color: #CB4363;
+      }
+      &:has(a[href$="Elizabethan-House-Great-Yarmouth"]) {
+        background-color: #CF171D;
+      }
+      &:has(a[href$="Strangers-Hall-Norwich"]) {
+        background-color: #B32017;
+      }
+      &:has(a[href$="Lynn-Museum"]) {
+        background-color: #80623C;
+      }
+      &:has(a[href$="Cromer-Museum"]) {
+        background-color: #0070A5;
+      }
+      &:has(a[href$="Tolhouse-Gaol-Great-Yarmouth"]) {
+        background-color: #7E6B71;
+      }
+      &:has(a[href$="Ancient-House-Thetford"]) {
+        background-color: #4C7285;
+      }
+    }
+
+    .grid__cell .fa-block .fa-block__imagecontainer+.fa-block__details, .fa-block .fa-block__details {
+      padding: 10px;
+      min-height: 90px;
+    }
+
+    .a-panel__content .grid--feature .grid__cellwrap
+    {
+      padding: 0px;
+    }
+
+    .fa-block {
+      margin: 0px;
+    }
+
+    .fa-block .fa-block__content {
+      position: relative;
+      outline: 1px solid #FFFFFF;
+
+      * {
+        background-color: transparent;
+        color: #FFFFFF;
+      }
+
+      .fa-block__title {
+        padding: 0px;
+      }
+
+      .fa-block__title a {
+        color: #FFFFFF;
+        border-bottom: none;
+        //font-weight: 500;
+      }
+
+      .fa-block__body {
+        display: none;
+      }
+
+      .fa-block__link:before {
+        bottom: 0;
+        content: "";
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        white-space: nowrap;
+        z-index: 1;
+      }
+
+      &:focus-within, &:hover {
+        .fa-block__details {
+          position: absolute;
+          bottom: 0;
+          height: 100%;
+          @include ani;
+        }
+
+        .fa-block__body {
+          display: block;
+          @include ani;
+        }
+      }
+
+    }
+    
+    @media only screen and (max-width: 1105px) {
+      .grid__cell:nth-child(-n+5) .fa-block .fa-block__imagecontainer+.fa-block__details {//:nth-child(2) {//, .fa-block .fa-block__details:nth-child(2) {
+        min-height: 120px;
+      }
+    }
+
+  }
+
+
+  @media only screen and (max-width: 970px) {
+
+    &.a-panel--5-col-panel.a-panel.a-panel--parallax {
+      .grid.grid--parallax.grid--2col>.grid__cell {
+         width: 100%; 
+      }
+      .grid.grid--parallax .fa-block .fa-block__content {
+        flex-direction: row;
+      }
+  
+      .fa-block {
+        margin: 0px;
+      }
+
+      .grid__cell .fa-block .fa-block__imagecontainer+.fa-block__details, .fa-block .fa-block__details {
+        min-height: 71px;
+      }
+
+      &.a-panel--pt .fa-block .fa-block__imagecontainer {
+        width: 20%;
+      }
+
+      .fa-block .fa-block__content:focus-within, .fa-block .fa-block__content:hover {
+        .fa-block__details {
+          position: relative;
+        }
+        .fa-block__body {
+          display: none;
+        }
+      }
+
+     /* &.a-panel--pt .fa-block .fa-block__imagecontainer+.fa-block__details, &.a-panel--pt .fa-block .fa-block__details {
+        position: relative;
+        height: auto;
+        min-height: 71px;
+      }
+
+      &.a-panel--pt .fa-block .fa-block__imagecontainer {
+        width: 20%;
+        height: auto;
+        min-height: 71px;
+      }
+
+      .gi-responsiveimage__image {
+        object-fit: cover;
+      }
+
+      .fa-block {
+        margin: 0px;
+        outline: 1px solid #FFFFFF;
+        //border: 1px solid #FFFFFF;
+      }
+
+*/
+          //&.a-panel--pt.a-panel--parallax .a-panel__content, .container {
+      //padding: unset;
+    //}
+    }
+  }
+
+}
+
+
+
+
+
+//Original CSS below
+
+//Our Museums
+/*.a-panel--our-museums {
+
+//TODO - create new a-panel--5-col-panel with the following:
+    //.a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell { width: 20%;}
+
+  //&.a-panel--pt.a-panel--parallax .a-panel__content, 
+  &.a-panel--pt.a-panel--parallax .a-panel__content .grid--feature .grid__cellwrap
+  //, .container 
+  {
+    padding: 0px;
+  }
+
+  //&.a-panel--pt.a-panel--parallax .fa-block__details:has(a[href$="Norwich-Castle-Museum--Art-Gallery"]) {
+    //background-color: #42145F;
+  //}
+
+  &.a-panel--pt.a-panel--parallax .fa-block__details {
+    &:has(a[href$="Norwich-Castle-Museum--Art-Gallery"]) {
+      background-color: #42145F;
+    }
+    &:has(a[href$="Gressenhall-Farm-and-Workhouse"]) {
+      background-color: #597730;
+    }
+    &:has(a[href$="Time-and-Tide-Great-Yarmouth"]) {
+      background-color: #161E69;
+    }
+    &:has(a[href$="Museum-of-Norwich"]) {
+      background-color: #CB4363;
+    }
+    &:has(a[href$="Elizabethan-House-Great-Yarmouth"]) {
+      background-color: #CF171D;
+    }
+    &:has(a[href$="Strangers-Hall-Norwich"]) {
+      background-color: #B32017;
+    }
+    &:has(a[href$="Lynn-Museum"]) {
+      background-color: #80623C;
+    }
+    &:has(a[href$="Cromer-Museum"]) {
+      background-color: #0070A5;
+    }
+    &:has(a[href$="Tolhouse-Gaol-Great-Yarmouth"]) {
+      background-color: #7E6B71;
+    }
+    &:has(a[href$="Ancient-House-Thetford"]) {
+      background-color: #4C7285;
+    }
+  }
+
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
+    background-color: transparent;
+    color: #FFFFFF;
+  }
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
+    height: 240px;
+    max-height: none;
+  }
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+    color: #FFFFFF;
+  }
+
+  div.fa-block__body {
+    display: none;
+  }
+
+  h3.fa-block__title:hover + div.fa-block__body {
+    display: block;
+  }
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__details:has(h3.fa-block__title:hover) {
+      height: auto;
+  }
+
+  //&.a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+  //  position: relative;
+  //}
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer+.fa-block__details, &.a-panel--pt.a-panel--parallax .fa-block .fa-block__details {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    height: 90px;
+  }
+
+  .gi-responsiveimage__image {
+    object-fit: contain;
+    object-position: top;
+  }
+
+  .fa-block__content {
+    position: relative;
+    outline: 1px solid #FFFFFF;
+  }
+
+  &.a-panel--pt .fa-block__title {
+    padding: 0px;
+  }
+
+  .fa-block__link:before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  &.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+    border-bottom: none;
+  }
+
+  @media only screen and (max-width: 970px) {
+
+
+
+    &.a-panel--5-col-panel.a-panel.a-panel--parallax {
+      .grid.grid--parallax.grid--2col>.grid__cell {
+         width: 100%; 
+      }
+      .grid.grid--parallax .fa-block .fa-block__content {
+        flex-direction: row;
+        //min-height: 71px;
+        //height: auto;
+      }
+  
+      &.a-panel--pt .fa-block .fa-block__imagecontainer+.fa-block__details, &.a-panel--pt .fa-block .fa-block__details {
+        position: relative;
+        height: auto;
+        min-height: 71px;
+      }
+
+      &.a-panel--pt .fa-block .fa-block__imagecontainer {
+        width: 20%;
+        height: auto;
+        min-height: 71px;
+      }
+
+      .gi-responsiveimage__image {
+        object-fit: cover;
+      }
+
+      .fa-block {
+        margin: 0px;
+        outline: 1px solid #FFFFFF;
+        //border: 1px solid #FFFFFF;
+      }
+
+
+          //&.a-panel--pt.a-panel--parallax .a-panel__content, .container {
+      //padding: unset;
+    //}
+    }
+  }
+
+
+
+}
+*/
