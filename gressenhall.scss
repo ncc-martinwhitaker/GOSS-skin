@@ -8,9 +8,13 @@ $header-utilitymenu-color: #597730;
 $burger-menu-color: #fff;
 
 $breadcrumb-color: #f6f6f6;
-$breadcrumb-text-color: #215bbb;
+$breadcrumb-text-color: #597730;
 $breadcrumb-border-color: #f6f6f6;
-$breadcrumb-chevron: $breadcrumb-chevron-blue;
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='%23597730'/%3E%3C/g%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+
+$breadcrumb-chevron: url($string2);
 
 $button-search-background-color: #597730;
 $search-border-color: #FFFFFF;
