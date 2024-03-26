@@ -120,7 +120,7 @@
   flex-wrap: wrap;
 
   .event-results__item {
-    width: calc(25% - 40px);
+    width: calc(33% - 40px);
     float: none;
     display: flex;
     flex-direction: column;
@@ -134,7 +134,6 @@
       order: 0;
 
       aspect-ratio: 16/9;
-      object-fit: contain;
       overflow: hidden;
       padding: 0px;
       width: 100%;
@@ -142,7 +141,8 @@
 
       img.event-related__image {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         @include ani;
       }
     }
@@ -155,24 +155,27 @@
     .event-instances {
       padding: 20px;
       margin: 0px;
+      min-height: 110px;
 
       .event-instances__heading {
-        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions {
+        .event-instances__title.event-instances__title--date, .event-instances__title.event-instances__title--location, .event-instances__title.event-instances__title--actions, .event-instances__title.event-instances__title--price {
           display: none;
         }
       }
 
-      .event-instances__item {
+      > .event-instances__item {
         background-color: transparent;
         display: flex;
         flex-direction: column;
+      }
+      > .event-instances__item ~ .event-instances__item {
+        display: none;
       }
 
       .event-instances__value.event-instances__value--date {
         width: 100%;
         padding: 0px;
-        margin-bottom: 10px;
-        
+               
         a {
           color: #767676;
         }
@@ -182,6 +185,14 @@
         padding: 0px;
       }
       .event-instances__value.event-instances__value--actions {
+        display: none;
+      }
+      .event-instances__value.event-instances__value--price {
+        padding: 0px;
+        color: #767676;
+        width: 100%
+      }
+      .event-instances__viewall {
         display: none;
       }
     }
@@ -207,6 +218,14 @@
         color: #050505;
         text-decoration: underline;
       }
+    }
+
+    .event-results__intro {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &:hover {

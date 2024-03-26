@@ -1051,7 +1051,7 @@ figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimag
 }
 
 .a-panel--pt.a-panel--list .item__imagecontainer {
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 0px;
  /* Four values */
 /* top-left top-right bottom-right bottom-left */
 }
@@ -1830,12 +1830,12 @@ h4.stage-link__title  {
         white-space: nowrap;
         z-index: 1;
       }
-
+      
       .fa-block__details {
         @include ani;
         height: 50%;
       }
-
+      
       &:focus-within, &:hover {
         .fa-block__details {
           position: absolute;
@@ -1856,9 +1856,11 @@ h4.stage-link__title  {
         min-height: 130px;
       }
     }
-
   }
-
+      }
+    }
+  }
+}
 
   @media only screen and (max-width: 970px) {
 
@@ -1873,7 +1875,7 @@ h4.stage-link__title  {
       .fa-block {
         margin: 0px;
       }
-
+      
       .grid__cell .fa-block .fa-block__imagecontainer+.fa-block__details, .fa-block .fa-block__details {
         min-height: 71px;
       }
