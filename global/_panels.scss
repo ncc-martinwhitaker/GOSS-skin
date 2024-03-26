@@ -1857,10 +1857,6 @@ h4.stage-link__title  {
       }
     }
   }
-      }
-    }
-  }
-}
 
   @media only screen and (max-width: 970px) {
 
@@ -1897,41 +1893,9 @@ h4.stage-link__title  {
       .fa-block .fa-block__content .fa-block__imagecontainer picture.gi-responsiveimage__imagewrapper, .fa-block .fa-block__content .fa-block__details {
         height: 100%;
       }
-
-     /* &.a-panel--pt .fa-block .fa-block__imagecontainer+.fa-block__details, &.a-panel--pt .fa-block .fa-block__details {
-        position: relative;
-        height: auto;
-        min-height: 71px;
-      }
-
-      &.a-panel--pt .fa-block .fa-block__imagecontainer {
-        width: 20%;
-        height: auto;
-        min-height: 71px;
-      }
-
-      .gi-responsiveimage__image {
-        object-fit: cover;
-      }
-
-      .fa-block {
-        margin: 0px;
-        outline: 1px solid #FFFFFF;
-        //border: 1px solid #FFFFFF;
-      }
-
-*/
-          //&.a-panel--pt.a-panel--parallax .a-panel__content, .container {
-      //padding: unset;
-    //}
     }
   }
-
 }
-
-
-
-
 
 //Original CSS below
 
