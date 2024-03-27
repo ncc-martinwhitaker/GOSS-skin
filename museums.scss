@@ -27,3 +27,116 @@ $footer-border-color: #00235d;
 
 @import 
 "museums-navbar";
+
+/*
+-------------------------------------------------------------------------------------------
+2765 - copied from schools.scss for the museums mobile navbar
+-------------------------------------------------------------------------------------------
+*/
+
+.gi-mobilenav--mobilemenu {
+    background: #f2f2f2;}
+    .sitemenu__link {
+        color: #000;
+        text-decoration: none;
+        display: none; 
+    }
+    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
+        color: #000 !important;
+    }
+
+    
+
+    .utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
+        color: #000 !important;
+        &:hover {
+            color: #4840E3 !important;
+            text-decoration: underline;
+
+        }
+    
+    }
+
+    .sitemenu__btnimage {
+        filter: invert(1);
+    }
+   
+    .sitemenu--mobile .submenu {
+        border-bottom: 1px solid #000;
+    }
+
+
+    .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
+        border-bottom: 1px solid #000;
+    }
+
+
+
+@media (max-width: 1300px)
+{
+    .gi-sitenav__link[aria-haspopup=true]::after {
+        
+        margin-left: 5px;
+    }
+
+    .gi-sitenav__link.gi-sitenav__link--lvl1 {
+       
+        padding: 12px 12px;
+    }
+
+    .gi-sitenav__list.gi-sitenav__list--lvl1 {
+        justify-content: space-around;
+    }
+
+}
+
+ 
+@media (max-width: 1050px)
+{
+    .gi-sitelogo--header {
+        flex-wrap: wrap;
+    }
+
+
+
+#headermainmenu, .utilitymenu--top {
+    display: none;
+}
+
+.gi-mobilenav--mobilemenu { 
+    top: 112px!important; 
+  
+}
+
+.gi-sitelogo, .gi-sitelogo__link {
+   
+    width: 280px;
+    padding-bottom: 15px;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
+    float: left;
+}
+ 
+
+}
+
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+    color: #000;
+}
+
+
+@media (min-width: 820px) {
+
+    .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+        display: block;
+    }
+    
+    } 
+
+    /*
+-------------------------------------------------------------------------------------------
+2765 - museums navbar mobile
+-------------------------------------------------------------------------------------------
+*/
