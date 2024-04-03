@@ -44,7 +44,12 @@
   display: none; 
 }*/
 
-.body--search-date-hide .blog-details .nvp--blog-categories {
+.body--hide-search-tags .blog-details .nvp--blog-categories {
+    display: none;
+}
+
+/* to replace the above Metadata modifier body--search-date-hide */
+.body--hide-search-tags .blog-details .nvp--blog-categories {
     display: none;
 }
 
