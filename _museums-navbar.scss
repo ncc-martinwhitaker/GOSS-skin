@@ -262,6 +262,38 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     
     } 
 
+//Event Search
+a[href$="Ancient-House-Museum-of-Thetford-Life"].event-instances__link.event-instances__link--location {
+	color: #4C7285;
+}
+a[href$="Cromer-Museum"].event-instances__link.event-instances__link--location {
+	color: #0070A5;
+}
+a[href$="Elizabethan-House---Great-Yarmouth"].event-instances__link.event-instances__link--location {
+	color: #CF171D;
+}
+a[href$="Gressenhall-Farm-and-Workhouse---Dereham"].event-instances__link.event-instances__link--location {
+	color: #597730;
+}
+a[href$="Lynn-Museum---Kings-Lynn"].event-instances__link.event-instances__link--location {
+	color: #80623C;
+}
+a[href$="Museum-of-Norwich-at-the-Bridewell"].event-instances__link.event-instances__link--location {
+	color: #CB4363;
+}
+a[href$="Norwich-Castle-Museum-and-Art-Gallery"].event-instances__link.event-instances__link--location {
+	color: #42145F;
+}
+a[href$="Strangers-Hall---Norwich"].event-instances__link.event-instances__link--location {
+	color: #B32017;
+}
+a[href$="The-Tolhouse-Gaol---Great-Yarmouth"].event-instances__link.event-instances__link--location {
+	color: #7E6B71;
+}
+a[href$="Time-and-Tide-Museum-of-Great-Yarmouth-Life"].event-instances__link.event-instances__link--location {
+	color: #161E69;
+}
+
         /*
 -------------------------------------------------------------------------------------------
 2765 - museums navbar mobile
