@@ -299,3 +299,17 @@ a[href$="Time-and-Tide-Museum-of-Great-Yarmouth-Life"].event-instances__link.eve
 2765 - museums navbar mobile
 -------------------------------------------------------------------------------------------
 */
+
+/* START 3005 - utility menu */
+.utilitymenu--top .utilitymenu__link {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    border: 0;
+}
+
+.utilitymenu--top .utilitymenu__link:hover  {
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    border: 0;
+}
+/* END 3005 - utility menu */
