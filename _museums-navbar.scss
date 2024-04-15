@@ -56,6 +56,8 @@ nav.gi-sitenav.gi-sitenav--desktop {
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
     background-color: rgba(255, 255, 255, 0.2);
+
+    @include ani;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
@@ -84,6 +86,16 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 .utilitymenu--top { 
     margin-left: auto;
     padding-bottom: 0px;
+}
+
+.utilitymenu--top .utilitymenu__link {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    @include ani;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 
