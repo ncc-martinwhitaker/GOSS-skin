@@ -142,3 +142,324 @@ $footer-border-color: #111111;
 2765 - museums navbar mobile
 -------------------------------------------------------------------------------------------
 */
+
+
+//Object page
+.template--collectionsobject {
+
+    .dialog__header {
+        display: none;
+    }
+
+    .imagegalleryinline {
+        background-color: #000;
+
+        .grid--imagegalleryinline {
+            padding: 1.5rem 0;
+        }
+
+        .imagegalleryinline__button, .imagegalleryinline__link {
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        //View gallery button
+        .gallery {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: solid #212529 3px;
+            border-radius: 6px;
+            padding: 8px 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+            font-weight: 600;
+        }
+
+        .grid__cell:first-child button {
+            &:hover
+            {
+                .gallery {
+                    text-decoration: underline;
+                }
+            }
+
+            &:focus
+            {
+                .gallery {
+                    background-color: #ffdd00;
+                    border-color: #0b0c0c;
+                    outline: none;
+                    color: #0b0c0c;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        img.imagegallery {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        //default image styles
+        .grid--imagegalleryinline {
+            .imagegalleryinline__button, .imagegalleryinline__link {
+                height: 500px;
+            }
+        }
+
+        //1 image
+        .grid--imagegalleryinline.grid--items1 {
+            .grid__cell {
+                width: 100%;
+
+                .grid__cellwrap {
+                    aspect-ratio: auto;
+                }
+
+                button {
+                    border-radius: 15px;
+                }
+            }
+        }
+
+        //2 images
+        .grid--items2 {
+            .grid__cell:first-child button {
+                border-radius: 15px 0px 0px 15px;
+            }
+
+            .grid__cell:last-child button {
+                border-radius: 0px 15px 15px 0px;
+            }
+        }
+
+        //3 images
+        .grid--items3 {
+            .grid__cell {
+                width: 33.33%;
+            }
+            .grid__cell:first-child button {
+                border-radius: 15px 0px 0px 15px;
+            }
+
+            .grid__cell:last-child button {
+                border-radius: 0px 15px 15px 0px;
+            }
+        }
+
+        //4 images
+        .grid--items4 {
+            .grid__cell {
+                width: 50%;
+                .grid__cellwrap {
+                    aspect-ratio: auto;
+                }
+            }
+
+            .imagegalleryinline__button, .imagegalleryinline__link {
+                height: 250px;
+            }
+            .grid__cell:first-child button {
+                border-radius: 15px 0px 0px 0px;
+            }
+            .grid__cell:nth-child(2) button {
+                border-radius: 0px 15px 0px 0px;
+            }
+            .grid__cell:nth-child(3) button {
+                border-radius: 0px 0px 0px 15px;
+            }
+            .grid__cell:last-child button {
+                border-radius: 0px 0px 15px 0px;
+            }
+        }
+
+        //5 images
+        .grid--items5 {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+            display: grid;
+
+            .imagegalleryinline__button, .imagegalleryinline__link {
+                height: 245px;
+            }
+
+            .grid__cell {
+                display: grid;
+                width: 100%;
+                padding: 0px;
+            }
+
+            .grid__cell:first-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                button {
+                    border-radius: 15px 0px 0px 15px;
+                }
+
+                .imagegalleryinline__button, .imagegalleryinline__link {
+                    height: 500px;
+                }
+            }
+
+            .grid__cell:nth-child(2) {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            .grid__cell:nth-child(3) {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                button {
+                    border-radius: 0px 15px 0px 0px;
+                }
+            }
+
+            .grid__cell:nth-child(4) {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            .grid__cell:nth-child(5) {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                button {
+                    border-radius: 0px 0px 15px 0px;
+                }
+            }
+
+        }
+
+
+        @media only screen and (max-width: 850px) {
+            .grid--imagegalleryinline, .grid--items5 .grid__cell:first-child {
+                .imagegalleryinline__button, .imagegalleryinline__link {
+                    height: 250px;
+                }
+                .grid__cellwrap {
+                    aspect-ratio: auto;
+                }
+            }
+
+            .grid--imagegalleryinline {
+                .grid__cell {
+                    width: 100%;
+                }
+                &.grid--items2, &.grid--items3, &.grid--items4, &.grid--items5 {
+                .grid__cell:first-child button {
+                
+                    border-radius: 15px;
+                }}
+                .grid__cell:not(:first-child) {
+                    display: none;
+                }      
+            }
+
+            .grid--items5 {
+                display: block;
+            }
+        }      
+    }
+
+
+    .collectionsitem__heading {
+        padding-top: 20px;
+    }
+ 
+    .collectionsitem__title--description {
+        font-weight: bold;
+    }
+
+    .collectionsitem__description {
+        .gi-disclosure {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .gi-disclosure__content {
+            padding: 0px;
+        }
+
+        .gi-disclosure__toggle {
+            width: fit-content;
+            margin-left: auto;
+            padding: 5px 20px 5px 55px;
+            border: solid #212529 2px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+
+            p {
+                margin: 0px;
+            }
+        }
+
+        //Read more/Show less
+        button[aria-expanded="false"]::before {
+            content: "Read more";
+        }
+        button[aria-expanded="true"]::before {
+            content: "Show less";
+        }      
+        button p {
+            display: none;
+        }
+        
+    }
+
+    .collectionsitem__details {
+        border-top: dotted #495057 2px;
+
+        div {
+            border-bottom: dotted #495057 2px;
+            padding: 30px 0px;
+            display: flex;
+        }
+
+        span.nvp__label.nvp__label--collections {
+            width: 200px;
+            display: inline-block;
+        }
+
+        span.nvp__value.nvp__value--collections {
+            &.nvp__value--materials, &.nvp__value--department {
+                box-sizing: border-box;
+                border: solid #D14130 2px;
+                border-radius: 6px;
+                padding: 10px 30px;
+                margin: -10px 0px;
+            } 
+        }
+
+        @media only screen and (max-width: 576px) {
+            .collectionsitem__detail {
+                display: block;
+            }
+
+            span.nvp__label.nvp__label--collections {
+                display: block;
+            }
+
+            span.nvp__value.nvp__value--collections {
+                &.nvp__value--materials, &.nvp__value--department { 
+                    margin-top: 10px;
+                    display: inline-block;
+                }
+            }
+        } 
+    }
+
+    //End of Object page
+
+
+}
