@@ -45,7 +45,11 @@ function museumsColour() {
 	}
 
 };
-$(window).on("load", function () { museumsColour(); });
+$(window).on("load", function () { 
+	if ($(".template--event")[0]){
+		museumsColour(); 
+	}
+});
 
 $(document).ready(function() {
 	//Numbered steps
