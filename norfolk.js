@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     //Insert footer icons
     $(".grid__cell--copyright").prepend("<div class='footer__logos'>"
-        + "<a href='https://disabilityconfident.campaign.gov.uk'>"
+        + "<a href='https://www.norfolk.gov.uk/article/39140/Disability-Confident'>"
             //+ "<img src='https://authoring.norfolk.gov.uk/-/media/norfolk/developer/ncc_footer.png' alt='Disability Confident Leader'>"
             + "<img src='" + DisabilityConfidentLeaderSVG + "' alt='Disability Confident Leader' />"
         + "</a>"

@@ -197,6 +197,7 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
 .footer__logos {
     display: flex;
     justify-content: space-evenly;
+    padding-top: 10px;
 
     @media (max-width: 300px) {
         display: block;
