@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-$("form.gi-sitesearch--top").insertAfter("a.gi-sitelogo__link");
-$("ol.utilitymenu.utilitymenu--top").appendTo(".gi-sitelogo--header");
+// $("form.gi-sitesearch--top").insertAfter("a.gi-sitelogo__link");
+// $("ol.utilitymenu.utilitymenu--top").appendTo(".gi-sitelogo--header");
 
 
 $("<div id='headermainmenu'><div class='container'></div></div>").appendTo(".header.header--nosticky"); 

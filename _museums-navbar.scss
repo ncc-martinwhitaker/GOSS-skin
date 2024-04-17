@@ -5,6 +5,12 @@
 
 .header {
     padding: 0px;
+
+    > .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 nav.gi-sitenav.gi-sitenav--desktop {
@@ -12,8 +18,6 @@ nav.gi-sitenav.gi-sitenav--desktop {
 }
 
 .gi-sitelogo--header {
-    display: flex;
-    align-items: center;
     padding: 15px 0px;
     justify-content: space-between;
 }
@@ -32,9 +36,21 @@ nav.gi-sitenav.gi-sitenav--desktop {
     margin-left: 7px;
 }
 
-.header__menu, .gi-sitelogo--header { 
+.header__menu {
+    width: auto;
     float: none;
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gi-sitelogo--header { 
+    float: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl1 {
@@ -50,12 +66,18 @@ nav.gi-sitenav.gi-sitenav--desktop {
 }
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    margin-top: -2px;
-    margin-left: 20px;
+    // margin-top: -2px;
+    // margin-left: 20px;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
     background-color: rgba(255, 255, 255, 0.2);
+
+    @include ani;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
@@ -82,8 +104,19 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 }
 
 .utilitymenu--top { 
-    margin-left: auto;
+    // margin-left: auto;
     padding-bottom: 0px;
+    float: none;
+}
+
+.utilitymenu--top .utilitymenu__link {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    @include ani;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 
@@ -149,8 +182,12 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
       width: 100%;
       a {
           font-weight: 600;
-          color: #006666 !important;
           text-align: left;
+
+          &:focus {
+            outline: none;
+            color: #000;
+          }
       }
   }
 
@@ -231,6 +268,16 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     display: none;
 }
 
+
+@media (max-width: 1050px) {
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: none;
+    }
+    .header__menu .utilitymenu--top {
+        display: block;
+    }
+}
+
 .gi-mobilenav--mobilemenu { 
     top: 170px!important;  
 }
@@ -245,23 +292,77 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     width: 100%;
     float: left;
 }
- 
-
-}
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
     color: #000;
 }
 
 
-@media (min-width: 820px) {
+@media (min-width: 900px) {
 
-    .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+    .header {  
+        > .container {
+            padding-bottom: 20px;
+        }
+    }
+
+    .gi-sitelogo--header {
+        justify-content: flex-start;
+    }
+  
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
+        top: 20px;
+    }
+
+    .header__menu {
+        width: 100%;
+    }
+
+    #headermainmenu, .header__menu .utilitymenu--top {
+        display: none;
+        width: 100%;
     }
     
-    } 
+    .gi-mobilenav--mobilemenu { 
+        top: 65px !important;
+    }
+    
+    .gi-sitelogo, .gi-sitelogo__link {
+        
+        width: 100px;
+    }
+    
+    .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+        width: 100%; //formely 100% - 168px
+        float: left;
 
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+        content: "\e800";
+        color: #000;
+    }
+    .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+        content: "\e800";
+        color: #fff;
+    }
+    .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+        width: 40px;
+    }
+    .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
+        width: calc(100% - 40px);
+    }
+} 
+
+@media (min-width: 820px) {
+  .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+      display: block;
+  }
+}
+  
 //Event Search
 a[href$="Ancient-House-Museum-of-Thetford-Life"].event-instances__link.event-instances__link--location {
 	color: #4C7285;
