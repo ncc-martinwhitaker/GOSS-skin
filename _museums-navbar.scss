@@ -5,6 +5,12 @@
 
 .header {
     padding: 0px;
+
+    > .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 nav.gi-sitenav.gi-sitenav--desktop {
@@ -12,8 +18,6 @@ nav.gi-sitenav.gi-sitenav--desktop {
 }
 
 .gi-sitelogo--header {
-    display: flex;
-    align-items: center;
     padding: 15px 0px;
     justify-content: space-between;
 }
@@ -32,9 +36,21 @@ nav.gi-sitenav.gi-sitenav--desktop {
     margin-left: 7px;
 }
 
-.header__menu, .gi-sitelogo--header { 
+.header__menu {
+    width: auto;
     float: none;
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gi-sitelogo--header { 
+    float: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl1 {
@@ -50,8 +66,12 @@ nav.gi-sitenav.gi-sitenav--desktop {
 }
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    margin-top: -2px;
-    margin-left: 20px;
+    // margin-top: -2px;
+    // margin-left: 20px;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
@@ -84,8 +104,9 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 }
 
 .utilitymenu--top { 
-    margin-left: auto;
+    // margin-left: auto;
     padding-bottom: 0px;
+    float: none;
 }
 
 .utilitymenu--top .utilitymenu__link {
@@ -161,8 +182,12 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
       width: 100%;
       a {
           font-weight: 600;
-          color: #006666 !important;
           text-align: left;
+
+          &:focus {
+            outline: none;
+            color: #000;
+          }
       }
   }
   
@@ -212,10 +237,12 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     display: none;
 }
 
-// overwriting default
 @media (max-width: 1050px) {
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: none;
+    }
+    .header__menu .utilitymenu--top {
+        display: block;
     }
 }
 
@@ -226,21 +253,32 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 
 @media (max-width: 900px) {
 
+    .header {  
+        > .container {
+            padding-bottom: 20px;
+        }
+    }
+
     .gi-sitelogo--header {
         justify-content: flex-start;
     }
   
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
+        top: 20px;
     }
 
-    #headermainmenu, .utilitymenu--top {
+    .header__menu {
+        width: 100%;
+    }
+
+    #headermainmenu, .header__menu .utilitymenu--top {
         display: none;
+        width: 100%;
     }
     
     .gi-mobilenav--mobilemenu { 
         top: 65px !important;
-        
     }
     
     .gi-sitelogo, .gi-sitelogo__link {
@@ -249,9 +287,13 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
     }
     
     .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-        width: calc(100% - 168px);
+        width: 100%; //formely 100% - 168px
         float: left;
+
+        margin-top: 0px;
+        margin-right: 0px;
     }
+
     .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
         content: "\e800";
         color: #000;
