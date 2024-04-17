@@ -255,18 +255,6 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 
 }
 
- 
-@media (max-width: 1050px)
-{
-    .gi-sitelogo--header {
-        flex-wrap: wrap;
-    }
-
-}
-
-#headermainmenu, .utilitymenu--top {
-    display: none;
-}
 
 
 @media (max-width: 1050px) {
@@ -298,7 +286,7 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover
 }
 
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
 
     .header {  
         > .container {
