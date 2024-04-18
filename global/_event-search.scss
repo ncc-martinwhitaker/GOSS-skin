@@ -139,6 +139,14 @@
   justify-content: stretch;
   flex-wrap: wrap;
 
+  .event-instances__time {
+    display: none;
+  }
+
+  .event-instances__to:not(:has(.event-instances__date)) {
+    display:none;
+  }
+
   .event-results__item {
     width: calc(33% - 40px);
     float: none;
