@@ -139,6 +139,14 @@
   justify-content: stretch;
   flex-wrap: wrap;
 
+  .event-instances__time {
+    display: none;
+  }
+
+  .event-instances__to:not(:has(.event-instances__date)) {
+    display:none;
+  }
+
   .event-results__item {
     width: calc(33% - 40px);
     float: none;
@@ -242,6 +250,10 @@
       }
     }
 
+    .event-instances__link {
+      font-weight: 700;
+    }
+
     .event-results__intro {
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -300,7 +312,6 @@
 .event .event__intro {
   order: 3;
   font-weight: normal;
-  display: none;
 }
 .event .event__body {
   order: 4;
@@ -376,7 +387,6 @@
 .event-location {
   order: 3;
   display: flex;
-  padding-bottom: 20px;
 }
 
 .event-location .event-location__details {
@@ -384,7 +394,6 @@
   padding: 0px;
   display: flex;
   align-items: baseline;
-
 
   .event-location__icon {
     display: none;
