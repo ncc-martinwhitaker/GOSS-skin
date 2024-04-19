@@ -308,7 +308,6 @@
 .event .event__intro {
   order: 3;
   font-weight: normal;
-  display: none;
 }
 .event .event__body {
   order: 4;
@@ -384,7 +383,6 @@
 .event-location {
   order: 3;
   display: flex;
-  padding-bottom: 20px;
 }
 
 .event-location .event-location__details {
@@ -392,7 +390,6 @@
   padding: 0px;
   display: flex;
   align-items: baseline;
-
 
   .event-location__icon {
     display: none;

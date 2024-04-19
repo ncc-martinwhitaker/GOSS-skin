@@ -43,11 +43,61 @@ function museumsColour() {
 	else {
 		$('.event-location__link').css('color', 'black');
 	}
-
 };
+/*
+------------------------------------------------------------------------
+Event Search - colour Location text by museum
+------------------------------------------------------------------------
+*/
+function museumsSearchColour() {
+	var mitems = document.getElementsByClassName('event-instances__link event-instances__link--location event-instances__link--suppressed');
+	for (var i=0; i < mitems.length; i++) {
+		
+		if (mitems[i].innerHTML.indexOf('Lynn') > -1) {
+			mitems[i].style.color = "#597730";
+		}
+		else if (mitems[i].innerHTML.indexOf('Tolhouse') > -1) {
+			mitems[i].style.color = '#7E6B71';
+		}
+		else if (mitems[i].innerHTML.indexOf('Gressenhall') > -1) {
+			mitems[i].style.color = '#597730';
+		}
+		else if (mitems[i].innerHTML.indexOf('Cromer') > -1) {
+			mitems[i].style.color = '#0070A5';
+		}
+		else if (mitems[i].innerHTML.indexOf('Elizabethan') > -1) {
+			mitems[i].style.color = '#CF171D';
+		}
+		else if (mitems[i].innerHTML.indexOf('Museum of Norwich') > -1) {
+			mitems[i].style.color = '#CB4363';
+		}
+		else if (mitems[i].innerHTML.indexOf('Castle') > -1) {
+			mitems[i].style.color = '#42145F';
+		}
+		else if (mitems[i].innerHTML.indexOf('Stranger') > -1) {
+			mitems[i].style.color = '#B32017';
+		}
+		else if (mitems[i].innerHTML.indexOf('Ancient') > -1) {
+			mitems[i].style.color = '#4C7285';
+		}
+		else if (mitems[i].innerHTML.indexOf('Lynn') > -1) {
+			mitems[i].style.color = '#597730';
+		}
+		else if (mitems[i].innerHTML.indexOf('Tide') > -1) {
+			mitems[i].style.color = '#161E69';
+		}
+		else {
+			mitems[i].style.color = black;
+		}
+	}
+};
+
 $(window).on("load", function () { 
 	if ($(".template--event")[0]){
-		museumsColour(); 
+		museumsColour();
+	}
+	if ($(".template--eventsearch")[0]){
+		museumsSearchColour(); 
 	}
 });
 
