@@ -329,7 +329,7 @@
   flex-direction: column;
   padding: 10px;
 
-  order: 1;
+  order: 2;
 }
 
 
@@ -351,7 +351,7 @@
   padding: 0px;
   border-radius: 8px;
   border: none;
-  order: 4;
+  order: 5;
   position: relative;
   float: none;
   clear: none;
@@ -374,7 +374,7 @@
 }
 
 .event-location {
-  order: 2;
+  order: 3;
   display: flex;
   padding-bottom: 20px;
 }
@@ -428,6 +428,40 @@
   
     &::before {
       display: none;
+    }
+  }
+}
+
+.event__social {
+  order: 1;
+}
+
+.event__social .event__link--social {
+
+  margin: 20px 0px;
+  font-family: "Assistant","Open Sans",sans-serif;
+
+  &::before {
+    content: "Learn more about this exhibition";
+    font-family: "Assistant","Open Sans",sans-serif;
+    font-weight: 600;
+  }
+
+  img.event__image--social {
+    display: none;
+  }
+
+  &:hover {
+    &::before {
+      text-decoration: underline;
+      color: $link-color-darken;
+    }
+  }
+  &:focus {
+    &::before {
+      text-decoration: underline;
+      background-color: $focus-color;
+      color: #000;
     }
   }
 }
