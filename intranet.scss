@@ -536,7 +536,7 @@ footer.footer {
   margin-top: -2px;
     margin-left: 20px;
     /* width of searchbar size?! #3042  */
-    width: calc(100% - 650px);
+    flex: auto;
 }
 
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
