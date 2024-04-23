@@ -830,6 +830,10 @@ Object page
                 display: grid;
                 width: 100%;
                 padding: 0px;
+
+                .grid__cellwrap {
+                    aspect-ratio: auto;
+                }
             }
 
             .grid__cell:first-child {
