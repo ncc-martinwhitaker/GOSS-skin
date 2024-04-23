@@ -34,6 +34,7 @@ Variables to change:
       color: $breadcrumb-text-color;
       text-decoration: none;
       border-bottom: solid $breadcrumb-text-color 2px;
+      line-height: normal;
     }
   }
   .breadcrumb__crumb:after { //in use
