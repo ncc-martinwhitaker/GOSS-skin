@@ -1008,3 +1008,21 @@ Object page
 End of object page
 -------------------------------------------------------------------------------------------
 */
+
+
+/* HOTFIX - Layout fix for search bar (3401)  */
+
+.a-panel__search form.gi-sitesearch.gi-sitesearch--collectionssearch .gi-sitesearch__container {
+    display: flex;
+
+    .gi-sitesearch__searchfield {
+        width: 100%;
+    }
+    .gi-sitesearch__searchtoggle {
+        width: auto;
+    }
+
+    &::after {
+        display: none;
+    }
+}
