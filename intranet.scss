@@ -535,8 +535,6 @@ footer.footer {
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
   margin-top: -2px;
     margin-left: 20px;
-    /* width of searchbar size?! #3042  */
-    flex: auto;
 }
 
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
@@ -718,6 +716,12 @@ footer.footer {
 
 .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
     display: block;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    /* width of searchbar size?! #3042  */
+    flex: auto;
+    max-width: 600px;
 }
 
 }
