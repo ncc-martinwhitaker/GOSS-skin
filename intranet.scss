@@ -718,6 +718,12 @@ footer.footer {
     display: block;
 }
 
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    /* width of searchbar size?! #3042  */
+    flex: auto;
+    max-width: 600px;
+}
+
 }
 
 // 2341 stage card padding
