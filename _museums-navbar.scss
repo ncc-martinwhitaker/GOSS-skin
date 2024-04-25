@@ -74,20 +74,23 @@ nav.gi-sitenav.gi-sitenav--desktop {
     width: 100%;
 }
 
-button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
-    background-color: rgba(255, 255, 255, 0.2);
+header {
 
-    @include ani;
-}
+    button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+        background-color: rgba(255, 255, 255, 0.2);
 
-button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
-    opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    box-shadow: none;
+        @include ani;
+    }
 
-    &:after {
-        text-decoration: underline;
+    button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
+        opacity: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        box-shadow: none;
+
+        &:after {
+            text-decoration: underline;
+        }
     }
 }
 
