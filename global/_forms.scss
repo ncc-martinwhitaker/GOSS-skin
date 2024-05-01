@@ -151,6 +151,15 @@ max-width: none;
     overflow-x: auto;
 }
 
+//3394 - Niche form fields displaying incorrectly with screens over 850px
+@media (min-width: 850px) {
+    .icmformtop .icmvertical .fielddiv_icmvstext.field_text--prefix, .icmformtop .icmvertical .fielddiv_icmvstext.field_text--suffix, 
+    .icmformtop .icmvertical .fielddiv_icmvstext.field_textnostore--prefix, .icmformtop .icmvertical .fielddiv_icmvstext.field_textnostore--suffix, 
+    .icmformtop .icmvertical .fielddiv_icmvstext.field_number--prefix, .icmformtop .icmvertical .fielddiv_icmvstext.field_number--suffix {
+        max-width: none;
+    }
+}
+
 /* ------------------------------------------------- */
 //start | modifiers for in-page quicksearch
 /* ------------------------------------------------- */
