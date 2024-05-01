@@ -84,7 +84,7 @@ a.gi-sitelogo__link {width: $logo-width;}
     outline: 0 !important;
 }
 
-.utilitymenu__item a[href$="Sign-in"]:before, .utilitymenu__item a[href$='login']:before {
+.utilitymenu__item a[href$="Sign-in"]:before, .utilitymenu__item a[href$='login']:before, .utilitymenu__item a[href$='logout']:before {
     content: "";
     // background-image: url("https://norfolk.ncc1-prp.gosshosted.com/image/27131/login/original.png");
     // background-image: url("/image/27270/login/original.png");
