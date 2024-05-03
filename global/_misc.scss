@@ -181,5 +181,6 @@ li.paging__item a.paging__link {
   &:focus {
     box-shadow: none;
     text-decoration: underline;
+    outline-color: #000;
   }
 }
