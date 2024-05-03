@@ -283,6 +283,16 @@
 }
 
 @media only screen and (max-width: 720px) {
+
+  .event-search .event-search__options .event-search__option--keywords {
+    .event-search__input--keywords {
+      width: 60%;
+    }
+    .event-search__submitwrap {
+      width: 40%;
+    }
+  }
+
   .event-results {
     flex-direction: column;
     padding: 20px;
