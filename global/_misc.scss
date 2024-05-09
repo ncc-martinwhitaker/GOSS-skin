@@ -170,3 +170,17 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
     }
   }
 }
+
+// Pagination
+
+li.paging__item a.paging__link {
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  &:focus {
+    box-shadow: none;
+    text-decoration: underline;
+    outline-color: #000;
+  }
+}
