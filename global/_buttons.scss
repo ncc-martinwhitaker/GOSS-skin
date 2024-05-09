@@ -131,3 +131,28 @@
     }
 }
 
+/*** 3487 - My request buttons ***/
+
+.cta-link--assigned {
+    background-color: #00823b;
+    border-radius: 6px;
+}
+
+.cta-link--viewallrequests {
+    background-color: #e5e5e5;
+    color: #000000;
+    border-radius: 6px;
+}
+
+.cta-link--back {
+    background-color: #FFFFFF;
+    color: #4840e3;
+    &:hover {
+        color: #1f18a5;
+        text-decoration: underline;
+        background-color: #FFFFFF;
+        box-shadow: none;
+    }
+}
+
+/*** 3487 - End of My request buttons ***/
