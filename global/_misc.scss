@@ -69,13 +69,14 @@
 
   a.feedback_option {
     margin: 0px 5px;
+    display:block; 
 
     &:hover, &:focus {
       transform: scale(1.1);
       outline: 5px solid $focus-color;
       background: $focus-color;
-    }
-  }
+    } 
+  } 
 }
 
 // Site alert
