@@ -99,6 +99,14 @@ $card-border-radius: 12px;
         }
     }
 
+    &.body--adultsocialservicesbadge {
+        .a-heading__title::before {
+            content: "Adult Social Services Procedure";
+            color: #212529;
+            background-color: #8dbaff;
+        }
+    }
+
     .a-intro {
         margin-top: 0px;
         padding: 0 20px 20px 200px;
@@ -270,6 +278,13 @@ $card-border-radius: 12px;
 
 .body--traininganddevelopment.body--policypage .a-heading::before {
     $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='40' viewBox='0 0 48 48' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M44 10V14H34L27.06 24H32V28H28.92L36.34 44H31.94L30.08 40H12.76L10.7 44H6.19999L14.46 28H14C13.1 28 12.34 27.4 12.08 26.6L5.73999 7.68L7.63999 7C8.67999 6.68 9.81999 7.26 10.16 8.3L15.44 24H24.2L31.14 14H24V10H44ZM19 28L14.84 36H28.22L24.52 28H19Z' fill='white'/%3E%3C/g%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    $string3: url($string2);
+    background-image: $string3;
+}
+
+.body--procedure.body--policypage .a-heading::before {
+    $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='20' width='30' viewBox='0 0 25 22' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M19 3H14.82C14.4 1.84 13.3 1 12 1S9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M12 3C12.55 3 13 3.45 13 4S12.55 5 12 5 11 4.55 11 4 11.45 3 12 3M7 7H17V5H19V19H5V5H7V7M12 17V15H17V17H12M12 11V9H17V11H12M8 12V9H7V8H9V12H8M9.25 14C9.66 14 10 14.34 10 14.75C10 14.95 9.92 15.14 9.79 15.27L8.12 17H10V18H7V17.08L9 15H7V14H9.25' fill='white'/%3E%3C/g%3E%3C/svg%3E";
     $string2: str-replace($string, ' ', '%20');
     $string3: url($string2);
     background-image: $string3;
