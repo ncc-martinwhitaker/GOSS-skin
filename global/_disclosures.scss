@@ -73,3 +73,14 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   border-bottom: solid 3px transparent;
   color: $link-color;
 }
+
+.event .event__body .gi-disclosure.gi-disclosure--body {
+  .gi-disclosure__toggle {
+    border: none;
+    padding: 20px 0px;
+  }
+
+  .gi-disclosure__toggle:hover {
+    background-color: transparent;
+  }
+}
