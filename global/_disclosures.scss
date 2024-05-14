@@ -29,7 +29,7 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded]:focus {
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
   &::after {
     border-bottom: solid #050505 3px;
     color: #050505;
@@ -75,12 +75,32 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
 }
 
 .event .event__body .gi-disclosure.gi-disclosure--body {
+
+  border: none;
+
   .gi-disclosure__toggle {
     border: none;
     padding: 20px 0px;
+
+    position: relative;
+    width: auto;
+    color: $link-color;
   }
 
   .gi-disclosure__toggle:hover {
     background-color: transparent;
+    color: $link-color-darken;
   }
+
+  .gi-disclosure__toggle:focus {
+    background-color: $focus-color;
+    color: #050505;
+  }
+
+
+  .gi-disclosure__toggle::after {
+    content: "";
+    height: 50px;
+    right: -50px;
+  }  
 }
