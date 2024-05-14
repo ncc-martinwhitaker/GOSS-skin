@@ -45,41 +45,71 @@
 
     }
 
-
+    .contents__listlink {
+        &:hover {
+            text-decoration: underline;
+            color: $link-color-darken;
+        }
+        &:focus {
+            text-decoration: underline;
+            color: #000;
+            outline: solid 2px #000;
+        }
+    }
 
     .document-pagination { 
         
-        .document-pagination__link{width: auto;}
+        .document-pagination__link {
+            width: auto;
 
-        .document-pagination__link--next { 
-            float: right;
+            &:hover {
+                text-decoration: underline;
+                color: $link-color-darken;
 
-            span {
-                padding-right: 30px;
-                padding-left: 0px;
-                margin-left: 0px;
-            }
-
-            .document-pagination__direction {
-                padding-right: 0px;
-
-                &::before {
-                    content: ""; 
+                .document-pagination__pagetitle {
+                    text-decoration: underline;
                 }
-                &::after {
-                    content: "\e827";
-                    float: right;
+            }
+            &:focus {
+                text-decoration: underline;
+                outline: solid 2px #000;
+
+                .document-pagination__pagetitle {
+                    text-decoration: underline;
                 }
             }
         }
-
-        .document-pagination__link--prev {float: left;}
-
-
     }
- 
 
+    .document-pagination__link .document-pagination__pagetitle {
+        text-decoration: none;
+    }
 
+    .document-pagination__link--next { 
+        float: right;
+
+        span {
+            padding-right: 30px;
+            padding-left: 0px;
+            margin-left: 0px;
+        }
+
+        .document-pagination__direction {
+            padding-right: 0px;
+
+            &::before {
+                content: ""; 
+            }
+            &::after {
+                content: "\e827";
+                float: right;
+            }
+        }
+    }
+
+    .document-pagination__link--prev {
+        float: left;
+    }
 }
 
 
