@@ -40,6 +40,8 @@
 
   &:focus {
     outline: solid $focus-color 2px;
+    border: solid 3px #000;
+
   }
 
   &::placeholder {
