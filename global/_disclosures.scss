@@ -87,6 +87,10 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
     color: $link-color;
   }
 
+  h3.gi-disclosure__heading .gi-disclosure__toggle-text {
+    font-size: 1.5rem;
+  }
+
   .gi-disclosure__toggle:hover {
     background-color: transparent;
     color: $link-color-darken;
@@ -102,5 +106,6 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
     content: "";
     height: 50px;
     right: -50px;
+    top: calc(50% + 3px);
   }  
 }
