@@ -510,6 +510,10 @@ h2.a-panel__title {
     background-color: $button-panel-color;
     text-align: right;
     padding: 10px;
+
+    &:hover {
+      @extend .btn-hover;
+    }
   }
 
   

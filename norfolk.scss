@@ -171,6 +171,12 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     &:hover {color: #000; background: $focus-color;}
 }
 
+//3186 - Buttons
+.adult-learning-search #customSearchSubmit:hover {
+    @extend .btn-hover;
+}
+
+
 @media (max-width: 1050px) {
     
     .gi-mobilenav--mobilemenu {

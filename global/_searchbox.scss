@@ -151,10 +151,14 @@
     margin: 8px;
   }
   background-color: $button-search-background-color;
-  background-color: $button-search-background-color;
+  //background-color: $button-search-background-color;
 }
 
-.btn--search::after {
+.btn--search:hover::after {
+  @extend .btn-hover;
+}
+
+.btn--search::after { //TODO does colour here contradict line 236
   color: $button-search-color;
   content: "\e800  Search";
 }
@@ -164,6 +168,11 @@
   .gi-sitesearch--dynamic[data-collapsed="false"]
   .btn--search:focus {
     opacity: 1;
+}
+
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search:hover::after, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:hover::after
+{
+  @extend .btn-hover;
 }
 
 .gi-sitesearch--mobile .gi-sitesearch__searchfield,
@@ -221,10 +230,14 @@ float: left !important;
     width: 110px;
     background-color: $button-search-background-color;
     border-radius: 0 4px 4px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-.btn--search::after {
+.btn--search::after { //TODO does colour here contradict line 161
     color: #ffffff;
 }
 
