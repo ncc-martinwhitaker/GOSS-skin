@@ -10,6 +10,19 @@
         font-size: 1.2rem;
     }
 
+    .card__content .a-body--promo {
+        a {
+            &:hover {
+                color: $link-color-darken;
+                text-decoration: underline;
+            }
+            &:focus {
+                color: #050505;
+                outline: solid 2px #050505;
+            }
+        }
+    }
+
     &.card--noborder {
         border: none;
     }
