@@ -44,10 +44,15 @@ $footer-color: #0b0b0c;
     background-color: $americanlibrary-red;
 }*/
 
-.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__link:hover  {
+.utilitymenu--top .utilitymenu__link {
     background-color: $americanlibrary-red;
     border-radius: 15px;
     border: 0;
+
+    &:hover {
+        background-color: $americanlibrary-red;
+        @extend .btn-hover;
+    }
 }
 
 @media (max-width: 1050px)

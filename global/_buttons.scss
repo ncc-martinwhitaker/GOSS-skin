@@ -131,6 +131,10 @@
     }
 }
 
+.a-panel__linkwrap:hover .a-panel__link--pt, .a-panel__linkwrap:focus .a-panel__link--pt, .a-panel__link--related:hover {
+    @extend .btn-hover;
+}
+
 /*** 3487 - My request buttons ***/
 
 .cta-link--assigned {
@@ -156,3 +160,9 @@
 }
 
 /*** 3487 - End of My request buttons ***/
+
+/*** 3186 - Button hover ***/
+.btn-hover {
+    text-decoration: underline;
+}
+/*** 3186 - End of Button hover ***/
