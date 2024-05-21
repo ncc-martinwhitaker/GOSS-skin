@@ -107,10 +107,6 @@ function modifyEvenstDisclosure() {
 }
 
 const mutationCallback = (mutationsList) => {
-	console.log('mutationCallback fired');
-	console.log(`mutationsList: `);
-	console.log(mutationsList);
-	//console.log(mutationsList[0].target.childNodes[0].innerHTML);
 
 	if (mutationsList[0].target.childNodes[0].innerHTML === 'Show more dates') {
 		mutationsList[0].target.childNodes[0].innerHTML = 'Hide more dates';
@@ -126,8 +122,6 @@ const mutationCallback = (mutationsList) => {
 	  ) {
 		return;
 	  }
-	  console.log('old:', mutation.oldValue);
-	  console.log('new:', mutation.target.getAttribute("aria-expaned"));
 	}
 
   }
@@ -135,10 +129,8 @@ const mutationCallback = (mutationsList) => {
 const observer = new MutationObserver(mutationCallback);
 
 function disclosureListener() {
-	console.log('disclosureListener() fired');
 	var disc = $("#disclosure-1_toggle")[0];
-	disc.childNodes[0].innerHTML = 'Show More Dates';
-	// disc.change(modifyEvenstDisclosure());
+	disc.childNodes[0].innerHTML = 'Show more dates';
 
 	observer.observe(disc, { attributes: true });
 }
