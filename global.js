@@ -111,7 +111,7 @@ const mutationCallback = (mutationsList) => {
 	if (mutationsList[0].target.childNodes[0].innerHTML === 'Show more dates') {
 		mutationsList[0].target.childNodes[0].innerHTML = 'Hide more dates';
 	} else {
-		mutationsList[0].target.childNodes[0].innerHTML = 'Show more Dates';
+		mutationsList[0].target.childNodes[0].innerHTML = 'Show more dates';
 	}
 
 
