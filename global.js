@@ -92,9 +92,61 @@ function museumsSearchColour() {
 	}
 };
 
+function modifyEvenstDisclosure() {
+	console.log('modifyEvenstDisclosure() fired');
+
+	var discText = $(".gi-disclosure__toggle-text");
+	var discToggle = $("#disclosure-1_toggle");
+
+	if (discToggle.attr("aria-expaned") == "False") {
+		console.log("disclosure opened");
+	}
+	else {
+		console.log("disclosure closed");
+	}
+}
+
+const mutationCallback = (mutationsList) => {
+	console.log('mutationCallback fired');
+	console.log(`mutationsList: `);
+	console.log(mutationsList);
+	//console.log(mutationsList[0].target.childNodes[0].innerHTML);
+
+	if (mutationsList[0].target.childNodes[0].innerHTML === 'Show more dates') {
+		mutationsList[0].target.childNodes[0].innerHTML = 'Hide more dates';
+	} else {
+		mutationsList[0].target.childNodes[0].innerHTML = 'Show more Dates';
+	}
+
+
+	for (const mutation of mutationsList) {
+	  if (
+		mutation.type !== "attributes" ||
+		mutation.attributeName !== "aria-expaned"
+	  ) {
+		return;
+	  }
+	  console.log('old:', mutation.oldValue);
+	  console.log('new:', mutation.target.getAttribute("aria-expaned"));
+	}
+
+  }
+
+const observer = new MutationObserver(mutationCallback);
+
+function disclosureListener() {
+	console.log('disclosureListener() fired');
+	var disc = $("#disclosure-1_toggle")[0];
+	disc.childNodes[0].innerHTML = 'Show More Dates';
+	// disc.change(modifyEvenstDisclosure());
+
+	observer.observe(disc, { attributes: true });
+}
+
 $(window).on("load", function () { 
 	if ($(".template--event")[0]){
 		museumsColour();
+		disclosureListener();
 	}
 	if ($(".template--eventsearch")[0]){
 		museumsSearchColour(); 
