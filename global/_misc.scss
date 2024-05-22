@@ -3,12 +3,16 @@
 .gi-responsiveimage__caption {
     font-size: 1rem;
     font-weight: 500;
+  }
+
+/* Fix caption width #2991 */
+
+.a-body__image .gi-responsiveimage__caption {
     caption-side: bottom;
     display: table-caption;
   }
 
-
-figure.gi-responsiveimage {
+  .a-body__image .gi-responsiveimage {
     display: table;
     width: auto;
     }
