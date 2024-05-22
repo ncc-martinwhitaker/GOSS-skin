@@ -29,7 +29,7 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded]:focus {
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
   &::after {
     border-bottom: solid #050505 3px;
     color: #050505;
@@ -72,4 +72,48 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   padding-right: 28px;
   border-bottom: solid 3px transparent;
   color: $link-color;
+}
+
+.event .event__body .gi-disclosure.gi-disclosure--body {
+
+  border: none;
+
+  .gi-disclosure__toggle {
+    border: solid 4px transparent;
+    padding: 0px 40px 10px 0px;
+
+    position: relative;
+    width: 200px;
+    color: $link-color;
+  }
+
+  h3.gi-disclosure__heading .gi-disclosure__toggle-text {
+    font-size: 1.25rem;
+  }
+
+  .gi-disclosure__toggle:hover {  
+    background-color: transparent;
+    color: $link-color-darken;
+  }
+
+  .gi-disclosure__toggle:focus {
+    background-color: $focus-color;
+    border-color: $focus-color;
+    outline: solid 4px #050505;
+    color: #050505;
+  }
+
+
+  .gi-disclosure__toggle::after {
+    content: "";
+    height: 50%;
+    right: 0px;
+    top: 50%;
+  }
+
+  .gi-disclosure__toggle:focus {
+    &::after {
+      border-bottom: solid 3px transparent;
+    }
+  }
 }

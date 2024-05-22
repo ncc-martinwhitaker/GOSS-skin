@@ -92,9 +92,53 @@ function museumsSearchColour() {
 	}
 };
 
+function modifyEvenstDisclosure() {
+	console.log('modifyEvenstDisclosure() fired');
+
+	var discText = $(".gi-disclosure__toggle-text");
+	var discToggle = $("#disclosure-1_toggle");
+
+	if (discToggle.attr("aria-expaned") == "False") {
+		console.log("disclosure opened");
+	}
+	else {
+		console.log("disclosure closed");
+	}
+}
+
+const mutationCallback = (mutationsList) => {
+
+	if (mutationsList[0].target.childNodes[0].innerHTML === 'Show more dates') {
+		mutationsList[0].target.childNodes[0].innerHTML = 'Hide more dates';
+	} else {
+		mutationsList[0].target.childNodes[0].innerHTML = 'Show more dates';
+	}
+
+
+	for (const mutation of mutationsList) {
+	  if (
+		mutation.type !== "attributes" ||
+		mutation.attributeName !== "aria-expaned"
+	  ) {
+		return;
+	  }
+	}
+
+  }
+
+const observer = new MutationObserver(mutationCallback);
+
+function disclosureListener() {
+	var disc = $("#disclosure-1_toggle")[0];
+	disc.childNodes[0].innerHTML = 'Show more dates';
+
+	observer.observe(disc, { attributes: true });
+}
+
 $(window).on("load", function () { 
 	if ($(".template--event")[0]){
 		museumsColour();
+		disclosureListener();
 	}
 	if ($(".template--eventsearch")[0]){
 		museumsSearchColour(); 
