@@ -12,6 +12,10 @@
 
     .card__content .a-body--promo {
         a {
+
+            border: solid transparent 4px;
+            border-right: solid transparent 2px;
+
             &:hover {
                 color: $link-color-darken;
                 text-decoration: underline;
@@ -19,6 +23,8 @@
             &:focus {
                 color: #050505;
                 outline: solid 2px #050505;
+                outline-offset: -2px;
+                text-decoration: none;
             }
         }
     }
