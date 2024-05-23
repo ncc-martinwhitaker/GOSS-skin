@@ -3,8 +3,9 @@
   aside.aside {
 
     padding-top: 40px;
-    //display: block; - rollback 3721/3723
-    //float: left; - rollback 3721/3723
+    display: block;
+    float: left; 
+    width:100%; 
 
     .relateditem {
 
