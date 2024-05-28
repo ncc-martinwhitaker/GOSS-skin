@@ -657,6 +657,10 @@ footer.footer {
         border-bottom: 1px solid #000;
     }
 
+// 3078 - myNet adding jumplinks makes body container too narrow
+body:not(.body--sticky-jumplinks) #anchor-contents {
+    width: auto;
+}
 
 
 @media (max-width: 1300px)
