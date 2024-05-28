@@ -165,3 +165,26 @@ $(document).ready(function() {
 	}
 
 });
+
+
+
+
+(function () {
+    const configureHeaderSearch = () => {
+       document.querySelectorAll(".gi-sitesearch--header, .gi-sitesearch--command, .gi-sitesearch--mobile, .gi-sitesearch--top").forEach(headerSearchConfigurationCallback);
+    };
+
+    const headerSearchConfigurationCallback = (siteSearch) => {
+       if (!siteSearch) {
+          return;
+       }
+       //    Choose whether the site search should toggle expanded and collapsed
+       // siteSearch.setAttribute("data-collapsible", "false");
+       //    Choose if (when data-collapsible is true) the site search should have a collapse button
+       // siteSearch.setAttribute("data-suppress-closebtn", "false");
+       //    Choose if (when data-collapsible is true) tabbing to the site search should automatically expand it
+       siteSearch.setAttribute("data-focus-open", "false");
+    }
+
+    document.addEventListener("DOMContentLoaded", configureHeaderSearch);
+})(); 
