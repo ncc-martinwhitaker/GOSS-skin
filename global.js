@@ -166,7 +166,12 @@ $(document).ready(function() {
 Live Chat - accessibility changes
 ------------------------------------------------------------------------
 */
+const liveChatModify = function() {
+	var chatButton = document.getElementById('customLiveChatButton');
 
+	chatButton.setAttribute('tabindex', '0');
+	chatButton.setAttribute('alt', 'Chat with us - live chat button');
+}
 
 
 
@@ -181,7 +186,7 @@ $(window).on("load", function () {
 		museumsSearchColour();
 	}
 	if ($("#customLiveChatButton")[0]) {
-		console.log('live chat button spotted');
+		liveChatModify();
 	}
 });
 
