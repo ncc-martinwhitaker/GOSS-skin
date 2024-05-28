@@ -3,8 +3,6 @@ function resizeItems() {
     resizeBlock($(".item__content"));
     resizeBlock($(".item"));
 }
-$(window).on("load", function () { resizeItems(); });
-$(window).on("resize", function () { resizeItems() });
 
 // Colourise Museums locations
 function museumsColour() {
@@ -44,6 +42,7 @@ function museumsColour() {
 		$('.event-location__link').css('color', 'black');
 	}
 };
+
 /*
 ------------------------------------------------------------------------
 Event Search - colour Location text by museum
@@ -92,6 +91,11 @@ function museumsSearchColour() {
 	}
 };
 
+/*
+------------------------------------------------------------------------
+Event Template - disclosure styling / text changes
+------------------------------------------------------------------------
+*/
 function modifyEvenstDisclosure() {
 	console.log('modifyEvenstDisclosure() fired');
 
@@ -135,16 +139,6 @@ function disclosureListener() {
 	observer.observe(disc, { attributes: true });
 }
 
-$(window).on("load", function () { 
-	if ($(".template--event")[0]){
-		museumsColour();
-		disclosureListener();
-	}
-	if ($(".template--eventsearch")[0]){
-		museumsSearchColour(); 
-	}
-});
-
 $(document).ready(function() {
 	//Numbered steps
 	$('.stepstart').each(function(){
@@ -165,3 +159,31 @@ $(document).ready(function() {
 	}
 
 });
+
+
+/*
+------------------------------------------------------------------------
+Live Chat - accessibility changes
+------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+$(window).on("load", function () { 
+	if ($(".template--event")[0]) {
+		museumsColour();
+		disclosureListener();
+	}
+	if ($(".template--eventsearch")[0]) {
+		museumsSearchColour();
+	}
+	if ($("#customLiveChatButton")[0]) {
+		alert('live chat button spotted');
+	}
+});
+
+$(window).on("load", function () { resizeItems(); });
+$(window).on("resize", function () { resizeItems() });
