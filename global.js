@@ -179,7 +179,7 @@ $(document).ready(function() {
           return;
        }
        //    Choose whether the site search should toggle expanded and collapsed
-       // siteSearch.setAttribute("data-collapsible", "false");
+       siteSearch.setAttribute("data-collapsible", "false");
        //    Choose if (when data-collapsible is true) the site search should have a collapse button
        // siteSearch.setAttribute("data-suppress-closebtn", "false");
        //    Choose if (when data-collapsible is true) tabbing to the site search should automatically expand it
