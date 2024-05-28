@@ -181,7 +181,7 @@ $(window).on("load", function () {
 		museumsSearchColour();
 	}
 	if ($("#customLiveChatButton")[0]) {
-		alert('live chat button spotted');
+		console.log('live chat button spotted');
 	}
 });
 
