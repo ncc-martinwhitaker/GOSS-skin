@@ -148,7 +148,7 @@
 .gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
   &::after {
     color: #fff;
-    content: "\e800  Search";
+    /*content: "\e800  Search";*/
     font-size: 16px;
     margin: 8px;
   }
@@ -160,9 +160,30 @@
   @extend .btn-hover;
 }
 
-.btn--search::after { //TODO does colour here contradict line 236
+.btn--search::before { //TODO does colour here contradict line 236
   color: $button-search-color;
-  content: "\e800  Search";
+  content: "\e800";
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+//unhide search class
+span.btn__text.gi-sitesearch__buttontext.accessibility {
+  display: inline;
+  position: relative;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-family: icons, sans-serif;
+  font-size: 16px;  
+  }
+
+.gi-sitesearch__button--search:hover span.btn__text.gi-sitesearch__buttontext.accessibility {
+   text-decoration: underline;
+  }
+
+.btn--search::after { //TODO does colour here contradict line 236
+  content: "";
 }
 
 .gi-sitesearch--dynamic[data-collapsed="false"]
