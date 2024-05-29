@@ -169,16 +169,17 @@ Live Chat - accessibility changes
 const liveChatModify = function() {
 	var chatButton = document.getElementById('customLiveChatButton');
 
-	console.log(chatButton);
-	console.log(chatButton.getAttribute('c4a_url'));
+	// This does not work:
+	// console.log(chatButton);
+	// console.log(chatButton.getAttribute('c4a_url'));
 
-	var c4a_url = chatButton.getAttribute('c4a_url');
+	// var c4a_url = chatButton.getAttribute('c4a_url');
 
-	if (c4a_url.includes('DefaultChat')) {
-		console.log('CSC logged in?');
-	} else {
-		console.log('CSC NOT logged in?');
-	}
+	// if (c4a_url.includes('DefaultChat')) {
+	// 	console.log('CSC logged in?');
+	// } else {
+	// 	console.log('CSC NOT logged in?');
+	// }
 
 	chatButton.setAttribute('tabindex', '0');
 	chatButton.setAttribute('alt', 'Chat with us - live chat button');
