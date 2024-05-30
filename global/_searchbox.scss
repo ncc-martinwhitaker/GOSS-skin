@@ -276,3 +276,13 @@ float: left !important;
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top .gi-sitesearch__container::after {
   display: none;
 }
+
+.gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
+  &:focus {
+    transition: none;
+    opacity: 1;
+    background-color: $focus-color;
+    outline-color: #000;
+    box-shadow: none;
+  }
+}
