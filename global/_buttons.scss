@@ -190,18 +190,24 @@
     }
 }
 
-// button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
-//     &:hover {
-//         opacity: 0.7;
-//         box-shadow: none;
-//         text-decoration: underline;
-//     }
-//     &:focus {
-//         box-shadow: none;
-//         outline: #000 solid 2px;
-//         color: #000;
-//     }
-// }
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+    &:hover {
+        box-shadow: none;
+        text-decoration: none;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: #000 solid 2px;
+        text-decoration: none;
+        
+        span {
+            color: #000;
+        }
+        &::before {
+            color: #000;
+        }
+    }
+}
 
 
 /*** End of 3831 ***/
