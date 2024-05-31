@@ -287,3 +287,23 @@ float: left !important;
       z-index: 5;
   }
 }
+
+// 3248 Search box double-click fix 
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top .gi-sitesearch__container {
+  display: flex;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top .gi-sitesearch__container::after {
+  display: none;
+}
+
+.gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
+  &:focus {
+    transition: none;
+    opacity: 1;
+    background-color: $focus-color;
+    outline-color: #000;
+    box-shadow: none;
+  }
+}
