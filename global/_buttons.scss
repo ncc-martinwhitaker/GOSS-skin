@@ -174,7 +174,34 @@
     &:hover {
         text-decoration: underline;
     }
+    &:focus {
+        box-shadow: none;
+        outline: solid #000 2px;
+    }
 }
+
+.template--collectionsobject .collectionsitem__description .gi-disclosure__toggle {
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus {
+        background-color: $focus-color;
+        outline-offset: 0px;
+    }
+}
+
+// button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+//     &:hover {
+//         opacity: 0.7;
+//         box-shadow: none;
+//         text-decoration: underline;
+//     }
+//     &:focus {
+//         box-shadow: none;
+//         outline: #000 solid 2px;
+//         color: #000;
+//     }
+// }
 
 
 /*** End of 3831 ***/
