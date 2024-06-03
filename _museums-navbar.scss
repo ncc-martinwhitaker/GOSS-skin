@@ -337,13 +337,14 @@ header {
         content: "\e800";
         color: #000;
     }
-    .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
-        content: "\e800";
-        color: #fff;
-    }
-    .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
-        width: 40px;
-    }
+    /*** commented out 3/6/24 by KO - 3248 ***/
+    // .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+    //     content: "\e800";
+    //     color: #fff;
+    // }
+    // .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+    //     width: 40px;
+    // }
     .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
         width: calc(100% - 40px);
     }
