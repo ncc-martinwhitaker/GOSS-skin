@@ -50,7 +50,7 @@
 .a-body__link--cta:hover, .a-body__link--btn-primary-std:hover, .a-body__link--btn-primary-std-dwn:hover, .a-body__link--btn-primary-lge:hover, .a-body__link--btn-primary-teal-std:hover, .a-body__link--btn-primary-teal-lge:hover,
 .a-body__link--btn-teal-print-copy:hover {
     cursor: pointer;
-    color: $button-primary-text-color !important;
+    color: $button-primary-text-color;
     box-shadow: inset 0 0 20em rgba(0,0,0,0.2);
     text-decoration: underline;
     border-bottom: 0px !important;
