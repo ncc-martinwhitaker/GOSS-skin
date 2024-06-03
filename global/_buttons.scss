@@ -170,24 +170,28 @@
 
 /*** 3831 ***/
 
-.event__book .cta-link.cta-link--eventresults.cta-link--book {
+.event__book .cta-link.cta-link--eventresults.cta-link--book, a.a-body__link.a-body__link--cta {
     &:hover {
         text-decoration: underline;
     }
     &:focus {
+        transition: none;
         box-shadow: none;
         outline: solid #000 2px;
+        color: #000
     }
 }
 
 .template--collectionsobject .collectionsitem__description .gi-disclosure__toggle {
-    &:hover {
-        text-decoration: underline;
-    }
     &:focus {
         background-color: $focus-color;
         outline-offset: 0px;
+        outline-color: #000;
     }
+}
+
+.template--collectionsobject .collectionsitem__description button:hover[aria-expanded=false]::before {
+    text-decoration: underline;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
@@ -208,6 +212,7 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
         }
     }
 }
+
 
 
 /*** End of 3831 ***/
