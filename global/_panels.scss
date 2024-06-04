@@ -315,18 +315,19 @@ h2.a-panel__title {
   text-decoration: underline;
   text-decoration-thickness: max(1px, .065rem);
   text-underline-offset: .1578em;
-  border: solid transparent 3px;
+  border: none;
+  border-bottom: solid transparent 3px;
 
   &:hover {
     color: $list-panel-link-color-hover;
-    // border-bottom: solid 4px $list-panel-link-color-hover;
-    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-decoration:none;
+    border: none;
+    border-bottom: solid $list-panel-link-color-hover 3px;
   }
 
   &:focus {
     color: #050505;
     background-color: $focus-color;
-    // border-bottom: solid 4px #050505;
     text-decoration: none;
     outline: solid 3px #000;
     border-color: $focus-color;
