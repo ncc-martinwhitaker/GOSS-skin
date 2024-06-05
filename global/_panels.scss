@@ -311,18 +311,17 @@ h2.a-panel__title {
 
 .item.item--article .item__title a {
   color: $list-panel-link-color;
-  // border-bottom: solid 2px $list-panel-link-color;
   text-decoration: underline;
   text-decoration-thickness: max(1px, .065rem);
   text-underline-offset: .1578em;
   border: none;
-  border-bottom: solid transparent 3px;
 
   &:hover {
     color: $list-panel-link-color-hover;
-    text-decoration:none;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, .1875rem, .12em);
+    text-decoration-skip-ink: none;
     border: none;
-    border-bottom: solid $list-panel-link-color-hover 3px;
   }
 
   &:focus {
@@ -330,7 +329,6 @@ h2.a-panel__title {
     background-color: $focus-color;
     text-decoration: none;
     outline: solid 3px #000;
-    border-color: $focus-color;
   }
 }
 
