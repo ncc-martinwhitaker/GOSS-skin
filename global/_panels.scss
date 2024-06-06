@@ -1560,11 +1560,15 @@ h4.stage-link__title  {
       padding-right: 0px;
       padding-left: 0px;
     }
+
   }
 
-  /*.a-panel.a-panel--pt.a-panel--render.a-panel--stage.card__imagecontainer {
-    width: 100%;
-  }*/
+
+  // 3430 - SJEC
+  .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__imagecontainer, .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__imagecontainer .gi-responsiveimage__imagewrapper, .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content .card__imagecontainer .gi-responsiveimage__imagewrapper .gi-responsiveimage__image{
+    max-height: 200px;
+  }
+  // 3430 - SJEC - END
 
 }
 
