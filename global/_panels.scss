@@ -313,6 +313,7 @@ h2.a-panel__title {
   color: $list-panel-link-color;
   text-decoration: underline;
   text-decoration-thickness: max(1px, .065rem);
+  text-decoration-skip-ink: none;
   text-underline-offset: .1578em;
   border: none;
 
@@ -833,6 +834,7 @@ h2.a-panel__title {
       text-decoration: underline;
       text-decoration-thickness: max(1px, .065rem);
       text-underline-offset: .1578em;
+      text-decoration-skip-ink: none;
       border: none;
 
       &:hover {
