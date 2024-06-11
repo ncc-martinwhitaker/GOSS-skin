@@ -200,6 +200,20 @@ li.paging__item a.paging__link {
 
 // Tablist GOSS Tabs
 
-.gi-tabs__tab:hover {
+.gi-tabs__tab.gi-tabs__tab {
+  margin: 0;
+  padding: 10px 20px;
+  border: solid 1px #ccc;
+  background: #fff;
+}
+.gi-tabs__tab.gi-tabs__tab[aria-selected="true"] {
+  background: #fff;
+  border-bottom: 1px #fff solid;
+}
+.gi-tabs__tab.gi-tabs__tab[aria-selected="false"] {
   text-decoration: underline;
+}
+
+.gi-tabs__tab.gi-tabs__tab:hover,.gi-tabs__tab.gi-tabs__tab:focus {
+  text-decoration-thickness: 2px;
 }
