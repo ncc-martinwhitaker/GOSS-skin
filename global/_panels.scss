@@ -154,6 +154,16 @@ Variables to change:
   padding: 32px 20px;
 }
 
+// panel list with related media 
+ul.panel__list.panel__list--relmedia {
+  display: flex;
+  flex-wrap: wrap;
+
+  .panel__item .media-links--related {
+    padding: 15px;
+  }
+}
+
 // stage
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
   padding: 16px 20px;
