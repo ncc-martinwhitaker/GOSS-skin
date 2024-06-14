@@ -38,61 +38,65 @@
 }
 
 @media (min-width: 840px) {
-.template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
-  .container.container--fullwidth {
-    max-width: 1170px; 
+  .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+    .container.container--fullwidth {
+      max-width: 1170px; 
 
-    .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
-      max-width: none;
-    }
-
-    main.maincontent {
-      width: 70%;
-      float: left;
-      clear: none;
-    }
-
-    aside.aside {
-      width: 30%;
-      float: left;
-      clear: right;
-
-      //test removing padding from feature cards - move this to correct css file if this is signed off with promo card work
-      .a-panel--feature .grid__cell--feature .grid__cellwrap {
-          padding: 10px 0;
+      .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
+        max-width: none;
       }
 
-      .a-panel .a-panel__content {
-        padding: 0px;
+      main.maincontent {
+        width: 70%;
+        float: left;
+        clear: none;
       }
 
-      .relateditem {
-        ul.panel__list li.panel__item {
-          width: 100%;
-          background: none;
-          color: $aside-link-color;
+      aside.aside {
+        width: 30%;
+        float: left;
+        clear: right;
+
+        //test removing padding from feature cards - move this to correct css file if this is signed off with promo card work
+        .a-panel--feature .grid__cell--feature .grid__cellwrap {
+            padding: 10px 0;
+        }
+
+        .a-panel .a-panel__content {
           padding: 0px;
+        }
 
-          @media (max-width: 600px) {
+        .relateditem {
+          ul.panel__list li.panel__item {
             width: 100%;
-          }
-
-          &:hover {
             background: none;
-          }
-
-          a {
             color: $aside-link-color;
+            padding: 0px;
+
+            @media (max-width: 600px) {
+              width: 100%;
+            }
 
             &:hover {
-              color: $link-color-darken;
+              background: none;
+            }
+
+            a {
+              color: $aside-link-color;
+
+              &:hover {
+                color: $link-color-darken;
+              }
             }
           }
         }
       }
     }
   }
-}
+
+  body.template--panel.body--no-aside .container.container--fullwidth aside.aside, body.template--list.body--no-aside .container.container--fullwidth aside.aside, .template--blog .container.container--fullwidth aside.aside, body.template--default .container.container--fullwidth aside.aside, body.template--documentsection .container.container--fullwidth aside.aside, body.template--formsservice .container.container--fullwidth aside.aside {
+    width: 100%;
+  }
 }
 
 
