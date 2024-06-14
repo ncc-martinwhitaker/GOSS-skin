@@ -158,11 +158,16 @@ Variables to change:
 ul.panel__list.panel__list--relmedia {
   display: flex;
   flex-wrap: wrap;
+}
 
-  .panel__item .media-links--related {
+.body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relmedia li.panel__item, .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relmedia li.panel__item {
+  width: 50%;
+  
+  .media-links--related {
     padding: 15px;
   }
 }
+
 
 // stage
 .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
