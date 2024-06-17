@@ -1062,8 +1062,16 @@ h2.a-panel__title {
 .item__imagecontainer, .card__imagecontainer, .fa-block__imagecontainer { 
   @include aspect-ratio;
  }
+
+//Override image ratio below for inline standard and large images only - DevOps 3909 
+.a-body__image--standard, .a-body__image--large {
+  .gi-responsiveimage__imagewrapper {
+    width: auto;
+  }
+}
+
 figure.gi-responsiveimage, 
-//.gi-responsiveimage__imagewrapper, //Comment out this line - DevOps 3909 
+.gi-responsiveimage__imagewrapper, 
 .gi-responsiveimage__image {
    width: 100%;  
    height: 100%;
