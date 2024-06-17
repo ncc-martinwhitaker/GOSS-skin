@@ -216,6 +216,7 @@ a.a-body__link.a-body__link--btn-primary-std {
     &:hover {
         text-decoration: underline;
         text-decoration-skip-ink: none;
+        box-shadow: none;
     }
     &:focus {
         background-color: $focus-color;
