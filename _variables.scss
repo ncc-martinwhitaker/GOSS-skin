@@ -54,7 +54,6 @@ $focus-color: #ffdd00;
 $button-panel-color: $teal;
 $button-dark-panel-color: $button-panel-color;
 $button-dark-panel-text-color: #FFFFFF;
-
 $button-primary-text-color: #fff;
 $button-primary-color: #00823b;
 $button-primary-color-hov: darken( $button-primary-color, 20% );
@@ -64,11 +63,8 @@ $button-secondary-color: #fff;
 $button-secondary-color-hov: #424242;
 $button-inverted-secondary-color: #424242;
 $button-inverted-secondary-color-hov: #fff;
-
-// search
 $button-search-color: #fff;
 $button-search-background-color: $teal;
-$search-border-color: #767676;
 
 // component variables
 $header-color: $primary !default;
@@ -81,11 +77,6 @@ $list-panel-link-color-hover: $link-color-darken !default;
 
 $burger-menu-color: #050505 !default;
 
-$breadcrumb-color: #ddd;
-$breadcrumb-text-color: #050505;
-$breadcrumb-border-color: #ccc;
-$breadcrumb-chevron: $breadcrumb-chevron-gray;
-
 $card-border-radius: 0px;
 $panel-backdrop-border-radius: 0px; //base border radius for panel backdrops
 $panel-border-radius: 0px; //base border radius for panel cards (i.e. lists and features) within an individual panel
@@ -95,15 +86,6 @@ $promo-border-radius: 0px; //base border radius for all promo cards on a page
 //$feature-card-border-radius: 0px; //is this the same as feature-panel-border-radius above?
 $rounded-corner-border-radius: 12px; //rounded corner border radius value
 
-$aside-link-color: $link-color;
-
-// FOOTER VARIABLES
-
-$footer-background-color: #dee0e2;
-$footer-color: #000 !default;
-$footer-first-column-count: 2;
-$footer-first-column-width: 75%;
-$footer-border-color: #343434;
 
 // FONT SIZES
 

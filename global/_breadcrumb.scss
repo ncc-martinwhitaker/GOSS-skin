@@ -10,6 +10,11 @@ Variables to change:
   - $breadcrumb-chevron
 */
 
+$breadcrumb-color: #ddd;
+$breadcrumb-text-color: #050505;
+$breadcrumb-border-color: #ccc;
+$breadcrumb-chevron: $breadcrumb-chevron-gray;
+
 .breadcrumb__nav {
   padding: 0px;
   border: solid $breadcrumb-border-color 1px;
