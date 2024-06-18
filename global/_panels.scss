@@ -564,7 +564,7 @@ h2.a-panel__title {
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
-      /*eject below line #2340
+      /*remove below line #2340
       margin-left: 10px;*/
       flex-grow: 2;
     }
@@ -575,6 +575,8 @@ h2.a-panel__title {
 
     .card__imagecontainer {
       margin-bottom: 10px;
+      //add below line #3430
+      overflow: hidden;
 
       figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimage__image {
         max-height: 280px;
