@@ -37,27 +37,28 @@ $breadcrumb-chevron-blue: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.
 
 /*** COLOURS ***/
 
-// norfolk.gov.uk
 $primary: #FFFFFF;
-$teal: #006666;
+
 $link-color: #4840e3;
 $link-color-darken: darken( $link-color, 20% ); // 20% darken
-$lgrey: #ccc;
-
 $dark-theme-link-color: #00D1FF; // is this electric blue?
 $dark-theme-link-color-darken: darken( $dark-theme-link-color, 10% );
 
+$teal: #006666;
+$lgrey: #ccc;
+
 $focus-color: #ffdd00;
+// use #050505 for black focus colour
 
 // buttons
-$button-panel-color: #066;
+$button-panel-color: $teal;
 $button-dark-panel-color: $button-panel-color;
 $button-dark-panel-text-color: #FFFFFF;
 
 $button-primary-text-color: #fff;
 $button-primary-color: #00823b;
 $button-primary-color-hov: darken( $button-primary-color, 20% );
-$button-primary-teal-color: #006666;
+$button-primary-teal-color: $teal;
 $button-primary-teal-color-hov: darken( $button-primary-teal-color, 20% );
 $button-secondary-color: #fff;
 $button-secondary-color-hov: #424242;
