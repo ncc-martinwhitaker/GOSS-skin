@@ -172,8 +172,14 @@
     padding-right: 25px; //fix for sticky   
 }
 
-body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-heading, body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-intro, body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-body:has(.gi-jumplist){
+body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-heading, body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-intro, body.template--default.body--no-aside .container.container--fullwidth .maincontent .a-body:has(.gi-jumplist) {
     max-width: 1170px; // TEMP 
+}
+
+body.template--default.body--sticky-jumplinks.body--no-aside .container.container--fullwidth {
+    .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
+        max-width: 1170px;
+      }
 }
 
 .a-body ul li.gi-jumplist__listitem { 
