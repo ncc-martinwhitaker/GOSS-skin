@@ -101,7 +101,7 @@
 
 
 
-.body--no-aside {
+body.body--no-aside, body.template--default.body--no-aside {
   .container.container--fullwidth {
     .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
       max-width: 750px;
