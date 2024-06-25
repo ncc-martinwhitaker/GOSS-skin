@@ -38,7 +38,7 @@
 }
 
 @media (min-width: 840px) {
-  .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+  .template--panel.body--aside, .template--list.body--aside, .template--blog, body.template--default, .template--documentsection, .template--formsservice {
     .container.container--fullwidth {
       max-width: 1170px; 
 
@@ -94,14 +94,14 @@
     }
   }
 
-  body.template--panel.body--no-aside .container.container--fullwidth aside.aside, body.template--list.body--no-aside .container.container--fullwidth aside.aside, .template--blog .container.container--fullwidth aside.aside, body.template--default .container.container--fullwidth aside.aside, body.template--documentsection .container.container--fullwidth aside.aside, body.template--formsservice .container.container--fullwidth aside.aside {
+  body.template--panel.body--no-aside .container.container--fullwidth aside.aside, body.template--list.body--no-aside .container.container--fullwidth aside.aside, body.template--blog.body--no-aside .container.container--fullwidth aside.aside, body.template--documentsection.body--no-aside .container.container--fullwidth aside.aside, body.template--formsservice.body--no-aside .container.container--fullwidth aside.aside {
     width: 100%;
   }
 }
 
 
 
-.body--no-aside {
+body.body--no-aside, body.template--default.body--no-aside {
   .container.container--fullwidth {
     .maincontent .a-heading, .maincontent .a-intro, .maincontent .a-body {
       max-width: 750px;
