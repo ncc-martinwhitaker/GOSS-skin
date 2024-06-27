@@ -197,3 +197,44 @@ li.paging__item a.paging__link {
     outline-color: #000;
   }
 }
+
+// Tablist GOSS Tabs
+
+.gi-tabs__tab.gi-tabs__tab {
+  margin: 0;
+  padding: 10px 20px;
+  border: solid 1px #ccc;
+  background: #fff;
+}
+.gi-tabs__tab.gi-tabs__tab[aria-selected="true"] {
+  background: #fff;
+  border-bottom: 1px #fff solid;
+  text-decoration: none;
+}
+.gi-tabs__tab.gi-tabs__tab[aria-selected="false"] {
+  text-decoration: underline;
+}
+
+.gi-tabs__tab.gi-tabs__tab:hover,.gi-tabs__tab.gi-tabs__tab:focus {
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: auto; 
+}
+.icmform button.gi-tabs__tab:focus {
+  outline: 3px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 -2px #fd0, 0 3px #0b0c0c;
+  background-color: #fd0;
+  text-decoration: none;
+  /* text-underline-offset: 6px; */
+}
+.gi-tabs__tab.gi-tabs__tab {
+  margin: 0;
+  padding: 10px 20px;
+  border: solid 1px #ccc;
+  background: #fff;
+}
+
+.icmform .gi-tabs__panel.gi-tabs__panel:focus{
+  background-color: transparent;
+  outline: none;
+  text-decoration: revert;
+}
