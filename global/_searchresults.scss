@@ -6,6 +6,34 @@
     margin-bottom: 16px;
 }
 
+/** 3187 - Search result headings/links focus **/
+a.searchresults__itemlink {
+
+    &:hover:focus > .searchresults__itemtitle {
+        text-decoration: none;
+    }
+
+    &:hover>.searchresults__itemtitle {
+        //TODO REFACTOR HOVER - same hover effect used for DevOps 3819
+        text-decoration: underline;
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+    }
+
+    &:focus {
+        outline: 3px solid rgba(0,0,0,0);
+        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        text-decoration: none;
+
+        .searchresults__itemtitle {
+            color: #000000;
+        }
+    }
+}
+/** End of 3187 - Search result headings/links focus **/
+
+
 /* 2656 - Blog or News page results formatting */
 
 .blog-details .a-details .nvp--blog-author .nvp__label, .blog-details .a-details .nvp--blog-categories .nvp__label  {
