@@ -170,28 +170,75 @@
 
 /*** 3831 ***/
 
-.event__book .cta-link.cta-link--eventresults.cta-link--book, a.a-body__link.a-body__link--cta {
+.icmform button.btn, input.icminput.icminput--button.icminput--script {
+    &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        outline: none;
+    }
+    &:focus {
+        background-color: $focus-color;
+        color: #000;
+        box-shadow: 0 2px 0 #000;
+        outline: none;
+        transition: none;
+    }
+}
+
+.icmform button.btn {
+    &:hover {
+        box-shadow: none;
+    }
+    &:focus {
+        text-decoration: none;
+        box-shadow: 0 2px 0 #000;
+    }
     &:hover {
         text-decoration: underline;
     }
+}
+
+a.a-body__link.a-body__link--btn-primary-std {
     &:focus {
-        transition: none;
+      background-color: $focus-color;
+      box-shadow: 0 2px 0 #000;
+      outline: none;
+      transition: none;
+      text-decoration: none;
+    }
+    &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+    }
+  }
+
+.event__book .cta-link.cta-link--eventresults.cta-link--book, a.a-body__link.a-body__link--cta {
+    &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
         box-shadow: none;
-        outline: solid #000 2px;
-        color: #000
+    }
+    &:focus {
+        background-color: $focus-color;
+        color: #000;
+        box-shadow: 0 2px 0 #000;
+        outline: none;
+        transition: none;
     }
 }
 
 .template--collectionsobject .collectionsitem__description .gi-disclosure__toggle {
     &:focus {
         background-color: $focus-color;
-        outline-offset: 0px;
-        outline-color: #000;
+        border-color: $focus-color;
+        outline: none;
+        box-shadow: 0 2px 0 #000;
     }
 }
 
-.template--collectionsobject .collectionsitem__description button:hover[aria-expanded=false]::before {
+.template--collectionsobject .collectionsitem__description button:hover[aria-expanded=false]::before, .template--collectionsobject .collectionsitem__description button:hover[aria-expanded=true]::before {
     text-decoration: underline;
+    text-decoration-skip-ink: none;
 }
 
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {

@@ -78,7 +78,7 @@
         outline: 3px solid #fd0;
         //outline-offset: 0;
         box-shadow: inset 0 0 0 2px;
-        text-decoration: none !important; 
+        text-decoration: none !important; // refactoring - remove this and re-test?
     }
     textarea:focus, select:focus, input.icmpassword:focus { 
 background: #fff; 
