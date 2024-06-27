@@ -140,6 +140,19 @@
     height: 32px;
 }
 
+/** 2403 - inline document links **/
+.a-body__inner .media-link {
+    display: inline;
+    margin-left: 0px;
+
+    .media-link__text::before {
+        position: static;
+        padding-right: 5px;
+        display: inline;
+    }
+}
+/** End of 2403 - inline document links **/
+
 // ANCHOR PAGE SPECIFIC
 
 /*.body--sticky-jumplinks .container {
