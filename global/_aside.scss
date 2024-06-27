@@ -3,9 +3,9 @@
   aside.aside {
 
     padding-top: 40px;
-    display: block;
+    display: none; // display noen to make accessible
     float: left; 
-    width:100%; 
+    width:100%;  
 
     .relateditem {
 
