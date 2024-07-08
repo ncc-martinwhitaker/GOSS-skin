@@ -3,7 +3,7 @@
   aside.aside {
 
     padding-top: 40px;
-    display: none; // display noen to make accessible
+    display: block; /**3576 - revert changes //none; // display noen to make accessible**/
     float: left; 
     width:100%;  
 
