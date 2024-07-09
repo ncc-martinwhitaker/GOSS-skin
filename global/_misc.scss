@@ -203,12 +203,12 @@ li.paging__item a.paging__link {
 .gi-tabs__tab.gi-tabs__tab {
   margin: 0;
   padding: 10px 20px;
-  border: solid 1px #ccc;
-  background: #fff;
+  border: solid 1px $grey-3;
+  background: $white;
 }
 .gi-tabs__tab.gi-tabs__tab[aria-selected="true"] {
-  background: #fff;
-  border-bottom: 1px #fff solid;
+  background: $white;
+  border-bottom: 1px $white solid;
   text-decoration: none;
 }
 .gi-tabs__tab.gi-tabs__tab[aria-selected="false"] {
@@ -221,16 +221,16 @@ li.paging__item a.paging__link {
 }
 .icmform button.gi-tabs__tab:focus {
   outline: 3px solid rgba(0, 0, 0, 0);
-  box-shadow: 0 -2px #fd0, 0 3px #0b0c0c;
-  background-color: #fd0;
+  box-shadow: 0 -2px $focus-color, 0 3px $black;
+  background-color: $focus-color;
   text-decoration: none;
   /* text-underline-offset: 6px; */
 }
 .gi-tabs__tab.gi-tabs__tab {
   margin: 0;
   padding: 10px 20px;
-  border: solid 1px #ccc;
-  background: #fff;
+  border: solid 1px $grey-3;
+  background: $white;
 }
 
 .icmform .gi-tabs__panel.gi-tabs__panel:focus{

@@ -23,11 +23,11 @@ a.searchresults__itemlink {
 
     &:focus {
         outline: 3px solid rgba(0,0,0,0);
-        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        box-shadow: 0 -2px $focus-color, 0 4px $black;
         text-decoration: none;
 
         .searchresults__itemtitle {
-            color: #000000;
+            color: $black;
         }
     }
 }
