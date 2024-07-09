@@ -28,7 +28,7 @@
 }
 
 .gi-sitesearch--top .searchform__inputtxt {
-  border: solid 1px $search-border-color;
+  border: solid 1px $grey-2;
 }
 
 .header .searchform__inputtxt.searchform__inputtxt--sitesearch {
@@ -40,12 +40,12 @@
 
   &:focus {
     outline: solid $focus-color 2px;
-    border: solid 3px #000;
+    border: solid 3px $black;
 
   }
 
   &::placeholder {
-    color: #000000;
+    color: $black;
   }
 }
 
@@ -124,7 +124,7 @@
 
 .gi-sitesearch--dynamic[data-collapsed="false"] {
   width: 60%;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .gi-sitesearch--top .gi-sitesearch__searchfield,
@@ -147,7 +147,7 @@
 
 .gi-sitesearch--dynamic[data-collapsed="false"] .btn--search, .gi-sitesearch--dynamic[data-collapsed="true"] .btn--search {
   &::after {
-    color: #fff;
+    color: $white;
     /*content: "\e800  Search";*/
     font-size: 16px;
     margin: 8px;
@@ -172,7 +172,7 @@ span.btn__text.gi-sitesearch__buttontext.accessibility {
   display: inline;
   position: relative;
   background-color: transparent;
-  color: #FFFFFF;
+  color: $white;
   font-weight: normal;
   font-family: icons, sans-serif;
   font-size: 16px;  
@@ -261,7 +261,7 @@ float: left !important;
 }
 
 .btn--search::after { //TODO does colour here contradict line 161
-    color: #ffffff;
+    color: $white;
 }
 
 
@@ -303,7 +303,7 @@ float: left !important;
     transition: none;
     opacity: 1;
     background-color: $focus-color;
-    outline-color: #000;
+    outline-color: $black;
     box-shadow: none;
   }
 }

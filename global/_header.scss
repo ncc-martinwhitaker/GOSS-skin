@@ -30,7 +30,7 @@ Variables to change:
   }
 
   &:focus {
-    color: #050505;
+    color: $black;
     background-color: $focus-color;
   }
 }
@@ -47,7 +47,7 @@ Variables to change:
   }
 
   &:focus {
-    color: #050505;
+    color: $black;
     background-color: $focus-color;
   }
 }
@@ -136,7 +136,7 @@ font-size: 1.125rem
 /* 2538 fix greedy menu colours  */
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
 
-  &:hover, &:focus {color: #000; background: $focus-color;}
+  &:hover, &:focus {color: $black; background: $focus-color;}
 }
 .gi-sitenav__link[aria-expanded="true"]{
   background: $focus-color; 
@@ -160,11 +160,11 @@ div.gi-sitenav--mainnav-lvl2 {
 }
 
 .gi-sitenav__list.gi-sitenav__list--lvl2 {
-  background-color: #fff;
-  color: #050505;
+  background-color: $white;
+  color: $black;
 
   .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
-    color: #050505;
+    color: $black;
   }
 }
 

@@ -1,6 +1,6 @@
 
 .dialog__close, .dialog__closefallbackinner {
-  color: #fff;
+  color: $white;
    background-color: transparent;
    
 }
@@ -21,13 +21,13 @@
 
 .dialog--imagegalleryinline .dialog__content {
     min-height: calc(100vh - 36px);
-    background: #222;
+    background: $grey-0; // #222
     display: flex;
     flex-direction: column;
 }
 
 h2.dialog__header, .h2.dialog__header {
-    color: #fff;
+    color: $white;
 }
 
 .dialog--imagegalleryinline .dialog__body {
@@ -35,7 +35,7 @@ h2.dialog__header, .h2.dialog__header {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-        p {color: #fff;}
+        p {color: $white;}
 }
 
 .gi-carousel--imagegalleryinline {
@@ -53,7 +53,8 @@ h2.dialog__header, .h2.dialog__header {
 
 
 .gi-carousel--imagegalleryinline .gi-carousel__links {    padding: 0px;
-    background: #333; color: #fff;
+    background: $grey-0; // #333
+    color: $white; 
     border-radius: 6px;
     overflow: hidden; position: relative;
     bottom: 10px;}
@@ -64,7 +65,7 @@ h2.dialog__header, .h2.dialog__header {
     border: 0px;
     background-color: transparent;
     margin: 0;
-    color: #fff;
+    color: $white;
 }
 
 
@@ -76,16 +77,16 @@ h2.dialog__header, .h2.dialog__header {
     width: 44px;
     height: 44px;
     transform: translateY(-50%);
-    border: 1px solid #ccc;
+    border: 1px solid $grey-3;
     border-radius: 32px;
-    background-color: #fff;
+    background-color: $white;
 
     &:hover {
-        color: #000;
-        background-color: #000;
+        color: $black;
+        background-color: $black;
     }
     &:focus {
-        color: #000;
+        color: $black;
         background-color: $focus-color;
     }
 
@@ -96,8 +97,8 @@ h2.dialog__header, .h2.dialog__header {
 
 
 .gi-carousel__play:hover, .gi-carousel__play:focus, .gi-carousel__previous:hover, .gi-carousel__previous:focus, .gi-carousel__next:hover, .gi-carousel__next:focus {
-    color: #fff  !important;
-    background: #000 !important;
+    color: $white  !important;
+    background: $black !important;
     outline: 2px solid $focus-color; 
 }
 
@@ -119,15 +120,15 @@ h2.dialog__header, .h2.dialog__header {
 
 .gi-carousel__links {
     
-    .gi-carousel__itemlink {     border-radius: 0; display: inline-block; border-right: 1px solid #ccc;}
-    .gi-carousel__itemlinkbtn--selected {background-color: #006666;  }
+    .gi-carousel__itemlink {     border-radius: 0; display: inline-block; border-right: 1px solid $grey-3;}
+    .gi-carousel__itemlinkbtn--selected {background-color: $teal;  }
 
 }
 
 .gi-carousel__itemlinkbtn:focus::before {
     content: "";
    
-    box-shadow: 0 0 0 0px #0064ff;
+    box-shadow: 0 0 0 0px #0064ff; // remove???
     outline: 2px solid $focus-color;
    
     border-radius: 0;
@@ -135,7 +136,7 @@ h2.dialog__header, .h2.dialog__header {
 
 
 .gi-carousel__itemlinkbtn:hover, .gi-carousel__itemlinkbtn:focus {
-    color: #000;
+    color: $black;
     background-color: $focus-color !important;
 }
 
