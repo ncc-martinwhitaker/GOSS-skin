@@ -6,6 +6,8 @@
 //-------------------------------------------
 */
 
+
+
 .a-body__link--cta, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn,
 .a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-std, .a-body__link--btn-primary-teal-lge, .a-body__link--btn-secondary, .a-body__link--btn-inverted-secondary,
 .a-body__link--btn-teal-print-copy {
@@ -62,11 +64,11 @@ a.a-body__link--btn-teal-print-copy:hover {
 
 a.a-body__link--cta:focus, a.a-body__link--btn-primary-std:focus, a.a-body__link--btn-primary-std-dwn:focus, a.a-body__link--btn-primary-lge:focus, a.a-body__link--btn-primary-teal-std:focus, a.a-body__link--btn-primary-teal-lge:focus,
 a.a-body__link--btn-teal-print-copy:focus {
-    color: #050505 !important;
+    color: $black !important;
     background-color: $focus-color;
     border-color: $focus-color;
     outline: none;
-    box-shadow: 0 2px 0 #000;
+    box-shadow: 0 2px 0 $black;
     transition: none;
     text-decoration: none;
 }
@@ -91,11 +93,11 @@ a.a-body__link.a-body__link--btn-secondary:hover {
 }
 
 a.a-body__link.a-body__link--btn-secondary:focus {
-    color: #050505;
+    color: $black;
     background-color: $focus-color;
     border-color: $focus-color;
     outline: none;
-    box-shadow: 0 2px 0 #000;
+    box-shadow: 0 2px 0 $black;
     transition: none;
     text-decoration: none;
 }
@@ -117,11 +119,11 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
 }
 
 a.a-body__link.a-body__link--btn-inverted-secondary:focus {
-    color: #050505;
+    color: $black;
     background-color: $focus-color;
     border-color: $focus-color;
     outline: none;
-    box-shadow: 0 2px 0 #000;
+    box-shadow: 0 2px 0 $black;
     transition: none;
     text-decoration: none;
 }
@@ -181,23 +183,23 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
 /*** 3487 - My request buttons ***/
 
 .cta-link--assigned {
-    background-color: #00823b;
+    background-color: $green;
     border-radius: 6px;
 }
 
 .cta-link--viewallrequests {
-    background-color: #e5e5e5;
-    color: #000000;
+    background-color: $grey-5;
+    color: $black;
     border-radius: 6px;
 }
 
 .cta-link--back {
-    background-color: #FFFFFF;
-    color: #4840e3;
+    background-color: $white;
+    color: $link-color;
     &:hover {
-        color: #1f18a5;
+        color: $link-color-darken;
         text-decoration: underline;
-        background-color: #FFFFFF;
+        background-color: $white;
         box-shadow: none;
     }
 }
@@ -212,7 +214,7 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
 
 /* 2499 buttons for Coroners Form  */
 .btn--form.btn--secondary {
-    background-color: #424242;
+    background-color: $grey-1;
 }
 
 
@@ -227,8 +229,8 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
     }
     &:focus {
         background-color: $focus-color;
-        color: #000;
-        box-shadow: 0 2px 0 #000;
+        color: $black;
+        box-shadow: 0 2px 0 $black;
         outline: none;
         transition: none;
     }
@@ -236,15 +238,15 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
 
 input.icminput.icminput--button.icminput--script.icminput--contrast {
     &:hover {
-        background-color: #000;
+        background-color: $black;
         box-shadow: none;
         text-decoration: underline;
     }
     &:focus {
         text-decoration: underline;
         background-color: $focus-color;
-        color: #000;
-        box-shadow: 0 2px 0 #000;
+        color: $black;
+        box-shadow: 0 2px 0 $black;
         outline: none;
         transition: none;
     }
@@ -256,7 +258,7 @@ input.icminput.icminput--button.icminput--script.icminput--contrast {
     }
     &:focus {
         text-decoration: none;
-        box-shadow: 0 2px 0 #000;
+        box-shadow: 0 2px 0 $black;
         transition: none;
     }
     &:hover {
@@ -267,7 +269,7 @@ input.icminput.icminput--button.icminput--script.icminput--contrast {
 a.a-body__link.a-body__link--btn-primary-std {
     &:focus {
       background-color: $focus-color;
-      box-shadow: 0 2px 0 #000;
+      box-shadow: 0 2px 0 $black;
       outline: none;
       transition: none;
       text-decoration: none;
@@ -286,8 +288,8 @@ a.a-body__link.a-body__link--btn-primary-std {
     }
     &:focus {
         background-color: $focus-color;
-        color: #000;
-        box-shadow: 0 2px 0 #000;
+        color: $black;
+        box-shadow: 0 2px 0 $black;
         outline: none;
         transition: none;
     }
@@ -304,7 +306,7 @@ a.a-body__link.a-body__link--cta.a-body__link--external {
         background-color: $focus-color;
         border-color: $focus-color;
         outline: none;
-        box-shadow: 0 2px 0 #000;
+        box-shadow: 0 2px 0 $black;
         transition: none;
     }
 }
@@ -321,15 +323,15 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
     }
     &:focus {
         box-shadow: none;
-        outline: #000 solid 2px;
+        outline: $black solid 2px;
         text-decoration: none;
         transition: none;
         
         span {
-            color: #000;
+            color: $black;
         }
         &::before {
-            color: #000;
+            color: $black;
         }
     }
 }

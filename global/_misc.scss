@@ -117,34 +117,34 @@ iframe {
 //Highlight boxes
 .alert--none, .alert--contrast.alert--warn {
   h2, h3, h4, h5, h6 {
-    color: #000;
+    color: $black;
   }
 }
 .alert--contrast.alert--none, .alert--contrast.alert--error, .alert--contrast.alert--info {
   h2, h3, h4, h5, h6 {
-    color: #fff;
+    color: $white;
   }
 }
 .alert--info {
   h2, h3, h4, h5, h6 {
-    color: #31708f;
+    color: $pale-blue;
   }
 }
 .alert--warn {
   h2, h3, h4, h5, h6 {
-    color: #8a6d3b;
+    color: $pale-orange;
   }
 }
 .alert--error {
   h2, h3, h4, h5, h6 {
-    color: #a94442;
+    color: $pale-red;
   }
 }
 p.gi-info {
-  color: #000000;
+  color: $black;
 }
 p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
-  color: #FFFFFF;
+  color: $white;
 }
 
 
@@ -188,13 +188,13 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 
 li.paging__item a.paging__link {
   &:hover {
-    color: #000;
+    color: $black;
     text-decoration: underline;
   }
   &:focus {
     box-shadow: none;
     text-decoration: underline;
-    outline-color: #000;
+    outline-color: $black;
   }
 }
 
@@ -203,12 +203,12 @@ li.paging__item a.paging__link {
 .gi-tabs__tab.gi-tabs__tab {
   margin: 0;
   padding: 10px 20px;
-  border: solid 1px #ccc;
-  background: #fff;
+  border: solid 1px $grey-3;
+  background: $white;
 }
 .gi-tabs__tab.gi-tabs__tab[aria-selected="true"] {
-  background: #fff;
-  border-bottom: 1px #fff solid;
+  background: $white;
+  border-bottom: 1px $white solid;
   text-decoration: none;
 }
 .gi-tabs__tab.gi-tabs__tab[aria-selected="false"] {
@@ -221,16 +221,16 @@ li.paging__item a.paging__link {
 }
 .icmform button.gi-tabs__tab:focus {
   outline: 3px solid rgba(0, 0, 0, 0);
-  box-shadow: 0 -2px #fd0, 0 3px #0b0c0c;
-  background-color: #fd0;
+  box-shadow: 0 -2px $focus-color, 0 3px $black;
+  background-color: $focus-color;
   text-decoration: none;
   /* text-underline-offset: 6px; */
 }
 .gi-tabs__tab.gi-tabs__tab {
   margin: 0;
   padding: 10px 20px;
-  border: solid 1px #ccc;
-  background: #fff;
+  border: solid 1px $grey-3;
+  background: $white;
 }
 
 .icmform .gi-tabs__panel.gi-tabs__panel:focus{

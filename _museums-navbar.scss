@@ -1,6 +1,6 @@
 #headermainmenu {
-    background: #fff;
-    border-bottom: 1px solid #ebebeb;
+    background: $white;
+    border-bottom: 1px solid $grey-5;
 }
 
 .header {
@@ -85,7 +85,7 @@ header {
     button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
         opacity: 100%;
         background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        color: $white;
         box-shadow: none;
 
         &:after {
@@ -99,10 +99,10 @@ header {
     opacity: 100%;
     box-shadow: none;
     background-color: $focus-color !important;
-    color: #000 !important;
+    color: $black !important;
 }
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus:after {
-    color: #000;
+    color: $black;
     text-decoration: underline;
 }
 
@@ -126,7 +126,7 @@ header {
 
 .gi-sitenav--lvl2 {
     
-    background: #fff;
+    background: $white;
     columns: 2;
     left: 50%;
     transform: translateX(-50%);
@@ -190,7 +190,7 @@ header {
 
           &:focus {
             outline: none;
-            color: #000;
+            color: $black;
           }
       }
   }
@@ -203,27 +203,28 @@ header {
 */
 
 .gi-mobilenav--mobilemenu {
-    background: #f2f2f2;}
-    .sitemenu__link {
-        color: #000;
-        text-decoration: none;
-        display: none; 
-    }
-    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
-        color: #000 !important;
-    }
+    background: $grey-5;
+}
+.sitemenu__link {
+    color: $black;
+    text-decoration: none;
+    display: none; 
+}
+.submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
+    color: $black !important;
+}
 
     
 
-    .utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
-        color: #000 !important;
-        &:hover {
-            color: #4840E3 !important;
-            text-decoration: underline;
+.utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
+    color: $black !important;
+    &:hover {
+        color: $link-color !important;
+        text-decoration: underline;
 
-        }
-    
     }
+
+}
 
 
     .sitemenu__btnimage {
@@ -231,12 +232,12 @@ header {
     }
    
     .sitemenu--mobile .submenu {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black;
     }
 
 
     .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $black;
     }
 
 
@@ -286,7 +287,7 @@ header {
 }
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
-    color: #000;
+    color: $black;
 }
 
 
@@ -335,7 +336,7 @@ header {
 
     .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
         content: "\e800";
-        color: #000;
+        color: $black;
     }
     /*** commented out 3/6/24 by KO - 3248 ***/
     // .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {

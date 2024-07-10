@@ -21,8 +21,8 @@
                 text-decoration: underline;
             }
             &:focus {
-                color: #050505;
-                outline: solid 2px #050505;
+                color: $black;
+                outline: solid 2px $black;
                 outline-offset: -2px;
                 text-decoration: none;
             }
@@ -64,8 +64,8 @@
 
         .cta-link {
             display: inline;
-            background-color: #FFFFFF;
-            color: #066; //TODO what variable should this be?
+            background-color: $white;
+            color: $teal;
             text-align: right;
             font-weight: 600;
             font-size: 1em;
@@ -73,10 +73,10 @@
             margin-right: 35px;
 
             &:hover {
-                background-color: #FFFFFF;
+                background-color: $white;
                 //text-decoration: underline;
-                color: #004037;
-                border-bottom: 2px solid #004037;
+                color: $button-primary-teal-color-hov;
+                border-bottom: 2px solid $button-primary-teal-color-hov;
                 box-shadow: none;
             }
             &:after {
