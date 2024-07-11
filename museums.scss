@@ -144,3 +144,27 @@ $footer-border-color: #00235d;
 2765 - museums navbar mobile
 -------------------------------------------------------------------------------------------
 */
+
+
+/*
+-------------------------------------------------------------------------------
+4066 - Event search specific styling
+-------------------------------------------------------------------------------
+*/
+
+.template--eventsearch {
+    .a-heading.a-heading--eventsearch {
+        h1.a-heading__title {
+            color: #fff;
+        }
+    }
+}
+
+.event-search {
+    .event-search__label {
+        color: #fff;
+    }
+    .event-search__options {
+      background: linear-gradient(to right, rgba(0, 35, 93, 0.8), rgba(0, 35, 93, 0.8)), url('https://www.museums.norfolk.gov.uk/image/33803/museums-event-search-background/original.jpg');
+    }
+}
