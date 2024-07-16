@@ -179,6 +179,17 @@
     float: left; 
 }
 
+span.gi-jumplist__titletext{
+font-size: $h2-font-size;
+font-weight: $font-weight-bold;
+color: $black;
+@extend h2;
+
+}
+
+
+
+
 .body--sticky-jumplinks .gi-jumplist {
    width: 30% !important;
     position: sticky; 
