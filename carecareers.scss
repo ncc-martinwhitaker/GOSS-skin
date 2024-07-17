@@ -22,7 +22,8 @@ $search-border-color: #FFFFFF;
 $button-panel-color: #A4A4A4;
 $button-dark-panel-color: $button-panel-color;
 
-$footer-background-color: #A4A4A4;
+// $footer-background-color: #A4A4A4;
+$footer-background-color: linear-gradient(90deg, rgba(4,64,125,1) 0%, rgba(1,35,93,1) 100%);
 $footer-color: #fff;
 $footer-border-color: #A4A4A4;
  
@@ -144,3 +145,52 @@ $footer-border-color: #A4A4A4;
 2765 - museums navbar mobile
 -------------------------------------------------------------------------------------------
 */
+
+/*
+-------------------------------------------------------------------------------
+4086 - Footer
+-------------------------------------------------------------------------------
+*/
+
+footer.footer {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+    .grid--footer>.grid__cell:last-child {
+        padding: 30px 0px 0px 10px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 110px;
+        width: 100%;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    > .container {
+        &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -60px;
+            height: calc(100% + 100px);
+            width: 200px;
+            background-color: #021d71;
+            transform: rotate(-8deg);
+        }
+    }
+}
+
+footer.footer * {
+    color: $white;
+}
+.utilitymenu--bottom .utilitymenu__link {
+    color: $white;
+}
+
+
+  
