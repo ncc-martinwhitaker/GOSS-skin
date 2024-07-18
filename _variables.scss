@@ -1,8 +1,4 @@
-// VARIABLES
-///////////////////////////////////////////////
-/// 
-/// 
-///
+/*** VARIABLES ***/
 
 html {
   font-size: 16px;
@@ -20,9 +16,6 @@ html * {
 
 // chevron right: background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
 
-// 
-
-
 $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='gray'/%3E%3C/g%3E%3C/svg%3E";
 $string2: str-replace($string, ' ', '%20');
 $breadcrumb-chevron-gray: url($string2);
@@ -35,8 +28,6 @@ $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='2
 $string2: str-replace($string, ' ', '%20');
 $breadcrumb-chevron-blue: url($string2);
 
-
-
 /* OLD CRUMBS 
 $breadcrumb-chevron-gray: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='gray'/%3E%3C/svg%3E");
 $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
@@ -44,62 +35,63 @@ $breadcrumb-chevron-blue: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.
 */
 
 
-// COLOR SYSTEM
+/*** COLOURS ***/
 
-// americanlibrary.uk/
-$americanlibrary-red: #af142e;
-$americanlibrary-blue: #25317a;
+$focus-color: #fd0;
+// use #050505 for black focus colour
 
-// norfolk.gov.uk
-$primary: #FFFFFF;
-$teal: #006666;
+// COLOURS: 
+
+$white: #fff;
+$black: #050505;
+
+$grey-0: #343434;
+$grey-1: #424242;
+$grey-2: #767676;
+$grey-3: #ccc;
+$grey-4: #ddd;
+$grey-5: #e5e5e5;
+
+$pale-blue: #31708f;
+$pale-orange: #8a6d3b;
+$pale-red: #a94442;
+
+$teal: #066;
+$green: #00823b;
+
+$focus-color: #fd0;
+
 $link-color: #4840e3;
-$link-color-darken: darken( $link-color, 20% ); // 20% darken
-$lgrey: #ccc;
-
-$dark-theme-link-color: #00D1FF; // is this electric blue?
+$link-color-darken: darken( $link-color, 20% );
+$dark-theme-link-color: #00D1FF;
 $dark-theme-link-color-darken: darken( $dark-theme-link-color, 10% );
 
-// archives.norfolk.gov.uk/
-$archives-blue: #036eb2;
-
-$focus-color: #ffdd00;
-
 // buttons
-$button-panel-color: #066;
+$button-panel-color: $teal;
 $button-dark-panel-color: $button-panel-color;
-$button-dark-panel-text-color: #FFFFFF;
-
-$button-primary-text-color: #fff;
-$button-primary-color: #00823b;
+$button-dark-panel-text-color: $white;
+$button-primary-text-color: $white;
+$button-primary-color: $green;
 $button-primary-color-hov: darken( $button-primary-color, 20% );
-$button-primary-teal-color: #006666;
+$button-primary-teal-color: $teal;
 $button-primary-teal-color-hov: darken( $button-primary-teal-color, 10% );
-$button-secondary-color: #fff;
-$button-secondary-color-hov: #424242;
-$button-inverted-secondary-color: #424242;
-$button-inverted-secondary-color-hov: #fff;
-
-// search
-$button-search-color: #fff;
+$button-secondary-color: $white;
+$button-secondary-color-hov: $grey-1;
+$button-inverted-secondary-color: $grey-1;
+$button-inverted-secondary-color-hov: $white;
+$button-search-color: $white;
 $button-search-background-color: $teal;
-$search-border-color: #767676;
 
 // component variables
-$header-color: $primary !default;
-$header-text-color: #050505 !default;
+$header-color: $white !default;
+$header-text-color: $black !default;
 $header-utilitymenu-color: $link-color !default;
 $header-mobilemenu-text-alignment: left !default;
 
-$list-panel-link-color: #050505 !default;
+$list-panel-link-color: $black !default;
 $list-panel-link-color-hover: $link-color-darken !default;
 
-$burger-menu-color: #050505 !default;
-
-$breadcrumb-color: #ddd;
-$breadcrumb-text-color: #050505;
-$breadcrumb-border-color: #ccc;
-$breadcrumb-chevron: $breadcrumb-chevron-gray;
+$burger-menu-color: $black !default;
 
 $card-border-radius: 0px;
 $panel-backdrop-border-radius: 0px; //base border radius for panel backdrops
@@ -110,15 +102,6 @@ $promo-border-radius: 0px; //base border radius for all promo cards on a page
 //$feature-card-border-radius: 0px; //is this the same as feature-panel-border-radius above?
 $rounded-corner-border-radius: 12px; //rounded corner border radius value
 
-$aside-link-color: $link-color;
-
-// FOOTER VARIABLES
-
-$footer-background-color: #dee0e2;
-$footer-color: #000 !default;
-$footer-first-column-count: 2;
-$footer-first-column-width: 75%;
-$footer-border-color: #343434;
 
 // FONT SIZES
 

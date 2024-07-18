@@ -11,19 +11,19 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:hover {
-  background-color: #eee;
+  background-color: $grey-5;
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:focus { 
   border: solid $focus-color 4px;
-  outline: 4px solid #050505;
+  outline: 4px solid $black;
   outline-offset: 0px;
   position: relative;
   z-index: 1;
 
   &::after {
-    border-bottom: solid #050505 3px; 
-    color: #050505;
+    border-bottom: solid $black 3px; 
+    color: $black;
     background-color: $focus-color;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
   }
@@ -31,8 +31,8 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
   &::after {
-    border-bottom: solid #050505 3px;
-    color: #050505;
+    border-bottom: solid $black 3px;
+    color: $black;
     background-color: $focus-color;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
   }
@@ -99,8 +99,8 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   .gi-disclosure__toggle:focus {
     background-color: $focus-color;
     border-color: $focus-color;
-    outline: solid 4px #050505;
-    color: #050505;
+    outline: solid 4px $black;
+    color: $black;
   }
 
 
@@ -142,8 +142,8 @@ button.btn--disclosure-toggle {
 
   &:focus {
     background-color: $focus-color;
-    color: #000;
-    box-shadow: 0 2px 0 #000;
+    color: $black;
+    box-shadow: 0 2px 0 $black;
     outline: none;
     transition: none;
     text-decoration: none;

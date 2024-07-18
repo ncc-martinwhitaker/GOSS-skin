@@ -52,8 +52,8 @@
         }
         &:focus {
             text-decoration: underline;
-            color: #000;
-            outline: solid 2px #000;
+            color: $black;
+            outline: solid 2px $black;
         }
     }
 
@@ -72,7 +72,7 @@
             }
             &:focus {
                 text-decoration: underline;
-                outline: solid 2px #000;
+                outline: solid 2px $black;
 
                 .document-pagination__pagetitle {
                     text-decoration: underline;

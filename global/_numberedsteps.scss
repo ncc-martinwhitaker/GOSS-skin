@@ -16,21 +16,21 @@ body {
     width: 33px;
     height: 33px;
     text-align: center;
-    border: solid 3px #bfc1c3;
+    border: solid 3px $grey-3; // #bfc1c3
     position: absolute;
     border-radius: 16px;
     z-index: 2;
     padding: 4px 0px 0px 0px;
     left: 0px;
-    background: #fff;
-    color: #212529;
+    background: $white;
+    color: $grey-0; // #212529
   }
   
   .numbered-step:after {
     content: "";
     display: block;
     width: 2px;
-    background: #bfc1c3;
+    background: $grey-3; // #bfc1c3
     position: absolute;
     left: 16px;
     height: 100%;
