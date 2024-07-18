@@ -35,6 +35,11 @@ Variables to change:
   border-radius: $panel-border-radius;
 }
 
+//4088 - no-backdrop MM
+.a-panel--pt.a-panel--hasbackground.a-panel--no-backdrop .a-panel__content {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .a-panel.a-panel--pt .a-panel__content .a-panel__list {
   margin: 20px 20px 0px 20px;
 
@@ -1342,6 +1347,11 @@ figure.gi-responsiveimage,
 // contrast between text and background image is accessible
 
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black {
+
+  &.a-panel--no-backdrop .a-panel__content {
+    background-color: rgba(0, 0, 0, 0); //4088 
+  }
+  
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -1415,6 +1425,11 @@ figure.gi-responsiveimage,
 }
 
 .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black {
+
+  &.a-panel--no-backdrop .a-panel__content {
+    background-color: rgba(0, 0, 0, 0); //4088
+  }
+
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -1426,6 +1441,10 @@ figure.gi-responsiveimage,
 
 
 .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--blog {
+
+  &.a-panel--no-backdrop .a-panel__content { //4088
+    background-color: rgba(0, 0, 0, 0);
+  }
 
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
