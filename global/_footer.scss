@@ -22,6 +22,13 @@ footer.footer-bottom {
 
 .utilitymenu--bottom .utilitymenu__link {
   color: $footer-color;
+  &:hover {
+    /** 3832 - Text links state indicator standardisation **/
+    @extend .a-link-hover;
+  }
+  &:focus {
+    @extend .a-link-focus;
+  }
 }
 
 .grid--footer>.grid__cell:first-child {
