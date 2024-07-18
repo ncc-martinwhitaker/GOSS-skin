@@ -23,14 +23,16 @@ $button-panel-color: #00235d;
 $button-dark-panel-color: $button-panel-color;
 
 $footer-background-color: #00235d;
-$footer-color: #fff;
+$footer-color: $white;
 $footer-border-color: #00235d;
- 
+
 @import 
 "global-import";
 
 @import 
 "museums-navbar";
+
+
 
 /*
 -------------------------------------------------------------------------------------------
