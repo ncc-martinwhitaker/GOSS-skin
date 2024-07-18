@@ -7,6 +7,20 @@ Variables to change:
   - $card-border-radius
 */
 
+//4089 - white-text MM
+.a-panel--white-text { 
+  &.a-panel--pt .a-panel__title, &.a-panel--pt .a-panel__summary, &.a-panel--pt .a-panel__body, &.a-panel.a-panel--hasbackground .a-panel__title {
+    color: $white;
+  }
+
+  a {
+    color: $dark-theme-link-color;
+    &:hover {
+      color: $dark-theme-link-color-darken;
+    }
+  }
+}
+
 .a-panel.a-panel--carousel .a-panel__title {
   color: $white;
 }
