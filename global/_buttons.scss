@@ -10,7 +10,7 @@
 
 .a-body__link--cta, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn,
 .a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-std, .a-body__link--btn-primary-teal-lge, .a-body__link--btn-secondary, .a-body__link--btn-inverted-secondary,
-.a-body__link--btn-teal-print-copy {
+.a-body__link--btn-teal-print-copy, button.a-body__link--btn-teal-print-copy {
     padding: 5px 35px 5px 12px;
     box-sizing: border-box;
     margin: 0 10px 10px 0;
@@ -18,13 +18,14 @@
     position: relative;
     display: inline-block;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
     font-weight: 600;
     text-decoration: none;
     transition: all .5s cubic-bezier(.25,.8,.25,1);
 }
 
-.a-body__link--btn-teal-print-copy {
+.a-body__link--btn-teal-print-copy, button.a-body__link--btn-teal-print-copy {
     padding: 5px 12px 5px 12px;
     span {
         font-size: 1rem;
@@ -40,7 +41,7 @@ a.a-panel__link, a.a-body__link--cta, a.a-body__link--btn-primary-std, a.a-body_
     border-bottom: 0px;
 }
 
-a.a-body__link--btn-primary-teal-std, a.a-body__link--btn-primary-teal-lge, a.a-body__link--btn-teal-print-copy {
+a.a-body__link--btn-primary-teal-std, a.a-body__link--btn-primary-teal-lge, a.a-body__link--btn-teal-print-copy, button.a-body__link--btn-teal-print-copy {
     background-color: $button-primary-teal-color;
     color: $button-primary-text-color !important;
 }
@@ -50,7 +51,7 @@ a.a-body__link--btn-primary-lge, a.a-body__link--btn-primary-teal-lge {
 }
 
 a.a-body__link--cta:hover, a.a-body__link--btn-primary-std:hover, a.a-body__link--btn-primary-std-dwn:hover, a.a-body__link--btn-primary-lge:hover, a.a-body__link--btn-primary-teal-std:hover, a.a-body__link--btn-primary-teal-lge:hover,
-a.a-body__link--btn-teal-print-copy:hover {
+a.a-body__link--btn-teal-print-copy:hover, button.a-body__link--btn-teal-print-copy:hover {
     cursor: pointer;
     color: $button-primary-text-color;
     //box-shadow: inset 0 0 20em rgba(0,0,0,0.2);
@@ -58,12 +59,12 @@ a.a-body__link--btn-teal-print-copy:hover {
     border-bottom: 0px !important;
 }
 a.a-body__link--btn-primary-teal-std:hover, a.a-body__link--btn-primary-teal-lge:hover,
-a.a-body__link--btn-teal-print-copy:hover {
+a.a-body__link--btn-teal-print-copy:hover, button.a-body__link--btn-teal-print-copy:hover {
     background-color: $button-primary-teal-color-hov;
 }
 
 a.a-body__link--cta:focus, a.a-body__link--btn-primary-std:focus, a.a-body__link--btn-primary-std-dwn:focus, a.a-body__link--btn-primary-lge:focus, a.a-body__link--btn-primary-teal-std:focus, a.a-body__link--btn-primary-teal-lge:focus,
-a.a-body__link--btn-teal-print-copy:focus {
+a.a-body__link--btn-teal-print-copy:focus, button.a-body__link--btn-teal-print-copy:focus {
     color: $black !important;
     background-color: $focus-color;
     border-color: $focus-color;
@@ -71,9 +72,13 @@ a.a-body__link--btn-teal-print-copy:focus {
     box-shadow: 0 2px 0 $black;
     transition: none;
     text-decoration: none;
+
+    svg {
+        fill: #050505;
+    }
 }
 a.a-body__link--cta:hover, a.a-body__link--btn-primary-std:hover, a.a-body__link--btn-primary-std-dwn:hover, a.a-body__link--btn-primary-lge:hover, a.a-body__link--btn-primary-teal-std:hover, a.a-body__link--btn-primary-teal-lge:hover,
-a.a-body__link--btn-teal-print-copy:hover {
+a.a-body__link--btn-teal-print-copy:hover, button.a-body__link--btn-teal-print-copy:hover {
     text-decoration: underline;
 }
 
