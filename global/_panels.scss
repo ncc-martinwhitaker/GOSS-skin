@@ -1061,6 +1061,13 @@ h2.a-panel__title {
 
 // IMAGE RATIO 
 
+//4119 - no image aspect ratio fix
+.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio {
+  .card__imagecontainer {
+    aspect-ratio: auto;
+  }
+}
+
 .item__imagecontainer, .card__imagecontainer, .fa-block__imagecontainer { 
   @include aspect-ratio;
  }
