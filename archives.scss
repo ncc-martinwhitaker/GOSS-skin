@@ -131,6 +131,11 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     &:hover {color: #fff;}
 }
 
+//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
+.a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
+    display: block;
+}
+
 @media (max-width: 1170px) {
 
     div.gi-sitenav--mainnav-lvl2 {
