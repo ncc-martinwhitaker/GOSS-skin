@@ -1,19 +1,7 @@
-// Breadcrumb styling
-
-// Header
-
-/*
-Variables to change:
-  - $breadcrumb-color (background colour)
-  - $breadcrumb-text-color
-  - $breadcrumb-border-color
-  - $breadcrumb-chevron
-*/
-
-$breadcrumb-color: $grey-4;
-$breadcrumb-text-color: $black;
-$breadcrumb-border-color: $grey-3;
-$breadcrumb-chevron: $breadcrumb-chevron-gray;
+$breadcrumb-color: $grey-4 !default;
+$breadcrumb-text-color: $black !default;
+$breadcrumb-border-color: $grey-3 !default;
+$breadcrumb-chevron: $breadcrumb-chevron-gray !default;
 
 .breadcrumb__nav {
   padding: 0px;
