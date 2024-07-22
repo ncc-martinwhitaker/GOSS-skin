@@ -157,7 +157,7 @@ footer.footer {
     overflow: hidden;
     padding-bottom: 10px;
     
-    box-shadow: 0px -110px rgba(0,0,0,0.2) inset;
+    box-shadow: 0px -110px rgba(0,0,0,0.3) inset;
 
     .grid--footer>.grid__cell:last-child {
         padding: 30px 0px 0px 10px;
@@ -166,10 +166,10 @@ footer.footer {
         content: "";
         position: absolute;
         bottom: -20px;
-        left: -60px;
+        left: -100px;
         height: calc(100% + 100px);
         width: 200px;
-        opacity: 0.5;
+        opacity: 0.7;
         background-color: #021d71;
         transform: rotate(-8deg);
     }
