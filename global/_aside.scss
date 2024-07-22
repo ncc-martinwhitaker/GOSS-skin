@@ -32,7 +32,7 @@ $aside-link-color: $link-color;
 
           &:hover {
             color: $link-color-darken;
-            @extend .a-link-hover;
+            @extend .a-link-hover; 
           }
         }
       }
