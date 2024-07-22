@@ -76,10 +76,10 @@ $footer-border-color: #A4A4A4;
 
 
 
-//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
+/*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
 .a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
     display: block;
-}
+}*/
 
 @media (max-width: 1300px)
 {
