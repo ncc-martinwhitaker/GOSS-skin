@@ -1080,8 +1080,8 @@ h2.a-panel__title {
 
 // IMAGE RATIO 
 
-//4119 - no image aspect ratio fix
-.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio {
+//4119/4213 - no image aspect ratio fix
+.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio, .card--no-image-aspect-ratio {
   .card__imagecontainer {
     aspect-ratio: auto;
   }
