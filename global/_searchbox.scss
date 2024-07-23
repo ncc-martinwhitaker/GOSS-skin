@@ -1,3 +1,6 @@
+$search-border-color: $grey-2 !default;
+$button-search-color: $white !default;
+
 // [data-collapsible="true"] = always stays the same
 // [data-collapsed="false"] = search box OPEN
 // [data-collapsed="true"] = search box CLOSED
@@ -28,7 +31,7 @@
 }
 
 .gi-sitesearch--top .searchform__inputtxt {
-  border: solid 1px $grey-2;
+  border: solid 1px $search-border-color;
 }
 
 .header .searchform__inputtxt.searchform__inputtxt--sitesearch {
@@ -172,7 +175,7 @@ span.btn__text.gi-sitesearch__buttontext.accessibility {
   display: inline;
   position: relative;
   background-color: transparent;
-  color: $white;
+  color: $button-search-color;
   font-weight: normal;
   font-family: icons, sans-serif;
   font-size: 16px;  

@@ -1,0 +1,326 @@
+#headermainmenu {
+    background: $white;
+    border-bottom: 1px solid $grey-5;
+}
+
+.header {
+    padding: 0px;
+
+    > .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+nav.gi-sitenav.gi-sitenav--desktop {
+    padding: 5px 0px;
+}
+
+.gi-sitelogo--header {
+    padding: 15px 0px;
+    justify-content: space-between;
+}
+  
+.gi-sitenav__link.gi-sitenav__link--lvl1 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 18px;
+    padding-right: 20px; 
+    margin: 0px;
+}
+.gi-sitenav__link[aria-haspopup="true"]::after {
+    padding-top: 3px;
+    font-size: 1rem; 
+    margin-left: 7px;
+}
+
+.header__menu {
+    width: auto;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gi-sitelogo--header { 
+    float: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.gi-sitenav__list.gi-sitenav__list--lvl1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.gi-sitenav__item.gi-sitenav__item--lvl1:first-child {
+    .gi-sitenav__link.gi-sitenav__link--lvl1 {
+        padding-left: 0px;
+    }
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    // margin-top: -2px;
+    // margin-left: 20px;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
+}
+
+
+.utilitymenu--top { 
+    // margin-left: auto;
+    padding-bottom: 0px;
+    float: none;
+}
+
+.utilitymenu--top .utilitymenu__link {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    @include ani;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        @extend .btn-hover;
+    }
+}
+
+
+.gi-sitenav--lvl2 {
+    
+    background: $white;
+    columns: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+.gi-sitenav__item--lvl1:first-child {
+
+    .gi-sitenav--lvl2 {
+        left: 0;
+        transform: translateX(0);
+    }
+
+}
+.gi-sitenav__item--lvl1:last-child {
+
+    .gi-sitenav--lvl2 {
+        left: auto;
+        transform: translateX(0);
+        right: 0;
+    }
+
+}
+
+/*.breadcrumb__nav {
+    padding: 0;
+    border: solid #fff 1px;
+    background-color: #fff; 
+}*/
+  
+  
+  .utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text {
+      border: 0px;
+      display: inline;
+      padding: 5px 10px;
+  }
+  /*.breadcrumb .breadcrumb__crumb a {
+      color: #066;
+  
+      &:hover { 
+          color: #4840E3;
+          text-decoration: underline;
+      }
+  }*/
+  
+  .gi-sitenav--lvl2 {
+      padding: 15px 5px;
+  }
+  
+  .gi-sitenav__item--lvl2 {
+      border-bottom: 0; padding: 10px 10px;
+      margin: 0 0px;
+      display: inline-block;
+      width: 100%;
+      a {
+          font-weight: 600;
+          text-align: left;
+
+          &:focus {
+            outline: none;
+            color: $black;
+          }
+      }
+  }
+
+
+/*
+-------------------------------------------------------------------------------------------
+2765 - copied from schools.scss for the museums mobile navbar
+-------------------------------------------------------------------------------------------
+*/
+
+.gi-mobilenav--mobilemenu {
+    background: $grey-5;
+}
+.sitemenu__link {
+    color: $black;
+    text-decoration: none;
+    display: none; 
+}
+.submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
+    color: $black !important;
+}
+
+    
+
+.utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
+    color: $black !important;
+    &:hover {
+        color: $link-color !important;
+        text-decoration: underline;
+
+    }
+
+}
+
+
+    .sitemenu__btnimage {
+        filter: invert(1);
+    }
+   
+    .sitemenu--mobile .submenu {
+        border-bottom: 1px solid $black;
+    }
+
+
+    .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
+        border-bottom: 1px solid $black;
+    }
+
+
+
+@media (max-width: 1300px)
+{
+    .gi-sitenav__link[aria-haspopup=true]::after {
+        
+        margin-left: 5px;
+    }
+
+    .gi-sitenav__link.gi-sitenav__link--lvl1 {
+       
+        padding: 12px 12px;
+    }
+
+    .gi-sitenav__list.gi-sitenav__list--lvl1 {
+        justify-content: space-around;
+    }
+
+}
+
+
+
+@media (max-width: 1050px) {
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: none;
+    }
+    .header__menu .utilitymenu--top {
+        display: block;
+    }
+}
+
+/*.gi-mobilenav--mobilemenu { 
+    top: 170px!important;  
+}*/
+
+.gi-sitelogo, .gi-sitelogo__link {
+   
+    width: 280px;
+    padding-bottom: 15px;
+}
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+    width: 100%;
+    float: left;
+}
+
+.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+    color: $black;
+}
+
+
+@media (max-width: 900px) {
+
+    .header {  
+        > .container {
+            padding-bottom: 20px;
+        }
+    }
+
+    .gi-sitelogo--header {
+        justify-content: flex-start;
+    }
+  
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: block;
+        top: 20px;
+    }
+
+    .header__menu {
+        width: 100%;
+    }
+
+    #headermainmenu, .header__menu .utilitymenu--top {
+        display: none;
+        width: 100%;
+    }
+    
+    /*
+    .gi-mobilenav--mobilemenu { 
+        top: 65px !important;
+    }*/
+    
+    .gi-sitelogo, .gi-sitelogo__link {
+        
+        width: 100px;
+    }
+    
+    .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+        width: 100%; //formely 100% - 168px
+        float: left;
+
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+        content: "\e800";
+        color: $black;
+    }
+    
+    .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
+        width: calc(100% - 40px);
+    }
+} 
+
+@media (min-width: 820px) {
+  .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+      display: block;
+  }
+}
+
+        /*
+-------------------------------------------------------------------------------------------
+2765 - museums navbar mobile
+-------------------------------------------------------------------------------------------
+*/
