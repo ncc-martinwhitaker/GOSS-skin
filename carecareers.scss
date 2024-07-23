@@ -1,155 +1,198 @@
 @import "global/functions";
 @import "variables";
 
-$header-color: #A4A4A4;
-$header-text-color: #fff;
-$header-utilitymenu-color: #A4A4A4;
+$carecareers_button_text_green: rgb(18,73,34);
+$carecareers_green: #9DCC47;
+$carecareers_blue: #177EB0;
+$carecareers_grey: rgb(60,60,59);
 
-$burger-menu-color: #fff;
+$header-color: #ffffff; // Column_B
+$header-text-color: #000000; // Column_C
+$header-utilitymenu-color: #177EB0; // Column_D
 
-$breadcrumb-color: #f6f6f6;
-$breadcrumb-text-color: #A4A4A4;
-$breadcrumb-border-color: #f6f6f6;
+$burger-menu-color: $carecareers_button_text_green; // Column_E
 
-$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='%2300235d'/%3E%3C/g%3E%3C/svg%3E";
-$string2: str-replace($string, ' ', '%20');
+$header-mobilemenu-text-alignment: left !default; //Column_F
+$breadcrumb-color: #eeefef;  // Column_G
+$breadcrumb-text-color: #000000; // Column_H
+$breadcrumb-border-color: #f6f6f6; // Column_I
+$breadcrumb-chevron: $breadcrumb-chevron-black; // Column_J
 
-$breadcrumb-chevron: url($string2);
+$search-border-color: #ccc ; // Column_K
+$button-search-color : $carecareers_button_text_green; // magnifying glass icon
+$button-search-background-color: $carecareers_green; // Column_R
 
-$button-search-background-color: #334f7d;
-$search-border-color: #FFFFFF;
+$button-panel-color: $carecareers_green; // Column_S
+$button-panel-text-color: darken( $carecareers_green, 20% ); // Column_T
+$button-dark-panel-text-color: $carecareers_green;  // Column_U
+$button-dark-panel-color: #050505;  // Column_V
 
-$button-panel-color: #A4A4A4;
-$button-dark-panel-color: $button-panel-color;
+$button-primary-color: $carecareers_green;
+$button-primary-color-hov: darken( $carecareers_green, 20% );
+$button-primary-text-color: $carecareers_button_text_green;
 
-// $footer-background-color: #A4A4A4;
-$footer-background-color: linear-gradient(90deg, rgba(4,64,125,1) 0%, rgba(1,35,93,1) 100%);
-$footer-color: #fff;
+$button-secondary-color: $carecareers_blue;
+$button-secondary-color-hov: #fff;
+$button-inverted-secondary-color: #fff;
+$button-inverted-secondary-color-hov: #3c3c3c;
+
 $footer-border-color: #A4A4A4;
- 
+$footer-background-color: linear-gradient(90deg, rgba(4,64,125,1) 0%, rgba(1,35,93,1) 100%); // Column_L
+$footer-color: #ffffff; // Column_M
+
 @import 
 "global-import";
 
-@import 
-"museums-navbar";
+@import
+"global/navbar";
 
-/*
--------------------------------------------------------------------------------------------
-2765 - copied from schools.scss for the museums mobile navbar
--------------------------------------------------------------------------------------------
-*/
+/*====================================================================================
+Header completed
+====================================================================================*/
+// pill button
+.utilitymenu--top .utilitymenu__link {
+    background-color: $header-utilitymenu-color;
+    color: #fff;
+    border-radius: 15px;
+    border: 0;
 
-.gi-mobilenav--mobilemenu {
-    background: #f2f2f2;}
-    .sitemenu__link {
-        color: #000;
-        text-decoration: none;
-        display: none; 
+    &:hover {
+        background-color: $header-utilitymenu-color;
+        @extend .btn-hover;
+        color: #fff;
     }
-    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
-        color: #000 !important;
-    }
+}
+// pill button end
 
-    
+.sitemenu__btn--haschildren::after { color: black;}
 
-    .utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
-        color: #000 !important;
-        &:hover {
-            color: #4840E3 !important;
-            text-decoration: underline;
-
-        }
-    
-    }
-
-    .sitemenu__btnimage {
-        filter: invert(1);
-    }
-   
-    .sitemenu--mobile .submenu {
-        border-bottom: 1px solid #000;
-    }
-
-
-    .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
-        border-bottom: 1px solid #000;
-    }
-
-
-
-/*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
-.a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
-    display: block;
-}*/
-
-@media (max-width: 1300px)
-{
-    .gi-sitenav__link[aria-haspopup=true]::after {
-        
-        margin-left: 5px;
-    }
-
-    .gi-sitenav__link.gi-sitenav__link--lvl1 {
-       
-        padding: 12px 12px;
-    }
-
-    .gi-sitenav__list.gi-sitenav__list--lvl1 {
-        justify-content: space-around;
-    }
-
+// seperator line in header above menu
+#headermainmenu {
+    border-top: solid 1px #d2d2d2;
 }
 
- 
-@media (max-width: 1050px)
-{
-    .gi-sitelogo--header {
-        flex-wrap: wrap;
-    }
-
-
-
-#headermainmenu, .utilitymenu--top {
-    display: none;
-}
-
-.gi-mobilenav--mobilemenu { 
-    top: 145px!important; 
-  
-}
-
+// logo size
 .gi-sitelogo, .gi-sitelogo__link {
-   
-    width: 280px;
-    padding-bottom: 15px;
+    width: 106px;
+    padding-bottom: 5px;
 }
 
-.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    width: 100%;
-    float: left;
-}
- 
+/*====================================================================================
+Header completed
+====================================================================================*/
 
-}
-
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
-    color: #000;
-}
-
-
-@media (min-width: 820px) {
-
-    .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
-        display: block;
+.card__actions .cta-link--stage, .a-panel--pt.a-panel--stage .a-panel__link {
+    color: $carecareers_button_text_green;
+    &:hover {
+        color: white;
     }
-    
-    } 
+}
 
-    /*
--------------------------------------------------------------------------------------------
-2765 - museums navbar mobile
--------------------------------------------------------------------------------------------
-*/
+/*====================================================================================
+Button shapes
+====================================================================================*/
+
+/* secondary buttons rounded */
+.a-body__link--cta, .a-body__link--btn-primary-std, .a-body__link--btn-primary-std-dwn,
+.a-body__link--btn-primary-lge, .a-body__link--btn-primary-teal-std, .a-body__link--btn-primary-teal-lge,
+.a-body__link--btn-secondary, .a-body__link--btn-inverted-secondary
+{
+    border-radius: 30px;
+}
+
+/* default template button - more pill shaped */
+.a-panel .a-panel__content .a-panel__link {
+    border-radius: 30px;
+}
+
+/*====================================================================================
+Panel Button shapes
+====================================================================================*/
+/* panel button full width */
+
+.a-panel.a-panel--pt.a-panel--stage .card__actions {
+    align-self:inherit;
+
+}
+
+.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage {
+    text-align:center;
+    color: $carecareers_button_text_green;
+    border-radius: 15px;
+    padding: 14px;
+}
+
+/*====================================================================================
+search template button settings
+====================================================================================*/
+
+// search template pill right-end
+.gi-sitesearch--pt .gi-sitesearch__container .gi-sitesearch__searchtoggle .gi-sitesearch__button--search
+    {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+/*====================================================================================
+cta and other in-page fake buttons hover colour
+====================================================================================*/
+
+a.a-body__link--cta:hover, a.a-body__link--btn-primary-std:hover, a.a-body__link--btn-primary-std-dwn:hover, a.a-body__link--btn-primary-lge:hover
+{
+    color: white;
+}
+
+/*====================================================================================
+teal button?!
+====================================================================================*/
+
+a.a-body__link--btn-primary-teal-std, 
+a.a-body__link--btn-primary-teal-lge {
+    background-color: $carecareers_button_text_green;
+    color: white !important;
+}
+
+a.a-body__link--btn-primary-teal-std:hover, 
+a.a-body__link--btn-primary-teal-lge:hover {
+    background-color: darken($carecareers_button_text_green, 10% );
+    color: white !important;
+}
+
+
+/*====================================================================================
+Panel/Link-Panel Button colours
+====================================================================================*/
+
+.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage:hover {
+    color: white;
+}
+
+
+.a-panel__linkwrap:hover .a-panel__link--pt, .a-panel__linkwrap:focus .a-panel__link--pt, .a-panel__link--related:hover {
+    color: white;
+ }
+
+
+
+/*====================================================================================
+Search button shenanigans
+====================================================================================*/
+
+ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
+    background-color: darken( $carecareers_green, 20% );
+}
+
+.gi-sitesearch__button--search:hover span.btn__text.gi-sitesearch__buttontext.accessibility {
+    color: white;
+}
+
+.btn--search:hover:before {
+    color: white;
+}
+
+.care-careers-search #customSearchSubmit:hover {
+    color: white;
+}
 
 /*
 -------------------------------------------------------------------------------
@@ -188,6 +231,3 @@ footer.footer * {
 .utilitymenu--bottom .utilitymenu__link {
     color: $white;
 }
-
-
-  
