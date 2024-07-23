@@ -164,6 +164,37 @@ $(document).ready(function() {
 	  $(".gi-jumplist").prependTo(".a-body__inner");
 	}
 
+	// CONTACT TEMPLATE PAGE 
+	if( $('.template--contact').length )         // Check if contact page
+	{
+	$(".grid__cell--contact-image").appendTo(".grid--contact"); 
+	  $("aside.aside").appendTo("#maincontent > .container");
+	  $(".a-intro--contact").remove();
+	  $(".nvp__label--contact-name").text('Contact');
+	  $(".nvp__label--contact-jobtitle").text('Position');
+	  $(".panel--relarticles").remove();
+	  $(".contactlist--right").appendTo(".contactlist--left").parent(); 
+
+	  $(".nvp__label--contact-links").parent().appendTo(".contactlist--left").parent(); 
+
+
+	  $(".grid__cell--right, .grid__cell--social").remove();
+
+
+
+
+
+	  $("span.nvp__value").each(function(){
+		if (!$(this).text().trim().length) {
+			$(this).parent.remove();
+		}
+	});
+
+
+	}
+	
+
+
 });
 
 
