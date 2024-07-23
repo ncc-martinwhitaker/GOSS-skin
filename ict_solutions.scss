@@ -18,6 +18,11 @@ $footer-color: #fff;
 @import 
 "global-import";
 
+/*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
+.a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
+  display: block;
+}*/
+
 @media (max-width: 1050px)
 {
   .gi-mobilenav--mobilemenu {

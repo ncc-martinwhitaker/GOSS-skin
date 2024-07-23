@@ -7,6 +7,20 @@ Variables to change:
   - $card-border-radius
 */
 
+//4089 - white-text MM
+.a-panel--white-text { 
+  &.a-panel--pt .a-panel__title, &.a-panel--pt .a-panel__summary, &.a-panel--pt .a-panel__body, &.a-panel.a-panel--hasbackground .a-panel__title {
+    color: $white;
+  }
+
+  a {
+    color: $dark-theme-link-color;
+    &:hover {
+      color: $dark-theme-link-color-darken;
+    }
+  }
+}
+
 .a-panel.a-panel--carousel .a-panel__title {
   color: $white;
 }
@@ -19,6 +33,11 @@ Variables to change:
 .a-panel--pt.a-panel--parallax .a-panel__content
 {
   border-radius: $panel-border-radius;
+}
+
+//4088 - no-backdrop MM
+.a-panel--pt.a-panel--hasbackground.a-panel--no-backdrop .a-panel__content {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .a-panel.a-panel--pt .a-panel__content .a-panel__list {
@@ -1061,6 +1080,13 @@ h2.a-panel__title {
 
 // IMAGE RATIO 
 
+//4119/4213 - no image aspect ratio fix
+.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio, .card--no-image-aspect-ratio {
+  .card__imagecontainer {
+    aspect-ratio: auto;
+  }
+}
+
 .item__imagecontainer, .card__imagecontainer, .fa-block__imagecontainer { 
   @include aspect-ratio;
  }
@@ -1321,6 +1347,11 @@ figure.gi-responsiveimage,
 // contrast between text and background image is accessible
 
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--backdrop-black {
+
+  &.a-panel--no-backdrop .a-panel__content {
+    background-color: rgba(0, 0, 0, 0); //4088 
+  }
+  
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -1394,6 +1425,11 @@ figure.gi-responsiveimage,
 }
 
 .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark, .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black {
+
+  &.a-panel--no-backdrop .a-panel__content {
+    background-color: rgba(0, 0, 0, 0); //4088
+  }
+
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -1405,6 +1441,10 @@ figure.gi-responsiveimage,
 
 
 .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--document, .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--blog {
+
+  &.a-panel--no-backdrop .a-panel__content { //4088
+    background-color: rgba(0, 0, 0, 0);
+  }
 
   .a-panel__content {
     background-color: rgba(0, 0, 0, 0.7);
