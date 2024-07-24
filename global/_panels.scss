@@ -2006,12 +2006,14 @@ h4.stage-link__title  {
   .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
     position: absolute;
     top: -100px;
-    left: 20px;
+    left: 0px;
     width: calc(100% - 40px);
     height: calc(100% - 30px);
 
     img.gi-responsiveimage__image {
-      overflow: visible;
+      overflow: clip;
+      width: 100%;
+      height: 100%;
     }
   }
 }
