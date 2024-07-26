@@ -2005,16 +2005,28 @@ h4.stage-link__title  {
 
   .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
     position: absolute;
-    top: -100px;
-    left: 0px;
+    top: -24%;
+    left: 20px;
     width: calc(100% - 40px);
-    height: calc(100% - 30px);
+    height: 100%;
+    max-width: none !important;
 
     img.gi-responsiveimage__image {
-      overflow: clip;
+      overflow: visible;
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
+  }
+}
+
+.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list .grid__cell.grid__cell--list {
+  margin-top: 60px;
+}
+
+@media (min-width: 520px) {
+  .grid--list.grid--1col .item__imagecontainer {
+    width: 100%;
   }
 }
 
