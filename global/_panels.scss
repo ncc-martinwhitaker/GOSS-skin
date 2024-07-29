@@ -1989,7 +1989,7 @@ h4.stage-link__title  {
 -------------------------------------------------------------------------------
 */
 
-.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid {
   padding-top: 20px;
   overflow: visible;
 
@@ -2020,7 +2020,53 @@ h4.stage-link__title  {
   }
 }
 
-.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list .grid__cell.grid__cell--list {
+.a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid {
+  padding-top: 20px;
+  overflow: visible;
+
+  .grid__cellwrap .fa-block {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.12),0 0 10px rgba(0,0,0,0.12);
+
+    .fa-block__content .fa-block__details {
+      padding-top: 45px;
+    }
+  }
+
+  .fa-block .fa-block__imagecontainer {
+    overflow: visible;
+    max-height: none;
+  }
+
+  .fa-block .fa-block__imagecontainer figure.gi-responsiveimage.gi-responsiveimage--fa-block {
+    position: relative;
+  }
+
+  .fa-block .fa-block__imagecontainer picture.gi-responsiveimage__imagewrapper {
+    position: absolute;
+    top: -10%;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 100%;
+    max-width: none !important;
+    background-color: transparent;
+
+    img.gi-responsiveimage__image {
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: transparent;
+    }
+  }
+}
+
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid.grid--list .grid__cell.grid__cell--list {
+  margin-top: 60px;
+}
+
+.a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid .grid__cell.grid__cell--parallax {
   margin-top: 60px;
 }
 
