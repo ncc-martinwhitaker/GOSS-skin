@@ -1989,7 +1989,7 @@ h4.stage-link__title  {
 -------------------------------------------------------------------------------
 */
 
-.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
   padding-top: 20px;
   overflow: visible;
 
@@ -2020,13 +2020,15 @@ h4.stage-link__title  {
   }
 }
 
-.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list .grid__cell.grid__cell--list {
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list .grid__cell.grid__cell--list {
   margin-top: 60px;
 }
 
 @media (min-width: 520px) {
-  .grid--list.grid--1col .item__imagecontainer {
-    width: 100%;
+  .a-panel--overflow-card {
+    .grid--list.grid--1col .item__imagecontainer {
+      width: 100%;
+    }
   }
 }
 
