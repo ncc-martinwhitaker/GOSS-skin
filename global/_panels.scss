@@ -1990,7 +1990,7 @@ h4.stage-link__title  {
 */
 
 .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid {
-  padding-top: 20px;
+  padding-top: 80px;
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
@@ -2021,7 +2021,7 @@ h4.stage-link__title  {
 }
 
 .a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid {
-  padding-top: 20px;
+  padding-top: 80px;
   overflow: visible;
 
   .grid__cellwrap .fa-block {
@@ -2066,7 +2066,7 @@ h4.stage-link__title  {
 }
 
 .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid.grid--list .grid__cell.grid__cell--list {
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 .a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid .grid__cell.grid__cell--parallax {
@@ -2079,6 +2079,15 @@ h4.stage-link__title  {
       width: 100%;
     }
   }
+
+  .a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid {
+    padding-top: 20px;
+  }
+
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid {
+    padding-top: 20px;
+  }
+
 }
 
 
