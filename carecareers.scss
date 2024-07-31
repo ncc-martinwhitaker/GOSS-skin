@@ -242,4 +242,13 @@ footer.footer * {
     background-color: $white;
     color: $black;
     border: solid $black 2px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+    }
 }
