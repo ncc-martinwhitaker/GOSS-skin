@@ -231,3 +231,15 @@ footer.footer * {
 .utilitymenu--bottom .utilitymenu__link {
     color: $white;
 }
+
+/*
+-------------------------------------------------------------------------------
+4095 - Form buttons
+-------------------------------------------------------------------------------
+*/
+
+.icmform button.btn.cta-link--edit {
+    background-color: $white;
+    color: $black;
+    border: solid $black 2px;
+}
