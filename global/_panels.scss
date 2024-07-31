@@ -1989,8 +1989,10 @@ h4.stage-link__title  {
 -------------------------------------------------------------------------------
 */
 
-.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid {
-  padding-top: 80px;
+
+// list panels
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+  padding-top: 10px;
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
@@ -2020,6 +2022,11 @@ h4.stage-link__title  {
   }
 }
 
+.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid.grid--list .grid__cell.grid__cell--list {
+  margin-top: 110px;
+}
+
+// parallax panels
 .a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid {
   padding-top: 80px;
   overflow: visible;
@@ -2065,13 +2072,11 @@ h4.stage-link__title  {
   }
 }
 
-.a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .grid.grid--list .grid__cell.grid__cell--list {
+.a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid .grid__cell.grid__cell--parallax {
   margin-top: 90px;
 }
 
-.a-panel--overflow-card.a-panel.a-panel--pt.a-panel--parallax .a-panel__content .grid .grid__cell.grid__cell--parallax {
-  margin-top: 60px;
-}
+
 
 @media (min-width: 520px) {
   .a-panel--overflow-card {
