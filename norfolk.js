@@ -11,7 +11,7 @@ $(document).ready(function() {
         + "</a>"
         + "<a href='https://www.norfolk.gov.uk/translationservices'>"
             //+ "<img src='https://authoring.norfolk.gov.uk/-/media/norfolk/developer/intran_logo_transparent.png' alt='INTRAN interpretation and translation services' />"
-            + "<img src='" + IntranSVG + "' alt='INTRAN interpretation and translation services' />"
+            + "<img src='" + IntranSVG + "' alt='INTRAN communication for all interpretation and translation services' />"
         + "</a>"
         + "</div>");
 
