@@ -74,7 +74,7 @@ $button-search-color: $white !default;
 }
 
 .gi-sitesearch[data-collapsible="true"] .gi-sitesearch__searchfield {
-  display: none;
+  /*display: none;*/
 }
 
 .gi-sitesearch[data-collapsible="true"][data-collapsed="false"]
@@ -309,4 +309,13 @@ float: left !important;
     outline-color: $black;
     box-shadow: none;
   }
+}
+
+// ADD to get search box open to begin with #4223
+.gi-sitesearch[data-collapsible='true'] .gi-sitesearch__searchfield {
+  display: initial;
+}
+// ADD to get search button visible to begin with 4223
+.gi-sitesearch--top .btn--search {
+  background-color: $button-search-background-color;
 }
