@@ -2,6 +2,45 @@
 @mixin ani2 { transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
 
 
-
-
 @mixin aspect-ratio {aspect-ratio: 3 / 2; }
+
+
+@mixin a-link-hover {
+
+    /*color: $black;
+    background: $focus-color;
+    outline: 3px solid rgba(0,0,0,0);
+    box-shadow: 0 -2px $focus-color, 0 4px $black;
+    text-decoration: none;*/
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+}
+      
+%a-link-hover {
+    @include a-link-hover;
+}
+
+@mixin a-link-focus {
+    color: $black;
+    background: $focus-color;
+    outline: 3px solid rgba(0,0,0,0);
+    box-shadow: 0 -2px $focus-color, 0 4px $black;
+    text-decoration: none;
+}
+
+%a-link-focus {
+    @include a-link-focus;
+}
+
+/*// usage
+.a-link-focus {
+    @extend %a-link-focus;
+}
+
+@media (min-width: 30em) {
+    .bar {
+        @include a-link-focus;
+    }
+}*/

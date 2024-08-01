@@ -368,16 +368,27 @@ h2.a-panel__title {
   }
 }
 
+.item__sublinks li {
+  padding: 10px 0 0 0;
+}
+
 .item__content .item__sublink {
   color: $link-color;
   // border-bottom: solid 1px transparent;
   border-bottom: none;
+  line-height: 1;  //3832 - override GOSS 1.8em line height
 
   &:hover {
     color: $link-color-darken;
     // border-bottom: solid 1px $link-color-darken;
     //border-bottom: none; /** 3832 - Text links state indicator standardisation **/
     //text-decoration: underline;
+  }
+  &:focus {
+    color: $black; 
+    &:hover {
+      color: $black;
+    }
   }
 
   /** 3832 - Text links state indicator standardisation *
@@ -1719,6 +1730,7 @@ h4.stage-link__title  {
 
 .panel__link {
   hyphens: none;
+  display: inline; //3832
 }
 
 // MW ADDED PEEKY

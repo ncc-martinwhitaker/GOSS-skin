@@ -1,5 +1,16 @@
 $aside-link-color: $link-color;
 
+/*// usage
+.a-link-focus {
+  @extend %a-link-focus;
+}
+
+@media (min-width: 30em) {
+  .bar {
+      @include a-link-focus;
+  }
+}*/
+
 .container.container--fullwidth {
 
   aside.aside {
@@ -32,7 +43,8 @@ $aside-link-color: $link-color;
 
           &:hover {
             color: $link-color-darken;
-            @extend .a-link-hover; 
+            //@include ani;// a-link-hover; 
+            @include a-link-hover;
           }
         }
       }
@@ -89,6 +101,13 @@ $aside-link-color: $link-color;
 
               &:hover {
                 color: $link-color-darken;
+              }
+              &:focus {
+                //@extend .a-link-focus; //3832
+                //@include a-link-focus;
+                //@include ani;
+                @include a-link-focus;
+
               }
             }
           }
