@@ -12,6 +12,7 @@
     outline: 3px solid rgba(0,0,0,0);
     box-shadow: 0 -2px $focus-color, 0 4px $black;
     text-decoration: none;*/
+    color: $link-color-darken;
     text-decoration: underline;
     text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
     -webkit-text-decoration-skip-ink: none;
