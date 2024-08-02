@@ -235,6 +235,32 @@ footer.footer * {
     color: $white;
 }
 
+/*
+-------------------------------------------------------------------------------
+4095 - Form buttons
+-------------------------------------------------------------------------------
+*/
+
+.icmform button.btn.cta-link--edit {
+    background-color: $white;
+    color: $black;
+    border: solid $black 2px;
+    text-decoration: none;
+    padding-left: 15px;
+
+    &::after {
+        top: calc(50% - 11px);
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+    }
+}
+
 /*====================================================================================
 Footer - about section/Care Careers logo - 4176
 ====================================================================================*/
