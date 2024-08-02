@@ -473,10 +473,9 @@ h2.a-panel__title {
 // stage
 
 
-.a-panel--no-cta .card__actions, .a-panel--no-cta .card__actions a {
+.a-panel--no-cta .card__actions, .a-panel--no-cta .card__actions a, .a-panel--no-cta .a-panel__content > a.a-panel__linkwrap {
   display: none; 
 }
-
 
 .a-panel.a-panel--pt.a-panel--stage {
 
