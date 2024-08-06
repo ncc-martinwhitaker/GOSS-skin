@@ -873,6 +873,9 @@ h2.a-panel__title {
       text-decoration-skip-ink: none;
       border: none;
 
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+
       &:hover {
         color: $link-color-darken;
         text-decoration: underline;
