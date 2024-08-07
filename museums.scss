@@ -170,3 +170,37 @@ $footer-border-color: #00235d;
       background: linear-gradient(to right, rgba(0, 35, 93, 0.8), rgba(0, 35, 93, 0.8)), url('https://www.museums.norfolk.gov.uk/image/33803/museums-event-search-background/original.jpg');
     }
 }
+
+
+/** 3921 - hide Museum location **/
+.event-location {
+    display: none;
+}
+.event .event-detail.event-detail--location {
+    padding: 10px 0px 10px 14px;
+
+&::before {
+    margin-right: 0px;
+    min-width: 30px;
+}
+}
+/*.event-location {
+order: 3;
+display: flex;
+padding: 20px 0px;
+}
+
+.event-location .event-location__details {
+width: auto;
+padding: 0px;
+display: flex;
+align-items: baseline;
+
+.event-location__icon {
+    display: none;
+}
+}
+.event-location .event-location__details .event-location__address p {
+display: none;
+}*/
+/** End of 3921 - hide Museum location **/
