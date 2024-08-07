@@ -1090,12 +1090,23 @@ h2.a-panel__title {
   @include aspect-ratio;
  }
 
-//Override image ratio below for inline standard and large images only - DevOps 3909 
+/*//Override image ratio below for inline standard and large images only - DevOps 3909 */
 .a-body__image--standard, .a-body__image--large {
-  .gi-responsiveimage__imagewrapper {
-    width: auto;
+  //.gi-responsiveimage__imagewrapper {
+  figure.gi-responsiveimage, .gi-responsiveimage__imagewrapper, .gi-responsiveimage__image {
+    width: revert-layer;
+    //height: revert-layer;
   }
 }
+
+/*aside { 
+  .a-body__image--standard,.a-body__image--large {
+    .gi-responsiveimage__imagewrapper {
+      width: 100%;
+      //position: relative;
+    }
+  }
+}*/
 
 figure.gi-responsiveimage, 
 .gi-responsiveimage__imagewrapper, 
