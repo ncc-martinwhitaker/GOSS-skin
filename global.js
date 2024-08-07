@@ -1,10 +1,18 @@
-//Resize items
-function resizeItems() {
-    resizeBlock($(".item__content"));
-    resizeBlock($(".item"));
-}
-$(window).on("load", function () { resizeItems(); });
-$(window).on("resize", function () { resizeItems() });
+$(document).ready(function(){
+	//Resize items
+	function resizeItems() {
+		/* 4351 - 	only apply min-height where the aside is at the bottom of the page.  
+					We assume that when the aside is at the bottom of the page it is the same width as maincontent. 
+		 			There doesn't seem to be any other CSS values that can determine the difference.
+		*/
+		if ($("#maincontent").css("width") == $("aside.aside").css("width")) {
+			resizeBlock($(".item__content"));
+		};		
+		resizeBlock($(".item"));
+	}
+	$(window).on("load", function () { resizeItems(); });
+	$(window).on("resize", function () { resizeItems() });
+});
 
 // Colourise Museums locations
 function museumsColour() {
