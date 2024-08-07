@@ -154,6 +154,16 @@ $footer-border-color: #00235d;
 -------------------------------------------------------------------------------
 */
 
+.event .event__intro {
+    display: none;
+}
+
+.event > {
+    .event-instances, .event_notimes, .daily-link.daily-link--previous, .daily-link.daily-link--next {
+        display: none;
+    }
+} 
+
 .template--eventsearch {
     .a-heading.a-heading--eventsearch {
         h1.a-heading__title {

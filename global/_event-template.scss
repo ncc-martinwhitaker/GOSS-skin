@@ -12,7 +12,6 @@
 .event .event__intro {
   order: 3;
   font-weight: normal;
-  display: none;
 }
 .event .event__body {
   order: 4;
@@ -84,11 +83,7 @@
   }
 }
   
-.event > {
-  .event-instances, .event_notimes, .daily-link.daily-link--previous, .daily-link.daily-link--next {
-    display: none;
-  }
-} 
+
 
 .event .event-detail.event-detail--price, .event .event-detail.event-detail--time {
   padding: 10px 0px 10px 10px;
