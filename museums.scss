@@ -154,9 +154,158 @@ $footer-border-color: #00235d;
 -------------------------------------------------------------------------------
 */
 
+.event {
+    display: flex;
+    flex-direction: column;
+}
+    
+.event .event__title {
+    order: 0;
+    margin: 40px 0;
+}
 .event .event__intro {
+    order: 3;
+    font-weight: normal;
     display: none;
 }
+.event .event__body {
+    order: 4;
+
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+
+    .event__relatedimage {
+        order: 1;
+        margin: 0px;
+
+        img.event__image {
+            height: auto;
+            width: 100%;
+            border-radius: 12px;
+        }
+    }
+}
+    
+.event .event__info {
+    background-color: $white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    order: 2;
+}
+    
+
+.event__details.event__details--date {
+    float: none;
+    width: auto;
+}
+
+.event__date.event__date--start {
+    padding: 10px 5px 10px 10px;
+
+    &::before {
+        margin-right: 0px;
+        min-width: 30px;
+    }
+}
+  
+.event .event__book {
+    padding: 0px;
+    border-radius: 8px;
+    border: none;
+    order: 5;
+    position: relative;
+    float: none;
+    clear: none;
+    width: 100%;
+
+    a.cta-link.cta-link--eventresults.cta-link--book {
+        background-color: $button-primary-color;
+        border-radius: 8px;
+        margin: 0 auto;
+        position: absolute;
+        top: -50px;
+        right: 10px;
+        width: 30%;
+
+        &:hover {
+            background-color: darken( $button-primary-color, 10% );
+        }
+    }
+}
+    
+  
+  
+.event .event-detail.event-detail--price, .event .event-detail.event-detail--time {
+    padding: 10px 0px 10px 10px;
+  
+    &::before {
+      margin-right: 0px;
+      min-width: 30px;
+    }
+}
+  
+.event .event-detail.event-detail--price {
+    &::before {
+        padding-left: 3px;
+    }
+}
+  
+@media only screen and (max-width: 720px) {
+  
+    .event .event__book a.cta-link.cta-link--eventresults.cta-link--book {
+        position: static;
+        width: 100%;
+    }
+  
+    .event-instances__value.event-instances__value--price, .event-instances__value.event-instances__value--date, .event-instances__value.event-instances__value--location, .event-instances__value.event-instances__value--time {
+  
+        text-align: left;
+    
+        &::before {
+            display: none;
+        }
+    }
+}
+  
+.event__social {
+    order: 1;
+}
+  
+.event__social .event__link--social {
+  
+    margin: 20px 0px;
+    font-family: "Assistant","Open Sans",sans-serif;
+  
+    &::before {
+      content: "Learn more about this exhibition";
+      font-family: "Assistant","Open Sans",sans-serif;
+      font-weight: 600;
+    }
+  
+    img.event__image--social {
+      display: none;
+    }
+  
+    &:hover {
+      &::before {
+        text-decoration: underline;
+        color: $link-color-darken;
+      }
+    }
+    &:focus {
+      &::before {
+        text-decoration: underline;
+        background-color: $focus-color;
+        color: $black;
+      }
+    }
+}
+
 
 .event > {
     .event-instances, .event_notimes, .daily-link.daily-link--previous, .daily-link.daily-link--next {
