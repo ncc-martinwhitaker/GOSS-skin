@@ -36,3 +36,57 @@ body {
     height: 100%;
     top: 0;
   }
+
+/*
+-------------------------------------------------------------------------------
+3743 - Timeline component
+-------------------------------------------------------------------------------
+*/
+
+.a-body__inner .numbered-step:nth-of-type(odd)::before {
+  right: -8px;
+  left: auto;
+}
+.numbered-step:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  /* border: solid 3px #ccc; */
+  position: absolute;
+  border-radius: 16px;
+  z-index: 2;
+  padding: 4px 0 0 0;
+  left: -11px;
+  background: orange;
+  color: #343434;
+}
+
+.a-body__inner .numbered-step:nth-of-type(odd) {
+  float: left;
+  display: block;
+  width: 50%;
+}
+.numbered-step {
+  clear: both;
+}
+
+.a-body__inner .numbered-step:nth-of-type(odd)::after {
+  right: 0px;
+  left: auto;
+}
+.numbered-step:after {
+  content: "";
+  display: block;
+  width: 2px;
+  background: orange;
+  position: absolute;
+  left: -2px;
+  height: 100%;
+  top: 0;
+}
+.a-body__inner .numbered-step:nth-of-type(even) {
+  float: right;
+  display: block;
+  width: 50%;
+}
