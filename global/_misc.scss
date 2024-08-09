@@ -186,6 +186,12 @@ p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary {
 
 // Pagination
 
+li.paging__item.paging__item--current {
+  span.paging__text, span.paging__value {
+    color: $black;
+  }
+}
+
 li.paging__item a.paging__link {
   &:hover {
     color: $black;
@@ -197,6 +203,7 @@ li.paging__item a.paging__link {
     outline-color: $black;
   }
 }
+
 
 // Tablist GOSS Tabs
 
