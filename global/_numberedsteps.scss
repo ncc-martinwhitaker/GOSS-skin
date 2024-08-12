@@ -59,7 +59,7 @@ body {
     z-index: 2;
     padding: 4px 0 0 0;
     left: -11px;
-    background: orange;
+    background: $black;
     color: #343434;
   }
 
@@ -81,7 +81,7 @@ body {
     content: "";
     display: block;
     width: 2px;
-    background: orange;
+    background: $black;
     position: absolute;
     left: -2px;
     height: 100%;
@@ -92,4 +92,28 @@ body {
     display: block;
     width: 50%;
   }
+
+  @media (max-width: 720px) {
+    .a-body__inner .numbered-step:nth-of-type(odd) {
+      float: left;
+      display: block;
+      width: 100%;
+    }
+    .a-body__inner .numbered-step:nth-of-type(odd)::before {
+      right: auto;
+      left: -11px;
+    }
+    .a-body__inner .numbered-step:nth-of-type(odd)::after {
+      right: auto;
+      left: -2px;
+    }
+  
+    .a-body__inner .numbered-step:nth-of-type(even) {
+      float: left;
+      display: block;
+      width: 100%;
+    }
+  }
 }
+
+
