@@ -103,6 +103,7 @@ body {
       display: block;
       width: 100%;
       text-align: left;
+      padding-right: 15px;
     }
     .a-body__inner .numbered-step:nth-of-type(odd)::before {
       right: auto;
@@ -121,4 +122,9 @@ body {
   }
 }
 
-
+//3743 - fullwidth and timeline mobile overspill issue
+@media (max-width: 720px) {
+  .body--full-width.body--timeline.template--default .container.container--fullwidth main.maincontent {
+      width: 100%;
+  }
+}
