@@ -463,6 +463,20 @@ footer.footer {
     display: block;
 }*/
 
+/*====================================================================================
+Share this page - 3448
+====================================================================================*/
+.a-share {
+    display: block;
+    text-align: left;
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    float: none;
+}
+
+
 @media (max-width: 1300px)
 {
     .gi-sitenav__link[aria-haspopup=true]::after {
