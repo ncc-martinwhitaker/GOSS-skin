@@ -681,7 +681,7 @@ h2.a-panel__title {
           border-bottom: solid $black 1px !important;
         }
       }
-      &:focus {
+      &:focus, &:active {
         transition: none;
         box-shadow: 0 1px 4px rgba(0,0,0,.25) !important;
         background-color: $focus-color !important;
@@ -762,11 +762,16 @@ h2.a-panel__title {
       padding: 0px;
       height: 100%;
 
-      &:focus-within {
-        .a-panel__title {
-          background-color: $focus-color;
-          box-shadow: 0 4px 0 $black;
-        }
+      // &:focus-within {
+      //   .a-panel__title {
+      //     background-color: $focus-color;
+      //     box-shadow: 0 4px 0 $black;
+      //   }
+      // }
+
+      .a-panel__title:has(+ a.a-panel__linkwrap:active, + a.a-panel__linkwrap:focus) {
+        background-color: $focus-color;
+        box-shadow: 0 4px 0 $black;
       }
 
       .a-panel__imagecontainer {
