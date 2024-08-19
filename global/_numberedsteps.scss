@@ -44,6 +44,12 @@ body {
 */
 
 .body--timeline {
+
+  //3448
+  .a-share {
+    float: left;
+  }
+
   .a-body__inner .numbered-step:nth-of-type(odd)::before {
     right: -9px;
     left: auto;
