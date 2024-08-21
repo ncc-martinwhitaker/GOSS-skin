@@ -333,3 +333,131 @@ Footer - copyright - 4176
 .bygoss__link {
     opacity: 70%;
 }
+
+/*=============================================================================
+3905 - Job Template Design
+=============================================================================*/
+
+.gi-job {
+    .gi-job__announcement {
+        width: fit-content;
+        border-radius: 6px;
+        padding: 5px 10px;
+    }
+    .gi-job__announcement.gi-job__announcement--new {
+        color: $green;
+    }
+    // probably not the right selector:
+    .gi-job__announcement.gi-job__announcement--closing {
+        color: $red;
+    }
+
+    .gi-job__apply.gi-job__apply--top {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: solid $grey-3 1px;
+        border-bottom: none;
+    }
+
+    .cta-link.cta-link--job-apply, .cta-link.cta-link--company {
+        background-color: $carecareers_green;
+        color: $carecareers_button_text_green;
+        border-radius: 36px;
+        font-size: 1.5rem;
+        padding-right: 40px;
+
+        &::after {
+            top: calc(50% - 11px);
+        }
+
+
+        &:hover {
+            background-color: $carecareers_green;
+            text-decoration: underline;
+        }
+    }
+    .cta-link.cta-link--job-apply.cta-link--tel, .cta-link.cta-link--company {
+        background-color: $carecareers_blue;
+        color: $white;
+
+        span.cta-link__text, span.cta-link__number {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            background-color: $carecareers_blue;
+        }
+    }
+
+    .gi-job__info {
+        // padding: 0px;
+        border: solid $grey-3 1px;
+        border-radius: 20px;
+    
+        .gi-job__title.gi-job__title--info {
+            display: none;
+        }
+
+        .gi-job__details {
+            border-bottom: solid 1px $grey-3;
+        }        
+
+        .gi-job__list.gi-job__list--details, .gi-job__list.gi-job__list--categories {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 30px 0px 30px;
+            margin-bottom: 10px;
+
+            li.gi-job__item {
+                width: 25%;
+                padding: 0px 20px 20px 0px;
+
+                span.nvp__label {
+                    margin-bottom: 5px;
+                }
+
+                &::after {
+                    display: none;
+                }
+
+                span.nvp {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .gi-job__details {
+            border-bottom: solid 1px $grey-3;
+        }
+    }
+
+    .gi-job__body {
+        border: none;
+    }
+
+    .nvp--job-website a {
+        color: $black;
+        text-decoration: underline;
+        text-decoration-thickness: max(1px, .065rem);
+        text-underline-offset: .1578em;
+        text-decoration-skip-ink: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: max(3px, .1875rem, .12em);
+        }
+    }
+
+
+    @media only screen and (max-width: 970px) {
+        .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
+            width: 50%;
+        }
+    }
+    @media only screen and (max-width: 700px) {
+        .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
+            width: 100%;
+        }
+    }
+}
