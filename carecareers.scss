@@ -436,6 +436,21 @@ Footer - copyright - 4176
         border: none;
     }
 
+    .gi-job__contact-details {
+        width: auto;
+        margin-right: 20px;
+
+        .nvp--job-name, .nvp--job-address, .nvp--job-website {
+            &::before {
+                display: none;
+            }
+
+            .nvp__value {
+                font-weight: 600;
+            }
+        }
+    }
+
     .nvp--job-website a {
         color: $black;
         text-decoration: underline;
