@@ -373,6 +373,7 @@ Footer - copyright - 4176
 
         &:hover {
             background-color: $carecareers_green;
+            color: $white;
             text-decoration: underline;
         }
     }
@@ -390,7 +391,6 @@ Footer - copyright - 4176
     }
 
     .gi-job__info {
-        // padding: 0px;
         border: solid $grey-3 1px;
         border-radius: 20px;
     
