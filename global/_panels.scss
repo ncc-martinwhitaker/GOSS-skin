@@ -671,19 +671,23 @@ h2.a-panel__title {
 
       &:hover {
         box-shadow: 0 1px 4px rgba(0,0,0,.25) !important;
-        background-color: $grey-4 !important;
+        // background-color: $grey-4 !important;
+        background-color: $white !important;
         border: none !important;
         outline: none !important;
         color: $black !important;
 
+        &::after {
+          border-bottom: solid $black 1px !important;
+        }
       }
-      &:focus {
+      &:focus, &:active {
+        transition: none;
         box-shadow: 0 1px 4px rgba(0,0,0,.25) !important;
         background-color: $focus-color !important;
         border: none !important;
-        outline: none !important;
+        outline: solid $black 2px !important;
         color: $black !important;
-
       }
     }
   }
@@ -758,11 +762,16 @@ h2.a-panel__title {
       padding: 0px;
       height: 100%;
 
-      &:focus-within {
-        .a-panel__title {
-          background-color: $focus-color;
-          text-decoration: underline;
-        }
+      // &:focus-within {
+      //   .a-panel__title {
+      //     background-color: $focus-color;
+      //     box-shadow: 0 4px 0 $black;
+      //   }
+      // }
+
+      .a-panel__title:has(+ a.a-panel__linkwrap:active, + a.a-panel__linkwrap:focus) {
+        background-color: $focus-color;
+        box-shadow: 0 4px 0 $black;
       }
 
       .a-panel__imagecontainer {
@@ -793,8 +802,18 @@ h2.a-panel__title {
         display: none;
       }
 
+      
+
       &:hover {
         box-shadow: 0 7px 14px rgba(0,0,0,.25), 0 5px 5px rgba(0,0,0,.22);
+
+        .a-panel__title {
+          text-decoration: underline;
+
+          //text-decoration-thickness: max(3px, .1875rem, .12em);
+          text-underline-offset: .1578em;
+          text-decoration-skip-ink: none;
+        }
       }
     }
   }
@@ -1082,8 +1101,8 @@ h2.a-panel__title {
 
 // IMAGE RATIO 
 
-//4119/4213 - no image aspect ratio fix
-.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio, .card--no-image-aspect-ratio {
+//4119/4213/4107 - no image aspect ratio fix
+.body--no-image-aspect-ratio, .a-panel--no-image-aspect-ratio, .card--no-image-aspect-ratio, .card--searchresult {
   .card__imagecontainer {
     aspect-ratio: auto;
   }
