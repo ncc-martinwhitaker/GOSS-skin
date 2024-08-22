@@ -97,3 +97,17 @@ a.searchresults__itemlink {
     text-align: center;
     display: inline-block;
 } 
+
+/*====================================================================================
+4390 - Search results narrow column bug
+====================================================================================*/
+
+.grid--searchresults {
+    .grid__cell.grid__cell--searchresults.grid__cell--facetsright.grid__cell--cols3 {
+        width: 75%;
+    }
+
+    .grid__cell.grid__cell--refine.grid__cell--cols1 {
+        width: 25%;
+    }
+}
