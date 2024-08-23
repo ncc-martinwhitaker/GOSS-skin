@@ -363,11 +363,11 @@ Footer - copyright - 4176
         background-color: $carecareers_green;
         color: $carecareers_button_text_green;
         border-radius: 36px;
-        font-size: 1.5rem;
-        padding-right: 40px;
+        font-size: 1.125rem;
+        padding-right: 38px;
 
         &::after {
-            top: calc(50% - 11px);
+            top: calc(50% - 8px);
         }
 
 
@@ -382,7 +382,7 @@ Footer - copyright - 4176
         color: $white;
 
         span.cta-link__text, span.cta-link__number {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
         }
 
         &:hover {
@@ -449,6 +449,10 @@ Footer - copyright - 4176
                 font-weight: 600;
             }
         }
+
+        .nvp--job-address, .nvp--job-website {
+            display: none;
+        }
     }
 
     .nvp--job-website a {
@@ -462,6 +466,10 @@ Footer - copyright - 4176
             text-decoration: underline;
             text-decoration-thickness: max(3px, .1875rem, .12em);
         }
+    }
+
+    .gi-job__contact-imagecontainer {
+        display: block;
     }
 
 
