@@ -148,7 +148,7 @@
     .media-link__text::before {
         position: static;
         padding-right: 5px;
-        display: inline;
+        display: none;//2404 Document inline links - remove icon
     }
 }
 /** End of 2403 - inline document links **/
