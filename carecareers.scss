@@ -377,6 +377,13 @@ Footer - copyright - 4176
             text-decoration: underline;
         }
     }
+
+    .cta-link.cta-link--job-apply.cta-link--email {
+        &::after {
+            top: calc(50% - 10px);
+        }
+    }
+
     .cta-link.cta-link--job-apply.cta-link--tel, .cta-link.cta-link--company {
         background-color: $carecareers_blue;
         color: $white;
