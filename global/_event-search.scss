@@ -117,6 +117,7 @@
   input.searchform__inputtxt.searchform__inputtxt--event-search {
     &:focus {
       background-color: $white;
+      text-decoration: none;//3289 hide underline text
     }
   }
 }
