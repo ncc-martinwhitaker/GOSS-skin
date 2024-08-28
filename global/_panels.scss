@@ -1099,6 +1099,19 @@ h2.a-panel__title {
   border-radius: $list-border-radius;
 }
 
+/*//3926 Create display image left/righ modifiers for list article
+.body--display-image-left .grid.grid--list .item.item--article .item__imagecontainer{
+  float: left;
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+.body--display-image-right .grid.grid--list .item.item--article .item__imagecontainer{
+  float: right;
+  margin-right: 0;
+  margin-left: 15px;
+}*/
+
 // IMAGE RATIO 
 
 //4119/4213/4107 - no image aspect ratio fix
