@@ -1284,23 +1284,23 @@ figure.gi-responsiveimage,
 //3926 Create display image left/righ modifiers for list article
 
 //list image left
-.body--display-image-left .grid .item--article .item__imagecontainer {
+.body--display-image-left .grid--list .item--article .item__imagecontainer {
   float: left;
   width:50%;
 }
 
-.body--display-image-left .grid .item--article .item__content{
+.body--display-image-left .grid--list .item--article .item__content{
   float:left;
   width: 50%;
 }
 
 //list image right
-.body--display-image-right .grid .item--article .item__imagecontainer {
+.body--display-image-right .grid--list .item--article .item__imagecontainer {
   float: right;
   width: 50%;
 }
 
-.body--display-image-right .grid .item--article .item__content{
+.body--display-image-right .grid-list .item--article .item__content{
   float:right;
   width: 50%;
 }
