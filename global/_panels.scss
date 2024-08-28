@@ -1099,19 +1099,6 @@ h2.a-panel__title {
   border-radius: $list-border-radius;
 }
 
-/*//3926 Create display image left/righ modifiers for list article
-.body--display-image-left .grid.grid--list .item.item--article .item__imagecontainer{
-  float: left;
-  margin-right: 15px;
-  margin-left: 0;
-}
-
-.body--display-image-right .grid.grid--list .item.item--article .item__imagecontainer{
-  float: right;
-  margin-right: 0;
-  margin-left: 15px;
-}*/
-
 // IMAGE RATIO 
 
 //4119/4213/4107 - no image aspect ratio fix
@@ -1294,6 +1281,27 @@ figure.gi-responsiveimage,
   }
 }
 
+//3926 Create display image left/righ modifiers for list article
+
+//list image left
+.body--display-image-left .grid .item--article .item__imagecontainer {
+  float: left;
+  width:50%;
+}
+
+.body--display-image-left .grid .item--article .item__imagecontainer{
+  width: 50%;
+}
+
+//list image right
+.body--display-image-right .grid .item--article .item__imagecontainer {
+  float: right;
+  width: 50%;
+}
+
+.body--display-image-right .grid .item--article .item__imagecontainer{
+  width: 50%;
+}
 
 
 @media only screen and (max-width: 600px) {
