@@ -1290,6 +1290,7 @@ figure.gi-responsiveimage,
 }
 
 .body--display-image-left .grid .item--article .item__content{
+  float:left;
   width: 50%;
 }
 
@@ -1300,6 +1301,7 @@ figure.gi-responsiveimage,
 }
 
 .body--display-image-right .grid .item--article .item__content{
+  float:right;
   width: 50%;
 }
 
