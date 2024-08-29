@@ -769,7 +769,7 @@ h2.a-panel__title {
       //   }
       // }
 
-      .a-panel__title:has(+ a.a-panel__linkwrap:active, + a.a-panel__linkwrap:focus) {
+      .a-panel__title:has(~ a.a-panel__linkwrap:active, ~ a.a-panel__linkwrap:focus) {
         background-color: $focus-color;
         box-shadow: 0 4px 0 $black;
       }
