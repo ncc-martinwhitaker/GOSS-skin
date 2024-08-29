@@ -6,6 +6,11 @@
         border-radius: 6px;
     }
 
+    //4430 - legend padding
+    legend {
+        padding: 5px 0;
+    }
+
     .field_upload input {
         border: none;
         font-size: 1.1875rem;
@@ -81,7 +86,7 @@
         text-decoration: none !important; // refactoring - remove this and re-test?
     }
     textarea:focus, select:focus, input.icmpassword:focus { 
-background: $white; 
+        background: $white; 
     }
 
     input[type=button].icminput--contrast:hover {
