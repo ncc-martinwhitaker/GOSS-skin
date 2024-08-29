@@ -363,11 +363,11 @@ Footer - copyright - 4176
         background-color: $carecareers_green;
         color: $carecareers_button_text_green;
         border-radius: 36px;
-        font-size: 1.5rem;
-        padding-right: 40px;
+        font-size: 1.125rem;
+        padding-right: 38px;
 
         &::after {
-            top: calc(50% - 11px);
+            top: calc(50% - 8px);
         }
 
 
@@ -377,12 +377,19 @@ Footer - copyright - 4176
             text-decoration: underline;
         }
     }
+
+    .cta-link.cta-link--job-apply.cta-link--email {
+        &::after {
+            top: calc(50% - 10px);
+        }
+    }
+
     .cta-link.cta-link--job-apply.cta-link--tel, .cta-link.cta-link--company {
         background-color: $carecareers_blue;
         color: $white;
 
         span.cta-link__text, span.cta-link__number {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
         }
 
         &:hover {
@@ -393,6 +400,8 @@ Footer - copyright - 4176
     .gi-job__info {
         border: solid $grey-3 1px;
         border-radius: 20px;
+
+        
     
         .gi-job__title.gi-job__title--info {
             display: none;
@@ -401,6 +410,7 @@ Footer - copyright - 4176
         .gi-job__details {
             border-bottom: solid 1px $grey-3;
         }        
+
 
         .gi-job__list.gi-job__list--details, .gi-job__list.gi-job__list--categories {
             display: flex;
@@ -411,6 +421,7 @@ Footer - copyright - 4176
             li.gi-job__item {
                 width: 25%;
                 padding: 0px 20px 20px 0px;
+
 
                 span.nvp__label {
                     margin-bottom: 5px;
@@ -423,6 +434,16 @@ Footer - copyright - 4176
                 span.nvp {
                     display: flex;
                     flex-direction: column;
+                }
+
+            }
+        }
+
+        .gi-job__list.gi-job__list--details {
+            li.gi-job__item {
+                // this asumes that the first item on the list is the job "created date"
+                &:first-of-type {
+                    display: none;
                 }
             }
         }
@@ -449,6 +470,10 @@ Footer - copyright - 4176
                 font-weight: 600;
             }
         }
+
+        .nvp--job-address, .nvp--job-website {
+            display: none;
+        }
     }
 
     .nvp--job-website a {
@@ -462,6 +487,10 @@ Footer - copyright - 4176
             text-decoration: underline;
             text-decoration-thickness: max(3px, .1875rem, .12em);
         }
+    }
+
+    .gi-job__contact-imagecontainer {
+        display: block;
     }
 
 
