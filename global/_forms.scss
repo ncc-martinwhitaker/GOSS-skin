@@ -4,6 +4,7 @@
     .icmcheckcontainer label::before, input, textarea, select, .icmradiocontainer label::before, .icmsinglecheckbox label::before {
         border: 2px solid $black;
         border-radius: 6px;
+        background-color: $white;//4420 Form fields - yellow when selected field input (not focus)
     }
 
     //4430 - legend padding
