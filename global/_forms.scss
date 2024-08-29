@@ -4,6 +4,7 @@
     .icmcheckcontainer label::before, input, textarea, select, .icmradiocontainer label::before, .icmsinglecheckbox label::before {
         border: 2px solid $black;
         border-radius: 6px;
+        background-color: $white;//4420 Form fields - yellow when selected field input (not focus)
     }
 
     //4430 - legend padding
@@ -299,3 +300,32 @@ div.LookupTable tr {
     outline: none;
     background: $white;
 }
+
+
+
+/*--------------------------------------------------------------*/
+//4420 Form fields - yellow when selected field input (not focus) 
+//Paste content block
+/*--------------------------------------------------------------*/
+.icmwysiwygPrompt input, .icmwysiwygPrompt textarea {
+    font: 8.5pt Arial, Verdana;
+    display: block;
+    background-color: $white;
+}
+
+.icmwysiwygPrompt input[type="button"] {
+    margin: 8px 0 0 0;
+    float: right;
+    border: solid 0 #3a58a5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px;
+    background-color:$grey-1;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+/*--------------------------------------------------------------*/
+//END
+/*--------------------------------------------------------------*/
