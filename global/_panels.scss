@@ -656,9 +656,14 @@ h2.a-panel__title {
   margin: 0px 0px 20px 0px;
 }
 
+// 3996 peeky swiper transparent background
+.a-panel--pt.a-panel--hasbackground.a-panel--peeky-swiper .a-panel__content {
+  background-color: transparent;
+}
+
 .a-panel--peeky-swiper {
 
-  .gi-carousel__controls {
+    .gi-carousel__controls {
 
     .gi-carousel__next, .gi-carousel__previous {
       width: 32px;
