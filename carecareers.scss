@@ -400,6 +400,8 @@ Footer - copyright - 4176
     .gi-job__info {
         border: solid $grey-3 1px;
         border-radius: 20px;
+
+        
     
         .gi-job__title.gi-job__title--info {
             display: none;
@@ -408,6 +410,7 @@ Footer - copyright - 4176
         .gi-job__details {
             border-bottom: solid 1px $grey-3;
         }        
+
 
         .gi-job__list.gi-job__list--details, .gi-job__list.gi-job__list--categories {
             display: flex;
@@ -418,6 +421,7 @@ Footer - copyright - 4176
             li.gi-job__item {
                 width: 25%;
                 padding: 0px 20px 20px 0px;
+
 
                 span.nvp__label {
                     margin-bottom: 5px;
@@ -430,6 +434,16 @@ Footer - copyright - 4176
                 span.nvp {
                     display: flex;
                     flex-direction: column;
+                }
+
+            }
+        }
+
+        .gi-job__list.gi-job__list--details {
+            li.gi-job__item {
+                // this asumes that the first item on the list is the job "created date"
+                &:first-of-type {
+                    display: none;
                 }
             }
         }
