@@ -349,7 +349,7 @@ Footer - copyright - 4176
         color: $green;
     }
     // probably not the right selector:
-    .gi-job__announcement.gi-job__announcement--closing {
+    .gi-job__announcement.gi-job__announcement--closingsoon {
         color: $red;
     }
 
@@ -671,6 +671,12 @@ Footer - copyright - 4176
         }
     }
 
+    .card--job.card--closingsoon {
+        .card__label span.card__labeltxt {
+            color: $red;
+        }
+    }
+
     .card__content ul.card__list.card__list--job {
         .nvp.nvp--job-category {
             display: none;
@@ -684,11 +690,12 @@ Footer - copyright - 4176
         // DEV location (change to PRD!)
         .nvp.nvp--job-category.nvp--job-118 {
             display: block;
+            margin-top: 15px;
         }
 
-        .card__item--details .nvp__label {
-            display: none;
-        }
+        // .card__item--details .nvp__label {
+        //     display: none;
+        // }
 
         .nvp__value {
             font-weight: bold;
