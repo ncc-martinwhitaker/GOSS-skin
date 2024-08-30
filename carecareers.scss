@@ -427,6 +427,15 @@ Footer - copyright - 4176
             }
         }
 
+        .gi-job__list.gi-job__list--details {
+            li.gi-job__item {
+                // this asumes that the first item on the list is the job "created date"
+                &:first-of-type {
+                    display: none;
+                }
+            }
+        }
+
         .gi-job__details {
             border-bottom: solid 1px $grey-3;
         }
@@ -500,6 +509,13 @@ Footer - copyright - 4176
                 position: relative;
                 margin-top: 20px;
 
+                select.searchform__select {
+                    &:focus {
+                        background-color: $white;
+                    }
+                }
+
+
                 &::before {
                     font-family: 'Assistant', 'Open Sans', sans-serif;
                     content: "Within";
@@ -514,6 +530,12 @@ Footer - copyright - 4176
                 width: 175px;
                 position: relative;
                 margin: 20px 0px 0px 40px;
+
+                input.searchform__inputtxt {
+                    &:focus {
+                        background-color: $white;
+                    }
+                }
 
                 &::before {
                     font-family: 'Assistant', 'Open Sans', sans-serif;
@@ -559,6 +581,10 @@ Footer - copyright - 4176
 
     .searchoptions__title {
         display: none;
+    }
+
+    .gi-tabs .gi-tabs__tab {
+        border-radius: 6px 6px 0px 0px;
     }
 
     .gi-accordion__toggle.gi-accordion__toggle--facets {
