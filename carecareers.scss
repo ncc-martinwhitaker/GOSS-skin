@@ -580,10 +580,6 @@ Footer - copyright - 4176
         border: none;
     }
 
-    .searchoptions__title {
-        display: none;
-    }
-
     .gi-tabs .gi-tabs__tab {
         border-radius: 6px 6px 0px 0px;
     }
@@ -607,6 +603,25 @@ Footer - copyright - 4176
     }
 
     .gi-accordion__toggle.gi-accordion__toggle--facets[aria-expanded=true] {
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
+        }
+    }
+
+    .gi-disclosure__toggle.gi-disclosure__toggle--searchoptions {
+        &::after {
+            top: 26px;
+            right: 14px;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            background-size: 18px 18px;
+        }
+    }
+    .gi-disclosure__toggle.gi-disclosure__toggle--searchoptions[aria-expanded=true] {
         &::after {
             background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
         }
@@ -706,6 +721,11 @@ Footer - copyright - 4176
         display: none;
     }
 
+    @media (min-width: 858px) {
+        .searchoptions__title {
+            display: none;
+        }
+    }
 
     @media (min-width: 600px) {
         .grid--1col .card--job .card__imagecontainer+.card__heading, .grid--1col .card--job .card__imagecontainer+.card__heading+.card__content {
