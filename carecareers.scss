@@ -487,7 +487,15 @@ Footer - copyright - 4176
     }
 }
 
+/*=============================================================================
+3906 - Job Search Template Design
+=============================================================================*/
+
 .template--search {
+
+    h1.shifted-heading {
+        color: $white;
+    }
 
     form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location {
         background-color: $carecareers_blue;
@@ -495,7 +503,9 @@ Footer - copyright - 4176
         padding: 20px;
         margin-bottom: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         border-radius: 20px;
 
         .gi-sitesearch__container {
