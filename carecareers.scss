@@ -3,6 +3,7 @@
 
 $carecareers_button_text_green: rgb(18,73,34);
 $carecareers_green: #9DCC47;
+$carecareers_dark-green: #124922;
 $carecareers_blue: #177EB0;
 $carecareers_grey: rgb(60,60,59);
 
@@ -672,6 +673,20 @@ Footer - copyright - 4176
 
     .card__content ul.card__list.card__list--job {
         .nvp.nvp--job-category {
+            display: none;
+            color: $carecareers_dark-green;
+
+            span.nvp__label {
+                display: none;
+            }
+        }
+
+        // DEV location (change to PRD!)
+        .nvp.nvp--job-category.nvp--job-118 {
+            display: block;
+        }
+
+        .card__item--details .nvp__label {
             display: none;
         }
 
