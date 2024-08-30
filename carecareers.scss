@@ -671,15 +671,7 @@ Footer - copyright - 4176
     }
 
     .card__content ul.card__list.card__list--job {
-        .nvp.nvp--job-hours,
-        .nvp.nvp--job-closingdate,
-        .nvp.nvp--job-category.nvp--job-114,
-        .nvp.nvp--job-category.nvp--job-116,
-        .nvp.nvp--job-category.nvp--job-118,
-        .nvp.nvp--job-category.nvp--job-125,
-        .nvp.nvp--job-category.nvp--job-132,
-        .nvp.nvp--job-category.nvp--job-133,
-        .nvp.nvp--job-category.nvp--job-134 {
+        .nvp.nvp--job-category {
             display: none;
         }
 
