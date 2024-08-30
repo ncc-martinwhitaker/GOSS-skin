@@ -502,6 +502,7 @@ Footer - copyright - 4176
         color: $white;
         padding: 20px;
         margin-bottom: 20px;
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -509,7 +510,8 @@ Footer - copyright - 4176
         border-radius: 20px;
 
         .gi-sitesearch__container {
-            width: 800px;
+            max-width: 800px;
+            width: 100%;
         }
 
         .gi-sitesearch__locationsearch {
@@ -729,6 +731,25 @@ Footer - copyright - 4176
 
     .card--job.card--job-cta .card__actions {
         display: none;
+    }
+
+    @media (max-width: 890px) {
+
+    }
+
+    @media (max-width: 800px) {
+        form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location .gi-sitesearch__locationsearch {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .gi-sitesearch__distance {
+                width: 175px;
+            }
+            .gi-sitesearch__postcode {
+                margin: 20px 0px 0px 0px;
+            }
+        }
     }
 
     @media (min-width: 858px) {
