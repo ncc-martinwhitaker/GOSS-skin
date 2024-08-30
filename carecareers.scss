@@ -585,6 +585,11 @@ Footer - copyright - 4176
             button.gi-sitesearch__button.gi-sitesearch__button--search {
                 width: 100%;
                 border-radius: 0px 40px 40px 0px;
+                min-width: 90px;
+
+                &:before {
+                    padding-left: 0px;
+                }
             }
         }
     }
