@@ -3,6 +3,7 @@
 
 $carecareers_button_text_green: rgb(18,73,34);
 $carecareers_green: #9DCC47;
+$carecareers_dark-green: #124922;
 $carecareers_blue: #177EB0;
 $carecareers_grey: rgb(60,60,59);
 
@@ -353,7 +354,7 @@ Footer - copyright - 4176
         color: $green;
     }
     // probably not the right selector:
-    .gi-job__announcement.gi-job__announcement--closing {
+    .gi-job__announcement.gi-job__announcement--closingsoon {
         color: $red;
     }
 
@@ -453,6 +454,15 @@ Footer - copyright - 4176
             }
         }
 
+        .gi-job__list.gi-job__list--details {
+            li.gi-job__item {
+                // this asumes that the first item on the list is the job "created date"
+                &:first-of-type {
+                    display: none;
+                }
+            }
+        }
+
         .gi-job__details {
             border-bottom: solid 1px $grey-3;
         }
@@ -509,4 +519,292 @@ Footer - copyright - 4176
             width: 100%;
         }
     }
+}
+
+/*=============================================================================
+3906 - Job Search Template Design
+=============================================================================*/
+
+.template--search {
+
+    h1.shifted-heading {
+        color: $white;
+        text-align: center;
+    }
+
+    form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location {
+        background-color: $carecareers_blue;
+        color: $white;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+
+        .gi-sitesearch__container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .gi-sitesearch__locationsearch {
+            display: flex;
+            justify-content: center;
+
+            .gi-sitesearch__distance {
+                position: relative;
+                margin-top: 20px;
+
+                select.searchform__select {
+                    &:focus {
+                        background-color: $white;
+                    }
+                }
+
+
+                &::before {
+                    font-family: 'Assistant', 'Open Sans', sans-serif;
+                    content: "Within";
+                    color: $white;
+                    position: absolute;
+                    left: -60px;
+                    top: 15px;
+                }
+            }
+
+            .gi-sitesearch__postcode {
+                width: 175px;
+                position: relative;
+                margin: 20px 0px 0px 40px;
+
+                input.searchform__inputtxt {
+                    &:focus {
+                        background-color: $white;
+                    }
+                }
+
+                &::before {
+                    font-family: 'Assistant', 'Open Sans', sans-serif;
+                    content: "of";
+                    color: $white;
+                    position: absolute;
+                    left: -26px;
+                    top: 15px;
+                }
+            }
+
+            input.searchform__inputtxt.searchform__inputtxt--postcode, select.searchform__select.searchform__select--distance {
+                border-radius: 6px;
+            }
+        }
+
+
+        label.accessibility {
+            background-color: transparent;
+        }
+
+        .gi-sitesearch__searchfield {
+            width: calc(75% - 1px);
+
+            input.searchform__inputtxt.searchform__inputtxt--sitesearch {
+                border-radius: 40px 0px 0px 40px;
+            }
+        }
+        .gi-sitesearch__searchtoggle {
+            height: auto;
+            width: 25%;
+
+            button.gi-sitesearch__button.gi-sitesearch__button--search {
+                width: 100%;
+                border-radius: 0px 40px 40px 0px;
+                min-width: 90px;
+
+                &:before {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+
+    .searchoptions {
+        border: none;
+    }
+
+    .gi-tabs .gi-tabs__tab {
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .gi-accordion__toggle.gi-accordion__toggle--facets {
+        border: solid $grey-3 1px;
+        border-radius: 6px 6px 0px 0px;
+        background-color: #fafafa;
+
+        &::after {
+            top: 18px;
+            right: 14px;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            background-size: 18px 18px;
+        }
+    }
+
+    .gi-accordion__toggle.gi-accordion__toggle--facets[aria-expanded=true] {
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
+        }
+    }
+
+    .gi-disclosure__toggle.gi-disclosure__toggle--searchoptions {
+        &::after {
+            top: 26px;
+            right: 14px;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+            background-size: 18px 18px;
+        }
+    }
+    .gi-disclosure__toggle.gi-disclosure__toggle--searchoptions[aria-expanded=true] {
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
+        }
+    }
+
+    .gi-accordion__panel.gi-accordion__panel--facets {
+        margin-bottom: 20px;
+    }
+
+    .gi-accordion__panelcontent.gi-accordion__panelcontent--facets {
+        border-bottom: solid $grey-3 1px;
+        border-left: solid $grey-3 1px;
+        border-right: solid $grey-3 1px;
+
+        border-radius: 0px 0px 6px 6px;
+
+        padding: 10px;
+    }
+
+    ul.facet__list {
+        max-height: none;
+    }
+
+    label.gi-sitesearch__label.gi-sitesearch__label--distance.accessibility, label.gi-sitesearch__label.gi-sitesearch__label--postcode,
+    .gi-sitesearch__searchfield label.gi-sitesearch__label.accessibility {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
+    .card--job {
+        border: solid $grey-3 1px;
+        border-radius: 30px;
+        box-shadow: none;
+        padding: 0px 0px 40px 0px;
+
+        .card__label {  
+            top: 20px;
+            right: 20px;
+
+            span.card__labeltxt {
+                color: $green;
+                background-color: $grey-5;
+                border-radius: 6px;
+                padding: 5px 10px;
+            }
+        }
+
+        .card__imagecontainer + .card__heading {
+            padding-top: 30px;
+        }
+
+        .card__imagecontainer {
+            margin-top: 60px;
+            margin-right: 20px;
+        }
+    }
+
+    .card--job.card--closingsoon {
+        .card__label span.card__labeltxt {
+            color: $red;
+        }
+    }
+
+    .card__content ul.card__list.card__list--job {
+        .nvp.nvp--job-category {
+            display: none;
+            color: $carecareers_dark-green;
+
+            span.nvp__label {
+                display: none;
+            }
+        }
+
+        // DEV location (change to PRD!)
+        .nvp.nvp--job-category.nvp--job-118 {
+            display: block;
+            margin-top: 15px;
+        }
+
+        // .card__item--details .nvp__label {
+        //     display: none;
+        // }
+
+        .nvp__value {
+            font-weight: bold;
+        }
+    }
+
+    .card--job.card--job-cta .card__actions {
+        display: none;
+    }
+
+    @media (max-width: 890px) {
+
+    }
+
+    @media (max-width: 800px) {
+        form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location .gi-sitesearch__locationsearch {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .gi-sitesearch__distance {
+                width: 175px;
+            }
+            .gi-sitesearch__postcode {
+                margin: 20px 0px 0px 0px;
+            }
+        }
+    }
+
+    @media (min-width: 858px) {
+        .searchoptions__title {
+            display: none;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .grid--1col .card--job .card__imagecontainer+.card__heading, .grid--1col .card--job .card__imagecontainer+.card__heading+.card__content {
+            width: calc(100% - 230px);
+        }
+    }
+}
+
+.grid--searchresults.grid--4col>.grid__cell {
+    width: 75%;
 }
