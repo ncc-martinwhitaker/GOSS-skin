@@ -185,6 +185,9 @@ Search button shenanigans
  button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
     background-color: darken( $carecareers_green, 20% );
 }
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus {
+    background-color: $focus-color;
+}
 
 .gi-sitesearch__button--search:hover span.btn__text.gi-sitesearch__buttontext.accessibility {
     color: white;
@@ -606,9 +609,16 @@ Footer - copyright - 4176
                 width: 100%;
                 border-radius: 0px 40px 40px 0px;
                 min-width: 90px;
+                
+                span.gi-sitesearch__buttontext {
+                    font-family: 'Assistant', 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 1.125rem;
+                }
 
                 &:before {
                     padding-left: 0px;
+                    padding-bottom: 2px;
                 }
             }
         }
