@@ -319,3 +319,13 @@ float: left !important;
 .gi-sitesearch--top .btn--search {
   background-color: $button-search-background-color;
 }
+
+/*-------------------------------------------------*/
+/*4477 Inline custom HTML search bar - underlined  */
+input[type=search]{
+  background-color: $white;
+  text-decoration: none;
+}
+/*-------------------------------------------------*/
+/*              END                                */
+/*-------------------------------------------------*/
