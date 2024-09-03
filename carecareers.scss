@@ -462,7 +462,7 @@ Footer - copyright - 4176
                 font-weight: 600;
             }
         }
-        
+
         .nvp--job-address, .nvp--job-website {
             display: none;
         }
@@ -481,6 +481,9 @@ Footer - copyright - 4176
         }
     }
 
+    .gi-job__contact-imagecontainer {
+        display: block;
+    }
 
     @media only screen and (max-width: 970px) {
         .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
