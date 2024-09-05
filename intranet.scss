@@ -657,10 +657,10 @@ footer.footer {
         border-bottom: 1px solid #000;
     }
 
-// 3078 - myNet adding jumplinks makes body container too narrow
+/*// 3078 - myNet adding jumplinks makes body container too narrow
 body:not(.body--sticky-jumplinks) #anchor-contents {
     width: auto;
-}
+}*/
 
 /*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
 .a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {

@@ -247,4 +247,7 @@ body.template--default.body--sticky-jumplinks.body--no-aside .container.containe
 }
 
 
-
+//4411 Jump links article body container narrow
+body:not(.body--sticky-jumplinks) #anchor-contents {
+    width: auto;
+}
