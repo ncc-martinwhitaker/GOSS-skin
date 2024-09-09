@@ -657,9 +657,18 @@ h2.a-panel__title {
 }
 
 // 3996 peeky swiper transparent background
-.a-panel--pt.a-panel--hasbackground.a-panel--peeky-swiper .a-panel__content {
+.a-panel--no-backdrop.a-panel--pt.a-panel--hasbackground.a-panel--peeky-swiper .a-panel__content {
   background-color: transparent;
 }
+
+.a-panel--white-text.a-panel--pt.a-panel--hasbackground.a-panel--peeky-swiper .a-panel__content .a-panel__title {
+  color: $white;
+}
+
+.a-panel--removetitle.a-panel.a-panel--pt.a-panel--peeky-swiper  .container.container--carousel {
+  padding-bottom: 0px;
+}
+
 
 .a-panel--peeky-swiper {
 
