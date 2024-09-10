@@ -14,11 +14,7 @@ a.searchresults__itemlink {
     }
 
     &:hover>.searchresults__itemtitle {
-        //TODO REFACTOR HOVER - same hover effect used for DevOps 3819
-        text-decoration: underline;
-        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-        -webkit-text-decoration-skip-ink: none;
-        text-decoration-skip-ink: none;
+        @extend %a-link-hover; //3832
     }
 
     &:focus {
@@ -28,6 +24,7 @@ a.searchresults__itemlink {
 
         .searchresults__itemtitle {
             color: $black;
+            display: inline;
         }
     }
 }

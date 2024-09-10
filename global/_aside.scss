@@ -31,7 +31,8 @@ $aside-link-color: $link-color;
           color: $aside-link-color;
 
           &:hover {
-            color: $link-color-darken;
+            color: $link-color-darken; //3832
+            @include a-link-hover;
           }
         }
       }
@@ -88,6 +89,13 @@ $aside-link-color: $link-color;
 
               &:hover {
                 color: $link-color-darken;
+              }
+              &:focus {
+                //@extend .a-link-focus; //3832
+                //@include a-link-focus;
+                //@include ani;
+                @include a-link-focus;
+
               }
             }
           }

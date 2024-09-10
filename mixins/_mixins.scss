@@ -2,6 +2,47 @@
 @mixin ani2 { transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
 
 
-
-
 @mixin aspect-ratio {aspect-ratio: 3 / 2; }
+
+//3832
+@mixin a-link-hover {
+    color: $link-color-darken;
+    text-decoration: underline;
+    //text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
+}
+      
+%a-link-hover {
+    @include a-link-hover;
+}
+
+@mixin a-link-underline-hover {
+    color: $link-color-darken;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em; //TODO - is this needed because it was working before I added this?
+}
+      
+%a-link-underline-hover {
+    @include a-link-underline-hover;
+}
+
+@mixin a-link-focus {
+    color: $black;
+    background: $focus-color;// !important; //TODO - REFACTOR - try and get rid of the !important here
+    outline: 3px solid rgba(0,0,0,0);
+    box-shadow: 0 -2px $focus-color, 0 4px $black;
+    text-decoration: none;
+    //text-decoration: underline;
+    //text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    //-webkit-text-decoration-skip-ink: none;
+    //text-decoration-skip-ink: none;
+}
+
+%a-link-focus {
+    @include a-link-focus;
+}

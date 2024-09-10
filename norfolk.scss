@@ -76,11 +76,14 @@ a.gi-sitelogo__link {width: $logo-width;}
 .utilitymenu--top {padding: 0;}
 
 .utilitymenu--top .utilitymenu__link, .gi-sitenav__link.gi-sitenav__link--lvl1 {
-    background-color: transparent;
     border: 0;
     font-size: 1.125rem;
     padding: 20px 10px;
     outline: 0 !important;
+}
+
+.utilitymenu--top .utilitymenu__link { //3832
+    background-color: transparent;
 }
 
 .utilitymenu__item a[href$="Sign-in"]:before, .utilitymenu__item a[href$='login']:before, .utilitymenu__item a[href$='logout']:before {
@@ -123,16 +126,32 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     border-bottom: 0;
 }
 
-.gi-sitenav__item--lvl2 {
+.gi-sitenav__item--lvl2 {  //TODO REFACTOR - this class is overwriting the padding for the class above
     padding: 0px 0;
 }
 .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
     color: #050505;
-    padding: 15px 15px;
-    text-align: left;
+    //padding: 15px 15px; //3832
+    //text-align: left;
     font-weight: 600;
 
-    &:hover, &:focus {background: $focus-color;}
+
+    
+    /*3832
+    &:hover,  {
+        background: $focus-color;
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+    }
+    &:focus {
+        //box-shadow: none;
+        //@extend %a-link-focus;
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+        text-decoration-line: underline;
+    }*/
 }
 
 .gi-sitenav__item--lvl1, .gi-sitenav__list--lvl1, .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch, .header__menu {
