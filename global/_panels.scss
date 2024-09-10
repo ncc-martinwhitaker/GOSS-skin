@@ -9,7 +9,7 @@ Variables to change:
 
 //4089 - white-text MM
 .a-panel--white-text { 
-  &.a-panel--pt .a-panel__title, &.a-panel--pt .a-panel__summary, &.a-panel--pt .a-panel__body, &.a-panel.a-panel--hasbackground .a-panel__title {
+  &.a-panel--pt .a-panel__title, &.a-panel--pt .a-panel__summary, &.a-panel--pt .a-panel__body, &.a-panel.a-panel--hasbackground .a-panel__title, h2 {
     color: $white;
   }
 
