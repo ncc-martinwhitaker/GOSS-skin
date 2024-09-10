@@ -525,6 +525,20 @@ Footer - copyright - 4176
 }
 
 /*=============================================================================
+4403 - Shift H1 into top panel
+=============================================================================*/
+
+.template--panel {
+    .a-panel--white-text h1.shifted-heading, .a-panel--white-text h1.shifted-heading.a-heading__title {
+        color: $white;
+        margin: 0px 0px 20px 0px;
+    }
+    h1.shifted-heading.a-heading__title {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+/*=============================================================================
 3906 - Job Search Template Design
 =============================================================================*/
 
