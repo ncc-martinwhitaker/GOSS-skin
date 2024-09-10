@@ -72,9 +72,14 @@ $footer-border-color: #111111;
         border-bottom: 1px solid #000;
     }
 
+/*
+-------------------------------------------------------------------------------------------
+3469 - Museums site nav menu bug - tablet screen size menu disappears
+-------------------------------------------------------------------------------------------
+*/
 
-
-@media (max-width: 1300px)
+/* Ensuring sitenav visibility on screens 1024px and larger */
+@media (min-width:1024px) and (max-width: 1300px)//added min-width: 1024px
 {
     .gi-sitenav__link[aria-haspopup=true]::after {
         
@@ -87,21 +92,45 @@ $footer-border-color: #111111;
     }
 
     .gi-sitenav__list.gi-sitenav__list--lvl1 {
+        display: flex;/* Provides navigation display */
         justify-content: space-around;
+    }
+
+    .header__menu .utilitymenu--top {
+        display: block; /* Displaying the top menu */
+    }
+
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: none; /* Hide the mobile toggle for screens 1024px+ */
     }
 
 }
 
  
-@media (max-width: 1050px)
+/*@media (max-width: 1050px)
 {
     .gi-sitelogo--header {
         flex-wrap: wrap;
+    }*/
+/* For screens smaller than 900px, mobile view is applied */
+@media (max-width: 900px) {
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: block;
+        top: 20px;
     }
+    
+    #headermainmenu, .header__menu .utilitymenu--top {
+        display: none; /* Hide the main menu and utility menu on mobile devices */
+    }
+       
+    .gi-sitenav__list.gi-sitenav__list--lvl1 {
+        display: none; /* Hide navigation on mobile phones */
+    }
+}
 
 
 
-#headermainmenu, .utilitymenu--top {
+/*#headermainmenu, .utilitymenu--top {
     display: none;
 }
 
@@ -126,7 +155,7 @@ $footer-border-color: #111111;
 
 .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
     color: #000;
-}
+}*/
 
 
 @media (min-width: 820px) {
