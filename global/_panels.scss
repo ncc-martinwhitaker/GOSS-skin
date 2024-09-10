@@ -1069,6 +1069,10 @@ h2.a-panel__title {
 .a-panel--display-nav-images.a-panel--pt.a-panel--parallax .fa-block .fa-block__imagecontainer {
   display: block;
 }
+//4522 - parallax stage card margin issue
+.a-panel--parallax .gi-responsiveimage, .a-panel--peeky-swiper .gi-responsiveimage {
+  margin: 0px;
+}
 
 // list panels
 .a-panel--pt.a-panel--hasbackground .a-panel__content .item.item--article .item__imagecontainer {
