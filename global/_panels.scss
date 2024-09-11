@@ -2388,8 +2388,7 @@ h4.stage-link__title  {
 ==========================================================================*/
 
 .grid--2col[data-grid-maxcols="2"] .grid__cell{
-  position:relative;
-  left: 25%;
+  white-space: nowrap;
 }
 
 @media (max-width: 336px) {
