@@ -2159,6 +2159,19 @@ h4.stage-link__title  {
 }
 
 
+/*=============================================================================
+2996 - Rules for the "see more" button on parallax panels
+=============================================================================*/
+
+.fa-block__actions {
+  display: none;
+}
+
+// shows the "see more" button if it is preceded by links
+.fa-block__links + .fa-block__actions {
+  display: block;
+}
+
 
 //Original CSS below
 
