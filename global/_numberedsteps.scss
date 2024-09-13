@@ -49,8 +49,12 @@ body {
   .a-share {
     float: left;
     //4529 Timeline bug - on panel template, 'Share this page' element is far left.
+    /*display: inline;
     position: relative;
-    left: 350px;
+    left: 15%;
+  }
+  .a-share__label:first-of-type{
+    padding: 0px 10px 0 0;*/
   }
 
   .a-body__inner .numbered-step:nth-of-type(odd)::before {
@@ -127,6 +131,11 @@ body {
       float: left;
       display: block;
       width: 100%;
+    }
+//4529
+    .a-share__label{
+      display: inline;
+      padding: 0 5px 0 10px;
     }
   }
 }
