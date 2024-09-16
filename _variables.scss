@@ -90,8 +90,10 @@ $button-search-background-color: $teal;
 
 // component variables
 $header-color: $white !default;
-$header-text-color: $black !default;
+$header-text-color: $black !default; 
+//$header-text-color-hover: $black !default; //3832
 $header-utilitymenu-color: $link-color !default;
+$header-menu-text-color-hover: $black !default;
 $header-mobilemenu-text-alignment: left !default;
 
 $footer-background-color: #dee0e2;

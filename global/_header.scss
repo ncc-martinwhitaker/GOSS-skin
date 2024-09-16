@@ -44,11 +44,19 @@ Variables to change:
 
   &:hover {
     color: $header-text-color;
+    @extend %a-link-hover; //3832
   }
 
   &:focus {
     color: $black;
     background-color: $focus-color;
+    box-shadow: none;
+    //3832
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
   }
 }
 
@@ -102,16 +110,18 @@ padding: 0px;
 .n-stage .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2
 {
   width: 100%;
-  
+  text-align: center; //3832
 }
 
-.n-stage .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
-padding: 10px 10px 10px 10px;
-width:100%;
-text-align: center;
-font-weight: 600;
-font-size: 1.125rem
-} 
+.n-stage {
+  .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+    padding: 0px; //3832
+    ///width:100%; //3832
+    //text-align: center; //3832
+    font-weight: 600;
+    font-size: 1.125rem
+  } 
+}
 
 
 .a-panel.a-panel--pt.a-panel--stage .gi-sitenav--stage .gi-sitenav__item--lvl1:last-child .gi-sitenav__link--lvl1 {
@@ -135,11 +145,15 @@ font-size: 1.125rem
 
 /* 2538 fix greedy menu colours  */
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
+ 
+  &:focus { //3832
+    color: $black; 
+    background: $focus-color;
 
-  &:hover, &:focus {color: $black; background: $focus-color;}
+  }
 }
 .gi-sitenav__link[aria-expanded="true"]{
-  background: $focus-color; 
+  background: $white; //3832
 }
 
 // Dropdown menu  sdad
@@ -163,8 +177,30 @@ div.gi-sitenav--mainnav-lvl2 {
   background-color: $white;
   color: $black;
 
-  .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
-    color: $black;
+  .gi-sitenav__item.gi-sitenav__item--lvl2 {
+    //3832 - main menu
+    padding: 15px;
+    position: relative;
+    text-align: left;
+
+    //3832
+    .gi-sitenav__link.gi-sitenav__link--lvl2 {
+      color: $black;
+      position: static;
+      display: inline;
+
+      //3832
+      &::after {  
+        height: auto;
+        background: none;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
   }
 }
 
@@ -172,13 +208,17 @@ div.gi-sitenav--mainnav-lvl2 {
   font-size: 1.125rem; 
 
   &:hover {
-    text-decoration: underline;
+    color: $header-menu-text-color-hover;
+    @extend %a-link-hover;//3832
   }
 }
 
 .gi-sitenav__link--lvl1 {
   margin: 0 0 0 15px;
   padding: 0;
+  &:focus {
+    @extend %a-link-focus;//3832
+  }
 }
 
 .utilitymenu.utilitymenu--mobile {

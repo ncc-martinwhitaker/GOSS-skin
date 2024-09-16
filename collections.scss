@@ -528,6 +528,9 @@ Search page
             &:hover {
                 color: #FFFFFF;
             }
+            &:focus {
+                color: $black;
+            }
         }
     }
 

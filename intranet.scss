@@ -608,11 +608,14 @@ footer.footer {
     padding: 5px 10px;
 }
 .breadcrumb .breadcrumb__crumb a {
-    color: #066;
+    color: $teal;// #066;
 
     &:hover { 
-        color: #4840E3;
-        text-decoration: underline;
+        color: $link-color;//3832 // #4840E3;
+        //text-decoration: underline;
+    }
+    &:focus {
+        color: $black; //3832
     }
 }
 
@@ -625,10 +628,19 @@ footer.footer {
     margin: 0 0px;
     display: inline-block;
     width: 100%;
-    a {
-        font-weight: 600;
-        color: #006666 !important;
-        text-align: left;
+    /*a {
+        
+        color: #006666;//3832 !important;
+    }*/
+}
+//3832
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+    color: $teal;
+    font-weight: 600;
+    text-align: left;
+
+    &:focus {
+        color: $black;
     }
 }
 
@@ -749,6 +761,12 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 }
 
 }
+
+//3832 
+.a-panel--hasbackground.a-panel--stage .item__sublink:hover {
+    color: $black;
+}
+
 
 // 2341 stage card padding
 

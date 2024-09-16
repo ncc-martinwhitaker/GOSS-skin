@@ -10,7 +10,7 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
 }
 
 .breadcrumb {
-  padding: 10px 0px;
+  padding: 15px 0px;
   border: none;
   background-color: transparent;
 
@@ -25,9 +25,10 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
 
     &:hover {
       color: $breadcrumb-text-color;
+      @extend %a-link-hover; //3832
+    }
+    &:focus:hover { //3832
       text-decoration: none;
-      border-bottom: solid $breadcrumb-text-color 2px;
-      line-height: normal;
     }
   }
   .breadcrumb__crumb:after { //in use
@@ -44,4 +45,9 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
     margin: 0px;
     top: -1px;
   } 
+}
+
+//3832
+.gi-breadcrumb__link {
+  line-height: normal;
 }
