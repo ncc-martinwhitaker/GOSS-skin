@@ -25,26 +25,15 @@ footer.footer-bottom {
   border-top: 10px solid $footer-border-color; //#727a82;
 }
 
-/*// usage
-.a-link-focus {
-  @extend %a-link-focus;
-}*/
-
 .utilitymenu--bottom .utilitymenu__link {
   color: $footer-color;
   &:hover {
     /** 3832 - Text links state indicator standardisation **/
-    //@include ani;// a-link-hover;
-    //@extend %a-link-hover;
-    //@include a-link-hover;
     color: $footer-color;
     @extend %a-link-hover;
   }
   &:focus {
-    //@include ani;// a-link-focus;
-    //@extend %a-link-focus;
-    //@include a-link-focus;
-    @extend %a-link-focus;
+    @extend %a-link-focus; //3832
   }
 }
 

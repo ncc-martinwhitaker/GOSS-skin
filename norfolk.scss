@@ -134,24 +134,6 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     //padding: 15px 15px; //3832
     //text-align: left;
     font-weight: 600;
-
-
-    
-    /*3832
-    &:hover,  {
-        background: $focus-color;
-        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-        -webkit-text-decoration-skip-ink: none;
-        text-decoration-skip-ink: none;
-    }
-    &:focus {
-        //box-shadow: none;
-        //@extend %a-link-focus;
-        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-        -webkit-text-decoration-skip-ink: none;
-        text-decoration-skip-ink: none;
-        text-decoration-line: underline;
-    }*/
 }
 
 .gi-sitenav__item--lvl1, .gi-sitenav__list--lvl1, .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch, .header__menu {

@@ -91,12 +91,9 @@ $aside-link-color: $link-color;
                 color: $link-color-darken;
               }
               &:focus {
-                //@extend .a-link-focus; //3832
-                //@include a-link-focus;
-                //@include ani;
-                @include a-link-focus;
-
+                @include a-link-focus; //3832
               }
+              
             }
           }
         }

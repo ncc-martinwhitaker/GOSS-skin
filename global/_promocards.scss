@@ -78,13 +78,13 @@
                 color: $button-primary-teal-color-hov;
                 border-bottom: 2px solid $button-primary-teal-color-hov;
                 box-shadow: none;*/
-                @extend %a-link-hover;
+                @extend %a-link-hover;  //3832
             }
             &:focus {
-                @extend %a-link-focus;
+                @extend %a-link-focus; //3832
             }
             &:focus:hover {
-                box-shadow: 0 -2px #fd0,0 4px #050505;
+                box-shadow: 0 -2px #fd0,0 4px #050505; //3832
             }
             &:after {
                 right: auto;

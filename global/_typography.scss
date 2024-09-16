@@ -52,56 +52,30 @@ p, ul, ol, li, a, div, span {
   font-size: 1.125rem;
 }
 
-/*3832 //base style - link hover that can be included elsewhere using @extend .a-link-hover;
-.a-link-hover {
-  text-decoration: underline;
-  text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-}
-
-//base style - link focus that can be included elsewhere using @extend .a-link-focus;
-. a-link-focus {
-  color: $black;
-  background: $focus-color;
-  outline: 3px solid rgba(0,0,0,0);
-  box-shadow: 0 -2px $focus-color, 0 4px $black;
-  text-decoration: none;
-}*/
-
 a { 
   text-decoration: none;
   color: $link-color; 
   font-weight: 600;
   &:hover {
-    //@include ani;// a-link-hover;
-    @extend %a-link-hover;
+    @extend %a-link-hover; //3832
   }
 
   &:focus {
-    //color: $black !important;
-    //background: $focus-color !important;
-    //@include ani;// a-link-focus;
-    @extend %a-link-focus;
+    @extend %a-link-focus; //3832
   }
 }
-/** 3832 - Text links state indicator standardisation *
-a:focus {
-  @extend .a-link-focus;
-}*/
 
 /** 3832 - Text links state indicator standardisation **/
 .a-body__link, .a-body__inner a {
   color: $link-color;
 
   &:hover {
-    //3832
     color: $link-color-darken;
     @extend %a-link-hover;
   }
   &:focus {
     color: $black;
-    @extend %a-link-focus; //3832
+    @extend %a-link-focus;
   }
 }
 

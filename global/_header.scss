@@ -51,7 +51,7 @@ Variables to change:
     color: $black;
     background-color: $focus-color;
     box-shadow: none;
-    //@extend %a-link-focus; //3832
+    //3832
     text-decoration: underline;
     text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
     -webkit-text-decoration-skip-ink: none;
@@ -145,24 +145,15 @@ padding: 0px;
 
 /* 2538 fix greedy menu colours  */
 .n-stage .gi-sitenav__link.gi-sitenav__link--lvl1 {
-
-  &:hover { //3832
-
-  }
-  
+ 
   &:focus { //3832
     color: $black; 
     background: $focus-color;
-    //@extend %a-link-focus;
+
   }
-  /*&:focus:hover { //3832
-    color: $black; 
-    text-decoration-thickness: max(3px,0.1875rem,0.12em);
-    //background: $focus-color;
-  }*/
 }
 .gi-sitenav__link[aria-expanded="true"]{
-  background: $white;//$focus-color;  //3832
+  background: $white; //3832
 }
 
 // Dropdown menu  sdad
@@ -195,7 +186,7 @@ div.gi-sitenav--mainnav-lvl2 {
     //3832
     .gi-sitenav__link.gi-sitenav__link--lvl2 {
       color: $black;
-      position: static; //TODO or revert or unset?
+      position: static;
       display: inline;
 
       //3832
@@ -217,12 +208,8 @@ div.gi-sitenav--mainnav-lvl2 {
   font-size: 1.125rem; 
 
   &:hover {
-    color: $header-menu-text-color-hover;// $header-text-color;//3832 $black;
+    color: $header-menu-text-color-hover;
     @extend %a-link-hover;//3832
-    /*text-decoration: underline;
-    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;*/
   }
 }
 
@@ -230,8 +217,7 @@ div.gi-sitenav--mainnav-lvl2 {
   margin: 0 0 0 15px;
   padding: 0;
   &:focus {
-    //text-decoration: underline; //3832
-    @extend %a-link-focus;
+    @extend %a-link-focus;//3832
   }
 }
 

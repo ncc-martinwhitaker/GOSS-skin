@@ -27,7 +27,7 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
       color: $breadcrumb-text-color;
       @extend %a-link-hover; //3832
     }
-    &:focus:hover {
+    &:focus:hover { //3832
       text-decoration: none;
     }
   }
@@ -47,6 +47,7 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
   } 
 }
 
+//3832
 .gi-breadcrumb__link {
   line-height: normal;
 }
