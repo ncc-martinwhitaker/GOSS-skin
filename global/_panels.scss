@@ -2371,6 +2371,14 @@ h4.stage-link__title  {
 
 }
 
+@media (max-width: 520px) {
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+    .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
+      top: -30%;
+    }
+  }
+}
+
 
 /*=============================================================================
 4568 - Rounded cards image overflow "fix"
