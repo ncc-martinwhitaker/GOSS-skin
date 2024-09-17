@@ -2421,6 +2421,34 @@ h4.stage-link__title  {
   }
 }
 
+@media (max-width: 850px) {
+  .body--side-by-side main.maincontent {
+    .a-panel {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+
+          p:first-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+
+    .a-panel:nth-child(even) {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+  
+          p:first-child {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 //Original CSS below
 
