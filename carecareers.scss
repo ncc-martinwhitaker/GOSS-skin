@@ -549,10 +549,10 @@ Footer - copyright - 4176
     &::before {
         content: "";
         position: absolute;
-        bottom: -80px;
-        left: -50px;
-        height: calc(100% + 200px);
-        width: 1000px;
+        top: -120px;
+        left: -80px;
+        height: calc(100% + 300px);
+        width: 1200px;
         opacity: 0.7;
         background-color: #021d71;
         transform: rotate(-8deg);
@@ -593,12 +593,16 @@ Footer - copyright - 4176
             content: "";
             position: absolute;
             bottom: -80px;
-            left: -50px;
             height: calc(100% + 200px);
-            width: 1000px;
             opacity: 0.7;
             background-color: #021d71;
-            transform: rotate(-8deg);
+            width: 100%;
+            
+            
+            // left: -50px;
+            // width: 1000px;
+            // transform: rotate(-8deg);
+
         }
 
         .gi-sitesearch__container {
