@@ -879,3 +879,11 @@ Footer - copyright - 4176
 .grid--searchresults.grid--4col>.grid__cell {
     width: 75%;
 }
+
+/*===============================================================================
+4630 Replace pipe with comma - idea to improve layout of job details/categories
+===============================================================================*/
+.gi-job__item .nvp__value::after{
+    content: ",";
+    padding: 0 0;
+}
