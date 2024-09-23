@@ -2271,6 +2271,7 @@ h4.stage-link__title  {
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
+    overflow: visible;
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.12),0 0 10px rgba(0,0,0,0.12);
@@ -2372,6 +2373,14 @@ h4.stage-link__title  {
     padding-top: 20px;
   }
 
+}
+
+@media (max-width: 520px) {
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+    .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
+      top: -30%;
+    }
+  }
 }
 
 
