@@ -250,15 +250,17 @@ body.template--default.body--sticky-jumplinks.body--no-aside .container.containe
     bottom: 2px;
 }
 
-@media (max-width: 1170px)
+// @media (max-width: 1170px)
+@include mq(xl, max)
 {
 .container.container--fullwidth {
     max-width: 100% !important;
 } // this may be temp
 
 }
- 
-@media (max-width: 1050px)
+
+//@media (max-width: 1050px)
+@include mq(lg, max)
 {
     .body--sticky-jumplinks .gi-jumplist, .body--sticky-jumplinks #anchor-contents, #anchor-contents {
         width: 100% !important;

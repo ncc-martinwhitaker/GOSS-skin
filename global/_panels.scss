@@ -1463,7 +1463,7 @@ figure.gi-responsiveimage,
   }
 }
 
-@media only screen and (max-width: 850px) {
+@include mq(lg, max) {
   .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 100%;
   }

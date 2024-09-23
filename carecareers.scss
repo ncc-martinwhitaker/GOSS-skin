@@ -513,13 +513,15 @@ Footer - copyright - 4176
         display: block;
     }
 
-
-    @media only screen and (max-width: 970px) {
+    // @media only screen and (max-width: 970px)
+    @include mq(lg, max) {
         .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
             width: 50%;
         }
     }
-    @media only screen and (max-width: 700px) {
+
+    // @media only screen and (max-width: 700px)
+    @include mq(md, max) {
         .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
             width: 100%;
         }
@@ -844,7 +846,8 @@ Footer - copyright - 4176
         }
     }
 
-    @media (min-width: 600px) {
+    // @media (min-width: 600px)
+    @include mq(sm, min) {
         .grid--1col .card--job .card__imagecontainer+.card__heading, .grid--1col .card--job .card__imagecontainer+.card__heading+.card__content {
             width: calc(100% - 230px);
         }

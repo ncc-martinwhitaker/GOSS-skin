@@ -141,7 +141,8 @@ body {
 }
 
 //3743 - fullwidth and timeline mobile overspill issue
-@media (max-width: 720px) {
+// @media (max-width: 720px)
+@include mq(md, max) {
   .body--full-width.body--timeline.template--default .container.container--fullwidth main.maincontent {
       width: 100%;
   }

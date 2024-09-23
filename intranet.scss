@@ -290,7 +290,8 @@ $card-border-radius: 12px;
     background-image: $string3;
 }
 
-@media only screen and (max-width: 600px) {
+// @media only screen and (max-width: 600px)
+@include mq(sm, max) {
     .body--policypage .a-heading {
         flex-direction: column;
     }
@@ -374,7 +375,8 @@ $card-border-radius: 12px;
         font-size: 0.9rem;
         white-space: nowrap;
 
-        @media only screen and (max-width: 600px) {
+        // @media only screen and (max-width: 600px)
+        @include mq(sm, max) {
             margin-left: 0px;
         }
     }
@@ -406,8 +408,8 @@ $card-border-radius: 12px;
     }
 }
 
-
-@media only screen and (max-width: 600px) {
+// @media only screen and (max-width: 600px)
+@include mq(sm, max) {
     .template--blog .a-heading {
         flex-direction: column;
         padding: 0px;
@@ -703,7 +705,8 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
     color: #000;
 }
  
-@media (max-width: 1050px)
+//@media (max-width: 1050px)
+@include mq(lg, max)
 {
 
 
@@ -788,7 +791,8 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
     padding: 0px 20px 20px 20px;
 }
 
-@media (max-width: 576px) {
+// @media (max-width: 576px)
+@include mq(sm, max) {
     
     .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content {
         padding: 0px 10px 10px 10px;

@@ -19,7 +19,9 @@ $aside-link-color: $link-color;
         color: $aside-link-color;
         padding: 0px;
 
-        @media (max-width: 600px) {
+
+        // @media (max-width: 600px)
+        @include mq(sm, max) {
           width: 100%; 
         }
 
@@ -40,7 +42,9 @@ $aside-link-color: $link-color;
   }
 }
 
-@media (min-width: 840px) {
+
+// @media (min-width: 840px)
+@include mq(lg, min) {
   .template--panel.body--aside, .template--list.body--aside, .template--blog, body.template--default, .template--documentsection, .template--formsservice {
     .container.container--fullwidth {
       max-width: 1170px; 
@@ -76,7 +80,8 @@ $aside-link-color: $link-color;
             color: $aside-link-color;
             padding: 0px;
 
-            @media (max-width: 600px) {
+            // @media (max-width: 600px) 
+            @include mq(sm, max) {
               width: 100%;
             }
 
@@ -132,7 +137,8 @@ body.body--no-aside, body.template--default.body--no-aside {
           color: $aside-link-color;
           padding: 0px;
 
-          @media (max-width: 600px) {
+          // @media (max-width: 600px)
+          @include mq(sm, max) {
             width: 100%;
           }
 

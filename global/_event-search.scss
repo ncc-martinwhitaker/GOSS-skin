@@ -273,7 +273,8 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+// @media only screen and (max-width: 1000px)
+@include mq(lg, max) {
 
   .event-results .event-results__item {
     width: calc(33.33% - 40px);
@@ -284,7 +285,8 @@
   }
 }
 
-@media only screen and (max-width: 720px) {
+// @media only screen and (max-width: 720px)
+@include mq(md, max) {
 
   .event-search .event-search__options .event-search__option--keywords {
     .event-search__input--keywords {
