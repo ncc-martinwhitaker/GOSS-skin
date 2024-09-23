@@ -177,7 +177,10 @@ Panel/Link-Panel Button colours
     color: white;
  }
 
-
+ //3832
+.a-panel__linkwrap {
+    border-radius: 30px;
+}
 
 /*====================================================================================
 Search button shenanigans
@@ -541,6 +544,28 @@ Footer - copyright - 4176
 }
 
 /*=============================================================================
+4090 - Add blue overlay to home page image
+=============================================================================*/
+
+.a-panel--colour-overlay.a-panel.a-panel--pt.a-panel--body.a-panel--fullwidth {
+
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        left: -80px;
+        height: calc(100% + 300px);
+        width: 1200px;
+        opacity: 0.7;
+        background-color: #021d71;
+        transform: rotate(-8deg);
+    }
+}
+
+
+/*=============================================================================
 3906 - Job Search Template Design
 =============================================================================*/
 
@@ -554,7 +579,7 @@ Footer - copyright - 4176
 
     form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location {
         background-color: $carecareers_blue; //fallback
-        background: url("https://s3-alpha-sig.figma.com/img/e027/382d/ae88262ff6323e209cb9d90e87c5934d?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=anMMrMP7Bebcg9LG3sfzMs8CfEnJsNUA1WszFsFui0ioibXXSwUDlaLd518RQhP-TTdaK5i2g1wNcvIp18idL9SY8GdzTqpWNIORUH~Rv9iM1g-ZL9t8Z6yGASc84DaUPOzf7VZSo0i-Vkltci3NwmvqsFA3ncbdXOU4HInU70NA3Z4-wT-sB7fdU0NuU9PKeyYVLUInJM5bBvhE48gLstJnfF8ehQQtHX36CqQ9PxQMbU7o6fcuz4~1FJSphVkcUB1BpfaKuDBz9KiElVBslYtTN2RAiY3VTbt-QDaTaOug2PnNYtvsl5URBPLeHeCq8R6wP7CA4zvLOg~Qp-xfcg__");
+        background: url("https://www.norfolkcarecareers.co.uk/image/35713/Search-bg/original.jpg");
         background-position-x: 80%;
         background-position-y: 20%;
         overflow: hidden;
@@ -568,18 +593,18 @@ Footer - copyright - 4176
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -80px;
-            left: -50px;
-            height: calc(100% + 200px);
-            width: 1000px;
-            opacity: 0.7;
-            background-color: #021d71;
-            transform: rotate(-8deg);
-        }
+      
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -80px;
+        //     left: -50px;
+        //     height: calc(100% + 200px);
+        //     width: 1000px;
+        //     opacity: 0.7;
+        //     background-color: #021d71;
+        //     transform: rotate(-8deg);
+        // }
 
         .gi-sitesearch__container {
             max-width: 800px;
@@ -853,4 +878,12 @@ Footer - copyright - 4176
 
 .grid--searchresults.grid--4col>.grid__cell {
     width: 75%;
+}
+
+/*===============================================================================
+4630 Replace pipe with comma - idea to improve layout of job details/categories
+===============================================================================*/
+.gi-job__item .nvp__value::after{
+    content: ",";
+    padding: 0 0;
 }

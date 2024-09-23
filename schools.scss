@@ -399,6 +399,11 @@ footer.footer {
         text-decoration: none;
         border-bottom: solid #4840E3 2px;
     }
+    //3832
+    &:focus:hover {
+        color: $black;
+        border-bottom: none;
+    }
 } 
 
 .gi-sitenav--lvl2 {
@@ -412,11 +417,18 @@ footer.footer {
     width: 100%;
     a {
         font-weight: 600;
-        color: #006666 !important;
+        color: #006666; //3832 - TODO - this colour isn't applied because there is another style with greater specificity overwriting this (added color: $teal in the class below to fix this)
         text-align: left;
     }
 }
 
+//3832
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+    color: $teal;
+    &:focus {
+        color: $black;
+    }
+}
 
 .gi-mobilenav--mobilemenu {
     background: #f2f2f2;}
