@@ -9,13 +9,15 @@
     h2 {
         font-size: 1.2rem;
     }
-
+    
+    /* 3832 - commented out so it picks up default styles
     .card__content .a-body--promo {
         a {
-
+            
             border: solid transparent 4px;
             border-right: solid transparent 2px;
 
+            
             &:hover {
                 color: $link-color-darken;
                 text-decoration: underline;
@@ -27,7 +29,7 @@
                 text-decoration: none;
             }
         }
-    }
+    }*/
 
     &.card--noborder {
         border: none;
@@ -53,6 +55,11 @@
    /* .card__actions:has(.cta-link) {
         padding: 10px 0 20px 0;
     }*/
+
+    //3832
+    .a-body ul li {
+        line-height: normal;
+    }
 
     .card__actions {
         text-align: right;
