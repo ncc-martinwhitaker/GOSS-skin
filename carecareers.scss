@@ -544,6 +544,28 @@ Footer - copyright - 4176
 }
 
 /*=============================================================================
+4090 - Add blue overlay to home page image
+=============================================================================*/
+
+.a-panel--colour-overlay.a-panel.a-panel--pt.a-panel--body.a-panel--fullwidth {
+
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        left: -80px;
+        height: calc(100% + 300px);
+        width: 1200px;
+        opacity: 0.7;
+        background-color: #021d71;
+        transform: rotate(-8deg);
+    }
+}
+
+
+/*=============================================================================
 3906 - Job Search Template Design
 =============================================================================*/
 
@@ -571,7 +593,7 @@ Footer - copyright - 4176
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-
+      
         // &::before {
         //     content: "";
         //     position: absolute;
