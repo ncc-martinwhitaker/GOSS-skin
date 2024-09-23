@@ -6,6 +6,7 @@ $archives-blue: #036eb2;
 $header-color: $archives-blue;
 $header-text-color: #fff;
 $header-utilitymenu-color: $archives-blue;
+$header-menu-text-color-hover: $white;
 
 $burger-menu-color: #fff;
 
@@ -39,11 +40,26 @@ $search-border-color: #FFFFFF;
 .utilitymenu--top {padding: 0;}
 
 .utilitymenu--top .utilitymenu__link, .gi-sitenav__link.gi-sitenav__link--lvl1 {
-    background-color: transparent;
+    //background-color: transparent; //3832
     border: 0;
     font-size: 1.125rem;
     padding: 20px 10px;
     outline: 0 !important;
+}
+
+//3832
+.gi-sitenav__link.gi-sitenav__link--lvl1[aria-expanded=true]
+{
+    color: $white;
+    background-color: $header-color;
+    &:hover:focus {
+        color: $white;
+    }
+}
+
+//3832
+.gi-sitenav__link.gi-sitenav__link--lvl1:hover:focus {
+    color: $black;
 }
 
 
@@ -74,24 +90,30 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     border-bottom: 0;
 }
 
-.gi-sitenav__item--lvl2 {
+.gi-sitenav__item--lvl2 { //TODO REFACTOR - this class is overwriting the padding for the class above
     padding: 0px 0;
 }
 .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
     color: #fff;
-    padding: 15px 15px;
-    text-align: left;
+    //padding: 15px 15px; //3832
+    //text-align: left;
     font-weight: 600;
 
-    &:hover {
+    /*&:hover {
         color: #fff;
         text-decoration: underline;
-    }
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+    }*/
     
     &:focus {
         color: #050505;
-        text-decoration: underline;
+        /*text-decoration: underline;
         background: $focus-color;
+        text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;*/
     }
 }
 

@@ -87,6 +87,7 @@
       transform: scale(1.1);
       outline: 5px solid $focus-color;
       background: $focus-color;
+      box-shadow: none; //3832
     } 
   } 
 }

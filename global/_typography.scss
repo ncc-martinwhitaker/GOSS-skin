@@ -56,23 +56,29 @@ a {
   text-decoration: none;
   color: $link-color; 
   font-weight: 600;
+  &:hover {
+    @extend %a-link-hover; //3832
+  }
+
   &:focus {
-    color: $black !important;
-    background: $focus-color !important;
+    @extend %a-link-focus; //3832
   }
 }
+
+/** 3832 - Text links state indicator standardisation **/
 .a-body__link, .a-body__inner a {
   color: $link-color;
 
   &:hover {
     color: $link-color-darken;
-    text-decoration: underline;
+    @extend %a-link-hover;
   }
   &:focus {
     color: $black;
-    
+    @extend %a-link-focus;
   }
 }
+
 
 .cta-link:focus, .a-body__link--cta:focus, .a-panel__linkwrap:focus .a-panel__link  {
   box-shadow: inset 0 0 20em rgba(0,0,0,0); 
@@ -108,7 +114,7 @@ a {
   color: $black;
 }
 
-a:focus, button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
+button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
   outline: 3px solid $focus-color;
   background: $focus-color;
   color: $black;

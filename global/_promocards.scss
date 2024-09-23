@@ -9,13 +9,15 @@
     h2 {
         font-size: 1.2rem;
     }
-
+    
+    /* 3832 - commented out so it picks up default styles
     .card__content .a-body--promo {
         a {
-
+            
             border: solid transparent 4px;
             border-right: solid transparent 2px;
 
+            
             &:hover {
                 color: $link-color-darken;
                 text-decoration: underline;
@@ -27,7 +29,7 @@
                 text-decoration: none;
             }
         }
-    }
+    }*/
 
     &.card--noborder {
         border: none;
@@ -54,6 +56,11 @@
         padding: 10px 0 20px 0;
     }*/
 
+    //3832
+    .a-body ul li {
+        line-height: normal;
+    }
+
     .card__actions {
         text-align: right;
        // padding-bottom: 20px;
@@ -73,11 +80,18 @@
             margin-right: 35px;
 
             &:hover {
-                background-color: $white;
-                //text-decoration: underline;
+                box-shadow: none;
+                /*//text-decoration: underline;
                 color: $button-primary-teal-color-hov;
                 border-bottom: 2px solid $button-primary-teal-color-hov;
-                box-shadow: none;
+                box-shadow: none;*/
+                @extend %a-link-hover;  //3832
+            }
+            &:focus {
+                @extend %a-link-focus; //3832
+            }
+            &:focus:hover {
+                box-shadow: 0 -2px #fd0,0 4px #050505; //3832
             }
             &:after {
                 right: auto;

@@ -121,6 +121,78 @@ Variables to change:
   padding: 32px 20px;
 }
 
+//3832
+.template--blog {
+  .a-pagination__link {
+
+    .a-pagination__pagetitle {
+      text-decoration: none;
+    }
+
+    &:hover {
+      //color: $link-color-darken;
+      text-decoration: none;
+      @extend %a-link-hover; //3832
+        .a-pagination__pagetitle {
+          text-decoration: underline;
+          //@extend %a-link-hover;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+      //text-decoration: underline;
+      //outline: solid 2px $black;
+
+      span {
+        @extend %a-link-focus;
+      
+        &.a-pagination__direction {
+          box-shadow: none;
+          box-shadow: 0 2px $focus-color;
+        }
+      }
+
+      /*background-color: $focus-color;
+      color: $black;
+      text-decoration: none;
+      .a-pagination__direction { //3832
+        @extend %a-link-focus;
+      }*/
+    }
+    &:focus:hover .a-pagination__pagetitle  {
+        text-decoration: none;
+    }
+
+    .a-pagination__link--prev .a-pagination__direction {
+      display: inline;
+      //box-shadow: none;
+      &::before {
+          top: 27%;
+      }
+  }
+  }
+  .a-pagination__pagetitle {
+            text-decoration: none;
+        }
+
+}
+.a-pagination__link--prev, .a-pagination__link--next { 
+  .a-pagination__direction::after {
+      content: "";
+      display: block;
+  }
+  span.a-pagination__direction {
+    display: inline;
+  }
+  .a-pagination__direction::before {
+    top: 27%;
+    left: 0px;
+  }
+
+}
+//end of 3832
+
 // doc and doc
 .a-panel.a-panel--pt.a-panel--render.a-panel--document {
   padding: 16px 20px;
@@ -348,22 +420,102 @@ h2.a-panel__title {
   text-decoration: underline;
   text-decoration-thickness: max(1px, .065rem);
   text-decoration-skip-ink: none;
-  text-underline-offset: .1578em;
+  text-underline-offset: .1578em; //TODO - can this be the same as hover mixin?
   border: none;
 
   &:hover {
-    color: $list-panel-link-color-hover;
-    text-decoration: underline;
+    color: $list-panel-link-color-hover; 
+    /*text-decoration: underline;
     text-decoration-thickness: max(3px, .1875rem, .12em);
     text-decoration-skip-ink: none;
-    border: none;
+    border: none;*/
+    @extend %a-link-underline-hover; //3832
   }
 
   &:focus {
     color: $black;
-    background-color: $focus-color;
-    text-decoration: none;
+    display: inline;
+    //background-color: $focus-color;
+    /*text-decoration: none;
     outline: solid 3px $black;
+    box-shadow: none;*/
+    @extend %a-link-focus;
+  }
+}
+
+//3832
+.a-panel--stage.a-panel--hasbackground .card--stage.card--list .item__sublink {
+  
+  display: inline;
+
+  &::after { 
+    //height: auto;
+    background: none;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover h4.stage-link__title { //double width stage card
+    color: $link-color-darken;
+  }
+
+  &:focus h4.stage-link__title { //double width stage card
+    color: $black;
+    background: $focus-color;
+    box-shadow: 0 2px $focus-color;
+  }
+  //3832
+  &:focus {
+    color: $black;
+  }
+
+  &:focus:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+.a-panel--hasbackground.a-panel--stage li:last-child .item__sublink:after {
+  //last after is not being applied in stage card list which means that the 'Business' link whole area isn't clickable, just the word https://playground.ncc1-tst.gosshosted.com/
+  display: block; //undo default GOSS style which is display:none; 
+}
+
+/*.a-panel--stage .card--stage.card--list .item__sublink--list {
+  &::after {
+    height: auto;
+    background: none;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}*/
+
+.item__sublink { 
+  display: inline;
+
+  /*.item__sublink--list:focus {
+    outline: 3px solid rgba(0, 0, 0, 0);
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none;
+  }*/
+}
+
+.a-panel--hasbackground .item__sublinks li {
+  padding: 10px 0 10px 0;
+  margin: 0 0 10px 0;
+  position: relative;
+  border-bottom: 1px solid $grey-3;
+
+  &:last-child {
+    border-bottom: none;
   }
 }
 
@@ -371,22 +523,32 @@ h2.a-panel__title {
   color: $link-color;
   // border-bottom: solid 1px transparent;
   border-bottom: none;
+  line-height: 1;  //3832 - override GOSS 1.8em line height
 
   &:hover {
     color: $link-color-darken;
     // border-bottom: solid 1px $link-color-darken;
-    border-bottom: none;
-    text-decoration: underline;
+    //border-bottom: none; /** 3832 - Text links state indicator standardisation **/
+    //text-decoration: underline;
+  }
+  &:focus {
+    color: $black; 
+    &:hover {
+      color: $black;
+    }
   }
 
+  /** 3832 - Text links state indicator standardisation *
   &:focus {
     color: $black;
     background-color: $focus-color;
     // border-bottom: solid 1px $black;
     border-bottom: none;
     text-decoration: underline;
-  }
+  }*/
 }
+//end of 3832
+
 
 @media only screen and (max-width: 600px) {
   .a-panel__content {
@@ -495,11 +657,20 @@ h2.a-panel__title {
       }
     }
     &:focus {
-      color: $black;
+      //background-color: $focus-color;
+      //color: $black;
+      @extend %a-link-focus; //3832
       .n-stage-alert__title {
-        text-decoration: underline;
+        //text-decoration: underline;
+        //text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+        //-webkit-text-decoration-skip-ink: none;
+        //text-decoration-skip-ink: none;
         color: $black;
+        text-decoration: none;
       }
+    }
+    &:focus:hover {
+      color: $black;
     }
   }
 
@@ -507,14 +678,15 @@ h2.a-panel__title {
     color: $white;
   }
 
-  .gi-sitenav--stage .gi-sitenav__link--lvl2 {
-    background-color: $white;
-  }
 
   .gi-sitenav--stage .gi-sitenav__link--lvl1 {
     &:hover {
       box-shadow: none;
+      color: $white; //3832
+    }
+    &:focus:hover { //3832
       color: $black;
+      text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
     }
   }
 
@@ -523,15 +695,37 @@ h2.a-panel__title {
     margin-left: 15px;
 
     .gi-sitenav__link--lvl1 {
+      color: $button-search-color;
       background: $button-search-background-color;
       margin: 0px;
       padding-left: 55px; // (40 + 15)
       width: 100%;
-      &:hover, &:focus {
-
+      //&:hover, //3832
+      &:focus {
         background: $focus-color;
+        color: $black; //3832 - need to set colour to black here because when the 'more' button is clicked and the menu is expanded and focus is taken off the 'more' button the text colour changes to blue
       }
     } 
+  }
+
+  //stage sub-menu
+  .gi-sitenav--stage .gi-sitenav__link--lvl2 {
+    background-color: $white;
+
+    &::after { //TODO - not working
+      height: auto;
+      background: none;
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:focus {
+      background-color: $focus-color; //3832;
+    }
   }
 
   .card__actions { 
@@ -545,7 +739,10 @@ h2.a-panel__title {
     padding: 10px;
 
     &:hover {
-      @extend .btn-hover;
+      @extend .btn-hover; //3832
+    }
+    &:focus {
+      background-color: $focus-color; //3832
     }
   }
 
@@ -613,7 +810,7 @@ h2.a-panel__title {
       flex-direction: row-reverse;
     }
   }
-}
+} //end of .a-panel.a-panel--pt.a-panel--stage
 
 .card--stage.card--default .cta-link--stage:before {
   content: none;  
@@ -904,23 +1101,25 @@ h2.a-panel__title {
       text-underline-offset: .1578em;
       text-decoration-skip-ink: none;
       border: none;
-
+      
       -webkit-touch-callout: none;
       -webkit-user-drag: none;
 
-      &:hover {
-        color: $link-color-darken;
+      &:hover { //HERE
+        /*color: $link-color-darken;
         text-decoration: underline;
         text-decoration-thickness: max(3px, .1875rem, .12em);
         text-decoration-skip-ink: none;
-        border: none;
+        border: none;*/
+        @extend %a-link-underline-hover; //3832
       }
 
       &:focus {
-        color: $black;
+        /*color: $black;
         background-color: $focus-color;
         text-decoration: none;
-        outline: solid 3px $black;
+        outline: solid 3px $black;*/
+        @extend %a-link-focus; //3832
       }
     }
 
@@ -966,16 +1165,18 @@ h2.a-panel__title {
 
     .fa-block__details .fa-block__actions .fa-block__link.fa-block__link--default.fa-block__link--action {
 
-      &:hover {
-        color: $link-color-darken;
+      &:hover { 
+        //color: $link-color-darken;
+        @extend %a-link-hover; //3832
       }
 
       &:focus {
-        outline: none;
+        /*outline: none;
         color: $black;
-        background-color: $focus-color;
+        background-color: $focus-color;*/
+        @extend %a-link-focus; //3832
       }
-    }
+    } //3832 - here 1
   }
 }
 
@@ -1607,7 +1808,6 @@ figure.gi-responsiveimage,
   }*/
 }
 
-
 h4.stage-link__title  {
   margin: 0 0px;
   font-size: 1.2rem;
@@ -1641,9 +1841,17 @@ h4.stage-link__title  {
   }*/
 }
 
-// 2874 - fix for extra data appearing on news homepages  
-.a-panel--hasbackground.a-panel--stage .item__sublink .stage-link__categories {
+.a-panel--hasbackground.a-panel--stage .item__sublink {
+  
+  // 2874 - fix for extra data appearing on news homepages  
+  .stage-link__categories {
     display: none;
+  }
+
+  //3832
+  &:hover {
+    @extend %a-link-hover;  
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1780,6 +1988,7 @@ h4.stage-link__title  {
 
 .panel__link {
   hyphens: none;
+  display: inline; //3832
 }
 
 // MW ADDED PEEKY
@@ -1962,6 +2171,9 @@ h4.stage-link__title  {
         color: $white;
         border-bottom: none;
         //font-weight: 500;
+        &:focus {
+          color: $black; //3832
+        }
       }
 
       .fa-block__body {
@@ -2059,6 +2271,7 @@ h4.stage-link__title  {
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
+    overflow: visible;
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.12),0 0 10px rgba(0,0,0,0.12);
@@ -2139,6 +2352,10 @@ h4.stage-link__title  {
   margin-top: 90px;
 }
 
+.a-panel--parallax.a-panel--pt .fa-block__title {
+  font-size: revert; //3832 
+}
+
 
 
 @media (min-width: 520px) {
@@ -2158,6 +2375,22 @@ h4.stage-link__title  {
 
 }
 
+@media (max-width: 520px) {
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+    .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
+      top: -30%;
+    }
+  }
+}
+
+
+/*=============================================================================
+4568 - Rounded cards image overflow "fix"
+=============================================================================*/
+
+.item.item--article {
+  overflow: hidden;
+}
 
 
 //Original CSS below

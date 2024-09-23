@@ -27,6 +27,17 @@ footer.footer-bottom {
 
 .utilitymenu--bottom .utilitymenu__link {
   color: $footer-color;
+  &:hover {
+    /** 3832 - Text links state indicator standardisation **/
+    color: $footer-color;
+    @extend %a-link-hover;
+  }
+  &:focus {
+    @extend %a-link-focus; //3832
+  }
+  &:focus:hover {
+    color: $black; //3832
+  }
 }
 
 .grid--footer>.grid__cell:first-child {
@@ -46,6 +57,21 @@ footer.footer-bottom {
   clear: both;
   text-align: center;
   width: 100%;
+}
+
+//3832 - Powered by GOSS link 
+.bygoss__link {
+  min-height: auto;
+  &:hover {
+    color: $footer-color;
+    @extend %a-link-hover;
+  }
+  &:focus {
+    @extend %a-link-focus;
+  }
+  &:focus:hover {
+    color: $black; //3832 - fix issue with dark footer backgrounds and white links going white on focus/hover
+  }
 }
 
 @media (max-width: 560px) {
