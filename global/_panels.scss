@@ -2393,6 +2393,77 @@ h4.stage-link__title  {
 }
 
 
+
+/*=============================================================================
+4037 - Script/images inline - side by side with content
+=============================================================================*/
+
+.body--side-by-side main.maincontent {
+  .a-panel {
+    .a-panel__content {
+      width: 100%;
+
+      .a-panel__body.a-body.a-body--panel {
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0px;
+
+        p {
+          width: 100%;
+        }
+
+        p:first-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .a-panel:nth-child(even) {
+    .a-panel__content {
+
+      .a-panel__body.a-body.a-body--panel {
+
+        flex-direction: row-reverse;
+
+        p:first-child {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .body--side-by-side main.maincontent {
+    .a-panel {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+
+          p:first-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+
+    .a-panel:nth-child(even) {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+  
+          p:first-child {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 //Original CSS below
 
 //Our Museums
