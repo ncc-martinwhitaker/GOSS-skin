@@ -92,22 +92,82 @@
   } 
 }
 
-// Site alert
+// Site alert 
 
 .sitealert {
-  height: 60px;
+  height: auto; //60px;
+  /*=========================================================
+  1117 Sitealert bug-fix
+  =========================================================*/
+  display: flex;
+  align-items: left;
+  padding: 0 15px;
 
   .container {
-    height: 100%;
+   // height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
 
     .sitealert__heading {
       margin: 0px 0px 5px 0px;
+      font-weight: bold;
+    }
+
+    .sitealert__content{
+      margin: 0;
+      white-space: normal;
+      overflow: hidden;
+      word-wrap: break-word;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .sitealert__content p{
+      margin: 0;
+    }
+
+    .sitealert__content a:hover{
+      color: #4840e3;
     }
   }
 }
 
+@media(max-width: 768px){
+  .sitealert{
+    height: auto;
+    padding: 10px;
+  }
+
+  .sitealert .container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sitealert .container.sitealert__heading{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sitealert .container .sitealert__content{
+    white-space: normal;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin-top: 0;  
+  }
+
+  .sitealert__content p{
+    margin: 0;
+  }
+
+  .sitealert .container .sitealert__content a:hover{
+    color: #4840e3;
+  }
+}
+/*=======================================================
+                           END
+=======================================================*/
 
 iframe {
   @include mq('lg', 'max') {
@@ -245,4 +305,82 @@ li.paging__item a.paging__link {
   background-color: transparent;
   outline: none;
   text-decoration: revert;
+}
+
+// 2190 - block quote styles
+//TODO - where should blockquote styles go?
+
+.blockquote_base {
+  border-left: none;
+  padding: 0px 40px 20px 40px;
+  border-radius: 25px;
+  &::before {
+    content: "";
+    display: block;
+    width: 32px; 
+    height: 32px;
+    margin-bottom: 40px;
+  }
+}
+.maincontent .a-body:has(blockquote) {
+  max-width: 100%;
+}
+
+.a-body {
+
+  blockquote p {
+    display: inherit;
+    font-size: 1.25rem;
+    font-weight: 400;
+    //color: #fff;
+
+    &:first-child {
+      display: inherit;
+      font-size: 1.5rem;
+      font-weight: 600;
+      //color: #fff; 
+      margin-top: 10px;
+    }
+  }
+
+  .blockquote_blue {
+    @extend .blockquote_base;
+    background-color: #212b55;
+    color: $white;
+    &::before {
+      color: $white;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='%23fff'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+    
+  }
+
+  .blockquote_white {
+    @extend .blockquote_base;
+    background-color: $white;
+    color: $black;
+    &::before {
+      color: $black;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='%23000'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
+
+  .blockquote_theme {
+    @extend .blockquote_base;
+    background-color: $header-color;
+    color: $header-text-color;
+    &::before {
+      color: $header-text-color;
+      //TODO - work out what the quote colour should be because the theme text colour could be white or black
+      
+      $theme: str-replace("" + $header-text-color, '#', '%23'); //prefix header colour text with empty string so that the function treats it as a string otherwise it errors on compilation.
+
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='" + $theme + "'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
 }

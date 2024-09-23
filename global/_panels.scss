@@ -468,6 +468,10 @@ h2.a-panel__title {
     background: $focus-color;
     box-shadow: 0 2px $focus-color;
   }
+  //3832
+  &:focus {
+    color: $black;
+  }
 
   &:focus:hover {
     color: $black;
@@ -2267,6 +2271,7 @@ h4.stage-link__title  {
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
+    overflow: visible;
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.12),0 0 10px rgba(0,0,0,0.12);
@@ -2370,6 +2375,30 @@ h4.stage-link__title  {
 
 }
 
+@media (max-width: 520px) {
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+    .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
+      top: -30%;
+    }
+  }
+}
+
+/*==========================================================================
+                        4427 Contact template
+==========================================================================*/
+
+.grid--2col[data-grid-maxcols="2"] .grid__cell{
+  white-space: nowrap;
+}
+
+@media (max-width: 336px) {
+  .grid__cellwrap{
+      white-space: nowrap;
+  }    
+}
+/*==========================================================================
+                                  END
+==========================================================================*/
 
 /*=============================================================================
 4568 - Rounded cards image overflow "fix"
@@ -2377,6 +2406,90 @@ h4.stage-link__title  {
 
 .item.item--article {
   overflow: hidden;
+}
+
+
+
+/*=============================================================================
+4037 - Script/images inline - side by side with content
+=============================================================================*/
+
+.body--side-by-side main.maincontent {
+  .a-panel {
+    .a-panel__content {
+      width: 100%;
+
+      .a-panel__body.a-body.a-body--panel {
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0px;
+
+        p {
+          width: 100%;
+        }
+
+        p:first-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .a-panel:nth-child(even) {
+    .a-panel__content {
+
+      .a-panel__body.a-body.a-body--panel {
+
+        flex-direction: row-reverse;
+
+        p:first-child {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .body--side-by-side main.maincontent {
+    .a-panel {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+
+          p:first-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+
+    .a-panel:nth-child(even) {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+  
+          p:first-child {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*=============================================================================
+2996 - Rules for the "see more" button on parallax panels
+=============================================================================*/
+
+.fa-block__actions {
+  display: none;
+}
+
+// shows the "see more" button if it is preceded by links
+.fa-block__links + .fa-block__actions {
+  display: block;
 }
 
 

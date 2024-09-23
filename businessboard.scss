@@ -64,6 +64,11 @@ Header
     border-top: solid 1px $grey-3; // seperator line in header above menu
 }
 
+//3832
+.gi-sitenav__link.gi-sitenav__link--lvl1:hover:focus {
+    color: $black;
+}
+
 /*====================================================================================
 Page body
 ====================================================================================*/

@@ -34,6 +34,14 @@ $aside-link-color: $link-color;
             color: $link-color-darken; //3832
             @include a-link-hover;
           }
+          //3832
+          &:focus {
+            color: $black;
+          }
+          //3832
+          &:focus:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -90,10 +98,10 @@ $aside-link-color: $link-color;
               &:hover {
                 color: $link-color-darken;
               }
-              &:focus {
-                @include a-link-focus; //3832
+              //3832
+              &:focus, &:focus:hover {
+                color: $black; 
               }
-              
             }
           }
         }
@@ -145,6 +153,10 @@ body.body--no-aside, body.template--default.body--no-aside {
 
             &:hover {
               color: $link-color-darken;
+            }
+            //3832
+            &:focus {
+              color: $black;
             }
           }
         }
