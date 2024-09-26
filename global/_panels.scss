@@ -443,21 +443,26 @@ h2.a-panel__title {
   }
 }
 
+// 4632 - correcting 4427 
+.a-panel--stage.a-panel--hasbackground .card--stage.card--list .grid--2col[data-grid-maxcols="2"] .grid__cell{
+  white-space: normal;
+}
+
 //3832
 .a-panel--stage.a-panel--hasbackground .card--stage.card--list .item__sublink {
   
   display: inline;
 
-  &::after { 
-    //height: auto;
-    background: none;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+  // &::after { 
+  //   //height: auto;
+  //   background: none;
+  //   bottom: 0;
+  //   content: "";
+  //   left: 0;
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  // }
 
   &:hover h4.stage-link__title { //double width stage card
     color: $link-color-darken;
@@ -483,7 +488,9 @@ h2.a-panel__title {
   display: block; //undo default GOSS style which is display:none; 
 }
 
-/*.a-panel--stage .card--stage.card--list .item__sublink--list {
+
+
+.a-panel--stage .card--stage.card--list .item__sublink--list {
   &::after {
     height: auto;
     background: none;
@@ -493,8 +500,16 @@ h2.a-panel__title {
     position: absolute;
     right: 0;
     top: 0;
+    display: block; // 4632 
+    margin: 15px 0px; // 4632
   }
-}*/
+}
+
+// 4632
+.a-panel--hasbackground.a-panel--stage .item__sublink:after {
+  display: block;
+  margin: 15px 0px;
+}
 
 .item__sublink { 
   display: inline;
@@ -2387,7 +2402,7 @@ h4.stage-link__title  {
                         4427 Contact template
 ==========================================================================*/
 
-.grid--2col[data-grid-maxcols="2"] .grid__cell{
+.grid--2col[data-grid-maxcols="2"] .grid__cell {
   white-space: nowrap;
 }
 
