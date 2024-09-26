@@ -2402,18 +2402,31 @@ h4.stage-link__title  {
                         4427 Contact template
 ==========================================================================*/
 
+<<<<<<< HEAD
 .grid--2col[data-grid-maxcols="2"] .grid__cell {
+=======
+/* removed for 4650 as not specific enough and there is overlap on longer contact template text
+.grid--2col[data-grid-maxcols="2"] .grid__cell{
+>>>>>>> c14ae4b (contact template change / grid__cell not specific enough)
   white-space: nowrap;
-}
+}*/
 
 @media (max-width: 336px) {
   .grid__cellwrap{
       white-space: nowrap;
   }    
 }
+
+/*====== 4650 bug Norfolk stage cards / Contact template 'fix' ===========*/
+.grid__cell.grid__cell--contact-info .grid--2col[data-grid-maxcols="2"] .grid__cell {
+  width:inherit;
+}
+
 /*==========================================================================
                                   END
 ==========================================================================*/
+
+
 
 /*=============================================================================
 4568 - Rounded cards image overflow "fix"
