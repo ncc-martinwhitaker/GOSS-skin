@@ -351,3 +351,19 @@ div.LookupTable tr {
         display: none;
     }
 }
+
+/*
+4601 New MM - Artile/Body=hide-events - for use on Location template
+*/
+.body--hide-events{
+    .event-related {
+        display: none;
+    }
+    .daily-link,
+    .event__instances {
+        display: none;    
+    }
+    .event-related__heading{
+        display:none;    
+    }
+}
