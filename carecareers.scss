@@ -817,7 +817,7 @@ Footer - copyright - 4176
 
     .card__content ul.card__list.card__list--job {
         .nvp.nvp--job-category {
-            display: none;
+            display: none; 
             color: $carecareers_dark-green;
 
             span.nvp__label {
@@ -825,10 +825,16 @@ Footer - copyright - 4176
             }
         }
 
-        // DEV location (change to PRD!)
-        .nvp.nvp--job-category.nvp--job-118 {
+        //changed to PRD!
+        .nvp.nvp--job-category.nvp--job-160 {//4584 Job card search results - 'Area' not showing on PROD.
             display: block;
             margin-top: 15px;
+           
+        }
+
+        .nvp__value:not(:last-child)::after{
+            content: ",";
+            padding: 0 0;
         }
 
         // .card__item--details .nvp__label {
