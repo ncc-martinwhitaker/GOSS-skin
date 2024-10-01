@@ -2516,6 +2516,18 @@ h4.stage-link__title  {
   display: block;
 }
 
+/*===================================================================================================
+2654 List articles - create metadata modifier to hide the intro/summary text on all cards in the list
+===================================================================================================*/
+
+.body--hide-summary{
+  .grid--list .item.item--article{
+     .item__body{
+      display: none;
+      }
+    }
+  }
+
 
 //Original CSS below
 
