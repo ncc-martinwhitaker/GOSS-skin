@@ -923,3 +923,35 @@ Footer - copyright - 4176
     content: ",";
     padding: 0 0;
 }
+
+/*==============================================================
+4599 Footer logo and social media icon alignment
+==============================================================*/
+
+@media (max-width: 560px) {
+    .grid--footer {
+      display: flex;
+      flex-direction: column; /* Place the elements vertically */
+      align-items: center; /* Centre horizontally */
+      justify-content: center; /* Centre vertically, if necessary */
+      text-align: center; /* Center the text inside */
+    }
+  
+    .grid--footer > .grid__cell:first-child {
+      width: 100%; /* Ensure that the element occupies the entire width */
+    }
+  
+    .grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+      column-count: 1; /* Align the columns */
+      text-align: center; /* Center the text inside */
+    }
+    .socialmedia__list {
+        display: flex; /* Aligns elements in a single line */
+        justify-content: center; /* Centres all elements horizontally */
+        gap: 10px; /* Distance between elements */
+    }
+    
+    .socialmedia__item {
+        list-style: none; /* Remove markers from the list if it is <ul>/<ol> */
+    }
+  }
