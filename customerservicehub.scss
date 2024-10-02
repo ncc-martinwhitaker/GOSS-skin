@@ -1,3 +1,142 @@
+//Variables
+$black: #050505;
+$white: #FFFFFF;
+$focus-color: #fd0;
+$link-color-darken: darken(#005ea5, 20% );
+
+
+/*-----------------------------------------------
+4632 - Text links state indicator standardisation
+-------------------------------------------------*/
+@mixin a-link-hover {
+    color: $link-color-darken;
+    text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
+}
+      
+%a-link-hover {
+    @include a-link-hover;
+}
+
+@mixin a-link-underline-hover {
+    color: $link-color-darken;
+    text-decoration: underline;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
+}
+      
+%a-link-underline-hover {
+    @include a-link-underline-hover;
+}
+
+@mixin a-link-focus {
+    color: $black;
+    background: $focus-color;
+    outline: 3px solid rgba(0,0,0,0);
+    box-shadow: 0 -4px $focus-color, 0 4px $black;
+    text-decoration: none;
+}
+
+%a-link-focus {
+    @include a-link-focus;
+}
+
+.template {
+    a, .icmform .btn--link {
+        &:hover {
+            @extend %a-link-underline-hover;
+        }
+        &:focus {
+            @extend %a-link-focus;
+        }
+    }
+
+    .gi-breadcrumb__link {
+        &:hover {
+            @extend %a-link-hover;
+        }
+        &:focus {
+            //@extend %a-link-focus;
+            //display: inline;
+            line-height: normal;
+        }
+    }
+
+    .datatable__sort:hover {
+        @extend %a-link-underline-hover;
+    }
+
+    .cta-link--contrast, .cta-link--selfservicedetails.cta-link--assigned, .cta-link--selfservicedetails.cta-link--claimanddo {
+        &:hover {
+            color: $white;
+            @extend %a-link-hover;
+            &:focus {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .cta-link--viewall {
+        &:hover {
+            @extend %a-link-hover;
+        }
+        &:focus {
+            box-shadow: 0 0px $focus-color,0 4px $black;
+        }
+    }
+
+    .item__title .item__link {
+        display: inline;    
+    }
+
+    .item__link, .item__sublink {
+        &:hover {
+            @extend %a-link-hover;
+        }
+        &:focus {
+            @extend %a-link-focus;
+            //display: inline;
+            //line-height: normal;
+        }
+    }
+
+    .gi-articletreeview__link, .cta-link--selfservicedetails.cta-link--unclaim, .cta-link--selfservicedetails.cta-link--claim {
+        &:hover {
+            color: $black;
+            @extend %a-link-hover;
+        }
+        &:focus {
+            text-decoration: none;
+            //@extend %a-link-focus;
+            //display: inline;
+            //line-height: normal;
+        }
+    }
+}
+//Footer links
+.utilitymenu--footer .utilitymenu__link, .bygoss__link {
+    //color: $white;
+    &:hover {
+      color: $white;
+      @extend %a-link-hover;
+    }
+    &:focus {
+      @extend %a-link-focus;
+    }
+    &:focus:hover {
+      color: $black;
+    }
+}
+
+/*------------------------------------------------------
+End of 4632 - Text links state indicator standardisation
+--------------------------------------------------------*/
+
 /* 3454 */
 .warning {
     font-weight: bold;
