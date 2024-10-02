@@ -352,18 +352,19 @@ div.LookupTable tr {
     }
 }
 
-/*
+/*==================================================================
 4601 New MM - Artile/Body=hide-events - for use on Location template
-*/
-.body--hide-events{
-    .event-related {
+==================================================================*/
+.body--hide-events-and-location{
+    .event-related,
+    .daily-link,
+    .event__instances,
+    .event-related__heading,
+    .location-info,
+    .event_notimes{
         display: none;
     }
-    .daily-link,
-    .event__instances {
-        display: none;    
-    }
-    .event-related__heading{
-        display:none;    
-    }
 }
+/*================================================================== 
+                                END
+==================================================================*/
