@@ -342,3 +342,28 @@ div.LookupTable tr {
     }     
 }
 
+/*
+4627 Booking form - =hide-price-and-total-for-booking. display:none for 'Free' price labels
+*/
+.body--hide-price-and-total{
+    .grid__cell--right.grid__cell--cols2 .booking-ticket__price,
+    .grid__cell--details .booking__item.booking__item--total {
+        display: none;
+    }
+}
+
+/*
+4601 New MM - Artile/Body=hide-events - for use on Location template
+*/
+.body--hide-events{
+    .event-related {
+        display: none;
+    }
+    .daily-link,
+    .event__instances {
+        display: none;    
+    }
+    .event-related__heading{
+        display:none;    
+    }
+}
