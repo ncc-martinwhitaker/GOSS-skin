@@ -886,6 +886,36 @@ Footer - copyright - 4176
     width: 75%;
 }
 
+
+
+/*====================================================================================
+4600 - share this page and print fixes
+====================================================================================*/
+
+
+.a-share {
+    display: flex;
+   // align-items: center;
+    flex-wrap: wrap;
+}
+
+.a-share__label{
+    padding: 0 10px 0px 10px;
+    margin: 0;
+    width: auto;
+    top: 0;
+   
+}
+
+
+@media (max-width: 400px) {
+    .a-share__label {
+        width: 100%;
+        padding: 0 10px 0px 0px;
+    }
+} 
+
+
 /*===============================================================================
 4630 Replace pipe with comma - idea to improve layout of job details/categories
 ===============================================================================*/

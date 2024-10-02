@@ -46,16 +46,39 @@ body {
 .body--timeline {
 
   //3448
-  .a-share {
+  /*.a-share {
     float: left;
-    //4529 Timeline bug - on panel template, 'Share this page' element is far left.
-    /*display: inline;
-    position: relative;
-    left: 15%;
-  }
-  .a-share__label:first-of-type{
-    padding: 0px 10px 0 0;*/
-  }
+  }*/
+
+  //4529 Timeline bug - on panel template, 'Share this page' element is far left.
+  .a-share{
+    position: sticky;
+    display: flex;
+    padding: 10px;
+   }
+
+   .a-share__label{
+    display: contents;
+    padding: 0 10px 0 25px;
+    margin-right: 10px;
+   }
+
+   .a-share__link{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+   }
+
+   .a-share__image{
+    width: 24px;
+    height: 24px;
+   }
+
+   .a-share__link:last-child{
+    margin-right: 0;
+   }
+
+   /*END*/
 
   .a-body__inner .numbered-step:nth-of-type(odd)::before {
     right: -9px;

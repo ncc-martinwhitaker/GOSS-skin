@@ -384,3 +384,102 @@ li.paging__item a.paging__link {
     }
   }
 }
+
+/*===============================================
+2488 Time out buttons styling and focus issue
+===============================================*/
+
+.dialog--session-expiry-notice {
+  .dialog__content{
+    border-radius: 15px;
+  }
+  
+  .dialog__header{
+    font-size: 24px;
+    font-weight: bold;
+    color: $black;
+  }
+  
+  .dialog__description{
+    text-align: center;
+    font-size: 16px;
+    color: $grey-2;
+    margin-bottom: 20px;
+  }
+  
+  .session-countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .session-countdown-timer{
+    width: 100px;
+    height: 100px;
+    stroke: $grey-3;
+  }
+  
+  .circle-background{
+    fill:none;
+    stroke: $white;
+  }
+  
+  .session-countdown-timer .mask{
+    fill: none;
+    stroke: $orange;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s linear;
+  }
+  
+  .session-countdown-timer circle{
+    stroke: $grey-3;
+  }
+  
+  .session-countdown-timer .time-remaining{
+    display: flex;
+    fill: $black;
+    height: 100px;
+  }
+  
+  .btn--contrast{
+    background-color: $button-primary-color;
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn--contrast:hover{
+    background-color: $button-primary-color-hov;
+    color: $white;
+    text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
+  }
+  
+  .btn--contrast:focus,
+  .cta-link:focus, .cta-link:focus:hover{
+    box-shadow: none;
+    background-color: $focus-color;
+    text-decoration: none;
+    color: $black;
+  }
+  
+  .cta-link{
+    background-color: $grey-3;
+    color: $black;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .cta-link:hover{
+    background-color: $grey-1;
+    color: $white;
+    text-decoration: underline;
+  }
+}
+/*========================================
+                END
+========================================*/
