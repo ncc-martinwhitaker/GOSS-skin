@@ -1,5 +1,9 @@
+/*================================================
+4693 Event template - MM to =hide-back-to-event
+================================================*/
+
 .body--hide-back-to-event{
-    a{
+    .container .a-heading--formservice .a-heading__title a {
         display: none;
     }
 }
