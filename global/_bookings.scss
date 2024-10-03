@@ -7,3 +7,66 @@
         display: none;
     }
 }
+
+/*======================================================
+4692 Event template - global booking styling
+======================================================*/
+
+//stylisation event-info block
+.event__info{
+    background-color: $teal;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.event__details--date,
+.event-detail--time{
+    color: $white;
+    font-weight: bold;
+}
+
+//put all objects in a column
+.grid--booking.grid--2col {
+    display: grid;
+    grid-template-areas: 
+      "main main"
+      "other other"
+      "details details";
+    gap: 20px;
+  }
+  
+  .grid__cell--details {
+    grid-area: details;
+  }
+
+  //columns across the entire width of the page
+  .grid--2col[data-grid-maxcols="2"] .grid__cell{
+    width: 100%;
+  }
+
+  //block border
+  .booking__section {
+    border-radius: 15px;
+  }
+
+  //increase the size of selection items
+  .grid__cell--right.grid__cell--cols2 .booking-ticket__select{
+    transform: scale(1.2);
+    margin: -4px 60px 0 10px;
+  }
+
+  .booking-ticket__availability{
+   display: none;
+  }
+
+//hide border lines
+.grid__cell--details .booking__item {
+    border-bottom: 0 !important;
+  }
+
+//Submit button
+.icmform input[type="submit"].btn--booking {
+   background-color: $green !important;
+   border: 0 !important;
+}
+
