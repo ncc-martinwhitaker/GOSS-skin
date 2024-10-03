@@ -22,3 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
     link.parentNode.replaceChild(span, link);
   });
 });
+
+/*=======================================================================
+4637 If Expired - then display:none - calendar occurnaces
+=======================================================================*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-link--eventresults.cta-link--book').forEach(function(item) {
+        if (item.innerText.includes('Expired')) {
+            
+          // Find the nearest parent with the .event-instances__item class
+            const parentItem = item.closest('.event-instances__item');
+            if (parentItem) {
+                parentItem.style.display = 'none'; // Hide the entire unit
+            }
+        }
+    });
+});
