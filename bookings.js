@@ -2,18 +2,23 @@
 4670 Calendar occurrences - Remove date/time link to Event template - JS
 ======================================================================*/
 
-document.addEventListener("DOMContentLoaded", function(){
-    // Check if the page has the .body--hide-event-link modifier
-    if(document.querySelector('.body--hide-event-link')){
-        // Get all elements with class .event-instances__link--date
-        const dateLinks = document.querySelectorAll('.event-instances__link--date');
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.event-instances__link--date');
+  
+  links.forEach(link => {
+    // Create a new <span> element
+    const span = document.createElement('span');
+    
+    // Add to the new <span> the same classes as in <a>
+    span.className = link.className;
 
-        // Go through each of them and hide the link
-        dateLinks.forEach(function(link){
-            link.style.pointerEvents = 'none'; //Turning off clickability
-            link.style.color = 'inherit'; //Set a standard colour so that it doesn't look like a link
-            link.style.textDecoration = 'none'; //Remove the underline
-        });
-        
-    }
+    // Copy content from <a> to a new <span>
+    span.innerHTML = link.innerHTML;
+
+    // Add styles to remove underlining
+    span.style.textDecoration = 'none';
+    
+    // Replace <a> with a new one <span>
+    link.parentNode.replaceChild(span, link);
+  });
 });
