@@ -3,7 +3,7 @@
 ================================================*/
 
 .body--hide-back-to-event{
-    .container .a-heading--formservice .a-heading__title a {
+    a[href*="Book-to-visit"]:not(.cta-link){
         display: none;
     }
 }
