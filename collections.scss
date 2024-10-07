@@ -113,7 +113,9 @@ $footer-border-color: #111111;
         flex-wrap: wrap;
     }*/
 /* For screens smaller than 900px, mobile view is applied */
-@media (max-width: 900px) {
+
+//  @media (max-width: 900px)
+@include mq(md, max) {
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
         top: 20px;
@@ -157,8 +159,8 @@ $footer-border-color: #111111;
     color: #000;
 }*/
 
-
-@media (min-width: 820px) {
+//  @media (min-width: 820px)
+@include mq(sm, min) {
 
     .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
         display: block;
@@ -180,7 +182,8 @@ Collections homepage
 */
 .a-panel--collections {
 
-    @media (min-width: 990px) {
+    //  @media (min-width: 990px)
+    @include mq(lg, min) {
         &.a-panel--pt.a-panel--hasbackground>.container {
             padding: 80px;
         }
@@ -214,7 +217,8 @@ Collections homepage
         }
     }
 
-    @media (max-width: 990px) {
+    // @media (max-width: 990px)
+    @include mq(lg, max) {
         &.a-panel.a-panel--pt.a-panel--render.a-panel--hasbackground {
             height: 300px;
             display: flex;
@@ -596,7 +600,8 @@ Search page
             max-height: 150px;
             min-height: 150px;
 
-            @media (max-width: 700px) {
+            //  @media (max-width: 700px)
+            @include mq(sm, max) {
                 max-height: none;
             }
 
@@ -607,7 +612,8 @@ Search page
             .collection-preview__details {
                 display: inline-flex;
 
-                @media (max-width: 700px) {
+                //  @media (max-width: 700px)
+                @include mq(sm, max) {
                     flex-direction: column;
                     align-items: baseline;
                 }
@@ -620,7 +626,8 @@ Search page
             margin-top: 10px;
             margin-bottom: auto;
 
-            @media (max-width: 700px) {
+            //  @media (max-width: 700px)
+            @include mq(sm, max) {
                 margin-left: 0px;
             }
 
@@ -644,7 +651,8 @@ Search page
         color: #000000;
     }
 
-    @media (max-width: 990px) {
+    // @media (max-width: 990px)
+    @include mq(lg, max) {
         //Search panel
         .a-panel__search--collections {
             .container {
@@ -919,7 +927,8 @@ Object page
         }
 
 
-        @media only screen and (max-width: 850px) {
+        //  @media (max-width: 850px)
+        @include mq(md, max) {
             .grid--imagegalleryinline, .grid--items5 .grid__cell:first-child {
                 .imagegalleryinline__button, .imagegalleryinline__link {
                     height: 250px;
@@ -1017,7 +1026,8 @@ Object page
             } 
         }
 
-        @media only screen and (max-width: 576px) {
+        //  @media (max-width: 576px)
+        @include mq(xs, max) {
             .collectionsitem__detail {
                 display: block;
             }

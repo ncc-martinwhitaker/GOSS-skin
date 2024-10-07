@@ -286,7 +286,7 @@
 }
 
 // @media only screen and (max-width: 720px)
-@include mq(md, max) {
+@include mq(sm, max) {
 
   .event-search .event-search__options .event-search__option--keywords {
     .event-search__input--keywords {

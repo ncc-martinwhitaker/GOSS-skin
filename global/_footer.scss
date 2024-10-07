@@ -72,7 +72,7 @@ footer.footer-bottom {
 }
 
 // @media (max-width: 560px)
-@include mq(sm, max) {
+@include mq(xs, max) {
   .grid--footer>.grid__cell:first-child {
     width: 100%;
   }

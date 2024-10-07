@@ -68,7 +68,8 @@ Variables to change:
       width: 25%;
     }
 
-    @media (max-width: 1000px) {
+    // @media (max-width: 1000px)
+    @include mq(lg, max) {
       .a-panel__imagecontainer {
         width: auto;
       }
@@ -85,7 +86,8 @@ Variables to change:
       width: 25%;
     }
 
-    @media (max-width: 1000px) {
+    // @media (max-width: 1000px)
+    @include mq(lg, max) {
       .a-panel__imagecontainer {
         width: auto;
       }
@@ -370,7 +372,8 @@ ul.panel__list.panel__list--relmedia {
   }
 }
 
-@media only screen and (max-width: 1079px) {
+// @media (max-width: 1079px)
+@include mq(lg, max) {
   .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
     padding-top: 0;
   }
@@ -545,8 +548,8 @@ h2.a-panel__title {
 }
 //end of 3832
 
-
-@media only screen and (max-width: 600px) {
+// @media (max-width: 600px)
+@include mq(xs, max) {
   .a-panel__content {
     padding: 30px 10px;
   }
@@ -620,7 +623,8 @@ h2.a-panel__title {
   }
 }
 
-@media only screen and (max-width: 850px) {
+// @media (max-width: 850px)
+@include mq(md, max) {
   .grid--2col[data-grid-maxcols="2"]  {
     .grid__cell {
       width: 100%;
@@ -818,7 +822,8 @@ h2.a-panel__title {
 
 // stage card stacking
 
-@media only screen and (max-width: 1200px) {
+// @media (max-width: 1200px)
+@include mq(xl, max) {
   .n-stage .grid.grid--3col {
 
     .grid__cell.grid__cell--cols2 {
@@ -1043,7 +1048,8 @@ h2.a-panel__title {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+// @media (max-width: 1200px)
+@include mq(xl, max) {
   .a-panel--pt.a-panel--parallax .fa-block {
     margin: 10px;
   }
@@ -1180,7 +1186,8 @@ h2.a-panel__title {
   width: 33.3%;
 }
 
-@media only screen and (max-width: 1200px) {
+// @media (max-width: 1200px)
+@include mq(xl, max) {
   .a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
     width: 50%;
   }
@@ -1196,7 +1203,8 @@ h2.a-panel__title {
 }
 
 
-@media only screen and (max-width: 600px) {
+// @media (max-width: 1000px)
+@include mq(lg, max) {
   
   .a-panel.a-panel--pt.a-panel--list:not(.a-panel--hasbackground, .a-panel--backdrop-black) .container {
     padding: 0px;
@@ -1220,7 +1228,8 @@ h2.a-panel__title {
 
 }
 
-@media only screen and (max-width: 850px) {
+// @media (max-width: 850px)
+@include mq(lg, max) {
   .a-panel--pt.a-panel--parallax .grid--2col>.grid__cell {
     width: 100%;
     padding: 0px;
@@ -1243,7 +1252,8 @@ h2.a-panel__title {
   }
 }
 
-@media only screen and (max-width: 600px) {
+// @media (max-width: 600px)
+@include mq(sx, max) {
   .a-panel--pt.a-panel--parallax > .container {
     padding: 0px;
   }
@@ -1394,13 +1404,15 @@ figure.gi-responsiveimage,
 
 // metadata modifiers to control column size + left/right images
 
-@media only screen and (min-width: 520px) {
+// @media (min-width: 520px)
+@include mq(xs, min) {
   .grid--list.grid--1col .item {
     display: block;
   }
 }
 
-@media only screen and (min-width: 470px) {
+// @media (min-width: 470px)
+@include mq(xs, min) {
   .a-panel--pt .grid--list.grid--1col .item__imagecontainer {
     padding: 0px;
   }
@@ -1454,7 +1466,8 @@ figure.gi-responsiveimage,
   height: 100%;
 }
 
-@media only screen and (max-width: 970px) {
+// @media (max-width: 970px)
+@include mq(md, max) {
   .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
     width: 50%;
   }
@@ -1510,8 +1523,8 @@ figure.gi-responsiveimage,
 }
 
 
-
-@media only screen and (max-width: 600px) {
+// @media (max-width: 600px)
+@include mq(xs, max) {
   .a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt {
     .grid.grid--parallax .fa-block .fa-block__content {
       flex-direction: column;
@@ -1587,7 +1600,9 @@ figure.gi-responsiveimage,
   }
 }
 
-@media only screen and (max-width: 600px) {
+
+//@media (max-width: 600px)
+@include mq(lg, max) {
   .a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt, .a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt{
     .grid.grid--list .grid__cell .grid__cellwrap {
       .item.item--article {
@@ -1850,7 +1865,8 @@ h4.stage-link__title  {
   }
 }
 
-@media only screen and (max-width: 600px) {
+// @media (max-width: 600px)
+@include mq(xs, max) {
 
   /* #2340 fix data-grid on mobile */
   .n-stage__relarticles .grid {
@@ -2013,7 +2029,10 @@ h4.stage-link__title  {
 
 
 }
-@media only screen and (max-width: 600px) {
+
+
+// @media (max-width: 600px)
+@include mq(xs, max) {
 .n-stage__link--logo img {
   display: block;
   width: 100%;
@@ -2082,7 +2101,9 @@ h4.stage-link__title  {
   }
 }
 
-@media (max-width: 600px) {
+
+// @media (max-width: 600px)
+@include mq(xs, max) {
   .a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel .grid.grid--list .grid__cell .grid__cellwrap .item.item--article, 
   .a-panel--icon-panel.a-panel--display-image-left.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
     flex-direction: row;
@@ -2208,14 +2229,16 @@ h4.stage-link__title  {
       }
     }
     
-    @media only screen and (max-width: 1105px) {
+    // @media (max-width: 1105px)
+    @include mq(lg, max) {
       .grid__cell:nth-child(-n+5) .fa-block .fa-block__imagecontainer+.fa-block__details {//:nth-child(2) {//, .fa-block .fa-block__details:nth-child(2) {
         min-height: 130px;
       }
     }
   }
 
-  @media only screen and (max-width: 970px) {
+  // @media (max-width: 970px)
+  @include mq(md, max) {
 
     &.a-panel--5-col-panel.a-panel.a-panel--parallax {
       .grid.grid--parallax.grid--2col>.grid__cell {
@@ -2353,7 +2376,8 @@ h4.stage-link__title  {
 
 
 
-@media (min-width: 520px) {
+// @media (min-width: 520px)
+@include mq(xs, min) {
   .a-panel--overflow-card {
     .grid--list.grid--1col .item__imagecontainer {
       width: 100%;

@@ -157,10 +157,12 @@ $h6-font-size: 1.125rem;
 // BREAKPOINTS
 // (to be used with "mq" mixin)
 $breakpoints: (
-    "xs":   0px,
-    "sm":   576px,
-    "md":   768px,
-    "lg":   992px,
+    "0":    0px,
+    "xxs":  300px,
+    "xs":   576px,
+    "sm":   768px,
+    "md":   900px,
+    "lg":   1050px, // formerly 992px
     "xl":   1200px,
     "xxl":  1400px
 );

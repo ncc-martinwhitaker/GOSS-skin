@@ -514,14 +514,14 @@ Footer - copyright - 4176
     }
 
     // @media only screen and (max-width: 970px)
-    @include mq(lg, max) {
+    @include mq(md, max) {
         .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
             width: 50%;
         }
     }
 
     // @media only screen and (max-width: 700px)
-    @include mq(md, max) {
+    @include mq(sm, max) {
         .gi-job__info .gi-job__list.gi-job__list--details li.gi-job__item, .gi-job__info .gi-job__list.gi-job__list--categories li.gi-job__item {
             width: 100%;
         }
@@ -821,11 +821,8 @@ Footer - copyright - 4176
         display: none;
     }
 
-    @media (max-width: 890px) {
-
-    }
-
-    @media (max-width: 800px) {
+    // @media (max-width: 800px)
+    @include mq(sm, max) {
         form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location .gi-sitesearch__locationsearch {
             justify-content: center;
             flex-direction: column;
@@ -840,14 +837,15 @@ Footer - copyright - 4176
         }
     }
 
-    @media (min-width: 858px) {
+    // @media (min-width: 858px)
+    @include mq(md, min) {
         .searchoptions__title {
             display: none;
         }
     }
 
     // @media (min-width: 600px)
-    @include mq(sm, min) {
+    @include mq(xs, min) {
         .grid--1col .card--job .card__imagecontainer+.card__heading, .grid--1col .card--job .card__imagecontainer+.card__heading+.card__content {
             width: calc(100% - 230px);
         }

@@ -291,7 +291,7 @@ $card-border-radius: 12px;
 }
 
 // @media only screen and (max-width: 600px)
-@include mq(sm, max) {
+@include mq(xs, max) {
     .body--policypage .a-heading {
         flex-direction: column;
     }
@@ -376,7 +376,7 @@ $card-border-radius: 12px;
         white-space: nowrap;
 
         // @media only screen and (max-width: 600px)
-        @include mq(sm, max) {
+        @include mq(xs, max) {
             margin-left: 0px;
         }
     }
@@ -409,7 +409,7 @@ $card-border-radius: 12px;
 }
 
 // @media only screen and (max-width: 600px)
-@include mq(sm, max) {
+@include mq(xs, max) {
     .template--blog .a-heading {
         flex-direction: column;
         padding: 0px;
@@ -454,7 +454,8 @@ $card-border-radius: 12px;
 
 
 //.template--blog .maincontent > .container, .template--documentsection .maincontent > .container - can be deletd
-@media (min-width: 840px) {
+// @media (min-width: 840px)
+@include mq(md, min) {
 
     .template--default .maincontent > .container {
         max-width: 1170px !important;
@@ -681,8 +682,8 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
     display: block;
 }*/
 
-
-@media (max-width: 1300px)
+// @media (max-width: 1300px)
+@include mq(xxl, max)
 {
     .gi-sitenav__link[aria-haspopup=true]::after {
         margin-left: 5px;
@@ -750,8 +751,8 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 }
 
 
-
-@media (min-width: 820px) {
+// @media (min-width: 820px)
+@include mq(sm, min) {
 
 .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
     display: block;
@@ -792,7 +793,7 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 }
 
 // @media (max-width: 576px)
-@include mq(sm, max) {
+@include mq(xs, max) {
     
     .a-panel.a-panel--pt.a-panel--stage .card--stage .card__content {
         padding: 0px 10px 10px 10px;

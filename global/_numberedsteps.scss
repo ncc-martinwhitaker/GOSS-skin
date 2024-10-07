@@ -110,7 +110,8 @@ body {
     width: 50%;
   }
 
-  @media (max-width: 720px) {
+  // @media (max-width: 720px)
+  @include mq(sm, max) {
     .a-body__inner .numbered-step:nth-of-type(odd) {
       float: left;
       display: block;
@@ -142,7 +143,7 @@ body {
 
 //3743 - fullwidth and timeline mobile overspill issue
 // @media (max-width: 720px)
-@include mq(md, max) {
+@include mq(sm, max) {
   .body--full-width.body--timeline.template--default .container.container--fullwidth main.maincontent {
       width: 100%;
   }

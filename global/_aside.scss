@@ -7,7 +7,7 @@ $aside-link-color: $link-color;
     padding-top: 40px;
     display: block; /**3576 - revert changes //none; // display noen to make accessible**/
     float: left; 
-    width:100%;  
+    width: 100%;  
 
     .relateditem {
 
@@ -21,7 +21,7 @@ $aside-link-color: $link-color;
 
 
         // @media (max-width: 600px)
-        @include mq(sm, max) {
+        @include mq(xs, max) {
           width: 100%; 
         }
 
@@ -44,7 +44,7 @@ $aside-link-color: $link-color;
 
 
 // @media (min-width: 840px)
-@include mq(lg, min) {
+@include mq(md, min) {
   .template--panel.body--aside, .template--list.body--aside, .template--blog, body.template--default, .template--documentsection, .template--formsservice {
     .container.container--fullwidth {
       max-width: 1170px; 
@@ -81,7 +81,7 @@ $aside-link-color: $link-color;
             padding: 0px;
 
             // @media (max-width: 600px) 
-            @include mq(sm, max) {
+            @include mq(xs, max) {
               width: 100%;
             }
 
@@ -138,7 +138,7 @@ body.body--no-aside, body.template--default.body--no-aside {
           padding: 0px;
 
           // @media (max-width: 600px)
-          @include mq(sm, max) {
+          @include mq(xs, max) {
             width: 100%;
           }
 

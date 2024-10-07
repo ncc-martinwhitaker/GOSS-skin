@@ -150,7 +150,9 @@ $footer-border-color: #00235d;
 
 
 /* For screens smaller than 900px, mobile view is applied */
-@media (max-width: 900px) {
+
+// @media (max-width: 900px)
+@include mq(md, max) {
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
         top: 20px;
@@ -166,7 +168,8 @@ $footer-border-color: #00235d;
 }
 
 
-@media (min-width: 820px) {
+// @media (min-width: 820px)
+@include mq(sm, min) {
 
     .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
         display: block;
@@ -288,7 +291,8 @@ $footer-border-color: #00235d;
     }
 }
   
-@media only screen and (max-width: 720px) {
+// @media (max-width: 720px)
+@include mq(sm, max) {
   
     .event .event__book a.cta-link.cta-link--eventresults.cta-link--book {
         position: static;

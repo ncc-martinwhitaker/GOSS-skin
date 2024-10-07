@@ -245,7 +245,8 @@ header {
 
 
 
-@media (max-width: 1300px)
+// @media (max-width: 1300px)
+@include mq(xxl, max)
 {
     .gi-sitenav__link[aria-haspopup=true]::after {
         
@@ -265,7 +266,8 @@ header {
 
 
 
-@media (max-width: 1050px) {
+// @media (max-width: 1050px)
+@include mq(lg, max) {
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: none;
     }
@@ -294,7 +296,8 @@ header {
 }
 
 
-@media (max-width: 900px) {
+// @media (max-width: 900px) {
+@include mq(md, max) {
 
     .header {  
         > .container {
@@ -354,7 +357,9 @@ header {
     }
 } 
 
-@media (min-width: 820px) {
+
+// @media (min-width: 820px)
+@include mq(sm, min) {
   .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
       display: block;
   }
