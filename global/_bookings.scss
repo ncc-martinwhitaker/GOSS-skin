@@ -14,59 +14,112 @@
 
 //stylisation event-info block
 .event__info{
-    background-color: $teal;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  background-color: $teal;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .event__details--date,
 .event-detail--time{
-    color: $white;
-    font-weight: bold;
+  color: $white;
+  font-weight: bold;
 }
 
 //put all objects in a column
 .grid--booking.grid--2col {
-    display: grid;
-    grid-template-areas: 
-      "main main"
-      "other other"
-      "details details";
-    gap: 20px;
-  }
-  
-  .grid__cell--details {
-    grid-area: details;
-  }
+  display: grid;
+  grid-template-areas: 
+    "main main"
+    "other other"
+    "details details";
+  gap: 20px;
+}
 
-  //columns across the entire width of the page
-  .grid--2col[data-grid-maxcols="2"] .grid__cell{
-    width: 100%;
-  }
+.grid__cell--details {
+  grid-area: details;
+}
 
-  //block border
-  .booking__section {
-    border-radius: 15px;
-  }
+//columns across the entire width of the page
+.grid--2col[data-grid-maxcols="2"] .grid__cell{
+  width: 100%;
+}
+
+//hide Vehicle type title
+.booking__section--tickets .booking__title{
+  display: none;
+}
+
+//info message colour
+.booking__section--tickets .booking__summary{
+  color:$teal;
+}
+
+//block border
+.booking__section {
+  border-radius: 15px;
+  border: 2px dashed;    
+}
+
+//white background for the sections
+.booking__section{
+  background-color: $white !important;
+}
+
+//Info message in the Booking ditails
+.icmform .icmguidancehint::before,
+.booking__hint--details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: $teal;
+}
+
+.icmform .icmguidancehint::before{
+  content: "\1F6C8";//\e83a
+}
+
+//Text area width 50%
+.grid__cell--tickets .booking__item {
+  width: 50%;
+}
+
+.booking__hint--details{
+  width: 200%;
+}
 
   //increase the size of selection items
-  .grid__cell--right.grid__cell--cols2 .booking-ticket__select{
-    transform: scale(1.2);
-    margin: -4px 60px 0 10px;
-  }
+.grid__cell--right.grid__cell--cols2 .booking-ticket__select{
+  transform: scale(1.2);
+  margin: -4px 60px 0 10px;
+}
 
-  .booking-ticket__availability{
-   display: none;
-  }
+.booking-ticket__availability{
+ display: none;
+}
 
 //hide border lines
 .grid__cell--details .booking__item {
-    border-bottom: 0 !important;
-  }
+  border-bottom: 0 !important;
+}
 
 //Submit button
 .icmform input[type="submit"].btn--booking {
-   background-color: $green !important;
-   border: 0 !important;
+ background-color: $green !important;
+ border: 0 !important;
 }
 
+//mobile view
+@media (max-width: 768px){
+.grid__cell--right.grid__cell--cols2 .booking-ticket__select{
+  transform: translateY(15px);
+}
+
+ .grid__cell--tickets .booking__item,
+ .booking__hint--details {
+  width: 100%;
+} 
+
+.booking-ticket__input{
+  margin: 0 0 15px 0;
+}
+}
