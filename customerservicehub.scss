@@ -1,8 +1,9 @@
 //Variables
 $black: #050505;
 $white: #FFFFFF;
+$blue: #005ea5;
 $focus-color: #fd0;
-$link-color-darken: darken(#005ea5, 20% );
+$link-color-darken: darken($blue, 20% );
 
 
 /*-----------------------------------------------
@@ -39,98 +40,154 @@ $link-color-darken: darken(#005ea5, 20% );
     outline: 3px solid rgba(0,0,0,0);
     box-shadow: 0 -4px $focus-color, 0 4px $black;
     text-decoration: none;
+    border-color: $focus-color;
 }
 
 %a-link-focus {
     @include a-link-focus;
 }
 
-.template {
-    a, .icmform .btn--link {
-        &:hover {
-            @extend %a-link-underline-hover;
-        }
-        &:focus {
-            @extend %a-link-focus;
-        }
+//a:not(.menu__block.menu__block--none, .cta-link--facet, .cta-link--contrast), .icmform .btn--link {
+a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
+//, .gi-articletreeview__item:focus>.gi-articletreeview__link 
+{
+    &:hover {
+        @extend %a-link-hover;
     }
-
-    .gi-breadcrumb__link {
-        &:hover {
-            @extend %a-link-hover;
-        }
-        &:focus {
-            //@extend %a-link-focus;
-            //display: inline;
-            line-height: normal;
-        }
+    &:focus {
+        @extend %a-link-focus;
     }
+}
 
-    .datatable__sort:hover {
+.gi-articletreeview__item:focus>.gi-articletreeview__link {
+    @extend %a-link-focus;
+    &:hover {
+        text-decoration: none;
+    }
+    //outline: 0px;
+}
+
+//.gi-articletreeview__item[aria-selected="true"]>.gi-articletreeview__link
+//outline dotted red
+
+.gi-breadcrumb__link {
+    &:focus {
+        line-height: normal;
+    }
+}
+
+.datatable--assignedtasks .datatable__sort.datatable__sort, .datatable--assignedtasks.datatable--assignedtasks a:not(.cta-link--contrast),
+.datatable--claimabletasks .datatable__sort.datatable__sort, .datatable--claimabletasks.datatable--claimabletasks a:not(.cta-link--contrast), 
+.datatable--tasks .datatable__sort.datatable__sort, 
+.casesearch__postfilters .btn--pill.btn--pill, 
+.gi-case .btn--case,
+.icmform .a-link--changeall.a-link--changeall {
+    &:hover {
         @extend %a-link-underline-hover;
+        &:focus {
+            text-decoration: none;
+        }
     }
+}
 
-    .cta-link--contrast, .cta-link--selfservicedetails.cta-link--assigned, .cta-link--selfservicedetails.cta-link--claimanddo {
-        &:hover {
-            color: $white;
-            @extend %a-link-hover;
-            &:focus {
-                color: $black;
+.gi-case .btn--case:focus {
+    @extend %a-link-focus;
+}
+
+.btn--reset.btn--reset:hover, .block--selfservice .cta-link--viewall.cta-link--viewall:hover {
+    color: $black;
+}
+
+//.menu__block,
+.cta-link--selfservicedetails.cta-link--assigned.cta-link--assigned, 
+.cta-link--selfservicedetails.cta-link--claimanddo.cta-link--claimanddo,
+.datatable .cta-link--contrast.cta-link--contrast,
+.btn--contrast,
+.footer__navigation .utilitymenu__link.utilitymenu__link,
+.footer__navigation .bygoss__link.bygoss__link
+{
+    &:hover {
+        color: $white;
+        &:focus {
+            color: $black;
+        }
+    }
+}
+
+.menu__block {
+    &:hover {
+        .block__title {
+            //color: $white;
+            text-decoration: underline;
+        }
+        &:focus {
+            background-color: $focus-color;
+            .block__title {
                 text-decoration: none;
             }
         }
     }
 
-    .cta-link--viewall {
-        &:hover {
-            @extend %a-link-hover;
-        }
-        &:focus {
-            box-shadow: 0 0px $focus-color,0 4px $black;
-        }
-    }
-
-    .item__title .item__link {
-        display: inline;    
-    }
-
-    .item__link, .item__sublink {
-        &:hover {
-            @extend %a-link-hover;
-        }
-        &:focus {
-            @extend %a-link-focus;
-            //display: inline;
-            //line-height: normal;
-        }
-    }
-
-    .gi-articletreeview__link, .cta-link--selfservicedetails.cta-link--unclaim, .cta-link--selfservicedetails.cta-link--claim {
-        &:hover {
-            color: $black;
-            @extend %a-link-hover;
-        }
-        &:focus {
-            text-decoration: none;
-            //@extend %a-link-focus;
-            //display: inline;
-            //line-height: normal;
-        }
+    &:focus .block__title {
+        color: $black;
     }
 }
-//Footer links
-.utilitymenu--footer .utilitymenu__link, .bygoss__link {
-    //color: $white;
+
+.related-articles .item__title .item__link, .related-articles .item__sublink--list, .template--list .item__link {
+    display: inline;
+    line-height: normal;
+    &:focus {
+        box-shadow: 0 -6px #fd0,0 4px #050505;
+        &:hover {
+            text-decoration: none;
+        }  
+    }
+}
+
+.related-articles .item__sublinks li {
+    margin-bottom: 5px;
+}
+
+.item__sublink {
+    &:focus:hover {
+        text-decoration: none;
+    }
+}
+
+.gi-articletreeview__link, .cta-link--selfservicedetails.cta-link--unclaim, .cta-link--selfservicedetails.cta-link--claim {
     &:hover {
-      color: $white;
-      @extend %a-link-hover;
+        color: $black;
     }
     &:focus {
-      @extend %a-link-focus;
+        text-decoration: none;
     }
-    &:focus:hover {
-      color: $black;
+}
+
+input:focus, select:focus, textarea:focus, .chosen-container-active .chosen-single, .chosen-container-active .chosen-choices {
+    outline-color: $focus-color;
+}
+
+
+/*//Footer links
+.footer__navigation {
+    //repeat class names to increase specificity score
+    .utilitymenu__link.utilitymenu__link, .bygoss__link.bygoss__link {
+        &:hover {
+            color: $white;
+        }
+        &:focus:hover { 
+            color: $black;
+        }
     }
+}*/
+
+.item--none .item__title:before, .a-heading__title--icon::before {
+    background-color: $blue; //TODO should this be display none, setting background colour next to homepage headings so the the white image can be seen.
+}
+
+//TODO - double check that the share button should be hidden
+.a-share {
+    display: none;
 }
 
 /*------------------------------------------------------
