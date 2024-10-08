@@ -47,13 +47,17 @@ $link-color-darken: darken($blue, 20% );
     @include a-link-focus;
 }
 
-//a:not(.menu__block.menu__block--none, .cta-link--facet, .cta-link--contrast), .icmform .btn--link {
 a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
-//, .gi-articletreeview__item:focus>.gi-articletreeview__link 
 {
     &:hover {
         @extend %a-link-hover;
     }
+    &:focus {
+        @extend %a-link-focus;
+    }
+}
+
+*[tabindex], .icmform input[type=button], .icmform input[type=button].icminput--contrast, .gi-case .btn--case, .cta-link {
     &:focus {
         @extend %a-link-focus;
     }
@@ -64,11 +68,7 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
     &:hover {
         text-decoration: none;
     }
-    //outline: 0px;
 }
-
-//.gi-articletreeview__item[aria-selected="true"]>.gi-articletreeview__link
-//outline dotted red
 
 .gi-breadcrumb__link {
     &:focus {
@@ -76,12 +76,8 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
     }
 }
 
-.datatable--assignedtasks .datatable__sort.datatable__sort, .datatable--assignedtasks.datatable--assignedtasks a:not(.cta-link--contrast),
-.datatable--claimabletasks .datatable__sort.datatable__sort, .datatable--claimabletasks.datatable--claimabletasks a:not(.cta-link--contrast), 
-.datatable--tasks .datatable__sort.datatable__sort, 
-.casesearch__postfilters .btn--pill.btn--pill, 
-.gi-case .btn--case,
-.icmform .a-link--changeall.a-link--changeall {
+.datatable__sort, .datatable--assignedtasks a:not(.cta-link--contrast), .datatable--claimabletasks a:not(.cta-link--contrast), 
+.casesearch__postfilters .btn--pill, .gi-case .btn--case, .icmform .a-link--changeall {
     &:hover {
         @extend %a-link-underline-hover;
         &:focus {
@@ -90,21 +86,12 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
     }
 }
 
-.gi-case .btn--case:focus {
-    @extend %a-link-focus;
-}
-
-.btn--reset.btn--reset:hover, .block--selfservice .cta-link--viewall.cta-link--viewall:hover {
+.btn--reset:hover, .block--selfservice .cta-link--viewall:hover {
     color: $black;
 }
 
-//.menu__block,
-.cta-link--selfservicedetails.cta-link--assigned.cta-link--assigned, 
-.cta-link--selfservicedetails.cta-link--claimanddo.cta-link--claimanddo,
-.datatable .cta-link--contrast.cta-link--contrast,
-.btn--contrast,
-.footer__navigation .utilitymenu__link.utilitymenu__link,
-.footer__navigation .bygoss__link.bygoss__link
+.cta-link--selfservicedetails.cta-link--assigned, .cta-link--selfservicedetails.cta-link--claimanddo,
+.datatable .cta-link--contrast, .btn--contrast
 {
     &:hover {
         color: $white;
@@ -114,10 +101,16 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
     }
 }
 
+.bygoss__link, .utilitymenu--footer .utilitymenu__link {
+    &:focus {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
 .menu__block {
     &:hover {
         .block__title {
-            //color: $white;
             text-decoration: underline;
         }
         &:focus {
@@ -167,27 +160,12 @@ input:focus, select:focus, textarea:focus, .chosen-container-active .chosen-sing
     outline-color: $focus-color;
 }
 
-
-/*//Footer links
-.footer__navigation {
-    //repeat class names to increase specificity score
-    .utilitymenu__link.utilitymenu__link, .bygoss__link.bygoss__link {
-        &:hover {
-            color: $white;
-        }
-        &:focus:hover { 
-            color: $black;
-        }
-    }
-}*/
-
 .item--none .item__title:before, .a-heading__title--icon::before {
-    background-color: $blue; //TODO should this be display none, setting background colour next to homepage headings so the the white image can be seen.
+    background-color: $blue; //TODO - check should this be display none, setting background colour next to homepage headings so the the white image can be seen.
 }
 
-//TODO - double check that the share button should be hidden
 .a-share {
-    display: none;
+    display: none; //TODO - check that the share button should be hidden
 }
 
 /*------------------------------------------------------
