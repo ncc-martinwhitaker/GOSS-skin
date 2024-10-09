@@ -196,22 +196,6 @@
   display: none;
 }
 
-
-//hide for now 
-/*.calendar-date--hasevent.calendar-date--selected:after {
-  display: flex;
-  content: "";
-  position: absolute;
-  bottom: -10px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 10px solid $green; 
-}*/
-
 //Book button styling
 .calendar {
   .cta-link--contrast{
@@ -254,6 +238,15 @@
   .calendar-date:active .calendar-date__day.accessibility{
     color: $white;
     font-size: larger;
+  }
+
+  .calendar-date:not(.calendar-date--hasevent) .calendar-date__day.accessibility{
+    background-color: $grey-3;
+     color: $grey-2;
+     &:hover{
+      background-color: $grey-3;
+      color: $grey-2;
+    }
   }
 
   //Removing event-results white space
