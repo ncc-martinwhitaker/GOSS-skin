@@ -1,0 +1,408 @@
+/*================================================
+4693 Event template - MM to =hide-back-to-event
+================================================*/
+
+.body--hide-back-to-event{
+    a[href*="Book-to-visit"]:not(.cta-link){
+        display: none;
+    }
+}
+
+/*======================================================
+4692 Event template - global booking styling
+======================================================*/
+
+//stylisation event-info block
+.event__info{
+  background-color: $teal;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.event__details--date,
+.event-detail--time{
+  color: $white;
+  font-weight: bold;
+}
+
+//put all objects in a column
+.grid--booking.grid--2col {
+  display: grid;
+  grid-template-areas: 
+    "main main"
+    "other other"
+    "details details";
+  gap: 20px;
+}
+
+.grid__cell--details {
+  grid-area: details;
+}
+
+//columns across the entire width of the page
+.grid--2col[data-grid-maxcols="2"] .grid__cell{
+  width: 100%;
+}
+
+//hide Vehicle type title
+.booking__section--tickets .booking__title{
+  display: none;
+}
+
+//info message colour
+.booking__section--tickets .booking__summary{
+  color:$teal;
+}
+
+//block border
+.booking__section {
+  border-radius: 15px;
+  border: 2px dashed;    
+}
+
+//white background for the sections
+.booking__section{
+  background-color: $white !important;
+}
+
+//Info message in the Booking ditails
+.icmform .icmguidancehint::before,
+.booking__hint--details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: $teal;
+}
+
+.icmform .icmguidancehint::before{
+  content: "\1F6C8";//\e83a
+}
+
+//Text area width 50%
+.grid__cell--tickets .booking__item {
+  width: 50%;
+}
+
+.booking__hint--details{
+  width: 200%;
+}
+
+  //increase the size of selection items
+.grid__cell--right.grid__cell--cols2 .booking-ticket__select{
+  transform: scale(1.2);
+  margin: -4px 60px 0 10px;
+}
+
+.booking-ticket__availability{
+ display: none;
+}
+
+//hide border lines
+.grid__cell--details .booking__item {
+  border-bottom: 0 !important;
+}
+
+//Submit button
+.icmform input[type="submit"].btn--booking {
+ background-color: $green !important;
+ border: 0 !important;
+}
+
+//mobile view
+@media (max-width: 768px){
+.grid__cell--right.grid__cell--cols2 .booking-ticket__select{
+  transform: translateY(15px);
+}
+
+ .grid__cell--tickets .booking__item,
+ .booking__hint--details {
+  width: 100%;
+} 
+
+.booking-ticket__input{
+  margin: 0 0 15px 0;
+  }
+}
+
+/*===========================================================================
+4691 Calendar template - NCC standard global styling
+===========================================================================*/
+
+//Calendar border
+.calendar__week,
+.calendar__row,
+.calendar__row--dates,
+.calendar__row--selected,
+.calendar__row .calendar__row--dates .calendar__row--selected .calendar__row--sticky,
+.calendar__row .calendar__row--dates .calendar__row--selected,
+.calendar__week .calendar__week--sticky{
+  border: none;
+  display: flex;
+  gap: 15px;
+}
+
+.calendar .calendar-date{
+  border-radius: 15px;
+  border: 1px solid $grey-3;
+}
+
+.calendar {
+  .calendar-date:hover{
+    background-color: $button-secondary-color-hov;
+    color: $white;
+  }
+
+  .calendar-date--selected:hover{
+    &:after{
+      background-color: $button-primary-color-hov;
+    } 
+    background-color: $button-primary-color-hov;
+  }
+}
+
+//Today block with white background-color
+.calendar-date--today{
+  background-color: $white;
+}
+
+ //Background colour for days without events
+ .calendar-date:not(.calendar-date--hasevent){
+  background-color: $grey-3;
+  color: $grey-2;
+  &:hover{
+    background-color: $grey-3;
+    color: $grey-2;
+  }
+} 
+
+
+//Event result border
+.event-results .event-results__item{
+  box-shadow: none;
+}
+
+
+//Transfer time to another line
+.event-instances__value--date .event-instances__date{
+  font-weight: normal;
+  white-space: pre-line;
+}
+
+//Calendar dates
+.calendar-date--hasevent:hover, 
+.calendar-date--hasevent:focus{
+  box-shadow: none;
+}
+
+.calendar-date--hasevent.calendar-date:after{
+  display: none;
+}
+
+//Book button styling
+.calendar {
+  .cta-link--contrast{
+    border-radius: 10px;
+    background-color: $green;
+  }
+  
+  .cta-link--contrast:hover{
+    background-color: $button-primary-color-hov;
+    box-shadow: none;
+  }
+  
+  .cta-link--contrast:focus{
+    background-color: $focus-color;
+  }
+  
+  .calendar-date--selected {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+@media (max-width:768px){
+  .calendar-date--hasevent.calendar-date--selected:after{
+    display: none;
+  }
+  .calendar .calendar-date{
+    border-radius: none;
+  }
+
+  //Unhide Week day
+  .calendar-date__day.accessibility{
+      visibility: visible;
+      clip: unset;
+      overflow: visible;      
+    }
+
+  .calendar-date--selected .calendar-date__day.accessibility,
+  .calendar-date:focus .calendar-date__day.accessibility,
+  .calendar-date:active .calendar-date__day.accessibility{
+    color: $white;
+    font-size: larger;
+  }
+
+  .calendar-date:not(.calendar-date--hasevent) .calendar-date__day.accessibility{
+    background-color: $grey-3;
+     color: $grey-2;
+     &:hover{
+      background-color: $grey-3;
+      color: $grey-2;
+    }
+  }
+
+  //Removing event-results white space
+  .event-results .event-results__item .event-instances,
+  .calendar .event-instances__item:nth-child(odd){
+    padding: 0;
+  }
+  
+  //Hide ticket icon
+  .calendar .event-instances__value--availability::before{
+    display: none;
+  }
+
+  .calendar .event-instances__value--availability{
+    display: contents;
+  }
+
+  //Font-weight for Time row
+  .event-instances__time,
+  .event-instances__to{
+    font-weight: bold;
+  }  
+}
+
+/*==============================================================
+4719 Booking Event styling pt 2 - confirmation screen
+==============================================================*/
+//Transform icons to the text
+.grid--bookingsummary{
+  .booking__summary__list{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nvp--bookingsummary{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .nvp--name::before,
+  .nvp--email::before,
+  .nvp--date:before,
+  .nvp--location:before,
+  .nvp--package:before{
+    content: ""!important;
+    display: none !important;
+  }
+  
+  .nvp--name::before{
+    content: "Name"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+  }
+  
+  .nvp--email::before{
+    content: "Email"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+  }
+  
+  .nvp--location:before{
+    content: "Location"!important;
+      display: inline-block !important;
+      margin-right: 10px;
+      font-size: 90% !important;
+  }
+  
+  .nvp--date:before{
+      content: "Date selected"!important;
+      display: inline-block !important;
+      margin-right: 10px;
+    }
+  
+  .booking-summary__to:before{
+    vertical-align: baseline !important;
+  }
+
+  .nvp--package:before{
+    content:"Total slots required"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+    font-size: 90% !important;
+  }
+  
+  .nvp--name::before,
+  .nvp--email::before,
+  .nvp--date:before,
+  .nvp--location:before,
+  .nvp--package:before{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    display: contents;
+  }
+  
+  .nvp__value{
+    margin: 30px -25px;
+    font-weight:normal;
+    font-size: larger;
+  } 
+}
+
+.grid--bookingsummary .grid__cell:only-child .booking-summary__item--stack{
+  display: flex !important;
+}
+
+//Book button colour
+.icmform input[type=submit].booking-summary__button:only-child{
+  background-color: $green;
+}
+
+//Hide border
+.booking-summary__terms{
+  border-top: none !important;
+}
+
+//hide double Date selected
+.nvp--booking .nvp__value{
+    display: none;
+  }
+
+//Background colour for form
+.booking-summary__actions{
+  background-color: $white !important;
+}
+
+//Error message on the top of the Terms
+.booking-summary__terms{
+  position: relative;
+  padding-top: 20px;
+}
+
+.errorblock.errorblock--accept{
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+@media (max-width:768px){
+  .nvp__value{
+    white-space: nowrap;
+  }
+}
+
+//Checkbox
+.booking-summary__terms input[type="checkbox"]{
+  width: 34px;
+  height: 34px;
+  border: 2px solid $black;
+  border-radius: 10px;
+}
+
+//Terms summary
+.booking-summary__terms{
+  display: flex;
+}

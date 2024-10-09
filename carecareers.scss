@@ -955,3 +955,11 @@ Footer - copyright - 4176
         list-style: none; /* Remove markers from the list if it is <ul>/<ol> */
     }
   }
+
+  /*=================================================================================
+  4595 Job search and article: 'New' chip colour contrast - not sufficient contrast.
+  ==================================================================================*/
+  .template--search .card--job .card__label span.card__labeltxt,
+  .gi-job .gi-job__announcement.gi-job__announcement--new{
+    color:#007435;
+  }
