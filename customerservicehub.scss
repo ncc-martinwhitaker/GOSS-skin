@@ -63,6 +63,13 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
     }
 }
 
+.header__utilities .utilitymenu__link:focus {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .gi-articletreeview__item:focus>.gi-articletreeview__link {
     @extend %a-link-focus;
     &:hover {
@@ -158,14 +165,6 @@ a, .icmform .btn--link, .btn--contrast, .btn--reset, .gi-disclosure__toggle
 
 input:focus, select:focus, textarea:focus, .chosen-container-active .chosen-single, .chosen-container-active .chosen-choices {
     outline-color: $focus-color;
-}
-
-.item--none .item__title:before, .a-heading__title--icon::before {
-    background-color: $blue; //TODO - check should this be display none, setting background colour next to homepage headings so the the white image can be seen.
-}
-
-.a-share {
-    display: none; //TODO - check that the share button should be hidden
 }
 
 /*------------------------------------------------------
