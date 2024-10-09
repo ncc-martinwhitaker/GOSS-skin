@@ -137,6 +137,8 @@
 .calendar__row .calendar__row--dates .calendar__row--selected,
 .calendar__week .calendar__week--sticky{
   border: none;
+  display: flex;
+  gap: 15px;
 }
 
 .calendar .calendar-date{
@@ -254,31 +256,6 @@
   .calendar .event-instances__item:nth-child(odd){
     padding: 0;
   }
-
-   //Add Chevron-down element
-  /*.calendar__cell+.calendar__cell button::after{
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: rotate(45deg);
-    margin-left: 5px;
-    color: $black;
-  }
-
-  .calendar__cell+.calendar__cell button{
-    position: relative;
-    padding-right: 20px;
-  }
-
-  .calendar__cell+.calendar__cell button::after{
-    position: absolute;
-    right: 30px;
-    top:25%;
-    transform: translateY(-50%) rotate(45deg);
-  }*/
   
   //Hide ticket icon
   .calendar .event-instances__value--availability::before{
@@ -294,4 +271,138 @@
   .event-instances__to{
     font-weight: bold;
   }  
+}
+
+/*==============================================================
+4719 Booking Event styling pt 2 - confirmation screen
+==============================================================*/
+//Transform icons to the text
+.grid--bookingsummary{
+  .booking__summary__list{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nvp--bookingsummary{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .nvp--name::before,
+  .nvp--email::before,
+  .nvp--date:before,
+  .nvp--location:before,
+  .nvp--package:before{
+    content: ""!important;
+    display: none !important;
+  }
+  
+  .nvp--name::before{
+    content: "Name"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+  }
+  
+  .nvp--email::before{
+    content: "Email"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+  }
+  
+  .nvp--location:before{
+    content: "Location"!important;
+      display: inline-block !important;
+      margin-right: 10px;
+      font-size: 90% !important;
+  }
+  
+  .nvp--date:before{
+      content: "Date selected"!important;
+      display: inline-block !important;
+      margin-right: 10px;
+    }
+  
+  .booking-summary__to:before{
+    vertical-align: baseline !important;
+  }
+
+  .nvp--package:before{
+    content:"Total slots required"!important;
+    display: inline-block !important;
+    margin-right: 10px;
+    font-size: 90% !important;
+  }
+  
+  .nvp--name::before,
+  .nvp--email::before,
+  .nvp--date:before,
+  .nvp--location:before,
+  .nvp--package:before{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    display: contents;
+  }
+  
+  .nvp__value{
+    margin: 30px -25px;
+    font-weight:normal;
+    font-size: larger;
+  } 
+}
+
+.grid--bookingsummary .grid__cell:only-child .booking-summary__item--stack{
+  display: flex !important;
+}
+
+//Book button colour
+.icmform input[type=submit].booking-summary__button:only-child{
+  background-color: $green;
+}
+
+//Hide border
+.booking-summary__terms{
+  border-top: none !important;
+}
+
+//hide double Date selected
+.nvp--booking .nvp__value{
+    display: none;
+  }
+
+//Background colour for form
+.booking-summary__actions{
+  background-color: $white !important;
+}
+
+//Error message on the top of the Terms
+.booking-summary__terms{
+  position: relative;
+  padding-top: 20px;
+}
+
+.errorblock.errorblock--accept{
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+@media (max-width:768px){
+  .nvp__value{
+    white-space: nowrap;
+  }
+}
+
+//Checkbox
+.booking-summary__terms input[type="checkbox"]{
+  width: 34px;
+  height: 34px;
+  border: 2px solid $black;
+  border-radius: 10px;
+}
+
+//Terms summary
+.booking-summary__terms{
+  display: flex;
 }
