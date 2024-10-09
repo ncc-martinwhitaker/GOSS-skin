@@ -158,6 +158,21 @@
   }
 }
 
+//Today block with white background-color
+.calendar-date--today{
+  background-color: $white;
+}
+
+ //Background colour for days without events
+ .calendar-date:not(.calendar-date--hasevent){
+  background-color: $grey-3;
+  color: $grey-2;
+  &:hover{
+    background-color: $grey-3;
+    color: $grey-2;
+  }
+} 
+
 
 //Event result border
 .event-results .event-results__item{
@@ -234,7 +249,9 @@
       overflow: visible;      
     }
 
-  .calendar-date--selected .calendar-date__day.accessibility{
+  .calendar-date--selected .calendar-date__day.accessibility,
+  .calendar-date:focus .calendar-date__day.accessibility,
+  .calendar-date:active .calendar-date__day.accessibility{
     color: $white;
     font-size: larger;
   }
@@ -245,8 +262,8 @@
     padding: 0;
   }
 
-  //chevron-down element
-  /*.calendar-date__number::after{
+   //Add Chevron-down element
+  /*.calendar__cell+.calendar__cell button::after{
     content: "";
     display: inline-block;
     width: 10px;
@@ -255,23 +272,21 @@
     border-bottom: 2px solid currentColor;
     transform: rotate(45deg);
     margin-left: 5px;
-    &:hover{
-      color:$white;
-    }
+    color: $black;
   }
 
-  .calendar-date__number{
+  .calendar__cell+.calendar__cell button{
     position: relative;
     padding-right: 20px;
   }
 
-  .calendar-date__number::after{
+  .calendar__cell+.calendar__cell button::after{
     position: absolute;
     right: 30px;
-    top: -50%;
+    top:25%;
     transform: translateY(-50%) rotate(45deg);
   }*/
-
+  
   //Hide ticket icon
   .calendar .event-instances__value--availability::before{
     display: none;
