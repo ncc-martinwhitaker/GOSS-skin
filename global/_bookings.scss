@@ -121,5 +121,169 @@
 
 .booking-ticket__input{
   margin: 0 0 15px 0;
+  }
 }
+
+/*===========================================================================
+4691 Calendar template - NCC standard global styling
+===========================================================================*/
+
+//Calendar border
+.calendar__week,
+.calendar__row,
+.calendar__row--dates,
+.calendar__row--selected,
+.calendar__row .calendar__row--dates .calendar__row--selected .calendar__row--sticky,
+.calendar__row .calendar__row--dates .calendar__row--selected,
+.calendar__week .calendar__week--sticky{
+  border: none;
+}
+
+.calendar .calendar-date{
+  border-radius: 15px;
+  border: 1px solid $grey-3;
+}
+
+.calendar {
+  .calendar-date:hover{
+    background-color: $button-secondary-color-hov;
+    color: $white;
+  }
+
+  .calendar-date--selected:hover{
+    &:after{
+      background-color: $button-primary-color-hov;
+    } 
+    background-color: $button-primary-color-hov;
+  }
+}
+
+
+//Event result border
+.event-results .event-results__item{
+  box-shadow: none;
+}
+
+
+//Transfer time to another line
+.event-instances__value--date .event-instances__date{
+  font-weight: normal;
+  white-space: pre-line;
+}
+
+//Calendar dates
+.calendar-date--hasevent:hover, 
+.calendar-date--hasevent:focus{
+  box-shadow: none;
+}
+
+.calendar-date--hasevent.calendar-date:after{
+  display: none;
+}
+
+
+//hide for now 
+/*.calendar-date--hasevent.calendar-date--selected:after {
+  display: flex;
+  content: "";
+  position: absolute;
+  bottom: -10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid $green; 
+}*/
+
+//Book button styling
+.calendar {
+  .cta-link--contrast{
+    border-radius: 10px;
+    background-color: $green;
+  }
+  
+  .cta-link--contrast:hover{
+    background-color: $button-primary-color-hov;
+    box-shadow: none;
+  }
+  
+  .cta-link--contrast:focus{
+    background-color: $focus-color;
+  }
+  
+  .calendar-date--selected {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+@media (max-width:768px){
+  .calendar-date--hasevent.calendar-date--selected:after{
+    display: none;
+  }
+  .calendar .calendar-date{
+    border-radius: none;
+  }
+
+  //Unhide Week day
+  .calendar-date__day.accessibility{
+      visibility: visible;
+      clip: unset;
+      overflow: visible;      
+    }
+
+  .calendar-date--selected .calendar-date__day.accessibility{
+    color: $white;
+    font-size: larger;
+  }
+
+  //Removing event-results white space
+  .event-results .event-results__item .event-instances,
+  .calendar .event-instances__item:nth-child(odd){
+    padding: 0;
+  }
+
+  //chevron-down element
+  /*.calendar-date__number::after{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    &:hover{
+      color:$white;
+    }
+  }
+
+  .calendar-date__number{
+    position: relative;
+    padding-right: 20px;
+  }
+
+  .calendar-date__number::after{
+    position: absolute;
+    right: 30px;
+    top: -50%;
+    transform: translateY(-50%) rotate(45deg);
+  }*/
+
+  //Hide ticket icon
+  .calendar .event-instances__value--availability::before{
+    display: none;
+  }
+
+  .calendar .event-instances__value--availability{
+    display: contents;
+  }
+
+  //Font-weight for Time row
+  .event-instances__time,
+  .event-instances__to{
+    font-weight: bold;
+  }  
 }
