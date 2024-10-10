@@ -146,6 +146,18 @@
   border: 1px solid $grey-3;
 }
 
+@media (max-width: 768px) {
+  .calendar__week,
+  .calendar__row,
+  .calendar__row--dates,
+  .calendar__row--selected,
+  .calendar__row .calendar__row--dates .calendar__row--selected .calendar__row--sticky,
+  .calendar__row .calendar__row--dates .calendar__row--selected,
+  .calendar__week .calendar__week--sticky {
+    display: block;
+  }
+}
+
 .calendar {
   .calendar-date:hover{
     background-color: $button-secondary-color-hov;
