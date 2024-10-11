@@ -142,8 +142,13 @@
 }
 
 .calendar .calendar-date{
-  border-radius: 15px;
+  border-radius: 0px;
   border: 1px solid $grey-3;
+}
+
+.calendar .event-instances__item {
+  border: solid 1px $grey-3;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
