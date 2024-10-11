@@ -2403,22 +2403,7 @@ h4.stage-link__title  {
   overflow: hidden;
 }
 
-/*=============================================================================
-4619 - Text overflow issue fixed as part of media query refactoring
-=============================================================================*/
 
-
-.item.item--article .item__title a {
-  text-wrap: wrap;
-}
-
-.item.item--article .item__body {
-  text-wrap: wrap;
-}
-
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__content * {
-  text-wrap: wrap;
-}
 
 //Original CSS below
 
