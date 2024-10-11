@@ -141,9 +141,68 @@
   gap: 15px;
 }
 
-.calendar .calendar-date{
-  border-radius: 0px;
+.calendar .calendar-date {
   border: 1px solid $grey-3;
+  border-radius: 15px;
+}
+
+@include mq(md, max) {
+  .calendar-date--selected.calendar-date--sticky {
+    top: 0px !important;
+  }
+  .calendar .calendar-date{
+    border-radius: 0px;
+  }
+}
+
+@include mq(md, min) {
+
+  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent::after {
+    display: none;
+  }
+
+  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected::after {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    bottom: -14px;
+    right: calc(50% - 15px);
+    transform: rotate(45deg);
+    background-color: $button-primary-color;
+    z-index: 10;
+  }
+
+  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected:hover::after {
+    background-color: $button-primary-color-hov;
+  }
+}
+
+@include mq(md, max) {
+
+  .calendar .calendar-date--weekday.calendar-date--selected:hover:after {
+    background-color: $button-primary-color;
+  }
+
+  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent::after {
+    content: '\e827';
+    border: none;
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 50px;
+    transform: rotate(90deg);
+  }
+  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected::after {
+    transform: rotate(270deg);
+    right: 10px;
+  }
+
+  .calendar .calendar-date--weekday.calendar-date--selected:hover:after {
+    background-color: transparent;
+  }
+
 }
 
 .calendar .event-instances__item {
@@ -211,9 +270,9 @@
   box-shadow: none;
 }
 
-.calendar-date--hasevent.calendar-date:after{
-  display: none;
-}
+// .calendar-date--hasevent.calendar-date:after{
+//   display: none;
+// }
 
 //Book button styling
 .calendar {
@@ -234,13 +293,14 @@
   .calendar-date--selected {
     background-color: $green;
     color: $white;
+    outline: none;
   }
 }
 
 @media (max-width:768px){
-  .calendar-date--hasevent.calendar-date--selected:after{
-    display: none;
-  }
+  // .calendar-date--hasevent.calendar-date--selected:after{
+  //   display: none;
+  // }
   .calendar .calendar-date{
     border-radius: none;
   }
@@ -285,9 +345,16 @@
 
   //Font-weight for Time row
   .event-instances__time,
-  .event-instances__to{
+  .event-instances__to {
     font-weight: bold;
   }  
+}
+
+// overwriting GOSS nonsense 
+@media (max-width: 780px) {
+  .calendar__cell+.calendar__cell button {
+    border-right: 1px solid #ccc;
+  }
 }
 
 /*==============================================================
