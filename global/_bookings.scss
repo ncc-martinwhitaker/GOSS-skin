@@ -39,8 +39,8 @@
   grid-area: details;
 }
 
-//columns across the entire width of the page
-.grid--2col[data-grid-maxcols="2"] .grid__cell{
+//4766 - columns across the entire width of the page
+.grid--booking.grid--2col[data-grid-maxcols="2"] .grid__cell{
   width: 100%;
 }
 
