@@ -25,3 +25,23 @@ if (new Date($('.nvp--blog-created .nvp__date').text()) < ThreeMonths) {
 }*/
 
 }); // end of doc ready
+
+/*===========================================================
+4077 Hover menu for MyNet task dropdown
+===========================================================*/
+document.addEventListener('DOMContentLoaded', function() {
+
+  const links = document.querySelectorAll(".gi-sitenav__list--lvl2 .gi-sitenav__link--lvl2");
+
+  let viewAllPeopleLink = null;
+  links.forEach(link => {
+    if(link.textContent.trim()==="View all People"){
+      viewAllPeopleLink = link.parentElement;
+    }
+  });
+
+  if(viewAllPeopleLink){
+    const parentList = document.querySelector(".gi-sitenav__list--lvl2");
+    parentList.prepend(viewAllPeopleLink);
+  }
+});
