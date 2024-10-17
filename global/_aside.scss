@@ -164,3 +164,17 @@ body.body--no-aside, body.template--default.body--no-aside {
     }
   }
 }
+
+/*================================================================
+3253 Related content sections
+================================================================*/
+@media (max-width: 768px){
+  .relateditem{
+    border-top: 1px solid $grey-3;
+  }
+
+  .panel__headingtext{ 
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+}
