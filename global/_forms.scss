@@ -342,12 +342,13 @@ div.LookupTable tr {
     }     
 }
 
-/*
+/*===========================================================================================
 4627 Booking form - =hide-price-and-total-for-booking. display:none for 'Free' price labels
-*/
+===========================================================================================*/
 .body--hide-price-and-total{
     .grid__cell--right.grid__cell--cols2 .booking-ticket__price,
-    .grid__cell--details .booking__item.booking__item--total {
+    .grid__cell--details .booking__item.booking__item--total,
+    .event-detail--price {//4774 HIDE this price field at the top of the booking form. 
         display: none;
     }
 }
