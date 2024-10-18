@@ -169,7 +169,13 @@ body.body--no-aside, body.template--default.body--no-aside {
 3253 Related content sections
 ================================================================*/
 @media (max-width: 768px){
+
+  .container.container--fullwidth aside.aside{
+    padding-top: 0;
+  }
+  
   .relateditem{
+    width: 90%;
     border-top: 1px solid $grey-3;
   }
 
