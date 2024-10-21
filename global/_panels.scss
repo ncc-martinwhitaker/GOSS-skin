@@ -2696,3 +2696,35 @@ h4.stage-link__title  {
 
 }
 */
+
+.grid--list .item--article .gi-responsiveimage--item {
+  margin: 0px;
+}
+
+/*  Got to make it split each column in two column layout - except on mobile */ 
+@media only screen and (min-width: 992px) {
+    .body--display-image-left .grid--list .item--article .item__imagecontainer {
+        float: left;
+        width:50%;
+    }
+
+    .body--display-image-left .grid--list .item--article .item__content {
+      float: left;
+  }
+
+  /*  If it has an item__imagecontainer then make the item__content 50% width */
+  .body--display-image-left .grid--list .item--article .item__imagecontainer ~ .item__content {
+      width: 50%
+  }
+
+
+    .body--display-image-right .grid--list .item--article .item__imagecontainer {
+        float: right;
+        width: 50%;
+    }
+
+    .body--display-image-right .grid-list .item--article .item__content{
+        float:right;
+        width: 50%;
+    }
+}
