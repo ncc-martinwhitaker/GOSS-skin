@@ -120,12 +120,18 @@
 }
 
 .card--promo .card__actions .cta-link{
-    display: block;
+    display: inline;
     position: relative;    
-    max-width: 100%;
-    white-space: break-spaces;
-    box-sizing: border-box;
+    max-width: 90%;
+    white-space: normal;
+    box-sizing: border-box;   
 }
+
+.card--promo .card__actions .cta-link:hover{
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+}
+
 
 .card--promo .card__actions .cta-link::after{
     display: inline-block;
@@ -133,7 +139,7 @@
     position: absolute;
     right: -20px;
     transform: translateY(0);
-    top: 25px;
+    top: 4px;
 }
 
 .card--promo .card__actions .cta-link::before{
