@@ -146,6 +146,10 @@
   border-radius: 15px;
 }
 
+.calendar__list {
+  border-top: none;
+}
+
 
 @media (max-width:780px) { //4745 - @include mq(md, max) 
   .calendar-date--selected.calendar-date--sticky {
@@ -156,13 +160,13 @@
   }
 }
 
-@include mq(md, min) {
+@media (min-width: 780px) {
 
-  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent::after {
+  .calendar .calendar-date.calendar-date--hasevent::after {
     display: none;
   }
 
-  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected::after {
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected::after {
     display: block;
     content: '';
     width: 30px;
@@ -176,18 +180,18 @@
     z-index: 10;
   }
 
-  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected:hover::after {
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected:hover::after {
     background-color: $button-primary-color-hov;
   }
 }
 
-@include mq(md, max) {
+@media (max-width: 780px) {
 
-  .calendar .calendar-date--weekday.calendar-date--selected:hover:after {
+  .calendar .calendar-date--selected:hover:after {
     background-color: $button-primary-color;
   }
 
-  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent::after {
+  .calendar .calendar-date.calendar-date--hasevent::after {
     content: '\e827';
     border: none;
     position: absolute;
@@ -195,12 +199,12 @@
     right: 50px;
     transform: rotate(90deg);
   }
-  .calendar .calendar-date.calendar-date--weekday.calendar-date--hasevent.calendar-date--selected::after {
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected::after {
     transform: rotate(270deg);
     right: 10px;
   }
 
-  .calendar .calendar-date--weekday.calendar-date--selected:hover:after {
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected:hover::after {
     background-color: transparent;
   }
 
@@ -254,8 +258,9 @@
 
 
 //Event result border
-.event-results .event-results__item{
+.event-results .event-results__item {
   box-shadow: none;
+  border-bottom: none;
 }
 
 
@@ -298,7 +303,7 @@
   }
 }
 
-@media (max-width:768px){
+@media (max-width: 780px){
   // .calendar-date--hasevent.calendar-date--selected:after{
   //   display: none;
   // }
