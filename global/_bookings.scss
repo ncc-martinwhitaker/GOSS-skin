@@ -142,12 +142,81 @@
   gap: 15px;
 }
 
-.calendar .calendar-date{
-  border-radius: 15px;
+.calendar .calendar-date {
   border: 1px solid $grey-3;
+  border-radius: 15px;
 }
 
-@media (max-width: 768px) {
+.calendar__list {
+  border-top: none;
+}
+
+
+@media (max-width:780px) { //4745 - @include mq(md, max) 
+  .calendar-date--selected.calendar-date--sticky {
+    top: 0px !important;
+  }
+  .calendar .calendar-date{
+    border-radius: 0px;
+  }
+}
+
+@media (min-width: 780px) {
+
+  .calendar .calendar-date.calendar-date--hasevent::after {
+    display: none;
+  }
+
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected::after {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    bottom: -14px;
+    right: calc(50% - 15px);
+    transform: rotate(45deg);
+    background-color: $button-primary-color;
+    z-index: 10;
+  }
+
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected:hover::after {
+    background-color: $button-primary-color-hov;
+  }
+}
+
+@media (max-width: 780px) {
+
+  .calendar .calendar-date--selected:hover:after {
+    background-color: $button-primary-color;
+  }
+
+  .calendar .calendar-date.calendar-date--hasevent::after {
+    content: '\e827';
+    border: none;
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 50px;
+    transform: rotate(90deg);
+  }
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected::after {
+    transform: rotate(270deg);
+    right: 10px;
+  }
+
+  .calendar .calendar-date.calendar-date--hasevent.calendar-date--selected:hover::after {
+    background-color: transparent;
+  }
+
+}
+
+.calendar .event-instances__item {
+  border: solid 1px $grey-3;
+  margin-top: 10px;
+}
+
+@media (max-width: 780px) { //4745
   .calendar__week,
   .calendar__row,
   .calendar__row--dates,
@@ -190,8 +259,9 @@
 
 
 //Event result border
-.event-results .event-results__item{
+.event-results .event-results__item {
   box-shadow: none;
+  border-bottom: none;
 }
 
 
@@ -207,9 +277,9 @@
   box-shadow: none;
 }
 
-.calendar-date--hasevent.calendar-date:after{
-  display: none;
-}
+// .calendar-date--hasevent.calendar-date:after{
+//   display: none;
+// }
 
 //Book button styling
 .calendar {
@@ -230,13 +300,14 @@
   .calendar-date--selected {
     background-color: $green;
     color: $white;
+    outline: none;
   }
 }
 
-@media (max-width:768px){
-  .calendar-date--hasevent.calendar-date--selected:after{
-    display: none;
-  }
+@media (max-width: 780px){
+  // .calendar-date--hasevent.calendar-date--selected:after{
+  //   display: none;
+  // }
   .calendar .calendar-date{
     border-radius: none;
   }
@@ -281,9 +352,16 @@
 
   //Font-weight for Time row
   .event-instances__time,
-  .event-instances__to{
+  .event-instances__to {
     font-weight: bold;
   }  
+}
+
+// overwriting GOSS nonsense 
+@media (max-width: 780px) {
+  .calendar__cell+.calendar__cell button {
+    border-right: 1px solid #ccc;
+  }
 }
 
 /*==============================================================
@@ -419,3 +497,16 @@
 .booking-summary__terms{
   display: flex;
 }
+
+
+/***** 4745 - Calendar 'sticky' dates on scroll - add white background *****
+
+     This extends a white section from the days of the week row (.calendar__week) behind the number date row (.calendar__row--dates) so that when the menu is sticky
+     the bookable cards do not peek in between the gaps of the numbered dates row.  But we only want to show this when the the menus are sticky because otherwise 
+     when you scroll down the white section will overlap the footer.  Well done for following this far :-)
+*/
+.calendar:has(.calendar__row--sticky) .calendar__controls--sticky ~ .calendar__week--sticky {
+  box-shadow: 0px 90px 0px 23px #FFFFFF;
+  z-index: 1; 
+}
+
