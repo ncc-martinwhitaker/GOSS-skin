@@ -27,6 +27,9 @@ $breadcrumb-chevron: $breadcrumb-chevron-gray !default;
       color: $breadcrumb-text-color;
       @extend %a-link-hover; //3832
     }
+    &:focus {
+      color: $black; //3832
+    }
     &:focus:hover { //3832
       text-decoration: none;
     }

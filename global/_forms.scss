@@ -331,3 +331,64 @@ div.LookupTable tr {
 /*--------------------------------------------------------------*/
 //END
 /*--------------------------------------------------------------*/
+
+/*====================================================================
+4624 Text and links within alert boxes need to be black and underlined
+====================================================================*/
+.alert, .alert--form, .alert--info {
+    color:$black; 
+    a{
+        color: $teal;
+        text-decoration: underline; 
+    }     
+}
+
+/*===========================================================================================
+4627 Booking form - =hide-price-and-total-for-booking. display:none for 'Free' price labels
+===========================================================================================*/
+.body--hide-price-and-total{
+    .grid__cell--right.grid__cell--cols2 .booking-ticket__price,
+    .grid__cell--details .booking__item.booking__item--total,
+    .event-detail--price {//4774 HIDE this price field at the top of the booking form. 
+        display: none;
+    }
+}
+
+/*==================================================================
+4601 New MM - Artile/Body=hide-events - for use on Location template
+==================================================================*/
+.body--hide-events-and-location{
+    .event-related,
+    .daily-link,
+    .event__instances,
+    .event-related__heading,
+    .location-info,
+    .event_notimes{
+        display: none;
+    }
+}
+/*================================================================== 
+                                END
+==================================================================*/
+
+
+/*=============================================================================
+4714 - Dropdown menu colour focus issue
+=============================================================================*/
+
+form .chosen-container-active .chosen-single {
+    border: solid $black 3px;
+    outline: solid $focus-color 3px;
+}
+
+form .chosen-drop ul.chosen-results:focus {
+    background-color: $white;
+    outline: none;
+    text-decoration: none;
+}
+
+form .chosen-drop ul.chosen-results li.active-result.highlighted {
+    background-color: $link-color;
+    color: $white;
+}
+

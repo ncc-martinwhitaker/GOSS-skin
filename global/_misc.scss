@@ -92,22 +92,82 @@
   } 
 }
 
-// Site alert
+// Site alert 
 
 .sitealert {
-  height: 60px;
+  height: auto; //60px;
+  /*=========================================================
+  1117 Sitealert bug-fix
+  =========================================================*/
+  display: flex;
+  align-items: left;
+  padding: 0 15px;
 
   .container {
-    height: 100%;
+   // height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
 
     .sitealert__heading {
       margin: 0px 0px 5px 0px;
+      font-weight: bold;
+    }
+
+    .sitealert__content{
+      margin: 0;
+      white-space: normal;
+      overflow: hidden;
+      word-wrap: break-word;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .sitealert__content p{
+      margin: 0;
+    }
+
+    .sitealert__content a:hover{
+      color: #4840e3;
     }
   }
 }
 
+@media(max-width: 768px){
+  .sitealert{
+    height: auto;
+    padding: 10px;
+  }
+
+  .sitealert .container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sitealert .container.sitealert__heading{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sitealert .container .sitealert__content{
+    white-space: normal;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin-top: 0;  
+  }
+
+  .sitealert__content p{
+    margin: 0;
+  }
+
+  .sitealert .container .sitealert__content a:hover{
+    color: #4840e3;
+  }
+}
+/*=======================================================
+                           END
+=======================================================*/
 
 iframe {
   @include mq('lg', 'max') {
@@ -246,3 +306,267 @@ li.paging__item a.paging__link {
   outline: none;
   text-decoration: revert;
 }
+
+// 2190 - block quote styles
+//TODO - where should blockquote styles go?
+
+.blockquote_base {
+  border-left: none;
+  padding: 0px 40px 20px 40px;
+  border-radius: 25px;
+  &::before {
+    content: "";
+    display: block;
+    width: 32px; 
+    height: 32px;
+    margin-bottom: 40px;
+  }
+}
+.maincontent .a-body:has(blockquote) {
+  max-width: 100%;
+}
+
+.a-body {
+
+  blockquote p {
+    display: inherit;
+    font-size: 1.25rem;
+    font-weight: 400;
+    //color: #fff;
+
+    &:first-child {
+      display: inherit;
+      font-size: 1.5rem;
+      font-weight: 600;
+      //color: #fff; 
+      margin-top: 10px;
+    }
+  }
+
+  .blockquote_blue {
+    @extend .blockquote_base;
+    background-color: #212b55;
+    color: $white;
+    &::before {
+      color: $white;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='%23fff'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+    
+  }
+
+  .blockquote_white {
+    @extend .blockquote_base;
+    background-color: $white;
+    color: $black;
+    &::before {
+      color: $black;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='%23000'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
+
+  .blockquote_theme {
+    @extend .blockquote_base;
+    background-color: $header-color;
+    color: $header-text-color;
+    &::before {
+      color: $header-text-color;
+      //TODO - work out what the quote colour should be because the theme text colour could be white or black
+      
+      $theme: str-replace("" + $header-text-color, '#', '%23'); //prefix header colour text with empty string so that the function treats it as a string otherwise it errors on compilation.
+
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='4 0 24 24'%3E%3Ctitle%3Eformat-quote-open%3C/title%3E%3Cpath d='M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z' fill='" + $theme + "'/%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
+}
+
+/*===============================================
+2488 Time out buttons styling and focus issue
+===============================================*/
+
+.dialog--session-expiry-notice {
+  .dialog__content{
+    border-radius: 15px;
+  }
+  
+  .dialog__header{
+    font-size: 24px;
+    font-weight: bold;
+    color: $black;
+  }
+  
+  .dialog__description{
+    text-align: center;
+    font-size: 16px;
+    color: $grey-2;
+    margin-bottom: 20px;
+  }
+  
+  .session-countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .session-countdown-timer{
+    width: 100px;
+    height: 100px;
+    stroke: $grey-3;
+  }
+  
+  .circle-background{
+    fill:none;
+    stroke: $white;
+  }
+  
+  .session-countdown-timer .mask{
+    fill: none;
+    stroke: $orange;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s linear;
+  }
+  
+  .session-countdown-timer circle{
+    stroke: $grey-3;
+  }
+  
+  .session-countdown-timer .time-remaining{
+    display: flex;
+    fill: $black;
+    height: 100px;
+  }
+  
+  .btn--contrast{
+    background-color: $button-primary-color;
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn--contrast:hover{
+    background-color: $button-primary-color-hov;
+    color: $white;
+    text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .1578em;
+  }
+  
+  .btn--contrast:focus,
+  .cta-link:focus, .cta-link:focus:hover{
+    box-shadow: none;
+    background-color: $focus-color;
+    text-decoration: none;
+    color: $black;
+  }
+  
+  .cta-link{
+    background-color: $grey-3;
+    color: $black;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .cta-link:hover{
+    background-color: $grey-1;
+    color: $white;
+    text-decoration: underline;
+  }
+}
+/*========================================
+                END
+========================================*/
+
+/*-------------------------------------------------------------------------------
+3457 - Click for assistance 
+--------------------------------------------------------------------------------*/
+//Customer service centre - logged in only
+.a-body__inner a.CSCLiveChatButton {
+  background-image: none !important;
+  border: 2px solid $grey-0;
+  border-radius: 4px;
+  padding: 10px;
+  color: $grey-0;
+  &::after {
+    content: "";
+    width: 28px;
+    height: 24px;
+    $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    background-image: url($string2);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
+
+//Finance - logged in
+.a-body__inner a.FinanceLiveChatButton1 {
+  background-image: none !important;
+  background-color: #002649;
+  border: 2px solid $grey-0;
+  border-radius: 4px;
+  padding: 10px;
+  color: $white;
+  &::after {
+    content: "";
+    width: 34px;
+    height: 28px;
+    $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    background-image: url($string2);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  &:focus {
+    color: black;
+    background-color: $focus-color;
+    &::after {
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
+}
+
+//Finance - logged out
+.a-body__inner a.FinanceLiveChatButton2 {
+  background-image: none !important;
+  background-color: #002649;
+  border: 2px solid $grey-0;
+  border-radius: 4px;
+  padding: 10px;
+  color: $white;
+  &::after {
+    content: "";
+    width: 34px;
+    height: 28px;
+    $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 24 24'%3E%3Cpath d='M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z' /%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    background-image: url($string2);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  &:focus {
+    color: black;
+    background-color: $focus-color;
+    &::after {
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z' /%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+    }
+  }
+}
+
+a#C4A_lnk1 {
+  display: none; //hide default click for assistance button that appears in the bottom right hand corner
+}
+/*-------------------------------------------------------------------------------
+End of 3457 - Click for assistance 
+--------------------------------------------------------------------------------*/

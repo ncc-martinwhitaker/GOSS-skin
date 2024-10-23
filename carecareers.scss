@@ -177,7 +177,10 @@ Panel/Link-Panel Button colours
     color: white;
  }
 
-
+ //3832
+.a-panel__linkwrap {
+    border-radius: 30px;
+}
 
 /*====================================================================================
 Search button shenanigans
@@ -543,6 +546,28 @@ Footer - copyright - 4176
 }
 
 /*=============================================================================
+4090 - Add blue overlay to home page image
+=============================================================================*/
+
+.a-panel--colour-overlay.a-panel.a-panel--pt.a-panel--body.a-panel--fullwidth {
+
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        left: -80px;
+        height: calc(100% + 300px);
+        width: 1200px;
+        opacity: 0.7;
+        background-color: #021d71;
+        transform: rotate(-8deg);
+    }
+}
+
+
+/*=============================================================================
 3906 - Job Search Template Design
 =============================================================================*/
 
@@ -556,7 +581,7 @@ Footer - copyright - 4176
 
     form.gi-sitesearch.gi-sitesearch--searchtemplate.gi-sitesearch--location {
         background-color: $carecareers_blue; //fallback
-        background: url("https://s3-alpha-sig.figma.com/img/e027/382d/ae88262ff6323e209cb9d90e87c5934d?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=anMMrMP7Bebcg9LG3sfzMs8CfEnJsNUA1WszFsFui0ioibXXSwUDlaLd518RQhP-TTdaK5i2g1wNcvIp18idL9SY8GdzTqpWNIORUH~Rv9iM1g-ZL9t8Z6yGASc84DaUPOzf7VZSo0i-Vkltci3NwmvqsFA3ncbdXOU4HInU70NA3Z4-wT-sB7fdU0NuU9PKeyYVLUInJM5bBvhE48gLstJnfF8ehQQtHX36CqQ9PxQMbU7o6fcuz4~1FJSphVkcUB1BpfaKuDBz9KiElVBslYtTN2RAiY3VTbt-QDaTaOug2PnNYtvsl5URBPLeHeCq8R6wP7CA4zvLOg~Qp-xfcg__");
+        background: url("https://www.norfolkcarecareers.co.uk/image/35713/Search-bg/original.jpg");
         background-position-x: 80%;
         background-position-y: 20%;
         overflow: hidden;
@@ -570,18 +595,18 @@ Footer - copyright - 4176
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -80px;
-            left: -50px;
-            height: calc(100% + 200px);
-            width: 1000px;
-            opacity: 0.7;
-            background-color: #021d71;
-            transform: rotate(-8deg);
-        }
+      
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -80px;
+        //     left: -50px;
+        //     height: calc(100% + 200px);
+        //     width: 1000px;
+        //     opacity: 0.7;
+        //     background-color: #021d71;
+        //     transform: rotate(-8deg);
+        // }
 
         .gi-sitesearch__container {
             max-width: 800px;
@@ -794,7 +819,7 @@ Footer - copyright - 4176
 
     .card__content ul.card__list.card__list--job {
         .nvp.nvp--job-category {
-            display: none;
+            display: none; 
             color: $carecareers_dark-green;
 
             span.nvp__label {
@@ -802,10 +827,16 @@ Footer - copyright - 4176
             }
         }
 
-        // DEV location (change to PRD!)
-        .nvp.nvp--job-category.nvp--job-118 {
+        //changed to PRD!
+        .nvp.nvp--job-category.nvp--job-160 {//4584 Job card search results - 'Area' not showing on PROD.
             display: block;
             margin-top: 15px;
+           
+        }
+
+        .nvp__value:not(:last-child)::after{
+            content: ",";
+            padding: 0 0;
         }
 
         // .card__item--details .nvp__label {
@@ -855,3 +886,81 @@ Footer - copyright - 4176
 .grid--searchresults.grid--4col>.grid__cell {
     width: 75%;
 }
+
+
+
+/*====================================================================================
+4600 - share this page and print fixes
+====================================================================================*/
+
+
+.a-share {
+    display: flex;
+   // align-items: center;
+    flex-wrap: wrap;
+}
+
+.a-share__label{
+    padding: 0 10px 0px 10px;
+    margin: 0;
+    width: auto;
+    top: 0;
+   
+}
+
+
+@media (max-width: 400px) {
+    .a-share__label {
+        width: 100%;
+        padding: 0 10px 0px 0px;
+    }
+} 
+
+
+/*===============================================================================
+4630 Replace pipe with comma - idea to improve layout of job details/categories
+===============================================================================*/
+.gi-job__item .nvp__value::after{
+    content: ",";
+    padding: 0 0;
+}
+
+/*==============================================================
+4599 Footer logo and social media icon alignment
+==============================================================*/
+
+@media (max-width: 560px) {
+    .grid--footer {
+      display: flex;
+      flex-direction: column; /* Place the elements vertically */
+      align-items: center; /* Centre horizontally */
+      justify-content: center; /* Centre vertically, if necessary */
+      text-align: center; /* Center the text inside */
+    }
+  
+    .grid--footer > .grid__cell:first-child {
+      width: 100%; /* Ensure that the element occupies the entire width */
+    }
+  
+    .grid__cell.grid__cell--utilities.grid__cell--cols1 .utilitymenu--bottom {
+      column-count: 1; /* Align the columns */
+      text-align: center; /* Center the text inside */
+    }
+    .socialmedia__list {
+        display: flex; /* Aligns elements in a single line */
+        justify-content: center; /* Centres all elements horizontally */
+        gap: 10px; /* Distance between elements */
+    }
+    
+    .socialmedia__item {
+        list-style: none; /* Remove markers from the list if it is <ul>/<ol> */
+    }
+  }
+
+  /*=================================================================================
+  4595 Job search and article: 'New' chip colour contrast - not sufficient contrast.
+  ==================================================================================*/
+  .template--search .card--job .card__label span.card__labeltxt,
+  .gi-job .gi-job__announcement.gi-job__announcement--new{
+    color:#007435;
+  }

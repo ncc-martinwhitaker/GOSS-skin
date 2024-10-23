@@ -135,5 +135,10 @@
     /* Numbered steps */
     { "name" : "Step H2 start", "element" : "h2", "attributes" : { "class" : "stepstart" }},
     { "name" : "Step H3 start", "element" : "h3", "attributes" : { "class" : "stepstart" }},
-    { "name" : "Step end", "element" : "p", "attributes" : { "class" : "stepend" } }
+    { "name" : "Step end", "element" : "p", "attributes" : { "class" : "stepend" } },
+
+    /* Blockquote - 2190 */
+    { "name" : "Blockquote blue", "element" : "blockquote", "attributes" : { "class" : "blockquote_blue" } },
+    { "name" : "Blockquote white", "element" : "blockquote", "attributes" : { "class" : "blockquote_white" } },
+    { "name" : "Blockquote theme", "element" : "blockquote", "attributes" : { "class" : "blockquote_theme" } }
 ]

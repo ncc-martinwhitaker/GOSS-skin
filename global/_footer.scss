@@ -35,6 +35,9 @@ footer.footer-bottom {
   &:focus {
     @extend %a-link-focus; //3832
   }
+  &:focus:hover {
+    color: $black; //3832
+  }
 }
 
 .grid--footer>.grid__cell:first-child {

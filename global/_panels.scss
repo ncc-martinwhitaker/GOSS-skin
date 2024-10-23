@@ -446,21 +446,26 @@ h2.a-panel__title {
   }
 }
 
+// 4632 - correcting 4427 
+.a-panel--stage.a-panel--hasbackground .card--stage.card--list .grid--2col[data-grid-maxcols="2"] .grid__cell{
+  white-space: normal;
+}
+
 //3832
 .a-panel--stage.a-panel--hasbackground .card--stage.card--list .item__sublink {
   
   display: inline;
 
-  &::after { 
-    //height: auto;
-    background: none;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+  // &::after { 
+  //   //height: auto;
+  //   background: none;
+  //   bottom: 0;
+  //   content: "";
+  //   left: 0;
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  // }
 
   &:hover h4.stage-link__title { //double width stage card
     color: $link-color-darken;
@@ -470,6 +475,10 @@ h2.a-panel__title {
     color: $black;
     background: $focus-color;
     box-shadow: 0 2px $focus-color;
+  }
+  //3832
+  &:focus {
+    color: $black;
   }
 
   &:focus:hover {
@@ -482,7 +491,9 @@ h2.a-panel__title {
   display: block; //undo default GOSS style which is display:none; 
 }
 
-/*.a-panel--stage .card--stage.card--list .item__sublink--list {
+
+
+.a-panel--stage .card--stage.card--list .item__sublink--list {
   &::after {
     height: auto;
     background: none;
@@ -492,8 +503,16 @@ h2.a-panel__title {
     position: absolute;
     right: 0;
     top: 0;
+    display: block; // 4632 
+    margin: 15px 0px; // 4632
   }
-}*/
+}
+
+// 4632
+.a-panel--hasbackground.a-panel--stage .item__sublink:after {
+  display: block;
+  margin: 15px 0px;
+}
 
 .item__sublink { 
   display: inline;
@@ -2290,6 +2309,7 @@ h4.stage-link__title  {
   overflow: visible;
 
   .grid__cellwrap .item.item--article {
+    overflow: visible;
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.12),0 0 10px rgba(0,0,0,0.12);
@@ -2394,6 +2414,39 @@ h4.stage-link__title  {
 
 }
 
+@media (max-width: 520px) {
+  .a-panel--overflow-card.a-panel.a-panel--pt .a-panel__content .a-panel__list .grid.grid--list {
+    .item__imagecontainer picture.gi-responsiveimage__imagewrapper {
+      top: -30%;
+    }
+  }
+}
+
+/*==========================================================================
+                        4427 Contact template
+==========================================================================*/
+
+/* removed for 4650 as not specific enough and there is overlap on longer contact template text
+.grid--2col[data-grid-maxcols="2"] .grid__cell{
+  white-space: nowrap;
+}*/
+
+@media (max-width: 336px) {
+  .grid__cellwrap{
+      white-space: nowrap;
+  }    
+}
+
+/*====== 4650 bug Norfolk stage cards / Contact template 'fix' ===========*/
+.grid__cell.grid__cell--contact-info .grid--2col[data-grid-maxcols="2"] .grid__cell {
+  width:inherit;
+}
+
+/*==========================================================================
+                                  END
+==========================================================================*/
+
+
 
 /*=============================================================================
 4568 - Rounded cards image overflow "fix"
@@ -2403,6 +2456,101 @@ h4.stage-link__title  {
   overflow: hidden;
 }
 
+
+
+/*=============================================================================
+4037 - Script/images inline - side by side with content
+=============================================================================*/
+
+.body--side-by-side main.maincontent {
+  .a-panel {
+    .a-panel__content {
+      width: 100%;
+
+      .a-panel__body.a-body.a-body--panel {
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0px;
+
+        p {
+          width: 100%;
+        }
+
+        p:first-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .a-panel:nth-child(even) {
+    .a-panel__content {
+
+      .a-panel__body.a-body.a-body--panel {
+
+        flex-direction: row-reverse;
+
+        p:first-child {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .body--side-by-side main.maincontent {
+    .a-panel {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+
+          p:first-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+
+    .a-panel:nth-child(even) {
+      .a-panel__content {
+        .a-panel__body.a-body.a-body--panel {
+          flex-direction: column;
+  
+          p:first-child {
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*=============================================================================
+2996 - Rules for the "see more" button on parallax panels
+=============================================================================*/
+
+.fa-block__actions {
+  display: none;
+}
+
+// shows the "see more" button if it is preceded by links
+.fa-block__links + .fa-block__actions {
+  display: block;
+}
+
+/*===================================================================================================
+2654 List articles - create metadata modifier to hide the intro/summary text on all cards in the list
+===================================================================================================*/
+
+.body--hide-summary{
+  .grid--list .item.item--article{
+     .item__body{
+      display: none;
+      }
+    }
+  }
 
 
 //Original CSS below
@@ -2572,3 +2720,35 @@ h4.stage-link__title  {
 
 }
 */
+
+.grid--list .item--article .gi-responsiveimage--item {
+  margin: 0px;
+}
+
+/*  Got to make it split each column in two column layout - except on mobile */ 
+@media only screen and (min-width: 992px) {
+    .body--display-image-left .grid--list .item--article .item__imagecontainer {
+        float: left;
+        width:50%;
+    }
+
+    .body--display-image-left .grid--list .item--article .item__content {
+      float: left;
+  }
+
+  /*  If it has an item__imagecontainer then make the item__content 50% width */
+  .body--display-image-left .grid--list .item--article .item__imagecontainer ~ .item__content {
+      width: 50%
+  }
+
+
+    .body--display-image-right .grid--list .item--article .item__imagecontainer {
+        float: right;
+        width: 50%;
+    }
+
+    .body--display-image-right .grid-list .item--article .item__content{
+        float:right;
+        width: 50%;
+    }
+}

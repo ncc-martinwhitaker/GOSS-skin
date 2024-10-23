@@ -367,6 +367,11 @@ $footer-border-color: #00235d;
     }
 }
 
+/*3308 Museums Events 'Refine your results' pop up menu - Display:None*/
+.template--eventsearch .grid__cell--refine{
+    display: none;
+}
+
 
 /** 3921 - hide Museum location **/
 .event-location {

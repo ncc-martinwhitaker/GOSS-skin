@@ -211,6 +211,9 @@ div.gi-sitenav--mainnav-lvl2 {
     color: $header-menu-text-color-hover;
     @extend %a-link-hover;//3832
   }
+  &:focus:hover {
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em); //3832
+  }
 }
 
 .gi-sitenav__link--lvl1 {

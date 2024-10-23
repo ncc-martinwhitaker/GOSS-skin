@@ -36,6 +36,14 @@ $aside-link-color: $link-color;
             color: $link-color-darken; //3832
             @include a-link-hover;
           }
+          //3832
+          &:focus {
+            color: $black;
+          }
+          //3832
+          &:focus:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -95,10 +103,10 @@ $aside-link-color: $link-color;
               &:hover {
                 color: $link-color-darken;
               }
-              &:focus {
-                @include a-link-focus; //3832
+              //3832
+              &:focus, &:focus:hover {
+                color: $black; 
               }
-              
             }
           }
         }
@@ -152,9 +160,33 @@ body.body--no-aside, body.template--default.body--no-aside {
             &:hover {
               color: $link-color-darken;
             }
+            //3832
+            &:focus {
+              color: $black;
+            }
           }
         }
       }
     }
+  }
+}
+
+/*================================================================
+3253 Related content sections
+================================================================*/
+@media (max-width: 768px){
+
+  .container.container--fullwidth aside.aside{
+    padding-top: 0;
+  }
+  
+  .relateditem{
+    width: 90%;
+    border-top: 1px solid $grey-3;
+  }
+
+  .panel__headingtext{ 
+    font-size: 2rem;
+    padding-top: 1.5rem;
   }
 }
