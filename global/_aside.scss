@@ -174,7 +174,8 @@ body.body--no-aside, body.template--default.body--no-aside {
 /*================================================================
 3253 Related content sections
 ================================================================*/
-@media (max-width: 768px){
+// @media (max-width: 768px)
+@include mq(sm, max) {
 
   .container.container--fullwidth aside.aside{
     padding-top: 0;
