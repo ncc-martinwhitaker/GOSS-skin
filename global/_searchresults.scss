@@ -73,7 +73,8 @@ a.searchresults__itemlink {
     display: none;
 }
 
-.blog-details .card__imagecontainer .card__image {
+/*4808 Image issue*/
+.blog-details .card__imagecontainer .gi-responsiveimage {//replaced .card__image by GOSS Release
     max-width: 120px;
 }
 
