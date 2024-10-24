@@ -854,6 +854,23 @@ h2.a-panel__title {
   }
 }
 
+
+/*=============================================================================
+4619 - Dropdown navigation text issue fixed as part of media query refactoring
+=============================================================================*/
+
+.n-stage .gi-sitenav--stage li.gi-sitenav__item.gi-sitenav__item--lvl1 .gi-sitenav.gi-sitenav--lvl2 {
+  @include mq(xs, max) {
+      width: calc(100% + 80px);
+      left: -40px;
+
+      .gi-sitenav__list.gi-sitenav__list--lvl2 {
+          white-space: normal;
+      }
+  }
+}
+
+
 // Peeky swiper
 
 .a-panel--pt.a-panel--carousel-pt.a-panel--peeky-swiper {
