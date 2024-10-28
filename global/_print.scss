@@ -1,0 +1,220 @@
+/*==================================================================================================================
+624 Improve print CSS
+==================================================================================================================*/
+@media print{
+    //Add data and link to the printed version of the page
+    body::before{
+        content: "Printed on " attr(data-print-date) " - the guidance may have since changed \A " attr(data-print-url);
+        display: block;
+        font-size: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+        color: $black;
+        white-space: pre;
+    }
+
+    //Adding a unified style to the content
+    .maincontent{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,.a-heading__title{
+        font-size: 14pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-size: 12pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h3{
+        font-size: 11pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    h4{
+        font-size: 10pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h5{
+        font-size: 9pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h6{
+        font-size: 8pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    p, span, div, ul, ol, li, a{
+        font-size: 10pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary{
+        font-size: 10pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        color: $red;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+          
+    //Open disclosures and hide unnecessary text
+    button.btn--disclosure-toggle,
+    .gi-disclosure--body .gi-disclosure__toggle::after{
+        display: none;
+    }
+
+    .gi-disclosure--body{
+        border-bottom: none;
+    }
+
+    .gi-disclosure--body .gi-disclosure__toggle{
+        padding: 0;
+    }
+
+    .gi-disclosure__content{
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;       
+    }
+    .gi-disclosure__content.gi-disclosure__content--closed{
+       visibility: visible;
+       opacity: 1;
+    }
+
+
+    //Adding a unified style to the images
+    .item__imagecontainer,
+    .gi-responsiveimage .gi-responsiveimage__image{
+        max-width: 100px;
+        height: auto;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .item__imagecontainer::after,
+    .gi-responsiveimage .gi-responsiveimage__image::after{
+        content: " (" attr(alt) ")";
+        display: block;
+        font-size: 12px;
+        color: $black;
+    }
+
+    //Adding a unified style to the links
+    a-body__link a-body__link--cta,
+    .a-body__link, 
+    .a-body__inner a,
+    .a-body__link--cta::after{
+        display: inline;
+        font-size: 12px;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: .1578em;
+        font-weight: normal;
+    }
+
+    a[href]::after{
+        content: " (" attr(href) ")";
+        font-size: 12px;
+        color: $black;
+        display: inline;
+        text-decoration: none;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+
+
+    //Hide smiles and feedback text
+    .feedback_heading{
+        display: none;
+    }
+
+    .smileys, .shared-logos{
+        display: none !important;
+    } 
+}
+
+
+
+
+
+/*
+
+    .a-body__link .a-body__link--cta,
+    .a-body__link, 
+    .a-body__inner a,
+    .a-body__link--cta::after{
+        display: inline;
+        font-size: 12px;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: .1578em;
+        font-weight: normal;
+    }
+
+    
+
+    .gi-accordion gi-accordion--facets{
+        display: block;
+    }
+
+    .gi-accordion gi-accordion--facets .accordion-content{
+        max-width: none;
+        overflow: visible;
+    }
+
+   
+
+   
+
+    
+
+   
+    iframe[src]::before{
+        content: "Video URL: " attr(src);
+        display: block;
+        font-size: 12px;
+        color: $link-color;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+
+    iframe{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    
+}*/
