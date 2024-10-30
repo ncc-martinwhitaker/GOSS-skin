@@ -516,3 +516,44 @@
   z-index: 1; 
 }
 
+
+/*============================
+4816 Calendar bug - PRP only
+============================*/
+
+//General style for the Calendar
+.calendar__week,
+.calendar__row,
+.calendar__row--dates,
+.calendar__row--selected{
+  border: none;
+  gap: 15px;
+}
+
+//Style for desktop
+@media (min-width: 780px){
+  .calendar__week,
+  .calendar__row,
+  .calendar__row--dates,
+  .calendar__row--selected{
+    display: flex;
+  }
+  
+  .calendar .calendar-date{
+    border-radius: 15px;
+  }
+}
+
+//Style for mobile
+@media (max-width: 780px){
+  .calendar__week,
+  .calendar__row,
+  .calendar__row--dates,
+  .calendar__row--selected{
+    display: block;
+  }
+  
+  .calendar .calendar-date{
+    border-radius: 0px;
+  }
+}
