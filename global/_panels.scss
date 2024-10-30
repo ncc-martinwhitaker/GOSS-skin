@@ -1931,10 +1931,7 @@ h4.stage-link__title  {
   
     .card__imagecontainer {
       width: 100%;
-      // SJEC EJECT 3430
-      overflow: hidden;
-      // EJECT 
-      
+      overflow: hidden; // 3430
       //margin-bottom: 10px;
     }
     .item__body {
@@ -2758,34 +2755,81 @@ h4.stage-link__title  {
 }
 */
 
-.grid--list .item--article .gi-responsiveimage--item {
-  margin: 0px;
+// List article - columns - image left - 3926
+.template--list.body--display-image-left {
+  .grid.grid--list .grid__cell .grid__cellwrap {
+
+    .item.item--article {
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+    .item.item--article .item__content:not(:only-child) {
+      width: 50%;
+    }
+    .item.item--article .item__content:only-child {
+      width: 100%;
+    }
+    .item.item--article .item__imagecontainer {
+      max-height: none;
+      height: auto;
+      padding: 0px;
+      width: 50%;
+      border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cadrs image radius for square cards
+    }
+    .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+      margin: 0;
+      max-height: none;
+      height: 100%;
+    }
+  }
 }
 
-/*  Got to make it split each column in two column layout - except on mobile */ 
-@media only screen and (min-width: 992px) {
-    .body--display-image-left .grid--list .item--article .item__imagecontainer {
-        float: left;
-        width:50%;
-    }
+// List article - columns - image right - 3926
 
-    .body--display-image-left .grid--list .item--article .item__content {
-      float: left;
+.template--list.body--display-image-right {
+  .grid.grid--list .grid__cell .grid__cellwrap {
+
+    .item.item--article {
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+      flex-direction: row-reverse;
+    }
+    .item.item--article .item__content:not(:only-child) {
+      width: 50%;
+    }
+    .item.item--article .item__content:only-child {
+      width: 100%;
+    }
+    .item.item--article .item__imagecontainer {
+      max-height: none;
+      height: auto;
+      padding: 0px;
+      width: 50%;
+      border-radius: 0 5px 5px 0;
+    }
+    .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
+      margin: 0;
+      max-height: none;
+      height: 100%;
+    }
   }
+}
 
-  /*  If it has an item__imagecontainer then make the item__content 50% width */
-  .body--display-image-left .grid--list .item--article .item__imagecontainer ~ .item__content {
-      width: 50%
+@media only screen and (max-width: 600px) {
+  .template--list.body--display-image-left, .template--list.body--display-image-right{
+    .grid.grid--list .grid__cell .grid__cellwrap {
+      .item.item--article {
+        flex-direction: column;
+      }
+      .item.item--article .item__content:not(:only-child) {
+        width: 100%;
+      }
+      .item.item--article .item__imagecontainer {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
   }
-
-
-    .body--display-image-right .grid--list .item--article .item__imagecontainer {
-        float: right;
-        width: 50%;
-    }
-
-    .body--display-image-right .grid-list .item--article .item__content{
-        float:right;
-        width: 50%;
-    }
 }
