@@ -224,7 +224,8 @@ div.LookupTable tr {
     word-break: normal;
 }
 
-@media(max-width: 1200px) {
+// @media(max-width: 1200px)
+@include mq(xl, max) {
     div.LookupTable table {
         display:block;
         width: 100%;

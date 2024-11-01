@@ -181,7 +181,8 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     display: block;
 }*/
 
-@media (max-width: 1050px) {
+// @media (max-width: 1050px)
+@include mq(lg, max) {
     
     .gi-mobilenav--mobilemenu {
         top: 110px; //moves mobile menu down
@@ -209,7 +210,8 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     justify-content: space-evenly;
     padding-top: 10px;
 
-    @media (max-width: 300px) {
+    // @media (max-width: 300px)
+    @include mq(xxs, max) {
         display: block;
     }
 }
@@ -335,7 +337,8 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     }
 }
 
-@media (min-width: 720px) {
+// @media (min-width: 720px)
+@include mq(sm, max) {
 
     .event-instances__value.event-instances__value--date {
         min-height: 60px;
@@ -404,7 +407,8 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     }
 }
 
-@media(max-width: 720px) {
+// @media(max-width: 720px)
+@include mq(sm, max) {
     .calendar .event-results {
         padding:0
     }

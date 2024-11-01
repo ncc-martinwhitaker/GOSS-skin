@@ -158,14 +158,16 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     display: block;
 }*/
 
-@media (max-width: 1170px) {
+// @media (max-width: 1170px)
+@include mq(xl, max) {
 
     div.gi-sitenav--mainnav-lvl2 {
         width: 900px;
     }
 }
 
-@media (max-width: 1050px) {
+// @media (max-width: 1050px)
+@include mq(lg, max) {
 
     .header__menu {
         width: 100%;

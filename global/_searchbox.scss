@@ -267,8 +267,8 @@ float: left !important;
     color: $white;
 }
 
-
-@media (max-width: 1050px)
+//@media (max-width: 1050px)
+@include mq(lg, max)
 {
   .header__menu {
       display: block;

@@ -134,7 +134,8 @@
   }
 }
 
-@media(max-width: 768px){
+// @media (max-width: 768px)
+@include mq(sm, max) {
   .sitealert{
     height: auto;
     padding: 10px;
