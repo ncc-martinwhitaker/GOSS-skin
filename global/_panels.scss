@@ -332,7 +332,8 @@ ul.panel__list.panel__list--relmedia {
     overflow: hidden;
 
     .item__content {
-      padding: 20px !important;
+      // not needed:
+      // padding: 20px !important;
     }
 
     .item__imagecontainer {
@@ -341,7 +342,8 @@ ul.panel__list.panel__list--relmedia {
 
     .gi-responsiveimage__fallback, .gi-responsiveimage__image {
       object-fit: cover;
-      max-height: 125px;
+      // formerly covered up by line 1398:
+      //max-height: 125px;
      
     }
     .gi-responsiveimage.gi-responsiveimage--item.gi-responsiveimage--loaded {
@@ -617,7 +619,7 @@ h2.a-panel__title {
 .item.item--article .item__title {
   font-weight: 700;
   margin: 15px 0px 10px 0px;
-  margin-top: 0 !important;
+  margin-top: 0px;
 }
 .item.item--article .item__title a {
   font-size: $h5-font-size;
@@ -904,7 +906,7 @@ h2.a-panel__title {
 }
 
 
-.a-panel--peeky-swiper {
+.a-panel--peeky-swiper .gi-carousel {
 
     .gi-carousel__controls {
 
@@ -918,24 +920,24 @@ h2.a-panel__title {
       transition: all .3s cubic-bezier(.25,.8,.25,1);
 
       &:hover {
-        box-shadow: 0 1px 4px rgba(0,0,0,.25) !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,.25);
         // background-color: $grey-4 !important;
-        background-color: $white !important;
-        border: none !important;
-        outline: none !important;
-        color: $black !important;
+        background-color: $white;
+        border: none;
+        outline: none;
+        color: $black;
 
         &::after {
-          border-bottom: solid $black 1px !important;
+          border-bottom: solid $black 1px;
         }
       }
       &:focus, &:active {
         transition: none;
-        box-shadow: 0 1px 4px rgba(0,0,0,.25) !important;
-        background-color: $focus-color !important;
-        border: none !important;
-        outline: solid $black 2px !important;
-        color: $black !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,.25);
+        background-color: $focus-color;
+        border: none;
+        outline: solid $black 2px;
+        color: $black;
       }
     }
   }
@@ -1002,7 +1004,7 @@ h2.a-panel__title {
       }
     }
 
-    .a-panel__content {
+    .a-panel--carouselitem .a-panel__content {
       box-shadow: 0 0 1px rgba(0,0,0,.25), 0 1px 4px rgba(0,0,0,.25);
       transition: all .3s cubic-bezier(.25,.8,.25,1);
       border-radius: 6px;
@@ -1027,8 +1029,8 @@ h2.a-panel__title {
         height: 100%;
       }
 
-      .a-panel__title {
-        color: $black !important;
+      h3.a-panel__title {
+        color: $black;
         background-color: rgba(255, 255, 255, 0.9);
         font-size: 1rem;
         text-align: center;
@@ -1167,7 +1169,7 @@ h2.a-panel__title {
         box-shadow: none;
 
         .item__content {
-          min-height: 1px !important;
+          min-height: 1px !important; // overrides JS
           padding: 0px;
 
           .item__title {
@@ -1418,11 +1420,11 @@ figure.gi-responsiveimage,
 
 // END OF IMAGE RATIO
 
-
-.a-panel--feature .item.item--article .gi-responsiveimage__fallback, .a-panel--feature .item.item--article .gi-responsiveimage__image {
- max-height: 2000px !important; 
- /*//to overrule the 125px*/
-}
+// not needed: 
+// .a-panel--feature .item.item--article .gi-responsiveimage__fallback, .a-panel--feature .item.item--article .gi-responsiveimage__image {
+//  max-height: 2000px !important; 
+//  /*//to overrule the 125px*/
+// }
 
 .a-panel--pt.a-panel--list .item__imagecontainer {
   border-radius: 0px;
@@ -1494,7 +1496,7 @@ figure.gi-responsiveimage,
 }
 
 .gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block .gi-responsiveimage__imagewrapper {
-  max-width: none !important; 
+  max-width: none !important; // overrides JS
 }
 
 .gi-responsiveimage.gi-responsiveimage--pt.gi-responsiveimage--fa-block img.gi-responsiveimage__fallback {
@@ -2045,13 +2047,13 @@ h4.stage-link__title  {
   display: block; margin: 0;
 
   .grid.grid--list .item.item--article .item__imagecontainer {display: block;}
-  .item__content {display: none !important;}
+  .item__content {display: none;}
   .grid__cellwrap .item.item--article {position: absolute; top: 0; left: 0; height: 100%; width: 100%;}
   .grid.grid--list .item.item--article .item__imagecontainer figure {position: absolute; top: 50%; left:50%; height: 100%; width: 100%; transform: translateX(-50%) translateY(-50%);}
 
   .a-panel__title {z-index: 1;}
 
-  .grid__cellwrap .item.item--article {border: 0 !important;}
+  .grid__cellwrap .item.item--article {border: 0;}
 
 .grid__cellwrap .item.item--article {background-color: $white;}
 
@@ -2342,7 +2344,7 @@ h4.stage-link__title  {
     left: 20px;
     width: calc(100% - 40px);
     height: 100%;
-    max-width: none !important;
+    max-width: none !important; // overrides JS
 
     img.gi-responsiveimage__image {
       overflow: visible;
@@ -2390,7 +2392,8 @@ h4.stage-link__title  {
     left: 20px;
     width: calc(100% - 40px);
     height: 100%;
-    max-width: none !important;
+    // might not be needed: 
+    // max-width: none !important;
     background-color: transparent;
 
     img.gi-responsiveimage__image {
