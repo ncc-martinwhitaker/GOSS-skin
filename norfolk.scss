@@ -222,6 +222,93 @@ li.gi-sitenav__item.gi-sitenav__item--lvl2 {
     padding-top: 25px;
 }
 
+/*-------------------------------------------------------------------------------
+3457 - Click for assistance 
+--------------------------------------------------------------------------------*/
+//Customer service centre - logged in only
+.a-body__inner a.CSCLiveChatButton {
+    background-image: none !important;
+    border: 2px solid $grey-0;
+    border-radius: 4px;
+    padding: 10px;
+    color: $grey-0;
+    &::after {
+      content: "";
+      width: 28px;
+      height: 24px;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
+  
+  //Finance - logged in
+  .a-body__inner a.FinanceLiveChatButton1 {
+    background-image: none !important;
+    background-color: #002649;
+    border: 2px solid $grey-0;
+    border-radius: 4px;
+    padding: 10px;
+    color: $white;
+    &::after {
+      content: "";
+      width: 34px;
+      height: 28px;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    &:focus {
+      color: black;
+      background-color: $focus-color;
+      &::after {
+        $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17,12V3A1,1 0 0,0 16,2H3A1,1 0 0,0 2,3V17L6,13H16A1,1 0 0,0 17,12M21,6H19V15H6V17A1,1 0 0,0 7,18H18L22,22V7A1,1 0 0,0 21,6Z' /%3E%3C/svg%3E";
+        $string2: str-replace($string, ' ', '%20');
+        background-image: url($string2);
+      }
+    }
+  }
+  
+  //Finance - logged out
+  .a-body__inner a.FinanceLiveChatButton2 {
+    background-image: none !important;
+    background-color: #002649;
+    border: 2px solid $grey-0;
+    border-radius: 4px;
+    padding: 10px;
+    color: $white;
+    &::after {
+      content: "";
+      width: 34px;
+      height: 28px;
+      $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 24 24'%3E%3Cpath d='M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z' /%3E%3C/svg%3E";
+      $string2: str-replace($string, ' ', '%20');
+      background-image: url($string2);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    &:focus {
+      color: black;
+      background-color: $focus-color;
+      &::after {
+        $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z' /%3E%3C/svg%3E";
+        $string2: str-replace($string, ' ', '%20');
+        background-image: url($string2);
+      }
+    }
+  }
+  
+  a#C4A_lnk1, a#C4A_lnk2, a#C4A_lnk3, a#C4A_lnk4, a#C4A_lnk5 { //4824 - there are 5 scriptId's that can be used which generates different anchor id's for each one
+    display: none; //hide default click for assistance button that appears in the bottom right hand corner
+  }
+  /*-------------------------------------------------------------------------------
+  End of 3457 - Click for assistance 
+  --------------------------------------------------------------------------------*/
+
 /*=============================================================================
 4449 - Calendar template
 =============================================================================*/

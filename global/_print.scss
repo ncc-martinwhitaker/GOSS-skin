@@ -1,0 +1,183 @@
+/*==================================================================================================================
+624 Improve print CSS
+==================================================================================================================*/
+/* Hide in all other settings */
+.print-only-video-url {
+    display: none;
+}
+
+@media print{
+    *{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body{
+        margin: 10px;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, span, div, ul, ol, li, a{
+        margin: 5px 0 !important;
+        padding: 0 !important;
+    }
+
+    .maincontent, .item__imagecontainer, .item__content{
+        padding: 0;
+        margin: 0;
+    }
+
+    .gi-disclosure__content{
+        margin: 0;
+        padding: 0;
+    }
+
+    //Add data and link to the printed version of the page
+    body::before{
+        content: "Printed on " attr(data-print-date) " - the guidance may have since changed \A " attr(data-print-url);
+        display: block;
+        font-size: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+        color: $black;
+        white-space: pre;
+    }
+
+    .print-only-video-url {
+        display: block;
+        font-size: 12px;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: .1578em;
+    }
+
+    //Adding a unified style to the content
+    .maincontent{
+        max-width: 100%;
+    }
+
+    h1, .a-heading__title, h2, h3, h4, h5, h6, p, span, div, ul, ol, li, a{
+        font-size: 10pt !important;
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        margin:  5px 0 !important;
+    }
+
+    p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary{
+        font-size: 10pt !important; 
+        line-height: 1;
+        font-family: Helvetica, Arial, sans-serif;
+        color: $red;
+    }
+          
+    //Open disclosures and hide unnecessary text
+    button.btn--disclosure-toggle,
+    .gi-disclosure--body .gi-disclosure__toggle::after{
+        display: none;
+    }
+
+    .gi-disclosure--body{
+        border-bottom: none;
+    }
+
+    .gi-disclosure--body .gi-disclosure__toggle{
+        padding: 0;
+    }
+
+    .gi-disclosure__content{
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;       
+    }
+    .gi-disclosure__content.gi-disclosure__content--closed{
+       visibility: visible;
+       opacity: 1;
+    }
+     
+    //Adding a unified style to the links
+    .a-body__link.a-body__link--cta,
+    .a-body__link, 
+    .a-body__inner a,
+    .a-body__link--cta::after{
+        display: inline;
+        font-size: 12px;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: .1578em;
+        font-weight: normal;
+    }
+
+   a[href]:not(.imagegalleryinline__link)::after{
+        margin: 0;
+        padding: 0;
+        content: " (" attr(href) ")";
+        font-size: 10px;
+        color: $link-color;
+        display: inline;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+
+    //Adding a unified style to the video
+    p iframe{
+        display: none;
+    }
+
+
+    //Adding a unified style to the panels
+    .item .iteam--article{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .item__imagecontainer{
+        max-width: 40%;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .item__content{
+        max-width: 60%;
+        display: inline-block;
+    }
+
+    .item__imagecontainer{
+        width: 100%;
+        height: auto;
+    }
+ 
+    //Hide smiles and feedback text
+    .feedback_heading{
+        display: none;
+    }
+
+    .smileys, .shared-logos{
+        display: none !important;
+    } 
+
+    //Hide cookies
+    .cky-revisit-bottom-left{
+        display: none;
+    }
+
+    .a-panel__content[aria-label="SEARCH"] {
+        display: none;
+    }
+
+    //Hide Bottom search
+    .a-panel__search,
+    .a-panel.a-panel--hasbackground .a-panel__title,
+    .a-panel--pt .a-panel__summary{
+        display: none;
+    }
+
+    //Hide logo and site nav
+    .n-stage__link.n-stage__link--logo img,
+    .gi-sitenav.gi-sitenav--stage{
+        display: none;
+    }
+    
+}
