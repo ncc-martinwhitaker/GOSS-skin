@@ -2834,3 +2834,11 @@ h4.stage-link__title  {
     }
   }
 }
+
+
+/** 754 - iOS parallax panel background fixed issue **/
+@supports (-webkit-touch-callout: inherit) {
+  .a-panel--pt.a-panel--parallax {
+    background-attachment: scroll;
+  }
+}
