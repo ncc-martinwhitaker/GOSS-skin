@@ -253,12 +253,16 @@ ul.panel__list.panel__list--relmedia {
   flex-wrap: wrap;
 }
 
+
+// eject 4817 fix by changing this CSS to only fire when not mobile
+@include mq(xs, min) {
 .body--no-aside .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relmedia li.panel__item, .container.container--fullwidth aside.aside .relateditem ul.panel__list.panel__list--relmedia li.panel__item {
   width: 50%;
   
   .media-links--related {
     padding: 15px;
   }
+}
 }
 
 
