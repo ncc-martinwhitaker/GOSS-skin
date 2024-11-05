@@ -1,0 +1,66 @@
+@import "global/functions";
+@import "variables";
+
+/*  The following values that can be changed from the default values if needed, otherwise delete or leave commented out **
+ **  because these values are brought through from the _variables.scss file                                              */
+
+$link-color: #1F78C7;
+
+//Header
+$header-color: $purple; // Column_B
+$header-text-color: $white; // Column_C
+$header-utilitymenu-color: $link-color; // Column_D
+$burger-menu-color: $black; // Column_E
+$header-mobilemenu-text-alignment: left; //Column_F
+
+//Breadcrumb
+$breadcrumb-color: $purple-1; // Column_G
+$breadcrumb-text-color: $black; // Column_H
+$breadcrumb-border-color: $purple-1; // Column_I
+$breadcrumb-chevron: $breadcrumb-chevron-white; // Column_J
+
+//Footer
+$footer-background-color: $purple; // Column_L
+$footer-color: $white; // Column_M
+$footer-border-color: $purple;//#343434; //Column_N
+$footer-first-column-count: 2; //Column_O
+$footer-first-column-width: 75%; //Column_P
+
+//Search box
+$search-border-color: $grey-2; // Column_Q
+$button-search-color : $white; // Column_R - magnifying glass icon
+$button-search-background-color: $black; // Column_S
+
+//Panels / Stage
+$button-panel-color: $teal; // Column_T
+$button-dark-panel-color: $teal;  // Column_U
+$button-dark-panel-text-color: $white;  // Column_V
+
+//Buttons
+$button-primary-color: $teal; // Column_W and Column_X
+$button-primary-text-color: $white; // Column_W and Column_X
+$button-secondary-color: $white; // Column_AA
+$button-secondary-color-hov: $grey-1; // Column_AA
+$button-inverted-secondary-color: $grey-1; // Column_AB
+$button-inverted-secondary-color-hov: $white; // Column_AB
+
+//Border radius
+$card-border-radius: 0px; // Column_AC
+$panel-backdrop-border-radius: 0px; // Column_AD
+$panel-border-radius: 0px; // Column_AE
+$feature-panel-border-radius: 0px; // Column_AF
+$list-border-radius: 0px; // Column_AG
+$promo-border-radius: 0px; // Column_AH
+$rounded-corner-border-radius: 12px; // Column_AI
+
+@import "global-import";
+
+/** If the site requires the navigation bar to appear below the search textbox uncomment the line below **/
+@import "global/navbar";
+
+/** If the site is a Museums site uncomment the line below **/
+//@import "museums-navbar";
+
+/** If the site is a wide site uncomment the line below **/
+//@import "global/wide-sites";
+
