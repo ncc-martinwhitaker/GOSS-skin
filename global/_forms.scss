@@ -392,3 +392,17 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
     color: $white;
 }
 
+/*=============================
+4853 CYA pages display issue
+=============================*/
+@media(max-width: 768px){
+    .nvp--formsummary .nvp__value{
+        white-space: normal;
+    }
+
+    .nvp__value .icmformdatalink{
+       word-wrap: break-word;
+       overflow-wrap: break-word;
+       max-width: 100%;
+    }
+}
