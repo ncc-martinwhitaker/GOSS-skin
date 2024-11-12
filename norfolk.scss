@@ -20,8 +20,8 @@ $button-secondary-color-hov: #424242;
 $button-inverted-secondary-color: #424242;
 $button-inverted-secondary-color-hov: #fff;
 
-@import 
-"global-import";
+@import "global-import";
+@import "global/bookings"; //4903 - moved this reference from global-imports.scss so it doesn't conflict with Museums events styling
 
 // Norfolk specific changes to parallax panels
 .a-panel--pt.a-panel--parallax .fa-block {
