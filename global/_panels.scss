@@ -248,6 +248,14 @@ ul.panel__list.panel__list--relmedia {
   }
 }
 
+// MM - display-image-right
+.a-panel.a-panel--pt.a-panel--default.a-panel--display-image-right {
+  .a-panel__imagecontainer {
+    float: right;
+    margin: 0px 0px 0px 40px;
+  }
+}
+
 // MM - hide-summary
 .a-panel--hide-summary .a-panel__summary { 
   display: none;
