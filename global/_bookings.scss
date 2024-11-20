@@ -786,3 +786,27 @@
 .calendar .cta-link--contrast:hover{
   color:#fff;
 }
+
+/*========================================================
+4834 Booking confirmation screen. Typography improvment
+========================================================*/
+.grid--bookingsummary .nvp__value{
+  font-size: 18px;
+}
+
+.icmformleft .booking-summary__accepttxt{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.booking-summary__list--details .nvp::before{
+  white-space: nowrap;
+}
+
+/*======================================
+4872 Event article 'Location' styling
+======================================*/
+.event-detail--location:before,
+.event-detail__value{
+  color: $white !important;
+}

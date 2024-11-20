@@ -1,32 +1,4 @@
-/* 3454 */
-.warning {
-    font-weight: bold;
-    padding: 10px 0px;
-}
-
-/*================================================
-4672 CSH - "Share this page" element display:none
-================================================*/
-.a-share{
-    display: none;
-}
-
-/*=====================================================
-4873 MM to hide related assets links - CSH
-=====================================================*/
-.body--hide-related-assets{
-  .relateditem{
-      display:none;
-    }
-  }
-  /*=====================================================
-                            End
-  =====================================================*/
-
-  /*=====================================================
-                        Esri CSS
-  =====================================================*/
-  [class^=esri-icon-]::before,
+[class^=esri-icon-]::before,
 .esri-building-phase-picker__arrow-left::before,
 .esri-building-phase-picker__arrow-right::before,
 .esri-building-level-picker__arrow-up::before,
