@@ -160,6 +160,23 @@ ul.panel__list.panel__list--relmedia {
   padding: 20px;
 }
 
+// MM - fade-titles
+
+.body--fade-titles .a-panel__content {
+  .a-panel__title {
+      opacity: 0;
+      transform: translateX(-5%);
+      transition: ease-out 0.8s;
+  }
+}
+
+.body--fade-titles .a-panel__content.intersecting {
+  .a-panel__title {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
 // MM - white-text 
 .a-panel--white-text { 
   &.a-panel--pt .a-panel__title,
@@ -210,6 +227,13 @@ ul.panel__list.panel__list--relmedia {
 
   .a-panel__title {
     color: $white;
+  }
+}
+
+// MM opaque-cards-light
+.a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-light {
+  .a-panel__content {
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -593,7 +617,7 @@ figure.gi-responsiveimage,
 
 // MM - rounded-list-cards
 // MM - rounded-cards
-.body--rounded-list-cards .grid--list .item.item--article,
+.body--rounded-list-cards .a-panel--pt.a-panel--list .grid--list .item.item--article,
 .body--rounded-cards .item.item--article {
   border-radius: $rounded-corner-border-radius;
 }
@@ -970,6 +994,13 @@ figure.gi-responsiveimage,
   .fa-block__imagecontainer {
     max-height: 100%;
   }
+}
+
+// MM - rounded-backdrop
+// MM - rounded-cards
+.a-panel--rounded-backdrop.a-panel--pt.a-panel--parallax .a-panel__content,
+.a-panel--rounded-cards.a-panel--parallax.a-panel--pt .fa-block {
+  border-radius: $rounded-corner-border-radius;
 }
 
 // MM - rounded-feature-cards
