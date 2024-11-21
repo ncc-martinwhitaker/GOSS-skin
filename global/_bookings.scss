@@ -832,39 +832,3 @@ h2.booking-summary__title{
 .booking-summary__item{
   margin: 0 !important;
 }
-
-@media (max-width: 768px) {
-  .icmformleft .booking-summary__accepttxt {
-      word-wrap: break-word;
-      white-space: normal;
-      width: 90%;
-      padding: 0 10px;
-      box-sizing: border-box;
-  }
-
-  .icmform input[type=submit].booking-summary__button:first-child {
-      width: 90%;
-      max-width: 90%;
-      margin: 12px 10px 0 0;
-      padding: 15px;
-      font-size: 1rem;
-      box-sizing: border-box;
-  }
-
-  .booking-summary__summary,
-  .booking-summary__actions{
-    padding: 0px !important;
-  }
-
-  header, footer, .breadcrumb {
-      width: 100%; 
-      max-width: 100%; 
-      margin: 0 auto; 
-      padding: 0 8px;
-      box-sizing: border-box;
-  }
-
-  .grid .grid--bookingsummary {
-    margin-left: 0;
-  }
-}
