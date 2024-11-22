@@ -57,6 +57,9 @@ $footer-color: #0b0b0c;
         background-color: $americanlibrary-red;
         @extend .btn-hover;
     }
+    &:focus {
+        background-color: $focus-color;
+    }
 }
 
 /*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
