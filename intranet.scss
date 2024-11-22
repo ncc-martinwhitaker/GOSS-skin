@@ -803,3 +803,9 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
     }
 }
 
+/*============================================================
+4894 Intranet navigation - links can break across columns
+============================================================*/
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2{
+    break-inside: avoid;
+}
