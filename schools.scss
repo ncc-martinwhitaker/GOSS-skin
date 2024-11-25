@@ -492,9 +492,8 @@ Share this page - 3448 uncomment from 20/11/2024
     float: none;
 }
 
-a:focus{
-    display: inline-block;
-    border-radius: 5px;
+.a-share__link:focus{
+    display: inline-block;    
 }
 
 
