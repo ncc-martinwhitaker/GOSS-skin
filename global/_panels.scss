@@ -2844,3 +2844,14 @@ h4.stage-link__title  {
     background-attachment: scroll;
   }
 }
+
+//---------------------------------------------------------------------------------------------------
+// 4718 - MM - for each individual general panel (not stage) have rounded images (MM - display-image-rounded)
+//---------------------------------------------------------------------------------------------------
+.a-panel--display-image-rounded.a-panel--default .a-panel__content .gi-responsiveimage__image,
+.a-panel--display-image-rounded.a-panel--blog .a-panel__content .gi-responsiveimage__image,
+.a-panel--display-image-rounded.a-panel--redirect .a-panel__content .gi-responsiveimage__image,
+.a-panel--display-image-rounded.a-panel--panel .a-panel__content .gi-responsiveimage__image,
+.a-panel--display-image-rounded.a-panel--formsservice .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
+}
