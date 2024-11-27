@@ -476,7 +476,9 @@
 //Error message on the top of the Terms
 .booking-summary__terms{
   position: relative;
-  padding-top: 20px;
+  //padding-top: 20px; //4929
+  padding: 10px 0 !important; //4929
+  margin: 0 20px 0 20px !important; //4929
 }
 
 .errorblock.errorblock--accept{
@@ -792,6 +794,7 @@
 ========================================================*/
 .grid--bookingsummary .nvp__value{
   font-size: 18px;
+  margin: 20px -25px;//4929
 }
 
 .icmformleft .booking-summary__accepttxt{
@@ -809,4 +812,31 @@
 .event-detail--location:before,
 .event-detail__value{
   color: $white !important;
+}
+
+
+/*=================================================================
+4929 Booking final confirmation page - padding and h2 improvements
+=================================================================*/
+h2.booking-summary__title{
+  font-size: 32px !important;
+}
+.grid--bookingsummary .grid__cell:only-child{
+  padding: 0 20px 0 20px !important;
+}
+
+.grid--bookingsummary .nvp--bookingsummary{
+  margin-bottom: 0 !important;
+}
+
+.booking-summary__item{
+  margin: 0 !important;
+}
+
+/*=====================================
+4944 H1 text size on Location template
+=====================================*/
+.location__title{
+  font-size: 40px;
+  margin: 40px 0 0;
 }
