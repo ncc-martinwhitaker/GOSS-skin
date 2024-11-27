@@ -904,8 +904,11 @@ Footer - copyright - 4176
     padding: 0 10px 0px 10px;
     margin: 0;
     width: auto;
-    top: 0;
-   
+    top: 0;   
+}
+
+.a-share__link:focus{
+    display: inline-block;
 }
 
 
