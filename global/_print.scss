@@ -14,8 +14,8 @@
     }
 
     //Site logo 
-    .gi-sitelogo__link{
-        display: inline-block;
+    .gi-sitelogo .gi-sitelogo--header .gi-sitelogo__image{
+        display: block !important;
     }
 
     //Headings and text
@@ -52,8 +52,7 @@
 
     p, span, div, a, li, ul, ol{
         font-size: 16px !important;
-        line-height: 1.4 !important;
-        font-family: Helvetica, Arial, sans-serif !important;
+        line-height: 1.4 !important;        
     }
 
     //Displaying URLs for links
@@ -125,8 +124,9 @@
     .a-panel.a-panel--hasbackground .a-panel__title,
     .a-panel--pt .a-panel__summary,
     .n-stage__link.n-stage__link--logo img,
-    .gi-sitenav.gi-sitenav--stage {
-        display: none;
+    .gi-sitenav.gi-sitenav--stage,
+    .a-body__link .a-body__link--cta {
+        display: none !important;
     }
 
 }
