@@ -6,7 +6,7 @@
     body::before{
         content: "Printed on " attr(data-print-date) ". The guidance may have since changed.\A" attr(data-print-url);
         display: block;
-        font-size: 10px;
+        font-size: 12px !important;
         margin-bottom: 10px;
         text-align: left;
         color: $black;
@@ -55,15 +55,37 @@
         line-height: 1.4 !important;        
     }
 
+    p a{
+        white-space: nowrap;
+    }
+
+    p{
+        display: inline-block;
+    }
+
+    p a::after{
+        white-space: nowrap;
+    }
+
+    //Info message colour
+    p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary{
+        color: $black !important;
+    }
+
     //Displaying URLs for links
-    a[href]:not(.imagegalleryinline__link)::after{
+    a[href]:not(.imagegalleryinline__link):not(.a-body__link--cta)::after{
         content: " (" attr(href) ")";
-        font-size: 16px;
+        font-size: 16px !important;
         color: $link-color;
         text-decoration: underline;
         text-underline-offset: .1578em;
     }
 
+    //CTA Links
+    .a-body__link--cta::after{
+        display: none !important;        
+    }
+    
     //Discovering accordions
     .gi-disclosure--body .gi-disclosure__toggle::after{
         display: none;
@@ -88,18 +110,40 @@
     }
 
     //Images
-    img{
-        max-width: 100%;
+    img{        
+        max-width: 100px !important;
         height: auto;
-        display: block;
+        display: inline-block !important;
     }
 
-    img::after{
-        content: attr(alt);
-        display: block;
-        font-size: 16px;
+    p .text-content{
+        overflow: hidden;
+    }
+
+    img[alt]::after{
+        content: " (" attr(alt) ")";
+        display: inline;
+        font-size: 16px !important;
         color: $black;
-        text-align: left;
+        word-break: break-word;
+    }
+
+    //Group images
+    .gi-responsiveimage__image{
+        display: block !important;
+        margin-bottom: 15px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .gi-responsiveimage__image + .print-alt-text{
+        display: block !important;
+        font-size: 10px !important;
+        color: $black;
+        margin-top: 5px;
+        word-break: break-word;
+        max-width: 100%;
+        overflow-wrap: break-word !important;
     }
 
     //Video
@@ -109,7 +153,7 @@
 
     .print-only-video-url{
         display: block;
-        font-size: 16px;
+        font-size: 16px !important;
         color: $link-color;
         text-decoration: underline;
         text-underline-offset: .1578em;

@@ -39,37 +39,6 @@ function addVideoURLsToPrint() {
   });
 }
 
-/* Stylise images for printing */ 
-function styleImagesForPrint() {
-  document.querySelectorAll(".item__imagecontainer img, .gi-responsiveimage img").forEach(img => {
-      img.style.maxWidth = "100px";
-      img.style.height = "auto";
-      img.style.marginLeft = "15px";
-      img.style.marginBottom = "10px";
-
-      const altText = document.createElement("span");
-      altText.textContent = ` (${img.alt || "no alt text"})`;
-      altText.classList.add("print-alt-text");
-      altText.style.cssText = `
-          display: block;
-          font-size: 8px;
-          color: #050505;
-          max-width: 300px;
-          word-break: break-word;
-      `;
-      img.parentElement.insertAdjacentElement("afterend", altText);
-  });
-}
-
-// Reset image styles after printing
-function resetImageStyles() {
-  document.querySelectorAll(".item__imagecontainer img, .gi-responsiveimage img").forEach(img => {
-      img.style.cssText = "";
-  });
-
-  document.querySelectorAll(".print-alt-text").forEach(altText => altText.remove());
-}
-
 /* Styles the "See more" button for printing */ 
 function applyPrintStyles() {
   document.querySelectorAll('.a-panel__link.a-panel__link--pt').forEach(button => {
@@ -94,7 +63,7 @@ function addLogoToPrintVersion() {
   const clonedLogo = logo.cloneNode(true);
   const printLogoContainer = document.createElement('div');
   printLogoContainer.classList.add('print-logo-container');
-  printLogoContainer.style.textAlign = 'center';
+  printLogoContainer.style.textAlign = 'left';
   printLogoContainer.style.marginBottom = '20px';
   printLogoContainer.appendChild(clonedLogo);
   document.body.prepend(printLogoContainer);
@@ -228,3 +197,36 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+//CTA Link
+function fixCtaLinksForPrint() {
+    const ctaLinks = document.querySelectorAll('.a-body__link.a-body__link--cta');
+  
+    ctaLinks.forEach(link => {
+      const linkText = link.textContent.trim(); 
+      const linkHref = link.getAttribute('href'); 
+  
+      // Clean up existing content
+      link.textContent = '';
+  
+      // Add the button text
+      const textSpan = document.createElement('span');
+      textSpan.textContent = linkText;
+      textSpan.style.color = '#050505';
+      textSpan.style.display = 'block';
+      textSpan.style.marginBottom = '5px'; 
+      link.appendChild(textSpan);
+  
+      // Adding URL
+      const urlSpan = document.createElement('span');
+      urlSpan.textContent = `(${linkHref})`;
+      urlSpan.style.color = '#1F78C7';
+      urlSpan.style.display = 'block';
+      urlSpan.style.textDecoration = 'underline';
+      link.appendChild(urlSpan);
+    });
+  }
+  
+  // Pre-printing
+  window.addEventListener('beforeprint', fixCtaLinksForPrint);
+  
