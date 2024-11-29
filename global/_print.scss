@@ -131,19 +131,23 @@
     //Group images
     .gi-responsiveimage__image{
         display: block !important;
-        margin-bottom: 15px;
+        margin-bottom: 15px !important;
         max-width: 100%;
-        height: auto;
+        height: auto !important; 
     }
 
-    .gi-responsiveimage__image + .print-alt-text{
+    .print-alt-text{
         display: block !important;
         font-size: 10px !important;
-        color: $black;
-        margin-top: 5px;
-        word-break: break-word;
+        color: $black !important;
+        text-align: left !important;
+        margin-top: 5px !important;
+        word-break: break-word !important;
+        overflow-wrap:  break-word !important;
+        line-height: 1.4 !important;
         max-width: 100%;
-        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        padding: 0 !important;
     }
 
     //Video

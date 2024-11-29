@@ -155,47 +155,53 @@ function replaceVideosWithLinksForPrint() {
 }
 
 /* Alt text for group images */
+/* Ensure alt text stays with images in the printed version */
 document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("beforeprint", function () {
-      // Processing group images
-      document.querySelectorAll(".gi-responsiveimage .gi-responsiveimage__image").forEach(function (container) {
-          const img = container.tagName === "IMG" ? container : container.querySelector("img");
-          if (img) {
-              // Adding alt text
-              const altText = document.createElement("span");
-              altText.textContent = ` (${img.alt || "no alt text"})`;
-              altText.style.display = "block";
-              altText.style.fontSize = "10px";
-              altText.style.color = "#050505";
-              altText.style.marginTop = "5px";
-              altText.style.maxWidth = "100%";
-              altText.style.wordBreak = "break-word";
-              altText.classList.add("print-alt-text");
+    window.addEventListener("beforeprint", function () {
+        // Process group images
+        document.querySelectorAll(".gi-responsiveimage .gi-responsiveimage__image").forEach(function (container) {
+            const img = container.tagName === "IMG" ? container : container.querySelector("img");
+            if (img) {
+                // Check if the alt text is already added
+                if (container.parentNode.classList.contains("print-container")) {
+                    return; // Skip if already wrapped
+                }
 
-              // Insert alt text under an image
-              container.parentNode.insertBefore(altText, container.nextSibling);
+                // Create a wrapper container to hold the image and its alt text
+                const printWrapper = document.createElement("div");
+                printWrapper.style.display = "block";
+                printWrapper.style.pageBreakInside = "avoid"; // Prevent page breaks inside the container
+                printWrapper.style.marginBottom = "15px"; // Space between groups
+                printWrapper.classList.add("print-container");
 
-              // Customise styles for a clear layout
-              container.style.display = "block";
-              container.style.marginBottom = "10px";
-              container.style.textAlign = "center"; 
-          }
-      });
-  });
+                // Move the image into the wrapper
+                container.parentNode.insertBefore(printWrapper, container);
+                printWrapper.appendChild(container);
 
-  window.addEventListener("afterprint", function () {
-      // Removing alt text after printing
-      document.querySelectorAll(".print-alt-text").forEach(function (altText) {
-          altText.remove();
-      });
+                // Create a span for alt text
+                const altText = document.createElement("span");
+                altText.textContent = img.alt || "No alt text available";
 
-      // Reset image styles
-      document.querySelectorAll(".gi-responsiveimage .gi-responsiveimage__image").forEach(function (container) {
-          container.style.display = "";
-          container.style.marginBottom = "";
-          container.style.textAlign = "";
-      });
-  });
+                // Apply styles to handle long alt text
+                altText.style.display = "block";
+                altText.style.fontSize = "10px"; // Clear font size
+                altText.style.color = "#050505"; // Clear text color
+                altText.style.marginTop = "5px"; // Small spacing between image and text
+                altText.style.padding = "0";
+                altText.style.maxWidth = "100%"; // Ensure proper wrapping
+                altText.style.wordBreak = "break-word"; // Allow line breaks within words
+                altText.style.overflowWrap = "break-word"; 
+                altText.style.textAlign = "left"; 
+                altText.style.lineHeight = "1.4"; 
+                altText.style.boxSizing = "border-box";
+                altText.style.whiteSpace = "normal"; // Ensure long text wraps
+                altText.classList.add("print-alt-text");
+
+                // Append alt text to the wrapper
+                printWrapper.appendChild(altText);
+            }
+        });
+    });
 });
 
 //CTA Link
