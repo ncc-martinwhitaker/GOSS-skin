@@ -967,3 +967,10 @@ Footer - copyright - 4176
   .gi-job .gi-job__announcement.gi-job__announcement--new{
     color:#007435;
   }
+
+/*============================================
+  4998 Form button state issue- Care Careers
+  ==========================================*/
+  .icmform .btn:hover{
+    color: $white;
+  }
