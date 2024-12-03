@@ -3,14 +3,23 @@
 ==================================================================================================================*/
 @media print{
     
+    //Add data and link to the printed version of the page
     body::before{
-        content: "Printed on " attr(data-print-date) ". The guidance may have since changed.\A" attr(data-print-url);
+        content: "Printed on " attr(data-print-date) " - This information may have changed since then. \A " attr(data-print-url);
         display: block;
         font-size: 12px !important;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         text-align: left;
         color: $black;
         white-space: pre;
+    }
+
+    .print-only-video-url {
+        display: inline;
+        font-size: 12px !important;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: .1578em;
     }
 
     //Site logo 
@@ -79,13 +88,34 @@
         color: $link-color;
         text-decoration: underline;
         text-underline-offset: .1578em;
+        margin-left: 5px;
     }
 
     //CTA Links
-    .a-body__link--cta::after{
-        display: none !important;        
+    .a-body__link.a-body__link--cta{
+        color: $link-color;
+        text-decoration: none !important;
+        display: inline !important;
+        margin-bottom: 10px;
+        white-space: nowrap !important;
+        padding-right: 10px !important;
+        position: relative !important;
+    }
+
+    .a-body__link.a-body__link--cta::after{
+        position: absolute !important;
+        left: 100% !important;
+        top: 0 !important;
+        content: " (" attr(href) ")";
+        display: inline !important;
+        color: $link-color;
+        text-decoration: underline;
+        text-underline-offset: 0.2em !important;
+        margin-left: 8px !important;
+        white-space: nowrap !important;
     }
     
+         
     //Discovering accordions
     .gi-disclosure--body .gi-disclosure__toggle::after{
         display: none;
