@@ -289,3 +289,13 @@ body.template--default.body--sticky-jumplinks.body--no-aside .container.containe
 body:not(.body--sticky-jumplinks) #anchor-contents {
     width: auto;
 }
+
+//---------------------------------------------------------------------------------------------------
+// MM 4718 - In page body set rounded images (MM - body--rounded-images)
+//---------------------------------------------------------------------------------------------------
+.body--rounded-images .maincontent .a-body .a-body__inner .a-body__image .gi-responsiveimage__image{
+    border-radius: $rounded-corner-border-radius;
+  }
+// 4718 end //---------------------------------------------------------------------------------------
+
+  

@@ -24,6 +24,7 @@ Metadata modifiers include:
   - side-by-side
   - display-image-left
   - display-image-right
+  - display-image-rounded
   - display-nav-images
   - display-list-images
   - display-feature-title
@@ -278,6 +279,11 @@ ul.panel__list.panel__list--relmedia {
     float: right;
     margin: 0px 0px 0px 40px;
   }
+}
+
+// MM - display-image-rounded - 4718
+.a-panel--display-image-rounded.a-panel--default .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
 }
 
 // MM - hide-summary
@@ -1996,6 +2002,11 @@ h4.stage-link__title {
   }
 }
 
+// MM - display-image-rounded - 4718
+.a-panel--display-image-rounded.a-panel--blog .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
+}
+
 /******************************************************************************
 
 - Peeky swiper -
@@ -2254,6 +2265,11 @@ Based on the carousel component - needs peeky-swiper MM to function
   padding: 20px;
 }
 
+// MM - display-image-rounded - 4718
+.a-panel--display-image-rounded.a-panel--redirect .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
+}
+
 /******************************************************************************
 
 - Forms service -
@@ -2267,6 +2283,11 @@ Based on the carousel component - needs peeky-swiper MM to function
 // forms service with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--formsservice.a-panel--hasbackground  {
   padding: 32px 20px;
+}
+
+// MM - display-image-rounded - 4718
+.a-panel--display-image-rounded.a-panel--formsservice .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
 }
 
 /******************************************************************************
@@ -2316,6 +2337,11 @@ Not much is known about the "panel" panel type.
 // "panel" with bg
 .a-panel.a-panel--pt.a-panel--render.a-panel--panel.a-panel--hasbackground  {
   padding: 32px 20px;
+}
+
+// MM - display-image-rounded - 4718
+.a-panel--display-image-rounded.a-panel--panel .a-panel__content .gi-responsiveimage__image {
+  border-radius: $rounded-corner-border-radius;
 }
 
 /******************************************************************************
