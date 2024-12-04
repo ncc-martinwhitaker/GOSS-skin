@@ -1416,6 +1416,15 @@ figure.gi-responsiveimage,
    height: 100%;
 }
 
+//4782 - iOS text overlap image fix
+.a-body__image {
+  figure.gi-responsiveimage, 
+  .gi-responsiveimage__imagewrapper, 
+  .gi-responsiveimage__image {
+    height: auto;
+  }
+}
+
 
 .gi-responsiveimage__image {
      object-fit: cover;
