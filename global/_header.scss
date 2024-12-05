@@ -279,7 +279,7 @@ header .imagebanner {
   header {
   .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child),
   .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
-      display: inline-block; // inline-block
+      display: inline-block; // changed from block - 4923
   }
 }
 
