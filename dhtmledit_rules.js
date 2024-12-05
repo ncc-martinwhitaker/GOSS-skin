@@ -140,5 +140,67 @@
     /* Blockquote - 2190 */
     { "name" : "Blockquote blue", "element" : "blockquote", "attributes" : { "class" : "blockquote_blue" } },
     { "name" : "Blockquote white", "element" : "blockquote", "attributes" : { "class" : "blockquote_white" } },
-    { "name" : "Blockquote theme", "element" : "blockquote", "attributes" : { "class" : "blockquote_theme" } }
+    { "name" : "Blockquote theme", "element" : "blockquote", "attributes" : { "class" : "blockquote_theme" } },
+
+    /* Language attributes - 4850 */
+    { "name" : "French H2 language", "element" : "h2", "attributes" : { "lang" : "fr" } },
+    { "name" : "French H3 language", "element" : "h3", "attributes" : { "lang" : "fr" } },
+    { "name" : "French p language", "element" : "p", "attributes" : { "lang" : "fr" } },
+    { "name" : "French span language", "element" : "span", "attributes" : { "lang" : "fr" } },
+    { "name" : "French list item language", "element" : "li", "attributes" : { "lang" : "fr" } },
+
+    { "name" : "Ukrainian H2 language", "element" : "h2", "attributes" : { "lang" : "uk" } },
+    { "name" : "Ukrainian H3 language", "element" : "h3", "attributes" : { "lang" : "uk" } },
+    { "name" : "Ukrainian p language", "element" : "p", "attributes" : { "lang" : "uk" } },
+    { "name" : "Ukrainian span language", "element" : "span", "attributes" : { "lang" : "uk" } },
+    { "name" : "Ukrainian list item language", "element" : "li", "attributes" : { "lang" : "uk" } },
+
+    { "name" : "Portuguese H2 language", "element" : "h2", "attributes" : { "lang" : "pt" } },
+    { "name" : "Portuguese H3 language", "element" : "h3", "attributes" : { "lang" : "pt" } },
+    { "name" : "Portuguese p language", "element" : "p", "attributes" : { "lang" : "pt" } },
+    { "name" : "Portuguese span language", "element" : "span", "attributes" : { "lang" : "pt" } },
+    { "name" : "Portuguese list item language", "element" : "li", "attributes" : { "lang" : "pt" } },
+
+    { "name" : "Bulgarian H2 language", "element" : "h2", "attributes" : { "lang" : "bg" } },
+    { "name" : "Bulgarian H3 language", "element" : "h3", "attributes" : { "lang" : "bg" } },
+    { "name" : "Bulgarian p language", "element" : "p", "attributes" : { "lang" : "bg" } },
+    { "name" : "Bulgarian span language", "element" : "span", "attributes" : { "lang" : "bg" } },
+    { "name" : "Bulgarian list item language", "element" : "li", "attributes" : { "lang" : "bg" } },
+
+    { "name" : "Hungarian H2 language", "element" : "h2", "attributes" : { "lang" : "hu" } },
+    { "name" : "Hungarian H3 language", "element" : "h3", "attributes" : { "lang" : "hu" } },
+    { "name" : "Hungarian p language", "element" : "p", "attributes" : { "lang" : "hu" } },
+    { "name" : "Hungarian span language", "element" : "span", "attributes" : { "lang" : "hu" } },
+    { "name" : "Hungarian list item language", "element" : "li", "attributes" : { "lang" : "hu" } },
+
+    { "name" : "Latvian H2 language", "element" : "h2", "attributes" : { "lang" : "lv" } },
+    { "name" : "Latvian H3 language", "element" : "h3", "attributes" : { "lang" : "lv" } },
+    { "name" : "Latvian p language", "element" : "p", "attributes" : { "lang" : "lv" } },
+    { "name" : "Latvian span language", "element" : "span", "attributes" : { "lang" : "lv" } },
+    { "name" : "Latvian list item language", "element" : "li", "attributes" : { "lang" : "lv" } },
+
+    { "name" : "Lithuanian H2 language", "element" : "h2", "attributes" : { "lang" : "lt" } },
+    { "name" : "Lithuanian H3 language", "element" : "h3", "attributes" : { "lang" : "lt" } },
+    { "name" : "Lithuanian p language", "element" : "p", "attributes" : { "lang" : "lt" } },
+    { "name" : "Lithuanian span language", "element" : "span", "attributes" : { "lang" : "lt" } },
+    { "name" : "Lithuanian list item language", "element" : "li", "attributes" : { "lang" : "lt" } },
+
+    { "name" : "Polish H2 language", "element" : "h2", "attributes" : { "lang" : "pl" } },
+    { "name" : "Polish H3 language", "element" : "h3", "attributes" : { "lang" : "pl" } },
+    { "name" : "Polish p language", "element" : "p", "attributes" : { "lang" : "pl" } },
+    { "name" : "Polish span language", "element" : "span", "attributes" : { "lang" : "pl" } },
+    { "name" : "Polish list item language", "element" : "li", "attributes" : { "lang" : "pl" } },
+
+    { "name" : "Romanian H2 language", "element" : "h2", "attributes" : { "lang" : "ro" } },
+    { "name" : "Romanian H3 language", "element" : "h3", "attributes" : { "lang" : "ro" } },
+    { "name" : "Romanian p language", "element" : "p", "attributes" : { "lang" : "ro" } },
+    { "name" : "Romanian span language", "element" : "span", "attributes" : { "lang" : "ro" } },
+    { "name" : "Romanian list item language", "element" : "li", "attributes" : { "lang" : "ro" } },
+
+    { "name" : "Russian H2 language", "element" : "h2", "attributes" : { "lang" : "ru" } },
+    { "name" : "Russian H3 language", "element" : "h3", "attributes" : { "lang" : "ru" } },
+    { "name" : "Russian p language", "element" : "p", "attributes" : { "lang" : "ru" } },
+    { "name" : "Russian span language", "element" : "span", "attributes" : { "lang" : "ru" } },
+    { "name" : "Russian list item language", "element" : "li", "attributes" : { "lang" : "ru" } }
+
 ]
