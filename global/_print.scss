@@ -59,9 +59,20 @@
         line-height: 1.4 !important;
     }
 
-    p, span, div, a, li, ul, ol{
+    p, span, div, a, li, ul, ol {
         font-size: 16px !important;
         line-height: 1.4 !important;        
+    }
+
+    //Panel cards
+    .card--stage .card__heading{
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+    }
+
+    .n-stage__relarticles .item__body{
+        font-size: 16px !important;
+        line-height: 1.4 !important;
     }
 
     p a{
@@ -82,7 +93,7 @@
     }
 
     //Displaying URLs for links
-    a[href]:not(.imagegalleryinline__link):not(.a-body__link--cta)::after{
+    a[href]:not(.imagegalleryinline__link):not(.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage):not(.a-body__link--cta):not(.a-body__link.a-body__link--cta):not(a.a-body__link--btn-primary-std):not(.a-body__link--btn-primary-lge):not(a.a-body__link--btn-primary-teal-std):not(a.a-body__link--btn-primary-teal-lge):not(.a-body__link--btn-secondary):not(.a-body__link--btn-inverted-secondary)::after{
         content: " (" attr(href) ")";
         font-size: 16px !important;
         color: $link-color;
@@ -91,8 +102,8 @@
         margin-left: 5px;
     }
 
-    //CTA Links
-    .a-body__link.a-body__link--cta{
+    //CTA Links 
+    .a-body__link.a-body__link--cta {
         color: $link-color;
         text-decoration: none !important;
         display: inline !important;
@@ -102,7 +113,7 @@
         position: relative !important;
     }
 
-    .a-body__link.a-body__link--cta::after{
+    .a-body__link.a-body__link--cta::after {
         position: absolute !important;
         left: 100% !important;
         top: 0 !important;
@@ -114,8 +125,7 @@
         margin-left: 8px !important;
         white-space: nowrap !important;
     }
-    
-         
+
     //Discovering accordions
     .gi-disclosure--body .gi-disclosure__toggle::after{
         display: none;
