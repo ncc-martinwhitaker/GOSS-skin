@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Add the current date and page URL to the attributes data-print-date and data-print-url
     const printDate = new Date().toLocaleDateString();
     const printURL = window.location.href;
     document.body.setAttribute("data-print-date", printDate);
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("p").forEach(function (p) {
             const iframe = p.querySelector("iframe");
             if (iframe) {
-                // Перевіряємо, чи вже є span із класом print-only-video-url
                 let videoLinkText = p.querySelector(".print-only-video-url");
                 if (!videoLinkText) {
                     videoLinkText = document.createElement("span");
@@ -25,18 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".item__imagecontainer, .gi-responsiveimage .gi-responsiveimage__image").forEach(function (container) {
             const img = container.tagName === "IMG" ? container : container.querySelector("img");
             if (img) {
-                // Set image styles
                 img.style.maxWidth = "100px";
                 img.style.height = "auto";
                 img.style.marginLeft = "15px";
                 img.style.marginBottom = "10px";
 
-                // Check if alt text already exists
                 if (!container.parentNode.querySelector(".print-alt-text")) {
                     const altText = document.createElement("span");
                     altText.textContent = ` (${img.alt || "No alt text available"})`;
 
-                    // Apply styles for long alt text
                     altText.style.display = "block";
                     altText.style.fontSize = "8px";
                     altText.style.color = "#050505";
@@ -48,45 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     altText.style.alignContent = "left";
                     altText.classList.add("print-alt-text");
 
-                    // Append alt text after the image
                     container.parentNode.insertBefore(altText, container.nextSibling);
                 }
             }
         });
 
-        // Handle group images with .gi-responsiveimage class
-        document.querySelectorAll(".gi-responsiveimage .gi-responsiveimage__image").forEach(function (container) {
-            const img = container.querySelector("img");
-            if (img) {
-                // Check if alt text already exists
-                if (!container.querySelector(".print-alt-text")) {
-                    const altText = document.createElement("span");
-                    altText.textContent = `Alt text: ${img.alt || "No alt text available"}`;
-
-                    // Apply styles for long alt text
-                    altText.style.display = "block";
-                    altText.style.fontSize = "8px";
-                    altText.style.color = "#050505";
-                    altText.style.maxWidth = "300px";
-                    altText.style.wordBreak = "break-word";
-                    altText.style.whiteSpace = "normal";
-                    altText.style.lineHeight = "1.2";
-                    altText.style.marginTop = "5px";
-                    altText.style.alignContent = "left";
-                    altText.classList.add("print-alt-text");
-
-                    // Append alt text to the container
-                    container.appendChild(altText);
-                }
-            }
-        });
-
-        // Apply styles to the "See more" button during printing
-        applyPrintStyles();
+        // Apply styles to buttons for print
+        applyButtonPrintStyles();
     });
 
     window.addEventListener("afterprint", function () {
-        // Reset styles for images
         document.querySelectorAll(".item__imagecontainer img, .gi-responsiveimage .gi-responsiveimage__image img").forEach(function (img) {
             img.style.maxWidth = "";
             img.style.height = "";
@@ -94,33 +60,58 @@ document.addEventListener("DOMContentLoaded", function () {
             img.style.marginBottom = "";
         });
 
-        // Remove added alt text
         document.querySelectorAll(".print-alt-text").forEach(function (altText) {
             altText.remove();
         });
 
-        // Reset styles for the "See more" button after printing
-        resetStyles();
+        resetButtonStyles();
     });
 });
 
-function applyPrintStyles() {
-    // Style the "See more" button
-    document.querySelectorAll('.a-panel__link.a-panel__link--pt').forEach(button => {
-        button.style.background = 'none';
-        button.style.color = '#050505';
-        button.style.border = 'none';
+function applyButtonPrintStyles() {
+    const buttonSelectors = [
+        'a.a-body__link--btn-primary-teal-std',
+        'a.a-body__link--btn-primary-teal-lge',
+        'a.a-body__link--cta',
+        'a.a-body__link--btn-primary-std',
+        'a.a-body__link--btn-primary-std-dwn',
+        'a.a-body__link--btn-primary-lge',
+        '.a-body__link--btn-secondary',
+        '.a-body__link--btn-inverted-secondary'
+    ];
+
+    document.querySelectorAll(buttonSelectors.join(", ")).forEach(function (button) {
+        const buttonText = button.textContent.trim(); 
+        const buttonHref = button.href; 
+
+        button.textContent = "";
+
+        if (buttonHref) {
+            const printContainer = document.createElement("span");
+            printContainer.style.display = "inline";
+            printContainer.style.fontSize = "8px";
+
+            const textElement = document.createElement("span");
+            textElement.textContent = buttonText;
+            textElement.style.color = "#050505";
+            textElement.style.marginRight = "5px";
+
+            const linkElement = document.createElement("a");
+            linkElement.textContent = buttonHref;
+            linkElement.href = buttonHref;
+            linkElement.style.color = "#1F78C7";
+            linkElement.style.textDecoration = "underline";
+
+            printContainer.appendChild(textElement);
+            printContainer.appendChild(linkElement);
+
+            button.appendChild(printContainer);
+            printContainer.classList.add("print-only-link");
+        }
+
+        button.style.color = "#050505"; 
+        button.style.background = "none";
+        button.style.border = "none";
+        button.style.display = "inline";
     });
 }
-
-function resetStyles() {
-    // Reset styles for the "See more" button
-    document.querySelectorAll('.a-panel__link.a-panel__link--pt').forEach(button => {
-        button.style.background = '';
-        button.style.color = '';
-        button.style.border = '';
-    });
-}
-
-
-  

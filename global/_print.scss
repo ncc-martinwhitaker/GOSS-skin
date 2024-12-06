@@ -34,7 +34,8 @@
         line-height: 1.4 !important;
     }
 
-    h2{
+    h2,.h2.a-panel__title, .a-panel__title.h2,
+    .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark .a-panel__title {
         font-size: 24px !important;
         line-height: 1.4 !important;
     }
@@ -59,9 +60,18 @@
         line-height: 1.4 !important;
     }
 
-    p, span, div, a, li, ul, ol {
+    p, span, div, a, li, ul, ol,
+    .a-panel--pt .a-panel__summary {
         font-size: 16px !important;
         line-height: 1.4 !important;        
+    }
+
+    .a-panel--pt.a-panel--stage .a-panel__link,
+    .cta-link__text,
+    .a-panel__link.a-panel__link--pt,
+    .a-panel--opaque-cards-dark .a-panel__link{
+        font-size: 16px !important;
+        color: $black !important;
     }
 
     //Panel cards
@@ -93,9 +103,19 @@
     }
 
     //Displaying URLs for links
-    a[href]:not(.imagegalleryinline__link):not(.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage):not(.a-body__link--cta):not(.a-body__link.a-body__link--cta):not(a.a-body__link--btn-primary-std):not(.a-body__link--btn-primary-lge):not(a.a-body__link--btn-primary-teal-std):not(a.a-body__link--btn-primary-teal-lge):not(.a-body__link--btn-secondary):not(.a-body__link--btn-inverted-secondary)::after{
+    a[href]:not(.imagegalleryinline__link)
+    :not(.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage)
+    :not(.a-body__link--cta)
+    :not(.a-body__link.a-body__link--cta)
+    :not(a.a-body__link--btn-primary-std)
+    :not(.a-body__link--btn-primary-lge)
+    :not(a.a-body__link--btn-primary-teal-std)
+    :not(a.a-body__link--btn-primary-teal-lge)
+    :not(.a-body__link--btn-secondary)
+    :not(.a-body__link--btn-inverted-secondary)
+    :not(a.a-body__link--cta)::after{
         content: " (" attr(href) ")";
-        font-size: 16px !important;
+        font-size: 10px !important;
         color: $link-color;
         text-decoration: underline;
         text-underline-offset: .1578em;
@@ -103,7 +123,7 @@
     }
 
     //CTA Links 
-    .a-body__link.a-body__link--cta {
+   /* .a-body__link.a-body__link--cta {
         color: $link-color;
         text-decoration: none !important;
         display: inline !important;
@@ -124,7 +144,7 @@
         text-underline-offset: 0.2em !important;
         margin-left: 8px !important;
         white-space: nowrap !important;
-    }
+    }*/
 
     //Discovering accordions
     .gi-disclosure--body .gi-disclosure__toggle::after{
@@ -213,7 +233,9 @@
     .a-panel--pt .a-panel__summary,
     .n-stage__link.n-stage__link--logo img,
     .gi-sitenav.gi-sitenav--stage,
-    .a-body__link .a-body__link--cta {
+    .a-body__link .a-body__link--cta,
+    #customLiveChatButton,
+    .a-body__link--btn-primary-teal-std::after {
         display: none !important;
     }
 
