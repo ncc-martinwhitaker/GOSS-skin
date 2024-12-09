@@ -122,6 +122,17 @@
         margin-left: 5px;
     }
 
+    //Display URLs for blockquote
+    blockquote::after{
+        content: " (" attr(cite) ")";
+        display: block !important;
+        font-size: 10px !important;
+        color: $link-color;
+        text-decoration: underline;
+        margin-top: 4px !important;
+
+    }
+
     //CTA Links 
    /* .a-body__link.a-body__link--cta {
         color: $link-color;
