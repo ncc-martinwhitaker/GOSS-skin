@@ -2864,3 +2864,13 @@ h4.stage-link__title  {
 .a-panel--display-image-rounded.a-panel--formsservice .a-panel__content .gi-responsiveimage__image {
   border-radius: $rounded-corner-border-radius;
 }
+
+/*======================================================================================
+4959 Parallax panel - background image skips/resizes when scrolling on mobile (Android)
+======================================================================================*/
+
+@media (max-width: 768px) {
+  .a-panel--pt.a-panel--hasbackground {
+    background-attachment: scroll; 
+  }
+}
