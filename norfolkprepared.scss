@@ -6,9 +6,11 @@
 
 $link-color: #1F78C7;
 
+$prepared-purple: #292564; // just use $purple?
+
 //Header
 $header-color: $purple; // Column_B
-$header-text-color: $white; // Column_C
+$header-text-color: $black; // Column_C
 $header-utilitymenu-color: $link-color; // Column_D
 $burger-menu-color: $black; // Column_E
 $header-mobilemenu-text-alignment: left; //Column_F
@@ -17,7 +19,7 @@ $header-mobilemenu-text-alignment: left; //Column_F
 $breadcrumb-color: $purple-1; // Column_G
 $breadcrumb-text-color: $black; // Column_H
 $breadcrumb-border-color: $purple-1; // Column_I
-$breadcrumb-chevron: $breadcrumb-chevron-white; // Column_J
+$breadcrumb-chevron: $breadcrumb-chevron-black; // Column_J
 
 //Footer
 $footer-background-color: $black-1; // Column_L
@@ -32,12 +34,13 @@ $button-search-color : $white; // Column_R - magnifying glass icon
 $button-search-background-color: $black; // Column_S
 
 //Panels / Stage
-$button-panel-color: $teal; // Column_T
+$button-panel-color: $purple; // Column_T
 $button-dark-panel-color: $teal;  // Column_U
 $button-dark-panel-text-color: $white;  // Column_V
 
 //Buttons
-$button-primary-color: $teal; // Column_W and Column_X
+$button-primary-color: $purple; // Column_W and Column_X
+$button-primary-color-hov: darken($purple, 20%); 
 $button-primary-text-color: $white; // Column_W and Column_X
 $button-secondary-color: $white; // Column_AA
 $button-secondary-color-hov: $grey-1; // Column_AA
@@ -45,22 +48,225 @@ $button-inverted-secondary-color: $grey-1; // Column_AB
 $button-inverted-secondary-color-hov: $white; // Column_AB
 
 //Border radius
-$card-border-radius: 0px; // Column_AC
-$panel-backdrop-border-radius: 0px; // Column_AD
-$panel-border-radius: 0px; // Column_AE
-$feature-panel-border-radius: 0px; // Column_AF
-$list-border-radius: 0px; // Column_AG
-$promo-border-radius: 0px; // Column_AH
-$rounded-corner-border-radius: 12px; // Column_AI
+$card-border-radius: 15px; // Column_AC
+$panel-backdrop-border-radius: 15px; // Column_AD
+$panel-border-radius: 15px; // Column_AE
+$feature-panel-border-radius: 15px; // Column_AF
+$list-border-radius: 15px; // Column_AG
+$promo-border-radius: 15px; // Column_AH
+$rounded-corner-border-radius: 15px; // Column_AI
 
 @import "global-import";
 
 /** If the site requires the navigation bar to appear below the search textbox uncomment the line below **/
 @import "global/navbar";
 
-/** If the site is a Museums site uncomment the line below **/
-//@import "museums-navbar";
+/*** custom CSS: ***/
 
-/** If the site is a wide site uncomment the line below **/
-//@import "global/wide-sites";
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu * {
+  background-color: $white;
+}
+.gi-mobilenavtoggle__btn[aria-expanded=true] .gi-mobilenavtoggle__mtrotate * {
+  background-color: $white;
+}
 
+
+// should this be a MM?
+.item.item--article .item__title a {
+  // remove underline from panel tite / links on cards (lists, features etc.)
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  text-decoration: none;
+}
+
+// will be new MM:
+
+.a-panel.a-panel--pt.a-panel--panel-left .a-panel__content {
+  margin-right: auto;
+
+  @media (min-width: 841px) {
+    margin-left: 20px;
+  }
+}
+
+.a-panel.a-panel--pt.a-panel--panel-right .a-panel__content {
+  margin-left: auto;
+
+  @media (min-width: 841px) {
+    margin-right: 20px;
+  }
+}
+
+
+// might be a new MM:
+
+.a-panel.a-panel--centred-link {
+  a.a-panel__linkwrap {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+  }
+}
+
+// "circle" overlay:
+// left
+.a-panel.a-panel--pt.a-panel--panel-left.a-panel--no-backdrop.a-panel--hasbackground.a-panel--circle-overlay {
+
+  overflow: hidden;
+  //max-height: 200px;
+
+  // shadow approach
+
+  &::after {
+      content: "";
+      min-height: 200%;
+      width: -webkit-fill-available;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      opacity: 0.7;
+      left: 60%;
+      border-radius: 100% 0px 0px 100%;
+      box-shadow: $black -500px 0px 0px 50000px;
+  }
+  
+  // svg appraoch
+
+  // &::before {
+  //   content: "";
+  //   background: rgba(0,0,0,0.8);
+  //   display: block;
+  //   // width: 50%;
+  //   min-width: 500px;
+  //   width: 60%;
+  //   height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  // }
+
+  // &::after {
+  //   content: ""; 
+  //   background-image: $circle-cutout;
+  //   display: block; 
+  //   height: calc(100% + 1px);
+  //   width: 46px;
+  //   background-size: cover;
+  //   position: absolute;
+  //   // left: 50%;
+  //   left: 60%;
+  //   top: 0;
+  //   margin-left: 0px;
+  //   // transform: translateX(30px);
+  // }
+
+  @media (max-width: 858px) {
+    &::after {
+      left: 0;
+      margin-left: 500px;
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .a-panel.a-panel--pt.a-panel--panel-left.a-panel--no-backdrop.a-panel--hasbackground.a-panel--circle-overlay {
+    max-height: none;
+
+    .a-panel__body.a-body {
+      padding-bottom: 0px;
+    }
+  }
+}
+
+// buttons
+
+.a-panel.a-panel--pt.a-panel--panel-left.a-panel--no-backdrop.a-panel--hasbackground.a-panel--circle-overlay {
+  a.a-body__link.a-body__link--btn-primary-std,
+  a.a-body__link.a-body__link--btn-secondary,
+  a.a-body__link--btn-primary-std,
+  a.a-body__link--btn-primary-lge,
+  a.a-body__link--btn-primary-teal-std,
+  a.a-body__link--btn-primary-teal-lge,
+  a.a-body__link--btn-secondary,
+  a.a-body__link--btn-inverted-secondary,
+  a.a-body__link--btn-primary-lge,
+  a.a-body__link--btn-primary-teal-std,
+  a.a-body__link--btn-primary-teal-lge,
+  a.a-body__link--btn-inverted-secondary {
+    border-radius: 40px;
+    padding: 5px 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+
+// icon panel
+
+.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel {
+  .gi-responsiveimage__imagewrapper {
+    display: flex;
+  }
+  .gi-responsiveimage__image {
+    object-fit: contain;
+  }
+}
+
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__content:not(:only-child),
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel .grid.grid--list .grid__cell .grid__cellwrap .item.item--article .item__content:not(:only-child) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@include mq(lg, max) {
+  .a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article,
+  .a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article {
+    flex-direction: row;
+  }
+}
+
+.a-panel--pt .grid--parallax {
+  width: 100%;
+}
+
+.a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-left .grid.grid--parallax.grid--2col>.grid__cell {
+  .fa-block .fa-block__imagecontainer {
+    border-radius: $card-border-radius 0px 0px $card-border-radius;
+  }
+}
+.a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-right .grid.grid--parallax.grid--2col>.grid__cell {
+  .fa-block .fa-block__imagecontainer {
+    border-radius: 0px $card-border-radius $card-border-radius 0px;
+  }
+}
+
+@include mq(xs, max) {
+  .a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-left .grid.grid--parallax.grid--2col>.grid__cell,
+  .a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-right .grid.grid--parallax.grid--2col>.grid__cell {
+    .fa-block .fa-block__imagecontainer {
+      border-radius: $card-border-radius $card-border-radius 0px 0px;
+    }
+    
+  }
+}
+
+
+footer.footer {
+  box-shadow: 0px -140px rgba(0,0,0,1) inset;
+
+  .utilitymenu.utilitymenu--bottom {
+    margin-bottom: 30px;
+  }
+
+  .footer__copy {
+    margin: 20px 0px;   
+  }
+}
