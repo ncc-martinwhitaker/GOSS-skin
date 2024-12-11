@@ -84,20 +84,23 @@ a.a-body__link--btn-teal-print-copy:hover, button.a-body__link--btn-teal-print-c
 
 /* secondary / inverted buttons */
 
-a.a-body__link.a-body__link--btn-secondary {
+a.a-body__link.a-body__link--btn-secondary,
+a.a-body__link--btn-secondary {
     color: $button-secondary-color-hov;
     background-color: $button-secondary-color;
     border: 2px solid $button-secondary-color-hov;
 }
 
-a.a-body__link.a-body__link--btn-secondary:hover {
+a.a-body__link.a-body__link--btn-secondary:hover,
+a.a-body__link--btn-secondary:hover {
     cursor: pointer;
     color: $button-secondary-color;
     background-color: $button-secondary-color-hov;
     border: 2px solid $button-secondary-color;
 }
 
-a.a-body__link.a-body__link--btn-secondary:focus {
+a.a-body__link.a-body__link--btn-secondary:focus,
+a.a-body__link--btn-secondary:focus {
     color: $black;
     background-color: $focus-color;
     border-color: $focus-color;
@@ -106,24 +109,28 @@ a.a-body__link.a-body__link--btn-secondary:focus {
     transition: none;
     text-decoration: none;
 }
-a.a-body__link.a-body__link--btn-secondary:hover {
+a.a-body__link.a-body__link--btn-secondary:hover,
+a.a-body__link--btn-secondary:hover {
     text-decoration: underline;
 }
 
-a.a-body__link.a-body__link--btn-inverted-secondary {
+a.a-body__link.a-body__link--btn-inverted-secondary,
+a.a-body__link--btn-inverted-secondary {
     color: $button-inverted-secondary-color-hov;
     background-color: $button-inverted-secondary-color;
     border: 2px solid $button-inverted-secondary-color-hov;
 }
 
-a.a-body__link.a-body__link--btn-inverted-secondary:hover {
+a.a-body__link.a-body__link--btn-inverted-secondary:hover,
+a.a-body__link--btn-inverted-secondary:hover {
     cursor: pointer;
     color: $button-inverted-secondary-color;
     background-color: $button-inverted-secondary-color-hov;
     border: 2px solid $button-inverted-secondary-color;
 }
 
-a.a-body__link.a-body__link--btn-inverted-secondary:focus {
+a.a-body__link.a-body__link--btn-inverted-secondary:focus,
+a.a-body__link--btn-inverted-secondary:focus {
     color: $black;
     background-color: $focus-color;
     border-color: $focus-color;
@@ -132,7 +139,8 @@ a.a-body__link.a-body__link--btn-inverted-secondary:focus {
     transition: none;
     text-decoration: none;
 }
-a.a-body__link.a-body__link--btn-inverted-secondary:hover {
+a.a-body__link.a-body__link--btn-inverted-secondary:hover,
+a.a-body__link--btn-inverted-secondary:hover {
     text-decoration: underline;
 }
 
