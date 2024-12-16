@@ -181,7 +181,7 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
     }
 }
 
-.a-panel__linkwrap:hover .a-panel__link--pt, .a-panel__linkwrap:focus .a-panel__link--pt, .a-panel__link--related:hover {
+.a-panel__linkwrap:hover .a-panel__link--pt, .a-panel__link--related:hover {
     @extend .btn-hover;
 }
 
@@ -229,6 +229,7 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover {
     &:hover {
         text-decoration: underline;
         text-decoration-skip-ink: none;
+        text-underline-offset: .1578em;
         outline: none; 
         box-shadow: inset 0 0 20em rgba(0,0,0,0.1);
     }

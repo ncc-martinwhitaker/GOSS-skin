@@ -66,6 +66,11 @@ Header completed
         @extend .btn-hover;
         color: #fff;
     }
+
+    &:focus {
+        background-color: $focus-color;
+        color: $black;
+    }
 }
 // pill button end
 
@@ -125,6 +130,14 @@ Panel Button shapes
     color: $carecareers_button_text_green;
     border-radius: 15px;
     padding: 14px;
+
+    &:hover {
+        background-color: $button-primary-color-hov;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+    }
 }
 
 /*====================================================================================
@@ -163,6 +176,12 @@ a.a-body__link--btn-primary-teal-lge:hover {
     color: white !important;
 }
 
+a.a-body__link--btn-primary-teal-std:focus, 
+a.a-body__link--btn-primary-teal-lge:focus {
+    background-color: $focus-color;
+    color: $black !important;
+}
+
 
 /*====================================================================================
 Panel/Link-Panel Button colours
@@ -179,6 +198,9 @@ Panel/Link-Panel Button colours
 
 .a-panel__linkwrap:hover .a-panel__link.a-panel__link--pt {
     background-color: $button-primary-color-hov;
+}
+.a-panel__linkwrap:focus .a-panel__link.a-panel__link--pt {
+    background-color: $focus-color;
 }
 
  //3832
@@ -221,6 +243,13 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus
 //4420 Form fields - yellow when selected field input (not focus)
 .care-careers-search input[type=search]{
     background-color: white;
+}
+
+
+
+//4593
+.gi-sitesearch--top .btn--search {
+    @include ani;
 }
 
 /*
@@ -286,6 +315,10 @@ footer.footer * {
     &:focus {
         background-color: $focus-color;
     }
+}
+
+.icmform .btn:hover {
+    color: $white;
 }
 
 /*====================================================================================
