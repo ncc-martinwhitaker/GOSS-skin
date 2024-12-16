@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     altText.textContent = ` (${img.alt || "No alt text available"})`;
 
                     altText.style.display = "block";
-                    altText.style.fontSize = "8px";
+                    altText.style.fontSize = "12px";
                     altText.style.color = "#050505";
                     altText.style.maxWidth = "300px";
                     altText.style.wordBreak = "break-word";
@@ -77,7 +77,8 @@ function applyButtonPrintStyles() {
         'a.a-body__link--btn-primary-std-dwn',
         'a.a-body__link--btn-primary-lge',
         '.a-body__link--btn-secondary',
-        '.a-body__link--btn-inverted-secondary'
+        '.a-body__link--btn-inverted-secondary',
+        '.a-body__link'
     ];
 
     document.querySelectorAll(buttonSelectors.join(", ")).forEach(function (button) {
@@ -87,31 +88,67 @@ function applyButtonPrintStyles() {
         button.textContent = "";
 
         if (buttonHref) {
+
+            // Creare a Ptint conteiner
             const printContainer = document.createElement("span");
             printContainer.style.display = "inline";
-            printContainer.style.fontSize = "8px";
+            printContainer.style.fontSize = "12px";
+            printContainer.style.whiteSpace = "nowrap";
 
+            // Add text button
             const textElement = document.createElement("span");
             textElement.textContent = buttonText;
             textElement.style.color = "#050505";
             textElement.style.marginRight = "5px";
 
+            // Add link
             const linkElement = document.createElement("a");
             linkElement.textContent = buttonHref;
             linkElement.href = buttonHref;
             linkElement.style.color = "#1F78C7";
             linkElement.style.textDecoration = "underline";
 
-            printContainer.appendChild(textElement);
+            // Add text and link to the conteiner              
+            printContainer.appendChild(textElement);            
             printContainer.appendChild(linkElement);
-
+            
             button.appendChild(printContainer);
             printContainer.classList.add("print-only-link");
+
+            // Looking for a point in the parent node
+            const parent = button.closest("p"); 
+            if (parent && parent.textContent.includes(".")) {
+                const textNodes = Array.from(parent.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+
+                textNodes.forEach(node => {
+                    const dotIndex = node.textContent.indexOf(".");
+                    if (dotIndex !== -1) {
+                        // Cut the text before and after the period
+                        const beforeDot = node.textContent.slice(0, dotIndex).trim();
+                        const afterDot = node.textContent.slice(dotIndex + 1).trim();
+
+                        // Update the text node
+                        node.textContent = beforeDot;
+
+                        // Add a period to the link
+                       const dotNode = document.createTextNode("");
+                        linkElement.appendChild(dotNode);
+
+                        // Add text after the period, if any
+                        if (afterDot) {
+                            const afterDotNode = document.createTextNode(` ${afterDot}`);
+                            parent.appendChild(afterDotNode);
+                        }
+                    }
+                });
+            }
         }
 
+        // Button style
         button.style.color = "#050505"; 
         button.style.background = "none";
         button.style.border = "none";
         button.style.display = "inline";
     });
 }
+  

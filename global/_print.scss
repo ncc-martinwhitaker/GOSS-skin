@@ -115,7 +115,7 @@
     :not(.a-body__link--btn-inverted-secondary)
     :not(a.a-body__link--cta)::after{
         content: " (" attr(href) ")";
-        font-size: 10px !important;
+        font-size: 12px !important;
         color: $link-color;
         text-decoration: underline;
         text-underline-offset: .1578em;
@@ -126,7 +126,7 @@
     blockquote::after{
         content: " (" attr(cite) ")";
         display: block !important;
-        font-size: 10px !important;
+        font-size: 12px !important;
         color: $link-color;
         text-decoration: underline;
         margin-top: 4px !important;
