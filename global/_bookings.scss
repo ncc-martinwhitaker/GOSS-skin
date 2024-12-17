@@ -840,3 +840,17 @@ h2.booking-summary__title{
   font-size: 40px;
   margin: 40px 0 0;
 }
+
+/*=====================================
+4946 Bookings mobile view issue
+=====================================*/
+@media (max-width: 768px) {
+  .grid--bookingsummary .nvp__value{
+    text-wrap: auto !important;
+  }
+
+  .icmform input[type=submit].booking-summary__button {
+    font-size: 1.2rem !important;    
+  }
+  
+}
