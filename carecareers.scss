@@ -30,7 +30,7 @@ $button-dark-panel-text-color: $carecareers_green;  // Column_U
 $button-dark-panel-color: #050505;  // Column_V
 
 $button-primary-color: $carecareers_green;
-$button-primary-color-hov: darken( $carecareers_green, 20% );
+$button-primary-color-hov: darken( $carecareers_green, 25% );
 $button-primary-text-color: $carecareers_button_text_green;
 
 $button-secondary-color: $carecareers_blue;
@@ -65,6 +65,11 @@ Header completed
         background-color: $header-utilitymenu-color;
         @extend .btn-hover;
         color: #fff;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+        color: $black;
     }
 }
 // pill button end
@@ -125,6 +130,14 @@ Panel Button shapes
     color: $carecareers_button_text_green;
     border-radius: 15px;
     padding: 14px;
+
+    &:hover {
+        background-color: $button-primary-color-hov;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+    }
 }
 
 /*====================================================================================
@@ -163,6 +176,12 @@ a.a-body__link--btn-primary-teal-lge:hover {
     color: white !important;
 }
 
+a.a-body__link--btn-primary-teal-std:focus, 
+a.a-body__link--btn-primary-teal-lge:focus {
+    background-color: $focus-color;
+    color: $black !important;
+}
+
 
 /*====================================================================================
 Panel/Link-Panel Button colours
@@ -175,7 +194,14 @@ Panel/Link-Panel Button colours
 
 .a-panel__linkwrap:hover .a-panel__link--pt, .a-panel__linkwrap:focus .a-panel__link--pt, .a-panel__link--related:hover {
     color: white;
- }
+}
+
+.a-panel__linkwrap:hover .a-panel__link.a-panel__link--pt {
+    background-color: $button-primary-color-hov;
+}
+.a-panel__linkwrap:focus .a-panel__link.a-panel__link--pt {
+    background-color: $focus-color;
+}
 
  //3832
 .a-panel__linkwrap {
@@ -186,8 +212,12 @@ Panel/Link-Panel Button colours
 Search button shenanigans
 ====================================================================================*/
 
- button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
-    background-color: darken( $carecareers_green, 20% );
+.gi-sitesearch--dynamic button.btn.btn--search.gi-sitesearch__button--search:hover {
+    opacity: 1;
+}
+
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
+    background-color: darken( $carecareers_green, 25% );
 }
 button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus {
     background-color: $focus-color;
@@ -203,11 +233,23 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus
 
 .care-careers-search #customSearchSubmit:hover {
     color: white;
+    background-color: $button-primary-color-hov;
+
+    svg path {
+        fill: $white;
+    }
 }
 
 //4420 Form fields - yellow when selected field input (not focus)
 .care-careers-search input[type=search]{
     background-color: white;
+}
+
+
+
+//4593
+.gi-sitesearch--top .btn--search {
+    @include ani;
 }
 
 /*
@@ -273,6 +315,10 @@ footer.footer * {
     &:focus {
         background-color: $focus-color;
     }
+}
+
+.icmform .btn:hover {
+    color: $white;
 }
 
 /*====================================================================================
