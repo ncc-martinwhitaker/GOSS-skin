@@ -406,3 +406,22 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
        max-width: 100%;
     }
 }
+
+/*5064 Search - sorting drop down styling*/
+.searchsort__select{
+    border: solid 1px $grey-2;
+    font-size: 1rem;
+    white-space: normal;
+    height: 40px;
+    margin: 0 0 20px;
+    width: auto;
+    line-height: 1.6;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.searchsort__select:focus,
+.gi-tabs--search .gi-tabs__panel:focus{
+    background-color: $white;
+    text-decoration: none;
+}
