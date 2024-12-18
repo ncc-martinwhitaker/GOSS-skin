@@ -182,7 +182,7 @@
 
     //Images
     img{        
-        max-width: 100px !important;
+        max-width: 60px !important;
         height: auto;
         display: inline-block !important;
     }
@@ -194,15 +194,22 @@
     img[alt]::after{
         content: " (" attr(alt) ")";
         display: inline;
-        font-size: 16px !important;
+        font-size: 10px !important;
         color: $black;
         word-break: break-word;
     }
 
     //Group images
     .gi-responsiveimage__image{
-        display: block !important;
-        margin-bottom: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin-bottom: 0px !important;
+        max-width: 100%;
+        height: auto !important; 
+    }
+
+    .gi-responsiveimage__image img{
         max-width: 100%;
         height: auto !important; 
     }
@@ -212,13 +219,12 @@
         font-size: 10px !important;
         color: $black !important;
         text-align: left !important;
-        margin-top: 5px !important;
+        margin-top: 2px !important;
         word-break: break-word !important;
         overflow-wrap:  break-word !important;
         line-height: 1.4 !important;
         max-width: 100%;
         white-space: normal !important;
-        padding: 0 !important;
     }
 
     //Video

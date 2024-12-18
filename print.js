@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (img) {
                 img.style.maxWidth = "100px";
                 img.style.height = "auto";
-                img.style.marginLeft = "15px";
-                img.style.marginBottom = "10px";
+                //img.style.marginLeft = "15px";
+                //img.style.marginBottom = "5px";
 
                 if (!container.parentNode.querySelector(".print-alt-text")) {
                     const altText = document.createElement("span");
                     altText.textContent = ` (${img.alt || "No alt text available"})`;
 
-                    altText.style.display = "block";
+                    /*altText.style.display = "block";
                     altText.style.fontSize = "12px";
                     altText.style.color = "#050505";
                     altText.style.maxWidth = "300px";
@@ -40,10 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     altText.style.whiteSpace = "normal";
                     altText.style.lineHeight = "1.2";
                     altText.style.marginTop = "5px";
-                    altText.style.alignContent = "left";
+                    altText.style.alignContent = "left";*/
                     altText.classList.add("print-alt-text");
 
+                    const wrapper = document.createElement("div");
+                    wrapper.style.display = "flex";
+                    wrapper.style.flexDirection = "column";
+                    wrapper.style.alignItems = "flex-start";
+                    wrapper.style.maxWidth = "100%";
+                    wrapper.appendChild(img.cloneNode(true));
+                    wrapper.appendChild(altText);
+
                     container.parentNode.insertBefore(altText, container.nextSibling);
+                    container.parentNode.replaceChild(wrapper, container);
                 }
             }
         });
