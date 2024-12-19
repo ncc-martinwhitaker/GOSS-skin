@@ -51,56 +51,243 @@ $panel-border-radius: 0px; // Column_AE
 $feature-panel-border-radius: 0px; // Column_AF
 $list-border-radius: 0px; // Column_AG
 $promo-border-radius: 0px; // Column_AH
-$rounded-corner-border-radius: 12px; // Column_AI
-
+$rounded-corner-border-radius: 10px; // Column_AI
 
 @import "global-import";
 
-/** If the site requires the navigation bar to appear below the search textbox uncomment the line below **/
 @import "global/navbar";
 
-/** If the site is a Museums site uncomment the line below **/
-//@import "museums-navbar";
-
-/** If the site is a wide site uncomment the line below **/
-//@import "global/wide-sites";
 
 //4967
 .template--search {
+  .card.card--searchresult {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border: none; //removes left, top and right border
+    border-bottom: 1px solid #CCCCCC;
+  }
 
-    .card.card--searchresult {
-        display: flex;
-        align-items: center;
-        padding-bottom: 20px;
-        border: none; //removes left, top and right border
-        border-bottom: 1px solid #CCCCCC;
-    }
+  .card__imagecontainer {
+    padding: 0px;
+  }
 
-    .card__imagecontainer {
-        padding: 0px;
-    }
+  .card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
+    width: 60px;
+  }
+}
 
-    .card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
-        width: 60px;
-    }
+.item.item--article .item__title a {
+  font-size: 1.5rem;
+}
+
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  font-size: 1.5rem;
 }
 
 //4967
 .template--default {
 
-    .a-body__image {
-        width: 169px;
-        height: 169px;
-        overflow: hidden;
-        margin-left: -210px;
-        float: left;
-    }
+  .a-body__image {
+    width: 169px;
+    height: 169px;
+    overflow: hidden;
+    margin-left: -210px;
+    float: left;
+  }
 
-    .a-heading__title {
-        padding-top: 20px;
-    }
+  .a-heading__title {
+    padding-top: 20px;
+  }
 
-    .a-body {
-        clear: both;
+  .a-body {
+    clear: both;
+  }
+}
+
+/*** custom CSS: ***/
+
+.gi-mobilenavtoggle__mtrotate.gi-mobilenavtoggle__mtrotate--mobilemenu * {
+  background-color: $white;
+}
+.gi-mobilenavtoggle__btn[aria-expanded=true] .gi-mobilenavtoggle__mtrotate * {
+  background-color: $white;
+}
+  
+  
+// panel title
+
+.a-panel.a-panel--hasbackground .a-panel__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    left: calc(50% - 50px);
+    bottom: -30px;
+    background-color: $black;
+  }
+}
+
+.a-panel.a-panel--hasbackground.a-panel--white-text .a-panel__title {
+  &::after {
+    background-color: $white;
+  }
+}
+
+// should this be a MM?
+.item.item--article .item__title a {
+  // remove underline from panel tite / links on cards (lists, features etc.)
+  text-decoration: none;
+
+  font-weight: 700;
+}
+  
+.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a {
+  text-decoration: none;
+}
+  
+// will be new MM:
+
+.a-panel.a-panel--pt.a-panel--panel-left .a-panel__content {
+  margin-right: auto;
+
+  @media (min-width: 841px) {
+    margin-left: 20px;
+  }
+}
+
+.a-panel.a-panel--pt.a-panel--panel-right .a-panel__content {
+  margin-left: auto;
+
+  @media (min-width: 841px) {
+    margin-right: 20px;
+  }
+}
+  
+  
+  // might be a new MM:
+  
+.a-panel.a-panel--centred-link {
+  a.a-panel__linkwrap {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+  }
+}
+
+.a-panel--rounded-cards.a-panel--pt.a-panel--parallax {
+  .fa-block, .fa-block .fa-block__details {
+    border-radius: $rounded-corner-border-radius;
+  }
+
+  .fa-block__imagecontainer {
+    border-radius: $rounded-corner-border-radius $rounded-corner-border-radius 0px 0px;
+  }
+}
+  
+// buttons
+
+.a-panel.a-panel--pt.a-panel--panel-left.a-panel--no-backdrop.a-panel--hasbackground.a-panel--circle-overlay {
+  a.a-body__link.a-body__link--btn-primary-std,
+  a.a-body__link.a-body__link--btn-secondary,
+  a.a-body__link--btn-primary-std,
+  a.a-body__link--btn-primary-lge,
+  a.a-body__link--btn-primary-teal-std,
+  a.a-body__link--btn-primary-teal-lge,
+  a.a-body__link--btn-secondary,
+  a.a-body__link--btn-inverted-secondary,
+  a.a-body__link--btn-primary-lge,
+  a.a-body__link--btn-primary-teal-std,
+  a.a-body__link--btn-primary-teal-lge,
+  a.a-body__link--btn-inverted-secondary {
+    border-radius: 40px;
+    padding: 5px 15px;
+
+    &::after {
+      display: none;
     }
+  }
+}
+  
+// disclosures
+
+.gi-disclosure--body {
+  border: none;
+}
+
+.gi-disclosure__heading {
+  border: solid $grey-3 1px;
+  margin: 10px 0px;
+}
+
+h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h3 .gi-disclosure__toggle-text {
+  font-size: 1.5rem;
+}
+
+.gi-disclosure--body .gi-disclosure__toggle {
+  padding: 10px 90px 15px 10px;
+}
+  
+.gi-disclosure--body .gi-disclosure__toggle::after {
+  color: $grey-0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23343434'/%3E%3C/svg%3E");
+}
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]::after {
+  color: $grey-0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23343434'/%3E%3C/svg%3E");
+}
+  
+@include mq(lg, max) {
+  .a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article,
+  .a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt .grid.grid--list .grid__cell .grid__cellwrap .item.item--article {
+    flex-direction: row;
+  }
+}
+  
+.a-panel--pt .grid--parallax {
+  width: 100%;
+}
+  
+.a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-left .grid.grid--parallax.grid--2col>.grid__cell {
+  .fa-block .fa-block__imagecontainer {
+    border-radius: $card-border-radius 0px 0px $card-border-radius;
+  }
+}
+.a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-right .grid.grid--parallax.grid--2col>.grid__cell {
+  .fa-block .fa-block__imagecontainer {
+    border-radius: 0px $card-border-radius $card-border-radius 0px;
+  }
+}
+  
+@include mq(xs, max) {
+  .a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-left .grid.grid--parallax.grid--2col>.grid__cell,
+  .a-panel--2-col-panel.a-panel.a-panel--parallax.a-panel--display-image-right .grid.grid--parallax.grid--2col>.grid__cell {
+    .fa-block .fa-block__imagecontainer {
+      border-radius: $card-border-radius $card-border-radius 0px 0px;
+    }
+  }
+}
+  
+  
+footer.footer {
+  box-shadow: 0px -140px rgba(0,0,0,1) inset;
+
+  .utilitymenu.utilitymenu--bottom {
+    margin-bottom: 30px;
+  }
+
+  .grid__cell.grid__cell--about.grid__cell--cols1 {
+    margin-bottom: 60px;
+  }
+
+  .footer__copy {
+    margin: 20px 0px;   
+  }
 }
