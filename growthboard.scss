@@ -144,6 +144,61 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   }
 }
 
+// icon panel MM
+.a-panel.a-panel--pt.a-panel--list.a-panel--icon-panel {
+
+  .grid-cell {
+    padding: 0px 10px 40px 10px;
+  }
+
+  .grid__cellwrap>.item {
+    border: none;
+    box-shadow: none;
+
+    .item__title a {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: $grey-2;
+
+      &:focus {
+        color: $black;
+      }
+    }
+
+    .item__imagecontainer {
+      padding: 0px 0px 0px 10px;
+    }
+    .item__content {
+      padding: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .item.item--article .item__title {
+      margin: 15px 0px 10px 0px;
+      padding: 10px;
+    }
+
+    .item__body {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $black;
+    }
+
+    .gi-responsiveimage__imagewrapper {
+      display: flex;
+    }
+    .gi-responsiveimage__image {
+      object-fit: contain;
+    }
+  }
+}
+
+.a-panel--display-image-left.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel .grid.grid--list .grid__cell .grid__cellwrap .item.item--article,
+.a-panel--display-image-right.a-panel.a-panel--list.a-panel--pt.a-panel--icon-panel .grid.grid--list .grid__cell .grid__cellwrap .item.item--article {
+  align-items: center;
+}
 
   
 // panel title
@@ -439,6 +494,20 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
     .fa-block .fa-block__imagecontainer {
       border-radius: $card-border-radius $card-border-radius 0px 0px;
     }
+  }
+}
+
+// partners-panel MM
+
+.a-panel.a-panel--pt.a-panel--partners-panel .a-panel__body.a-body.a-body--panel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@include mq(xs, max) {
+  .a-panel.a-panel--pt.a-panel--partners-panel .a-panel__body.a-body.a-body--panel {
+    flex-direction: column;
   }
 }
   
