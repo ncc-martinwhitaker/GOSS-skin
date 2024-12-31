@@ -1,2 +1,10 @@
 .a-panel.a-panel--feature {padding: 10px;}
 .a-panel__content {max-width: 1480px; padding: 0px}
+
+/** 2467 - Left align first navigation item so it's inline with breadcrumbs when nav splits over two rows **/
+.gi-sitenav__item--lvl1:first-child {
+    margin: 0px auto 0px 0px;
+}
+.gi-sitenav__item--lvl1 {
+    margin: 0px auto;
+}
