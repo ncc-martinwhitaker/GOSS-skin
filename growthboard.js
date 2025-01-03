@@ -37,4 +37,41 @@ $(document).ready(function() {
         linkWrapper.appendChild(emailLink);
 	}
 
+
+    // if image gallery is being used, modify the markup to make it work properly
+    if ($(".a-panel--image-gallery")[0]) {
+
+        // select grid parent element
+        var gridContainer = document.querySelector(".a-panel--image-gallery .grid.grid--imagegalleryinline");
+
+        // get number of images
+        var numberOfImages = gridContainer.childElementCount;
+
+        if (numberOfImages < 1) return;
+        if (numberOfImages > 5) numberOfImages = 5;
+        
+        gridContainer.classList.add(`grid--items${numberOfImages}`);
+	}
+
+    // for a relevant panel, remove the links from the icons
+    const removeLinks = function(parent) {
+
+        // select icons from parent element
+        var icons = Array.from(parent.children);
+
+        icons.forEach(i => {
+            var title = i.querySelector("h3");
+            title.innerHTML = title.querySelector("a").innerHTML;
+        });
+    };
+
+    // if no-links is used on the icon panel, shift the link text out of the <a> tag and delete the tag
+    if ($(".a-panel--no-links")[0]) {
+
+        var selected = document.querySelectorAll(".a-panel--list.a-panel--icon-panel.a-panel--no-links .grid.grid--list");
+        
+        // iterate over the relevant panels and remove the links
+        selected.forEach(s => removeLinks(s));
+	}
+
 });
