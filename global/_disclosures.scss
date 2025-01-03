@@ -118,6 +118,11 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
   }
 }
 
+// fix as part of 5058
+.gi-disclosure__show-hide-text {
+  color: $link-color;
+}
+
 // 3831 Buttons part 2
 
 button.btn--disclosure-toggle {
