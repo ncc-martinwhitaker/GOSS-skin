@@ -372,6 +372,15 @@ figure.gi-responsiveimage,
 
 // END OF IMAGE RATIO
 
+// 4782 - iOS text overlap image fix
+.a-body__image {
+  figure.gi-responsiveimage, 
+  .gi-responsiveimage__imagewrapper, 
+  .gi-responsiveimage__image {
+    height: auto;
+  }
+}
+
 // MM - side-by-side
 .body--side-by-side main.maincontent {
   .a-panel {
@@ -931,6 +940,13 @@ figure.gi-responsiveimage,
   }
 }
 
+/* 4959 Parallax panel - background image skips/resizes when scrolling on mobile (Android) */
+@include mq(max, sm) {
+  .a-panel--pt.a-panel--hasbackground {
+    background-attachment: scroll; 
+  }
+}
+
 // MM - opaque-cards-dark
 .a-panel.a-panel--pt.a-panel--parallax.a-panel--opaque-cards-dark {
   .a-panel__content .fa-block {
@@ -1125,6 +1141,9 @@ figure.gi-responsiveimage,
   }
 }
 
+
+
+
 // contention between 1000px/lg and 600px/sm - which should it be?
 @include mq(sm, max) {
   
@@ -1237,7 +1256,7 @@ figure.gi-responsiveimage,
       height: auto;
       padding: 0px;
       width: 50%;
-      border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cards image radius for square cards
+      // border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cards image radius for square cards
     }
     .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
       margin: 0;
@@ -1373,7 +1392,7 @@ figure.gi-responsiveimage,
       height: auto;
       padding: 0px;
       width: 50%;
-      border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cadrs image radius for square cards
+      // border-radius: $card-border-radius 0 0 $card-border-radius; //list panel's cadrs image radius for square cards
     }
     .item.item--article .item__imagecontainer .gi-responsiveimage.gi-responsiveimage--item {
       margin: 0;
@@ -2178,9 +2197,11 @@ Based on the carousel component - needs peeky-swiper MM to function
         display: none;
       }
 
+       /* 4849 - Accessibility - Peeky swiper empty links
       .a-panel__link {
         display: none;
       }
+      */
 
       &:hover {
         box-shadow: 0 7px 14px rgba(0,0,0,.25), 0 5px 5px rgba(0,0,0,.22);
