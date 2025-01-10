@@ -4,6 +4,7 @@
 $carecareers_button_text_green: rgb(18,73,34);
 $carecareers_green: #9DCC47;
 $carecareers_dark-green: #124922;
+$carecareers_green-hover: #567320;
 $carecareers_blue: #177EB0;
 $carecareers_grey: rgb(60,60,59);
 
@@ -1019,4 +1020,36 @@ Footer - copyright - 4176
   ==========================================*/
   .icmform .btn:hover{
     color: $white;
+  }
+
+  /*=================================================================================
+  5172 Apply and Apply by email  - button colour contrast issue
+  =================================================================================*/
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus{
+    background-color: $focus-color !important;
+    color: $black;
+    //box-shadow: 0 -2px $focus-color, 0 4px $black;
+  }
+
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:hover{
+    background-color: $carecareers_blue;
+    box-shadow: none;
+  }
+
+  .gi-job .cta-link.cta-link--job-apply,
+  .gi-job .cta-link.cta-link--job-apply{
+    background-color: $carecareers_green;
+    color: $carecareers_dark-green;
+  }
+
+  .gi-job .cta-link.cta-link--job-apply:hover,
+  .gi-job .cta-link.cta-link--job-apply:hover{
+    background-color: $carecareers_green-hover;
+  }
+
+  .gi-job .cta-link.cta-link--job-apply:focus,
+  .gi-job .cta-link.cta-link--job-apply:focus{
+    background-color: $focus-color;
+    text-decoration: none;
+    outline: 2px solid $black;
   }
