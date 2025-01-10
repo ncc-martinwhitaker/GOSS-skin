@@ -1025,13 +1025,15 @@ Footer - copyright - 4176
   /*=================================================================================
   5172 Apply and Apply by email  - button colour contrast issue
   =================================================================================*/
-  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus{
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus,
+  .gi-job .cta-link.cta-link--company:focus{
     background-color: $focus-color !important;
     color: $black;
-    //box-shadow: 0 -2px $focus-color, 0 4px $black;
+    box-shadow: 0 -2px $focus-color, 0 4px $black;
   }
 
-  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:hover{
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:hover,
+  .gi-job .cta-link.cta-link--company:hover{
     background-color: $carecareers_blue;
     box-shadow: none;
   }
@@ -1051,5 +1053,6 @@ Footer - copyright - 4176
   .gi-job .cta-link.cta-link--job-apply:focus{
     background-color: $focus-color;
     text-decoration: none;
-    outline: 2px solid $black;
+    //outline: 2px solid $black;
+    box-shadow: 0 -2px $focus-color, 0 4px $black;
   }
