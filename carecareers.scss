@@ -1026,10 +1026,17 @@ Footer - copyright - 4176
   5172 Apply and Apply by email  - button colour contrast issue
   =================================================================================*/
   .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus,
-  .gi-job .cta-link.cta-link--company:focus{
+  .gi-job .cta-link.cta-link--company:focus,
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus:hover,
+  .gi-job .cta-link.cta-link--company:focus:hover{
     background-color: $focus-color !important;
     color: $black;
     box-shadow: 0 -2px $focus-color, 0 4px $black;
+  }
+
+  .gi-job .cta-link.cta-link--job-apply.cta-link--tel:focus:hover,
+  .gi-job .cta-link.cta-link--company:focus:hover{
+    text-decoration: underline;
   }
 
   .gi-job .cta-link.cta-link--job-apply.cta-link--tel:hover,
