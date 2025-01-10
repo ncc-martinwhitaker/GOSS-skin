@@ -133,6 +133,24 @@ $promo-border-radius: 0px; //base border radius for all promo cards on a page
 $rounded-corner-border-radius: 12px; //rounded corner border radius value
 
 
+//Alert message colours
+
+//.gi-info
+$info-bg-color: #cce5ff;
+$info-border-color: #b8daff;
+
+//.gi-info--alert 
+$alert-info-bg-color: #fff3cd;
+$aletrt-info-border-color: #ffeeba;
+
+//.gi-info--primary
+$info-primary-bg-color: #d4edda;
+$info-primary-border-color: #c3e6cb;
+
+//.gi-info--secondary 
+$info-secondary-bg-color: #e9e9e9;
+$info-secondary-border-color: #c6c8ca;
+
 // FONT SIZES
 
 $font-size-base: 1rem;
