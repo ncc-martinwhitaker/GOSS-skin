@@ -1,5 +1,3 @@
-$link-color: #1a609f;
-
 p.gi-info {
  
   color: $black-2;
@@ -60,8 +58,11 @@ p.gi-info--secondary {
   }
 }
 
-a {
-  color: $link-color; 
+p.gi-info a,
+p.gi-info--alert a,
+p.gi-info--primary a,
+p.gi-info--secondary a {
+  color: #1A609F; 
   font-weight: 600; 
   text-decoration: none;
     
