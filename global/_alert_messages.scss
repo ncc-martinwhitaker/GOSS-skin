@@ -73,7 +73,7 @@ p.gi-info--secondary a {
   &:focus {
     color: $black;
     background: $focus-color;
-    outline: 3px solid $black-2;
+   // outline: 3px solid $black-2;
     box-shadow: 0 -2px $focus-color,0 4px $black;
     text-decoration: none;
   }
