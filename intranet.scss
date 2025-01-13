@@ -809,3 +809,10 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 .gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2{
     break-inside: avoid;
 }
+
+/*==================================================
+5212 Mobile nav - white chevron on grey background
+==================================================*/
+.sitemenu__btn--haschildren::after{
+    color: $black;
+}
