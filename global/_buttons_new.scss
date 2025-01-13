@@ -1,0 +1,467 @@
+/******************************************************************************
+
+--- Buttons ---
+
+Including: primary, teal, secondary, inverted, icons, icm, panel, my request, coroners, icm, events, external, sitesearch
+
+Most of the styling is set at the generic/base level, followed by specific changes for various colours/options.
+
+******************************************************************************/
+
+.a-body__link--cta,
+.a-body__link--btn-primary-std,
+.a-body__link--btn-primary-std-dwn,
+.a-body__link--btn-primary-lge,
+.a-body__link--btn-primary-teal-std,
+.a-body__link--btn-primary-teal-lge,
+.a-body__link--btn-secondary,
+.a-body__link--btn-inverted-secondary,
+.a-body__link--btn-teal-print-copy,
+button.a-body__link--btn-teal-print-copy {
+  padding: 5px 35px 5px 12px;
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  font-family: inherit;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .5s cubic-bezier(.25,.8,.25,1);
+}
+
+.a-body__link--btn-teal-print-copy,
+button.a-body__link--btn-teal-print-copy {
+  padding: 5px 12px 5px 12px;
+  span {
+    font-size: 1rem;
+  }
+  svg {
+    vertical-align: middle;
+  }
+}
+
+a.a-body__link--btn-primary-lge,
+a.a-body__link--btn-primary-teal-lge {
+  font-size: $font-size-lg;
+}
+
+a.a-panel__link,
+a.a-body__link--cta,
+a.a-body__link--btn-primary-std,
+a.a-body__link--btn-primary-std-dwn,
+a.a-body__link--btn-primary-lge {
+  background-color: $button-primary-color;
+  color: $button-primary-text-color;
+  border-bottom: 0px;
+}
+
+.btn-hover {
+  text-decoration: underline;
+}
+
+a.a-body__link--cta:hover,
+a.a-body__link--btn-primary-std:hover,
+a.a-body__link--btn-primary-std-dwn:hover,
+a.a-body__link--btn-primary-lge:hover,
+a.a-body__link--btn-primary-teal-std:hover,
+a.a-body__link--btn-primary-teal-lge:hover,
+a.a-body__link--btn-teal-print-copy:hover,
+button.a-body__link--btn-teal-print-copy:hover {
+  cursor: pointer;
+  color: $button-primary-text-color;
+  background-color: $button-primary-color-hov;
+  border-bottom: 0px !important;
+}
+
+a.a-body__link--cta:focus,
+a.a-body__link--btn-primary-std:focus,
+a.a-body__link--btn-primary-std-dwn:focus,
+a.a-body__link--btn-primary-lge:focus,
+a.a-body__link--btn-primary-teal-std:focus,
+a.a-body__link--btn-primary-teal-lge:focus,
+a.a-body__link--btn-teal-print-copy:focus,
+button.a-body__link--btn-teal-print-copy:focus {
+  color: $black !important;
+  background-color: $focus-color;
+  border-color: $focus-color;
+  outline: none;
+  box-shadow: 0 2px 0 $black;
+  transition: none;
+  text-decoration: none;
+
+  svg {
+    fill: #050505;
+  }
+}
+a.a-body__link--cta:hover,
+a.a-body__link--btn-primary-std:hover,
+a.a-body__link--btn-primary-std-dwn:hover,
+a.a-body__link--btn-primary-lge:hover,
+a.a-body__link--btn-primary-teal-std:hover,
+a.a-body__link--btn-primary-teal-lge:hover,
+a.a-body__link--btn-teal-print-copy:hover,
+button.a-body__link--btn-teal-print-copy:hover {
+  text-decoration: underline;
+}
+
+
+// this will be deleted / integrated into other sections during testing
+a.a-body__link.a-body__link--btn-primary-std {
+  &:focus {
+    background-color: $focus-color;
+    box-shadow: 0 2px 0 $black;
+    outline: none;
+    transition: none;
+    text-decoration: none;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+a.a-body__link.a-body__link--cta {
+  &:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      box-shadow: none;
+  }
+  &:focus {
+      background-color: $focus-color;
+      color: $black;
+      box-shadow: 0 2px 0 $black;
+      outline: none;
+      transition: none;
+  }
+}
+///////////////////////////////////////////////////////////////////////
+
+
+/******************************************************************************
+
+- Teal -
+
+******************************************************************************/
+
+a.a-body__link--btn-primary-teal-std,
+a.a-body__link--btn-primary-teal-lge,
+a.a-body__link--btn-teal-print-copy,
+button.a-body__link--btn-teal-print-copy {
+  background-color: $button-primary-teal-color;
+  color: $button-primary-text-color;
+}
+
+a.a-body__link--btn-primary-teal-std:hover,
+a.a-body__link--btn-primary-teal-lge:hover,
+a.a-body__link--btn-teal-print-copy:hover,
+button.a-body__link--btn-teal-print-copy:hover {
+  background-color: $button-primary-teal-color-hov;
+}
+
+/******************************************************************************
+
+- Secondary -
+
+******************************************************************************/
+
+a.a-body__link.a-body__link--btn-secondary {
+  color: $button-secondary-color-hov;
+  background-color: $button-secondary-color;
+  border: 2px solid $button-secondary-color-hov;
+}
+
+a.a-body__link.a-body__link--btn-secondary:hover {
+  cursor: pointer;
+  color: $button-secondary-color;
+  background-color: $button-secondary-color-hov;
+  border: 2px solid $button-secondary-color;
+}
+
+a.a-body__link.a-body__link--btn-secondary:focus {
+  color: $black;
+  background-color: $focus-color;
+  border-color: $focus-color;
+  outline: none;
+  box-shadow: 0 2px 0 $black;
+  transition: none;
+  text-decoration: none;
+}
+
+a.a-body__link.a-body__link--btn-secondary:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************************
+
+- Inverted -
+
+******************************************************************************/
+
+a.a-body__link.a-body__link--btn-inverted-secondary {
+  color: $button-inverted-secondary-color-hov;
+  background-color: $button-inverted-secondary-color;
+  border: 2px solid $button-inverted-secondary-color-hov;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary:hover {
+  cursor: pointer;
+  color: $button-inverted-secondary-color;
+  background-color: $button-inverted-secondary-color-hov;
+  border: 2px solid $button-inverted-secondary-color;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary:focus {
+  color: $black;
+  background-color: $focus-color;
+  border-color: $focus-color;
+  outline: none;
+  box-shadow: 0 2px 0 $black;
+  transition: none;
+  text-decoration: none;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************************
+
+- Icons -
+
+******************************************************************************/
+
+.a-body__link--cta::after,
+.a-body__link--btn-primary-std::after,
+.a-body__link--btn-primary-lge::after,
+.a-body__link--btn-primary-teal-std::after,
+.a-body__link--btn-primary-teal-lge::after,
+.a-body__link--btn-secondary::after,
+.a-body__link--btn-inverted-secondary::after {
+  content: '\e827';
+  top: calc(50% - 8px);
+}
+
+.a-body__link--btn-primary-std-dwn::after {
+  content: '\e812';
+  top: calc(50% - 8px);
+}
+
+.a-body__link--btn-primary-std::after,
+.a-body__link--btn-primary-std-dwn::after,
+.a-body__link--btn-primary-lge::after,
+.a-body__link--btn-primary-teal-std::after,
+.a-body__link--btn-primary-teal-lge::after,
+.a-body__link--btn-secondary::after,
+.a-body__link--btn-inverted-secondary::after {
+  position: absolute;
+}
+
+.a-body__link--cta::after, .a-body__link--btn-primary-std::after,
+.a-body__link--btn-primary-std-dwn::after,
+.a-body__link--btn-primary-lge::after,
+.a-body__link--btn-primary-teal-std::after,
+.a-body__link--btn-primary-teal-lge::after,
+.a-body__link--btn-secondary::after,
+.a-body__link--btn-inverted-secondary::after {
+  right: 13px;
+}
+
+/******************************************************************************
+
+- Panel buttons -
+
+******************************************************************************/
+
+.apanel__link:before,
+.a-panel__link:hover:before,
+.a-panel__link.a-panel__link--pt:before,
+.a-panel__link:after, .a-panel__link:hover:after,
+.a-panel__link:hover:before {
+  all: unset;
+}
+
+.a-panel__link.a-panel__link--pt {
+  color: $button-primary-text-color; 
+}
+
+.a-panel__link.a-panel__link--pt:hover {
+  text-decoration: underline; 
+}
+
+.a-panel__link {
+  padding-right: 20px;
+  background-color: $button-panel-color;
+}
+
+.a-panel--opaque-cards-dark, .a-panel--backdrop-black {
+  .a-panel__link {
+    background-color: $button-dark-panel-color;
+    color: $button-dark-panel-text-color !important;
+  }
+}
+
+.a-panel__linkwrap:hover .a-panel__link--pt,
+.a-panel__linkwrap:focus .a-panel__link--pt,
+.a-panel__link--related:hover {
+  @extend .btn-hover;
+}
+
+/******************************************************************************
+
+- "My request" buttons -
+
+******************************************************************************/
+
+.cta-link--assigned {
+  background-color: $green;
+  border-radius: 6px;
+}
+
+.cta-link--viewallrequests {
+  background-color: $grey-5;
+  color: $black;
+  border-radius: 6px;
+}
+
+.cta-link--back {
+  background-color: $white;
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-darken;
+    text-decoration: underline;
+    background-color: $white;
+    box-shadow: none;
+  }
+}
+
+/******************************************************************************
+
+- Coroners form -
+
+******************************************************************************/
+
+.btn--form.btn--secondary {
+  background-color: $grey-1;
+}
+
+/******************************************************************************
+
+- icm -
+
+******************************************************************************/
+
+.icmform button.btn,
+input.icminput.icminput--button.icminput--script {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    outline: none; 
+    box-shadow: inset 0 0 20em rgba(0,0,0,0.1);
+  }
+
+  &:focus {
+    background-color: $focus-color;
+    color: $black;
+    box-shadow: 0 2px 0 $black;
+    outline: none;
+    transition: none;
+  }
+}
+
+input.icminput.icminput--button.icminput--script.icminput--contrast {
+  &:hover {
+    background-color: $black;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+    background-color: $focus-color;
+    color: $black;
+    box-shadow: 0 2px 0 $black;
+    outline: none;
+    transition: none;
+  }
+}
+
+.icmform button.btn {
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    box-shadow: 0 2px 0 $black;
+    transition: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/******************************************************************************
+
+- Event -
+
+******************************************************************************/
+
+.event__book .cta-link.cta-link--eventresults.cta-link--book,
+a.a-body__link.a-body__link--cta {
+  &:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      box-shadow: none;
+  }
+  &:focus {
+      background-color: $focus-color;
+      color: $black;
+      box-shadow: 0 2px 0 $black;
+      outline: none;
+      transition: none;
+  }
+}
+
+/******************************************************************************
+
+- External -
+
+******************************************************************************/
+
+a.a-body__link.a-body__link--cta.a-body__link--external {
+  &:hover {
+      background-color: $button-primary-color-hov;
+  }
+}
+
+/******************************************************************************
+
+- Sitesearch -
+
+******************************************************************************/
+
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+  &:hover {
+      box-shadow: none;
+      text-decoration: none;
+  }
+  &:focus {
+      box-shadow: none;
+      outline: $black solid 2px;
+      text-decoration: none;
+      transition: none;
+      
+      span {
+          color: $black;
+      }
+      &::before {
+          color: $black;
+      }
+  }
+}
