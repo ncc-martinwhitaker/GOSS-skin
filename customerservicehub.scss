@@ -75,3 +75,10 @@
     .os-api-branding.logo {
         padding: 3px !important;
     }
+
+/*===================================================
+5209 Hide Close Case button in CSH for 6 casetypes
+===================================================*/
+#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CLOSECASEBTN{
+    display: none;
+}
