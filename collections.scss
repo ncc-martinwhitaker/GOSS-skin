@@ -29,6 +29,22 @@ $footer-border-color: #111111;
 @import 
 "museums-navbar";
 
+// Buttons (refactoring)
+.template--collectionsobject .collectionsitem__description .gi-disclosure__toggle {
+    &:focus {
+        background-color: $focus-color;
+        border-color: $focus-color;
+        outline: none;
+        box-shadow: 0 2px 0 $black;
+        transition: none;
+    }
+}   
+
+.template--collectionsobject .collectionsitem__description button:hover[aria-expanded=false]::before,
+.template--collectionsobject .collectionsitem__description button:hover[aria-expanded=true]::before {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
 
 /*
 -------------------------------------------------------------------------------------------
