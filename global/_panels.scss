@@ -2880,3 +2880,8 @@ h4.stage-link__title  {
     background-attachment: scroll; 
   }
 }
+
+/* 622 - MM to turn off background fixed for parallax panels */
+.a-panel--pt.a-panel--parallax.a-panel--scroll-bg-image {
+  background-attachment: scroll;
+}
