@@ -2885,3 +2885,80 @@ h4.stage-link__title  {
 .a-panel--pt.a-panel--parallax.a-panel--scroll-background {
   background-attachment: scroll;
 }
+
+/*======================================================================================
+4899 Panel widths on mobile
+======================================================================================*/
+@include mq(lg, max) {
+  
+  //Parallax panels - background image
+  .a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground {
+    padding: 0px;
+    .a-panel__content {
+      padding: 0px;
+      .a-panel__title {
+        padding: 40px 20px 0px 20px;
+      }
+    }
+  }
+  .a-panel--pt .grid--parallax {
+    width: 100%;
+  }
+
+  //Stage - no background image 
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
+    padding: 0px;
+    .container {
+      padding: 0px;
+    }
+  }
+
+  //Stage - background image 
+  .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground {
+    padding: 0px;
+  }
+
+  //List panel
+  .a-panel.a-panel--pt.a-panel--list .a-panel__content {
+    padding: 0px;
+  }
+  .a-panel.a-panel--pt .a-panel__content .a-panel__list {
+    margin: 0px;
+  }
+
+  //Feature panel
+  .a-panel.a-panel--feature {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  //Feature group
+  .a-panel--dynamic.a-panel--feature {
+    .a-panel__content {
+      padding: 10px;
+    }
+  }
+
+  // Aside container
+  .container.container--fullwidth aside.aside .relateditem {
+    padding: 0 20px;
+  }
+
+  //Related items
+  .relateditem {
+    padding: 0px;
+    .container {
+      padding: 0px;
+    }
+    .panel--relmedia {
+      padding: 0px 20px;
+    }
+  }
+
+  //Related forms
+  .panel--relforms {
+
+  }
+
+}
+
