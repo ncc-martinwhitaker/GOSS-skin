@@ -561,3 +561,10 @@ Share this page - 3448 uncomment from 20/11/2024
     }
     
     } 
+
+/*==================================================
+5161 Mobile nav - white chevron on grey background
+==================================================*/
+.sitemenu__btn--haschildren::after{
+    color: $black;
+}

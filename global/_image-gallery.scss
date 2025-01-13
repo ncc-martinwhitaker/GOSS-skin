@@ -182,3 +182,52 @@ li.gi-carousel__slide {
 
 
 }
+
+/*====================================
+5117 Gallery dialog colour contrast
+====================================*/
+.imagegalleryinline {
+    h2.dialog__header,
+    .dialog__header#imagegallery-dialog-i31455350107764_header,
+    .dialog__close{
+        color: $white;
+    }
+
+    .dialog__close{
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    dialog__close:focus,
+    .gi-carousel--imagegalleryinline .gi-carousel__next:focus,
+    .gi-carousel--imagegalleryinline .gi-carousel__previous:focus,
+    .gi-carousel--imagegalleryinline .gi-carousel__next:focus:hover,
+    .gi-carousel--imagegalleryinline .gi-carousel__previous:focus:hover{
+        outline: none;
+        background: $focus-color;
+        border: 3px solid $black;
+        color:$black;
+    }
+
+    .dialog__close:hover,
+    .gi-carousel--imagegalleryinline .gi-carousel__next:hover,
+    .gi-carousel--imagegalleryinline .gi-carousel__previous:hover{
+        background: $white;
+        color: $black;
+        outline: none;
+        text-underline-offset: 3px;
+    }
+
+    .gi-carousel__next:hover::after,
+    .dialog__close:hover::before,
+    .gi-carousel__previous:hover::after, 
+    .gi-carousel--imagegalleryinline .gi-carousel__next:focus:hover,
+    .gi-carousel--imagegalleryinline .gi-carousel__previous:focus:hover{
+        text-decoration: underline;
+    }
+
+    ::marker {
+        content: "";
+    }
+} 
