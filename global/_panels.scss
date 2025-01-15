@@ -1697,7 +1697,11 @@ figure.gi-responsiveimage,
 }
 
 .a-panel.a-panel--pt.a-panel--stage {
-
+  
+  .gi-sitenav--lvl2 {
+    columns: 1;
+  }
+  
   .n-stage .n-stage-alert {
     background-color: $button-primary-color;
     color: $white;
