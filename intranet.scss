@@ -762,9 +762,27 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
     /* width of searchbar size?! #3042  */
     flex: auto;
     max-width: 600px;
+    
 }
 
 }
+
+/*=======================================
+5213 myNet mobile - search bar issue
+=======================================*/
+@media (max-width: 768px) {
+    .gi-sitelogo--header {
+        display: flex !important;
+        padding: 15px 0px;
+        flex-wrap: wrap !important;
+      }
+
+      .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top{
+        width: 100% !important;
+        margin: 15px 0 0 0;
+      }
+}
+/*======END======*/
 
 
 // 2341 stage card padding
