@@ -290,3 +290,15 @@ header .imagebanner {
 }
 
 }
+
+/*===========================================
+5118 Image link/button focus styling
+===========================================*/
+.gi-sitelogo__link:focus,
+.n-stage__link .n-stage__link--logo:focus{
+box-shadow: 0 0 0 5px $black;
+outline: 3px solid $focus-color;
+background: none;
+color: none;
+}
+/*===================END===============*/
