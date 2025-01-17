@@ -540,6 +540,10 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
   max-width: none;
 }
 
+.a-panel.a-panel--image-gallery .a-panel__content {
+  z-index: 1000;
+}
+
 .a-panel--image-gallery .imagegalleryinline {
 
   .grid--imagegalleryinline {
