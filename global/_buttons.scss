@@ -465,3 +465,20 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
       }
   }
 }
+
+
+/*===========================================================
+5229 Subscription from button - disabled attribute styling
+===========================================================*/
+.icmform .btn[disabled]:hover,
+.icmform .btn[disabled]:focus:hover
+.icmform .btn[disabled]:focus,
+.icmform button[disabled]:focus{
+    background-color: $green;
+    text-decoration: none;
+    color: $white;
+  }
+
+  .icmform button[disabled]:focus{
+    box-shadow: none;
+  }

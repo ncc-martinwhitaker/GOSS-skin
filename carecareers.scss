@@ -1063,3 +1063,21 @@ Footer - copyright - 4176
     //outline: 2px solid $black;
     box-shadow: 0 -2px $focus-color, 0 4px $black;
   }
+
+
+  /*===========================================================
+5229 Subscription from button - disabled attribute styling
+===========================================================*/
+.icmform .btn[disabled]:hover,
+.icmform .btn[disabled]:focus:hover
+.icmform .btn[disabled]:focus{
+    background-color: $carecareers_green;
+    text-decoration: none;
+    color: $carecareers_dark-green;
+  }
+
+  .icmform button[disabled]:focus{
+    background-color: $carecareers_green;
+    color: $carecareers_dark-green;
+    box-shadow: none;
+  }
