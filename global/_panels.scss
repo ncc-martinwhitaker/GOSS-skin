@@ -1248,6 +1248,7 @@ h2.a-panel__title {
 // @media (max-width: 1000px)
 @include mq(lg, max) {
   
+  /* 4899*/
   .a-panel.a-panel--pt.a-panel--list:not(.a-panel--hasbackground, .a-panel--backdrop-black) .container {
     padding: 0px;
 
@@ -2891,19 +2892,53 @@ h4.stage-link__title  {
 ======================================================================================*/
 @include mq(lg, max) {
   
-  //Parallax panels - background image
+
+
+ 
+  //Parallax/List panel
+  /*.a-panel.a-panel--pt.a-panel--parallax.a-panel--list {
+    .a-panel__content .grid--feature .grid__cellwrap {
+      padding: 10px;
+    }
+  }*/
+
   .a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground {
-    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  //Parallax panels - all panels  
+  .a-panel.a-panel--pt.a-panel--parallax, .a-panel.a-panel--pt.a-panel--parallax.a-panel--list {
+
+  //.a-panel--pt 
+  .grid--parallax {
+    width: auto;
+    margin: 0px;
+  }
+    /*.grid--parallax {
+      width: auto;
+      margin: 0px;
+    }
     .a-panel__content {
       padding: 0px;
-      .a-panel__title {
+      .a-panel__title { 
         padding: 40px 20px 0px 20px;
       }
+    }*/
+  
+    .a-panel__content .grid--feature .grid__cellwrap {
+      padding: 0px;
+    }
+    
+    //padding: 0px;
+    .fa-block {
+      margin: 10px 0px;
     }
   }
-  .a-panel--pt .grid--parallax {
+
+  /*.a-panel--pt .grid--parallax {
     width: 100%;
-  }
+  }*/
 
   //Stage - no background image 
   .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
@@ -2918,9 +2953,23 @@ h4.stage-link__title  {
     padding: 0px;
   }
 
-  //List panel
-  .a-panel.a-panel--pt.a-panel--list .a-panel__content {
-    padding: 0px;
+  //List panels
+  /*.a-panel--list, .a-panel--pt.a-panel--list {
+    padding: 16px 20px;
+  }*/
+  .a-panel.a-panel--pt.a-panel--list {
+    padding: 16px 20px;
+    &:not(.a-panel--hasbackground) .a-panel__content {
+      padding: 0px;
+    }
+
+    &.a-panel--hasbackground {
+      .grid {
+        width: auto;
+        margin: 0px;
+      }
+    }
+
   }
   .a-panel.a-panel--pt .a-panel__content .a-panel__list {
     margin: 0px;
@@ -2937,6 +2986,11 @@ h4.stage-link__title  {
     .a-panel__content {
       padding: 10px;
     }
+  }
+
+  //Blog panels
+  .a-panel--blog .container {
+    padding: 0px;
   }
 
   // Aside container
