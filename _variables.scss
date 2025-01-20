@@ -56,6 +56,25 @@ $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
 $string2: str-replace($string, ' ', '%20');
 $info-secondary-icon: url($string2);
 
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%231F78C7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-show-blue: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-show-black: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%231F78C7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-hide-blue: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-hide-black: url($string2);
+
+
+   
+
 /* OLD CRUMBS 
 $breadcrumb-chevron-gray: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='gray'/%3E%3C/svg%3E");
 $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");

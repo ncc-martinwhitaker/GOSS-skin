@@ -157,3 +157,88 @@ button.btn--disclosure-toggle {
     text-decoration: underline;
   }
 }
+
+/*========================================================
+5168 Disclosure styling in forms - Forms global styling
+========================================================*/
+.icmverticalaccordion--container{
+  border: none;
+}
+
+
+.icmform .icmhideborder .icmlegend,
+.icmform div.icmverticalaccordion__heading{
+  border-bottom: 1px solid $grey-3;
+}
+
+.icmform .icmhideborder .icmlegend:focus,
+.icmform div.icmverticalaccordion__heading:focus{
+  border: solid $focus-color 3px;
+  color: $black;
+  outline: solid $black 3px;
+  background: none;
+}
+
+.icmform .icmhideborder .icmlegend:hover,
+.icmform div.icmverticalaccordion__heading:hover{
+  background: $grey-5;
+  text-decoration: underline;
+}
+
+.icmform .icmhideborder .icmlegend:focus:hover,
+.icmform div.icmverticalaccordion__heading:focus:hover{
+  border: solid $focus-color 3px;
+  color: $black;
+  outline: solid $black 3px;
+  background: $grey-5;
+  text-decoration: underline;
+}
+
+//Show
+.icmverticalaccordion__heading:after{
+  content: "Show";
+  font-weight: 700;
+  background-color: transparent;
+  background-image: $disclosure-show-blue;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 18px 18px;
+  display: inline-block;
+  padding-right: 28px;
+  color: $link-color;
+}
+
+.icmverticalaccordion__heading:focus:after{
+  background-color: $focus-color;
+  background-image: $disclosure-show-black;
+  color: $black;
+  border-bottom: 3px solid $black;
+}
+
+.icmverticalaccordion__heading:focus:hover:after{
+  background-color: $focus-color;
+  color: $black;
+  border-bottom: 3px solid $black;
+}
+
+//Hide
+.icmverticalaccordion--open.icmverticalaccordion__heading:after{
+ content: "Hide";
+ background-image: $disclosure-hide-blue;
+ background-repeat: no-repeat;
+ transform: none;
+}
+
+.icmverticalaccordion--open.icmverticalaccordion__heading:focus:after{
+  background-color: $focus-color;
+  background-image: $disclosure-hide-black;
+  color: $black;
+  border-bottom: 3px solid $black;
+
+}
+
+.icmverticalaccordion--open.icmverticalaccordion__heading:focus:hover:after{
+  background-color: $focus-color;
+  color: $black;
+  border-bottom: 3px solid $black;
+}
