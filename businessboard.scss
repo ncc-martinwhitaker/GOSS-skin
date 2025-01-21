@@ -169,3 +169,10 @@ footer.footer {
 .gi-disclosure--body .gi-disclosure__toggle:focus{
     background-color: $background-color;
 }
+
+@media (hover:none) {
+    .gi-disclosure__heading{
+        color: inherit;
+        background-color: transparent;
+    }    
+}
