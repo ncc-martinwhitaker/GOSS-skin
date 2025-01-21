@@ -240,11 +240,13 @@ li.gi-carousel__slide {
 .a-body__image .gi-responsiveimage__image:focus,
 .imagegalleryinline__button:focus,
 .n-stage__link--logo:focus {
-    outline: 3px solid $black;
-    border: 3px solid $focus-color;
+    box-shadow: 0 0 0 5px $black;
+    outline: 3px solid $focus-color;
 }
 
 .n-stage__link--logo:focus{
+    outline: 3px solid $black;
+    border: 3px solid $focus-color;
     background: none;
     margin-bottom: 5px;
 }
