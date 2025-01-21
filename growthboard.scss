@@ -461,6 +461,7 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   .link-card__wrapper > p {
     &::after {
       background: $website-icon;
+      background-repeat: no-repeat;
     }
   }
 }
