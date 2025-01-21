@@ -406,22 +406,25 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
     margin-bottom: 0px;
   }
 
-  p > .a-body__link.a-body__link--btn-primary-std {
-    margin-bottom: 0px;
-    background-color: $link-color;
-    border-radius: 40px;
-    &:hover {
-      background-color: $link-color-darken;
-    }
-    &:focus {
-      background-color: $focus-color;
-    }
-  }
+  // obsolete since 5231
+  // p > .a-body__link.a-body__link--btn-primary-std {
+  //   margin-bottom: 0px;
+  //   background-color: $link-color;
+  //   border-radius: 40px;
+  //   &:hover {
+  //     background-color: $link-color-darken;
+  //   }
+  //   &:focus {
+  //     background-color: $focus-color;
+  //   }
+  // }
 
-  .email-card__wrapper {
+  .email-card__wrapper,
+  .link-card__wrapper {
     width: 50%;
 
-    .email-card__link-wrapper a {
+    .email-card__link-wrapper a,
+    .link-card__link-wrapper a {
       color: $grey-2;
 
       &:hover {
@@ -454,7 +457,15 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
       }
     }
   }
+
+  .link-card__wrapper > p {
+    &::after {
+      background: $website-icon;
+    }
+  }
 }
+
+
 
 @include mq(md, max) {
   .a-panel--email-card .a-panel__body.a-body.a-body--panel {
@@ -465,11 +476,13 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
       width: 100%;
     }
 
-    > p > .a-body__link.a-body__link--btn-primary-std {
-      width: 100%;
-    }
+    // obsolete since 5231
+    // > p > .a-body__link.a-body__link--btn-primary-std {
+    //   width: 100%;
+    // }
 
-    .email-card__wrapper {
+    .email-card__wrapper,
+    .link-card__wrapper {
       width: 100%;
     }
   }
