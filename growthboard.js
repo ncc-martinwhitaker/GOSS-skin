@@ -35,6 +35,25 @@ $(document).ready(function() {
         linkWrapper.className = "email-card__link-wrapper";
         emailLink.parentNode.insertBefore(linkWrapper, emailLink);
         linkWrapper.appendChild(emailLink);
+
+        
+        // 5231 - applying the same functionality to the website link
+
+        // select FIRST <p> element
+        var linkContainer = document.querySelector(".a-panel--email-card .a-panel__body p:nth-of-type(1)");
+
+        // wrap <p> element
+        var pWrapperLink = document.createElement("div");
+        pWrapperLink.className = "link-card__wrapper";
+        linkContainer.parentNode.insertBefore(pWrapperLink, linkContainer);
+        pWrapperLink.appendChild(linkContainer);
+
+
+        var webLink = linkContainer.querySelector("a");
+        var linkWrapper = document.createElement("div");
+        linkWrapper.className = "link-card__link-wrapper";
+        webLink.parentNode.insertBefore(linkWrapper, webLink);
+        linkWrapper.appendChild(webLink);
 	}
 
 

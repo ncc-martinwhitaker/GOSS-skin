@@ -301,4 +301,8 @@ outline: 3px solid $focus-color;
 background: none;
 color: none;
 }
+
+.gi-sitelogo--header .gi-sitelogo__link:focus .gi-sitelogo__image{
+  background: none;
+}
 /*===================END===============*/
