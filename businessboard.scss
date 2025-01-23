@@ -166,6 +166,13 @@ footer.footer {
 5188 Background for disclosure Business Board
 =============================================*/
 .gi-disclosure--body .gi-disclosure__toggle,
+.gi-disclosure--body .gi-disclosure__toggle:focus:hover{
 .gi-disclosure--body .gi-disclosure__toggle:focus{
     background-color: $background-color;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.gi-disclosure--body .gi-disclosure__toggle:hover{
+    background-color: $grey-5;
+    -webkit-tap-highlight-color: transparent;
 }
