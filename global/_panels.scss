@@ -1237,6 +1237,21 @@ Metadata modifiers include:
       }
     }
   }
+
+/*======================================================================================
+4959 Parallax panel - background image skips/resizes when scrolling on mobile (Android)
+======================================================================================*/
+
+@media (max-width: 768px) {
+  .a-panel--pt.a-panel--hasbackground {
+    background-attachment: scroll; 
+  }
+}
+
+/* 622 - MM to turn off background fixed for parallax panels */
+.a-panel--pt.a-panel--parallax.a-panel--scroll-background {
+  background-attachment: scroll;
+}
   
   
   /******************************************************************************
