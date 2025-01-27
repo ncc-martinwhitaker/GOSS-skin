@@ -107,7 +107,7 @@ Metadata modifiers include:
     flex-wrap: wrap;
   }
   
-  // related assets (not a panel?)
+  // related assets (not a panel?) - TODO move related items to _aside.scss file
   .relateditem  {
     padding: 8px 20px;
   
@@ -116,6 +116,20 @@ Metadata modifiers include:
     }
     .panel__headingtext {
       padding-bottom: 0;
+    }
+  }
+
+  @include mq(lg, max) {
+
+    //4899 Panel widths on mobile - Related items - TODO move related items to _aside.scss file
+    .relateditem {
+      padding: 0px;
+      .container {
+        padding: 0px;
+      }
+      .panel--relmedia {
+        padding: 0px 20px;
+      }
     }
   }
   
@@ -451,6 +465,14 @@ Metadata modifiers include:
   @include mq(xs, max) {
     .a-panel__content {
       padding: 30px 10px;
+    }
+  }
+
+
+  @include mq(lg, max) {
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--pt.a-panel--default .container.container--carousel {
+      padding: 0px;
     }
   }
   
@@ -1162,7 +1184,31 @@ Metadata modifiers include:
         height: 150px;
       }
     }
-  
+
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--pt.a-panel--parallax, 
+    .a-panel.a-panel--pt.a-panel--parallax.a-panel--list {
+
+      .grid--parallax {
+        width: auto;
+        margin: 0px;
+      }
+    
+      .a-panel__content .grid--feature .grid__cellwrap {
+        padding: 0px;
+      }
+
+      .fa-block {
+        margin: 10px 0px;
+      }
+    }
+
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--pt.a-panel--parallax.a-panel--hasbackground {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
     // MM - 5-col-panel
     .a-panel--5-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
       width: 100%;
@@ -1176,15 +1222,16 @@ Metadata modifiers include:
     // MM - 2-col-panel
     .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
       width: 100%;
-    }
+    }  
   }
+  
   
   
   
   
   // contention between 1000px/lg and 600px/sm - which should it be?
   @include mq(sm, max) {
-    
+
     .a-panel.a-panel--pt.a-panel--list:not(.a-panel--hasbackground, .a-panel--backdrop-black) .container {
       padding: 0px;
   
@@ -1202,7 +1249,7 @@ Metadata modifiers include:
     }
   
     .a-panel.a-panel--pt.a-panel--panel .container, 
-    .a-panel.a-panel--pt.a-panel--default .container {
+    .a-panel.a-panel--pt.a-panel--default .container:not(:has(.container--carousel)) {
       padding: 0px;
     }
   
@@ -1509,8 +1556,38 @@ Metadata modifiers include:
         }
       }
     }
+
+    /* 4899 Panel widths on mobile */
+    .grid--1col .item .item__sublinks {
+      padding-left: 0px;
+    }
   }
-  
+
+  @include mq(lg, max) {
+    
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--pt.a-panel--list {
+      padding: 16px 20px;
+      &:not(.a-panel--hasbackground) .a-panel__content {
+        padding: 0px;
+      }
+
+      &.a-panel--hasbackground {
+        .grid {
+          width: auto;
+          margin: 0px;
+        }
+      }
+
+    }
+
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--pt .a-panel__content .a-panel__list {
+      margin: 0px;
+    }
+  }
+    
+
   /******************************************************************************
   
   - Feature -
@@ -1632,8 +1709,20 @@ Metadata modifiers include:
     .a-panel--feature .item.item--article:not(:has(.item__imagecontainer)) {
       padding-top: 0;
     }
-  }
   
+    /* 4899 Panel widths on mobile */
+    .a-panel.a-panel--feature {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    /* 4899 Panel widths on mobile */
+    .a-panel--dynamic.a-panel--feature {
+      .a-panel__content {
+        padding: 10px;
+      }
+    }
+  }
   /******************************************************************************
   
   - Stage -
@@ -2010,6 +2099,22 @@ Metadata modifiers include:
       }
     }
   }
+
+  @include mq(lg, max) {
+    
+    /*4899 Panel widths on mobile - Stage - no background image */
+    .a-panel.a-panel--pt.a-panel--render.a-panel--stage {
+      padding: 0px;
+      .container {
+        padding: 0px;
+      }
+    }
+
+    /*4899 Panel widths on mobile - Stage - background image */
+    .a-panel.a-panel--pt.a-panel--render.a-panel--stage.a-panel--hasbackground {
+      padding: 0px;
+    }
+  }
   
   @include mq(xs, max) {
   
@@ -2051,8 +2156,15 @@ Metadata modifiers include:
         padding-left: 0px;
       }
     }
+
+    /* 4899 Panel widths on mobile */
+    .a-panel--stage .grid__cell.grid__cell--cols1 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
-  
+
+ 
   /******************************************************************************
   
   - Blog -
@@ -2088,6 +2200,14 @@ Metadata modifiers include:
   // MM - display-image-rounded - 4718
   .a-panel--display-image-rounded.a-panel--blog .a-panel__content .gi-responsiveimage__image {
     border-radius: $rounded-corner-border-radius;
+  }
+
+  @include mq(lg, max) {
+    
+    /* 4899 Panel widths on mobile */
+    .a-panel--blog .container {
+      padding: 0px;
+    }
   }
   
   /******************************************************************************
@@ -2327,6 +2447,14 @@ Metadata modifiers include:
     
     > .item__imagecontainer {
       display: block;
+    }
+  }
+
+  @include mq(lg, max) {
+
+    /*4899 Panel widths on mobile - Carousel/peeky swiper remove left padding from first item */
+    .a-panel--peeky-swiper .gi-carousel .gi-carousel__slide .a-panel.a-panel--pt.a-panel--render .container:first-child {
+      padding-left: 0px;
     }
   }
   
@@ -2731,4 +2859,3 @@ Metadata modifiers include:
       left: 0px;
     }
   }
-  
