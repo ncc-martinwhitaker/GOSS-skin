@@ -196,3 +196,11 @@ body.body--no-aside, body.template--default.body--no-aside {
 .a-body{
   margin-top: 20px;
 }
+
+@include mq(lg, max) {
+
+  /* 4899 Panel widths on mobile - Aside container */
+  .container.container--fullwidth aside.aside .relateditem {
+    padding: 0 20px;
+  }
+}
