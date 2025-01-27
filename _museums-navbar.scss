@@ -367,34 +367,35 @@ header {
   
 //Event Search
 a[href$="Ancient-House-Museum-of-Thetford-Life"].event-instances__link.event-instances__link--location {
-	color: #4C7285;
+	color: $museum-primary-color-ancient-house;
 }
 a[href$="Cromer-Museum"].event-instances__link.event-instances__link--location {
-	color: #0070A5;
+	color: $museum-primary-color-cromer-museum;
 }
 a[href$="Elizabethan-House---Great-Yarmouth"].event-instances__link.event-instances__link--location {
-	color: #CF171D;
+	color: $museum-primary-color-elizabethan-house-greatyarmouth;
 }
 a[href$="Gressenhall-Farm-and-Workhouse---Dereham"].event-instances__link.event-instances__link--location {
-	color: #597730;
+	color: $museum-primary-color-gressenhall-dereham;
 }
+/* set to this brown colour to differentiate on the museums page - as it uses the same colour as Gressenhall on the actual site */
 a[href$="Lynn-Museum---Kings-Lynn"].event-instances__link.event-instances__link--location {
 	color: #80623C;
 }
 a[href$="Museum-of-Norwich-at-the-Bridewell"].event-instances__link.event-instances__link--location {
-	color: #CB4363;
+	color: $museum-primary-color-museum-of-norwich;
 }
 a[href$="Norwich-Castle-Museum-and-Art-Gallery"].event-instances__link.event-instances__link--location {
-	color: #42145F;
+	color: $museum-primary-color-norwich-castle;
 }
 a[href$="Strangers-Hall---Norwich"].event-instances__link.event-instances__link--location {
-	color: #B32017;
+	color: $museum-primary-color-strangers-hall;
 }
 a[href$="The-Tolhouse-Gaol---Great-Yarmouth"].event-instances__link.event-instances__link--location {
-	color: #7E6B71;
+	color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 }
 a[href$="Time-and-Tide-Museum-of-Great-Yarmouth-Life"].event-instances__link.event-instances__link--location {
-	color: #161E69;
+	color: $museum-primary-color-time-and-tide-greatyarmouth;
 }
 
 
@@ -411,34 +412,35 @@ Should this belong in museums.scss?
     
       .fa-block__details {
         &:has(a[href$="Norwich-Castle-Museum--Art-Gallery"]) {
-          background-color: #42145F;
+          background-color: $museum-primary-color-norwich-castle;
         }
         &:has(a[href$="Gressenhall-Farm-and-Workhouse"]) {
-          background-color: #597730;
+          background-color: $museum-primary-color-gressenhall-dereham;
         }
         &:has(a[href$="Time-and-Tide-Great-Yarmouth"]) {
-          background-color: #161E69;
+          background-color: $museum-primary-color-time-and-tide-greatyarmouth;
         }
         &:has(a[href$="Museum-of-Norwich"]) {
-          background-color: #CB4363;
+          background-color: $museum-primary-color-museum-of-norwich;
         }
         &:has(a[href$="Elizabethan-House-Great-Yarmouth"]) {
-          background-color: #CF171D;
+          background-color: $museum-primary-color-elizabethan-house-greatyarmouth;
         }
         &:has(a[href$="Strangers-Hall-Norwich"]) {
-          background-color: #B32017;
+          background-color: $museum-primary-color-strangers-hall;
         }
+        /* set to this brown colour to differentiate on the museums page - as it uses the same colour as Gressenhall on the actual site */
         &:has(a[href$="Lynn-Museum"]) {
           background-color: #80623C;
         }
         &:has(a[href$="Cromer-Museum"]) {
-          background-color: #0070A5;
+          background-color: $museum-primary-color-cromer-museum;
         }
         &:has(a[href$="Tolhouse-Gaol-Great-Yarmouth"]) {
-          background-color: #7E6B71;
+          background-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
         }
         &:has(a[href$="Ancient-House-Thetford"]) {
-          background-color: #4C7285;
+          background-color: $museum-primary-color-ancient-house;
         }
       }
   
