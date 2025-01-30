@@ -782,10 +782,22 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h
 
 // partners-panel MM
 
+.a-panel.a-panel--pt.a-panel--partners-panel {
+  .a-panel__content h2.a-panel__title {
+    margin-bottom: 0px;
+  }
+
+  .a-body__image--inline {
+    padding: 0px;
+  }
+}
+
 .a-panel.a-panel--pt.a-panel--partners-panel .a-panel__body.a-body.a-body--panel {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  padding-bottom: 20px;
 }
 
 @include mq(xs, max) {
