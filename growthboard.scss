@@ -822,3 +822,25 @@ footer.footer {
     margin: 20px 0px;   
   }
 }
+
+/*==================================================
+5320 Styling search page for GNGB Projects showcase
+==================================================*/
+button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
+  background-color: $purple-2;
+}
+
+.template--search .card.card--searchresult {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 7px;
+  border-radius: 8px;
+  width: calc(100% - 10px);
+  align-items: flex-start;
+}
+
+.template--search .card__imagecontainer,
+.card--searchresult .card__imagecontainer {
+  display: none;
+}
+
