@@ -11,6 +11,7 @@
     -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     text-underline-offset: .1578em;
+    -webkit-tap-highlight-color: transparent; //5331
 }
       
 %a-link-hover {
@@ -24,6 +25,7 @@
     -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     text-underline-offset: .1578em;
+    -webkit-tap-highlight-color: transparent; //5331 
 }
       
 %a-link-underline-hover {
@@ -36,6 +38,7 @@
     outline: 3px solid rgba(0,0,0,0);
     box-shadow: 0 -2px $focus-color, 0 4px $black;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent; //5331 
 }
 
 %a-link-focus {
