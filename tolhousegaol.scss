@@ -1,14 +1,14 @@
 @import "global/functions";
 @import "variables";
 
-$header-color: #7E6B71;
+$header-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 $header-text-color: #fff;
-$header-utilitymenu-color: #7E6B71;
+$header-utilitymenu-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 
 $burger-menu-color: #fff;
 
 $breadcrumb-color: #f6f6f6;
-$breadcrumb-text-color: #7E6B71;
+$breadcrumb-text-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 $breadcrumb-border-color: #f6f6f6;
 
 $string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='%237E6B71'/%3E%3C/g%3E%3C/svg%3E";
@@ -16,17 +16,19 @@ $string2: str-replace($string, ' ', '%20');
 
 $breadcrumb-chevron: url($string2);
 
-
-$button-search-background-color: #7E6B71;
+$button-search-background-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 $search-border-color: #FFFFFF;
 
-$button-panel-color: #7E6B71;
+$button-primary-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
+$button-primary-color-hov: darken( $button-primary-color, 20% );
+
+$button-panel-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 $button-dark-panel-color: $button-panel-color;
 
-$footer-background-color: #7E6B71;
+$footer-background-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
 $footer-color: #fff;
-$footer-border-color: #7E6B71;
- 
+$footer-border-color: $museum-primary-color-tolhouse-gaol-greatyarmouth;
+
 @import 
 "global-import";
 
