@@ -1126,3 +1126,11 @@ a.a-body__link--btn-inverted-secondary:hover,
 .btn--sort:hover {
     text-decoration: underline;
 }
+
+/*=========================================================
+5316 Forms disclosure styling - long wording on mobile 
+=========================================================*/
+.icmlegend span{
+    display: block;
+    max-width: calc(100% - 75px);
+}
