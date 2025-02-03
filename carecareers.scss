@@ -1068,12 +1068,14 @@ Footer - copyright - 4176
   /*===========================================================
 5229 Subscription from button - disabled attribute styling
 ===========================================================*/
+.icmform .btn[disabled],
 .icmform .btn[disabled]:hover,
 .icmform .btn[disabled]:focus:hover
 .icmform .btn[disabled]:focus{
     background-color: $carecareers_green;
     text-decoration: none;
     color: $carecareers_dark-green;
+    opacity: 0.4;
   }
 
   .icmform button[disabled]:focus{
