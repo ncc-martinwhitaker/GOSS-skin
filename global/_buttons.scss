@@ -468,7 +468,7 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
 
 
 /*===========================================================
-5229 Subscription from button - disabled attribute styling
+5229 Subscription from button - disabled attribute styling 
 ===========================================================*/
 .icmform .btn[disabled]:hover,
 .icmform .btn[disabled]:focus:hover
@@ -482,3 +482,49 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   .icmform button[disabled]:focus{
     box-shadow: none;
   }
+
+//5137 Search - sorting drop down styling
+.btn--sort{
+  padding: 5px 24px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.btn:focus{
+  box-shadow: none;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary,
+a.a-body__link--btn-inverted-secondary,
+.btn--sort {
+  color: $button-secondary-color-hov;
+  background-color: $button-secondary-color;
+  border: 2px solid $button-secondary-color-hov;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary:hover,
+a.a-body__link--btn-inverted-secondary:hover,
+.btn--sort:hover {
+  cursor: pointer;
+  color: $button-secondary-color;
+  background-color: $button-secondary-color-hov;
+  border: 2px solid $button-secondary-color;
+}
+
+a.a-body__link.a-body__link--btn-inverted-secondary:focus,
+a.a-body__link--btn-inverted-secondary:focus
+.btn--sort:focus,
+.btn--sort:focus:hover {
+  color: $black;
+  background-color: $focus-color;
+  border-color: $focus-color;
+  outline: none;
+  box-shadow: 0 2px 0 $black;
+  transition: none;
+  text-decoration: none;
+}
+a.a-body__link.a-body__link--btn-inverted-secondary:hover,
+a.a-body__link--btn-inverted-secondary:hover,
+.btn--sort:hover {
+  text-decoration: underline;
+}
