@@ -425,3 +425,8 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
     background-color: $white;
     text-decoration: none;
 }
+
+//5220 Forms CSS issues: text and headings
+.card--forms .nvp__value{
+    word-wrap: break-word;
+}
