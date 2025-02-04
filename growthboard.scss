@@ -500,8 +500,15 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   margin: 10px 0px;
 }
 
-h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h3 .gi-disclosure__toggle-text {
+.gi-disclosure__heading.h3 .gi-disclosure__toggle-text {
   font-size: 1.5rem;
+}
+
+/*===============================================
+5339 Meeting page: accordions reduce text size 
+===============================================*/
+h3.gi-disclosure__heading .gi-disclosure__toggle-text{
+  font-size: 1.3rem;
 }
 
 .gi-disclosure--body .gi-disclosure__toggle {
@@ -842,5 +849,4 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
 .template--search .card__imagecontainer,
 .card--searchresult .card__imagecontainer {
   display: none;
-}
-
+} 
