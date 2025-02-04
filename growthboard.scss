@@ -844,3 +844,11 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   display: none;
 }
 
+/*==================================================
+5336 GNGB Homepage: center the header text
+==================================================*/
+.maincontent .a-heading,
+.maincontent .a-intro{
+  max-width: none;
+  text-align: center;
+}
