@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "freedomofinformation",
       "informationshare",
       "policerequest",
-      "subjectaccessrequest"
+      "subjectaccessrequest",
+      "clienthardshiprequest" //5354 CHS case management - Prevent case closure
     ];
   
     function toggleButtonVisibility() {
