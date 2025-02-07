@@ -70,14 +70,28 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
     border: none; //removes left, top and right border
     border-bottom: 1px solid #CCCCCC;
   }
-
+  //5352 GNGB - document search page images
   .card__imagecontainer {
     padding: 0px;
+    max-height: 115px;
   }
 
-  .card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
-    width: 60px;
+  /*.card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
+    width: 60px; 
+  }*/  
+  
+  .card__content{
+    padding: 0;
   }
+
+  .card--searchresult .gi-responsiveimage .gi-responsiveimage__image{
+    max-width: none;
+  }
+
+  .card__summary{
+    padding: 0 20px;
+  }
+  //End
 }
 
 .item.item--article .item__title a {
@@ -839,8 +853,7 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   align-items: flex-start;
 }
 
-.template--search .card__imagecontainer,
+/*.template--search .card__imagecontainer,
 .card--searchresult .card__imagecontainer {
   display: none;
-}
-
+}*/ 
