@@ -94,3 +94,42 @@ $(document).ready(function() {
 	}
 
 });
+
+/*===============================================
+5340 Publication page: Move header to the panel
+===============================================*/
+function adjustHeading() { 
+    // Find the h1 heading that needs to be moved
+    const h1Title = document.querySelector('.body--full-width .maincontent .a-heading .a-heading__title');
+
+    // Check if the h1 heading is found
+    if (!h1Title) return;
+
+    // Find the container where the header should be moved
+    const panelContent = document.querySelector('.a-panel--pt.a-panel--hasbackground.a-panel--no-backdrop .a-panel__content');
+
+    // Check if the container is found
+    if (!panelContent) return;
+
+    // Find the specific h2 element that needs to be hidden
+    const h2Title = document.querySelector('.a-panel__title[aria-label="Details of the plan"]');
+
+    // Hide the specific h2 if found
+    if (h2Title) {
+        h2Title.style.display = 'none';  // Hide visually
+        h2Title.hidden = true;           // Ensure it is removed from layout
+        h2Title.setAttribute('aria-hidden', 'true'); // Make it inaccessible to screen readers
+    }
+
+    // Remove existing h1 elements in .a-panel__content to avoid duplicates
+    panelContent.querySelectorAll('.a-heading__title').forEach(el => el.remove());
+
+    // Clone the h1 heading
+    const h1Clone = h1Title.cloneNode(true);
+
+    // Add the cloned h1 before hidden h2s
+    panelContent.prepend(h1Clone);
+}
+
+// Execute the function after the page loads
+document.addEventListener('DOMContentLoaded', adjustHeading);

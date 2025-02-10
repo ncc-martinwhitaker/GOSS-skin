@@ -931,6 +931,17 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
 }
 
 /*==================================================
+5340 Publication page: Move header to the panel
+==================================================*/
+.body--full-width .maincontent .a-heading{
+  display: none;
+}
+
+.a-panel--pt.a-panel--hasbackground.a-panel--no-backdrop .a-panel__content {
+  .a-heading__title {
+    margin: 20px 0;
+  }
+=======
 5336 GNGB Homepage: center the header text
 ==================================================*/
 .maincontent .a-heading,
