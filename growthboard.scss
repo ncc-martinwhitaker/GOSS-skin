@@ -293,7 +293,7 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   
 // will be new MM:
 
-.a-panel.a-panel--pt.a-panel--panel-left .a-panel__content {
+/*.a-panel.a-panel--pt.a-panel--panel-left .a-panel__content {
   margin-right: auto;
 
   @media (min-width: 841px) {
@@ -308,8 +308,34 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
     margin-right: 20px;
   }
 }
-  
-  
+  */
+/*===========================================================
+5337 GNGB Homepage: move panel (MM: left and right options)
+============================================================*/
+  .a-panel--panelbox-leftside .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+  }
+
+  .a-panel--panelbox-rightside .container{ 
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .a-panel--panelbox-rightside .container, 
+  .a-panel--panelbox-leftside .container {
+    margin: 0 auto;
+    //margin: initial;  
+  }
+
+
+  .a-panel--panelbox-leftside .container .a-panel__content,   .a-panel--panelbox-rightside .container .a-panel__content {
+    margin: unset;
+  }
+     
   // might be a new MM:
   
 .a-panel.a-panel--centred-link {
@@ -500,8 +526,15 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   margin: 10px 0px;
 }
 
-h3.gi-disclosure__heading .gi-disclosure__toggle-text, .gi-disclosure__heading.h3 .gi-disclosure__toggle-text {
+.gi-disclosure__heading.h3 .gi-disclosure__toggle-text {
   font-size: 1.5rem;
+}
+
+/*===============================================
+5339 Meeting page: accordions reduce text size 
+===============================================*/
+h3.gi-disclosure__heading .gi-disclosure__toggle-text{
+  font-size: 1.3rem;
 }
 
 .gi-disclosure--body .gi-disclosure__toggle {
@@ -842,6 +875,59 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
 .template--search .card__imagecontainer,
 .card--searchresult .card__imagecontainer {
   display: none;
+
+/*========================================
+5338 Meeting page: reduce text size
+========================================*/
+.a-panel.a-panel--pt.a-panel--list.a-panel--icon-panel.a-panel--mid-text {
+
+  .grid-cell {
+    padding: 0px 10px 20px 10px;
+  }
+
+  .grid__cellwrap>.item {
+    border: none;
+    box-shadow: none;
+
+    .item__title, .item__title a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $black;
+
+      &:focus {
+        color: $black;
+      }
+
+      &:hover {
+        text-decoration-thickness: max(2.25px, 0.14rem, 0.09em);
+      }
+    }
+
+    .item__imagecontainer {
+      padding: 0px 0px 0px 10px;
+    }
+    .item__content {
+      padding: 20px;
+      display: block;
+    }
+    .item.item--article .item__title {
+      margin: 15px 0px 10px 0px;
+      padding: 10px;
+    }
+
+    .item__body {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: $grey-2;
+    }
+
+    .gi-responsiveimage__imagewrapper {
+      display: flex; 
+    }
+    .gi-responsiveimage__image {
+      object-fit: contain;
+    }
+  }
 }
 
 /*==================================================
@@ -855,4 +941,11 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   .a-heading__title {
     margin: 20px 0;
   }
+=======
+5336 GNGB Homepage: center the header text
+==================================================*/
+.maincontent .a-heading,
+.maincontent .a-intro{
+  max-width: none;
+  text-align: center;
 }
