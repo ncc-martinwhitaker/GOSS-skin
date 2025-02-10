@@ -95,6 +95,36 @@ $(document).ready(function() {
 
 });
 
+/*=============================================
+5352 GNGB - document search page images
+=============================================*/
+// Function to reorder elements within each card
+function reorderCardElements() {
+    document.querySelectorAll('.template--search .card.card--searchresult').forEach(card => {
+        // Select the elements
+        const imageContainer = card.querySelector('.template--search .card__imagecontainer');
+        const heading = card.querySelector('.card__heading');
+        const summary = card.querySelector('.template--search .card__summary');
+        
+        // Apply border-radius to the top corners of the image
+        if (imageContainer) {
+            imageContainer.style.borderTopLeftRadius = '8px';
+            imageContainer.style.borderTopRightRadius = '8px';
+            imageContainer.style.overflow = 'hidden'; // Ensure rounded corners apply properly
+        }
+        
+        // Append elements in the desired order
+        if (imageContainer && heading && summary) {
+            card.appendChild(imageContainer);
+            card.appendChild(heading);
+            card.appendChild(summary);
+        }
+    });
+}
+
+// Run the function after the DOM has loaded
+document.addEventListener('DOMContentLoaded', reorderCardElements);
+
 /*===============================================
 5340 Publication page: Move header to the panel
 ===============================================*/
@@ -133,3 +163,4 @@ function adjustHeading() {
 
 // Execute the function after the page loads
 document.addEventListener('DOMContentLoaded', adjustHeading);
+
