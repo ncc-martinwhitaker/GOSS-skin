@@ -131,7 +131,7 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
 }
   
 
-// borderless list icon cards ("big text" MM)
+// borderless list icon cards ("big text" MM) 
 .a-panel.a-panel--pt.a-panel--list.a-panel--icon-panel.a-panel--big-text {
 
   .grid-cell {
@@ -143,10 +143,10 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
     box-shadow: none;
 
     .item__title, .item__title a {
-      font-size: 1.5rem;//5338 Meeting page: reduce text size
+      font-size: 2.5rem;
       font-weight: 700;
       color: $black;
-      min-height: 65px;//5338 Meeting page: reduce text size
+      min-height: 65px;
 
       &:focus {
         color: $black;
