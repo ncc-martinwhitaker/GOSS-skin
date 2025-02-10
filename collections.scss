@@ -1,9 +1,9 @@
 @import "global/functions";
 @import "variables";
 
-$header-color: #111111;
+$header-color: $museum-primary-color-collections;
 $header-text-color: #fff;
-$header-utilitymenu-color: #111111;
+$header-utilitymenu-color: $museum-primary-color-collections;
 
 $burger-menu-color: #fff;
 
@@ -12,17 +12,20 @@ $breadcrumb-text-color: #FFFFFF;
 $breadcrumb-border-color: #343a40;
 $breadcrumb-chevron: $breadcrumb-chevron-white;
 
-$button-search-background-color: #111111;
+$button-search-background-color: $museum-primary-color-collections;
 $search-border-color: #FFFFFF;
+
+$button-primary-color: $museum-primary-color-collections;
+$button-primary-color-hov: lighten( $button-primary-color, 20% );
 
 $button-panel-color: #212529;
 $button-dark-panel-color: #FFFFFF; 
-$button-dark-panel-text-color: #111111;
+$button-dark-panel-text-color: $museum-primary-color-collections;
 
-$footer-background-color: #111111;
+$footer-background-color: $museum-primary-color-collections;
 $footer-color: #fff;
-$footer-border-color: #111111;
- 
+$footer-border-color: $museum-primary-color-collections;
+
 @import 
 "global-import";
 
