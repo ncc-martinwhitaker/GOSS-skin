@@ -947,18 +947,18 @@ footer.footer {
 }
 
 /*==================================================
-5340 Publication page: Move header to the panel
+5340 Publication page: Move header to the panel 
 ==================================================*/
-.body--full-width .maincontent .a-heading{
+/*.body--full-width .maincontent .a-heading{
   display: none;
-}
+}*/
 
 /*==================================================
 5338 Meeting page: reduce text size 
 ==================================================*/
-gi-responsiveimage__imagewrapper{
+/*.gi-responsiveimage__imagewrapper{
   height: 50%;
-}
+}*/
 
 .a-panel--pt.a-panel--hasbackground.a-panel--no-backdrop .a-panel__content {
   .a-heading__title {
@@ -966,10 +966,12 @@ gi-responsiveimage__imagewrapper{
   }
 }
 /*==================================================
-5336 GNGB Homepage: center the header text
+5336 GNGB Homepage: center the header text  
 ==================================================*/
-.maincontent .a-heading,
-.maincontent .a-intro{
-  max-width: none;
-  text-align: center;
+.body--heading-centre .maincontent{
+   .a-heading,
+   .a-intro{
+    max-width: none;
+    text-align: center;
+  }
 }
