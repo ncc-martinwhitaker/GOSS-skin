@@ -73,12 +73,17 @@ $parner-logos: "https://growthboard.ncc1-dev.gosshosted.com/icm/mediaaccess.cfm?
   //5352 GNGB - document search page images
   .card__imagecontainer {
     padding: 0px;
-    max-height: 115px;
+    max-height: 220px; //115px; 5387 Set up max-height for Search page
+    width: 100%; 
+  }
+
+  .card--searchresult .gi-responsiveimage{
+    width: 100%;
   }
 
   /*.card--searchresult .gi-responsiveimage .gi-responsiveimage__image {
     width: 60px; 
-  }*/  
+  }*/   
   
   .card__content{
     padding: 0;
