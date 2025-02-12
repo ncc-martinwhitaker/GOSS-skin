@@ -31,6 +31,11 @@ $footer-first-column-width: 75%; //Column_P
 
 //TODO - move the styles below into their own globals files once the design has been signed off.
 
+//Typography
+.a-heading {
+    border-bottom: none;
+}
+
 //Header
 .header__utilities {
     background-color: $white;
@@ -52,4 +57,9 @@ $footer-first-column-width: 75%; //Column_P
         flex-wrap: wrap;
         justify-content: space-between;
     }
+}
+
+//Panels
+.template--list .item__title {
+    border-bottom: none;
 }
