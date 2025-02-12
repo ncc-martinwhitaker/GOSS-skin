@@ -594,7 +594,7 @@ Metadata modifiers include:
     display: inline;
   }
   
-  .a-panel--hasbackground .item__sublinks li {
+  .card--stage.card--list .item__sublinks li { //5332 - change from panel has background back to card stage as it was before refactoring
     padding: 10px 0 10px 0;
     margin: 0 0 10px 0;
     position: relative;
