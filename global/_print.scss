@@ -1,9 +1,6 @@
-/*==================================================================================================================
-624 Improve print CSS
-==================================================================================================================*/
 @media print{
     
-    //Add data and link to the printed version of the page
+    //Add data and link to the printed version of the page (5375) 
     body::before{
         content: "Printed on " attr(data-print-date) " - This information may have changed since then. \A " attr(data-print-url);
         display: block;
@@ -14,28 +11,23 @@
         white-space: pre;
     }
 
-    .print-only-video-url {
-        display: inline;
-        font-size: 12px !important;
-        color: $link-color;
-        text-decoration: underline;
-        text-underline-offset: .1578em;
+    //Site logo
+    .header{
+        display: block;
+        .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top,
+        .utilitymenu--top,
+        .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch{
+            display: none;
+        }
     }
-
-    //Site logo 
-    .gi-sitelogo .gi-sitelogo--header .gi-sitelogo__image{
-        display: block !important;
-    }
-
-    //Headings and text
-
+    
+    //Headings and text (5376) 
     h1{
         font-size: 32px !important;
         line-height: 1.4 !important;
     }
 
-    h2,.h2.a-panel__title, .a-panel__title.h2,
-    .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-dark .a-panel__title {
+    h2{
         font-size: 24px !important;
         line-height: 1.4 !important;
     }
@@ -60,187 +52,13 @@
         line-height: 1.4 !important;
     }
 
-    p, span, div, a, li, ul, ol,
-    .a-panel--pt .a-panel__summary {
+    p, span, div, a, li, ul, ol{
         font-size: 16px !important;
         line-height: 1.4 !important;        
     }
 
-    .a-panel--pt.a-panel--stage .a-panel__link,
-    .cta-link__text,
-    .a-panel__link.a-panel__link--pt,
-    .a-panel--opaque-cards-dark .a-panel__link{
-        font-size: 16px !important;
-        color: $black !important;
-    }
-
-    //Panel cards
-    .card--stage .card__heading{
-        font-size: 20px !important;
-        line-height: 1.4 !important;
-    }
-
-    .n-stage__relarticles .item__body{
-        font-size: 16px !important;
-        line-height: 1.4 !important;
-    }
-
-    p a{
-        white-space: nowrap;
-    }
-
-    p{
-        display: inline-block;
-    }
-
-    p a::after{
-        white-space: nowrap;
-    }
-
-    //Info message colour
-    p.gi-info--alert, p.gi-info--primary, p.gi-info--secondary{
-        color: $black !important;
-    }
-
-    //Displaying URLs for links
-    a[href]:not(.imagegalleryinline__link)
-    :not(.a-panel.a-panel--pt.a-panel--stage .card__actions .cta-link--stage)
-    :not(.a-body__link--cta)
-    :not(.a-body__link.a-body__link--cta)
-    :not(a.a-body__link--btn-primary-std)
-    :not(.a-body__link--btn-primary-lge)
-    :not(a.a-body__link--btn-primary-teal-std)
-    :not(a.a-body__link--btn-primary-teal-lge)
-    :not(.a-body__link--btn-secondary)
-    :not(.a-body__link--btn-inverted-secondary)
-    :not(a.a-body__link--cta)::after{
-        content: " (" attr(href) ")";
-        font-size: 12px !important;
-        color: $link-color;
-        text-decoration: underline;
-        text-underline-offset: .1578em;
-        margin-left: 5px;
-    }
-
-    //Display URLs for blockquote
-    blockquote::after{
-        content: " (" attr(cite) ")";
-        display: block !important;
-        font-size: 12px !important;
-        color: $link-color;
-        text-decoration: underline;
-        margin-top: 4px !important;
-
-    }
-
-    //CTA Links 
-   /* .a-body__link.a-body__link--cta {
-        color: $link-color;
-        text-decoration: none !important;
-        display: inline !important;
-        margin-bottom: 10px;
-        white-space: nowrap !important;
-        padding-right: 10px !important;
-        position: relative !important;
-    }
-
-    .a-body__link.a-body__link--cta::after {
-        position: absolute !important;
-        left: 100% !important;
-        top: 0 !important;
-        content: " (" attr(href) ")";
-        display: inline !important;
-        color: $link-color;
-        text-decoration: underline;
-        text-underline-offset: 0.2em !important;
-        margin-left: 8px !important;
-        white-space: nowrap !important;
-    }*/
-
-    //Discovering accordions
-    .gi-disclosure--body .gi-disclosure__toggle::after{
-        display: none;
-    }
-
-    .gi-disclosure--body{
-        border-bottom: none;
-    }
-
-    .gi-disclosure--body .gi-disclosure__toggle{
-        padding: 0;
-    }
-
-    .gi-disclosure__content{
-        display: block !important;
-        max-height: none !important;
-        overflow: visible !important;       
-    }
-    .gi-disclosure__content.gi-disclosure__content--closed{
-       visibility: visible;
-       opacity: 1;
-    }
-
-    //Images
-    img{        
-        max-width: 60px !important;
-        height: auto;
-        display: inline-block !important;
-    }
-
-    p .text-content{
-        overflow: hidden;
-    }
-
-    img[alt]::after{
-        content: " (" attr(alt) ")";
-        display: inline;
-        font-size: 10px !important;
-        color: $black;
-        word-break: break-word;
-    }
-
-    //Group images
-    .gi-responsiveimage__image{
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        margin-bottom: 0px !important;
-        max-width: 100%;
-        height: auto !important; 
-    }
-
-    .gi-responsiveimage__image img{
-        max-width: 100%;
-        height: auto !important; 
-    }
-
-    .print-alt-text{
-        display: block !important;
-        font-size: 10px !important;
-        color: $black !important;
-        text-align: left !important;
-        margin-top: 2px !important;
-        word-break: break-word !important;
-        overflow-wrap:  break-word !important;
-        line-height: 1.4 !important;
-        max-width: 100%;
-        white-space: normal !important;
-    }
-
-    //Video
-    iframe{
-        display: none;
-    }
-
-    .print-only-video-url{
-        display: block;
-        font-size: 16px !important;
-        color: $link-color;
-        text-decoration: underline;
-        text-underline-offset: .1578em;
-    }
-
-    //Hide unnecessary elements
+     //Hide unnecessary elements
+    .cky-revisit-bottom-left,
     .feedback_heading,
     .smileys, .shared-logos,
     .cky-revisit-bottom-left,
@@ -252,8 +70,7 @@
     .gi-sitenav.gi-sitenav--stage,
     .a-body__link .a-body__link--cta,
     #customLiveChatButton,
-    .a-body__link--btn-primary-teal-std::after {
+    .a-body__link--btn-primary-teal-std::after{
         display: none !important;
     }
-
 }
