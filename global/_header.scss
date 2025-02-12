@@ -247,6 +247,19 @@ div.gi-sitenav--mainnav-lvl2 {
   background-color: $burger-menu-color;
 }
 
+/*================================================
+5346 Burger menu button state indicator styling  
+================================================*/
+.gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+  button:focus{
+    box-shadow: 0px 0px 0px 3px $focus-color, 0px 0px 0px 6px $black;
+    outline: none; 
+    background: none;
+  }
+    
+}
+
+
 // Stage / banner
 
 header .imagebanner {
