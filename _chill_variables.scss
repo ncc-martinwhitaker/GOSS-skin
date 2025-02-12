@@ -1,0 +1,256 @@
+/*** VARIABLES ***/
+
+html {
+  font-size: 16px;
+  font-family: 'Assistant', 'Open Sans', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+html * {
+  font-family: 'Assistant', 'Open Sans', sans-serif;
+}
+
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='gray'/%3E%3C/g%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$breadcrumb-chevron-gray: url($string2);
+
+$string_black: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='black'/%3E%3C/g%3E%3C/svg%3E";
+$string_black2: str-replace($string_black, ' ', '%20');
+$breadcrumb-chevron-black: url($string_black2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='white'/%3E%3C/g%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$breadcrumb-chevron-white: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' fill='%23006CF4'/%3E%3C/g%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$breadcrumb-chevron-blue: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='101' height='430' viewBox='0 0 101 430' fill='none'%3E%3Cpath d='M73.7947 429.313C35.2681 380.3 10.9744 308.64 10.9744 228.813C10.9744 131.834 46.8293 46.9079 100.5 0L0 1.71661e-05V429.313H73.7947Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$circle-cutout: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Crect width='100' height='100' rx='50' fill='%23FBF7F6'/%3E%3Cpath d='M68.6667 41.6666L50 53.3333L31.3334 41.6666V36.9999L50 48.6666L68.6667 36.9999M68.6667 32.3333H31.3334C28.7434 32.3333 26.6667 34.4099 26.6667 36.9999V64.9999C26.6667 66.2376 27.1584 67.4246 28.0335 68.2997C28.9087 69.1749 30.0957 69.6666 31.3334 69.6666H68.6667C69.9044 69.6666 71.0914 69.1749 71.9665 68.2997C72.8417 67.4246 73.3334 66.2376 73.3334 64.9999V36.9999C73.3334 34.4099 71.2334 32.3333 68.6667 32.3333Z' fill='%234D2F82'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$email-icon: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Crect width='100' height='100' rx='50' fill='%23FBF7F6'/%3E%3Cg clip-path='url(%23clip0_3796_1181)'%3E%3Cpath d='M60.1733 55.6667C60.36 54.1267 60.5 52.5868 60.5 51.0001C60.5 49.4134 60.36 47.8734 60.1733 46.3334H68.06C68.4333 47.8267 68.6666 49.3901 68.6666 51.0001C68.6666 52.6101 68.4333 54.1734 68.06 55.6667M56.0433 68.6401C57.4433 66.0501 58.5166 63.2501 59.2633 60.3334H66.1466C63.9066 64.1834 60.3366 67.1701 56.0433 68.6401ZM55.46 55.6667H44.54C44.3066 54.1267 44.1666 52.5868 44.1666 51.0001C44.1666 49.4134 44.3066 47.8501 44.54 46.3334H55.46C55.67 47.8501 55.8333 49.4134 55.8333 51.0001C55.8333 52.5868 55.67 54.1267 55.46 55.6667ZM50 69.5734C48.0633 66.7734 46.5 63.6701 45.5433 60.3334H54.4566C53.5 63.6701 51.9366 66.7734 50 69.5734ZM40.6666 41.6667H33.8533C36.07 37.7934 39.6633 34.8067 43.9333 33.3601C42.5333 35.9501 41.4833 38.7501 40.6666 41.6667ZM33.8533 60.3334H40.6666C41.4833 63.2501 42.5333 66.0501 43.9333 68.6401C39.6633 67.1701 36.07 64.1834 33.8533 60.3334ZM31.94 55.6667C31.5666 54.1734 31.3333 52.6101 31.3333 51.0001C31.3333 49.3901 31.5666 47.8267 31.94 46.3334H39.8266C39.64 47.8734 39.5 49.4134 39.5 51.0001C39.5 52.5868 39.64 54.1267 39.8266 55.6667M50 32.4034C51.9366 35.2034 53.5 38.3301 54.4566 41.6667H45.5433C46.5 38.3301 48.0633 35.2034 50 32.4034ZM66.1466 41.6667H59.2633C58.5166 38.7501 57.4433 35.9501 56.0433 33.3601C60.3366 34.8301 63.9066 37.7934 66.1466 41.6667ZM50 27.6667C37.0966 27.6667 26.6666 38.1667 26.6666 51.0001C26.6666 57.1885 29.125 63.1234 33.5008 67.4992C35.6675 69.6659 38.2397 71.3847 41.0707 72.5573C43.9016 73.7299 46.9358 74.3334 50 74.3334C56.1883 74.3334 62.1233 71.8751 66.4991 67.4992C70.875 63.1234 73.3333 57.1885 73.3333 51.0001C73.3333 47.9359 72.7298 44.9017 71.5572 42.0708C70.3845 39.2399 68.6658 36.6676 66.4991 34.5009C64.3324 32.3342 61.7602 30.6155 58.9292 29.4429C56.0983 28.2703 53.0641 27.6667 50 27.6667Z' fill='%234D2F82'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3796_1181'%3E%3Crect width='56' height='56' fill='white' transform='translate(22 23)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$website-icon: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Einformation%3C/title%3E%3Cpath fill='%23004085' d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$info-icon: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ealert%3C/title%3E%3Cpath fill='%23856404' d='M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z' /%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$info-alert-icon: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Einformation%3C/title%3E%3Cpath fill='%23155724' d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$info-primary-icon: url($string2);
+
+$string: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Einformation%3C/title%3E%3Cpath fill='%231b1e21' d='M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$info-secondary-icon: url($string2);
+
+
+//Forms disclosure styling
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%231F78C7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-show-blue: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-show-black: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%231F78C7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-hide-blue: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-hide-black: url($string2);
+
+//Website disclosure styling
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%231f78c7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-show-blue-web: url($string2);
+
+$string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%231f78c7'/%3E%3C/svg%3E";
+$string2: str-replace($string, ' ', '%20');
+$disclosure-hide-blue-web: url($string2);
+
+
+/*** COLOURS ***/
+
+$focus-color: #fd0;
+// use #050505 for black focus colour
+
+// COLOURS: 
+
+$white: #fff;
+$black: #050505;
+$black-1: #1D1D1D;
+$black-2: #000000;
+
+$grey-0: #343434;
+$grey-1: #424242;
+$grey-2: #767676;
+$grey-3: #ccc;
+$grey-4: #ddd;
+$grey-5: #e5e5e5;
+
+$orange: #f18b24;//use for stroke mask
+
+$pale-blue: #31708f;
+$pale-orange: #8a6d3b;
+$pale-red: #a94442;
+
+$teal: #066;
+$green: #00823b;
+$red:#b32017;
+$blue:#177EB0;
+$purple: #292564;
+$purple-1: #DADAF0;
+$purple-2:#4D2F82; //GNGB 
+
+$link-color: #1F78C7;//#4840E3
+$link-color-darken: darken( $link-color, 20% );
+$dark-theme-link-color: #00D1FF;
+$dark-theme-link-color-darken: darken( $dark-theme-link-color, 10% );
+
+// buttons
+$button-panel-color: $teal;
+$button-dark-panel-color: $button-panel-color;
+$button-dark-panel-text-color: $white;
+$button-primary-text-color: $white;
+$button-primary-color: $green;
+$button-primary-color-hov: darken( $button-primary-color, 20% );
+$button-primary-teal-color: $teal;
+$button-primary-teal-color-hov: darken( $button-primary-teal-color, 10% );
+$button-secondary-color: $white;
+$button-secondary-color-hov: $grey-1;
+$button-inverted-secondary-color: $grey-1;
+$button-inverted-secondary-color-hov: $white;
+$button-search-color: $white;
+$button-search-background-color: $teal;
+
+// component variables
+$header-color: $white !default;
+$header-text-color: $black !default; 
+//$header-text-color-hover: $black !default; //3832
+$header-utilitymenu-color: $link-color !default;
+$header-menu-text-color-hover: $black !default;
+$header-mobilemenu-text-alignment: left !default;
+
+$footer-background-color: #dee0e2;
+// $footer-color: #000 !default;
+$footer-first-column-count: 2;
+$footer-first-column-width: 75%;
+// $footer-border-color: #343434;
+
+
+$list-panel-link-color: $black !default;
+$list-panel-link-color-hover: $link-color-darken !default;
+
+$burger-menu-color: $black !default;
+
+$card-border-radius: 0px;
+$panel-backdrop-border-radius: 0px; //base border radius for panel backdrops
+$panel-border-radius: 0px; //base border radius for panel cards (i.e. lists and features) within an individual panel
+$feature-panel-border-radius: 0px; //base border radius for all feature cards on a page
+$list-border-radius: 0px; //base border radius for all list cards on a page
+$promo-border-radius: 0px; //base border radius for all promo cards on a page
+//$feature-card-border-radius: 0px; //is this the same as feature-panel-border-radius above?
+$rounded-corner-border-radius: 12px; //rounded corner border radius value
+
+
+//Alert message colours
+
+//.gi-info
+$info-bg-color: #cce5ff;
+$info-border-color: #b8daff;
+
+//.gi-info--alert 
+$alert-info-bg-color: #fff3cd;
+$aletrt-info-border-color: #ffeeba;
+
+//.gi-info--primary
+$info-primary-bg-color: #d4edda;
+$info-primary-border-color: #c3e6cb;
+
+//.gi-info--secondary 
+$info-secondary-bg-color: #e9e9e9;
+$info-secondary-border-color: #c6c8ca;
+
+// FONT SIZES
+
+$font-size-base: 1rem;
+
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$h6-font-size: 1.125rem;
+
+// BREAKPOINTS
+// (to be used with "mq" mixin)
+$breakpoints: (
+    "0":    0px,
+    "xxs":  300px,
+    "xs":   576px,
+    "sm":   768px,
+    "md":   900px,
+    "lg":   1050px, // formerly 992px
+    "xl":   1200px,
+    "xxl":  1400px
+);
+
+// ANIMATION
+
+@mixin ani {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    transition: none;
+  }
+}
+
+// EXAMPLE USAGE - Will target elected width and ABOVE px
+/*
+
+.site-header {
+    padding: 2rem;
+    font-size: 1.8rem;
+    @include mq('md') {
+        padding-top: 4rem;
+        font-size: 2.4rem;
+    }
+}
+*/
+
+// Can we use (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) Level 4 media queries, 
+// Looks like IE won't like it tho (https://caniuse.com/?search=%40media) But I think we dropped support?
+// @media (width <= $sm) {
+//     * {background: red;}
+//   }
