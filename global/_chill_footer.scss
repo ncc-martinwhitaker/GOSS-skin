@@ -1,0 +1,42 @@
+$footer-background-color: #dee0e2 !default;
+$footer-color: $black !default;
+$footer-first-column-count: 2 !default;
+$footer-first-column-width: 75% !default;
+$footer-border-color: #343434 !default;
+
+footer.footer {
+  font-weight: 600;
+  background: $footer-background-color !important;
+  border-top: 10px solid $footer-border-color;
+}
+
+footer.footer * {
+  color: $footer-color;
+}
+
+.utilitymenu--footer .utilitymenu__link {
+  &:hover {
+    color: $footer-color;
+    @extend %a-link-hover;
+  }
+  &:focus {
+    @extend %a-link-focus;
+    span {
+      color: $black;
+    }
+  }
+}
+
+.bygoss__link {
+  font-size: 0.875rem;
+  &:hover {
+    color: $footer-color;
+    @extend %a-link-hover;
+  }
+  &:focus {
+    @extend %a-link-focus;
+  }
+  &:focus:hover {
+    color: $black;
+  }
+}

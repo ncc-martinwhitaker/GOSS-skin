@@ -1,0 +1,50 @@
+$breadcrumb-color: $grey-4 !default;
+$breadcrumb-text-color: $black !default;
+$breadcrumb-border-color: $grey-3 !default;
+$breadcrumb-chevron: $breadcrumb-chevron-gray !default;
+
+.gi-breadcrumb {
+  padding: 0px;
+  border: solid $breadcrumb-border-color 1px;
+  background-color: $breadcrumb-color;
+
+
+  a {
+    color: $breadcrumb-text-color;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: $breadcrumb-text-color;
+      @extend %a-link-hover; //3832
+    }
+    &:focus {
+      color: $black; //3832
+    }
+    &:focus:hover { //3832
+      text-decoration: none;
+    }
+  
+    
+}
+}
+
+.gi-breadcrumb__item::after { 
+  content: "";
+  background-color: transparent;
+  background-image: $breadcrumb-chevron;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin: 0px;
+  top: -1px;
+} 
+
+//3832
+.gi-breadcrumb__link {
+  line-height: normal;
+}
