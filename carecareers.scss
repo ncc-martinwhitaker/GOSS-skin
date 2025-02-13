@@ -579,11 +579,14 @@ Footer - copyright - 4176
     }
 }
 
-
 // 5357 Fix BUG - yellow highlight on tabbed results
 .gi-tabs__panel.gi-tabs__panel:focus {
     box-shadow: 0 0 0 6px $black;
   }
+
+  .gi-tabs__panel.gi-tabs__panel--search-list {
+    padding: 0px 10px;
+}
 
 /*=============================================================================
 4403 - Shift H1 into top panel
