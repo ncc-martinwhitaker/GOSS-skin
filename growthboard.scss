@@ -981,6 +981,48 @@ footer.footer {
   }
 }
 
+//5400
+.template--search {
+
+  h1.shifted-heading {
+      color: $white;
+      text-align: center;
+      position: relative;
+  }
+
+  form.gi-sitesearch.gi-sitesearch--searchtemplate {
+    background-color: $grey-2; //fallback
+    //background: url("https://growthboard.ncc1-prd.gosshosted.com/image/39489/View-of-Norwich-from-Ketts-Heights/original.jpg");
+    background: url("https://growthboard.ncc1-prd.gosshosted.com/image/39304/search/original.jpg");
+    background-position-y: 87%;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: $white;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(77, 47, 130, 0.80);
+    }
+
+    .gi-sitesearch__container {
+        max-width: 800px;
+        width: 100%;
+    }
+  }
+}
+
 /*============================================
 5401 Publications search: remove the long url 
 =============================================*/
