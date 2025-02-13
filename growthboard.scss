@@ -1022,3 +1022,15 @@ footer.footer {
     }
   }
 }
+
+/*============================================
+5401 Publications search: remove the long url 
+=============================================*/
+.searchresults{
+  .searchresults__itemurl{
+    display: none;
+  }
+  .searchresults__itemsummary{
+    line-height: 1.4;
+  }
+}
