@@ -93,6 +93,13 @@ $(document).ready(function() {
         selected.forEach(s => removeLinks(s));
 	}
 
+    //5400 - move h1 title within the form on the project search page
+    if ($(".template--search")[0]){
+        var form = $("form.gi-sitesearch--searchtemplate")[0];
+        $("h1.a-heading__title").detach().prependTo(form);
+        $("h1.a-heading__title").addClass("shifted-heading");
+    }
+
 });
 
 /*=============================================
