@@ -55,7 +55,7 @@
     p, span, div, a, li, ul, ol{
         font-size: 16px !important;
         line-height: 1.4 !important;        
-    }
+    }  
 
      //Hide unnecessary elements
     .cky-revisit-bottom-left,
@@ -72,5 +72,24 @@
     #customLiveChatButton, .cky-consent-bar,
     .a-body__link--btn-primary-teal-std::after{
         display: none !important;
+    }
+
+    //5377 - Disclosures accordions
+    .gi-disclosure--body{
+        border-bottom: none;
+
+        .btn--showall,
+        .gi-disclosure__show-hide-text, 
+        .gi-disclosure__toggle::after{
+            display: none;
+        }
+
+        .gi-disclosure__toggle{
+            padding: 0;
+            border: none;
+        }
+    }
+    .gi-disclosure__content{
+        display: block; 
     }
 }
