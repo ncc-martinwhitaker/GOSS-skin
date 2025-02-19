@@ -129,6 +129,7 @@
     /* Body Disclosures */
     { "name" : "Disclosure H2 Start", "element" : "h2", "attributes" : { "class" : "disclosurestart" } },
     { "name" : "Disclosure H3 Start", "element" : "h3", "attributes" : { "class" : "disclosurestart" } },
+    { "name" : "Disclosure H4 Start", "element" : "h4", "attributes" : { "class" : "disclosurestart" } },
     { "name" : "Disclosure End", "element" : "p", "attributes" : { "class" : "disclosureend" } },
     { "name" : "Disclosure End List", "element" : "li", "attributes" : { "class" : "disclosureend" } },
  
