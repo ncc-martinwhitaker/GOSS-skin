@@ -394,6 +394,20 @@ Metadata modifiers include:
       height: auto;
     }
   }
+
+  //MM - 75% width - 5431
+  .a-panel--s-75 .a-panel__content,.a-panel--s-75.a-panel--hasbackground .a-panel__content {
+    width: 75%;
+    margin: 0 auto
+  }
+
+  @media (max-width: 840px) {
+      .a-panel--s-75 .a-panel__content,.a-panel--s-75.a-panel--hasbackground .a-panel__content {
+          width:100%;
+          margin: 0
+      }
+  }
+
   
   // MM - side-by-side
   .body--side-by-side main.maincontent {
