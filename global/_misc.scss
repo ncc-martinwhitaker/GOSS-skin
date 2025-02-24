@@ -133,6 +133,13 @@ div.a-panel--peeky-swiper span.a-panel__link.a-panel__link--pt //4849 - Accessib
     .sitealert__content a:hover{
       color: #4840e3;
     }
+
+    //5098 Sitewide alert styling refinement
+    .sitealert__content a{
+      color: $black;
+      font-weight: 700;
+      text-decoration: underline;
+    }
   }
 }
 
