@@ -28,6 +28,21 @@ $footer-first-column-width: 75%; //Column_P
 /** If the site is a wide site uncomment the line below **/
 //@import "global/wide-sites";
 
+//TODO - create own chill_misc file and move the below to if it if the other misc styles don't work for chill
+.body--hide-title h1.a-heading__title {
+    display: block;
+    visibility: visible;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 
 //TODO - move the styles below into their own globals files once the design has been signed off.
 
