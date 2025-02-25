@@ -65,6 +65,24 @@ a {
   }
 }
 
+/** 5344 - image/img hyperlink typography (styling for hyperlinked images) **/
+
+a.a-body__imagelink:focus {
+  display: inline-block;
+  outline: 3px solid $focus-color;
+  box-shadow: 0 0 0 5px #050505;
+}
+
+a.a-body__imagelink {
+  display: inline-block;
+  outline: 3px solid transparent;
+  box-shadow: 0 0 0 5px transparent;
+}
+
+.a-body__image--inline {
+  padding-right: 5px;
+}
+
 /** 3832 - Text links state indicator standardisation **/
 .a-body__link, .a-body__inner a {
   color: $link-color;
