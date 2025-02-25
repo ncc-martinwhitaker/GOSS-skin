@@ -1,0 +1,67 @@
+.grid--authentication {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.loginform {
+    border: none;
+    max-width: 500px; 
+    width: 90%; 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12) !important;
+    padding: 20px; 
+    border-radius: 8px;
+} 
+
+.loginform__text, .loginform__password {
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    font-size: clamp(14px, 2vw, 18px); 
+    padding: 10px;
+    width: 100%; 
+}
+
+.loginform__submit--icmsiteuser {
+    background: $green;
+    border-radius: 6px;
+    width: 40%; 
+    font-weight: 600;
+    padding: 14px 40px;
+    display: block; 
+    text-align: center;
+}
+
+.loginform__submit{
+    background: $green;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 14px 40px;
+    display: block; 
+    text-align: center;
+}
+ 
+.loginform__submitwrap--openid:before{
+    top: 9px;
+}
+
+.loginform__pwrap--icmsiteuser h2,
+.loginform__pwrap--icmsiteuser span{
+    text-align: left;
+} 
+
+@media (max-width: 768px) {
+    .grid--authentication {
+        padding: 0 10px; 
+        margin-left: auto;
+    }
+    
+    .loginform {
+        width: 100%; 
+    }
+
+    .loginform__submit--icmsiteuser {
+        width: 100%; 
+        padding: 14px;
+    }
+}
