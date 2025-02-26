@@ -68,7 +68,8 @@ textarea:focus,
     outline: 2px solid $black;
     box-shadow: 0 0 0 4px $focus-color;
     background: none;
-} 
+    text-decoration: none;
+}
 
 .loginform__submit:focus,
 .loginform__submit:focus:hover{
