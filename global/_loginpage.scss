@@ -40,15 +40,43 @@
     display: block; 
     text-align: center;
 }
+
+.loginform__submit--icmsiteuser:hover,
+.loginform__submit:hover{
+    text-decoration: underline;
+}
  
 .loginform__submitwrap--openid:before{
     top: 9px;
 }
 
+.loginform__submitwrap--openid:has(.loginform__submit:focus)::before,
+.loginform__submitwrap--openid:has(.loginform__submit:focus:hover)::before{
+    top: 12px;
+    color: $black;
+} 
+
 .loginform__pwrap--icmsiteuser h2,
 .loginform__pwrap--icmsiteuser span{
     text-align: left;
+}  
+
+input:focus, 
+select:focus, 
+textarea:focus, 
+*[tabindex]:focus{
+    outline: 2px solid $black;
+    box-shadow: 0 0 0 4px $focus-color;
+    background: none;
 } 
+
+.loginform__submit:focus,
+.loginform__submit:focus:hover{
+    background-color: $focus-color;
+    box-shadow: 0 2px 0 $black;
+    color: $black;
+    outline: 0;
+}
 
 @media (max-width: 768px) {
     .grid--authentication {
