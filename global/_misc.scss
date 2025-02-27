@@ -131,14 +131,24 @@ div.a-panel--peeky-swiper span.a-panel__link.a-panel__link--pt //4849 - Accessib
     }
 
     //5098 Sitewide alert styling refinement 
-    .sitealert__content a:hover{
-      color: #1717f7; //#4840e3;
-    }
-
     .sitealert__content a{
       color: $black;
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: underline;
+      text-underline-offset: 0.23em;
+    }
+
+    .sitealert__content a:hover{
+      color: #11436f; //#4840e3;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+
+    .sitealert__content a:focus{
+      color: $black;
+      font-weight: 600;
+      text-decoration: none;
     }
   }
 }
