@@ -70,11 +70,12 @@
     .gi-sitenav.gi-sitenav--stage,
     .a-body__link .a-body__link--cta,
     #customLiveChatButton, .cky-consent-bar,
-    .a-body__link--btn-primary-teal-std::after{
+    .a-body__link--btn-primary-teal-std::after,
+    .a-share{
         display: none !important;
     }
 
-    //5377 - Disclosures accordions
+    //5377 - Disclosures accordions 
     .gi-disclosure--body{
         border-bottom: none;
 
