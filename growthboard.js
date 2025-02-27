@@ -99,6 +99,26 @@ $(document).ready(function() {
         $("h1.a-heading__title").detach().prependTo(form);
         $("h1.a-heading__title").addClass("shifted-heading");
     }
+    
+
+    //5430 - search filters
+    if ($(".body--search-filtermenu-top .gi-sitesearch--searchtemplate .gi-sitesearch__container")) {
+        $(".body--search-filtermenu-top").addClass("js-move"); //Add an additional class so that if JavaScript is turned off the filter styling reverts back to the default
+        var $searchFilters = $(this).find('.body--search-filtermenu-top .gi-sitesearch--searchtemplate .gi-sitesearch__container');
+        $(this).find('.body--search-filtermenu-top .searchoptions--desktop').detach().insertAfter($searchFilters); //move the desktop refine your search
+    }
+	$(".body--search-filtermenu-top .searchoptions--desktop .gi-accordion__panelheader").each(function(){
+        //desktop only - wrap filter heading and options in a div
+		var $filterMenu = $(this).nextUntil('.body--search-filtermenu-top .gi-accordion__panel').add(this);
+		$filterMenu.add($filterMenu.next()).wrapAll('<div class="accordion__filtermenu">');
+	});
+    //Desktop only - close menu by default
+    $(".body--search-filtermenu-top .searchoptions--desktop .gi-accordion__toggle").attr('aria-expanded', 'false');
+    $(".body--search-filtermenu-top .searchoptions--desktop .gi-accordion__panel").attr("hidden","");
+    $(".body--search-filtermenu-top .searchoptions--desktop .gi-accordion__panel").removeClass("gi-accordion__panel--open");
+    $(".body--search-filtermenu-top .searchoptions--desktop .gi-accordion__panel").addClass("gi-accordion__panel--closed");
+    //End of 5430 - search filters
+
 
 });
 
