@@ -71,12 +71,14 @@ a.a-body__imagelink:focus {
   display: inline-block;
   outline: 3px solid $focus-color;
   box-shadow: 0 0 0 5px #050505;
+  background-color: transparent;
 }
 
 a.a-body__imagelink {
   display: inline-block;
   outline: 3px solid transparent;
   box-shadow: 0 0 0 5px transparent;
+  background-color: transparent;
 }
 
 .a-body__image--inline {
