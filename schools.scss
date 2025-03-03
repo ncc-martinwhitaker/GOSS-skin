@@ -21,10 +21,16 @@ $feature-panel-border-radius: 12px;
 $list-border-radius: 12px;
 $promo-border-radius: 12px;
 $card-border-radius: 12px;
+
+$header-utilitymenu-color: $grey-3;
 //$feature-card-border-radius: 12px;
  
 @import "global-import";
 @import "global/wide-sites";
+
+//================================================================
+// General page size setup
+//================================================================
 
 .container {
     max-width: 1480px;
@@ -35,6 +41,14 @@ $card-border-radius: 12px;
     margin: 0 0 0 0;
 }
 
+.container {
+    max-width: 1480px;
+}
+
+//================================================================================================================================
+// Header
+//================================================================================================================================
+
 .header {
     padding: 0px;
 
@@ -43,6 +57,363 @@ $card-border-radius: 12px;
         /*flex-wrap: wrap;*/
         justify-content: space-between;
     }
+}
+
+.gi-sitelogo--header {
+    display: flex;
+    padding: 15px 0px;
+  }
+
+
+.gi-sitelogo--header { 
+    float: none;
+}
+
+.header>.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.gi-sitelogo,.gi-sitelogo__link {
+    padding-bottom: 15px;
+}
+
+//******************************************
+//******************************************
+// top right menu and search box
+//******************************************
+//******************************************
+
+.header__menu { 
+    float: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+//******************************************
+// sign in menu
+
+.utilitymenu--top { 
+    //margin-left: auto;
+    padding-bottom: 0px;
+    //display:inline-block;
+}
+/*
+.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text {
+    border: 0px;
+    display: inline;
+    padding: 5px 10px;
+}*/
+
+//******************************************
+// search
+
+.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+
+    margin-left: auto;
+}
+
+.gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
+    background: $focus-color;
+    color: #000 !important;
+}
+.gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus:after {
+    color: #000;
+}
+
+.gi-sitesearch--dynamic {
+    margin-top: 10px;
+}
+
+//=================================================================================
+// Header drop-down menu site navigation e.g.
+//  School management | Admin | Pupil safety and behaviour | Teaching and learning | Pupil needs | School Finanace | Early learning and childcare
+//=================================================================================
+
+#headermainmenu {
+    background: #fff;     
+    border-bottom: 1px solid #ebebeb; 
+    border-top: 1px solid #ebebeb;     
+    min-height: 70px;
+}
+
+//---------------------------------------------------------------------------------
+
+.gi-sitenav__link { 
+    color: #000;
+    &:hover {
+        color: #066;
+    }
+}
+
+.gi-sitenav__link.gi-sitenav__link--lvl1 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 24px 12px;
+    padding-right: 20px;
+    margin: 0px;
+}
+.gi-sitenav__link[aria-haspopup="true"]::after {
+    padding-top: 3px;
+    font-size: 1rem; 
+    margin-left: 7px;
+}
+
+.gi-sitenav__list.gi-sitenav__list--lvl1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.gi-sitenav__item.gi-sitenav__item--lvl1:first-child {
+    .gi-sitenav__link.gi-sitenav__link--lvl1 {
+        padding-left: 0px;
+    }
+}
+
+.gi-sitenav__item--lvl1:first-child {
+
+    .gi-sitenav--lvl2 {
+        left: 0;
+        transform: translateX(0);
+    }
+
+}
+.gi-sitenav__item--lvl1:last-child {
+
+    .gi-sitenav--lvl2 {
+        left: auto;
+        transform: translateX(0);
+        right: 0;
+    }
+
+}
+
+.gi-sitenav--lvl2 {
+    background: #fff;
+    columns: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);   
+     z-index: 100;
+}
+
+.gi-sitenav--lvl2 {
+    padding: 15px 5px;
+}
+
+.gi-sitenav__item--lvl2 {
+    border-bottom: 0; padding: 10px 10px;
+    margin: 0 0px;
+    display: inline-block;
+    width: 100%;
+    a {
+        font-weight: 600;
+        color: #006666; //3832 - TODO - this colour isn't applied because there is another style with greater specificity overwriting this (added color: $teal in the class below to fix this)
+        text-align: left;
+    }
+}
+
+//3832
+.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
+    color: $teal;
+    &:focus {
+        color: $black;
+    }
+}
+
+//================================================================================================================================
+
+
+//=================================================================================
+// Breadcrumb bar
+//=================================================================================
+
+.breadcrumb__nav {
+    padding: 0;
+    border: solid #fff 1px;
+    background-color: #fff; 
+}
+
+.breadcrumb .breadcrumb__crumb a {
+    color: #066;
+
+    &:hover { 
+        color: #4840E3;
+        text-decoration: none;
+        border-bottom: solid #4840E3 2px;
+    }
+    //3832
+    &:focus:hover {
+        color: $black;
+        border-bottom: none;
+    }
+} 
+
+//=================================================================================
+// Mobile Menu
+//=================================================================================
+.gi-mobilenav--mobilemenu {
+    background: #f2f2f2;
+}
+
+.sitemenu__link {
+    color: #000;
+    text-decoration: none;
+    display: none; 
+}
+
+.submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
+    color: #000 !important;
+}
+
+.utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
+    color: #000 !important;
+    &:hover {
+        color: #4840E3 !important;
+        text-decoration: underline;
+    }
+}
+
+.sitemenu__btnimage {
+    filter: invert(1);
+}
+
+.sitemenu--mobile .submenu {
+    border-bottom: 1px solid #000;
+}
+
+.utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
+    border-bottom: 1px solid #000;
+}
+
+/*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
+.a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
+    display: block;
+}*/
+
+
+
+/*=================================================================*/
+//start mobile view
+/*=================================================================*/
+// @media (max-width: 1300px)
+@include mq(xxl, max)
+{
+    .gi-sitenav__link[aria-haspopup=true]::after {
+        
+        margin-left: 5px;
+    }
+
+    .gi-sitenav__link.gi-sitenav__link--lvl1 {
+       
+        padding: 12px 12px;
+    }
+
+    .gi-sitenav__list.gi-sitenav__list--lvl1 {
+        justify-content: space-around;
+    }
+
+}
+/*=================================================================*/
+//end
+/*=================================================================*/
+
+
+/* For screens smaller than 900px, mobile view is applied */
+
+// @media (max-width: 900px)
+@include mq(md, max) {
+    .header {  
+        > .container {
+            padding-bottom: 20px;
+        }
+    }
+
+    .gi-sitelogo--header {
+        justify-content: flex-start;
+        margin: initial;
+    }
+  
+    .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
+        display: block;
+        top: 20px;
+    }
+
+    .header__menu {
+        width: 100%;
+    }
+
+    #headermainmenu, .header__menu .utilitymenu--top {
+        display: none;
+        width: 100%;
+    }
+    
+    .gi-mobilenav--mobilemenu { 
+        top: 65px !important;
+    }
+    
+    .gi-sitelogo, .gi-sitelogo__link {
+        
+        width: 100px;
+    }
+    
+    .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
+        width: 100%; //formely 100% - 168px
+        float: left;
+
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
+        content: "\e800";
+        color: $black;
+    }
+    /*** commented out 3/6/24 by KO - 3248 ***/
+    // .gi-sitesearch--dynamic[data-collapsed=true] .btn--search::after {
+    //     content: "\e800";
+    //     color: #fff;
+    // }
+    // .gi-sitesearch--top .gi-sitesearch__searchtoggle, .gi-sitesearch--top .gi-sitesearch__button {
+    //     width: 40px;
+    // }
+    .gi-sitesearch--top[data-collapsible=true] .gi-sitesearch__searchfield {
+        width: calc(100% - 40px);
+    }
+}
+
+
+// @media (min-width: 820px)
+@include mq(sm, min) {
+
+    .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
+        display: block;
+    }
+    
+    } 
+
+/*==================================================
+5161 Mobile nav - white chevron on grey background
+==================================================*/
+.sitemenu__btn--haschildren::after{
+    color: $black;
+}
+
+
+//=================================================================================
+// BODY
+//=================================================================================
+
+.template--list .container {
+    max-width: 1480px;
+    margin: 0 auto;
 }
 
 .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
@@ -56,11 +427,43 @@ $card-border-radius: 12px;
     }
 }
 
+// @media (min-width: 840px)
+@include mq(md, min) {
 
+    .template--default .maincontent > .container{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
 
+    .template--list .maincontent > .container, .template--panel .maincontent > .container, .template--search .maincontent > .container, .template--stage .maincontent > .container {
+        max-width: 1480px;
+        margin: 0 auto; 
+    } 
 
+    .template--list aside, .template--panel aside{
+    display: block;
+    float: right;
+    width: 100%;
+    padding-left: 0px;
+    }
 
+    .template--list .container { 
+        .a-heading, .a-intro, .a-body {
+            margin: 0 0 0 0%;
+        }
+    } 
+
+    .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
+        .container.container--fullwidth aside.aside {
+              width: 30%;
+            padding-left: 10px;
+        }
+    }
+}
+
+//========================================================================
 //Blog page - copied from Intranet
+//========================================================================
 
 .template--blog  {
     .a-heading {
@@ -160,14 +563,7 @@ $card-border-radius: 12px;
 }
 
 
-.container {
-    max-width: 1480px;
-}
 
-.maincontent > .container {
-    max-width: 900px;
-    margin: 0 0 0 0;
-}
 
 .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--formsservice {
     .container.container--fullwidth {
@@ -234,271 +630,7 @@ $card-border-radius: 12px;
 
     
 }
-// end of blog copied from intranet
 
-
-
-
-
-
-
-
-
-
-// @media (min-width: 840px)
-@include mq(md, min) {
-
-    .template--default .maincontent > .container{
-        max-width: 1170px;
-        margin: 0 auto;
-    }
-
-    .template--list .maincontent > .container, .template--panel .maincontent > .container, .template--search .maincontent > .container, .template--stage .maincontent > .container {
-        max-width: 1480px;
-        margin: 0 auto; 
-    } 
-
-    .template--list aside, .template--panel aside{
-    display: block;
-    float: right;
-    width: 100%;
-    padding-left: 0px;
-    }
-
-    .template--list .container { 
-        .a-heading, .a-intro, .a-body {
-            margin: 0 0 0 0%;
-        }
-    } 
-
-    .template--panel.body--aside, .template--list.body--aside, .template--blog, .template--default, .template--documentsection, .template--formsservice {
-        .container.container--fullwidth aside.aside {
-              width: 30%;
-            padding-left: 10px;
-        }
-    }
-}
-
-.template--list .container {
-    max-width: 1480px;
-    margin: 0 auto;
-}
-/*
-.header {
-    padding: 0; 
-}
-*/
-footer.footer {
-    background: linear-gradient(219deg, rgba(246, 246, 246, 0.02) 0%, rgba(246, 246, 246, 0.02) 20%, rgba(225, 225, 225, 0.02) 20%, rgba(225, 225, 225, 0.02) 40%, rgba(136, 136, 136, 0.02) 40%, rgba(136, 136, 136, 0.02) 60%, rgba(216, 216, 216, 0.02) 60%, rgba(216, 216, 216, 0.02) 80%, rgba(35, 35, 35, 0.02) 80%, rgba(35, 35, 35, 0.02) 100%), linear-gradient(299deg, rgba(213, 213, 213, 0.02) 0%, rgba(213, 213, 213, 0.02) 20%, rgba(150, 150, 150, 0.02) 20%, rgba(150, 150, 150, 0.02) 40%, rgba(161, 161, 161, 0.02) 40%, rgba(161, 161, 161, 0.02) 60%, rgba(186, 186, 186, 0.02) 60%, rgba(186, 186, 186, 0.02) 80%, rgba(28, 28, 28, 0.02) 80%, rgba(28, 28, 28, 0.02) 100%), linear-gradient(50deg, rgba(157, 157, 157, 0.02) 0%, rgba(157, 157, 157, 0.02) 16.667%, rgba(147, 147, 147, 0.02) 16.667%, rgba(147, 147, 147, 0.02) 33.334%, rgba(42, 42, 42, 0.02) 33.334%, rgba(42, 42, 42, 0.02) 50.001%, rgba(214, 214, 214, 0.02) 50.001%, rgba(214, 214, 214, 0.02) 66.668%, rgba(34, 34, 34, 0.02) 66.668%, rgba(34, 34, 34, 0.02) 83.335%, rgba(211, 211, 211, 0.02) 83.335%, rgba(211, 211, 211, 0.02) 100.002%), linear-gradient(278deg, rgba(79, 79, 79, 0.03) 0%, rgba(79, 79, 79, 0.03) 20%, rgba(217, 217, 217, 0.03) 20%, rgba(217, 217, 217, 0.03) 40%, rgba(5, 5, 5, 0.03) 40%, rgba(5, 5, 5, 0.03) 60%, rgba(200, 200, 200, 0.03) 60%, rgba(200, 200, 200, 0.03) 80%, rgba(125, 125, 125, 0.03) 80%, rgba(125, 125, 125, 0.03) 100%), linear-gradient(274deg, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 12.5%, rgba(100, 100, 100, 0.03) 12.5%, rgba(100, 100, 100, 0.03) 25%, rgba(44, 44, 44, 0.03) 25%, rgba(44, 44, 44, 0.03) 37.5%, rgba(228, 228, 228, 0.03) 37.5%, rgba(228, 228, 228, 0.03) 50%, rgba(36, 36, 36, 0.03) 50%, rgba(36, 36, 36, 0.03) 62.5%, rgba(72, 72, 72, 0.03) 62.5%, rgba(72, 72, 72, 0.03) 75%, rgba(30, 30, 30, 0.03) 75%, rgba(30, 30, 30, 0.03) 87.5%, rgba(109, 109, 109, 0.03) 87.5%, rgba(109, 109, 109, 0.03) 100%), linear-gradient(90deg, #242424, #242424);
-}
-
-#headermainmenu {
-    background: #fff;     
-    border-bottom: 1px solid #ebebeb; 
-    border-top: 1px solid #ebebeb;     
-    
-    min-height: 70px;}
-
-
-.gi-sitenav__link { 
-    color: #000;
-    &:hover {
-        color: #066;
-    }
-}
-
-
-.gi-sitelogo--header {
-  display: flex;
-  padding: 15px 0px;
-}
-
-.gi-sitenav__link.gi-sitenav__link--lvl1 {
-    text-align: center;
-    font-size: 1rem;
-    padding: 24px 12px;
-    padding-right: 20px;
-    margin: 0px;
-}
-.gi-sitenav__link[aria-haspopup="true"]::after {
-    padding-top: 3px;
-    font-size: 1rem; 
-    margin-left: 7px;
-}
-
-.gi-sitelogo--header { 
-    float: none;
-    width: 100% !important;
-}
-
-.header__menu { 
-    float: none;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-
-.gi-sitenav__list.gi-sitenav__list--lvl1 {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.gi-sitenav__item.gi-sitenav__item--lvl1:first-child {
-    .gi-sitenav__link.gi-sitenav__link--lvl1 {
-        padding-left: 0px;
-    }
-}
-
-.gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-    margin-top: 7px;
-    margin-left: auto;
-}
-
-.gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
-    background: $focus-color;
-    color: #000 !important;
-}
-.gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus:after {
-    color: #000;
-}
-
-.utilitymenu--top { 
-    margin-left: auto;
-    /*padding-top: 15px; */
-    padding-bottom: 0px;
-    display:inline-block;
-}
-
-.gi-sitenav--lvl2 {
-   
-    background: #fff;
-    columns: 2;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    border-radius: 6px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);   
-     z-index: 100;
-}
-
-.gi-sitenav__item--lvl1:first-child {
-
-    .gi-sitenav--lvl2 {
-        left: 0;
-        transform: translateX(0);
-    }
-
-}
-.gi-sitenav__item--lvl1:last-child {
-
-    .gi-sitenav--lvl2 {
-        left: auto;
-        transform: translateX(0);
-        right: 0;
-    }
-
-}
-
-.breadcrumb__nav {
-    padding: 0;
-    border: solid #fff 1px;
-    background-color: #fff; 
-}
-
-/* last to be added */
-.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text {
-    border: 0px;
-    display: inline;
-    padding: 5px 10px;
-}
-.breadcrumb .breadcrumb__crumb a {
-    color: #066;
-
-    &:hover { 
-        color: #4840E3;
-        text-decoration: none;
-        border-bottom: solid #4840E3 2px;
-    }
-    //3832
-    &:focus:hover {
-        color: $black;
-        border-bottom: none;
-    }
-} 
-
-.gi-sitenav--lvl2 {
-    padding: 15px 5px;
-}
-
-.gi-sitenav__item--lvl2 {
-    border-bottom: 0; padding: 10px 10px;
-    margin: 0 0px;
-    display: inline-block;
-    width: 100%;
-    a {
-        font-weight: 600;
-        color: #006666; //3832 - TODO - this colour isn't applied because there is another style with greater specificity overwriting this (added color: $teal in the class below to fix this)
-        text-align: left;
-    }
-}
-
-//3832
-.gi-sitenav__list.gi-sitenav__list--lvl2 .gi-sitenav__item.gi-sitenav__item--lvl2 .gi-sitenav__link.gi-sitenav__link--lvl2 {
-    color: $teal;
-    &:focus {
-        color: $black;
-    }
-}
-
-
-.gi-mobilenav--mobilemenu {
-    background: #f2f2f2;}
-    .sitemenu__link {
-        color: #000;
-        text-decoration: none;
-        display: none; 
-    }
-    .submenu__link, .submenu__text, .submenu__link:hover, .sitemenu__link:hover {
-        color: #000 !important;
-    }
-
-    
-
-    .utilitymenu--mobile .utilitymenu__link, .sitemenu--mobile .sitemenu__link, .sitemenu--mobile .sitemenu__text {
-        color: #000 !important;
-        &:hover {
-            color: #4840E3 !important;
-            text-decoration: underline;
-
-        }
-    
-    }
-
-
-
-
-
-    .sitemenu__btnimage {
-        filter: invert(1);
-    }
-   
-    .sitemenu--mobile .submenu {
-        border-bottom: 1px solid #000;
-    }
-
-
-    .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__link, .utilitymenu--mobile .utilitymenu__item:last-child .utilitymenu__text {
-        border-bottom: 1px solid #000;
-    }
-
-/*//3909 - overwrite 2991 changes so that standard and large images display correctly but image captions are now not the same width
-.a-body__image .gi-responsiveimage__caption, .a-body__image .gi-responsiveimage {
-    display: block;
-}*/
 
 /*====================================================================================
 Share this page - 3448 uncomment from 20/11/2024
@@ -516,73 +648,14 @@ Share this page - 3448 uncomment from 20/11/2024
 .a-share__link:focus{
     display: inline-block;    
 }
+//========================================================================
+// end of blog copied from intranet
+//========================================================================
 
 
-// @media (max-width: 1300px)
-@include mq(xxl, max)
-{
-    .gi-sitenav__link[aria-haspopup=true]::after {
-        
-        margin-left: 5px;
-    }
-
-    .gi-sitenav__link.gi-sitenav__link--lvl1 {
-       
-        padding: 12px 12px;
-    }
-
-    .gi-sitenav__list.gi-sitenav__list--lvl1 {
-        justify-content: space-around;
-    }
-
-}
-
- 
-// @media (max-width: 1050px)
-@include mq(lg, max)
-{
-    .gi-sitelogo--header {
-        flex-wrap: wrap;
-    }
-
-    /* 5450
-    #headermainmenu, .utilitymenu--top {
-        display: none;
-    }*/
-
-    .gi-mobilenav--mobilemenu { 
-        top: 112px!important; 
-    
-    }
-
-    .gi-sitelogo, .gi-sitelogo__link {
-    
-        width: 480px;
-    }
-
-    .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
-        width: 100%;
-        float: left;
-    }
-}
-
-.gi-sitesearch--dynamic[data-collapsed=false] .btn--search::after {
-    color: #000;
+footer.footer {
+    background: linear-gradient(219deg, rgba(246, 246, 246, 0.02) 0%, rgba(246, 246, 246, 0.02) 20%, rgba(225, 225, 225, 0.02) 20%, rgba(225, 225, 225, 0.02) 40%, rgba(136, 136, 136, 0.02) 40%, rgba(136, 136, 136, 0.02) 60%, rgba(216, 216, 216, 0.02) 60%, rgba(216, 216, 216, 0.02) 80%, rgba(35, 35, 35, 0.02) 80%, rgba(35, 35, 35, 0.02) 100%), linear-gradient(299deg, rgba(213, 213, 213, 0.02) 0%, rgba(213, 213, 213, 0.02) 20%, rgba(150, 150, 150, 0.02) 20%, rgba(150, 150, 150, 0.02) 40%, rgba(161, 161, 161, 0.02) 40%, rgba(161, 161, 161, 0.02) 60%, rgba(186, 186, 186, 0.02) 60%, rgba(186, 186, 186, 0.02) 80%, rgba(28, 28, 28, 0.02) 80%, rgba(28, 28, 28, 0.02) 100%), linear-gradient(50deg, rgba(157, 157, 157, 0.02) 0%, rgba(157, 157, 157, 0.02) 16.667%, rgba(147, 147, 147, 0.02) 16.667%, rgba(147, 147, 147, 0.02) 33.334%, rgba(42, 42, 42, 0.02) 33.334%, rgba(42, 42, 42, 0.02) 50.001%, rgba(214, 214, 214, 0.02) 50.001%, rgba(214, 214, 214, 0.02) 66.668%, rgba(34, 34, 34, 0.02) 66.668%, rgba(34, 34, 34, 0.02) 83.335%, rgba(211, 211, 211, 0.02) 83.335%, rgba(211, 211, 211, 0.02) 100.002%), linear-gradient(278deg, rgba(79, 79, 79, 0.03) 0%, rgba(79, 79, 79, 0.03) 20%, rgba(217, 217, 217, 0.03) 20%, rgba(217, 217, 217, 0.03) 40%, rgba(5, 5, 5, 0.03) 40%, rgba(5, 5, 5, 0.03) 60%, rgba(200, 200, 200, 0.03) 60%, rgba(200, 200, 200, 0.03) 80%, rgba(125, 125, 125, 0.03) 80%, rgba(125, 125, 125, 0.03) 100%), linear-gradient(274deg, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 12.5%, rgba(100, 100, 100, 0.03) 12.5%, rgba(100, 100, 100, 0.03) 25%, rgba(44, 44, 44, 0.03) 25%, rgba(44, 44, 44, 0.03) 37.5%, rgba(228, 228, 228, 0.03) 37.5%, rgba(228, 228, 228, 0.03) 50%, rgba(36, 36, 36, 0.03) 50%, rgba(36, 36, 36, 0.03) 62.5%, rgba(72, 72, 72, 0.03) 62.5%, rgba(72, 72, 72, 0.03) 75%, rgba(30, 30, 30, 0.03) 75%, rgba(30, 30, 30, 0.03) 87.5%, rgba(109, 109, 109, 0.03) 87.5%, rgba(109, 109, 109, 0.03) 100%), linear-gradient(90deg, #242424, #242424);
 }
 
 
-// @media (min-width: 820px)
-@include mq(sm, min) {
 
-    .gi-sitenav__item--lvl1:nth-child(n+6):not(.gi-sitenav__item--lvl1:last-child), .gi-sitenav__item--lvl2:not(.gi-sitenav__item--lvl2:nth-child(n+6)) {
-        display: block;
-    }
-    
-    } 
-
-/*==================================================
-5161 Mobile nav - white chevron on grey background
-==================================================*/
-.sitemenu__btn--haschildren::after{
-    color: $black;
-}
