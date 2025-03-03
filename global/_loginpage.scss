@@ -1,0 +1,96 @@
+.grid--authentication {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.loginform {
+    border: none;
+    max-width: 500px; 
+    width: 90%; 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12) !important;
+    padding: 20px; 
+    border-radius: 8px;
+} 
+
+.loginform__text, .loginform__password {
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    font-size: clamp(14px, 2vw, 18px); 
+    padding: 10px;
+    width: 100%; 
+}
+
+.loginform__submit--icmsiteuser {
+    background: $green;
+    border-radius: 6px;
+    width: 40%; 
+    font-weight: 600;
+    padding: 14px 40px;
+    display: block; 
+    text-align: center;
+}
+
+.loginform__submit{
+    background: $green;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 14px 40px;
+    display: block; 
+    text-align: center;
+}
+
+.loginform__submit--icmsiteuser:hover,
+.loginform__submit:hover{
+    text-decoration: underline;
+}
+ 
+.loginform__submitwrap--openid:before{
+    top: 9px;
+}
+
+.loginform__submitwrap--openid:has(.loginform__submit:focus)::before,
+.loginform__submitwrap--openid:has(.loginform__submit:focus:hover)::before{
+    top: 12px;
+    color: $black;
+} 
+
+.loginform__pwrap--icmsiteuser h2,
+.loginform__pwrap--icmsiteuser span{
+    text-align: left;
+}  
+
+input:focus, 
+select:focus, 
+textarea:focus, 
+*[tabindex]:focus{
+    outline: 2px solid $black;
+    box-shadow: 0 0 0 4px $focus-color;
+    background: none;
+    text-decoration: none;
+}
+
+.loginform__submit:focus,
+.loginform__submit:focus:hover{
+    background-color: $focus-color;
+    box-shadow: 0 2px 0 $black;
+    color: $black;
+    outline: 0;
+}
+
+@media (max-width: 768px) {
+    .grid--authentication {
+        padding: 0 10px; 
+        margin-left: auto;
+    }
+    
+    .loginform {
+        width: 100%; 
+    }
+
+    .loginform__submit--icmsiteuser {
+        width: 100%; 
+        padding: 14px;
+    }
+}
