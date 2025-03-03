@@ -579,9 +579,9 @@ Footer - copyright - 4176
     }
 }
 
-// 5357 Fix BUG - yellow highlight on tabbed results
+// 5357 Fix BUG - yellow highlight on tabbed results 
 .gi-tabs__panel.gi-tabs__panel:focus {
-    box-shadow: 0 0 0 6px $black;
+    box-shadow: 0 0 0 6px $focus-color;
   }
 
   .gi-tabs__panel.gi-tabs__panel--search-list {
