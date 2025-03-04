@@ -329,18 +329,13 @@ $header-utilitymenu-color: $grey-3;
 /* For screens smaller than 900px, mobile view is applied */
 
 // @media (max-width: 900px)
-@include mq(md, max) {
+@include mq(lg, max) {
     .header {  
         > .container {
             padding-bottom: 20px;
         }
     }
 
-    .gi-sitelogo--header {
-        justify-content: flex-start;
-        margin: initial;
-    }
-  
     .gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
         display: block;
         top: 20px;
@@ -357,11 +352,15 @@ $header-utilitymenu-color: $grey-3;
     
     .gi-mobilenav--mobilemenu { 
         top: 65px !important;
+        max-width: 100%;
+        height: auto;
     }
-    
-    .gi-sitelogo, .gi-sitelogo__link {
-        
-        width: 100px;
+
+    .gi-sitelogo--header {
+        justify-content: flex-start;
+        margin: initial;
+        width: 20%;
+        min-width: 200px;
     }
     
     .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
@@ -405,6 +404,10 @@ $header-utilitymenu-color: $grey-3;
 .sitemenu__btn--haschildren::after{
     color: $black;
 }
+
+
+
+
 
 
 //=================================================================================
