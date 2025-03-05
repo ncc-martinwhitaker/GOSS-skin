@@ -67,7 +67,7 @@ a {
 
 /** 5344 - image/img hyperlink typography (styling for hyperlinked images) **/
 
-a.a-body__imagelink:focus {
+/*a.a-body__imagelink:focus {
   display: inline-block;
   outline: 3px solid $focus-color;
   box-shadow: 0 0 0 5px #050505;
@@ -79,7 +79,7 @@ a.a-body__imagelink {
   outline: 3px solid transparent;
   box-shadow: 0 0 0 5px transparent;
   background-color: transparent;
-}
+}*/
 
 .a-body__image--inline {
   padding-right: 5px;
@@ -135,7 +135,7 @@ a.a-body__imagelink {
 }
 
 //5468
-button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
+button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus, a:focus img {
   /*outline: 3px solid $focus-color;
   background: $focus-color;
   color: $black;
@@ -143,15 +143,12 @@ button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
   @include element-focus;
 }
 
-a:focus img {
-  @include element-focus;
-  //background: $white;
-}
+
 /*.icmform input:focus {
   border: 1px solid $black;
 }*/
 
-//remove these from standard link focus styles otherwise they images have a yellow background and boxshadow
+//remove these from standard link focus styles otherwise the images have a yellow background and boxshadow
 a:focus:has(img) {
   background: transparent;
   box-shadow: none;

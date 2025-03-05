@@ -46,16 +46,26 @@
 }
 
 //Focus style for form inputs and image links
-@mixin element-focus {
-    box-shadow: 0px 0px 0px 3px $black, 0px 0px 0px 6px $focus-color;
-    border: none;
-    outline: none;
+@mixin element-focus($box-shadow1: 3px, $box-shadow2: 6px, $border: none, $outline: none) {
+    box-shadow: 0px 0px 0px $box-shadow1 $black, 0px 0px 0px $box-shadow2 $focus-color;
+    @if ($border != "skip") {
+        border: $border;
+    }
+    outline: $outline;
 }
 @mixin element-border-focus {
-    box-shadow: 0px 0px 0px 1px $black, 0px 0px 0px 4px $focus-color;
-    border: 2px solid $black;
-    outline: none;
+    //box-shadow: 0px 0px 0px 1px $black, 0px 0px 0px 4px $focus-color;
+    //border: 2px solid $black;
+    //outline: none;
+    @include element-focus($box-shadow1: 1px, $box-shadow2: 4px, $border: 2px solid $black)
 }
+/*@mixin element-border-test($box-shadow1: 1px, $box-shadow2: 4px, $border: 2px solid $black, $outline: none) {
+    box-shadow: 0px 0px 0px $box-shadow1 $black, 0px 0px 0px $box-shadow2 $focus-color;
+    @if ($border != "skip") {
+        border: $border;
+    }
+    outline: $outline;
+}*/
 
 
 // Media queries (to be used with breakpoints variables)

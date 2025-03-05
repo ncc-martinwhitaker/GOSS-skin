@@ -18,6 +18,7 @@ a.searchresults__itemlink {
     }
 
     &:focus {
+        //TODO - these three lines can be removed because it's the same CSS as a:focus
         outline: 3px solid rgba(0,0,0,0);
         box-shadow: 0 -2px $focus-color, 0 4px $black;
         text-decoration: none;
