@@ -527,3 +527,19 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   transition: none;
   text-decoration: none;
 }
+
+//5502 Search button icon styling - task managment and 'search cases' 
+.btn--search.btn--taskmanagement,
+.btn--search.btn--casesearch{
+    padding: 10px 22px 10px 40px;
+}
+
+.btn:before{
+    top: calc(50% - 9px);
+}
+
+.btn--casesearch.btn--reset,
+.btn--taskmanagement.btn--reset{
+    padding: 9px 35px 9px 12px;
+    border: none;
+}
