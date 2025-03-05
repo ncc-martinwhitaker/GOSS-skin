@@ -706,11 +706,11 @@ Footer - copyright - 4176
                 position: relative;
                 margin: 20px 0px 0px 40px;
 
-                input.searchform__inputtxt {
+                /*input.searchform__inputtxt {
                     &:focus {
                         background-color: $white;
                     }
-                }
+                }*/
 
                 &::before {
                     font-family: 'Assistant', 'Open Sans', sans-serif;

@@ -4,8 +4,12 @@
     .icmcheckcontainer label::before, input, textarea, select, .icmradiocontainer label::before, .icmsinglecheckbox label::before {
         border: 2px solid $black;
         border-radius: 6px;
-        background-color: $white;//4420 Form fields - yellow when selected field input (not focus)
+        //background-color: $white;//4420 Form fields - yellow when selected field input (not focus) - TODO is this still needed?
     }
+
+    .icmcheckcontainer label:focus::before, input:focus, textarea:focus, select:focus, .icmradiocontainer label:focus::before, .icmsinglecheckbox label:focus::before {
+        @include element-focus;
+    }    
 
     //4430 - legend padding
     legend {
@@ -76,19 +80,22 @@
     .field_upload input[type=button] {padding-left: 16px;}
 
 
-    input:focus, select:focus, textarea:focus, 
+    //input:focus, select:focus, textarea:focus, 
+    .icmform input:focus,
     .icmsinglecheckbox input[type=checkbox]:focus+label::before, 
     .icmcheckcontainer input[type=checkbox]:focus+label::before, 
     .icmradiocontainer input[type=radio]:focus+label::before {
-        //box-shadow: 0px 0px 0px 3px #fd0, 0px 0px 0px 6px $black; 
+        /*//box-shadow: 0px 0px 0px 3px #fd0, 0px 0px 0px 6px $black; 
         outline: 3px solid $focus-color;
         //outline-offset: 0;
         box-shadow: inset 0 0 0 2px;
-        text-decoration: none !important; // refactoring - remove this and re-test?
+        text-decoration: none !important; // refactoring - remove this and re-test?*/
+        @include element-focus;
     }
+    /*TODO - is this background colour still needed?
     textarea:focus, select:focus, input.icmpassword:focus { 
         background: $white; 
-    }
+    }*/
 
     input[type=button].icminput--contrast:hover {
         background-color: $black;
@@ -104,7 +111,7 @@
     }
 
     input[type=text]:focus {
-        background-color: transparent;
+        //background-color: transparent; - TODO is this needed?
         text-decoration: none;
     }
 
@@ -272,10 +279,10 @@ div.LookupTable tr {
     padding-bottom: 16px;
 }
 
-.searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
+/*.searchform__inputtxt.searchform__inputtxt--sitesearch:focus {
     text-decoration: none !important;
     background: $white;
-}
+}*/
 
 //** Case management **//
 

@@ -1052,11 +1052,12 @@ footer.footer {
       }
 
       &:focus {
-        //TODO - replace with mixin when it's available
+      /*  //TODO - replace with mixin when it's available
         box-shadow: 0px 0px 0px 3px $black, 0px 0px 0px 6px $focus-color;
         border: none;
         outline: none;
-        text-decoration: none;
+        text-decoration: none;*/
+        @include element-focus;
       }
 
       &[aria-expanded=true] {

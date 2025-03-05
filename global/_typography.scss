@@ -134,16 +134,33 @@ a.a-body__imagelink {
   color: $black;
 }
 
+//5468
 button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
-  outline: 3px solid $focus-color;
+  /*outline: 3px solid $focus-color;
   background: $focus-color;
   color: $black;
-  text-decoration: underline;;
+  text-decoration: underline;;*/
+  @include element-focus;
 }
 
-a.gi-sitelogo__link:focus {
-box-shadow: 0px 0px 0px 6px $black; 
+a:focus img {
+  @include element-focus;
+  //background: $white;
 }
+/*.icmform input:focus {
+  border: 1px solid $black;
+}*/
+
+//remove these from standard link focus styles otherwise they images have a yellow background and boxshadow
+a:focus:has(img) {
+  background: transparent;
+  box-shadow: none;
+}
+
+/*a.gi-sitelogo__link:focus {
+box-shadow: 0px 0px 0px 6px $black; 
+}*/
+
 
 // 618 - page margin width
 // 705 - typography
