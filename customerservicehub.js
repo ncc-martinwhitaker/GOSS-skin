@@ -9,30 +9,42 @@ $(document).ready(function() {
 5209 Hide Close Case button in CSH for 6 casetypes
 ===================================================*/
 document.addEventListener("DOMContentLoaded", () => {
-    const selectElement = document.querySelector("#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CASETYPE");
-    const closeButton = document.querySelector("#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CLOSECASEBTN");
-    const validValues = [
+  const selectElement = document.querySelector("#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CASETYPE");
+  const subtypeElement = document.querySelector("#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_SUBTYPEVALUE");
+  const closeButton = document.querySelector("#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CLOSECASEBTN");
+
+  const validValues = [
       "adviceandguidance",
       "databreach",
       "freedomofinformation",
       "informationshare",
       "policerequest",
       "subjectaccessrequest",
-      "clienthardshiprequest" //5354 CHS case management - Prevent case closure
-    ];
-  
-    function toggleButtonVisibility() {
-      if (validValues.includes(selectElement.value)) {
-        closeButton.style.display = "none"; // hide button
+      "clienthardshiprequest", // 5354 CHS case management - Prevent case closure
+      "hwapplications" // 5503 Highways case management - Hide close case button
+  ];
+
+  const additionalSubtypeValues = ["skiplicence", "electricvehiclecharging", "scaffoldsandhoarding"];
+
+  function toggleButtonVisibility() {
+      const isHwApplications = selectElement.value === "hwapplications";
+      const isSubtypeValid = subtypeElement && additionalSubtypeValues.includes(subtypeElement.value);
+
+      if (validValues.includes(selectElement.value) || isHwApplications && isSubtypeValid) {
+          closeButton.style.display = "none"; // hide button
       } else {
-        closeButton.style.display = ""; // show button
+          closeButton.style.display = ""; // show button
       }
-    }
-  
-    // Run a check when the value changes
-    selectElement.addEventListener("change", toggleButtonVisibility);
-  
-    // Initial inspection
-    toggleButtonVisibility();
-  });
-  
+  }
+
+  // Run a check when the main select value changes
+  selectElement.addEventListener("change", toggleButtonVisibility);
+
+  // Run a check when the subtype select value changes (if it exists)
+  if (subtypeElement) {
+      subtypeElement.addEventListener("change", toggleButtonVisibility);
+  }
+
+  // Initial inspection
+  toggleButtonVisibility();
+});
