@@ -22,7 +22,7 @@ $list-border-radius: 12px;
 $promo-border-radius: 12px;
 $card-border-radius: 12px;
 
-$header-utilitymenu-color: $grey-3;
+$header-utilitymenu-color: $grey-4;
 //$feature-card-border-radius: 12px;
  
 @import "global-import";
@@ -62,12 +62,10 @@ $header-utilitymenu-color: $grey-3;
 .gi-sitelogo--header {
     display: flex;
     padding: 15px 0px;
-  }
-
-
-.gi-sitelogo--header { 
+    min-width: 280px;
+    width: 30%;
     float: none;
-}
+  }
 
 .header>.container {
     display: flex;
@@ -98,19 +96,12 @@ $header-utilitymenu-color: $grey-3;
 // sign in menu
 
 .utilitymenu--top { 
-    //margin-left: auto;
     padding-bottom: 0px;
-    //display:inline-block;
 }
-/*
-.utilitymenu--top .utilitymenu__link, .utilitymenu--top .utilitymenu__text {
-    border: 0px;
-    display: inline;
-    padding: 5px 10px;
-}*/
 
-//******************************************
-// search
+.utilitymenu--top .utilitymenu__link:hover {
+    border: 1px solid $button-search-background-color;
+}
 
 .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
 
@@ -351,16 +342,20 @@ $header-utilitymenu-color: $grey-3;
     }
     
     .gi-mobilenav--mobilemenu { 
-        top: 65px !important;
+        top: 68px !important;
         max-width: 100%;
         height: auto;
+    }
+
+    gi-sitelogo,.gi-sitelogo__link {
+        padding-bottom: 0px;
     }
 
     .gi-sitelogo--header {
         justify-content: flex-start;
         margin: initial;
         width: 20%;
-        min-width: 200px;
+        min-width: 280px;
     }
     
     .gi-sitesearch.gi-sitesearch--dynamic.gi-sitesearch--top {
