@@ -274,6 +274,12 @@ $footer-border-color: $museum-primary-color-museums;
         &:hover {
             background-color: darken( $button-primary-color, 10% );
         }
+
+        //5506 Book now button - Museums events
+        &:focus,
+        &:focus:hover{
+            background-color: $focus-color;
+        }
     }
 }
     
