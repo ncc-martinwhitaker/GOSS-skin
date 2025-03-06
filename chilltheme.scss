@@ -79,7 +79,10 @@ $footer-first-column-width: 75%; //Column_P
     border-bottom: none;
 }
 
-//5519 Chill theme top-utilities - add button stylings 
+//5519 Chill theme top-utilities - add button stylings
+.utilitymenu--top .utilitymenu__item{
+    margin-right: 0;
+}
 .utilitymenu--top .utilitymenu__link{
     background-color: $grey-4;	
     font-size: 1rem;
