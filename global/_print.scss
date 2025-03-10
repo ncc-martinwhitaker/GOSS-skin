@@ -93,4 +93,56 @@
     .gi-disclosure__content{
         display: block; 
     }
+
+    //5384 Print CSS: Highlight boxes
+    .alert--contrast.alert--none,
+    .alert--info,
+    .alert--contrast.alert--info,
+    .alert--warn,
+    .alert--contrast.alert--warn,
+    .alert--error,
+    .alert--contrast.alert--error,
+    .alert--none,
+    .alert--contrast.alert--none{
+        color: $black;
+        background-color: $white;
+        border-color: $black;
+    }
+
+    .alert:has(.alert__title):before,
+    .alert .btn--cancel:after,
+    .highlightbox__bodytext,
+    .alert .alert__title,
+    .alert--contrast.alert--none h2,
+    .alert--contrast.alert--none h3,
+    .alert--contrast.alert--none h4,
+    .alert--contrast.alert--none h5,
+    .alert--contrast.alert--none h6,
+    .alert--contrast.alert--info h2,
+    .alert--contrast.alert--info h3,
+    .alert--contrast.alert--info h4,
+    .alert--contrast.alert--info h5,
+    .alert--contrast.alert--info h6,
+    .alert--contrast.alert--error h2,
+    .alert--contrast.alert--error h3,
+    .alert--contrast.alert--error h4,
+    .alert--contrast.alert--error h5,
+    .alert--contrast.alert--error h6,
+    .alert--info h2, 
+    .alert--info h3, 
+    .alert--info h4, 
+    .alert--info h5,
+    .alert--info h6,
+    .alert--warn h2,
+    .alert--warn h3,
+    .alert--warn h4,
+    .alert--warn h5,
+    .alert--warn h6,
+    .alert--error h2,
+    .alert--error h3,
+    .alert--error h4,
+    .alert--error h5,
+    .alert--error h6{
+        color: $black; 
+    } 
 }
