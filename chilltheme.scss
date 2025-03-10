@@ -78,3 +78,35 @@ $footer-first-column-width: 75%; //Column_P
 .template--list .item__title {
     border-bottom: none;
 }
+
+//5519 Chill theme top-utilities - add button stylings
+.utilitymenu--top .utilitymenu__item{
+    margin-right: 0;
+}
+.utilitymenu--top .utilitymenu__link{
+    background-color: $grey-4;	
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid $grey-4;
+    border-radius: 0.3em;
+    display: inline-block;
+    margin: 0 0 0 0.7em;
+    padding: 0.25em 0.7em;
+    transition: background 0.3s;
+    
+    &:hover{
+        background-color: $white;
+        text-decoration: underline;
+    }
+
+    &:focus{
+        background-color: $focus-color;
+    }
+
+    &:focus:hover{
+        text-decoration: underline;
+    }
+}
+.utilitymenu__text{
+    display: none;
+}
