@@ -1,0 +1,58 @@
+.gi-disclosure--body .gi-disclosure__toggle {    
+    padding: 20px 90px 20px 10px;
+  }
+
+  .gi-disclosure--body{
+    border: solid $grey-3 1px;
+  }
+
+  button.btn--disclosure-toggle{
+    padding: 5px 35px 5px 12px;
+    box-sizing: border-box;
+    margin: 0 10px 10px 0;
+    font-family: inherit;
+    position: relative;
+    display: inline-block;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .5scubic-bezier(0.25,0.8,0.25,1);
+    color: $white;
+    background-color: $disclosure-color;
+  }
+
+  .gi-disclosure--body .gi-disclosure__toggle::after{
+    content: "Show";
+    font-family: "Assistant", "Open Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: transparent;
+    background-image: $disclosure-chevron-down-circle;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 18px 18px;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 28px;
+    border-bottom: solid 3px transparent;
+    color: $disclosure-color;
+  }
+
+  .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]::after {
+    content: "Hide";
+    font-family: 'Assistant', 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: transparent;
+    background-image:  $disclosure-chevron-up-circle;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 18px 18px;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 28px;
+    color: $disclosure-color;
+  }
