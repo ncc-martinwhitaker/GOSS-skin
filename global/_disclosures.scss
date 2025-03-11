@@ -13,6 +13,7 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text {
 /*====================================
 5561 Global: Styling on disclosures
 ====================================*/
+
 $string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%234840E3' stroke-width='2'/%3E%3Cpath d='M6,10L12,16L18,10' fill='none' stroke='%234840E3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
 $string2: str-replace($string, ' ', '%20');
 $disclosure-show-purple: url($string2);
