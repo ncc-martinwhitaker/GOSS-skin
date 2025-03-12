@@ -1167,3 +1167,8 @@ footer.footer {
     margin-bottom: 0px;
   }
 }
+
+//5552 GNGB remove padding 
+.a-panel.a-panel--pt.a-panel--body, .a-panel.a-panel--pt.a-panel--body.a-panel--default{
+  padding: 0px 20px;
+}
