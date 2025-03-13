@@ -1,0 +1,106 @@
+/* Sidemenu Width */
+.grid--5col>.grid__cell{
+    width: 28%;
+}
+
+.grid__cell--sidemenu {
+    border: 1px solid $grey-3;
+}
+
+/* The location of the icons on the right side */
+
+.gi-articletreeview__toggle:after {
+    content: '\e828';
+    color: $black;
+    position: absolute;
+    left: 275px;
+    top: 50%;
+    transform: translateY(60%);
+}
+
+.gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
+    content: '\e829';
+}
+
+.gi-articletreeview__link{
+    min-height: 30px;
+    display: block;
+    width: 100%;
+    padding: 10px 30px 10px 55px;
+    box-sizing: border-box;
+    //border-bottom: 1px solid $grey-3;
+    color: $black;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Style in the active state */
+
+.gi-articletreeview__item--level1,
+.gi-articletreeview__item--level2,
+.gi-articletreeview__item--level3,
+.gi-articletreeview__item--level4{
+    font-weight: 600;
+    border: 0;
+    background-color: $white;
+    width: calc(100% - 1px);
+    text-decoration: none;
+    color: $black;
+}
+
+.gi-articletreeview__item--level1[aria-expanded="true"] > .gi-articletreeview__toggle:after{
+    color: $teal;
+}
+
+.gi-articletreeview__item--level1[aria-selected="true"] > .gi-articletreeview__link{
+    color: $teal;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: $teal;
+    text-underline-offset: 4px;
+}
+
+.gi-articletreeview__item[aria-selected="true"] > .gi-articletreeview__link{
+    outline: none;
+}
+
+/* Vertical strip for levels 2, 3, 4 */
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link,
+.gi-articletreeview__item--level3 .gi-articletreeview__link,
+.gi-articletreeview__item--level4 .gi-articletreeview__link{
+    position: relative;
+}
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before{
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $black;
+}
+
+/* Underline in hover state for levels 2, 3, 4 */
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:hover{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Active state for all levels */
+
+.gi-articletreeview__link--current{
+    font-weight: 600;
+    border: 0;
+    background-color: $white;
+    //border-bottom: 1px solid $grey-3;
+    width: calc(100% - 1px);
+    text-decoration: none;
+    color: $black;
+}
