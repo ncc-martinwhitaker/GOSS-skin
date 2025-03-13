@@ -1161,11 +1161,16 @@ footer.footer {
 .a-body{
   padding-bottom: 0px;
 }
-.a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body {
+.a-panel.a-panel--pt.a-panel--hasbackground {
   margin-bottom: 20px;
   &:last-child {
     margin-bottom: 0px;
   }
+}
+
+//5552 GNGB remove padding 
+.a-panel.a-panel--pt.a-panel--body, .a-panel.a-panel--pt.a-panel--body.a-panel--default{
+  padding: 0px 20px;
 }
 
 /*====================================
@@ -1310,3 +1315,5 @@ button.btn--disclosure-toggle{
   padding: 10px 10px;
   border: solid $grey-3 1px;
 } 
+
+
