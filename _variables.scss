@@ -87,8 +87,6 @@ $string:"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width=
 $string2: str-replace($string, ' ', '%20');
 $disclosure-hide-blue-web: url($string2);
 
-   
-
 /* OLD CRUMBS 
 $breadcrumb-chevron-gray: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='gray'/%3E%3C/svg%3E");
 $breadcrumb-chevron-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctitle%3Echevron-right%3C/title%3E%3Cpath%20d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z'%20fill='white'/%3E%3C/svg%3E");
@@ -127,9 +125,9 @@ $red:#b32017;
 $blue:#177EB0;
 $purple: #292564;
 $purple-1: #DADAF0;
-$purple-2:#4D2F82; //GNGB 
+$purple-2:#4D2F82; //GNGB
 
-$link-color: #1F78C7;//#4840E3
+$link-color: #1F78C7;//#4840E3 
 $link-color-darken: darken( $link-color, 20% );
 $dark-theme-link-color: #00D1FF;
 $dark-theme-link-color-darken: darken( $dark-theme-link-color, 10% );
