@@ -372,7 +372,7 @@ $DisabilityConfidentLeaderSVG: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%
 /*-------------------------------------------------------------------------------
   5526 - Fire incidents mobile view 
   --------------------------------------------------------------------------------*/
-@media only screen and (max-width: 1200px) {
+  @include mq(sm, max) {
     div.IncidentTable tbody th,div.IncidentTable tbody td {
         width:100%;
         display: inline-block;
