@@ -393,7 +393,8 @@ input.icminput.icminput--button.icminput--script.icminput--contrast {
   }
 
   &:focus {
-    text-decoration: underline;
+    //text-decoration: underline;
+    //TODO - REFACTOR - can this pull in mixin?
     background-color: $focus-color;
     color: $black;
     box-shadow: 0 2px 0 $black;

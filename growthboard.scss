@@ -1015,6 +1015,11 @@ footer.footer {
       border: none;
     }
 
+    //5468
+    .gi-accordion__panelheader:has(.gi-accordion__toggle.gi-accordion__toggle--facets:focus) {
+      z-index: 1;
+    }
+
     //filter buttons
     .gi-accordion__toggle.gi-accordion__toggle--facets {
       border: solid $grey-3 1px;
@@ -1034,11 +1039,7 @@ footer.footer {
       }
 
       &:focus {
-        //TODO - replace with mixin when it's available
-        box-shadow: 0px 0px 0px 3px $black, 0px 0px 0px 6px $focus-color;
-        border: none;
-        outline: none;
-        text-decoration: none;
+        @include element-focus($box-shadow1: 2px, $box-shadow2: 5px); //5468
       }
 
       &[aria-expanded=true] {
@@ -1108,7 +1109,15 @@ footer.footer {
     }
 
     //Mobile view
+    
+    //5468
+    .searchoptions.searchoptions--mobile.searchoptions--fixed {
+      padding: 10px; //TODO refactor - make mobile gutter padding consistent and create a variable
+      background-color: $white;
+    }
     .gi-disclosure__toggle.gi-disclosure__toggle--searchoptions {
+        border: 1px solid $grey-3; //5468
+
       &::after {
         top: 26px;
         right: 14px;

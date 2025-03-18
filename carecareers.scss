@@ -581,8 +581,9 @@ Footer - copyright - 4176
 
 // 5357 Fix BUG - yellow highlight on tabbed results 
 .gi-tabs__panel.gi-tabs__panel:focus {
-    box-shadow: 0 0 0 6px $focus-color;
-  }
+    @include element-focus; //5468
+    border-top: 1px solid $grey-3;
+}
 
   .gi-tabs__panel.gi-tabs__panel--search-list {
     padding: 0px 10px;
@@ -705,12 +706,6 @@ Footer - copyright - 4176
                 width: 175px;
                 position: relative;
                 margin: 20px 0px 0px 40px;
-
-                input.searchform__inputtxt {
-                    &:focus {
-                        background-color: $white;
-                    }
-                }
 
                 &::before {
                     font-family: 'Assistant', 'Open Sans', sans-serif;

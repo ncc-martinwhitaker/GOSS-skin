@@ -247,18 +247,6 @@ div.gi-sitenav--mainnav-lvl2 {
   background-color: $burger-menu-color;
 }
 
-/*================================================
-5346 Burger menu button state indicator styling  
-================================================*/
-.gi-mobilenavtoggle.gi-mobilenavtoggle--mobilemenu {
-  button:focus{
-    box-shadow: 0px 0px 0px 3px $focus-color, 0px 0px 0px 6px $black;
-    outline: none; 
-    background: none;
-  }
-    
-}
-
 
 // Stage / banner
 
@@ -304,18 +292,9 @@ header .imagebanner {
 
 }
 
-/*===========================================
-5118 Image link/button focus styling
-===========================================*/
-.gi-sitelogo__link:focus,
-.n-stage__link .n-stage__link--logo:focus{
-box-shadow: 0 0 0 5px $black;
-outline: 3px solid $focus-color;
-background: none;
-color: none;
-}
 
+//overwrite GOSS styling
 .gi-sitelogo--header .gi-sitelogo__link:focus .gi-sitelogo__image{
-  background: none;
+  background: $white; //5468
 }
 /*===================END===============*/

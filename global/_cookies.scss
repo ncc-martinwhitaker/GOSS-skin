@@ -7,9 +7,9 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     
-    } 
+} 
     
-    #cookie-consent-prompt {
+#cookie-consent-prompt {
     content: "";
     position: fixed;
     background: rgba(0,0,0,0.6);
@@ -19,11 +19,11 @@
     left: 0;
     z-index: 99;
     backdrop-filter: blur(8px);
-    }
+}
     
     
     
-    .block--cookie-consents-updated-confirmation {
+.block--cookie-consents-updated-confirmation {
     position: relative;
     padding-right: 70px;
     z-index: 9999;
@@ -34,4 +34,12 @@
     max-width: 100% !important;
     bottom: 0;
     position: fixed !important;
-    }
+}
+
+//5468
+.cky-btn-revisit-wrapper:has(button.cky-btn-revisit:focus) {
+    @include element-focus;
+}
+button.cky-btn-revisit:focus {
+    box-shadow: none;
+}

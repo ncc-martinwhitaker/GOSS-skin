@@ -152,11 +152,12 @@ button.btn--disclosure-toggle{
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:focus { 
-  border: solid $focus-color 4px;
-  outline: 4px solid $black;
-  outline-offset: 0px;
-  position: relative;
   z-index: 1;
+  text-decoration: none; //5468
+   //5468
+  &:hover {
+    text-decoration: underline;
+  }
 
   &::after {
     border-bottom: solid $black 3px; 
@@ -310,25 +311,8 @@ button.btn--disclosure-toggle {
   border-bottom: 1px solid $grey-3;
 }
 
-.icmform .icmhideborder .icmlegend:focus,
-.icmform div.icmverticalaccordion__heading:focus{
-  border: solid $focus-color 3px;
-  color: $black;
-  outline: solid $black 3px;
-  background: none;
-}
-
 .icmform .icmhideborder .icmlegend:hover,
 .icmform div.icmverticalaccordion__heading:hover{
-  background: $grey-5;
-  text-decoration: underline;
-}
-
-.icmform .icmhideborder .icmlegend:focus:hover,
-.icmform div.icmverticalaccordion__heading:focus:hover{
-  border: solid $focus-color 3px;
-  color: $black;
-  outline: solid $black 3px;
   background: $grey-5;
   text-decoration: underline;
 }
@@ -380,4 +364,9 @@ button.btn--disclosure-toggle {
   background-color: $focus-color;
   color: $black;
   border-bottom: 3px solid $black;
+}
+
+//5468 - remove blue focus from mobile search filter
+.gi-accordion--focus {
+  outline: none;
 }

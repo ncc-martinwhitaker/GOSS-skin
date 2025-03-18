@@ -32,6 +32,9 @@ $button-search-color: $white !default;
 
 .gi-sitesearch--top .searchform__inputtxt {
   border: solid 1px $search-border-color;
+  &:focus {
+    @include element-focus($box-shadow1: 2px, $box-shadow2: 5px); //5468
+  }
 }
 
 .header .searchform__inputtxt.searchform__inputtxt--sitesearch {
@@ -42,9 +45,7 @@ $button-search-color: $white !default;
   border-radius: 4px 0 0 4px;
 
   &:focus {
-    outline: solid $focus-color 2px;
-    border: solid 3px $black;
-
+    @include element-focus($box-shadow1: 2px, $box-shadow2: 5px); //5468
   }
 
   &::placeholder {

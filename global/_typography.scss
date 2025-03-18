@@ -66,21 +66,6 @@ a {
 }
 
 /** 5344 - image/img hyperlink typography (styling for hyperlinked images) **/
-
-a.a-body__imagelink:focus {
-  display: inline-block;
-  outline: 3px solid $focus-color;
-  box-shadow: 0 0 0 5px #050505;
-  background-color: transparent;
-}
-
-a.a-body__imagelink {
-  display: inline-block;
-  outline: 3px solid transparent;
-  box-shadow: 0 0 0 5px transparent;
-  background-color: transparent;
-}
-
 .a-body__image--inline {
   padding-right: 5px;
 }
@@ -134,16 +119,17 @@ a.a-body__imagelink {
   color: $black;
 }
 
-button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus {
-  outline: 3px solid $focus-color;
-  background: $focus-color;
-  color: $black;
-  text-decoration: underline;;
+//5468
+button:focus, input:focus, select:focus, textarea:focus, *[tabindex]:focus, a:focus img {
+  @include element-focus;
 }
 
-a.gi-sitelogo__link:focus {
-box-shadow: 0px 0px 0px 6px $black; 
+//5468 - remove these from standard link focus styles otherwise the images have a yellow background and boxshadow
+a:focus:has(img) {
+  background: transparent;
+  box-shadow: none;
 }
+
 
 // 618 - page margin width
 // 705 - typography
