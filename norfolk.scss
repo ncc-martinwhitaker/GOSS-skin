@@ -367,3 +367,51 @@ $DisabilityConfidentLeaderSVG: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%
     }
 }
 */
+
+
+/*-------------------------------------------------------------------------------
+  5526 - Fire incidents mobile view 
+  --------------------------------------------------------------------------------*/
+  @include mq(sm, max) {
+    div.IncidentTable tbody th,div.IncidentTable tbody td {
+        width:100%;
+        display: inline-block;
+        border: 0
+    }
+
+    div.IncidentTable table tr th, div.IncidentTable table caption {
+        display: none;
+    }
+
+    div.IncidentTable table tr {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    div.IncidentTable tbody td[data-title=Incident] {
+        border-left: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+        border-top: 2px solid #ccc;
+        background: linear-gradient(to top,rgba(0,0,0,0.03),transparent)
+    }
+
+    div.IncidentTable tbody td[data-title=Time],div.IncidentTable tbody td[data-title=Location],div.IncidentTable tbody td[data-title=Summary] {
+        border-left: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+        background: linear-gradient(to top,rgba(0,0,0,0.03),transparent)
+    }
+
+    div.IncidentTable tbody td[data-title=Summary] {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 20px;
+        background: linear-gradient(to top,rgba(0,0,0,0.03),transparent)
+    }
+
+    div.IncidentTable tbody tr td:before,div.IncidentTable tbody tr th:before {
+        content: attr(data-title);
+        display: block;
+        font-weight: 600;
+        padding-bottom: 5px;
+        margin-bottom: 5px
+    }   
+}
