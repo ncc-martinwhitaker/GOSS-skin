@@ -1,8 +1,3 @@
-/* Side menu Width */
-.grid--5col>.grid__cell{
-    width: 22%;
-}
-
 /* Side menu border*/
 .grid__cell--sidemenu {
     border: 1px solid $grey-3;
@@ -13,7 +8,7 @@
     min-height: 30px;
     display: block;
     width: 80%;
-    padding: 10px 30px 10px 55px;
+    padding: 10px 30px 10px 20px;
     box-sizing: border-box;
     color: $black;
     text-decoration: none;
@@ -25,10 +20,17 @@
     content: '\e828';
     color: $black;
     position: absolute;
-    left: 250px;
+    left: 280px;
     top: 50%;
     transform: translateY(60%);
 }
+
+.gi-articletreeview__item--level1 > .gi-articletreeview__toggle:after { left: 255px; }
+.gi-articletreeview__item--level2 > .gi-articletreeview__toggle:after { left: 245px; }
+.gi-articletreeview__item--level3 > .gi-articletreeview__toggle:after { left: 235px; }
+.gi-articletreeview__item--level4 > .gi-articletreeview__toggle:after { left: 225px; }
+.gi-articletreeview__item--level5 > .gi-articletreeview__toggle:after { left: 215px; }
+
 
 .gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
     content: '\e829';
@@ -48,9 +50,7 @@
     text-underline-offset: 4px;
 }
 
-/*.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level1.gi-articletreeview__link--none,*/ 
-    .gi-articletreeview__item--level2 {
+.gi-articletreeview__item--level2 {
     position: relative;
     background-color: $grey-5; 
     border-top: 1px solid $grey-3;
@@ -87,26 +87,36 @@
 
 /* Vertical strip for levels 2, 3, 4 */
 
-.gi-articletreeview__item--level2 .gi-articletreeview__link:before{
+.gi-articletreeview__item--level2 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
     content: "";
     position: absolute;
     left: 20px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: $black;
+    background-color: black;
 }
 
-.gi-articletreeview__item--level3 .gi-articletreeview__link:before{
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before {
     left: 30px;
 }
 
-.gi-articletreeview__item--level4 .gi-articletreeview__link:before{
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before {
     left: 40px;
 }
 
-.gi-articletreeview__item--level5 .gi-articletreeview__link:before{
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
     left: 50px;
+}
+
+.gi-articletreeview__item--level2:not(:has(+ .gi-articletreeview__item--level2), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3:not(:has(+ .gi-articletreeview__item--level3), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4:not(:has(+ .gi-articletreeview__item--level4), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5:not(:has(+ .gi-articletreeview__item--level5), :has(ul)) .gi-articletreeview__link:before {
+    bottom: 50%; 
 }
 
 /* Underline in hover state for levels 2, 3, 4 */
