@@ -45,6 +45,13 @@
     @include a-link-focus;
 }
 
+//5468 - focus style for form inputs and image links
+@mixin element-focus($box-shadow1: 3px, $box-shadow2: 6px, $outline: none) {
+    box-shadow: 0px 0px 0px $box-shadow1 $black, 0px 0px 0px $box-shadow2 $focus-color;
+    border-color: $black;
+    outline: $outline;
+}
+
 // Media queries (to be used with breakpoints variables)
 
 @mixin mq($width, $type: min) {

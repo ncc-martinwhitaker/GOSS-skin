@@ -61,16 +61,6 @@
     text-align: left;
 }  
 
-input:focus, 
-select:focus, 
-textarea:focus, 
-*[tabindex]:focus{
-    outline: 2px solid $black;
-    box-shadow: 0 0 0 4px $focus-color;
-    background: none;
-    text-decoration: none;
-}
-
 .loginform__submit:focus,
 .loginform__submit:focus:hover{
     background-color: $focus-color;

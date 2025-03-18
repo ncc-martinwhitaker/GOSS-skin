@@ -247,16 +247,6 @@ footer.footer {
   .utilitymenu.utilitymenu--bottom {
     margin-bottom: 30px;
   }
-
-  //5392
-  .footer__logos a:focus {
-    box-shadow: 0 0 0 3px $focus-color, 0 0 0 6px $black; //TODO - reference mixin when this is available
-    outline: none;
-    border: none;
-    display: inline-block;
-    background-color: transparent;
-  }
-
   .footer__copy {
     margin: 20px 0px;   
   }
