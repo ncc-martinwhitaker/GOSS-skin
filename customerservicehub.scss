@@ -26,9 +26,11 @@
 /*=========================================================================================
 5507 Highways applications and licences case management - DISCOVERY; Hide 'change status'
 =========================================================================================*/
-.template--selfservice:has([value="hwapplications"]) .a-link--changestatus{
+
+//Rollback, because business is not ready for PRD Release 19/03/2025
+/*.template--selfservice:has([value="hwapplications"]) .a-link--changestatus{
     display: none;
-}
+}*/
 
 
   /*=====================================================
