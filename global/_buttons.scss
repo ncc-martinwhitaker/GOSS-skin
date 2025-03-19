@@ -52,8 +52,7 @@ a.a-panel__link,
 a.a-body__link--cta,
 a.a-body__link--btn-primary-std,
 a.a-body__link--btn-primary-std-dwn,
-a.a-body__link--btn-primary-lge,
-button.btn--disclosure-toggle {
+a.a-body__link--btn-primary-lge {
   background-color: $button-primary-color;
   color: $button-primary-text-color;
   border-bottom: 0px;
@@ -70,8 +69,7 @@ a.a-body__link--btn-primary-lge:hover,
 a.a-body__link--btn-primary-teal-std:hover,
 a.a-body__link--btn-primary-teal-lge:hover,
 a.a-body__link--btn-teal-print-copy:hover,
-button.a-body__link--btn-teal-print-copy:hover,
-button.btn--disclosure-toggle:hover {
+button.a-body__link--btn-teal-print-copy:hover{
   cursor: pointer;
   color: $button-primary-text-color;
   background-color: $button-primary-color-hov;
@@ -85,8 +83,7 @@ a.a-body__link--btn-primary-lge:focus,
 a.a-body__link--btn-primary-teal-std:focus,
 a.a-body__link--btn-primary-teal-lge:focus,
 a.a-body__link--btn-teal-print-copy:focus,
-button.a-body__link--btn-teal-print-copy:focus,
-button.btn--disclosure-toggle:focus {
+button.a-body__link--btn-teal-print-copy:focus{
   color: $black !important;
   background-color: $focus-color;
   border-color: $focus-color;
@@ -106,8 +103,7 @@ a.a-body__link--btn-primary-lge:hover,
 a.a-body__link--btn-primary-teal-std:hover,
 a.a-body__link--btn-primary-teal-lge:hover,
 a.a-body__link--btn-teal-print-copy:hover,
-button.a-body__link--btn-teal-print-copy:hover,
-button.btn--disclosure-toggle:hover {
+button.a-body__link--btn-teal-print-copy:hover{
   text-decoration: underline;
 }
 
@@ -154,7 +150,8 @@ a.a-body__link.a-body__link--cta {
 a.a-body__link--btn-primary-teal-std,
 a.a-body__link--btn-primary-teal-lge,
 a.a-body__link--btn-teal-print-copy,
-button.a-body__link--btn-teal-print-copy {
+button.a-body__link--btn-teal-print-copy,
+button.btn--disclosure-toggle {
   background-color: $button-primary-teal-color;
   color: $button-primary-text-color;
 }
@@ -162,7 +159,8 @@ button.a-body__link--btn-teal-print-copy {
 a.a-body__link--btn-primary-teal-std:hover,
 a.a-body__link--btn-primary-teal-lge:hover,
 a.a-body__link--btn-teal-print-copy:hover,
-button.a-body__link--btn-teal-print-copy:hover {
+button.a-body__link--btn-teal-print-copy:hover,
+button.btn--disclosure-toggle:hover {
   background-color: $button-primary-teal-color-hov;
 }
 
@@ -170,7 +168,8 @@ button.a-body__link--btn-teal-print-copy:hover {
 a.a-body__link--btn-primary-teal-std:focus:hover,
 a.a-body__link--btn-primary-teal-lge:focus:hover,
 a.a-body__link--btn-teal-print-copy:focus:hover,
-button.a-body__link--btn-teal-print-copy:focus:hover {
+button.a-body__link--btn-teal-print-copy:focus:hover,
+button.btn--disclosure-toggle:focus:hover {
   background-color: $focus-color;
   text-decoration: underline;
 }
