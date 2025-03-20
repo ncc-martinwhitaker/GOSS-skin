@@ -1863,6 +1863,15 @@ Metadata modifiers include:
         color: $black;
       }
     }
+
+    //5118 Image link/button focus styling
+    .n-stage__link--logo:focus {
+      //5486
+      @include element-focus;  
+      img {
+        box-shadow: none;
+      }
+    }
   
     .a-panel__summary, p {
       color: $white;

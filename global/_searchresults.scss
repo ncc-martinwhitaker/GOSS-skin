@@ -107,3 +107,9 @@ a.searchresults__itemlink {
         width: 25%;
     }
 }
+
+//5468
+.template--search .gi-accordion__toggle.gi-accordion__toggle--facets:focus {
+    position: relative;
+    z-index: 1;
+}
