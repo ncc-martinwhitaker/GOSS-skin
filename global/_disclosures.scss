@@ -39,7 +39,7 @@ $disclosure-hide-black: url($string2);
 
 .gi-disclosure--body button.gi-disclosure__toggle {
   border: solid $grey-3 1px;
-  padding: 20px 90px 20px 10px;  
+  padding: 20px 100px 20px 10px;  
   border-bottom: 0;
     
   &:hover{
@@ -120,7 +120,7 @@ button.btn--disclosure-toggle{
   display: inline-block;
   top: 50%;
   transform: translateY(-50%);
-  padding-right: 28px;
+  padding-right: 22px;
   border-bottom: solid 3px transparent;
   color: $link-color;  
 }
@@ -239,6 +239,7 @@ button.btn--disclosure-toggle{
 
   h3.gi-disclosure__heading .gi-disclosure__toggle-text {
     font-size: 1.25rem;
+    padding-right: 40px;
   }
 
   .gi-disclosure__toggle:hover {  
