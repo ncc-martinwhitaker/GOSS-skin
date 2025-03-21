@@ -40,6 +40,7 @@ $disclosure-hide-black: url($string2);
 .gi-disclosure--body button.gi-disclosure__toggle {
   border: solid $grey-3 1px;
   padding: 20px 90px 20px 10px;  
+  border-bottom: 0;
     
   &:hover{
     text-decoration: underline;
@@ -142,9 +143,15 @@ button.btn--disclosure-toggle{
   color: $link-color;  
 }
 
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]{
+  border-bottom: 0;
+}
+
 .gi-disclosure--body .gi-disclosure__content{
   padding: 10px 10px;
   border: solid $grey-3 1px;
+  border-top: 0;
+  border-bottom: 0;
 } 
 
 /*.gi-disclosure--body .gi-disclosure__toggle:hover {
