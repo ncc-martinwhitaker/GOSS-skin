@@ -145,6 +145,9 @@ button.btn--disclosure-toggle{
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]{
   border-bottom: 0;
+  &:focus{
+    border-bottom: solid $black 4px;
+  }
 }
 
 .gi-disclosure--body .gi-disclosure__content{
