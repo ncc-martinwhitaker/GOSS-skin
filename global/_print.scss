@@ -145,4 +145,13 @@
     .alert--error h6{
         color: $black; 
     } 
+
+    //5380 Print CSS: single images styling
+    .a-body__image figure.gi-responsiveimage, 
+    .a-body__image .gi-responsiveimage__imagewrapper, 
+    .a-body__image .gi-responsiveimage__image{
+        width: 400px;
+        height: auto;
+    }
+
 }
