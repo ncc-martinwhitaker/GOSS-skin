@@ -32,6 +32,10 @@
     display: none;
 }*/
 
+form[id*="CASEMANAGEMENT"]:has(#CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_CASETYPE[value="highwaysdefect"]) 
+    .icmform input[type="button"].icminput--contrast {
+    display: none;
+}
 
   /*=====================================================
                         Esri CSS
