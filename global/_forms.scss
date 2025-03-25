@@ -452,3 +452,9 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
 .card--forms .nvp__value{
     word-wrap: break-word;
 }
+
+//5625 Highways defects - Hide 'Add an update' on citizen case summary view - DISCOVERY
+form:has(#CASEMANAGEMENTCASESUMMARYV1EN_CASETYPE[value="highwaysdefect"])
+    #CASEMANAGEMENTCASESUMMARYV1EN_ADDUPDATEBTN.icminput.icminput--button.icminput--contrast.icminput--script {
+    display: none;
+}

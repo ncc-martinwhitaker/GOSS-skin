@@ -32,14 +32,6 @@
     display: none;
 }*/
 
-
-//5625 Highways defects - Hide 'Add an update' on citizen case summary view - DISCOVERY
-form:has(#CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_CASETYPE[value="highwaysdefect"])
-    #CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_ADDUPDATEBTN.icminput.icminput--button.icminput--contrast.icminput--script {
-    display: none;
-}
-
-
   /*=====================================================
                         Esri CSS
   =====================================================*/
