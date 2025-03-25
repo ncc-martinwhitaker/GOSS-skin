@@ -1,3 +1,14 @@
+@media (min-width: 1024px) {
+    .grid__cell .grid__cell--sidemenu .grid__cell--cols1 {
+      width: 30%;
+    }
+    
+    .grid__cell .grid__cell--main .grid__cell--cols4 {
+      width: 70%;
+    }
+  }
+  
+
 .gi-articletreeview__link{
     display: flex;
     align-items: flex-start;
@@ -12,6 +23,11 @@
     overflow-wrap: break-word;
 }
 
+//Chevrons
+.gi-articletreeview__toggle{
+    right: 10px;
+}
+
 .gi-articletreeview__toggle:after{
     content: '\e828';
     color: $black;
@@ -19,14 +35,9 @@
     transform: translateY(50%) translateY(-5px);
     top: 50%;
     width: 0px;
+    position: absolute;
+    right: 22px;
 }
-
-.gi-articletreeview__item--level1 > .gi-articletreeview__toggle:after { left: 220px; }
-.gi-articletreeview__item--level2 > .gi-articletreeview__toggle:after { left: 210px; }
-.gi-articletreeview__item--level3 > .gi-articletreeview__toggle:after { left: 200px; }
-.gi-articletreeview__item--level4 > .gi-articletreeview__toggle:after { left: 190px; }
-.gi-articletreeview__item--level5 > .gi-articletreeview__toggle:after { left: 180px; }
-
 
 .gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
     content: '\e829';
@@ -81,6 +92,7 @@
 
 .gi-articletreeview__item{
     border-bottom: 1px solid $grey-3;
+    position: relative;
 }
 
 .gi-articletreeview__item[aria-expanded="true"]{
@@ -128,7 +140,7 @@
     left: 20px;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 3px;
     background-color: $black;
 }
 
