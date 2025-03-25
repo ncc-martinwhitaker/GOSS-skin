@@ -7,7 +7,10 @@ window.addEventListener("beforeprint", () => {
       caption.textContent = altText;
       caption.style.fontSize = "12px";
       caption.style.textAlign = "center";
-      caption.classList.add("print-alt-caption"); 
+      caption.style.breakInside = "avoid"; 
+      caption.style.pageBreakInside = "avoid"; 
+      caption.style.display = "inline-block"; 
+      caption.classList.add("print-alt-caption");
       img.parentNode.insertBefore(caption, img.nextSibling);
     }
   });
@@ -15,6 +18,6 @@ window.addEventListener("beforeprint", () => {
 
 window.addEventListener("afterprint", () => {
   document.querySelectorAll(".print-alt-caption").forEach(caption => {
-    caption.remove(); 
+    caption.remove();
   });
 });
