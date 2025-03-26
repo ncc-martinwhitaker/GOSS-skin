@@ -52,7 +52,8 @@ a.a-panel__link,
 a.a-body__link--cta,
 a.a-body__link--btn-primary-std,
 a.a-body__link--btn-primary-std-dwn,
-a.a-body__link--btn-primary-lge {
+a.a-body__link--btn-primary-lge,
+button.btn--disclosure-toggle {
   background-color: $button-primary-color;
   color: $button-primary-text-color;
   border-bottom: 0px;
@@ -150,8 +151,7 @@ a.a-body__link.a-body__link--cta {
 a.a-body__link--btn-primary-teal-std,
 a.a-body__link--btn-primary-teal-lge,
 a.a-body__link--btn-teal-print-copy,
-button.a-body__link--btn-teal-print-copy,
-button.btn--disclosure-toggle {
+button.a-body__link--btn-teal-print-copy {
   background-color: $button-primary-teal-color;
   color: $button-primary-text-color;
 }

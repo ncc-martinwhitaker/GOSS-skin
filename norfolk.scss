@@ -20,6 +20,10 @@ $button-secondary-color-hov: #424242;
 $button-inverted-secondary-color: #424242;
 $button-inverted-secondary-color-hov: #fff;
 
+button.btn--disclosure-toggle{
+    background-color: $button-primary-teal-color;
+}
+
 @import "global-import";
 @import "global/bookings"; //4903 - moved this reference from global-imports.scss so it doesn't conflict with Museums events styling
 
