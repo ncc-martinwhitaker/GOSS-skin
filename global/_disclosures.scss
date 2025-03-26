@@ -56,10 +56,10 @@ $disclosure-hide-black: url($string2);
   }
 }
 
-button.btn--disclosure-toggle{
+button.btn--disclosure-toggle { //TODO Refactor - this class also exists in buttons.scss and below in this file, can they all be combined into one for easier debugging?
   color: $white;
   border-radius: 6px; 
-  background-image: $disclosure-white; 
+  background-image: $disclosure-white;
   background-repeat: no-repeat;  
   background-position: center right 8px;
   background-size: 20px;
@@ -72,7 +72,7 @@ button.btn--disclosure-toggle{
   }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle:focus { 
+/*.gi-disclosure--body .gi-disclosure__toggle:focus { 
   border: solid $black 4px;
   outline: 4px solid $focus-color;
   outline-offset: 0px;
@@ -95,8 +95,8 @@ button.btn--disclosure-toggle{
       text-decoration: none;
       color: $black;
     }
-  }
-}
+  } 
+}*/
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
   &::after {
@@ -145,9 +145,9 @@ button.btn--disclosure-toggle{
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]{
   border-bottom: 0;
-  &:focus{
+  /*&:focus{
     border-bottom: solid $black 4px;
-  }
+  }*/
 }
 
 .gi-disclosure--body .gi-disclosure__content{
@@ -159,11 +159,11 @@ button.btn--disclosure-toggle{
 
 /*.gi-disclosure--body .gi-disclosure__toggle:hover {
   background-color: $grey-5;
-}
+}*/
 
-.gi-disclosure--body .gi-disclosure__toggle:focus { 
+.gi-disclosure--body .gi-disclosure__toggle:focus {
   z-index: 1;
-  text-decoration: none; //5468
+  /*text-decoration: none; //5468
    //5468
   &:hover {
     text-decoration: underline;
@@ -174,10 +174,10 @@ button.btn--disclosure-toggle{
     color: $black;
     background-color: $focus-color;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
-  }
+  }*/
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
+/*.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
   &::after {
     border-bottom: solid $black 3px;
     color: $black;
@@ -276,7 +276,7 @@ button.btn--disclosure-toggle{
 
 // 3831 Buttons part 2
 
-button.btn--disclosure-toggle {
+button.btn--disclosure-toggle { //TODO Refactor - this class also exists in buttons.scss and above in this file, can they all be combined into one for easier debugging?
   padding: 5px 35px 5px 12px;
   box-sizing: border-box;
   margin: 0 10px 10px 0;
