@@ -11,6 +11,7 @@ window.addEventListener("beforeprint", () => {
       caption.style.pageBreakInside = "avoid"; 
       caption.style.display = "inline-block"; 
       caption.classList.add("print-alt-caption");
+      caption.style.color = "black";
       img.parentNode.insertBefore(caption, img.nextSibling);
     }
   });
