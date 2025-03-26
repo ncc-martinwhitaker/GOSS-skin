@@ -1,0 +1,202 @@
+@media (min-width: 1024px) {
+    .grid__cell .grid__cell--sidemenu .grid__cell--cols1 {
+      width: 30%;
+    }
+    
+    .grid__cell .grid__cell--main .grid__cell--cols4 {
+      width: 70%;
+    }
+  }
+  
+
+.gi-articletreeview__link{
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 10px 5px 20px;
+    box-sizing: border-box;
+    color: $black;
+    text-decoration: none;
+    border-bottom: none;
+    flex-wrap: wrap;
+    max-width: calc(100% - 70px);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+//Chevrons
+.gi-articletreeview__toggle{
+    right: 10px;
+}
+
+.gi-articletreeview__toggle:after{
+    content: '\e828';
+    color: $black;
+    display: inline-block;
+    transform: translateY(50%) translateY(-5px);
+    top: 50%;
+    width: 0px;
+    position: absolute;
+    right: 22px;
+}
+
+.gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
+    content: '\e829';
+}
+
+.gi-articletreeview__item[aria-selected="true"] > .gi-articletreeview__link{
+    outline: none;
+}
+
+.gi-articletreeview__item[aria-expanded="true"] 
+    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level1.gi-articletreeview__link--none,
+.gi-articletreeview__item[aria-expanded="true"] 
+    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level2.gi-articletreeview__link--none,
+.gi-articletreeview__item[aria-expanded="true"] 
+    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level3.gi-articletreeview__link--none,
+.gi-articletreeview__item[aria-expanded="true"] 
+    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level4.gi-articletreeview__link--none,
+.gi-articletreeview__item[aria-expanded="true"] 
+    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level5.gi-articletreeview__link--none {
+    color: $teal;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+.gi-articletreeview__item--level2 {
+    position: relative;
+    background-color: $grey-5; 
+}
+
+.gi-articletreeview__item--level3,
+.gi-articletreeview__item--level4,
+.gi-articletreeview__item--level5 {
+    position: relative;
+    background-color: $grey-4; 
+}
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link{
+    background-color: $grey-5;
+}
+
+.gi-articletreeview__item--level3 .gi-articletreeview__link,
+.gi-articletreeview__item--level4 .gi-articletreeview__link,
+.gi-articletreeview__item--level5 .gi-articletreeview__link{
+    background-color: $grey-4;
+}
+
+.gi-articletreeview__list {
+    border: 1px solid $grey-3;
+    border-bottom: 0;
+}
+
+.gi-articletreeview__item{
+    border-bottom: 1px solid $grey-3;
+    position: relative;
+}
+
+.gi-articletreeview__item[aria-expanded="true"]{
+    border-bottom: 0
+}
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link{
+    padding-left: 35px;
+}
+
+.gi-articletreeview__item--level3 .gi-articletreeview__link{
+    padding-left: 45px;
+}
+
+.gi-articletreeview__item--level4 .gi-articletreeview__link{
+    padding-left: 55px;
+}
+
+.gi-articletreeview__item--level5 .gi-articletreeview__link{
+    padding-left: 65px;
+}
+
+.gi-articletreeview__item--level2 .gi-articletreeview__link,
+.gi-articletreeview__item--level3 .gi-articletreeview__link,
+.gi-articletreeview__item--level4 .gi-articletreeview__link,
+.gi-articletreeview__item--level5 .gi-articletreeview__link{
+    display: inline-block;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.gi-articletreeview__item--level1 .gi-articletreeview__list{
+    border-left: 0;
+    border-right: 0;
+}
+
+/* Vertical strip for levels 2, 3, 4 */
+.gi-articletreeview__item--level2 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: $black;
+}
+
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before {
+    left: 30px;
+}
+
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before {
+    left: 40px;
+}
+
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
+    left: 50px;
+}
+
+.gi-articletreeview__item--level2:not(:has(+ .gi-articletreeview__item--level2), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3:not(:has(+ .gi-articletreeview__item--level3), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4:not(:has(+ .gi-articletreeview__item--level4), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5:not(:has(+ .gi-articletreeview__item--level5), :has(ul)) .gi-articletreeview__link:before {
+    bottom: 50%; 
+}
+
+/* Underline in hover state for levels 2, 3, 4 */
+.gi-articletreeview__item--level2 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:hover{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Focus state*/
+.gi-articletreeview__item:focus > .gi-articletreeview__link,
+.gi-articletreeview__link:focus,
+*[tabindex]:focus{
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
+
+/*.gi-articletreeview__item--level1:focus,
+.gi-articletreeview__item--level2:focus,
+.gi-articletreeview__item--level3:focus,
+.gi-articletreeview__item--level4:focus,
+.gi-articletreeview__item--level5:focus{
+    box-shadow: 0 0 0 2px $black, 0px 0 0 5px $focus-color;
+    background: $white;
+    z-index: 1;
+    
+}
+
+.gi-articletreeview__item--level1 .gi-articletreeview__link:focus, 
+.gi-articletreeview__item--level2 .gi-articletreeview__link:focus, 
+.gi-articletreeview__item--level3 .gi-articletreeview__link:focus, 
+.gi-articletreeview__item--level4 .gi-articletreeview__link:focus, 
+.gi-articletreeview__item--level5 .gi-articletreeview__link:focus{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}*/
