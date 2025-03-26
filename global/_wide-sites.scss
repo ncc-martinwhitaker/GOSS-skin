@@ -8,3 +8,14 @@
 .gi-sitenav__item--lvl1 {
     margin: 0px auto;
 }
+
+/*====================================================================================
+5462 Template alignment - content main settings for Wide format sites (global)
+====================================================================================*/
+.template--myaccount .maincontent > .container,
+.template--taskmanagement .maincontent > .container,
+.template--selfservice .maincontent > .container,
+.template--authentication .maincontent > .container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
