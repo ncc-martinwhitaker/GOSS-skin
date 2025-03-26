@@ -92,3 +92,8 @@
 .a-body{
     padding: 0;
 }
+
+// 5632 CHS case management - CSS changes to rename tabs, rename and hide buttons AND
+.emailactive input[value="Contact"] {
+    display: none;
+}
