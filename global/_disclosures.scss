@@ -56,8 +56,8 @@ $disclosure-hide-black: url($string2);
   }
 }
 
-.gi-disclosure:last-child:has(.gi-disclosure__content--closed),
-.gi-disclosure--body:last-child .gi-disclosure__content {
+//5626
+.gi-disclosure:not(:has(+ .gi-disclosure)) {
   border-bottom: 1px solid $grey-3;
 }
 
