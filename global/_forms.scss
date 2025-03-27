@@ -452,3 +452,8 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
 .card--forms .nvp__value{
     word-wrap: break-word;
 }
+
+//5642 Highways defects - table in case summary view
+.icmform td{
+    width: 50%;
+}
