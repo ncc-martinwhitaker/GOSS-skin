@@ -58,56 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CASETYPE");
         if (!form || form.value !== "clienthardshiprequest") return;
 
-        // Update button values using specific IDs
-        const tasksBtn = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN");
-        if (tasksBtn) {
-            tasksBtn.value = "Emails";
-        }
-        
-        const emailsBtn = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABEMAILLOGBTN");
-        if (emailsBtn) {
-            emailsBtn.value = "Contacts";
-        }
-
         // Update 'Add new task' button text
         const createNewTaskBtn = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CREATENEWTASKBTN");
         if (createNewTaskBtn && createNewTaskBtn.value === "Add new task") {
             createNewTaskBtn.value = "Add new email";
         }
-
-        // Update styles for all required tab content sections
-        const tabIds = ["cm-tab-content-details", "cm-tab-content-tasks", "cm-tab-content-history", "cm-tab-content-attachments", "cm-tab-content-emails", "cm-tab-content-additional"];
-        tabIds.forEach(id => {
-            const tab = document.getElementById(id);
-            if (tab) {
-                tab.style.fontSize = "18px";
-                tab.style.fontWeight = "bold";
-            }
-        });
     }
 
     updateForm(); // Execute update on page load
-});
-
-// Hide "Contact" button only within the Emails tab
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".icminput--button");
-    const emailButton = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN");
-
-    // Add the emailactive class to the body on page load if the button has the value ‘Emails’
-    if (emailButton && emailButton.value === "Emails") {
-        document.body.classList.add("emailactive");
-    }
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            if (this.id === "CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN" && this.value === "Emails") {
-                document.body.classList.add("emailactive");
-            } else {
-                document.body.classList.remove("emailactive");
-            }
-        });
-    });
 });
 
 //Linked cases
@@ -145,6 +103,74 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.id === "CASEMANAGEMENTCASEDETAILSV1EN_LINKS_TABTASKSBTN2" || this.id === "CASEMANAGEMENTCASEDETAILSV1EN_LINKS_TABLINKEDCASESBTN2") {
                 document.body.classList.add("emailactive");
             } else {
+                document.body.classList.remove("emailactive");
+            }
+        });
+    });
+});
+
+// 5643 CHS case management - CSS changes to rename tabs, rename and hide buttons (Enquiry view)
+function updateButtonLabels() {
+    document.querySelectorAll('form').forEach(form => {
+        let hiddenInputs = [
+            form.querySelector('input[type="hidden"]#CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_CASETYPE'),
+            form.querySelector('input[type="hidden"]#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CASETYPE')
+        ];
+
+        if (hiddenInputs.some(input => input && input.value === "clienthardshiprequest")) {
+            let tasksButtons = [
+                form.querySelector('input[type="button"]#CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_TABTASKSBTN'),
+                form.querySelector('input[type="button"]#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN')
+            ];
+            
+            let emailsButtons = [
+                form.querySelector('input[type="button"]#CASEMANAGEMENTCASEENQUIRYVIEWV1EN_DETAILS_TABEMAILLOGBTN'),
+                form.querySelector('input[type="button"]#CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABEMAILLOGBTN')
+            ];
+
+            tasksButtons.forEach(button => { if (button) button.value = "Emails"; });
+            emailsButtons.forEach(button => { if (button) button.value = "Contacts"; });
+        }
+    });
+
+    // Update styles for all required tab content sections
+    const tabIds = ["cm-tab-content-details", "cm-tab-content-tasks", "cm-tab-content-history", "cm-tab-content-attachments", "cm-tab-content-emails", "cm-tab-content-additional"];
+    tabIds.forEach(id => {
+        const tab = document.getElementById(id);
+        if (tab) {
+            tab.style.fontSize = "18px";
+            tab.style.fontWeight = "bold";
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", updateButtonLabels);
+
+//Hide Contact button in Emails 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('input[type="button"]');
+    const emailButton = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN");
+    const linkedCasesButton = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_LINKS_TABLINKEDCASESBTN2");
+ 
+    // Check if either button is already selected on page load
+    if (emailButton?.classList.contains("icminput--contrast") || linkedCasesButton?.classList.contains("icminput--contrast")) {
+        console.log("Page Load: One of the input buttons has 'icminput--contrast', adding 'emailactive' to body.");
+        document.body.classList.add("emailactive");
+    } else {
+        console.log("Page Load: No input buttons have 'icminput--contrast'.");
+    }
+ 
+    // Add event listener to each input button
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            console.log(`Input Button Clicked: ${this.id}`);
+ 
+            if (this.id === "CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_TABTASKSBTN" || 
+                this.id === "CASEMANAGEMENTCASEDETAILSV1EN_LINKS_TABLINKEDCASESBTN2") {
+                console.log(`Input Button Clicked: ${this.id} - Adding 'emailactive' to body.`);
+                document.body.classList.add("emailactive");
+            } else {
+                console.log(`Input Button Clicked: ${this.id} - Removing 'emailactive' from body.`);
                 document.body.classList.remove("emailactive");
             }
         });
