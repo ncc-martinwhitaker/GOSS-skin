@@ -1198,19 +1198,7 @@ $string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0
 $string2: str-replace($string, ' ', '%20');
 $disclosure-white: url($string2);
 
-$string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%23000000' stroke-width='2'/%3E%3Cpath d='M6,10L12,16L18,10' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
-$string2: str-replace($string, ' ', '%20');
-$disclosure-show-black: url($string2);
-
-$string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%23000000' stroke-width='1.5'/%3E%3Cpath d='M6.5,14.5L12,8.5L17.5,14.5' fill='none' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
-$string2: str-replace($string, ' ', '%20');
-$disclosure-hide-black: url($string2);
- 
 $disclosure-color: #4840E3; 
-
-.gi-disclosure--body{
-  border: none;
-}
 
 .gi-disclosure:not(:has(+ .gi-disclosure)) {
   border-bottom: none;
@@ -1221,107 +1209,37 @@ $disclosure-color: #4840E3;
   padding: 20px 90px 20px 10px;  
     
   &:hover{
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
     color: $disclosure-color;
     background-color: $grey-4;
     
     &:after {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
       color: $disclosure-color;
     }    
   }
 }
 
 button.btn--disclosure-toggle{
-  color: $white;
-  background-color: $disclosure-color;
-  border-radius: 6px; 
-  background-image: $disclosure-white; 
-  background-repeat: no-repeat;  
-  background-position: center right 8px;
-  background-size: 20px;
-
-  &:focus{
-    background-image: $disclosure-show-black;
-    background-repeat: no-repeat;  
-    background-position: center right 8px;
-    background-size: 20px;
-  }
+  background-color: $disclosure-color; //TODO Refactor - add $disclosure-color into variables so all sites can change, remove this style from here and update the equivalent style in buttons.scss to use $disclosure-color rather than $button-primary-teal-color
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:focus { 
-  border: solid $black 4px;
-  outline: 4px solid $focus-color;
-  outline-offset: 0px;
-  position: relative;
-  z-index: 1;
   background-color: $grey-4;
-  text-decoration: none;
-
-  &::after {
-    border-bottom: solid $black 3px; 
-    color: $black;
-    background-color: $focus-color;
-    background-image: $disclosure-show-black;
-  }
-
-  &:hover{
-    text-decoration: none;
-    color: $black;
-
-    &::after{
-      text-decoration: none;
-      color: $black;
-    }
-  }
-}
-
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
-  &::after {
-    border-bottom: solid $black 3px;
-    color: $black;
-    background-color: $focus-color;
-    background-image: $disclosure-hide-black;
-  }
 }
 
 .gi-disclosure--body .gi-disclosure__toggle::after {
-  content: "Show";
-  font-family: 'Assistant', 'Open Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background-color: transparent;    
   background-image:$disclosure-show-purple; 
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: 18px 18px;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
   padding-right: 28px;
-  border-bottom: solid 3px transparent;
-  color: $disclosure-color;  
+  color: $disclosure-color;
 }
   
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]::after {
-  content: "Hide";
-  font-family: 'Assistant', 'Open Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background-color: transparent;    
-  background-image: $disclosure-hide-purple;
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: 18px 18px;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-right: 28px;
-  border-bottom: solid 3px transparent;
-  color: $disclosure-color;  
+.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true] {
+  border-bottom: 1px solid #ccc;
+
+  &::after {
+    background-image: $disclosure-hide-purple;
+    color: $disclosure-color;  
+  }
+  
 }
 
 .gi-disclosure--body .gi-disclosure__content{

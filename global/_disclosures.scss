@@ -61,7 +61,7 @@ $disclosure-hide-black: url($string2);
   border-bottom: 1px solid $grey-3;
 }
 
-button.btn--disclosure-toggle{
+button.btn--disclosure-toggle { //TODO Refactor - this class also exists in buttons.scss and below in this file, can they all be combined into one for easier debugging?
   color: $white;
   border-radius: 6px; 
   background-image: $disclosure-white; 
@@ -74,32 +74,6 @@ button.btn--disclosure-toggle{
     background-repeat: no-repeat;  
     background-position: center right 8px;
     background-size: 20px;
-  }
-}
-
-.gi-disclosure--body .gi-disclosure__toggle:focus { 
-  border: solid $black 4px;
-  outline: 4px solid $focus-color;
-  outline-offset: 0px;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-
-  &::after {
-    border-bottom: solid $black 3px; 
-    color: $black;
-    background-color: $focus-color;
-    background-image: $disclosure-show-black;
-  }
-
-  &:hover{
-    text-decoration: none;
-    color: $black;
-
-    &::after{
-      text-decoration: none;
-      color: $black;
-    }
   }
 }
 
@@ -150,9 +124,6 @@ button.btn--disclosure-toggle{
 
 .gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]{
   border-bottom: 0;
-  &:focus{
-    border-bottom: solid $black 4px;
-  }
 }
 
 .gi-disclosure--body .gi-disclosure__content{
@@ -160,74 +131,12 @@ button.btn--disclosure-toggle{
   border: solid $grey-3 1px;
   border-top: 0;
   border-bottom: 0;
-} 
-
-/*.gi-disclosure--body .gi-disclosure__toggle:hover {
-  background-color: $grey-5;
 }
 
 .gi-disclosure--body .gi-disclosure__toggle:focus { 
   z-index: 1;
-  text-decoration: none; //5468
-   //5468
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &::after {
-    border-bottom: solid $black 3px; 
-    color: $black;
-    background-color: $focus-color;
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%23050505'/%3E%3C/svg%3E");
-  }
 }
 
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]:focus {
-  &::after {
-    border-bottom: solid $black 3px;
-    color: $black;
-    background-color: $focus-color;
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%23050505'/%3E%3C/svg%3E");
-  }
-}
-
-.gi-disclosure--body .gi-disclosure__toggle::after {
-  content: "Show";
-  font-family: 'Assistant', 'Open Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background-color: transparent;
-  //5227 Make the content disclosure as well as the forms disclosure
-  background-image: $disclosure-show-blue-web;//url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M1.41%200.579956L6%205.16996L10.59%200.579956L12%201.99996L6%207.99996L0%201.99996L1.41%200.579956Z'%20fill='%231f78c7'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: 18px 18px;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-right: 28px;
-  border-bottom: solid 3px transparent;
-  color: $link-color;
-}
-
-.gi-disclosure--body .gi-disclosure__toggle[aria-expanded=true]::after {
-  content: "Hide";
-  font-family: 'Assistant', 'Open Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background-color: transparent;
-  //5227 Make the content disclosure as well as the forms disclosure
-  background-image: $disclosure-hide-blue-web;//url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%3E%3Cpath%20d='M10.59%207.41992L6%202.82992L1.41%207.41992L1.2414e-07%205.99992L6%20-7.87258e-05L12%205.99992L10.59%207.41992Z'%20fill='%231f78c7'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: 18px 18px;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-right: 28px;
-  border-bottom: solid 3px transparent;
-  color: $link-color;
-}*/
 
 .event .event__body .gi-disclosure.gi-disclosure--body {
 
@@ -281,7 +190,7 @@ button.btn--disclosure-toggle{
 
 // 3831 Buttons part 2
 
-button.btn--disclosure-toggle {
+button.btn--disclosure-toggle { //TODO Refactor - this class also exists in buttons.scss and above in this file, can they all be combined into one for easier debugging?
   padding: 5px 35px 5px 12px;
   box-sizing: border-box;
   margin: 0 10px 10px 0;
