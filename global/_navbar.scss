@@ -332,3 +332,13 @@ nav.gi-sitenav.gi-sitenav--desktop {
 2765 - museums navbar mobile
 -------------------------------------------------------------------------------------------
 */
+
+//5655 GNGB accessibility - colour contrast on navigation menu
+.sitemenu__btn--haschildren::after{
+    color: $black;
+  }
+
+  
+.sitemenu--mobile .sitemenu__link:focus:hover{
+    background-color: $focus-color;
+}

@@ -458,3 +458,8 @@ form:has(#CASEMANAGEMENTCASESUMMARYV1EN_CASETYPE[value="highwaysdefect"])
     #CASEMANAGEMENTCASESUMMARYV1EN_ADDUPDATEBTN.icminput.icminput--button.icminput--contrast.icminput--script {
     display: none;
 }
+
+//5642 Highways defects - table in case summary view
+.icmform td{
+    width: 50%;
+}

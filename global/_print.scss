@@ -109,6 +109,41 @@
         border-color: $black;
     }
 
+    //5537 Print CSS: Alerts styling
+    .alert p+p{
+        padding-top: 0;
+    }
+
+    p.gi-info, 
+    p.gi-info--alert,
+    p.gi-info--primary, 
+    p.gi-info--secondary{
+        color: $black;
+        background-color: $white !important;
+        border: 1px solid $black !important;
+        border-color: $black;
+        padding: 20px !important;
+        padding-left: 50px !important;
+    }      
+
+    $string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    $gi-info-black: url($string2);
+
+    $string:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z' /%3E%3C/svg%3E";
+    $string2: str-replace($string, ' ', '%20');
+    $gi-info-alert-black: url($string2);
+    
+    p.gi-info:before,
+    p.gi-info--primary::before,
+    p.gi-info--secondary:before {
+       content: $gi-info-black !important;        
+    }
+
+    p.gi-info--alert:before{
+        content: $gi-info-alert-black !important;
+    }
+
     .alert:has(.alert__title):before,
     .alert .btn--cancel:after,
     .highlightbox__bodytext,
@@ -145,4 +180,13 @@
     .alert--error h6{
         color: $black; 
     } 
+
+    //5380 Print CSS: single images styling
+    .a-body__image figure.gi-responsiveimage, 
+    .a-body__image .gi-responsiveimage__imagewrapper, 
+    .a-body__image .gi-responsiveimage__image{
+        width: 400px;
+        height: auto;
+    }
+
 }

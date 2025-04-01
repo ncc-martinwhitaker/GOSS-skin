@@ -91,3 +91,16 @@
 .a-body{
     padding: 0;
 }
+
+// 5632 CHS case management - CSS changes to rename tabs, rename and hide buttons AND
+.emailactive  .icmform input[value="Contact"] {
+    display: none;
+}
+
+/*======================================================================
+5569 Update 'Back to My Account' link on my cases/manage cases article
+=======================================================================*/
+.template--selfservice:not(.template--formsservice) .a-body__link {
+    display: none;
+}
+
