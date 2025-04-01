@@ -2219,6 +2219,40 @@ Metadata modifiers include:
   .a-panel.a-panel--pt.a-panel--render.a-panel--blog.a-panel--hasbackground {
     padding: 32px 20px;
   }
+
+  //5618
+  .grid--list .card--blog {
+    text-align: left;
+    border-radius: $blog-border-radius;
+
+    h3 {
+      line-height: 1; //Added so that focus style looks correct and matches list cards
+    }
+
+    a {
+      display: inline;
+      font-size: $h5-font-size;
+      color: $list-panel-link-color;
+      text-decoration: underline;
+      text-decoration-thickness: max(1px, .065rem);
+      text-decoration-skip-ink: none;
+      text-underline-offset: .1578em;
+      &:hover {
+        @extend %a-link-underline-hover;
+      }
+      &:focus {
+        @extend %a-link-focus;
+      }
+    }
+
+    .nvp--blog-author, .card__imagecontainer {
+      display: none;
+    }
+  }
+  //MM - display images on blog cards - 5618
+  .body--display-list-images .grid--list .card--blog .card__imagecontainer {
+    display: block; 
+  }
   
   // MM - opaque-cards-dark
   .a-panel--opaque-cards-dark.a-panel--pt.a-panel--render.a-panel--hasbackground.a-panel--blog {

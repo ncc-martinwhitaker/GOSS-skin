@@ -97,3 +97,11 @@
 .emailactive  .icmform input[value="Contact"] {
     display: none;
 }
+
+/*======================================================================
+5569 Update 'Back to My Account' link on my cases/manage cases article
+=======================================================================*/
+.template--selfservice:not(.template--formsservice) .a-body__link {
+    display: none;
+}
+
