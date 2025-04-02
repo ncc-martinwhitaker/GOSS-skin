@@ -153,3 +153,35 @@ span.btn__text.gi-sitesearch__buttontext.accessibility {
       }
   }
 }
+
+//5621 Search button styling - Chill theme
+.gi-sitesearch__container:after{
+  width: auto;
+}
+
+.gi-sitesearch--searchtemplate .gi-sitesearch__container{
+  display: flex;
+}
+
+.gi-sitesearch--searchtemplate {
+
+  .gi-sitesearch__searchtoggle {
+    height: 35px;
+    border: none;
+    width: auto;
+  }
+
+  .gi-sitesearch__button {
+    border: none;
+    width: auto;
+    height: 50px;
+    min-height: auto;
+    width: 110px;
+    background-color: $button-search-background-color;
+    border-radius: 0 4px 4px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
