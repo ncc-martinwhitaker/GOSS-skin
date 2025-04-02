@@ -297,6 +297,7 @@ a.a-body__link.a-body__link--btn-inverted-secondary:hover, a.a-body__link--btn-i
 
 .a-panel__link.a-panel__link--pt {
   color: $button-primary-text-color; 
+  border-radius: 6px; //5660 Panel links - cta buttons on panels - add radius
 }
 
 .a-panel__link.a-panel__link--pt:hover {
