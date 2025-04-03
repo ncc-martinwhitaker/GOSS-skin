@@ -311,3 +311,14 @@
     }
   }
 }
+
+/*===================================================
+5658 Error message contrast - Museums event search
+===================================================*/
+.event-search__datepicker-error-message--from,
+.event-search__datepicker-error-message--to,
+.event-search__datepicker-error-message--empty,
+.event-search__datepicker-error-message--order{
+  color: #990000;
+}
+
