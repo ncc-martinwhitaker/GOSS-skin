@@ -418,5 +418,9 @@ display: none;
 /*====================================================================
 3256
 ====================================================================*/
-//.sitemenu__btn--haschildren::after { color:$black;} - moved to header.scss
+.sitemenu__btn--haschildren::after { color:$black;} 
+
+.sitemenu--mobile .sitemenu__link:focus:hover{
+    background-color: $focus-color;
+  }
 

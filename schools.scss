@@ -397,13 +397,9 @@ $header-utilitymenu-color: $grey-4;
 /*==================================================
 5161 Mobile nav - white chevron on grey background - moved to header.scss
 ==================================================*/
-/*.sitemenu__btn--haschildren::after{
+.sitemenu__btn--haschildren::after{
     color: $black;
-}*/
-
-
-
-
+}
 
 
 //=================================================================================

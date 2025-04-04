@@ -832,6 +832,10 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 /*==================================================
 5212 Mobile nav - white chevron on grey background - moved to header.scss
 ==================================================*/
-/*.sitemenu__btn--haschildren::after{
+.sitemenu__btn--haschildren::after{
     color: $black;
-}*/
+}
+
+.sitemenu--mobile .sitemenu__link:focus:hover{
+    background-color: $focus-color;
+  }
