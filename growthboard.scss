@@ -841,9 +841,13 @@ h3.gi-disclosure__heading .gi-disclosure__toggle-text{
   }
 }
   
-  
+.footer {
+  padding: 0;
+}
+
 footer.footer {
-  box-shadow: 0px -140px rgba(0,0,0,1) inset;
+  box-shadow: 0px -100px rgba(0,0,0,1) inset;//5651 were -140px
+  border-top: 10px solid $white;
 
   .utilitymenu.utilitymenu--bottom {
     margin-bottom: 30px;
