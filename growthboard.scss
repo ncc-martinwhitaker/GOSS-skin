@@ -1267,3 +1267,8 @@ button.btn--disclosure-toggle{
   align-items: center;
   padding-bottom: 20px;
 }
+
+.a-panel__content[aria-label="Greater Norwich Growth Board partners"] 
+  h2.a-panel__title{
+    display: none;
+  }
