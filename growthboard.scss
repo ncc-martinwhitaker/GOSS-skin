@@ -1259,3 +1259,11 @@ button.btn--disclosure-toggle{
 .sitemenu--mobile .sitemenu__link:focus:hover{
   background-color: $focus-color;
 }
+
+.a-panel__content[aria-label="Greater Norwich Growth Board partners"] 
+  .a-panel__body.a-body.a-body--panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
