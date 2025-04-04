@@ -419,13 +419,3 @@ $DisabilityConfidentLeaderSVG: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%
         margin-bottom: 5px
     }   
 }
-
-/*========================
-5687 Remove the smiles 
-========================*/
-body[data-print-url="https://www.norfolk.gov.uk/cmav"][data-template="formsservice"] .feedback,
-body[data-print-url="https://norfolk.ncc1-dev.gosshosted.com/cmav"][data-template="formsservice"] .feedback,
-body[data-print-url="https://norfolk.ncc1-tst.gosshosted.com/cmav"][data-template="formsservice"] .feedback,
-body[data-print-url="https://norfolk.ncc1-prp.gosshosted.com/cmav"][data-template="formsservice"] .feedback {
-    display: none;
-}
