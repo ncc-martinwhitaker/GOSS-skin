@@ -1271,4 +1271,10 @@ button.btn--disclosure-toggle{
 .a-panel__content[aria-label="Greater Norwich Growth Board partners"] 
   h2.a-panel__title{
     display: none;
-  }
+}
+
+//add padding-top between partners and utility menu
+.grid--footer > .grid__cell:first-child,
+.grid--footer > .grid__cell{
+  padding-top: 30px;
+}
