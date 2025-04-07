@@ -64,8 +64,6 @@
     .cky-revisit-bottom-left,
     .a-panel__content[aria-label="SEARCH"],
     .a-panel__search,
-    .a-panel.a-panel--hasbackground .a-panel__title,
-    .a-panel--pt .a-panel__summary,
     .n-stage__link.n-stage__link--logo img,
     .gi-sitenav.gi-sitenav--stage,
     .a-body__link .a-body__link--cta,
@@ -187,6 +185,40 @@
     .a-body__image .gi-responsiveimage__image{
         width: 400px;
         height: auto;
+    }
+
+    //5167 Print CSS: panel styling
+    .grid.grid--list.grid--4col,
+    .grid.grid--list.grid--3col,
+    .grid .grid--feature .grid--parallax .grid--2co,
+    .grid.grid--feature.grid--4col, 
+    .grid.grid--feature.grid--2col{
+        display: inline-grid;
+    }
+
+    .grid[data-grid-mincolwidth="250"]>.grid__cell,
+    .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell,
+    .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell {
+        width: 100%;
+    }
+
+    .grid__cell--listitem{
+        padding: 10px;
+    }
+
+    .a-panel__link .a-panel__link--pt,
+    .a-panel__linkwrap{
+        display: none;
+    }
+
+    .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-light .a-panel__content .a-panel__title,
+    .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-light .a-panel__content .a-panel__summary {
+      display: block;     }
+    
+
+    .a-panel.a-panel--hasbackground .a-panel__title,
+    .a-panel--pt .a-panel__summary {
+        display: none;
     }
 
 }
