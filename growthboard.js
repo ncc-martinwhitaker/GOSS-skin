@@ -190,3 +190,38 @@ function adjustHeading() {
 
 // Execute the function after the page loads
 document.addEventListener('DOMContentLoaded', adjustHeading);
+
+/*========================================================================
+5651 GNGB accessibility - repeating panel on pages
+========================================================================*/
+document.addEventListener('DOMContentLoaded', function () {
+    // Find the partners panel
+    const partnersPanel = document.querySelector('.a-panel__content[aria-label="Greater Norwich Growth Board partners"]'|| '.a-panel__content[aria-label="Growth Board partners"]');
+  
+    if (partnersPanel) {
+      // Hide the specific block using display: none
+      const hiddenPanel = document.querySelector('.a-panel__content[aria-label="Growth Board partners"]' || '.a-panel__content[aria-label="Greater Norwich Growth Board partners"]');
+      if (hiddenPanel) {
+        hiddenPanel.style.display = 'none';
+      }
+  
+      // Find or create a footer
+      let footer = document.querySelector('footer');
+      if (!footer) {
+        footer = document.createElement('footer');
+        document.body.appendChild(footer);
+      }
+  
+      // Apply styles to the moved partners panel
+      partnersPanel.setAttribute('role', 'complementary');
+      partnersPanel.style.backgroundColor = '#fff';
+      partnersPanel.style.maxWidth = 'none';
+      partnersPanel.style.padding = '10px 0 0 0';
+  
+      // Move the panel to the top of the footer
+      footer.prepend(partnersPanel);
+  
+      // Ensure visibility after moving
+      setTimeout(() => partnersPanel.classList.remove('hidden'), 0);
+    }
+  });  
