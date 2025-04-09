@@ -324,6 +324,10 @@ div.LookupTable tr {
     background: $white;
 }
 
+//5642 Highways defects - table in case summary view
+#CASEMANAGEMENTCASESUMMARYV1EN_READONLYTEMPLATE .icmformdatapagetable .icmformdatalabel{
+    width: 270px;  // same as table above on the page that uses  >>>------>  .tablecm tbody th {width: 270px;}
+}
 
 
 /*--------------------------------------------------------------*/
@@ -457,9 +461,4 @@ form .chosen-drop ul.chosen-results li.active-result.highlighted {
 form:has(#CASEMANAGEMENTCASESUMMARYV1EN_CASETYPE[value="highwaysdefect"])
     #CASEMANAGEMENTCASESUMMARYV1EN_ADDUPDATEBTN.icminput.icminput--button.icminput--contrast.icminput--script {
     display: none;
-}
-
-//5642 Highways defects - table in case summary view
-.icmform td{
-    width: 50%;
 }
