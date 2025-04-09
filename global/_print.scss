@@ -206,19 +206,31 @@
         padding: 10px;
     }
 
-    .a-panel__link .a-panel__link--pt,
-    .a-panel__linkwrap{
-        display: none;
-    }
-
     .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-light .a-panel__content .a-panel__title,
     .a-panel.a-panel--pt.a-panel--default.a-panel--render.a-panel--opaque-cards-light .a-panel__content .a-panel__summary {
       display: block;     }
     
 
     .a-panel.a-panel--hasbackground .a-panel__title,
-    .a-panel--pt .a-panel__summary {
-        display: none;
+    .a-panel--pt .a-panel__summary,
+    .a-panel--white-text.a-panel--pt .a-panel__title, 
+    .a-panel--white-text.a-panel.a-panel--hasbackground .a-panel__title,
+    .a-panel--white-text h2,
+    .a-panel--white-text.a-panel--pt .a-panel__summary,
+    .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black .a-panel__title,
+    .a-panel.a-panel--pt.a-panel--render.a-panel--backdrop-black .a-panel__summary {
+        color: $black;
     }
 
-}
+    /* Display links*/
+    .item__link::after {
+        content: " (" attr(href) ") ";
+        margin-left: 10px;
+    }
+
+    .fa-block__link::after,
+    a::after{
+        content: " (" attr(href) ") ";
+    }
+
+} // END OF MEDIA PRINT
