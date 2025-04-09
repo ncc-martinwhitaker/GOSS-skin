@@ -1278,3 +1278,25 @@ button.btn--disclosure-toggle{
 .grid--footer > .grid__cell{
   padding-top: 30px;
 }
+
+//5702 GNGB - padding on Project Showcase page panels
+.a-panel.a-panel--pt.a-panel--render.a-panel--list,
+.a-panel--pt.a-panel--default .a-panel__content,
+.a-panel.a-panel--pt.a-panel--default.a-panel--body.a-panel--location-panel,
+.a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body, 
+.a-panel.a-panel--pt.a-panel--hasbackground.a-panel--body.a-panel--default{
+  padding: 0 20px;
+}
+
+.a-panel--image-gallery .imagegalleryinline .grid--imagegalleryinline{
+  padding: 0;
+}
+
+.a-panel.a-panel--pt.a-panel--default.a-panel--body.a-panel--location-panel .a-panel__title,
+.a-panel.a-panel--hasbackground .a-panel__title, .a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__title {
+  margin: 0 0 60px 0;
+}
+
+.a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__title {
+  padding-top: 20px;
+}
