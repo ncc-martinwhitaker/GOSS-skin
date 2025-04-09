@@ -325,8 +325,9 @@ div.LookupTable tr {
 }
 
 //5642 Highways defects - table in case summary view
+// same as table above on the page that uses  >>>------>  .tablecm tbody th {width: 270px;}
 #CASEMANAGEMENTCASESUMMARYV1EN_READONLYTEMPLATE .icmformdatapagetable .icmformdatalabel{
-    width: 270px;  // same as table above on the page that uses  >>>------>  .tablecm tbody th {width: 270px;}
+    width: 270px;  
 }
 
 
