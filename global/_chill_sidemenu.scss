@@ -182,37 +182,55 @@
 
 //5698 no-aside by default for some Chill theme templates
 /* Styles for the main container */
-.grid--main.grid--5col {
+body.template--list .grid--main.grid--5col,
+body.template--selfservice .grid--main.grid--5col,
+body.template--taskmanagement .grid--main.grid--5col,
+body.template--casesearch .grid--main.grid--5col {
     display: grid;
     grid-template-columns: 20% 80%; 
   }
   
   /* The sidemenu remains unchanged */
-  .grid__cell--sidemenu.grid__cell--cols1 {
+body.template--list .grid__cell--sidemenu.grid__cell--cols1,
+body.template--selfservice .grid__cell--sidemenu.grid__cell--cols1,
+body.template--taskmanagement .grid__cell--sidemenu.grid__cell--cols1,
+body.template--casesearch .grid__cell--sidemenu.grid__cell--cols1 {
     grid-column: 1 / 2; 
-  }
+}
   
-  .grid--5col>.grid__cell{
+body.template--list .grid--5col > .grid__cell,
+body.template--selfservice .grid--5col > .grid__cell,
+body.template--taskmanagement .grid--5col > .grid__cell,
+body.template--casesearch .grid--5col > .grid__cell{
     width: 100%;
-  }
+}
   
   /* Main unit by 80 per cent */
-  .grid__cell--main.grid__cell--cols4 {
+body.template--list .grid__cell--main.grid__cell--cols4,
+body.template--selfservice .grid__cell--main.grid__cell--cols4,
+body.template--taskmanagement .grid__cell--main.grid__cell--cols4,
+body.template--casesearch .grid__cell--main.grid__cell--cols4 {
     grid-column: 2 / 3; 
     display: grid; 
     grid-template-columns: 100%; 
     grid-template-rows: auto auto; 
-  }
+}
   
   /* Stretch body copy to full width */
-  .grid__cell--bodycopy.grid__cell--cols3 {
+body.template--list .grid__cell--bodycopy.grid__cell--cols3,
+body.template--selfservice .grid__cell--bodycopy.grid__cell--cols3,
+body.template--taskmanagement .grid__cell--bodycopy.grid__cell--cols3,
+body.template--casesearch .grid__cell--bodycopy.grid__cell--cols3 {
     grid-column: 1 / 2; 
     grid-row: 1 / 2; 
     width: 100%; 
-  }
+}
   
   /* Move bodyrelated down */
-  .grid__cell--bodyrelated.grid__cell--cols1 {
+body.template--list .grid__cell--bodyrelated.grid__cell--cols1,
+body.template--selfservice .grid__cell--bodyrelated.grid__cell--cols1,
+body.template--taskmanagement .grid__cell--bodyrelated.grid__cell--cols1,
+body.template--casesearch .grid__cell--bodyrelated.grid__cell--cols1 {
     grid-column: 1 / 2; 
     grid-row: 2 / 3; 
-  }
+}
