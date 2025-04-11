@@ -190,10 +190,14 @@
     //5167 Print CSS: panel styling
     .grid.grid--list.grid--4col,
     .grid.grid--list.grid--3col,
-    .grid .grid--feature .grid--parallax .grid--2co,
+    .grid .grid--feature .grid--parallax .grid--2col,
     .grid.grid--feature.grid--4col, 
     .grid.grid--feature.grid--2col{
-        display: inline-grid;
+        display: block;
+    }
+
+    .grid__cell {
+        margin-bottom: 6px !important;
     }
 
     .grid[data-grid-mincolwidth="250"]>.grid__cell,
@@ -239,6 +243,18 @@
     a::after{
         content: " (" attr(href) ") ";
         color: $link-color;
+    }
+
+    /* Move an object to a new page when printing */
+    .grid--list.grid[data-grid-mincolwidth="250"]>.grid__cell.grid__cell--list,
+    .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cel,
+    .a-panel--1-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell,
+    .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell,
+    .a-panel--display-image-right.a-panel.a-panel--parallax.a-panel--pt .grid.grid--parallax .fa-block .fa-block__content {
+        page-break-before: always;
+        break-before: page;
+        break-inside: avoid;
+        break-before: auto;
     }
 
 } // END OF MEDIA PRINT
