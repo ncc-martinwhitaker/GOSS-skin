@@ -295,3 +295,9 @@ button.btn--disclosure-toggle { //TODO Refactor - this class also exists in butt
 .gi-accordion--focus {
   outline: none;
 }
+
+//5714 Disclosure loading as page content
+html.js-hide-until-ready,
+body.js-hide-until-ready {
+	visibility: hidden;
+}

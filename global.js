@@ -253,3 +253,22 @@ $(document).ready(function() {
 
     document.addEventListener("DOMContentLoaded", configureHeaderSearch);
 })(); 
+
+//5714 Disclosure loading as page content
+function hideBodyUntilReady() {
+	// Add a class to <html> or <body> that hides content
+	document.documentElement.classList.add('js-hide-until-ready');
+  
+	// Show content when the DOM is fully loaded
+	document.addEventListener('DOMContentLoaded', function () {
+	  // If necessary, initialise the disclosure
+	  if (typeof gi !== 'undefined' && gi.disclosureInlines) {
+		gi.disclosureInlines.initialise();
+	  }
+  
+	  // Remove the class to show the content
+	  document.documentElement.classList.remove('js-hide-until-ready');
+	});
+  }
+
+  hideBodyUntilReady();
