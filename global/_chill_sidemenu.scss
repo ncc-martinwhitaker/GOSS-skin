@@ -88,6 +88,13 @@
 .gi-articletreeview__list {
     border: 1px solid $grey-3;
     border-bottom: 0;
+    border-radius: 15px;
+}
+
+.gi-articletreeview__item--level1:last-of-type,
+.gi-articletreeview__item--level2[data-has-children="false"]:last-of-type,
+a.gi-articletreeview__link.gi-articletreeview__link--sibling.gi-articletreeview__link--level2.gi-articletreeview__link--none:last-of-type{
+    border-radius: 15px;
 }
 
 .gi-articletreeview__item{
@@ -128,6 +135,7 @@
 .gi-articletreeview__item--level1 .gi-articletreeview__list{
     border-left: 0;
     border-right: 0;
+    background-color: $white;
 }
 
 /* Vertical strip for levels 2, 3, 4 */
