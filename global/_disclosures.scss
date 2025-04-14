@@ -299,5 +299,11 @@ button.btn--disclosure-toggle { //TODO Refactor - this class also exists in butt
 //5714 Disclosure loading as page content
 html.js-hide-until-ready,
 body.js-hide-until-ready {
-	visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+html:not(.js-hide-until-ready),
+body:not(.js-hide-until-ready) {
+  opacity: 1;
 }
