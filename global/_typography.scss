@@ -73,10 +73,12 @@ a {
 /** 3832 - Text links state indicator standardisation **/
 .a-body__link, .a-body a {//.a-body__inner 5758 Alert link focus text-underline
   color: $link-color;
+  text-underline-offset: 4px;//5758
 
   &:hover {
     color: $link-color-darken;
     @extend %a-link-hover;
+    text-decoration-thickness: 2px;//5758
   }
   &:focus {
     color: $black;
