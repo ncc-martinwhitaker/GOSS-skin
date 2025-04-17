@@ -1866,6 +1866,7 @@ Metadata modifiers include:
 
     //5118 Image link/button focus styling
     .n-stage__link--logo:focus {
+      margin-bottom: 6px; //4632 Text links state indicator standardisation (Chill template)
       //5486
       @include element-focus;  
       img {
@@ -2946,4 +2947,32 @@ Metadata modifiers include:
 ======================================*/
 .a-panel--peeky-swiper .gi-carousel .gi-carousel__slide .a-panel--carouselitem .a-panel__content h3.a-panel__title{
   font-weight: 700;
+}
+
+/* 4632 Text links state indicator standardisation (Chill template)*/
+// Focus & Focus+Hover
+.gi-sitenav__link:focus,
+.a-panel.a-panel--pt.a-panel--stage 
+.gi-sitenav--stage .gi-sitenav__link--lvl1:focus:hover {
+  @include chill-sitenav-focus;
+}
+
+// Hover
+.gi-sitenav__link:hover {
+  @include chill-sitenav-hover;
+}
+
+.item__sublink:focus:hover {
+  text-decoration: none;
+}
+
+// 4632 Text links state indicator standardisation (Chill template)
+
+// Changed logic for .a-panel__link--pt
+.a-panel__linkwrap:focus .a-panel__link--pt {
+  text-decoration: none;
+}
+
+.a-panel__linkwrap:focus:hover .a-panel__link--pt {
+  text-decoration: underline;
 }

@@ -65,3 +65,22 @@
         }
     }
 }
+
+/* 4632 Text links state indicator standardisation (Chill template)*/
+@mixin chill-sitenav-focus {
+    box-shadow: none;
+    outline: none;
+    background: $focus-color;
+    color: $black;
+    text-decoration: underline;
+    text-underline-offset: 0.1578em;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+  }
+  
+  // ==== MIXIN for hover state ====
+  
+  @mixin chill-sitenav-hover {
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 0.1578em;
+  }
