@@ -41,6 +41,10 @@
   .gi-articletreeview__link--current {
     border-bottom: 0;
     border-color: transparent;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: $teal;
 
     
     &:focus{
