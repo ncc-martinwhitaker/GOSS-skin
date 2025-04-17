@@ -1,244 +1,234 @@
-@media (min-width: 1024px) {
-    .grid__cell .grid__cell--sidemenu .grid__cell--cols1 {
-      width: 30%;
+  // -----------------------------
+  // Layout Adjustments for Desktop
+  // -----------------------------
+  @media (min-width: 1024px) {
+    .grid__cell--sidemenu.grid__cell--cols1 {
+      width: 20%;
     }
-    
-    .grid__cell .grid__cell--main .grid__cell--cols4 {
-      width: 70%;
+  
+    .grid__cell--main.grid__cell--cols4 {
+      width: 80%;
     }
   }
   
-
-.gi-articletreeview__link{
+  // -----------------------------
+  // Link Base Styling
+  // -----------------------------
+  .gi-articletreeview__link {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 5px 10px 5px 20px;
     box-sizing: border-box;
     color: $black;
     text-decoration: none;
-    border-bottom: none;
-    flex-wrap: wrap;
     max-width: calc(100% - 70px);
     white-space: normal;
     overflow-wrap: break-word;
-}
+    border-bottom: none;
+  
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background: $white;
+      border-color: transparent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 2px;
+    }
+  }
 
-//Chevrons
-.gi-articletreeview__toggle{
+  .gi-articletreeview__link--current {
+    border-bottom: 0;
+    border-color: transparent;
+
+    
+    &:focus{
+        box-shadow: none;
+    }
+  }
+
+  .gi-articletreeview__item--level1 .gi-articletreeview__list{
+    border-left: 0;
+    border-right: 0;
+  }
+
+  *[tabindex]:focus {
+    border-color: transparent;
+    z-index: 1;
+  }
+  
+
+  // Styles for all items
+.gi-articletreeview__item {
+    border: 1px solid $grey-3;
+  
+    // Remove bottom border for all except the last
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    // Remove side borders from nested levels
+    &.gi-articletreeview__item--level2,
+    &.gi-articletreeview__item--level3,
+    &.gi-articletreeview__item--level4,
+    &.gi-articletreeview__item--level5 {
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+  }
+  
+  // Specific border-radius 
+  /*.gi-articletreeview__item--level1 {
+    &:first-child {
+      border-radius: 15px 15px 0 0;
+
+      &:focus{
+        border-radius: 0;
+      }
+    }
+  
+    &:last-child {
+      border-radius: 0 0 15px 15px;
+
+      &:focus{
+        border-radius: 0;
+      }
+    }
+  }  
+
+  
+  /*.gi-articletreeview__item--level1:first-child,
+  .gi-articletreeview__item--level1:last-child{
+    overflow-y: hidden; 
+    overflow-x: visible;
+  }*/
+
+  // -----------------------------
+  // Toggle Icon (Chevron)
+  // -----------------------------
+  .gi-articletreeview__toggle {
     right: 10px;
-}
-
-.gi-articletreeview__toggle:after{
-    content: '\e828';
-    color: $black;
-    display: inline-block;
-    transform: translateY(50%) translateY(-5px);
-    top: 50%;
-    width: 0px;
-    position: absolute;
-    right: 22px;
-}
-
-.gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
+  
+    &:after {
+      content: '\e828';
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(50%) translateY(-5px);
+      color: $black;
+      display: inline-block;
+      width: 0;
+    }
+  }
+  
+  // Toggle when expanded
+  .gi-articletreeview__item[aria-expanded="true"] > .gi-articletreeview__toggle:after {
     content: '\e829';
-}
-
-.gi-articletreeview__item[aria-selected="true"] > .gi-articletreeview__link{
+  }
+  
+  // -----------------------------
+  // Active/Selected Items
+  // -----------------------------
+  .gi-articletreeview__item[aria-selected="true"] > .gi-articletreeview__link {
     outline: none;
-}
+  }
+  
+  // -----------------------------
+  // Styling for Active Path
+  // -----------------------------
+  .gi-articletreeview__item[aria-expanded="true"] {
+    @for $i from 1 through 5 {
+      .gi-articletreeview__link--level#{$i}.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--none {
+        // A basic style that will always be visible
+        color: $teal;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 4px;
+  
+        // Amplification in the active or focus state
+        &:focus,
+        &:active {
+          z-index: 1;
+        }
+      }
+    }
+  }
 
-.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level1.gi-articletreeview__link--none,
-.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level2.gi-articletreeview__link--none,
-.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level3.gi-articletreeview__link--none,
-.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level4.gi-articletreeview__link--none,
-.gi-articletreeview__item[aria-expanded="true"] 
-    .gi-articletreeview__link.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--level5.gi-articletreeview__link--none {
-    color: $teal;
+  .gi-articletreeview__item:focus > .gi-articletreeview__link{
+    outline: none;
+    font-weight: 700;
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 4px;
-}
-
-.gi-articletreeview__item--level2 {
-    position: relative;
-    background-color: $white; //5681 Side menu - remove grey background colour
-}
-
-.gi-articletreeview__item--level3,
-.gi-articletreeview__item--level4,
-.gi-articletreeview__item--level5 {
-    position: relative;
-    background-color: $white; //5681 Side menu - remove grey background colour
-}
-
-.gi-articletreeview__item--level2 .gi-articletreeview__link{
-    background-color: $white; //5681 Side menu - remove grey background colour
-}
-
-.gi-articletreeview__item--level3 .gi-articletreeview__link,
-.gi-articletreeview__item--level4 .gi-articletreeview__link,
-.gi-articletreeview__item--level5 .gi-articletreeview__link{
-    background-color: $white; //5681 Side menu - remove grey background colour
-}
-
-.gi-articletreeview__list {
-    border: 1px solid $grey-3;
-    border-bottom: 0;
-    border-radius: 15px;
-}
-
-.gi-articletreeview__item--level1:last-of-type,
-.gi-articletreeview__item--level2[data-has-children="false"]:last-of-type,
-a.gi-articletreeview__link.gi-articletreeview__link--sibling.gi-articletreeview__link--level2.gi-articletreeview__link--none:last-of-type{
-    border-radius: 15px;
-}
-
-.gi-articletreeview__item{
-    border-bottom: 1px solid $grey-3;
-    position: relative;
-}
-
-.gi-articletreeview__item[aria-expanded="true"]{
-    border-bottom: 0
-}
-
-.gi-articletreeview__item--level2 .gi-articletreeview__link{
-    padding-left: 35px;
-}
-
-.gi-articletreeview__item--level3 .gi-articletreeview__link{
-    padding-left: 45px;
-}
-
-.gi-articletreeview__item--level4 .gi-articletreeview__link{
-    padding-left: 55px;
-}
-
-.gi-articletreeview__item--level5 .gi-articletreeview__link{
-    padding-left: 65px;
-}
-
-.gi-articletreeview__item--level2 .gi-articletreeview__link,
-.gi-articletreeview__item--level3 .gi-articletreeview__link,
-.gi-articletreeview__item--level4 .gi-articletreeview__link,
-.gi-articletreeview__item--level5 .gi-articletreeview__link{
-    display: inline-block;
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
-}
-
-.gi-articletreeview__item--level1 .gi-articletreeview__list{
-    border-left: 0;
-    border-right: 0;
-    background-color: $white;
-}
-
-/* Vertical strip for levels 2, 3, 4 */
-.gi-articletreeview__item--level2 .gi-articletreeview__link:before,
-.gi-articletreeview__item--level3 .gi-articletreeview__link:before,
-.gi-articletreeview__item--level4 .gi-articletreeview__link:before,
-.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: $black;
-}
-
-.gi-articletreeview__item--level3 .gi-articletreeview__link:before {
-    left: 30px;
-}
-
-.gi-articletreeview__item--level4 .gi-articletreeview__link:before {
-    left: 40px;
-}
-
-.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
-    left: 50px;
-}
-
-.gi-articletreeview__item--level2:not(:has(+ .gi-articletreeview__item--level2), :has(ul)) .gi-articletreeview__link:before,
-.gi-articletreeview__item--level3:not(:has(+ .gi-articletreeview__item--level3), :has(ul)) .gi-articletreeview__link:before,
-.gi-articletreeview__item--level4:not(:has(+ .gi-articletreeview__item--level4), :has(ul)) .gi-articletreeview__link:before,
-.gi-articletreeview__item--level5:not(:has(+ .gi-articletreeview__item--level5), :has(ul)) .gi-articletreeview__link:before {
-    bottom: 50%; 
-}
-
-/* Underline in hover state for levels 2, 3, 4 */
-.gi-articletreeview__item--level2 .gi-articletreeview__link:hover,
-.gi-articletreeview__item--level3 .gi-articletreeview__link:hover,
-.gi-articletreeview__item--level4 .gi-articletreeview__link:hover{
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-/* Focus state*/
-.gi-articletreeview__item:focus > .gi-articletreeview__link,
-.gi-articletreeview__link:focus,
-*[tabindex]:focus{
-    outline: none;
-    box-shadow: none;
-    background: $white;
-}
-
-//5698 no-aside by default for some Chill theme templates
-/* Styles for the main container */
-body.template--list .grid--main.grid--5col,
-body.template--selfservice .grid--main.grid--5col,
-body.template--taskmanagement .grid--main.grid--5col,
-body.template--casesearch .grid--main.grid--5col {
-    display: grid;
-    grid-template-columns: 20% 80%; 
   }
   
-  /* The sidemenu remains unchanged */
-body.template--list .grid__cell--sidemenu.grid__cell--cols1,
-body.template--selfservice .grid__cell--sidemenu.grid__cell--cols1,
-body.template--taskmanagement .grid__cell--sidemenu.grid__cell--cols1,
-body.template--casesearch .grid__cell--sidemenu.grid__cell--cols1 {
-    grid-column: 1 / 2; 
-}
+  // -----------------------------
+  // Treeview Levels Styling
+  // -----------------------------
+  @for $level from 2 through 5 {
+    .gi-articletreeview__item--level#{$level} {
+      position: relative;
+      background-color: $white;
   
-body.template--list .grid--5col > .grid__cell,
-body.template--selfservice .grid--5col > .grid__cell,
-body.template--taskmanagement .grid--5col > .grid__cell,
-body.template--casesearch .grid--5col > .grid__cell{
-    width: 100%;
-}
+      .gi-articletreeview__link {
+        @include indentation($level);
+        background-color: $white;
+        display: inline-block;
+        border: 0;
   
-  /* Main unit by 80 per cent */
-body.template--list .grid__cell--main.grid__cell--cols4,
-body.template--selfservice .grid__cell--main.grid__cell--cols4,
-body.template--taskmanagement .grid__cell--main.grid__cell--cols4,
-body.template--casesearch .grid__cell--main.grid__cell--cols4 {
-    grid-column: 2 / 3; 
-    display: grid; 
-    grid-template-columns: 100%; 
-    grid-template-rows: auto auto; 
-}
+        &:before {
+          @include vertical-line($level);
+        }
+      }
   
-  /* Stretch body copy to full width */
-body.template--list .grid__cell--bodycopy.grid__cell--cols3,
-body.template--selfservice .grid__cell--bodycopy.grid__cell--cols3,
-body.template--taskmanagement .grid__cell--bodycopy.grid__cell--cols3,
-body.template--casesearch .grid__cell--bodycopy.grid__cell--cols3 {
-    grid-column: 1 / 2; 
-    grid-row: 1 / 2; 
-    width: 100%; 
-}
+      // Short vertical line for last visible child
+      &:not(:has(+ .gi-articletreeview__item--level#{$level}), :has(ul)) .gi-articletreeview__link:before {
+        bottom: 50%;
+      }
+    }
   
-  /* Move bodyrelated down */
-body.template--list .grid__cell--bodyrelated.grid__cell--cols1,
-body.template--selfservice .grid__cell--bodyrelated.grid__cell--cols1,
-body.template--taskmanagement .grid__cell--bodyrelated.grid__cell--cols1,
-body.template--casesearch .grid__cell--bodyrelated.grid__cell--cols1 {
-    grid-column: 1 / 2; 
-    grid-row: 2 / 3; 
-}
+    // Rounded corners for focused levels
+    /*.gi-articletreeview__item--level#{$level} .gi-articletreeview__link:focus {
+      border-radius: 0 0 15px 15px;
+    }*/
+  }
+  
+  // -----------------------------
+  // Grid Restructure for Specific Templates
+  // -----------------------------
+  body:is(.template--list, .template--selfservice, .template--taskmanagement, .template--casesearch) {
+    .grid--main.grid--5col {
+      display: grid;
+      grid-template-columns: 20% 80%;
+    }
+  
+    .grid__cell--sidemenu.grid__cell--cols1 {
+      grid-column: 1 / 2;
+    }
+  
+    .grid--5col > .grid__cell {
+      width: 100%;
+    }
+  
+    .grid__cell--main.grid__cell--cols4 {
+      grid-column: 2 / 3;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+    }
+  
+    .grid__cell--bodycopy.grid__cell--cols3 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 100%;
+    }
+  
+    .grid__cell--bodyrelated.grid__cell--cols1 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+  
