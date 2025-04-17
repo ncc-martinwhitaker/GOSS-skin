@@ -44,7 +44,7 @@
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
-    color: $teal;
+    color: $black; //teal
 
     
     &:focus{
@@ -146,7 +146,7 @@
     @for $i from 1 through 5 {
       .gi-articletreeview__link--level#{$i}.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--none {
         // A basic style that will always be visible
-        color: $teal;
+        color: $black; //teal
         font-weight: 700;
         text-decoration: underline;
         text-decoration-thickness: 3px;
