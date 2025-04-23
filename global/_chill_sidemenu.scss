@@ -36,6 +36,10 @@
       text-underline-offset: 3px;
       text-decoration-thickness: 2px;
     }
+
+    &:hover{
+      color: #11436f;
+    }
   }
 
   .gi-articletreeview__link--current {
@@ -44,7 +48,7 @@
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
-    color: $black; //teal
+    color: $teal; 
 
     
     &:focus{
@@ -146,7 +150,7 @@
     @for $i from 1 through 5 {
       .gi-articletreeview__link--level#{$i}.gi-articletreeview__link--current.gi-articletreeview__link--onpath.gi-articletreeview__link--none {
         // A basic style that will always be visible
-        color: $black; //teal
+        color: $teal; 
         font-weight: 700;
         text-decoration: underline;
         text-decoration-thickness: 3px;
