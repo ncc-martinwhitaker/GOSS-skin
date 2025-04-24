@@ -69,9 +69,10 @@
     .a-body__link .a-body__link--cta,
     #customLiveChatButton, .cky-consent-bar,
     .a-body__link--btn-primary-teal-std::after,
-    .a-share{
+    .a-share
+    /*.a-panel__content[aria-label="Partners of Norfolk Museums"]*/{
         display: none !important;
-    }
+    } 
 
     //5377 - Disclosures accordions 
     .gi-disclosure--body{
@@ -187,8 +188,8 @@
         height: auto;
     }
 
-    //5167 Print CSS: panel styling
-    .grid.grid--list.grid--4col,
+    //5167 Print CSS: panel styling /*Rollback changes 23/04/2025 need more discussion about requirements and landing page*/
+    /*.grid.grid--list.grid--4col,
     .grid.grid--list.grid--3col,
     .grid .grid--feature .grid--parallax .grid--2col,
     .grid.grid--feature.grid--4col, 
@@ -230,10 +231,10 @@
 
     .a-panel--pt.a-panel--list .item__content {
         padding: 10px 0px 0 10px;
-    }
+    }*/
 
     /* Display links*/
-    .item__link::after {
+    /*.item__link::after {
         content: " (" attr(href) ") ";
         margin-left: 10px;
         color: $link-color;
@@ -243,10 +244,10 @@
     a::after{
         content: " (" attr(href) ") ";
         color: $link-color;
-    }
+    }*/
 
     /* Move an object to a new page when printing */
-    .grid--list.grid[data-grid-mincolwidth="250"]>.grid__cell.grid__cell--list,
+    /*.grid--list.grid[data-grid-mincolwidth="250"]>.grid__cell.grid__cell--list,
     .a-panel--4-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cel,
     .a-panel--1-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell,
     .a-panel--2-col-panel.a-panel.a-panel--parallax .grid.grid--parallax.grid--2col>.grid__cell,
@@ -255,6 +256,6 @@
         break-before: page;
         break-inside: avoid;
         break-before: auto;
-    }
+    }*/
 
 } // END OF MEDIA PRINT
