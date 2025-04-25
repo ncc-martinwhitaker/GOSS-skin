@@ -27,7 +27,8 @@
     overflow-wrap: break-word;
     border-bottom: none;
   
-    &:focus {
+    &:focus,
+    &:focus:hover {
       outline: none;
       box-shadow: none;
       background: $white;
@@ -52,7 +53,11 @@
   .gi-articletreeview__item--level2 .gi-articletreeview__link:focus,
   .gi-articletreeview__item--level3 .gi-articletreeview__link:focus,
   .gi-articletreeview__item--level4 .gi-articletreeview__link:focus,
-  .gi-articletreeview__item--level5 .gi-articletreeview__link:focus{
+  .gi-articletreeview__item--level5 .gi-articletreeview__link:focus,
+  .gi-articletreeview__item--level2 .gi-articletreeview__link:focus:hover,
+  .gi-articletreeview__item--level3 .gi-articletreeview__link:focus:hover,
+  .gi-articletreeview__item--level4 .gi-articletreeview__link:focus:hover,
+  .gi-articletreeview__item--level5 .gi-articletreeview__link:focus:hover{
     outline: none;
     box-shadow: none;
     background: $white;
@@ -63,6 +68,7 @@
     background-color: $focus-color;
     line-height: 2;
     box-decoration-break: clone;
+    color: $black;
   }
 
   .gi-articletreeview__item--level2 .gi-articletreeview__link:focus{
@@ -90,8 +96,10 @@
     text-underline-offset: 3px;    
     color: $teal; 
     
-    &:focus{
+    &:focus,
+    &:focus:hover{
       box-shadow: none;
+      color: $black;
     }
   }
 
@@ -197,9 +205,11 @@
   
         // Amplification in the active or focus state
         &:focus,
-        &:active {
+        &:active,
+        &:focus:hover {
           z-index: 1;  
-          box-decoration-break: clone;        
+          box-decoration-break: clone;     
+          color: $black;   
         }
       }
     }
