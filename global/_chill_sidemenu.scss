@@ -27,8 +27,7 @@
     overflow-wrap: break-word;
     border-bottom: none;
   
-    &:focus,
-    &:focus:hover {
+    &:focus {
       outline: none;
       box-shadow: none;
       background: $white;
@@ -47,6 +46,10 @@
 
     &:hover{
       color: #11436f;
+    }
+
+    &:focus:hover{
+      color: $black;
     }
   }
 
