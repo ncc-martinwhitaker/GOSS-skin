@@ -178,3 +178,28 @@ footer.footer {
     background-color: $grey-5;
     -webkit-tap-highlight-color: transparent;
 }
+
+/*5725 Business Board - style top utilities links as teal buttons*/
+$businessboard-teal: #16596b;
+$header-utilitymenu-color: $businessboard-teal;
+
+.utilitymenu--top .utilitymenu__link,
+.utilitymenu--top .utilitymenu__text {
+    background-color: $businessboard-teal;
+    color: $white;
+    border-radius: 15px;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $businessboard-teal;
+        color: $white;
+        @extend .btn-hover;
+    }
+    &:focus {
+        background-color: $focus-color;
+        color: $black;
+        box-shadow: 0 -2px $focus-color, 0 4px $black;
+    }
+}
