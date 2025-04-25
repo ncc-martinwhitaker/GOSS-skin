@@ -839,3 +839,11 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 .sitemenu--mobile .sitemenu__link:focus:hover{
     background-color: $focus-color;
   }
+
+/* 5800 Print CSS: myNet/NCC logo */
+@media print {
+    .header {
+      background-color: #333;
+      print-color-adjust: exact;
+    }
+}
