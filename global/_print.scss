@@ -19,6 +19,13 @@
         .gi-sitenav.gi-sitenav--desktop.gi-sitenav--hassearch{
             display: none;
         }
+
+        
+        .gi-sitelogo--header .gi-sitelogo__image {
+            filter: grayscale(100%) brightness(0%);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
     }
     
     //Headings and text (5376) 
