@@ -844,3 +844,10 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 strong {
     font-weight: 700;
 }
+
+/* 5800 Print CSS: myNet/NCC logo */
+@media print {
+    .header {
+      background-color: #333;
+      print-color-adjust: exact;
+    }
