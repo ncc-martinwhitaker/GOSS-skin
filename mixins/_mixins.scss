@@ -65,3 +65,29 @@
         }
     }
 }
+
+//5612 Side menu - state indicators
+// Indentation padding based on level
+@mixin indentation($level, $base: 15px, $offset: 5px) {
+    padding-left: calc(#{$base} * #{$level} + #{$offset});
+  }
+  
+// Fixed vertical line without visual ‘fat’  
+@mixin vertical-line($level, $color: $black, $width: 2px) {
+  content: "";
+  position: absolute;
+  left: calc(10px * #{$level});
+  top: 0;
+  bottom: 0;
+  width: $width;
+  background-color: $color;
+
+  // Forcibly fix visual glitches
+  transform: translateZ(0); 
+  backface-visibility: hidden;
+  will-change: transform;
+  
+  // Preventing imitations
+  box-sizing: content-box;
+  pointer-events: none;
+}
