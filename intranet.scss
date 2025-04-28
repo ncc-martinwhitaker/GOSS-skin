@@ -839,3 +839,8 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 .sitemenu--mobile .sitemenu__link:focus:hover{
     background-color: $focus-color;
   }
+
+/* 5713 Change to bold styling on headings */
+strong {
+    font-weight: 700;
+}
