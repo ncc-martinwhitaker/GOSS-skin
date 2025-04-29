@@ -67,7 +67,7 @@
 }
 
 /* 4632 Text links state indicator standardisation (Chill template)*/
-@mixin chill-sitenav-focus {
+@mixin chill-sitenav-focus-styles {
     box-shadow: none;
     outline: none;
     background: $focus-color;
@@ -75,6 +75,14 @@
     text-decoration: underline;
     text-underline-offset: 0.1578em;
     text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+  }
+  
+  @mixin chill-sitenav-focus {
+    @include chill-sitenav-focus-styles;
+  
+    &:hover {
+      @include chill-sitenav-focus-styles;
+    }
   }
   
   // ==== MIXIN for hover state ====

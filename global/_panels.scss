@@ -2016,10 +2016,6 @@ Metadata modifiers include:
     content: none;  
   }
   
-  .a-panel--pt.a-panel--stage .a-panel__link {
-    background-color: $button-panel-color;
-  }
-  
   .a-panel--hasbackground.a-panel--stage .item__sublink {
     // 2874 - fix for extra data appearing on news homepages  
     .stage-link__categories {
@@ -2966,13 +2962,31 @@ Metadata modifiers include:
   text-decoration: none;
 }
 
-// 4632 Text links state indicator standardisation (Chill template)
-
 // Changed logic for .a-panel__link--pt
 .a-panel__linkwrap:focus .a-panel__link--pt {
-  text-decoration: none;
+  text-decoration: none !important; 
 }
 
 .a-panel__linkwrap:focus:hover .a-panel__link--pt {
-  text-decoration: underline;
+  text-decoration: underline !important; 
+}
+
+.a-panel--pt.a-panel--stage .a-panel__link,
+.a-panel__link.a-panel__link--pt {
+  background-color: $button-panel-color;
+  
+  &:hover {
+    @include a-link-hover;
+    color: $white; 
+    text-decoration: underline; 
+  }
+  
+  &:focus {
+    @include a-link-focus;
+  }
+  
+  &:focus:hover {
+    @include a-link-focus;
+    color: $black;
+  }
 }
