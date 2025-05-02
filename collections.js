@@ -79,20 +79,35 @@ $(document).ready(function() {
 // 5672 Focus behaviour - Museums Collections search
 document.addEventListener('DOMContentLoaded', function() {
     const checkboxes = document.querySelectorAll('.template--collections .collectionssearch__filters .gi-disclosure--collectionsfilter .gi-disclosure__content input[type="checkbox"]');
-    const checkboxesArray = Array.from(checkboxes); // Convert a collection to an array
+    const checkboxesArray = Array.from(checkboxes);
+    let lastFocusedIndex = null; // Keep the last index to determine the direction
   
     checkboxesArray.forEach((checkbox, index) => {
       checkbox.addEventListener('focus', function() {
-        // Determine the index of the target element (current + 2)
-        const targetIndex = Math.min(index + 2, checkboxesArray.length - 1);
-        const targetElement = checkboxesArray[targetIndex];
+        let targetIndex = index;
         
-        // Smooth scrolling to the target item
-        targetElement.scrollIntoView({ 
+        // Determine the direction of movement
+        if(lastFocusedIndex !== null) {
+          const direction = index > lastFocusedIndex ? 'forward' : 'backward';
+          
+          // Calculate the target index according to the direction
+          targetIndex = direction === 'forward' 
+            ? Math.min(index + 2, checkboxesArray.length - 1)
+            : Math.max(index - 2, 0);
+        } else {
+          // First focus - moving forward
+          targetIndex = Math.min(index + 2, checkboxesArray.length - 1);
+        }
+  
+        // Scroll to the target item
+        checkboxesArray[targetIndex].scrollIntoView({ 
           behavior: 'smooth', 
-          block: 'nearest', 
-          inline: 'nearest' 
+          block: 'nearest',
+          inline: 'nearest'
         });
+  
+        // Updating the latest index
+        lastFocusedIndex = index;
       });
     });
   });
