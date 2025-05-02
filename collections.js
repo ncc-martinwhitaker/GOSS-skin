@@ -75,3 +75,24 @@ $(document).ready(function() {
     }
 
 });
+
+// 5672 Focus behaviour - Museums Collections search
+document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('.template--collections .collectionssearch__filters .gi-disclosure--collectionsfilter .gi-disclosure__content input[type="checkbox"]');
+    const checkboxesArray = Array.from(checkboxes); // Convert a collection to an array
+  
+    checkboxesArray.forEach((checkbox, index) => {
+      checkbox.addEventListener('focus', function() {
+        // Determine the index of the target element (current + 2)
+        const targetIndex = Math.min(index + 2, checkboxesArray.length - 1);
+        const targetElement = checkboxesArray[targetIndex];
+        
+        // Smooth scrolling to the target item
+        targetElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'nearest', 
+          inline: 'nearest' 
+        });
+      });
+    });
+  });
