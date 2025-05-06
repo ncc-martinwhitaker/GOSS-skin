@@ -350,19 +350,19 @@ li.paging__item a.paging__link {
 
   blockquote p {
  /* 5676 Quotes issue */
-    //display: inherit; //5676
+    display: block; // inherit 5676
     font-size: 1.125rem;//1.25rem 
-    font-weight: 400;   
-    margin-left: 1px;//5676
+    font-weight: 400;
+    margin: 0; //5676   
     //color: #fff;
 
-   /* &:first-child {
-      //display: inherit;  //5676
-      font-size: 1.5rem; 
-      font-weight: 600;  
-     //color: #fff; 
-      margin-top: 10px;
-    }*/
+    &:first-child {
+      display: inline;  // inherit 5676
+      //font-size: 1.5rem; 
+      //font-weight: 600;  
+      //color: #fff; 
+      //margin-top: 10px;      
+    }
   }
 
   // Overriding font-size for special blockquote classes
