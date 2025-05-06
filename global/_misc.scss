@@ -351,8 +351,9 @@ li.paging__item a.paging__link {
   blockquote p {
  /* 5676 Quotes issue */
     //display: inherit; //5676
-    font-size: 1rem; //1.25rem //5676
+    font-size: 1.125rem;//1.25rem 
     font-weight: 400;   
+    margin-left: 1px;//5676
     //color: #fff;
 
    /* &:first-child {
@@ -369,11 +370,11 @@ li.paging__item a.paging__link {
   .blockquote_white p,
   .blockquote_theme p {
     display: inherit;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     
-    &:first-child {
+    &:last-child { //first-child
       display: inherit;
-      font-size: 1.5rem;
+      font-size: 1.25rem;//1.5rem
     }
   }
   /* End */
