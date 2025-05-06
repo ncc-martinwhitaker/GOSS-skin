@@ -2951,6 +2951,14 @@ Metadata modifiers include:
 .a-panel.a-panel--pt.a-panel--stage 
 .gi-sitenav--stage .gi-sitenav__link--lvl1:focus:hover {
   @include chill-sitenav-focus;
+  text-underline-offset: 0.1578em;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gi-sitenav__item--lvl1:first-child .gi-sitenav__link--lvl1:focus{
+  padding-left: 10px;
 }
 
 // Hover
@@ -2989,4 +2997,8 @@ Metadata modifiers include:
     @include a-link-focus;
     color: $black;
   }
+}
+
+.panel__link:focus:hover{
+  @include a-link-focus;
 }

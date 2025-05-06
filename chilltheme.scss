@@ -109,7 +109,7 @@ $list-panel-link-color-hover: $link-color-darken;
     }
 
     &:focus:hover{
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 .utilitymenu__text{
@@ -124,3 +124,4 @@ $list-panel-link-color-hover: $link-color-darken;
         color: $link-color-darken;
     }
 }
+
