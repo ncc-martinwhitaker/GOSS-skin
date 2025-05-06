@@ -258,4 +258,43 @@
         break-before: auto;
     }*/
 
+    // 5385 Print CSS: buttons and links
+    /* For all buttons - remove the button view */
+    .a-body__link--btn-primary-std,
+    .a-body__link--btn-primary-lge,
+    .a-body__link--btn-primary-teal-std,
+    .a-body__link--btn-primary-teal-lge,
+    .a-body__link--btn-secondary,
+    .a-body__link--btn-inverted-secondary,
+    .a-body__link.a-body__link--btn-primary-std,
+    .a-body__link.a-body__link--btn-primary-lge,
+    .a-body__link.a-body__link--btn-primary-teal-std,
+    .a-body__link.a-body__link--btn-primary-teal-lge,
+    .a-body__link.a-body__link--btn-secondary,
+    .a-body__link.a-body__link--btn-inverted-secondary {
+        color: $black !important;
+        background-color: transparent !important;
+        display: block;
+        text-decoration: none;
+        cursor: default;
+        border: none !important;
+    }
+      
+    /* If there is an href, add the URL in brackets */
+    .a-body__link--btn-primary-std[href]::after,
+    .a-body__link--btn-primary-lge[href]::after,
+    .a-body__link--btn-primary-teal-std[href]::after,
+    .a-body__link--btn-primary-teal-lge[href]::after,
+    .a-body__link--btn-secondary[href]::after,
+    .a-body__link--btn-inverted-secondary[href]::after,
+    .a-body__link.a-body__link--btn-primary-std[href]::after,
+    .a-body__link.a-body__link--btn-primary-lge[href]::after,
+    .a-body__link.a-body__link--btn-primary-teal-std[href]::after,
+    .a-body__link.a-body__link--btn-primary-teal-lge[href]::after,
+    .a-body__link.a-body__link--btn-secondary[href]::after,
+    .a-body__link.a-body__link--btn-inverted-secondary[href]::after {
+        content: " (" attr(href) ")";
+        word-break: break-all;
+    }    
+
 } // END OF MEDIA PRINT
