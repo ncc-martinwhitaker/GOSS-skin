@@ -349,19 +349,35 @@ li.paging__item a.paging__link {
 .a-body {
 
   blockquote p {
-    display: inherit;
-    font-size: 1.25rem;
+ /* 5676 Quotes issue */
+    display: block; // inherit 5676
+    font-size: 1.125rem;//1.25rem 
     font-weight: 400;
+    margin-top: 10px; //5676   
     //color: #fff;
 
     &:first-child {
-      display: inherit;
-      font-size: 1.5rem;
-      font-weight: 600;
+      display: inline;  // inherit 5676
+      //font-size: 1.5rem; 
+      //font-weight: 600;  
       //color: #fff; 
-      margin-top: 10px;
+      //margin-top: 10px;      
     }
   }
+
+  // Overriding font-size for special blockquote classes
+  .blockquote_blue p,
+  .blockquote_white p,
+  .blockquote_theme p {
+    display: inherit;
+    font-size: 1.5rem;
+    
+    &:last-child { //first-child
+      display: inherit;
+      font-size: 1.25rem;//1.5rem
+    }
+  }
+  /* End */
 
   .blockquote_blue {
     @extend .blockquote_base;
