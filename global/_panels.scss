@@ -910,6 +910,10 @@ Metadata modifiers include:
         &:focus {
           @extend %a-link-focus; //3832
         }
+
+        &:focus:hover{
+          @extend %a-link-focus; // 4632
+        }
       }
   
       .fa-block__links {
@@ -1942,6 +1946,10 @@ Metadata modifiers include:
       &:focus {
         background-color: $focus-color; //3832
       }
+
+      &:focus:hover{  // 4632
+        text-decoration: none;
+      }
     }
   
     .card__actions .cta-link::after {
@@ -2951,7 +2959,7 @@ Metadata modifiers include:
 .a-panel.a-panel--pt.a-panel--stage 
 .gi-sitenav--stage .gi-sitenav__link--lvl1:focus:hover {
   @include chill-sitenav-focus;
-  text-underline-offset: 0.1578em;
+  text-underline-offset: 0.1978em;//0.1578em
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -2975,9 +2983,9 @@ Metadata modifiers include:
   text-decoration: none !important; 
 }
 
-.a-panel__linkwrap:focus:hover .a-panel__link--pt {
+/*.a-panel__linkwrap:focus:hover .a-panel__link--pt {
   text-decoration: underline !important; 
-}
+}*/
 
 .a-panel--pt.a-panel--stage .a-panel__link,
 .a-panel__link.a-panel__link--pt {
