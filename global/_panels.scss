@@ -2956,10 +2956,10 @@ Metadata modifiers include:
 /* 4632 Text links state indicator standardisation (Chill template)*/
 // Focus & Focus+Hover
 .gi-sitenav__link:focus,
-.a-panel.a-panel--pt.a-panel--stage 
+/*.a-panel.a-panel--pt.a-panel--stage, */
 .gi-sitenav--stage .gi-sitenav__link--lvl1:focus:hover {
   @include chill-sitenav-focus;
-  text-underline-offset: 0.1978em;//0.1578em
+  text-underline-offset: 0.2578em;//0.1578em
   width: max-content;
   margin-left: auto;
   margin-right: auto;

@@ -116,12 +116,3 @@ $list-panel-link-color-hover: $link-color-darken;
     display: none;
 }
 
-//Fa-block links
-.a-panel--pt.a-panel--parallax .fa-block .fa-block__content .fa-block__title a{
-    color: $link-color;
-
-    &:hover{
-        color: $link-color-darken;
-    }
-}
-
