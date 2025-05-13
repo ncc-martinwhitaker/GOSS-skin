@@ -839,3 +839,16 @@ body:not(.body--sticky-jumplinks) #anchor-contents {
 .sitemenu--mobile .sitemenu__link:focus:hover{
     background-color: $focus-color;
   }
+
+/* 5713 Change to bold styling on headings */
+strong {
+    font-weight: 700;
+}
+
+/* 5800 Print CSS: myNet/NCC logo */
+@media print {
+    .header {
+      background-color: #333;
+      print-color-adjust: exact;
+    }
+}

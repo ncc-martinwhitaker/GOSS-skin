@@ -1087,3 +1087,10 @@ End of object page
         display: none;
     }
 }
+
+/*5670 Placeholder contrast - Museums Collections search */
+input[placeholder="Search artist/maker"]::placeholder {
+  color: $grey-2;
+  opacity: 1; 
+}
+  

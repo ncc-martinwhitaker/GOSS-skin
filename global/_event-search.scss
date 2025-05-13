@@ -230,6 +230,13 @@
       }
     }
 
+    //5780 Booking calendar layout issue
+    @media (max-width: 950px) {
+      .event-results .event-results__item .event-instances{
+        padding: 0;
+      }
+    }
+
     .event-results__link--title {
       font-size: 1.75rem;
       font-weight: 700;
