@@ -19,6 +19,10 @@ $footer-border-color: $black; //Column_N
 $footer-first-column-count: 2; //Column_O
 $footer-first-column-width: 75%; //Column_P
 
+//Links
+$list-panel-link-color: $link-color;
+$list-panel-link-color-hover: $link-color-darken;
+
 
 @import "chill_global-import"; 
 
@@ -101,12 +105,14 @@ $footer-first-column-width: 75%; //Column_P
 
     &:focus{
         background-color: $focus-color;
+        border: none;
     }
 
     &:focus:hover{
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 .utilitymenu__text{
     display: none;
 }
+

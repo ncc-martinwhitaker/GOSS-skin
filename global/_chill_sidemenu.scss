@@ -109,6 +109,50 @@
   .gi-articletreeview__item--level1 .gi-articletreeview__list{
     border-left: 0;
     border-right: 0;
+    background-color: $white;
+}
+
+/* Vertical strip for levels 2, 3, 4 */
+.gi-articletreeview__item--level2 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: $black;
+}
+
+.gi-articletreeview__item--level3 .gi-articletreeview__link:before {
+    left: 30px;
+}
+
+.gi-articletreeview__item--level4 .gi-articletreeview__link:before {
+    left: 40px;
+}
+
+.gi-articletreeview__item--level5 .gi-articletreeview__link:before {
+    left: 50px;
+}
+
+.gi-articletreeview__item--level2:not(:has(+ .gi-articletreeview__item--level2), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level3:not(:has(+ .gi-articletreeview__item--level3), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level4:not(:has(+ .gi-articletreeview__item--level4), :has(ul)) .gi-articletreeview__link:before,
+.gi-articletreeview__item--level5:not(:has(+ .gi-articletreeview__item--level5), :has(ul)) .gi-articletreeview__link:before {
+    bottom: 50%; 
+}
+
+/* Underline in hover state for levels 2, 3, 4 */
+.gi-articletreeview__item--level2 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level3 .gi-articletreeview__link:hover,
+.gi-articletreeview__item--level4 .gi-articletreeview__link:hover{
+    text-decoration: underline;
+    text-underline-offset: .1578em;
+}
+
   }
 
   *[tabindex]:focus {
@@ -155,7 +199,6 @@
       }
     }
   }  
-
   
   /*.gi-articletreeview__item--level1:first-child,
   .gi-articletreeview__item--level1:last-child{

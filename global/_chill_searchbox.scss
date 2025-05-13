@@ -70,11 +70,11 @@ span.btn__text.gi-sitesearch__buttontext.accessibility {
 .searchform__inputtxt.searchform__inputtxt--sitesearch {
   border-radius: 4px 0 0 4px;
 
-  &:focus {
-    outline: solid $focus-color 2px;
-    border: solid 3px $black;
+  /*&:focus {
+    //outline: solid $focus-color 2px;
+    //border: solid 3px $black;
 
-  }
+  }*/
 
   &::placeholder {
     color: $black;

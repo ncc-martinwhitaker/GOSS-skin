@@ -590,7 +590,7 @@ Metadata modifiers include:
   
   .item.item--article .item__title a {
     font-size: $h5-font-size;
-    color: $list-panel-link-color;
+    color: $black;
     text-decoration: underline;
     text-decoration-thickness: max(1px, .065rem);
     text-decoration-skip-ink: none;
@@ -909,6 +909,10 @@ Metadata modifiers include:
   
         &:focus {
           @extend %a-link-focus; //3832
+        }
+
+        &:focus:hover{
+          @extend %a-link-focus; // 4632
         }
       }
   
@@ -1866,6 +1870,7 @@ Metadata modifiers include:
 
     //5118 Image link/button focus styling
     .n-stage__link--logo:focus {
+      margin-bottom: 6px; //4632 Text links state indicator standardisation (Chill template)
       //5486
       @include element-focus;  
       img {
@@ -1941,6 +1946,10 @@ Metadata modifiers include:
       &:focus {
         background-color: $focus-color; //3832
       }
+
+      &:focus:hover{  // 4632
+        text-decoration: none;
+      }
     }
   
     .card__actions .cta-link::after {
@@ -2013,10 +2022,6 @@ Metadata modifiers include:
   
   .card--stage.card--default .cta-link--stage:before {
     content: none;  
-  }
-  
-  .a-panel--pt.a-panel--stage .a-panel__link {
-    background-color: $button-panel-color;
   }
   
   .a-panel--hasbackground.a-panel--stage .item__sublink {
@@ -2946,4 +2951,62 @@ Metadata modifiers include:
 ======================================*/
 .a-panel--peeky-swiper .gi-carousel .gi-carousel__slide .a-panel--carouselitem .a-panel__content h3.a-panel__title{
   font-weight: 700;
+}
+
+/* 4632 Text links state indicator standardisation (Chill template)*/
+// Focus & Focus+Hover
+.gi-sitenav__link:focus,
+/*.a-panel.a-panel--pt.a-panel--stage, */
+.gi-sitenav--stage .gi-sitenav__link--lvl1:focus:hover {
+  @include chill-sitenav-focus;
+  text-underline-offset: 0.2578em;//0.1578em
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gi-sitenav__item--lvl1:first-child .gi-sitenav__link--lvl1:focus{
+  padding-left: 10px;
+}
+
+// Hover
+.gi-sitenav__link:hover {
+  @include chill-sitenav-hover;
+}
+
+.item__sublink:focus:hover {
+  text-decoration: none;
+}
+
+// Changed logic for .a-panel__link--pt
+.a-panel__linkwrap:focus .a-panel__link--pt {
+  text-decoration: none !important; 
+}
+
+/*.a-panel__linkwrap:focus:hover .a-panel__link--pt {
+  text-decoration: underline !important; 
+}*/
+
+.a-panel--pt.a-panel--stage .a-panel__link,
+.a-panel__link.a-panel__link--pt {
+  background-color: $button-panel-color;
+  
+  &:hover {
+    @include a-link-hover;
+    color: $white; 
+    text-decoration: underline; 
+  }
+  
+  &:focus {
+    @include a-link-focus;
+  }
+  
+  &:focus:hover {
+    @include a-link-focus;
+    color: $black;
+  }
+}
+
+.panel__link:focus:hover{
+  @include a-link-focus;
 }
