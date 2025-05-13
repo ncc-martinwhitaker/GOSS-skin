@@ -1291,14 +1291,24 @@ button.btn--disclosure-toggle{
   padding: 0;
 }
 
+// 5846 GNGB - padding issues
 .a-panel.a-panel--pt.a-panel--default.a-panel--body.a-panel--location-panel .a-panel__title,
 .a-panel.a-panel--hasbackground .a-panel__title, .a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__title {
   margin: 0 0 60px 0;
+  padding-top: 1.25rem;
 }
 
-.a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__title {
-  padding-top: 0px;
+.a-panel__summary {
+  padding: 10px 0px 20px 20px;
 }
+
+.a-panel__body.a-body.a-body--panel p {
+  padding-bottom: 1.25rem;
+}
+
+/*.a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__title {
+  padding-top: 20px;
+}*/
 
 .a-panel.a-panel--pt.a-panel--default.a-panel--body .a-panel__content[aria-label="Image gallery"] .a-panel__title {
   padding-top: 20px;
