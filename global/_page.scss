@@ -187,6 +187,16 @@
         display: none;//2404 Document inline links - remove icon
     }
 }
+
+// 5904 Document inline links - remove icon in body panels
+.a-body--panel .media-link {
+    margin-left: 0px;
+    
+    .media-link__text::before {
+    display: none;
+    }
+}
+  
 /** End of 2403 - inline document links **/
 
 // ANCHOR PAGE SPECIFIC
