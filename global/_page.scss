@@ -189,7 +189,7 @@
 }
 
 // 5904 Document inline links - remove icon in body panels
-.a-body--panel .media-link--pdf {
+.a-body--panel .media-link {
     margin-left: 0px;
     
     .media-link__text::before {
