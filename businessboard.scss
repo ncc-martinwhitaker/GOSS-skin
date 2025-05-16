@@ -90,7 +90,7 @@ Panels
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
-    height: 600px;
+    //height: 600px; // 5914 Update =nbb-main-image-overlay panel style modifier
     display: flex;
     align-items: center;
     
@@ -122,11 +122,12 @@ Panels
         transform: rotate(175deg);
     }
 
-    .a-panel__content {
+    /*.a-panel__content {
         max-width: 586px;
-    }
+    }*/
 
-    h2 {
+    //5914 Update =nbb-main-image-overlay panel style modifier
+    /*h2 {
         font-size: 40px;
         font-weight: 700;
     }
@@ -135,7 +136,7 @@ Panels
         font-size: 32px;
         font-weight: 700;
         line-height: 1;
-    }
+    }*/
 
     .a-panel__linkwrap {
         border-radius: 40px;
