@@ -122,11 +122,11 @@ Panels
         transform: rotate(175deg);
     }
 
-    /*.a-panel__content {
+    // 5914 Update =nbb-main-image-overlay panel style modifier
+    /*a-panel__content {
         max-width: 586px;
     }*/
 
-    //5914 Update =nbb-main-image-overlay panel style modifier
     /*h2 {
         font-size: 40px;
         font-weight: 700;
@@ -153,6 +153,12 @@ Panels
         background-color: transparent;
     }
 }
+
+// increased the panel width
+ .a-panel--pt.a-panel--hasbackground .a-panel__content {
+    width: 1200px;
+  }  
+
 
 .grid--list .item.item--article {
     background-color: $white; //list cards background colour
