@@ -91,7 +91,7 @@ Panels
     overflow: hidden;
     padding-bottom: 10px;
     //height: 600px; // 5914 Update =nbb-main-image-overlay panel style modifier
-    display: flex;
+    //display: flex; // 5914 Update =nbb-main-image-overlay panel style modifier
     align-items: center;
     
     @include mq('sm', 'max') {
@@ -153,12 +153,6 @@ Panels
         background-color: transparent;
     }
 }
-
-// increased the panel width
- .a-panel--pt.a-panel--hasbackground .a-panel__content {
-    width: 1200px;
-  }  
-
 
 .grid--list .item.item--article {
     background-color: $white; //list cards background colour
