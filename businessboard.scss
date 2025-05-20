@@ -90,8 +90,8 @@ Panels
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
-    height: 600px;
-    display: flex;
+    //height: 600px; // 5914 Update =nbb-main-image-overlay panel style modifier
+    //display: flex; // 5914 Update =nbb-main-image-overlay panel style modifier
     align-items: center;
     
     @include mq('sm', 'max') {
@@ -122,11 +122,12 @@ Panels
         transform: rotate(175deg);
     }
 
-    .a-panel__content {
+    // 5914 Update =nbb-main-image-overlay panel style modifier
+    /*a-panel__content {
         max-width: 586px;
-    }
+    }*/
 
-    h2 {
+    /*h2 {
         font-size: 40px;
         font-weight: 700;
     }
@@ -135,7 +136,7 @@ Panels
         font-size: 32px;
         font-weight: 700;
         line-height: 1;
-    }
+    }*/
 
     .a-panel__linkwrap {
         border-radius: 40px;
