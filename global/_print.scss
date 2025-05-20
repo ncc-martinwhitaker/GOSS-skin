@@ -274,4 +274,23 @@
         word-break: break-word;
     }
 
+    // Print CSS: gallery images
+
+    // Print single image
+    .gi-carousel--imagegalleryinline .gi-carousel__previous, 
+    .gi-carousel--imagegalleryinline .gi-carousel__next,
+    .gi-carousel--imagegalleryinline .gi-carousel__links{
+        display: none;
+    }
+
+    .dialog--imagegalleryinline .dialog__body{
+        display: block;
+    }
+
+    .imagegalleryinline h2.dialog__header,
+    .dialog--imagegalleryinline .dialog__body p,
+    .imagegalleryinline .dialog__close{
+        color: $black;
+    }
+
 } // END OF MEDIA PRINT
