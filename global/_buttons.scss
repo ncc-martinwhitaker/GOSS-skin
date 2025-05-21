@@ -97,7 +97,7 @@ button.a-body__link--btn-teal-print-copy:focus{
     fill: #050505;
   }
 
-  &:hover{ // 4632
+  &:hover{ // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@ a.a-body__link.a-body__link--btn-primary-std {
     text-decoration-skip-ink: none;
   }
 
-  &:focus:hover{ // 4632
+  &:focus:hover{ // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -146,7 +146,7 @@ a.a-body__link.a-body__link--cta {
       outline: none;
       transition: none;
   }
-  &:focus:hover{ // 4632
+  &:focus:hover{ // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -182,7 +182,7 @@ a.a-body__link--btn-teal-print-copy:focus:hover,
 button.a-body__link--btn-teal-print-copy:focus:hover,
 button.btn--disclosure-toggle:focus:hover {
   background-color: $focus-color;
-  text-decoration: none; // 4632 underline
+  text-decoration: none; // 4632 underline //TODO - added for chill, check whether this change is ok for dynamic?
 }
 /******************************************************************************
 
@@ -212,7 +212,7 @@ a.a-body__link.a-body__link--btn-secondary:focus, a.a-body__link--btn-secondary:
   transition: none;
   text-decoration: none;
 
-  &:hover{  // 4632
+  &:hover{  // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -249,7 +249,7 @@ a.a-body__link.a-body__link--btn-inverted-secondary:focus, a.a-body__link--btn-i
   transition: none;
   text-decoration: none;
 
-  &:hover{ //4632
+  &:hover{ //4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -475,7 +475,7 @@ a.a-body__link.a-body__link--cta {
       outline: none;
       transition: none;
   }
-  &:focus:hover{ // 4632
+  &:focus:hover{ // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
     text-decoration: none;
   }
 }
@@ -502,12 +502,12 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
   &:hover {
       box-shadow: none;
 
-      span{ // 4632
+      span{ // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
         text-decoration: none;
       }
   }
   &:focus {
-      box-shadow: 0px 0px 0px 3px $black, 0px 0px 0px 6px $focus-color; // 4632 none
+      box-shadow: 0px 0px 0px 3px $black, 0px 0px 0px 6px $focus-color; // 4632 none //TODO - added for chill, check whether this change is ok for dynamic?
       outline: $black solid 2px;
       text-decoration: none;
       transition: none;
@@ -521,7 +521,7 @@ button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
     }
 }
 
-// 4632
+// 4632 //TODO - added for chill, check whether this change is ok for dynamic?
 .gi-sitesearch--searchtemplate .gi-sitesearch__button:hover{
   color: $white;
   text-underline-offset: 0.1578em;

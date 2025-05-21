@@ -1,3 +1,4 @@
+//5945 - new chill_panels.scss file
 /******************************************************************************
 
 --- Panels ---
@@ -590,7 +591,7 @@ Metadata modifiers include:
   
   .item.item--article .item__title a {
     font-size: $h5-font-size;
-    color: $list-panel-link-color; //5945
+    color: $black;
     text-decoration: underline;
     text-decoration-thickness: max(1px, .065rem);
     text-decoration-skip-ink: none;
@@ -911,9 +912,9 @@ Metadata modifiers include:
           @extend %a-link-focus; //3832
         }
 
-        /*&:focus:hover{
+        &:focus:hover{
           @extend %a-link-focus; // 4632
-        }*/
+        }
       }
   
       .fa-block__links {
@@ -1780,7 +1781,7 @@ Metadata modifiers include:
     }
   }
   
-  // 4632 - correcting 4427 //TODO - added for chill, check whether this change is ok for dynamic?
+  // 4632 - correcting 4427 
   .a-panel--stage.a-panel--hasbackground .card--stage.card--list .grid--2col[data-grid-maxcols="2"] .grid__cell{
     white-space: normal;
   }
@@ -1819,12 +1820,12 @@ Metadata modifiers include:
       position: absolute;
       right: 0;
       top: 0;
-      display: block; // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
-      margin: 15px 0px; // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
+      display: block; // 4632 
+      margin: 15px 0px; // 4632
     }
   }
   
-  // 4632 //TODO - added for chill, check whether this change is ok for dynamic?
+  // 4632
   .a-panel--hasbackground.a-panel--stage .item__sublink:after {
     display: block;
     margin: 15px 0px;
@@ -1870,7 +1871,7 @@ Metadata modifiers include:
 
     //5118 Image link/button focus styling
     .n-stage__link--logo:focus {
-      //margin-bottom: 6px; //4632 Text links state indicator standardisation (Chill template)
+      margin-bottom: 6px; //4632 Text links state indicator standardisation (Chill template)
       //5486
       @include element-focus;  
       img {
@@ -1947,9 +1948,9 @@ Metadata modifiers include:
         background-color: $focus-color; //3832
       }
 
-      /*&:focus:hover{  // 4632
+      &:focus:hover{  // 4632
         text-decoration: none;
-      }*/
+      }
     }
   
     .card__actions .cta-link::after {
@@ -2951,4 +2952,38 @@ Metadata modifiers include:
 ======================================*/
 .a-panel--peeky-swiper .gi-carousel .gi-carousel__slide .a-panel--carouselitem .a-panel__content h3.a-panel__title{
   font-weight: 700;
+}
+
+/* 4632 Text links state indicator standardisation (Chill template)*/
+// Changed logic for .a-panel__link--pt
+.a-panel__linkwrap:focus .a-panel__link--pt {
+  text-decoration: none !important; 
+}
+
+/*.a-panel__linkwrap:focus:hover .a-panel__link--pt {
+  text-decoration: underline !important; 
+}*/
+
+.a-panel--pt.a-panel--stage .a-panel__link,
+.a-panel__link.a-panel__link--pt {
+  background-color: $button-panel-color;
+  
+  &:hover {
+    @include a-link-hover;
+    color: $white; 
+    text-decoration: underline; 
+  }
+  
+  &:focus {
+    @include a-link-focus;
+  }
+  
+  &:focus:hover {
+    @include a-link-focus;
+    color: $black;
+  }
+}
+
+.panel__link:focus:hover{
+  @include a-link-focus;
 }
