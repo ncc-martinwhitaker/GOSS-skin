@@ -39,6 +39,14 @@ $button-search-color: $white !default;
 
 .header .searchform__inputtxt.searchform__inputtxt--sitesearch {
   height: 35px;
+  width: 100%;// 5947
+}
+
+// 5947
+.gi-sitesearch--header .gi-sitesearch__button:hover{
+  text-decoration: underline;
+  color: $white;
+  text-underline-offset: 0.1578em;
 }
 
 .btn--search::before {
