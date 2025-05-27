@@ -116,3 +116,8 @@ $list-panel-link-color-hover: $link-color-darken;
     display: none;
 }
 
+// 5947 Text links state indicator standardisation (Chill template) p2
+.media-links--related .media-link:focus:hover{
+    text-decoration: none;
+}
+
