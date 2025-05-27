@@ -318,7 +318,8 @@
     }
 
     // Hide unnecessary elements
-    .gi-carousel__controls {
+    .gi-carousel__controls,
+    .dialog__close:before {
         display: none !important;
     }
   
@@ -330,5 +331,16 @@
         object-fit: contain !important;
         object-position: top !important;
     }
+
+    // Gallery title with image in the same page
+    .a-body__inner > h3 {
+        page-break-after: avoid; 
+        break-after: avoid;      
+      }
+    
+      .a-body__inner {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
 
 } // END OF MEDIA PRINT
