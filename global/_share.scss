@@ -53,15 +53,16 @@ $string2: str-replace($string, ' ', '%20');
 }
 
 // 5985 MM Hide-share
-/*body.body--hide-share .a-share .a-share__label:first-of-type,
-body.body--hide-share .a-share .a-share__image[alt="Facebook icon"],
-body.body--hide-share .a-share .a-share__image[alt="Twitter icon"],
-body.body--hide-share .a-share .a-share__image[alt="Email icon"] {
-  display: none;
-}*/
-body.body--hide-share .a-share{
+body.body--hide-share .a-share__label:first-of-type {
     display: none;
 }
+  
+body.body--hide-share .a-share__link:has(.a-share__image[alt="Facebook icon"]),
+body.body--hide-share .a-share__link:has(.a-share__image[alt="Twitter icon"]),
+body.body--hide-share .a-share__link:has(.a-share__image[alt="Email icon"]) {
+    display: none;
+}
+  
 
 /*
     PRP environment CSS alterations
