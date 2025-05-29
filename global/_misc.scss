@@ -343,7 +343,7 @@ li.paging__item a.paging__link {
   }
 }
 .maincontent .a-body:has(blockquote) {
-  max-width: 100%;
+  max-width: 750px; // 100% --> 5935 Blockquotes make body text full-width on list and panel articles
 }
 
 .a-body {
