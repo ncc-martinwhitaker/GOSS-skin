@@ -176,3 +176,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// 5785 NHER Case management: Hide 'Contact' function
+document.addEventListener("DOMContentLoaded", function () {
+    const caseType = document.getElementById("CASEMANAGEMENTCASEDETAILSV1EN_DETAILS_CASETYPE");
+    const inputs = document.querySelectorAll(".icminput.icminput--button.icminput--script");
+  
+    if (caseType && caseType.value === "nherdigitalimage") {
+      inputs.forEach(input => {
+        if (input.value === "Contact") {
+          input.style.display = "none";
+        }
+      });
+    }
+});
+  
