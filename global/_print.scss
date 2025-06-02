@@ -293,12 +293,34 @@
         color: $black;
     }
 
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline{
+        background-color:$white;
+        height:80vh !important;
+        max-height:80vh!important;
+        overflow: hidden;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .dialog__content {
+        background-color:$white;
+        display:block;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .gi-carousel--imagegalleryinline {
+        display:block;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .gi-carousel__slide:not(.gi-carousel__slide--selected){
+        display:none !important;
+        height:0;
+        max-height:0;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .grid--imagegalleryinline{
+        display:none !important;    
+    }
+
     // Gallery - vertical layout 
     .grid--imagegalleryinline {
         display: block !important;
     
     .grid__cell {
-        width: 100% !important;
+        //width: 100% !important;
         margin-bottom: 8px !important;
         break-inside: avoid;
     }
@@ -307,7 +329,6 @@
     // Styles for alt-text
     .print-alt-caption {
         display: block !important;
-        width: 100% !important;
         max-width: none !important;
         font-size: 14px !important;
         color: $black !important;
@@ -324,23 +345,23 @@
     }
   
     // Guarantee the display of images
-    .gi-responsiveimage__image {
-        width: 100% !important;
-        height: 100% !important;
+    .gi-responsiveimage__image,
+    #imagegalleryinline-i20772890531582 .gi-responsiveimage--imagegallerybutton .gi-responsiveimage__image  {
         display: block !important;
-        object-fit: contain !important;
         object-position: top !important;
     }
 
     // Gallery title with image in the same page
-    .a-body__inner > h3 {
-        page-break-after: avoid; 
-        break-after: avoid;      
-      }
-    
-      .a-body__inner {
+    .a-body__inner h3 {
+        page-break-after: avoid;
+        break-after: avoid;
         break-inside: avoid;
         page-break-inside: avoid;
       }
+
+    .a-body {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
 
 } // END OF MEDIA PRINT
