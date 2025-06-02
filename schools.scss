@@ -109,6 +109,18 @@ $header-utilitymenu-color: $grey-4;
     margin-left: auto;
 }
 
+// 5979 Search button - Schools
+.gi-sitesearch--searchtemplate .gi-sitesearch__button, .gi-sitesearch__button--search, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search{
+    background-color: $teal;
+}
+
+.gi-sitesearch__button--search:hover, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:hover{
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 0.1578em;
+}
+/*End*/
+
 .gi-sitesearch__button--search:focus, .gi-sitesearch--dynamic[data-collapsed=false] .btn--search, .gi-sitesearch--dynamic[data-collapsed=true] .btn--search:focus {
     background: $focus-color;
     color: #000 !important;
