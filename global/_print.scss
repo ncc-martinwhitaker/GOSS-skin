@@ -315,16 +315,15 @@
         display:none !important;    
     }
 
-    // Gallery - vertical layout 
-    .grid--imagegalleryinline {
-        display: block !important;
-    
+    // Gallery size 
     .grid__cell {
-        //width: 100% !important;
-        margin-bottom: 8px !important;
-        break-inside: avoid;
+        display: inline-table;
+        float: none;
     }
-  }
+
+    .imagegalleryinline .grid__cell{
+        width: 20%;
+    }
 
     // Styles for alt-text
     .print-alt-caption {
