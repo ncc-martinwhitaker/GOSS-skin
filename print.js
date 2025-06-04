@@ -22,3 +22,32 @@ window.addEventListener("afterprint", () => {
     caption.remove();
   });
 });
+
+window.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('figure.videoplayer').forEach(function (figure) {
+    const source = figure.querySelector('source');
+    if (!source || !source.src) return;
+
+    // Create a link
+    const link = document.createElement('a');
+    link.href = source.src;
+    link.className = 'video-print-link';
+    link.textContent = 'Video source: ' + source.src;
+
+    // Search transcript__caption INSIDE figure
+    const transcript = figure.querySelector('.transcript__caption');
+    let transcriptClone = null;
+
+    if (transcript) {
+      transcriptClone = transcript.cloneNode(true);
+      transcriptClone.classList.add('video-print-transcript');
+    }
+
+    // Insert before video
+    if (transcriptClone) {
+      figure.parentNode.insertBefore(transcriptClone, figure);
+    }
+
+    figure.parentNode.insertBefore(link, figure);
+  });
+});

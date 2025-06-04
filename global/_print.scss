@@ -1,3 +1,9 @@
+// Hide links in standard (screen) view
+.video-print-link,
+.video-print-transcript {
+    display: none;
+}
+
 @media print{
     
     //Add data and link to the printed version of the page (5375) 
@@ -272,6 +278,16 @@
     a[class*="a-body__link--btn-"][href]::after {
         content: " (" attr(href) ")";
         word-break: break-word;
+    }
+
+    // 5383 Print CSS: video 
+    figure.videoplayer {
+        display: none !important;
+    }
+  
+    .video-print-link,
+    .video-print-transcript {
+        display: block;
     }
 
 } // END OF MEDIA PRINT
