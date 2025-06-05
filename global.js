@@ -272,3 +272,27 @@ function hideBodyUntilReady() {
   }
 
   hideBodyUntilReady();
+
+  // 5508 Museums sites header colour contrast
+  document.addEventListener("DOMContentLoaded", function () {
+	const hostname = window.location.hostname; 
+	let siteClass = 'site--default';
+  
+	// Domain-based inclusion logic
+	if (hostname.includes('tolhouse')) siteClass = 'site--tolhouse';
+	else if (hostname.includes('gressenhall')) siteClass = 'site--gressenhall';
+	else if (hostname.includes('cromer')) siteClass = 'site--cromer';
+	else if (hostname.includes('elizabethan')) siteClass = 'site--elizabethan';
+	else if (hostname.includes('norwich')) siteClass = 'site--norwichmuseum';
+	else if (hostname.includes('castle')) siteClass = 'site--castle';
+	else if (hostname.includes('stranger')) siteClass = 'site--stranger';
+	else if (hostname.includes('ancient')) siteClass = 'site--ancient';
+	else if (hostname.includes('lynn')) siteClass = 'site--lynn';
+	else if (hostname.includes('tide')) siteClass = 'site--tide';
+	else if (hostname.includes('collections')) siteClass = 'site--collections';
+	else if (hostname.includes('museums')) siteClass = 'site--museums'; 
+  
+	document.body.classList.add(siteClass);
+  });
+  
+  
