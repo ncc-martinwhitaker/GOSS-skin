@@ -116,6 +116,7 @@ header {
 }
 
 // 5508 Museums site header colour contrast
+
 /*.utilitymenu--top .utilitymenu__link {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -126,43 +127,25 @@ header {
         @extend .btn-hover;
     }
 }*/
-// styles for .utilitymenu__link & .btn--search
-$museum-backgrounds: (
-  collections: #FFFFFF,
-  museums: #DFE8FF,
-  castle: #F2DDFF,
-  gressenhall: #EEFFD9,
-  tide: #EEEFFF,
-  norwichmuseum: #FFD4DE,
-  elizabethan: #FFD8D9,
-  stranger: #FFDAD8,
-  lynn: #EDFFD5,
-  cromer: #E6F7FF,
-  tolhouse: #FFEDF2,
-  ancient: #E3F6FF,
-  default: #F5F5F5
-);
-
-@each $site, $bg in $museum-backgrounds {
-  body.site--#{$site} {
-    .utilitymenu--top .utilitymenu__link,
-    header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search {
-      background-color: $bg !important;
-
-      &:hover{
-        text-decoration: underline;
-        color: $black;
-      }
-    }
-
-    // Specifically for .btn--search::before and search text
-    .btn--search::before,
-    span.btn__text.gi-sitesearch__buttontext.accessibility,
-    .utilitymenu--top .utilitymenu__link {
-      color: if($site == museums, $black, $button-search-color);
-    }
-  }
+.utilitymenu--top .utilitymenu__link,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search,
+span.btn__text.gi-sitesearch__buttontext.accessibility,
+.btn--search::before{
+    color: $black;   
 }
+
+.utilitymenu--top .utilitymenu__link{
+    border-radius: 15px;
+}
+
+.utilitymenu--top .utilitymenu__link:hover,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover{
+    color: $black;
+    text-decoration: underline;
+    text-underline-offset: 0.1578em;
+}
+
+/* END */
 
 
 .gi-sitenav--lvl2 {

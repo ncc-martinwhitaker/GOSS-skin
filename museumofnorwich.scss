@@ -35,3 +35,26 @@ $footer-border-color: $museum-primary-color-museum-of-norwich;
 
 @import 
 "museums-navbar";
+
+/* 5508 Museums site header colour contrast */
+.utilitymenu--top .utilitymenu__link,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search,
+.utilitymenu--top .utilitymenu__link:hover,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover,
+.gi-sitesearch--searchtemplate .gi-sitesearch__button,
+.gi-sitesearch--searchtemplate .gi-sitesearch__button:hover{
+    background-color: #ffd4de;
+    color: $black;   
+}
+
+.utilitymenu--top .utilitymenu__link:focus,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus{
+  box-shadow: 0 0 0 3px $black, 0 0 0 6px $focus-color;
+}
+
+.utilitymenu--top .utilitymenu__link:focus:hover,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus:hover,
+.gi-sitesearch--searchtemplate .gi-sitesearch__button:focus:hover{
+  text-decoration: none;
+  background-color: $focus-color;
+}
