@@ -23,6 +23,8 @@ window.addEventListener("afterprint", () => {
   });
 });
 
+
+// Video
 window.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('figure.videoplayer').forEach(function (figure) {
     const source = figure.querySelector('source');
@@ -43,11 +45,11 @@ window.addEventListener('DOMContentLoaded', function () {
       transcriptClone.classList.add('video-print-transcript');
     }
 
-    // Insert before video
+    // Insert link first, then transcript (if any), before the video
+    figure.parentNode.insertBefore(link, figure);
+
     if (transcriptClone) {
       figure.parentNode.insertBefore(transcriptClone, figure);
     }
-
-    figure.parentNode.insertBefore(link, figure);
   });
 });
