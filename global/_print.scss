@@ -1,6 +1,7 @@
 // Hide links in standard (screen) view
 .video-print-link,
-.video-print-transcript {
+.video-print-transcript,
+.video-dialog__header {
     display: none;
 }
 
@@ -286,8 +287,17 @@
     }
   
     .video-print-link,
-    .video-print-transcript {
+    .video-print-transcript,
+    .video-dialog__header {
         display: block;
+    }
+
+    .video-dialog__header{
+        font-size: 14px !important;
+    }
+
+    .video-print-link{
+        padding-bottom: 10px;
     }
 
     .a-body a.video-print-link {
