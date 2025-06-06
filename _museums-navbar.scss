@@ -128,11 +128,22 @@ header {
     }
 }*/
 .utilitymenu--top .utilitymenu__link,
-header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search,
-span.btn__text.gi-sitesearch__buttontext.accessibility,
-.btn--search::before{
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search{
     color: $black;   
 }
+
+/* Basic style */
+.gi-sitesearch .gi-sitesearch--searchtemplatespan .btn__text.gi-sitesearch__buttontext.accessibility,
+.gi-sitesearch .gi-sitesearch--searchtemplate .btn--search::before {
+  color: $white;
+}
+
+/* Within header__menu — white */
+.header__menu span.btn__text.gi-sitesearch__buttontext.accessibility,
+.header__menu .btn--search::before {
+  color: $black;
+}
+
 
 .utilitymenu--top .utilitymenu__link{
     border-radius: 15px;

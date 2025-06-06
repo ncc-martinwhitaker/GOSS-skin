@@ -40,9 +40,7 @@ $footer-border-color: $museum-primary-color-elizabethan-house-greatyarmouth;
 .utilitymenu--top .utilitymenu__link,
 header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search,
 .utilitymenu--top .utilitymenu__link:hover,
-header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover,
-.gi-sitesearch--searchtemplate .gi-sitesearch__button,
-.gi-sitesearch--searchtemplate .gi-sitesearch__button:hover{
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover{
     background-color: #ffd8d9;
     color: $black;   
 }
@@ -53,8 +51,7 @@ header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--searc
 }
 
 .utilitymenu--top .utilitymenu__link:focus:hover,
-header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus:hover,
-.gi-sitesearch--searchtemplate .gi-sitesearch__button:focus:hover{
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:focus:hover{
   text-decoration: none;
   background-color: $focus-color;
 }
