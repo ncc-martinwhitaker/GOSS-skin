@@ -1094,3 +1094,25 @@ input[placeholder="Search artist/maker"]::placeholder {
   opacity: 1; 
 }
   
+/* 5508 Museums site header colour contrast */
+.utilitymenu--top .utilitymenu__link,
+.utilitymenu--top .utilitymenu__link:hover{
+    background-color: #FFFFFF;
+    color: $black;   
+}
+
+.utilitymenu--top .utilitymenu__link:focus{
+  box-shadow: 0 0 0 3px $black, 0 0 0 6px $focus-color;
+}
+
+.utilitymenu--top .utilitymenu__link:focus:hover{
+  text-decoration: none;
+  background-color: $focus-color;
+}
+
+/* Within header__menu — white */
+.header__menu span.btn__text.gi-sitesearch__buttontext.accessibility,
+.header__menu .btn--search::before,
+header button.btn.btn--search.gi-sitesearch__button.gi-sitesearch__button--search:hover {
+  color: $white;
+}
