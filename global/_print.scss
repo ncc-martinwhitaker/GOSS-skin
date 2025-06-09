@@ -274,4 +274,93 @@
         word-break: break-word;
     }
 
+    // 5381 Print CSS: gallery images
+
+    // Print single image
+    .gi-carousel--imagegalleryinline .gi-carousel__previous, 
+    .gi-carousel--imagegalleryinline .gi-carousel__next,
+    .gi-carousel--imagegalleryinline .gi-carousel__links{
+        display: none;
+    }
+
+    .dialog--imagegalleryinline .dialog__body{
+        display: block;
+    }
+
+    .imagegalleryinline h2.dialog__header,
+    .dialog--imagegalleryinline .dialog__body p,
+    .imagegalleryinline .dialog__close{
+        color: $black;
+    }
+
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline{
+        background-color:$white;
+        height:80vh !important;
+        max-height:80vh!important;
+        overflow: hidden;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .dialog__content {
+        background-color:$white;
+        display:block;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .gi-carousel--imagegalleryinline {
+        display:block;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .dialog--imagegalleryinline .gi-carousel__slide:not(.gi-carousel__slide--selected){
+        display:none !important;
+        height:0;
+        max-height:0;
+    }
+    body:has(.dialog--imagegalleryinline.dialog--active) .grid--imagegalleryinline{
+        display:none !important;    
+    }
+
+    // Gallery size 
+    .grid__cell {
+        display: inline-table;
+        float: none;
+    }
+
+    .imagegalleryinline .grid__cell{
+        width: 20%;
+    }
+
+    // Styles for alt-text
+    .print-alt-caption {
+        display: block !important;
+        max-width: none !important;
+        font-size: 14px !important;
+        color: $black !important;
+        margin-top: 8px !important;
+        word-wrap: break-word;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+
+    // Hide unnecessary elements
+    .gi-carousel__controls,
+    .dialog__close:before {
+        display: none !important;
+    }
+  
+    // Guarantee the display of images
+    .gi-responsiveimage__image,
+    #imagegalleryinline-i20772890531582 .gi-responsiveimage--imagegallerybutton .gi-responsiveimage__image  {
+        display: block !important;
+        object-position: top !important;
+    }
+
+    // Gallery title with image in the same page
+    .a-body__inner h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+    .a-body {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
 } // END OF MEDIA PRINT
