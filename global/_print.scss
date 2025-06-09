@@ -1,3 +1,10 @@
+// Hide links in standard (screen) view
+.video-print-link,
+.video-print-transcript,
+.video-dialog__header {
+    display: none;
+}
+
 @media print{
     
     //Add data and link to the printed version of the page (5375) 
@@ -362,5 +369,28 @@
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
+
+   // 5383 Print CSS: video 
+    figure.videoplayer {
+        display: none !important;
+    }
+  
+    .video-print-link,
+    .video-print-transcript,
+    .video-dialog__header {
+        display: block;
+    }
+
+    .video-dialog__header{
+        font-size: 16px !important;
+    }
+
+    .video-print-link{
+        padding-bottom: 10px;
+    }
+
+    .a-body a.video-print-link {
+        color: $black;
+    }      
 
 } // END OF MEDIA PRINT

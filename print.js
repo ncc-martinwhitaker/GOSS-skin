@@ -34,3 +34,41 @@ window.addEventListener("afterprint", () => {
   });
 });
 
+// Video
+window.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('figure.videoplayer').forEach(function (figure) {
+    const source = figure.querySelector('source');
+    if (!source || !source.src) return;
+
+    // 1. Create a link
+    const link = document.createElement('a');
+    link.href = source.src;
+    link.className = 'video-print-link';
+    link.textContent = 'Video source: ' + source.src;
+
+    // 2. Search and clone transcript
+    const transcript = figure.querySelector('.transcript__caption');
+    let transcriptClone = null;
+    if (transcript) {
+      transcriptClone = transcript.cloneNode(true);
+      transcriptClone.classList.add('video-print-transcript');
+    }
+
+    // 3. Create a title
+    const transcriptHeader = document.createElement('h2');
+    transcriptHeader.className = 'video-dialog__header';
+    transcriptHeader.textContent = 'Video transcript text';
+
+    // 4. Inserting elements before <figure>
+    const parent = figure.parentNode;
+
+    // Inserting link
+    parent.insertBefore(link, figure);
+
+    // If there is a transcript, insert the title and the transcript itself
+    if (transcriptClone) {
+      parent.insertBefore(transcriptHeader, figure);
+      parent.insertBefore(transcriptClone, figure);
+    }
+  });
+});
